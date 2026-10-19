@@ -25,3 +25,4 @@ Venue links open the shared event page; the mapped team outcome is identified by
 
 The report compares currently open markets. If a venue completed successfully but a fixture is no longer present there, the cell is shown as `Not currently open`; this does not make venue coverage incomplete.
 # Cricket-Mapper
+# Cricket-Mapper
