@@ -1,0 +1,20 @@
+[
+  {
+    "id": "lpl-2026-colombo-franchise-rename",
+    "competition": "Lanka Premier League",
+    "valid_from": "2026-01-01",
+    "valid_to": "",
+    "canonical": "Colombo Kaps",
+    "aliases": ["Colombo Kaps", "Colombo Strikers"],
+    "evidence": "The Colombo LPL franchise was renamed Colombo Kaps for the 2026 season."
+  },
+  {
+    "id": "lpl-2026-galle-franchise-rename",
+    "competition": "Lanka Premier League",
+    "valid_from": "2026-01-01",
+    "valid_to": "",
+    "canonical": "Galle Gallants",
+    "aliases": ["Galle Gallants", "Galle Marvels"],
+    "evidence": "The Galle LPL franchise was renamed Galle Gallants for the 2026 season."
+  }
+]

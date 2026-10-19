@@ -1,0 +1,11 @@
+CRICKET EXCHANGE MATCHING
+
+1. Open this folder in VS Code or Terminal.
+2. Run: python3 run.py
+3. The latest report should open automatically.
+4. Otherwise open: output/CricketMatchingReport.html
+
+Each run fetches current Kalshi, Polymarket International, and Polymarket US data.
+The report shows its collection timestamp, venue coverage, and any advisory items.
+
+Polymarket International uses public read-only APIs; if one endpoint is unavailable, the program attempts the official CLOB fallback.
