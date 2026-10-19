@@ -1,0 +1,11 @@
+sport,venue,collection_complete,parse_complete,mapping_coverage_complete,method,records,reason
+cricket,kalshi,True,True,True,sports_filter_plus_series,106,
+cricket,polymarket_intl,True,True,True,events_keyset_tag_slug_cricket,645,
+basketball,kalshi,True,True,True,KXNBAGAME_nested_open_events,90,
+basketball,polymarket_intl,True,True,True,events_series_id_10345_moneyline,43,
+football,kalshi,True,True,True,KXNFLGAME_nested_open_events,30,
+football,polymarket_intl,True,True,True,events_series_id_12185_moneyline,43,
+hockey,kalshi,True,True,True,KXNHLGAME_nested_open_events,96,
+hockey,polymarket_intl,True,True,True,events_series_id_10346_moneyline,194,
+baseball,kalshi,True,True,True,KXMLBGAME_nested_open_events,2,
+baseball,polymarket_intl,True,True,True,events_series_id_3_moneyline,2,

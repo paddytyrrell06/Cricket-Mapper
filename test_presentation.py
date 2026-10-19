@@ -23,8 +23,17 @@ def known_profile(sport="cricket", draw="0"):
     payouts.update(win="1", loss="0")
     if "draw" in payouts:
         payouts["draw"] = draw
+    policy_values = {
+        "period": "full_match",
+        "overtime": "included",
+        "shootout": "included",
+        "extra_innings": "included",
+        "tiebreakers": "included_if_played",
+        "dls": "official_result",
+        "postponement": "wait_until_completed",
+    }
     return S.make_profile(sport=sport, target_kind="team", payouts=payouts,
-                          policies={policy: "documented_test_policy" for policy in policies},
+                          policies={policy: policy_values[policy] for policy in policies},
                           evidence=[{"field": "test", "text": "Explicit synthetic settlement rules"}])
 
 
@@ -145,7 +154,7 @@ class ReportModeTests(unittest.TestCase):
     def test_replay_keeps_source_timestamp_separate_from_generation_age(self):
         document = self.render({"Run type": "REPLAY"})
         self.assertIn("SNAPSHOT REPLAY", document)
-        self.assertIn("Market comparison · replay", document)
+        self.assertIn("Market Terminal · Snapshot Replay", document)
         self.assertIn("Snapshot collected", document)
         self.assertIn("18 Oct 2026, 05:00:00 UTC", document)
         self.assertIn(f"new Date('{self.replay_time.isoformat()}')", document)
@@ -298,11 +307,11 @@ class QuotePresentationTests(unittest.TestCase):
         self.assertIn('id="tab-cricket"', document)
         self.assertIn('id="tab-basketball"', document)
         self.assertIn('id="detailsDialog"', document)
-        self.assertIn("r.dataset.crossed==='true'", document)
+        self.assertIn("activeTab==='crosses'", document)
         self.assertIn("not a guarantee of profit", document)
         self.assertIn("check venue settlement rules", document)
         self.assertNotIn('class="cards"', document)
-        self.assertIn("&lt;unsafe&gt;", document)
+        self.assertIn("\\u0026lt;unsafe\\u0026gt;", document)
         self.assertNotIn("<unsafe>", document)
 
     def crossing_quotes(self):

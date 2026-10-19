@@ -1,0 +1,1992 @@
+[
+  {
+    "id": "1460471",
+    "question": "Who will win in the upcoming cricket event South Africa vs Australia scheduled for October 18, 2026 at 8:00 AM UTC?",
+    "slug": "aec-testcr-sao-aus-2026-10-18",
+    "endDate": "2026-11-01T13:00:00Z",
+    "category": "sports",
+    "startDate": "2026-10-15T08:30:13Z",
+    "description": "This market will settle to the winner of the South Africa vs Australia Test Intl match scheduled for October 18, 2026 at 4:00AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from Test Intl.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-15T08:30:13Z",
+    "updatedAt": "2026-10-19T10:24:22Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-18T08:00:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "2920420",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-testcr-sao-aus-2026-10-18",
+        "createdAt": "2026-10-15T08:30:13Z",
+        "updatedAt": "2026-10-15T08:30:13Z",
+        "description": "South Africa",
+        "price": "0.3200",
+        "marketId": 1460471,
+        "long": true,
+        "teamId": 39756,
+        "team": {
+          "id": 39756,
+          "name": "South Africa",
+          "abbreviation": "sao",
+          "league": "testcr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+          "alias": "South Africa",
+          "safeName": "South Africa",
+          "colorPrimary": "#007A4D",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+          "displayAbbreviation": "SAO",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "142708"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+          "color": {
+            "light": "#007A4D",
+            "dark": "#007A4D"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.4100",
+          "currency": "USD"
+        },
+        "tradable": true
+      },
+      {
+        "id": "2920421",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-testcr-sao-aus-2026-10-18",
+        "createdAt": "2026-10-15T08:30:13Z",
+        "updatedAt": "2026-10-15T08:30:13Z",
+        "description": "Australia",
+        "price": "0.4100",
+        "marketId": 1460471,
+        "long": false,
+        "teamId": 26405,
+        "team": {
+          "id": 26405,
+          "name": "Australia",
+          "abbreviation": "aus",
+          "league": "testcr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "alias": "Australia",
+          "safeName": "Australia",
+          "colorPrimary": "#00008B",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "displayAbbreviation": "AUS",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "142690"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "color": {
+            "light": "#00008B",
+            "dark": "#3357D2"
+          }
+        },
+        "quote": {
+          "value": "0.68",
+          "currency": "USD"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"South Africa\",\"Australia\"]",
+    "outcomePrices": "[\"0.3200\",\"0.4100\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "South Africa vs Australia",
+    "feeCoefficient": 0.0695,
+    "bestBidQuote": {
+      "value": "0.3200",
+      "currency": "USD"
+    },
+    "bestAskQuote": {
+      "value": "0.4100",
+      "currency": "USD"
+    },
+    "titleShort": "SAO vs AUS",
+    "ep3SyncedAt": "2026-10-15T11:37:51Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "testcr-sao-aus-2026-10-18",
+    "_event_slug": "testcr-sao-aus-2026-10-18",
+    "_event_title": "South Africa vs. Australia",
+    "_event_description": "South Africa vs. Australia",
+    "_event_id": "161767",
+    "_series_slug": "test-cr-2026",
+    "_start_time": "2026-10-18T08:00:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 39756,
+        "name": "South Africa",
+        "abbreviation": "sao",
+        "league": "testcr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+        "alias": "South Africa",
+        "safeName": "South Africa",
+        "colorPrimary": "#007A4D",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+        "displayAbbreviation": "SAO",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "142708"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZAF.png",
+        "color": {
+          "light": "#007A4D",
+          "dark": "#007A4D"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 26405,
+        "name": "Australia",
+        "abbreviation": "aus",
+        "league": "testcr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "alias": "Australia",
+        "safeName": "Australia",
+        "colorPrimary": "#00008B",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "displayAbbreviation": "AUS",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "142690"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "color": {
+          "light": "#00008B",
+          "dark": "#3357D2"
+        }
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  },
+  {
+    "id": "1488653",
+    "question": "Who will win in the upcoming cricket event Afghanistan vs Zimbabwe scheduled for October 19, 2026 at 11:30 AM UTC?",
+    "slug": "aec-odicr-afg-zim-2026-10-19",
+    "endDate": "2026-11-02T16:30:00Z",
+    "category": "sports",
+    "startDate": "2026-10-16T12:30:11Z",
+    "description": "This market will settle to the winner of the Afghanistan vs Zimbabwe ODI Intl match scheduled for October 19, 2026 at 7:30AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from ODI Intl.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-16T12:30:11Z",
+    "updatedAt": "2026-10-19T09:54:45Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-19T11:30:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "2976784",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-odicr-afg-zim-2026-10-19",
+        "createdAt": "2026-10-16T12:30:11Z",
+        "updatedAt": "2026-10-16T12:30:11Z",
+        "description": "Afghanistan",
+        "price": "0.7000",
+        "marketId": 1488653,
+        "long": true,
+        "teamId": 41330,
+        "team": {
+          "id": 41330,
+          "name": "Afghanistan",
+          "abbreviation": "afg",
+          "league": "odicr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "alias": "Afghanistan",
+          "safeName": "Afghanistan",
+          "colorPrimary": "#000000",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "displayAbbreviation": "AFG",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "142688"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "color": {
+            "light": "#000000",
+            "dark": "#606060"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.7100",
+          "currency": "USD"
+        },
+        "tradable": true
+      },
+      {
+        "id": "2976785",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-odicr-afg-zim-2026-10-19",
+        "createdAt": "2026-10-16T12:30:11Z",
+        "updatedAt": "2026-10-16T12:30:11Z",
+        "description": "Zimbabwe",
+        "price": "0.7100",
+        "marketId": 1488653,
+        "long": false,
+        "teamId": 32188,
+        "team": {
+          "id": 32188,
+          "name": "Zimbabwe",
+          "abbreviation": "zim",
+          "league": "odicr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "alias": "Zimbabwe",
+          "safeName": "Zimbabwe",
+          "colorPrimary": "#2E5CFF",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "displayAbbreviation": "ZIM",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "142712"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "color": {
+            "light": "#2E5CFF",
+            "dark": "#2E5CFF"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.3",
+          "currency": "USD"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"Afghanistan\",\"Zimbabwe\"]",
+    "outcomePrices": "[\"0.7000\",\"0.7100\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "Afghanistan vs Zimbabwe",
+    "feeCoefficient": 0.0695,
+    "bestBidQuote": {
+      "value": "0.7000",
+      "currency": "USD"
+    },
+    "bestAskQuote": {
+      "value": "0.7100",
+      "currency": "USD"
+    },
+    "titleShort": "AFG vs ZIM",
+    "ep3SyncedAt": "2026-10-16T12:30:11Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "odicr-afg-zim-2026-10-19",
+    "_event_slug": "odicr-afg-zim-2026-10-19",
+    "_event_title": "Afghanistan vs. Zimbabwe",
+    "_event_description": "Afghanistan vs. Zimbabwe",
+    "_event_id": "164109",
+    "_series_slug": "odi-cr-2026",
+    "_start_time": "2026-10-19T11:30:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 41330,
+        "name": "Afghanistan",
+        "abbreviation": "afg",
+        "league": "odicr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "alias": "Afghanistan",
+        "safeName": "Afghanistan",
+        "colorPrimary": "#000000",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "displayAbbreviation": "AFG",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "142688"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "color": {
+          "light": "#000000",
+          "dark": "#606060"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 32188,
+        "name": "Zimbabwe",
+        "abbreviation": "zim",
+        "league": "odicr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "alias": "Zimbabwe",
+        "safeName": "Zimbabwe",
+        "colorPrimary": "#2E5CFF",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "displayAbbreviation": "ZIM",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "142712"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "color": {
+          "light": "#2E5CFF",
+          "dark": "#2E5CFF"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  },
+  {
+    "id": "1568348",
+    "question": "Who will win in the upcoming cricket event Pakistan vs England scheduled for October 20, 2026 at 8:00 AM UTC?",
+    "slug": "aec-odicr-pak-eng-2026-10-20",
+    "endDate": "2026-11-03T13:00:00Z",
+    "category": "sports",
+    "startDate": "2026-10-18T18:30:27Z",
+    "description": "This market will settle to the winner of the Pakistan vs England ODI Intl match scheduled for October 20, 2026 at 4:00AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from ODI Intl.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-18T18:30:27Z",
+    "updatedAt": "2026-10-19T10:39:46Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-20T08:00:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "3136172",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-odicr-pak-eng-2026-10-20",
+        "createdAt": "2026-10-18T18:30:27Z",
+        "updatedAt": "2026-10-18T18:30:27Z",
+        "description": "Pakistan",
+        "price": "0.3800",
+        "marketId": 1568348,
+        "long": true,
+        "teamId": 41215,
+        "team": {
+          "id": 41215,
+          "name": "Pakistan",
+          "abbreviation": "pak",
+          "league": "odicr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+          "alias": "Pakistan",
+          "safeName": "Pakistan",
+          "colorPrimary": "#01411C",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+          "displayAbbreviation": "PAK",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "142704"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+          "color": {
+            "light": "#01411C",
+            "dark": "#606060"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.4000",
+          "currency": "USD"
+        },
+        "tradable": true
+      },
+      {
+        "id": "3136173",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-odicr-pak-eng-2026-10-20",
+        "createdAt": "2026-10-18T18:30:27Z",
+        "updatedAt": "2026-10-18T18:30:27Z",
+        "description": "England",
+        "price": "0.4000",
+        "marketId": 1568348,
+        "long": false,
+        "teamId": 19337,
+        "team": {
+          "id": 19337,
+          "name": "England",
+          "abbreviation": "eng",
+          "league": "odicr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+          "alias": "England",
+          "safeName": "England",
+          "colorPrimary": "#CF142B",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+          "displayAbbreviation": "ENG",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "107205"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+          "color": {
+            "light": "#CF142B",
+            "dark": "#CF142B"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.62",
+          "currency": "USD"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"Pakistan\",\"England\"]",
+    "outcomePrices": "[\"0.3800\",\"0.4000\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "Pakistan vs England",
+    "feeCoefficient": 0.0695,
+    "bestBidQuote": {
+      "value": "0.3800",
+      "currency": "USD"
+    },
+    "bestAskQuote": {
+      "value": "0.4000",
+      "currency": "USD"
+    },
+    "titleShort": "PAK vs ENG",
+    "ep3SyncedAt": "2026-10-18T18:30:27Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "odicr-pak-eng-2026-10-20",
+    "_event_slug": "odicr-pak-eng-2026-10-20",
+    "_event_title": "Pakistan vs. England",
+    "_event_description": "Pakistan vs. England",
+    "_event_id": "169386",
+    "_series_slug": "odi-cr-2026",
+    "_start_time": "2026-10-20T08:00:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 41215,
+        "name": "Pakistan",
+        "abbreviation": "pak",
+        "league": "odicr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+        "alias": "Pakistan",
+        "safeName": "Pakistan",
+        "colorPrimary": "#01411C",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+        "displayAbbreviation": "PAK",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "142704"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/PAK.png",
+        "color": {
+          "light": "#01411C",
+          "dark": "#606060"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 19337,
+        "name": "England",
+        "abbreviation": "eng",
+        "league": "odicr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+        "alias": "England",
+        "safeName": "England",
+        "colorPrimary": "#CF142B",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+        "displayAbbreviation": "ENG",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "107205"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GBR.png",
+        "color": {
+          "light": "#CF142B",
+          "dark": "#CF142B"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  },
+  {
+    "id": "1555409",
+    "question": "Who will win in the upcoming cricket event Australia vs New Zealand scheduled for October 20, 2026 at 8:15 AM UTC?",
+    "slug": "aec-t20iwcr-aus-nze-2026-10-20",
+    "endDate": "2026-11-03T13:15:00Z",
+    "category": "sports",
+    "startDate": "2026-10-18T12:30:13Z",
+    "description": "This market will settle to the winner of the Australia vs New Zealand T20 Intl Women match scheduled for October 20, 2026 at 4:15AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from T20 Intl Women.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-18T12:30:13Z",
+    "updatedAt": "2026-10-19T09:09:36Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-20T08:15:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "3110294",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20iwcr-aus-nze-2026-10-20",
+        "createdAt": "2026-10-18T12:30:13Z",
+        "updatedAt": "2026-10-18T12:30:13Z",
+        "description": "Australia",
+        "price": "0.8800",
+        "marketId": 1555409,
+        "long": true,
+        "teamId": 41218,
+        "team": {
+          "id": 41218,
+          "name": "Australia",
+          "abbreviation": "aus",
+          "league": "t20iwcr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "alias": "Australia",
+          "safeName": "Australia",
+          "colorPrimary": "#00008B",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "displayAbbreviation": "AUS",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "183547"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+          "color": {
+            "light": "#061CAF",
+            "dark": "#4C49D9"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.9000",
+          "currency": "USD"
+        },
+        "tradable": true
+      },
+      {
+        "id": "3110295",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20iwcr-aus-nze-2026-10-20",
+        "createdAt": "2026-10-18T12:30:13Z",
+        "updatedAt": "2026-10-18T12:30:13Z",
+        "description": "New Zealand",
+        "price": "0.9000",
+        "marketId": 1555409,
+        "long": false,
+        "teamId": 41220,
+        "team": {
+          "id": 41220,
+          "name": "New Zealand",
+          "abbreviation": "nze",
+          "league": "t20iwcr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "alias": "New Zealand",
+          "safeName": "New Zealand",
+          "colorPrimary": "#00247D",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "displayAbbreviation": "NZE",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "247873"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "color": {
+            "light": "#001655",
+            "dark": "#0063BB"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.12",
+          "currency": "USD"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"Australia\",\"New Zealand\"]",
+    "outcomePrices": "[\"0.8800\",\"0.9000\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "Australia vs New Zealand",
+    "feeCoefficient": 0.0695,
+    "bestBidQuote": {
+      "value": "0.8800",
+      "currency": "USD"
+    },
+    "bestAskQuote": {
+      "value": "0.9000",
+      "currency": "USD"
+    },
+    "titleShort": "AUS vs NZE",
+    "ep3SyncedAt": "2026-10-18T12:30:13Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "t20iwcr-aus-nze-2026-10-20",
+    "_event_slug": "t20iwcr-aus-nze-2026-10-20",
+    "_event_title": "Australia vs. New Zealand",
+    "_event_description": "Australia vs. New Zealand",
+    "_event_id": "168596",
+    "_series_slug": "t20i-women-cr-2026",
+    "_start_time": "2026-10-20T08:15:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 41218,
+        "name": "Australia",
+        "abbreviation": "aus",
+        "league": "t20iwcr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "alias": "Australia",
+        "safeName": "Australia",
+        "colorPrimary": "#00008B",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "displayAbbreviation": "AUS",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "183547"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AUS.png",
+        "color": {
+          "light": "#061CAF",
+          "dark": "#4C49D9"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 41220,
+        "name": "New Zealand",
+        "abbreviation": "nze",
+        "league": "t20iwcr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "alias": "New Zealand",
+        "safeName": "New Zealand",
+        "colorPrimary": "#00247D",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "displayAbbreviation": "NZE",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "247873"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "color": {
+          "light": "#001655",
+          "dark": "#0063BB"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  },
+  {
+    "id": "1533981",
+    "question": "Who will win in the upcoming cricket event Uganda vs Zambia scheduled for October 20, 2026 at 8:30 AM UTC?",
+    "slug": "aec-t20icr-uga-zam-2026-10-20",
+    "endDate": "2026-11-03T13:30:00Z",
+    "category": "sports",
+    "startDate": "2026-10-17T20:30:14Z",
+    "description": "This market will settle to the winner of the Uganda vs Zambia T20 Intl match scheduled for October 20, 2026 at 4:30AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from T20 Intl.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-17T20:30:15Z",
+    "updatedAt": "2026-10-19T10:24:22Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-20T08:30:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "3067440",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20icr-uga-zam-2026-10-20",
+        "createdAt": "2026-10-17T20:30:15Z",
+        "updatedAt": "2026-10-17T20:30:15Z",
+        "description": "Uganda",
+        "price": "0.9700",
+        "marketId": 1533981,
+        "long": true,
+        "teamId": 41666,
+        "team": {
+          "id": 41666,
+          "name": "Uganda",
+          "abbreviation": "uga",
+          "league": "t20icr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+          "alias": "Uganda",
+          "safeName": "Uganda",
+          "colorPrimary": "#000000",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+          "displayAbbreviation": "UGA",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "567305"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+          "color": {
+            "light": "#000000",
+            "dark": "#606060"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.9800",
+          "currency": "USD"
+        },
+        "tradable": true
+      },
+      {
+        "id": "3067441",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20icr-uga-zam-2026-10-20",
+        "createdAt": "2026-10-17T20:30:15Z",
+        "updatedAt": "2026-10-17T20:30:15Z",
+        "description": "Zambia",
+        "price": "0.9800",
+        "marketId": 1533981,
+        "long": false,
+        "teamId": 26456,
+        "team": {
+          "id": 26456,
+          "name": "Zambia",
+          "abbreviation": "zam",
+          "league": "t20icr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+          "alias": "Zambia",
+          "safeName": "Zambia",
+          "colorPrimary": "#2E5CFF",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+          "displayAbbreviation": "ZAM",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "1309124"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+          "color": {
+            "light": "#2E5CFF",
+            "dark": "#2E5CFF"
+          }
+        },
+        "quote": {
+          "value": "0.03",
+          "currency": "USD"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"Uganda\",\"Zambia\"]",
+    "outcomePrices": "[\"0.9700\",\"0.9800\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "Uganda vs Zambia",
+    "feeCoefficient": 0.0695,
+    "bestBidQuote": {
+      "value": "0.9700",
+      "currency": "USD"
+    },
+    "bestAskQuote": {
+      "value": "0.9800",
+      "currency": "USD"
+    },
+    "titleShort": "UGA vs ZAM",
+    "ep3SyncedAt": "2026-10-17T20:30:15Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "t20icr-uga-zam-2026-10-20",
+    "_event_slug": "t20icr-uga-zam-2026-10-20",
+    "_event_title": "Uganda vs. Zambia",
+    "_event_description": "Uganda vs. Zambia",
+    "_event_id": "167480",
+    "_series_slug": "t20i-cr-2026",
+    "_start_time": "2026-10-20T08:30:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 41666,
+        "name": "Uganda",
+        "abbreviation": "uga",
+        "league": "t20icr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+        "alias": "Uganda",
+        "safeName": "Uganda",
+        "colorPrimary": "#000000",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+        "displayAbbreviation": "UGA",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "567305"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UGA.png",
+        "color": {
+          "light": "#000000",
+          "dark": "#606060"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 26456,
+        "name": "Zambia",
+        "abbreviation": "zam",
+        "league": "t20icr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+        "alias": "Zambia",
+        "safeName": "Zambia",
+        "colorPrimary": "#2E5CFF",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+        "displayAbbreviation": "ZAM",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "1309124"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZMB.png",
+        "color": {
+          "light": "#2E5CFF",
+          "dark": "#2E5CFF"
+        }
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  },
+  {
+    "id": "1526829",
+    "question": "Who will win in the upcoming cricket event Nigeria vs Gambia scheduled for October 20, 2026 at 12:50 PM UTC?",
+    "slug": "aec-t20icr-nig-gam-2026-10-20",
+    "endDate": "2026-11-03T17:50:00Z",
+    "category": "sports",
+    "startDate": "2026-10-17T16:30:15Z",
+    "description": "This market will settle to the winner of the Nigeria vs Gambia T20 Intl match scheduled for October 20, 2026 at 8:50AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from T20 Intl.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-17T16:30:15Z",
+    "updatedAt": "2026-10-19T09:54:45Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-20T12:50:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "3053136",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20icr-nig-gam-2026-10-20",
+        "createdAt": "2026-10-17T16:30:15Z",
+        "updatedAt": "2026-10-17T16:30:15Z",
+        "description": "Nigeria",
+        "price": "0.9500",
+        "marketId": 1526829,
+        "long": true,
+        "teamId": 41568,
+        "team": {
+          "id": 41568,
+          "name": "Nigeria",
+          "abbreviation": "nig",
+          "league": "t20icr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+          "alias": "Nigeria",
+          "safeName": "Nigeria",
+          "colorPrimary": "#008751",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+          "displayAbbreviation": "NIG",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "584719"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+          "color": {
+            "light": "#008751",
+            "dark": "#008751"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.9700",
+          "currency": "USD"
+        },
+        "tradable": true
+      },
+      {
+        "id": "3053137",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20icr-nig-gam-2026-10-20",
+        "createdAt": "2026-10-17T16:30:15Z",
+        "updatedAt": "2026-10-17T16:30:15Z",
+        "description": "Gambia",
+        "price": "0.9700",
+        "marketId": 1526829,
+        "long": false,
+        "teamId": 41569,
+        "team": {
+          "id": 41569,
+          "name": "Gambia",
+          "abbreviation": "gam",
+          "league": "t20icr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+          "alias": "Gambia",
+          "safeName": "Gambia",
+          "colorPrimary": "#2E5CFF",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+          "displayAbbreviation": "GAM",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "961719"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+          "color": {
+            "light": "#2E5CFF",
+            "dark": "#2E5CFF"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.05",
+          "currency": "USD"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"Nigeria\",\"Gambia\"]",
+    "outcomePrices": "[\"0.9500\",\"0.9700\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "Nigeria vs Gambia",
+    "feeCoefficient": 0.0695,
+    "bestBidQuote": {
+      "value": "0.9500",
+      "currency": "USD"
+    },
+    "bestAskQuote": {
+      "value": "0.9700",
+      "currency": "USD"
+    },
+    "titleShort": "NIG vs GAM",
+    "ep3SyncedAt": "2026-10-17T16:30:15Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "t20icr-nig-gam-2026-10-20",
+    "_event_slug": "t20icr-nig-gam-2026-10-20",
+    "_event_title": "Nigeria vs. Gambia",
+    "_event_description": "Nigeria vs. Gambia",
+    "_event_id": "166587",
+    "_series_slug": "t20i-cr-2026",
+    "_start_time": "2026-10-20T12:50:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 41568,
+        "name": "Nigeria",
+        "abbreviation": "nig",
+        "league": "t20icr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+        "alias": "Nigeria",
+        "safeName": "Nigeria",
+        "colorPrimary": "#008751",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+        "displayAbbreviation": "NIG",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "584719"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NGA.png",
+        "color": {
+          "light": "#008751",
+          "dark": "#008751"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 41569,
+        "name": "Gambia",
+        "abbreviation": "gam",
+        "league": "t20icr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+        "alias": "Gambia",
+        "safeName": "Gambia",
+        "colorPrimary": "#2E5CFF",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+        "displayAbbreviation": "GAM",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "961719"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/GMB.png",
+        "color": {
+          "light": "#2E5CFF",
+          "dark": "#2E5CFF"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  },
+  {
+    "id": "1533983",
+    "question": "Who will win in the upcoming cricket event Lesotho vs Mozambique scheduled for October 20, 2026 at 12:50 PM UTC?",
+    "slug": "aec-t20icr-les-moz-2026-10-20",
+    "endDate": "2026-11-03T17:50:00Z",
+    "category": "sports",
+    "startDate": "2026-10-17T20:30:16Z",
+    "description": "This market will settle to the winner of the Lesotho vs Mozambique T20 Intl match scheduled for October 20, 2026 at 8:50AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from T20 Intl.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-17T20:30:16Z",
+    "updatedAt": "2026-10-19T02:25:53Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-20T12:50:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "3067444",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20icr-les-moz-2026-10-20",
+        "createdAt": "2026-10-17T20:30:16Z",
+        "updatedAt": "2026-10-17T20:30:16Z",
+        "description": "Lesotho",
+        "price": "0.3100",
+        "marketId": 1533983,
+        "long": true,
+        "teamId": 41667,
+        "team": {
+          "id": 41667,
+          "name": "Lesotho",
+          "abbreviation": "les",
+          "league": "t20icr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+          "alias": "Lesotho",
+          "safeName": "Lesotho",
+          "colorPrimary": "#2E5CFF",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+          "displayAbbreviation": "LES",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "961701"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+          "color": {
+            "light": "#2E5CFF",
+            "dark": "#2E5CFF"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.3200",
+          "currency": "USD"
+        },
+        "tradable": true
+      },
+      {
+        "id": "3067445",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20icr-les-moz-2026-10-20",
+        "createdAt": "2026-10-17T20:30:16Z",
+        "updatedAt": "2026-10-17T20:30:16Z",
+        "description": "Mozambique",
+        "price": "0.3200",
+        "marketId": 1533983,
+        "long": false,
+        "teamId": 39227,
+        "team": {
+          "id": 39227,
+          "name": "Mozambique",
+          "abbreviation": "moz",
+          "league": "t20icr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+          "alias": "Mozambique",
+          "safeName": "Mozambique",
+          "colorPrimary": "#008A34",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+          "displayAbbreviation": "MOZ",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "961721"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+          "color": {
+            "light": "#008A34",
+            "dark": "#008A34"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.69",
+          "currency": "USD"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"Lesotho\",\"Mozambique\"]",
+    "outcomePrices": "[\"0.3100\",\"0.3200\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "Lesotho vs Mozambique",
+    "feeCoefficient": 0.0695,
+    "bestBidQuote": {
+      "value": "0.3100",
+      "currency": "USD"
+    },
+    "bestAskQuote": {
+      "value": "0.3200",
+      "currency": "USD"
+    },
+    "titleShort": "LES vs MOZ",
+    "ep3SyncedAt": "2026-10-17T20:30:16Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "t20icr-les-moz-2026-10-20",
+    "_event_slug": "t20icr-les-moz-2026-10-20",
+    "_event_title": "Lesotho vs. Mozambique",
+    "_event_description": "Lesotho vs. Mozambique",
+    "_event_id": "167481",
+    "_series_slug": "t20i-cr-2026",
+    "_start_time": "2026-10-20T12:50:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 41667,
+        "name": "Lesotho",
+        "abbreviation": "les",
+        "league": "t20icr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+        "alias": "Lesotho",
+        "safeName": "Lesotho",
+        "colorPrimary": "#2E5CFF",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+        "displayAbbreviation": "LES",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "961701"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/LSO.png",
+        "color": {
+          "light": "#2E5CFF",
+          "dark": "#2E5CFF"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 39227,
+        "name": "Mozambique",
+        "abbreviation": "moz",
+        "league": "t20icr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+        "alias": "Mozambique",
+        "safeName": "Mozambique",
+        "colorPrimary": "#008A34",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+        "displayAbbreviation": "MOZ",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "961721"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/MOZ.png",
+        "color": {
+          "light": "#008A34",
+          "dark": "#008A34"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  },
+  {
+    "id": "1568346",
+    "question": "Who will win in the upcoming cricket event India vs Zimbabwe scheduled for October 20, 2026 at 1:30 PM UTC?",
+    "slug": "aec-t20iwcr-india-zim-2026-10-20",
+    "endDate": "2026-11-03T18:30:00Z",
+    "category": "sports",
+    "startDate": "2026-10-18T18:30:26Z",
+    "description": "This market will settle to the winner of the India vs Zimbabwe T20 Intl Women match scheduled for October 20, 2026 at 9:30AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from T20 Intl Women.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-18T18:30:26Z",
+    "updatedAt": "2026-10-19T05:54:32Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-20T13:30:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "3136168",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20iwcr-india-zim-2026-10-20",
+        "createdAt": "2026-10-18T18:30:26Z",
+        "updatedAt": "2026-10-18T18:30:26Z",
+        "description": "India",
+        "price": "0.9500",
+        "marketId": 1568346,
+        "long": true,
+        "teamId": 40977,
+        "team": {
+          "id": 40977,
+          "name": "India",
+          "abbreviation": "india",
+          "league": "t20iwcr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "alias": "India",
+          "safeName": "India",
+          "colorPrimary": "#FF9933",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "displayAbbreviation": "INDIA",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "247865"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "color": {
+            "light": "#D17500",
+            "dark": "#FF9933"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.9800",
+          "currency": "USD"
+        },
+        "tradable": true
+      },
+      {
+        "id": "3136169",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20iwcr-india-zim-2026-10-20",
+        "createdAt": "2026-10-18T18:30:26Z",
+        "updatedAt": "2026-10-18T18:30:26Z",
+        "description": "Zimbabwe",
+        "price": "0.9800",
+        "marketId": 1568346,
+        "long": false,
+        "teamId": 32057,
+        "team": {
+          "id": 32057,
+          "name": "Zimbabwe",
+          "abbreviation": "zim",
+          "league": "t20iwcr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "alias": "Zimbabwe",
+          "safeName": "Zimbabwe",
+          "colorPrimary": "#2E5CFF",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "displayAbbreviation": "ZIM",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "247885"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+          "color": {
+            "light": "#2E5CFF",
+            "dark": "#2E5CFF"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.05",
+          "currency": "USD"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"India\",\"Zimbabwe\"]",
+    "outcomePrices": "[\"0.9500\",\"0.9800\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "India vs Zimbabwe",
+    "feeCoefficient": 0.0695,
+    "bestBidQuote": {
+      "value": "0.9500",
+      "currency": "USD"
+    },
+    "bestAskQuote": {
+      "value": "0.9800",
+      "currency": "USD"
+    },
+    "titleShort": "INDIA vs ZIM",
+    "ep3SyncedAt": "2026-10-18T18:30:26Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "t20iwcr-india-zim-2026-10-20",
+    "_event_slug": "t20iwcr-india-zim-2026-10-20",
+    "_event_title": "India vs. Zimbabwe",
+    "_event_description": "India vs. Zimbabwe",
+    "_event_id": "169384",
+    "_series_slug": "t20i-women-cr-2026",
+    "_start_time": "2026-10-20T13:30:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 40977,
+        "name": "India",
+        "abbreviation": "india",
+        "league": "t20iwcr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "alias": "India",
+        "safeName": "India",
+        "colorPrimary": "#FF9933",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "displayAbbreviation": "INDIA",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "247865"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "color": {
+          "light": "#D17500",
+          "dark": "#FF9933"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 32057,
+        "name": "Zimbabwe",
+        "abbreviation": "zim",
+        "league": "t20iwcr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "alias": "Zimbabwe",
+        "safeName": "Zimbabwe",
+        "colorPrimary": "#2E5CFF",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "displayAbbreviation": "ZIM",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "247885"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/ZWE.png",
+        "color": {
+          "light": "#2E5CFF",
+          "dark": "#2E5CFF"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  },
+  {
+    "id": "1584246",
+    "question": "Who will win in the upcoming cricket event Afghanistan vs Bangladesh scheduled for October 21, 2026 at 12:00 PM UTC?",
+    "slug": "aec-odicr-afg-ban-2026-10-21",
+    "endDate": "2026-11-04T17:00:00Z",
+    "category": "sports",
+    "startDate": "2026-10-19T07:30:11Z",
+    "description": "This market will settle to the winner of the Afghanistan vs Bangladesh ODI Intl match scheduled for October 21, 2026 at 8:00AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from ODI Intl.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-19T07:30:11Z",
+    "updatedAt": "2026-10-19T07:54:38Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-21T12:00:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "3167968",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-odicr-afg-ban-2026-10-21",
+        "createdAt": "2026-10-19T07:30:11Z",
+        "updatedAt": "2026-10-19T07:30:11Z",
+        "description": "Afghanistan",
+        "price": "0.1000",
+        "marketId": 1584246,
+        "long": true,
+        "teamId": 41330,
+        "team": {
+          "id": 41330,
+          "name": "Afghanistan",
+          "abbreviation": "afg",
+          "league": "odicr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "alias": "Afghanistan",
+          "safeName": "Afghanistan",
+          "colorPrimary": "#000000",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "displayAbbreviation": "AFG",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "142688"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+          "color": {
+            "light": "#000000",
+            "dark": "#606060"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "tradable": true
+      },
+      {
+        "id": "3167969",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-odicr-afg-ban-2026-10-21",
+        "createdAt": "2026-10-19T07:30:11Z",
+        "updatedAt": "2026-10-19T07:30:11Z",
+        "description": "Bangladesh",
+        "price": "0.9000",
+        "marketId": 1584246,
+        "long": false,
+        "teamId": 41093,
+        "team": {
+          "id": 41093,
+          "name": "Bangladesh",
+          "abbreviation": "ban",
+          "league": "odicr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+          "alias": "Bangladesh",
+          "safeName": "Bangladesh",
+          "colorPrimary": "#2E5CFF",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+          "displayAbbreviation": "BAN",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "142692"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+          "color": {
+            "light": "#2E5CFF",
+            "dark": "#2E5CFF"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"Afghanistan\",\"Bangladesh\"]",
+    "outcomePrices": "[\"0.1000\",\"0.9000\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "Afghanistan vs Bangladesh",
+    "feeCoefficient": 0.0695,
+    "titleShort": "AFG vs BAN",
+    "ep3SyncedAt": "2026-10-19T07:30:11Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "odicr-afg-ban-2026-10-21",
+    "_event_slug": "odicr-afg-ban-2026-10-21",
+    "_event_title": "Afghanistan vs. Bangladesh",
+    "_event_description": "Afghanistan vs. Bangladesh",
+    "_event_id": "170681",
+    "_series_slug": "odi-cr-2026",
+    "_start_time": "2026-10-21T12:00:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 41330,
+        "name": "Afghanistan",
+        "abbreviation": "afg",
+        "league": "odicr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "alias": "Afghanistan",
+        "safeName": "Afghanistan",
+        "colorPrimary": "#000000",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "displayAbbreviation": "AFG",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "142688"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/AFG.png",
+        "color": {
+          "light": "#000000",
+          "dark": "#606060"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 41093,
+        "name": "Bangladesh",
+        "abbreviation": "ban",
+        "league": "odicr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+        "alias": "Bangladesh",
+        "safeName": "Bangladesh",
+        "colorPrimary": "#2E5CFF",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+        "displayAbbreviation": "BAN",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "142692"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/BGD.png",
+        "color": {
+          "light": "#2E5CFF",
+          "dark": "#2E5CFF"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  },
+  {
+    "id": "1584957",
+    "question": "Who will win in the upcoming cricket event New Zealand vs India scheduled for October 22, 2026 at 7:00 AM UTC?",
+    "slug": "aec-t20icr-nze-india-2026-10-22",
+    "endDate": "2026-11-05T12:00:00Z",
+    "category": "sports",
+    "startDate": "2026-10-19T08:30:13Z",
+    "description": "This market will settle to the winner of the New Zealand vs India T20 Intl match scheduled for October 22, 2026 at 3:00AM ET (as of the listing of the event's first instrument). A Super Over or other official tie-breaker is included if played, and the market will settle to the winner it produces. If the first ball is bowled and the match ends in a tie, draw, or no result (including abandonment or cancellation with no official winner declared) and no Super Over or official tie-breaker is played, the market will settle to $0.50. If the first ball is bowled and a team then concedes, refuses to continue, or is disqualified, the market will settle to the team officially declared the winner. If the match is cancelled or abandoned before the first ball is bowled, or does not begin because a team forfeits, withdraws, refuses to play, or is disqualified, the market will settle to the last fair market price, even if a team is awarded the match. If the match is delayed, postponed, or otherwise rescheduled to a date and time not within two days of the originally scheduled date and time, the market will settle to the last fair market price. Outcome sourced from T20 Intl.",
+    "active": true,
+    "marketType": "moneyline",
+    "closed": false,
+    "createdAt": "2026-10-19T08:30:13Z",
+    "updatedAt": "2026-10-19T08:54:30Z",
+    "archived": false,
+    "orderPriceMinTickSize": 0.01,
+    "gameStartTime": "2026-10-22T07:00:00Z",
+    "manualActivation": false,
+    "sportsMarketType": "cricket_match_winner",
+    "marketSides": [
+      {
+        "id": "3169390",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20icr-nze-india-2026-10-22",
+        "createdAt": "2026-10-19T08:30:13Z",
+        "updatedAt": "2026-10-19T08:30:13Z",
+        "description": "New Zealand",
+        "price": "0.3700",
+        "marketId": 1584957,
+        "long": true,
+        "teamId": 41777,
+        "team": {
+          "id": 41777,
+          "name": "New Zealand",
+          "abbreviation": "nze",
+          "league": "t20icr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "alias": "New Zealand",
+          "safeName": "New Zealand",
+          "colorPrimary": "#00247D",
+          "ordering": "home",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "displayAbbreviation": "NZE",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "142702"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+          "color": {
+            "light": "#00247D",
+            "dark": "#355DB9"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.4400",
+          "currency": "USD"
+        },
+        "tradable": true
+      },
+      {
+        "id": "3169391",
+        "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+        "identifier": "aec-t20icr-nze-india-2026-10-22",
+        "createdAt": "2026-10-19T08:30:13Z",
+        "updatedAt": "2026-10-19T08:30:13Z",
+        "description": "India",
+        "price": "0.4400",
+        "marketId": 1584957,
+        "long": false,
+        "teamId": 20953,
+        "team": {
+          "id": 20953,
+          "name": "India",
+          "abbreviation": "india",
+          "league": "t20icr",
+          "record": "",
+          "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "alias": "India",
+          "safeName": "India",
+          "colorPrimary": "#FF9933",
+          "ordering": "away",
+          "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "displayAbbreviation": "INDIA",
+          "providerIds": [
+            {
+              "provider": "PROVIDER_ODDSPAPI",
+              "providerId": "107203"
+            }
+          ],
+          "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+          "color": {
+            "light": "#D17500",
+            "dark": "#FF9933"
+          },
+          "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+        },
+        "quote": {
+          "value": "0.63",
+          "currency": "USD"
+        },
+        "tradable": true
+      }
+    ],
+    "outcomes": "[\"New Zealand\",\"India\"]",
+    "outcomePrices": "[\"0.3700\",\"0.4400\"]",
+    "ep3Status": "OPEN",
+    "status": "MARKET_STATUS_OPEN",
+    "assetPriceTerms": null,
+    "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+    "hidden": false,
+    "tags": [],
+    "title": "New Zealand vs India",
+    "feeCoefficient": 0.0695,
+    "bestBidQuote": {
+      "value": "0.3700",
+      "currency": "USD"
+    },
+    "bestAskQuote": {
+      "value": "0.4400",
+      "currency": "USD"
+    },
+    "titleShort": "NZE vs INDIA",
+    "ep3SyncedAt": "2026-10-19T08:30:13Z",
+    "minimumTradeQty": 0.01,
+    "comboEnabled": true,
+    "politics": null,
+    "_event_ticker": "t20icr-nze-india-2026-10-22",
+    "_event_slug": "t20icr-nze-india-2026-10-22",
+    "_event_title": "New Zealand vs. India",
+    "_event_description": "New Zealand vs. India",
+    "_event_id": "170732",
+    "_series_slug": "t20i-cr-2026",
+    "_start_time": "2026-10-22T07:00:00Z",
+    "_event_date": "",
+    "_event_teams": [
+      {
+        "id": 41777,
+        "name": "New Zealand",
+        "abbreviation": "nze",
+        "league": "t20icr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "alias": "New Zealand",
+        "safeName": "New Zealand",
+        "colorPrimary": "#00247D",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "displayAbbreviation": "NZE",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "142702"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/NZL.png",
+        "color": {
+          "light": "#00247D",
+          "dark": "#355DB9"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      },
+      {
+        "id": 20953,
+        "name": "India",
+        "abbreviation": "india",
+        "league": "t20icr",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "alias": "India",
+        "safeName": "India",
+        "colorPrimary": "#FF9933",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "displayAbbreviation": "INDIA",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ODDSPAPI",
+            "providerId": "107203"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/IND.png",
+        "color": {
+          "light": "#D17500",
+          "dark": "#FF9933"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_FLAG"
+      }
+    ],
+    "_event_status": "",
+    "_native_sport": "cricket",
+    "_discovery_source": "native_sport"
+  }
+]

@@ -1,18 +1,18 @@
 # Market data and expansion
 
-The current terminal is a read-only snapshot scanner for cricket match winners and NBA full-game winners on Kalshi and Polymarket International. It does not place orders or claim that a displayed price difference guarantees a profit.
+The current terminal is a read-only snapshot scanner for cricket match winners and NBA, NFL, NHL, and MLB full-game winners on Kalshi and Polymarket International. It does not place orders or claim that a displayed price difference guarantees a profit.
 
 ## Rules before prices
 
 An event identity and a contract identity are separate. Sport, participants, date, competition, start-time evidence and market type establish candidate fixtures. A payout profile then records the selected outcome's payments and policies for the relevant result states. A three-way cricket contract that loses on a draw is different from a two-way contract paying 0.50 on a draw. Postponement deadlines, abandonment, forfeits, overtime and administrative voids also matter.
 
-Only fully evidenced, matching profiles may enter the comparable-cross scan. Differing and unverified profiles remain visible for review. The raw rules, extracted evidence, missing states and quote provenance remain in the saved data and row details. Equal unknown rules are never treated as equivalent.
+Core completed-game payouts and sport-specific result rules must be evidenced and match before a row can enter the comparable-cross scan. Cancellation, postponement, abandonment, and other exceptional event states are reported as conditional caveats; they do not make normal-result payouts appear different. Strict full-contract comparison is available in the terminal when exceptional-state equivalence is required. Unverified core rules and real completed-game differences remain visible for review. Raw rules, extracted evidence, missing states, caveats and quote provenance remain in the saved data and row details. Equal unknown rules are never treated as equivalent.
 
 The cross tab is a shortlist of comparable, fresh cross-venue quotes before fees and execution costs. It is not an execution engine: available quantity, fee schedules, cash/collateral requirements, cancellation exposure and simultaneous execution must be checked before treating a cross as an arbitrage.
 
 ## Current collection
 
-Sport adapters separate discovery and parsing from the shared fixture matcher, rule checks, quote collector, audit and terminal. NBA team identities use published venue metadata and a league-scoped registry rather than accepting fuzzy abbreviations. Raw records and authoritative team metadata are saved for replay.
+Sport adapters separate discovery and parsing from the shared fixture matcher, rule checks, quote collector, audit and terminal. Basketball, football, hockey and baseball discovery uses each league's game-series endpoint; identities require published venue metadata and that league's exact team registry rather than fuzzy abbreviations. Raw records, linked Kalshi game milestones and authoritative team metadata are saved for replay.
 
 Discovery is slower than price collection and should remain a separate, periodic task. Selected Kalshi contracts are refreshed using the documented comma-separated `tickers` filter. Polymarket books are requested in batches for exact outcome-token IDs. The code uses bounded request concurrency and retains missing sides as missing. [Kalshi markets API](https://docs.kalshi.com/api-reference/market/get-markets), [Polymarket order books](https://docs.polymarket.com/market-data/prices-order-books).
 

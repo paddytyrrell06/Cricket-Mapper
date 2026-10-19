@@ -1,6 +1,6 @@
 # Sports Market Terminal
 
-A read-only comparison terminal for **Kalshi and Polymarket International**, currently covering cricket match winners and NBA full-game winners. Polymarket US is excluded from the active scanner.
+A read-only comparison terminal for **Kalshi and Polymarket International**, covering cricket match winners and full-game winners in the NBA, NFL, NHL, and MLB. Polymarket US is excluded from the active scanner.
 
 ## Run
 
@@ -13,13 +13,14 @@ Python 3.9+ and the standard library are sufficient. No API keys or package inst
 ```bash
 python3 run.py --sports=cricket --no-open
 python3 run.py --sports=basketball --no-open
+python3 run.py --sports=football,hockey,baseball --no-open
 ```
 
-The generated terminal remains at `output/CricketMatchingReport.html` for compatibility. Its Cricket and Basketball tabs show bid/ask quotes with a compact rule status. All crosses collates only comparable, fresh cross-venue quotes. Details opens the original venue links, payouts, policy differences, supporting rule text, observation times and diagnostics.
+The generated terminal remains at `output/CricketMatchingReport.html` for compatibility. Sport tabs show bid/ask quotes with a compact rule status; the Crosses tab collates only comparable, fresh cross-venue quotes. Details opens the original venue links, payouts, policy differences, supporting rule text, observation times and diagnostics.
 
 ## Settlement compatibility
 
-Matching teams and dates is insufficient. A team contract paying zero on a draw is different from one paying 0.50. The scanner compares evidenced payout states and policies, including draw, tie-breaks, no result, abandonment, forfeits, postponement deadlines and overtime. Unknown or differing rules remain review rows and cannot produce an eligible cross. Discretionary fair-price or refund language cannot establish a fixed equivalent payoff.
+Matching teams and dates is insufficient. A team contract paying zero on a draw is different from one paying 0.50. The scanner compares evidenced normal-completion payout states and sport-specific policies: cricket draw, tie-breaks and DLS; NFL tied games and overtime; NHL overtime and shootouts; MLB extra innings; and NBA overtime. Cancellation, postponement, abandonment and other exceptional-state differences appear as conditional caveats, rather than making otherwise matching normal-result terms look different. Missing normal-result evidence or genuinely different completed-game payouts remain review rows and cannot produce an eligible cross. Discretionary fair-price or refund language cannot establish a fixed equivalent payoff.
 
 This intentionally removes apparent opportunities caused by different contracts. For example, current NBA venue rules have different cancellation/postponement treatment even where both markets include overtime. A review row still shows both prices; it is not presented as an arbitrage.
 
@@ -27,7 +28,7 @@ Prices use exact decimals. A cross requires a bid strictly above a distinct venu
 
 ## Sources and expansion
 
-Cricket reuses the project's competition and team-normalization logic. NBA discovery uses native game-winner endpoints, published team metadata and a league-scoped registry of all 30 teams. Props, futures, unresolved team identities and conflicting start times are kept out of accepted comparisons. Sport identifiers form part of fixture identity, so similar names cannot link across sports.
+Cricket reuses the project's competition and team-normalization logic. NBA, NFL, NHL and MLB use their league-specific game series, published team metadata and separate exact team registries. Props, futures, unresolved team identities and conflicting start times are kept out of accepted comparisons. Sport identifiers form part of fixture identity, so similar names cannot link across sports.
 
 The sport adapters, shared settlement model, matching, quote collection and audit provide the expansion points for additional sports. The supported scope is currently match winners, not every market type on either exchange.
 

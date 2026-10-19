@@ -1,6 +1,8 @@
 import copy
 import unittest
 from unittest.mock import patch
+import json
+from pathlib import Path
 
 import matching as M
 import quotes as Q
@@ -43,6 +45,52 @@ def gamma_event(day="20"):
             "markets": [market]}
 
 
+def configured_sports_raw(sport, *, include_kalshi=True, include_polymarket=True):
+    config = json.loads((Path(S.__file__).parent / "config" /
+                         S.SPORT_CONFIGS[sport]["config"]).read_text())
+    teams = config["teams"][:2]
+    left, right = teams
+    league = config["league"]
+    series = S.SPORT_CONFIGS[sport]["series"]
+    date = "2026-10-20"
+    start = "2026-10-20T23:00:00Z"
+    codes = (left["code"], right["code"])
+    names = (left["canonical"], right["canonical"])
+    slug = f"{league}-{codes[0].lower()}-{codes[1].lower()}-{date}"
+    raw = {"kalshi": [], "polymarket_intl": [],
+           "_teams": [{"name": name, "abbreviation": code.lower(), "league": league}
+                      for code, name in zip(codes, names)]}
+    if include_kalshi:
+        event = f"{series}-26OCT20{codes[0]}{codes[1]}"
+        for code, name in zip(codes, names):
+            ticker = f"{event}-{code}"
+            raw["kalshi"].append({
+                "ticker": ticker, "event_ticker": event,
+                "market_type": "binary", "yes_sub_title": name,
+                "title": f"{name} wins", "status": "active",
+                "occurrence_datetime": start,
+                "rules_primary": f"If {name} wins the {league.upper()} game, the market resolves Yes.",
+                "rules_secondary": "If postponed but begins within 48 hours, remain open. Otherwise resolve to a fair price.",
+            })
+    if include_polymarket:
+        outcomes = [teams[0]["aliases"][0], teams[1]["aliases"][0]]
+        market = {
+            "id": "winner-" + sport, "slug": slug,
+            "question": " vs. ".join(outcomes),
+            "sportsMarketType": "moneyline", "active": True, "closed": False,
+            "outcomes": json.dumps(outcomes), "clobTokenIds": '["200", "100"]',
+            "gameStartTime": start,
+            "description": f"If {outcomes[0]} win, resolve {outcomes[0]}. If {outcomes[1]} win, resolve {outcomes[1]}. Overtime is included if played. The result includes any overtime periods and shootouts and extra innings.",
+            "resolutionSource": config["source"],
+        }
+        raw["polymarket_intl"].append({
+            **market, "_event_slug": slug, "_event_id": "event-" + sport,
+            "_event_teams": raw["_teams"], "_event_start_time": start,
+            "_native_league": league,
+        })
+    return raw
+
+
 def flatten_samples():
     event = kalshi_event()
     kalshi = []
@@ -80,7 +128,7 @@ class NbaTeamRegistryTests(unittest.TestCase):
 
 
 class NbaParserTests(unittest.TestCase):
-    def test_native_winners_normalize_exactly_but_settlement_difference_stays_review(self):
+    def test_native_winners_allow_normal_result_with_contingency_difference(self):
         raw = flatten_samples()
         fixtures, markets, warnings = S.parse_basketball(raw)
         self.assertEqual(warnings, [])
@@ -91,12 +139,15 @@ class NbaParserTests(unittest.TestCase):
         accepted, review, unmatched = M.match_fixtures(fixtures)
         self.assertEqual((len(accepted), len(review), len(unmatched)), (1, 0, 0))
         market_accepted, market_review, _ = M.match_markets(accepted, markets)
-        self.assertEqual(market_accepted, [])
-        self.assertEqual(len(market_review), 2)
-        self.assertTrue(all("settlement rules differ" in match.reason for match in market_review))
+        self.assertEqual(len(market_accepted), 2)
+        self.assertEqual(market_review, [])
+        self.assertTrue(all(match.contingency_status == "different" for match in market_accepted))
+        self.assertTrue(all("conditional" in match.reason for match in market_accepted))
         for name in ("Boston Celtics", "Detroit Pistons"):
             profiles = [m.extra["settlement"] for m in markets if m.outcome == name]
-            self.assertEqual(settlement.compare_profiles(*profiles)["status"], "incompatible")
+            comparison = settlement.compare_profiles(*profiles)
+            self.assertEqual(comparison["status"], "compatible")
+            self.assertEqual(comparison["contingency_status"], "different")
 
     def test_native_time_disagreement_is_not_silently_aligned(self):
         raw = flatten_samples()
@@ -186,17 +237,21 @@ class NbaCollectorTests(unittest.TestCase):
                              "cursor": "k-next" if repeat_cursor else ""}
             if url.endswith("/teams"):
                 return 200, gamma_event()["teams"]
-            if url.endswith("/events/keyset"):
+            if url == S.K.GAMMA + "/events":
                 if gamma_failed:
                     return 503, None
-                if not params.get("after_cursor"):
+                if not params.get("offset"):
                     event = gamma_event()
                     prop = dict(event["markets"][0], id="prop", slug=event["slug"] + "-player-points",
                                 sportsMarketType="player_points")
                     event["markets"].append(prop)
                     future = {"id": "future", "slug": "nba-title-winner", "markets": []}
-                    return 200, {"events": [event, future], "next_cursor": "p-next"}
-                return 200, {"events": [gamma_event("21")], "next_cursor": None}
+                    unrelated = [
+                        {"id": f"future-{index}", "slug": f"nba-award-{index}", "markets": []}
+                        for index in range(98)
+                    ]
+                    return 200, [event, future, *unrelated]
+                return 200, [gamma_event("21")]
             raise AssertionError(url)
         return get
 
@@ -210,10 +265,42 @@ class NbaCollectorTests(unittest.TestCase):
         self.assertEqual(raw["_kalshi_series"][0]["contract_terms_url"], S.NBA_TERMS)
         self.assertTrue(any(call.args[1].get("cursor") == "k-next"
                             for call in get.call_args_list if len(call.args) > 1))
-        self.assertTrue(any(call.args[1].get("after_cursor") == "p-next"
+        self.assertTrue(any(call.args[1].get("offset") == 100
                             for call in get.call_args_list if len(call.args) > 1))
         fixtures, markets, warnings = S.parse_basketball(raw)
         self.assertEqual((len(fixtures), len(markets), warnings), (4, 8, []))
+
+    def test_verified_series_collection_attaches_official_rules_for_each_sport(self):
+        for sport in ("basketball", "football", "hockey", "baseball"):
+            with self.subTest(sport=sport):
+                series = S.SPORT_CONFIGS[sport]["series"]
+                league = S.SPORT_CONFIGS[sport]["league"]
+                event_id = f"{series}-26OCT20BOSDET"
+
+                def respond(url, params=None, **kwargs):
+                    if url.endswith("/series/" + series):
+                        return 200, {"series": {"title": league.upper() + " Game",
+                                                 "contract_terms_url": S.KALSHI_DOCUMENTS[sport]["url"]}}
+                    if url == S.K.KALSHI + "/events":
+                        return 200, {"events": [{
+                            "event_ticker": event_id, "series_ticker": series,
+                            "title": "Boston vs Detroit", "markets": [{
+                                "ticker": event_id + "-BOS", "market_type": "binary",
+                                "yes_sub_title": "Boston", "status": "active",
+                                "occurrence_datetime": "2026-10-20T23:00:00Z",
+                            }],
+                        }]}
+                    raise AssertionError(url)
+
+                with patch.object(S.K.http, "get", side_effect=respond):
+                    records, _, _, _, _ = S._collect_kalshi(
+                        series=series, league=league,
+                        document=S.KALSHI_DOCUMENTS[sport],
+                    )
+                self.assertTrue(records)
+                self.assertTrue(all(record.get("_settlement_documents") for record in records))
+                self.assertEqual(records[0]["_settlement_documents"][0]["url"],
+                                 S.KALSHI_DOCUMENTS[sport]["url"])
 
     def test_repeated_cursor_keeps_partial_records_but_never_claims_complete(self):
         with patch.object(S.K.http, "get", side_effect=self.responder(repeat_cursor=True)):
@@ -233,10 +320,32 @@ class NbaCollectorTests(unittest.TestCase):
         self.assertTrue(warnings)
 
     def test_registry_exposes_two_venues_and_distinct_sport_adapters(self):
-        self.assertEqual(set(S.ADAPTERS), {"cricket", "basketball"})
+        self.assertEqual(set(S.ADAPTERS), {"cricket", "basketball", "football", "hockey", "baseball"})
         self.assertEqual(S.ADAPTERS["basketball"].label, "Basketball (NBA)")
         self.assertTrue(all(adapter.venues == ("kalshi", "polymarket_intl")
                             for adapter in S.ADAPTERS.values()))
+
+    def test_new_team_sport_adapters_parse_only_exact_league_winners(self):
+        for sport in ("football", "hockey", "baseball"):
+            with self.subTest(sport=sport):
+                raw = configured_sports_raw(sport)
+                fixtures, markets, warnings = S.ADAPTERS[sport].parse(raw)
+                self.assertEqual(warnings, [])
+                self.assertEqual(len(fixtures), 2)
+                self.assertEqual(len(markets), 4)
+                self.assertEqual(fixtures[0].key.sport, sport)
+                accepted, review, unmatched = M.match_fixtures(fixtures)
+                self.assertEqual((len(accepted), len(review), len(unmatched)), (1, 0, 0))
+                market_accepted, market_review, _ = M.match_markets(accepted, markets)
+                self.assertEqual(len(market_accepted) + len(market_review), 2)
+
+    def test_new_team_sport_parser_rejects_cross_league_team_metadata(self):
+        raw = configured_sports_raw("football", include_kalshi=False)
+        raw["polymarket_intl"][0]["_event_teams"][0]["league"] = "nba"
+        fixtures, markets, warnings = S.ADAPTERS["football"].parse(raw)
+        self.assertEqual(fixtures, [])
+        self.assertEqual(markets, [])
+        self.assertTrue(any("unresolved" in warning for warning in warnings))
 
     def test_cricket_registry_requests_winner_scope_before_parsing_props(self):
         with patch.object(S.C, "parse_kalshi", return_value=([], [], [])) as kalshi, patch.object(

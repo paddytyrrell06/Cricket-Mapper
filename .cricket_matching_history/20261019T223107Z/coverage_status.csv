@@ -1,0 +1,5 @@
+sport,venue,collection_complete,parse_complete,mapping_coverage_complete,method,records,reason
+cricket,kalshi,True,True,True,sports_filter_plus_series,106,
+cricket,polymarket_intl,True,True,True,events_keyset_tag_slug_cricket,645,
+basketball,kalshi,True,True,True,KXNBAGAME_nested_open_events,86,
+basketball,polymarket_intl,True,True,True,events_keyset_tag_slug_nba_moneyline,43,

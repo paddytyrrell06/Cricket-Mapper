@@ -331,6 +331,9 @@ class MarketMatch:
     status: str = "accepted"
     confidence: str = "high"
     reason: str = ""
+    comparison_basis: str = ""
+    contingency_status: str = "unknown"
+    caveats: list[str] = field(default_factory=list)
 
 
 def _out_key(market: Market) -> str:
@@ -391,6 +394,9 @@ def match_markets(fixture_matches: list[FixtureMatch], markets: list[Market]
                 if fixture_match.status != "accepted":
                     problems.append("fixture is unresolved")
                 settlement = S.compare_profiles(m1.extra.get("settlement"), m2.extra.get("settlement"))
+                mm.comparison_basis = settlement["comparison_basis"]
+                mm.contingency_status = settlement["contingency_status"]
+                mm.caveats = list(settlement["caveats"])
                 if settlement["status"] != "compatible":
                     problems.append(settlement["reason"])
                 if any(m.fixture_key and m.fixture_key.sport != fixture_match.key.sport for m in (m1, m2)):
@@ -403,7 +409,7 @@ def match_markets(fixture_matches: list[FixtureMatch], markets: list[Market]
                 else:
                     mm.reason = ("confirmed fixture; canonical market type and "
                                  f"outcome agree ({market_type}/{outcome})")
-                    mm.reason += "; equal evidenced settlement payouts and policies"
+                    mm.reason += "; " + settlement["reason"]
                     if "trusted competition/date-scoped" in fixture_match.reason:
                         mm.reason += "; " + fixture_match.reason
                     accepted.append(mm)

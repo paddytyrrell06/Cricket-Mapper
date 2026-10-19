@@ -327,6 +327,34 @@ class ReplayRunTests(unittest.TestCase):
         self.assertEqual(coverage["polymarket_intl"]["reason"], "")
         self.assertTrue(coverage["polymarket_intl"]["complete"])
 
+    def test_registered_sport_replays_extra_evidence_and_keeps_coverage_scoped(self):
+        metadata = self.write_snapshot()
+        metadata["sports"] = {"football": {venue: {"complete": True, "method": "saved_league"}
+                                           for venue in R.VENUES}}
+        (self.source / "collection_meta.json").write_text(json.dumps(metadata))
+        for key in (*R.VENUES, "_teams", "_milestones"):
+            (self.source / f"raw_football_{key}.json").write_text(json.dumps([{"kind": key}]))
+        parsed = []
+
+        def parse_league(raw):
+            parsed.append(raw)
+            return [], [], []
+
+        adapter = R.S.SportAdapter("football", "NFL", tuple(R.VENUES),
+                                  lambda: self.fail("replay collected live data"), parse_league)
+        with patch.dict(R.S.ADAPTERS, {"football": adapter}), patch.object(
+                R, "ENABLED_SPORTS", ("cricket", "football")), patch.object(
+                R.Q, "_request_json", side_effect=AssertionError("replay requested quotes")):
+            self.assertEqual(R.main(), 0)
+            self.assertEqual(parsed[0]["_milestones"], [{"kind": "_milestones"}])
+            self.assertTrue(self.output_metadata()["sports"]["football"]["kalshi"]["mapping_coverage_complete"])
+            self.assertTrue((self.output / "data" / "raw_football__teams.json").exists())
+            (self.source / "raw_football_kalshi.json").unlink()
+            self.assertEqual(R.main(), 0)
+            coverage = self.output_metadata()
+            self.assertFalse(coverage["sports"]["football"]["kalshi"]["mapping_coverage_complete"])
+            self.assertTrue(coverage["sports"]["cricket"]["kalshi"]["mapping_coverage_complete"])
+
     def test_explicit_collection_note_survives_successful_reparse(self):
         metadata = self.write_snapshot()
         metadata["polymarket_intl"].update(

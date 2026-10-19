@@ -1,0 +1,58 @@
+{
+  "kalshi": {
+    "complete": true,
+    "method": "sports_filter_plus_series",
+    "reason": "",
+    "records": 106,
+    "parse_complete": true,
+    "mapping_coverage_complete": true,
+    "collection_reason": ""
+  },
+  "polymarket_intl": {
+    "complete": true,
+    "method": "events_keyset_tag_slug_cricket",
+    "reason": "",
+    "records": 645,
+    "parse_complete": true,
+    "mapping_coverage_complete": true,
+    "collection_reason": ""
+  },
+  "sports": {
+    "cricket": {
+      "kalshi": {
+        "complete": true,
+        "method": "sports_filter_plus_series",
+        "reason": "",
+        "records": 106,
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      },
+      "polymarket_intl": {
+        "complete": true,
+        "method": "events_keyset_tag_slug_cricket",
+        "reason": "",
+        "records": 645,
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      }
+    },
+    "basketball": {
+      "kalshi": {
+        "complete": true,
+        "method": "KXNBAGAME_nested_open_events",
+        "records": 86,
+        "reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      },
+      "polymarket_intl": {
+        "complete": true,
+        "method": "events_keyset_tag_slug_nba_moneyline",
+        "records": 43,
+        "reason": "",
+        "parse_complete": false,
+        "mapping_coverage_complete": false
+      }
+    }
+  }
+}

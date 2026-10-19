@@ -28,6 +28,23 @@ NBA_STATES = ("win", "loss", "cancelled_before_start",
               "forfeit_after_start_loss", "void")
 CRICKET_POLICIES = ("period", "tiebreakers", "postponement", "dls")
 NBA_POLICIES = ("period", "overtime", "postponement")
+FOOTBALL_STATES = NBA_STATES + ("tie",)
+HOCKEY_STATES = NBA_STATES + ("tie",)
+BASEBALL_STATES = NBA_STATES + ("tie",)
+SPORTS = {"cricket", "basketball", "football", "hockey", "baseball"}
+CORE_STATES = {"cricket": ("win", "loss", "draw", "tie_without_tiebreak"),
+               "basketball": ("win", "loss"), "football": ("win", "loss", "tie"),
+               "hockey": ("win", "loss"), "baseball": ("win", "loss")}
+CORE_POLICIES = {"cricket": ("period", "tiebreakers", "dls"),
+                 "basketball": ("period", "overtime"),
+                 "football": ("period", "overtime"),
+                 "hockey": ("period", "overtime", "shootout"),
+                 "baseball": ("period", "extra_innings")}
+POLICY_VALUES = {"period": {"full_match", "regulation"}, "overtime": {"included", "excluded"},
+                 "shootout": {"included", "excluded"}, "extra_innings": {"included", "excluded"},
+                 "tiebreakers": {"included_if_played", "excluded", "not_applicable"},
+                 "dls": {"official_result", "excluded", "not_applicable"}}
+OFFICIAL_FORFEIT_STATES = {"forfeit_after_start_win", "forfeit_after_start_loss"}
 
 
 def resolution_evidence(raw: dict) -> dict:
@@ -39,11 +56,14 @@ def resolution_evidence(raw: dict) -> dict:
 
 
 def _states(sport: str) -> tuple:
-    return NBA_STATES if sport == "basketball" else CRICKET_STATES
+    return {"basketball": NBA_STATES, "football": FOOTBALL_STATES,
+            "hockey": HOCKEY_STATES, "baseball": BASEBALL_STATES}.get(sport, CRICKET_STATES)
 
 
 def _policies(sport: str) -> tuple:
-    return NBA_POLICIES if sport == "basketball" else CRICKET_POLICIES
+    return {"basketball": NBA_POLICIES, "football": NBA_POLICIES,
+            "hockey": ("period", "overtime", "shootout", "postponement"),
+            "baseball": ("period", "extra_innings", "postponement")}.get(sport, CRICKET_POLICIES)
 
 
 def _fixed_payout(value: Any) -> Any:
@@ -78,14 +98,17 @@ def make_profile(*, sport: str, target_kind: str, payouts: dict, policies: dict,
                    if not policies.get(key) or policies[key] == "unknown")
     if not evidence:
         missing.append("resolution evidence")
-    if sport not in {"cricket", "basketball"} or target_kind not in {"team", "draw"}:
+    if sport not in SPORTS or target_kind not in {"team", "draw"}:
         missing.append("supported sport/target")
     signature = json.dumps({"sport": sport, "target_kind": target_kind,
                             "payouts": payouts, "policies": policies}, sort_keys=True)
-    return {"profile_id": hashlib.sha256(signature.encode()).hexdigest()[:16],
+    profile = {"profile_id": hashlib.sha256(signature.encode()).hexdigest()[:16],
             "status": "unknown" if missing else "known", "sport": sport,
             "target_kind": target_kind, "payouts": payouts, "policies": policies,
             "evidence": evidence, "missing": missing, "label": label}
+    profile["core_missing"] = _core_missing(profile, sport)
+    profile["core_status"] = "unknown" if profile["core_missing"] else "known"
+    return profile
 
 
 def profile_market(venue: str, raw: dict, *, sport: str = "cricket", outcome: str = "",
@@ -112,16 +135,46 @@ def profile_market(venue: str, raw: dict, *, sport: str = "cricket", outcome: st
         payouts.update(win="0" if target == "draw" else "1", loss="0")
         policies["period"] = "full_match"
 
-    if sport == "basketball":
-        if re.search(r"including (?:any )?overtime|overtime (?:is |will be )?included|regulation time and any officially designated overtime periods", text):
-            policies["overtime"] = "included"
-        elif "regulation only" in text or "excluding overtime" in text:
-            policies["overtime"] = "excluded"
+    if sport in {"basketball", "football", "hockey", "baseball"}:
+        native_text = re.sub(r"\s+", " ", " ".join(value for key, value in parts
+                            if key in {"rules_primary", "rules_secondary", "description"})).lower()
+        exclude_ot = r"regulation(?: time)? only|excluding overtime|without overtime|not including overtime|overtime (?:is |will be )?not included"
+        include_ot = r"including (?:any )?overtime|overtime(?: periods)? (?:are |is |will be )?included|regulation time and any officially designated overtime periods|regulation time, overtime, and the shootout"
+        if "overtime" in policies:
+            if re.search(exclude_ot, native_text):
+                policies["overtime"] = "excluded"
+            elif re.search(include_ot, text):
+                policies["overtime"] = "included"
+            elif re.search(exclude_ot, text):
+                policies["overtime"] = "excluded"
+        if sport == "hockey":
+            if re.search(r"(?:excluding|without|not including) (?:the )?shootouts?|shootouts? (?:is |are )?not included", native_text):
+                policies["shootout"] = "excluded"
+            elif re.search(r"including[^.]{0,100}shootouts?|regulation time, overtime, and the shootout", text):
+                policies["shootout"] = "included"
+        if sport == "baseball":
+            if re.search(r"(?:excluding|without|not including) extra innings|regulation innings only", native_text):
+                policies["extra_innings"] = "excluded"
+            elif re.search(r"including[^.]{0,100}extra innings|extra innings[^.]{0,80}(?:are |is )?included", text):
+                policies["extra_innings"] = "included"
+        if sport == "football":
+            if re.search(r"(?:ends|end) in a tie[^.]{0,150}(?:resolv|settl)\w*[^.]{0,60}(?:50[- ]50|\$0\.50)", native_text):
+                payouts["tie"] = "0.5"
+            elif re.search(r"no [\"']?tie[\"']? strike is listed[^.]{0,180}(?:\$0\.50|50[- ]50)", text):
+                payouts["tie"] = "0.5"
+            elif re.search(r"(?:ends|end) in a tie[^.]{0,150}(?:resolv|settl)\w*[^.]{0,60}(?:\"|')?no\b", native_text):
+                payouts["tie"] = "0"
+        if sport in {"basketball", "football"} and policies.get("overtime"):
+            label = "Winner including overtime" if policies["overtime"] == "included" else "Regulation winner"
+        elif sport == "hockey" and policies.get("overtime") == policies.get("shootout") == "included":
+            label = "Winner including overtime and shootout"
+        elif sport == "baseball" and policies.get("extra_innings") == "included":
+            label = "Winner including extra innings"
         if venue == "kalshi" and "within 48 hours" in text and re.search(r"resolve to (?:a )?fair (?:market )?price", text):
             policies["postponement"] = "fair_market_price_if_not_started_within_48_hours"
             payouts["cancelled_before_start"] = "fair_market_price"
         if venue == "polymarket_intl":
-            if "remain open until the game is completed" in text:
+            if "remain open until the game is completed" in text or "remain open until the game has been completed" in text:
                 policies["postponement"] = "wait_until_completed"
             if re.search(r"cancell?ed entirely.*?50[- ]50", text):
                 payouts["cancelled_before_start"] = "0.5"
@@ -218,40 +271,90 @@ def profile_market(venue: str, raw: dict, *, sport: str = "cricket", outcome: st
                         policies=policies, evidence=citations, label=label)
 
 
-def compare_profiles(left: dict, right: dict) -> dict:
-    """Return compatible only for fully evidenced, equal state/policy models."""
+def _equal_payout(a: Any, b: Any) -> bool:
+    first, second = _fixed_payout(a), _fixed_payout(b)
+    return first == second if first is not None and second is not None else a == b
+
+
+def _known_policy(key: str, value: Any) -> bool:
+    if key in POLICY_VALUES:
+        return isinstance(value, str) and value in POLICY_VALUES[key]
+    return isinstance(value, str) and bool(value) and value != "unknown"
+
+
+def _core_missing(profile: dict, sport: str) -> list[str]:
+    missing = []
+    if sport not in SPORTS or profile.get("sport") != sport:
+        missing.append("supported sport")
+    if profile.get("target_kind") not in {"team", "draw"}:
+        missing.append("target")
+    if not profile.get("evidence"):
+        missing.append("resolution evidence")
+    missing.extend("payout:" + key for key in CORE_STATES.get(sport, ())
+                   if _fixed_payout((profile.get("payouts") or {}).get(key)) is None)
+    missing.extend("policy:" + key for key in CORE_POLICIES.get(sport, ())
+                   if not _known_policy(key, (profile.get("policies") or {}).get(key)))
+    return missing
+
+
+def compare_profiles(left: dict, right: dict, *, strict: bool = False) -> dict:
+    """Compare normal completed results, while preserving exceptional risks.
+
+    Normal-completion compatibility is conditional on the event completing with
+    its ordinary official result. Strict mode also requires identical, fixed
+    payments for every exceptional state. Neither profile hashes nor stored
+    status labels establish either kind of compatibility.
+    """
     left = left if isinstance(left, dict) else {}
     right = right if isinstance(right, dict) else {}
-    differences = []
+    sport = str(left.get("sport") or right.get("sport") or "")
+    core_differences, contingent_differences, unknown_contingencies = [], [], []
     for key in ("sport", "target_kind"):
         if left.get(key) and right.get(key) and left[key] != right[key]:
-            differences.append(f"{key}: {left[key]} versus {right[key]}")
+            core_differences.append(f"{key}: {left[key]} versus {right[key]}")
     for section in ("payouts", "policies"):
         a, b = left.get(section) or {}, right.get(section) or {}
-        for key in sorted(set(a) | set(b)):
+        required = _states(sport) if section == "payouts" else _policies(sport)
+        core_keys = CORE_STATES.get(sport, ()) if section == "payouts" else CORE_POLICIES.get(sport, ())
+        for key in sorted(set(required) | set(a) | set(b)):
             values = (a.get(key), b.get(key))
             known = (all(_valid_payout(value) for value in values) if section == "payouts"
-                     else all(value not in (None, "", "unknown") for value in values))
-            equal = a.get(key) == b.get(key)
-            if section == "payouts" and known and not equal:
-                try:
-                    equal = Decimal(str(a[key])) == Decimal(str(b[key]))
-                except InvalidOperation:
-                    pass
+                     else all(_known_policy(key, value) for value in values))
+            equal = _equal_payout(*values) if section == "payouts" else values[0] == values[1]
+            core = key in core_keys
+            # A different payment despite an official post-start winner cannot
+            # be explained away by a pre-start cancellation caveat. An omitted
+            # exceptional forfeit clause still remains a visible contingency.
+            official_forfeit_difference = section == "payouts" and key in OFFICIAL_FORFEIT_STATES and known and not equal
             if known and not equal:
-                differences.append(f"{key}: {a[key]} versus {b[key]}")
+                difference = f"{key}: {a[key]} versus {b[key]}"
+                (core_differences if core or official_forfeit_difference else contingent_differences).append(difference)
+            if not core and (not known or (section == "payouts" and
+                             any(_fixed_payout(value) is None for value in values))):
+                unknown_contingencies.append(key)
+
+    core_missing = sorted(set(_core_missing(left, sport) + _core_missing(right, sport)))
+    core_status = "incompatible" if core_differences else "unknown" if core_missing else "compatible"
+    contingency_status = "different" if contingent_differences else "unknown" if unknown_contingencies else "aligned"
+    caveats = list(contingent_differences)
+    if unknown_contingencies:
+        caveats.append("Unverified or variable contingency payouts: " + ", ".join(sorted(set(unknown_contingencies))))
+    differences = core_differences + (contingent_differences if strict else [])
+    status = ("incompatible" if differences else "unknown" if core_missing or
+              (strict and unknown_contingencies) else "compatible")
     if differences:
-        return {"status": "incompatible", "reason": "settlement rules differ: " + "; ".join(differences),
-                "differences": differences}
-    sport = str(left.get("sport") or right.get("sport") or "cricket")
-    complete = all(profile.get("status") == "known" and profile.get("evidence")
-                   and profile.get("sport") == sport and profile.get("target_kind") in {"team", "draw"}
-                   and all(_fixed_payout((profile.get("payouts") or {}).get(key)) is not None for key in _states(sport))
-                   and all(_fixed_payout(value) is not None for value in (profile.get("payouts") or {}).values())
-                   and all((profile.get("policies") or {}).get(key) not in (None, "", "unknown")
-                           for key in _policies(sport)) for profile in (left, right))
-    if not complete:
-        return {"status": "unknown", "reason": "settlement rules are incomplete, unverified, or contain non-fixed payouts",
-                "differences": []}
-    return {"status": "compatible", "reason": "equal evidenced payouts and settlement policies",
-            "differences": []}
+        reason = ("settlement rules differ" if strict else "normal-result settlement rules differ") + ": " + "; ".join(differences)
+    elif status == "unknown":
+        reason = ("settlement rules are incomplete or unverified" if strict else
+                  "normal-result settlement rules are incomplete or unverified")
+        if core_missing:
+            reason += ": " + ", ".join(core_missing)
+    else:
+        reason = "equal evidenced payouts and settlement policies" if strict else "equal evidenced normal-completion payouts and policies"
+        if not strict and caveats:
+            reason += "; contingent-event terms require a conditional comparison"
+    return {"status": status, "reason": reason, "differences": differences,
+            "comparison_basis": "full_contract" if strict else "normal_completion",
+            "core_status": core_status, "core_differences": core_differences,
+            "core_missing": core_missing, "contingency_status": contingency_status,
+            "contingency_differences": contingent_differences, "caveats": caveats}

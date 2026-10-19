@@ -209,10 +209,31 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str],
                                      "evidence": json.loads(row.get(f"{venue}_settlement_evidence", "[]"))})
                 except (ValueError, TypeError):
                     invalid.append(f"{label}: invalid settlement evidence JSON")
+            comparison_basis = row.get("comparison_basis", "normal_completion")
+            if comparison_basis not in {"normal_completion", "full_contract"}:
+                invalid.append(f"{label}: invalid settlement comparison basis")
+            comparisons = [S.compare_profiles(left, right, strict=comparison_basis == "full_contract")
+                           for left, right in itertools.combinations(profiles, 2)]
+            strict_results = [S.compare_profiles(left, right, strict=True)
+                              for left, right in itertools.combinations(profiles, 2)]
             if compatible and (len(profiles) < 2 or any(
-                    S.compare_profiles(left, right)["status"] != "compatible"
-                    for left, right in itertools.combinations(profiles, 2))):
+                    result["status"] != "compatible" for result in comparisons)):
                 invalid.append(f"{label}: compatible row has unverified or differing settlement profiles")
+            if "contingency_status" in row:
+                contingency = ("different" if any(result.get("contingency_status") == "different" for result in comparisons)
+                               else "unknown" if not comparisons or any(result.get("contingency_status") != "aligned" for result in comparisons)
+                               else "aligned")
+                expected["contingency_status"] = contingency
+                caveats = list(dict.fromkeys(str(caveat) for result in comparisons for caveat in result.get("caveats", [])))
+                try:
+                    if json.loads(row.get("contingency_caveats", "[]")) != caveats:
+                        invalid.append(f"{label}: contingency caveats disagree with supporting rules")
+                except (ValueError, TypeError):
+                    invalid.append(f"{label}: invalid contingency caveat JSON")
+                expected["strict_comparison_status"] = (
+                    "rules_differ" if any(result["status"] == "incompatible" for result in strict_results)
+                    else "rules_unknown" if not strict_results or any(result["status"] != "compatible" for result in strict_results)
+                    else "compatible")
             eligible = compatible and bool(pairs)
             best = max(pairs, key=lambda pair: pair[0]) if eligible else None
             is_crossed = best is not None and best[0] > 0
@@ -223,6 +244,8 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str],
                              "eligible_ask": number_text(best[4]) if best else "",
                              "eligible_bid_venue": best[1] if best else "",
                              "eligible_ask_venue": best[2] if best else ""})
+            if "cross_condition" in row:
+                expected["cross_condition"] = ("conditional" if row.get("contingency_status") != "aligned" else "aligned") if is_crossed else ""
         crossed_count += int(is_crossed)
         for field, value in expected.items():
             if row.get(field, "") != value:

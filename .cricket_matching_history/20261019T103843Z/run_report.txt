@@ -1,0 +1,91 @@
+Cricket exchange matching — snapshot replay
+run_started_utc  2026-10-19T10:45:46+00:00
+data_fetched_utc 2026-10-19T10:38:43+00:00
+run_finished_utc 2026-10-19T10:45:47+00:00
+duration_seconds 0.4
+mode             snapshot replay
+
+VENUE COVERAGE
+  kalshi             COMPLETE
+                     snapshot replay, 114 records
+                     114 records, 50 fixtures, 114 markets
+                     collection_complete=True, parse_complete=True
+  polymarket_intl    INCOMPLETE
+                     snapshot replay, 664 records
+                     664 records, 85 fixtures, 866 markets
+                     collection_complete=True, parse_complete=False
+                     COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for crint-zaf-aus-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for crint-zaf-aus-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for crint-zaf-aus-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-kar-sau-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-kar-sau-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-kar-sau-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-mah-jha-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-mah-jha-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-mah-jha-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-ser-ben-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-ser-ben-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-ser-ben-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricshield-tig-vic-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricshield-tig-vic-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricshield-tig-vic-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricshield-wea-blu-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricshield-wea-blu-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricshield-wea-blu-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-and-hyd-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-and-hyd-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-and-hyd-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-pun-chh-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-pun-chh-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-pun-chh-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-del-guj-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-del-guj-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-del-guj-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-him-mum-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-him-mum-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-him-mum-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-tan-utt-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-tan-utt-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-tan-utt-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-bar-bih-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-bar-bih-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-bar-bih-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-jak-vid-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-jak-vid-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-jak-vid-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-pud-map-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-pud-map-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-pud-map-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-utp-goa-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-utp-goa-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-utp-goa-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-asm-tri-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-asm-tri-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-asm-tri-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-ker-odi-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-ker-odi-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-ker-odi-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-raj-rai-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-raj-rai-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-raj-rai-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricshield-red-bul-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricshield-red-bul-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricshield-red-bul-2026-10-18-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for crint-nzla-inda-2026-10-23-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for crint-nzla-inda-2026-10-23-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for crint-nzla-inda-2026-10-23-match-to-day-5; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-har-cha-2026-10-18-match-to-day-3; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-har-cha-2026-10-18-match-to-day-4; COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-har-cha-2026-10-18-match-to-day-5
+  polymarket_us      COMPLETE
+                     snapshot replay, 10 records
+                     10 records, 10 fixtures, 20 markets
+                     collection_complete=True, parse_complete=True
+
+RESULT
+  confirmed fixtures       13
+  mapped outcome rows      26
+  fixture links requiring review 29
+  market links requiring review  42
+  critical safety audit    PASS
+  advisory findings        3
+
+WARNINGS (63)
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for crint-zaf-aus-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for crint-zaf-aus-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for crint-zaf-aus-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-kar-sau-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-kar-sau-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-kar-sau-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-mah-jha-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-mah-jha-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-mah-jha-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-ser-ben-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-ser-ben-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-ser-ben-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricshield-tig-vic-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricshield-tig-vic-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricshield-tig-vic-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricshield-wea-blu-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricshield-wea-blu-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricshield-wea-blu-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-and-hyd-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-and-hyd-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-and-hyd-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-pun-chh-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-pun-chh-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-pun-chh-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-del-guj-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-del-guj-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-del-guj-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-him-mum-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-him-mum-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-him-mum-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-tan-utt-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-tan-utt-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-tan-utt-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-bar-bih-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-bar-bih-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-bar-bih-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-jak-vid-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-jak-vid-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-jak-vid-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-pud-map-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-pud-map-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-pud-map-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-utp-goa-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-utp-goa-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-utp-goa-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-asm-tri-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-asm-tri-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-asm-tri-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-ker-odi-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-ker-odi-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-ker-odi-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricranji-raj-rai-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricranji-raj-rai-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricranji-raj-rai-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for cricshield-red-bul-2026-10-18-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for cricshield-red-bul-2026-10-18-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for cricshield-red-bul-2026-10-18-match-to-day-5
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-3 for crint-nzla-inda-2026-10-23-match-to-day-3
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-4 for crint-nzla-inda-2026-10-23-match-to-day-4
+  COVERAGE_INCOMPLETE polymarket_intl: unmapped market suffix match-to-day-5 for crint-nzla-inda-2026-10-23-match-to-day-5

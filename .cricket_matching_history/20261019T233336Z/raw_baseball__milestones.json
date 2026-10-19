@@ -1,0 +1,237 @@
+[
+  {
+    "category": "Sports",
+    "details": {
+      "away_last_games": [
+        {
+          "date": "2026-10-18T21:08:00Z",
+          "opponent_points": 3,
+          "opponent_structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "points": 1,
+          "structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "winner": false
+        },
+        {
+          "date": "2026-10-18T00:08:00Z",
+          "opponent_points": 7,
+          "opponent_structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "points": 3,
+          "structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "winner": false
+        },
+        {
+          "date": "2026-10-15T17:00:00Z",
+          "opponent_points": 2,
+          "opponent_structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "points": 3,
+          "structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "winner": true
+        },
+        {
+          "date": "2026-10-14T00:00:00Z",
+          "opponent_points": 3,
+          "opponent_structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "points": 1,
+          "structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "winner": false
+        },
+        {
+          "date": "2026-10-13T00:00:00Z",
+          "opponent_points": 3,
+          "opponent_structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "points": 7,
+          "structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "winner": true
+        }
+      ],
+      "away_team_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+      "f5_tie_id": "b8c3e2a1-7f4d-4e9b-a6d0-3c5f8e1b2a49",
+      "game_injuries": {
+        "60097777-bab8-4215-8d29-b92466b5bb65": [
+          {
+            "comment": "The Cleveland Guardians placed INF Rhys Hoskins on the 10-day injured list due to lower back inflammation.",
+            "date_updated": "2026-08-19",
+            "description": "Back",
+            "name": "Rhys Hoskins",
+            "start_date": "2026-08-19",
+            "status": "D10",
+            "structured_id": "ecea2125-3031-4a5c-8c2e-f42adb1962e3"
+          },
+          {
+            "comment": "The Cleveland Guardians placed Colin Holderman (RP) on the 15-day injured list with right wrist inflammation.",
+            "date_updated": "2026-09-04",
+            "description": "Wrist",
+            "name": "Colin Holderman",
+            "start_date": "2026-09-04",
+            "status": "D15",
+            "structured_id": "0c13e080-7bcd-44c5-911c-eb0bf7bf6394"
+          }
+        ],
+        "942f3f85-869a-4f7a-8e5a-336365c5294b": [
+          {
+            "comment": "The Tampa Bay Rays transferred RHP Edwin Uceta to the 60-day injured list with right shoulder impingement.",
+            "date_updated": "2026-04-24",
+            "description": "Shoulder",
+            "name": "Edwin Uceta",
+            "start_date": "2026-03-25",
+            "status": "D60",
+            "structured_id": "440f107e-aeff-4863-b46a-628cae2a6ea4"
+          },
+          {
+            "comment": "The Tampa Bay Rays placed SP Shane McClanahan on the 15-day injured list with left forearm tightness.",
+            "date_updated": "2026-09-04",
+            "description": "Forearm",
+            "name": "Shane McClanahan",
+            "start_date": "2026-09-04",
+            "status": "D15",
+            "structured_id": "c9568a98-d319-49bb-9fe3-612a027f0b0d"
+          },
+          {
+            "comment": "The Tampa Bay Rays placed LF Jacob Melton on the 60-day injured list with a right hamstring strain.",
+            "date_updated": "2026-09-15",
+            "description": "Hamstring",
+            "name": "Jacob Melton",
+            "start_date": "2026-09-15",
+            "status": "D60",
+            "structured_id": "1cc0e833-fa93-4f94-b1b2-ec638afc06b0"
+          },
+          {
+            "comment": "The Tampa Bay Rays transferred RHP Jonathan Heasley from the 15-day injured list to the 60-day injured list due to a right elbow stress reaction.",
+            "date_updated": "2026-06-08",
+            "description": "Elbow",
+            "name": "Jonathan Heasley",
+            "start_date": "2026-05-29",
+            "status": "D60",
+            "structured_id": "c0226b25-f5f0-4fde-9edc-16cdd2b929af"
+          },
+          {
+            "comment": "Pepiot will miss the remainder of the season after undergoing hip surgery according to Marc Topkin of the Tampa Bay Times.",
+            "date_updated": "2026-05-01",
+            "description": "Hip",
+            "name": "Ryan Pepiot",
+            "start_date": "2026-03-24",
+            "status": "D60",
+            "structured_id": "f3f79cef-0c64-42d1-af8b-99189cfe2034"
+          },
+          {
+            "comment": "The Tampa Bay Rays transferred OF Gavin Lux from the 10-day injured list to the 60-day injured list with a right shoulder impingement.",
+            "date_updated": "2026-05-27",
+            "description": "Shoulder",
+            "name": "Gavin Lux",
+            "start_date": "2026-03-23",
+            "status": "D60",
+            "structured_id": "647c3194-ab4c-44ea-85fa-b2a64efafd01"
+          }
+        ]
+      },
+      "home_last_games": [
+        {
+          "date": "2026-10-18T21:08:00Z",
+          "opponent_points": 1,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 3,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": true
+        },
+        {
+          "date": "2026-10-18T00:08:00Z",
+          "opponent_points": 3,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 7,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": true
+        },
+        {
+          "date": "2026-10-15T17:00:00Z",
+          "opponent_points": 3,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 2,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": false
+        },
+        {
+          "date": "2026-10-14T00:00:00Z",
+          "opponent_points": 1,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 3,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": true
+        },
+        {
+          "date": "2026-10-13T00:00:00Z",
+          "opponent_points": 7,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 3,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": false
+        }
+      ],
+      "home_team_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+      "league": "MLB",
+      "main_game_event_ticker": "KXMLBGAME-26OCT192008CLETB",
+      "playoff_game_number": 6,
+      "status": "scheduled"
+    },
+    "id": "f4f317b9-da52-5733-9198-f9d99f36dee8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin!",
+    "primary_event_tickers": [
+      "KXMLBGAME-26OCT192008CLETB",
+      "KXMLBSPREAD-26OCT192008CLETB",
+      "KXMLBTOTAL-26OCT192008CLETB",
+      "KXMLBEXTRAS-26OCT192008CLETB"
+    ],
+    "related_event_tickers": [
+      "KXMLBGAME-26OCT192008CLETB",
+      "KXMLBSPREAD-26OCT192008CLETB",
+      "KXMLBTOTAL-26OCT192008CLETB",
+      "KXMLBRFI-26OCT192008CLETB",
+      "KXMLBEXTRAS-26OCT192008CLETB",
+      "KXMLBF5-26OCT192008CLETB",
+      "KXMLBF3-26OCT192008CLETB",
+      "KXMLBF7-26OCT192008CLETB",
+      "KXMLBTEAMTOTAL-26OCT192008CLETB",
+      "KXMLBF5SPREAD-26OCT192008CLETB",
+      "KXMLBF5TOTAL-26OCT192008CLETB",
+      "KXMLBINNINGWIN-26OCT192008CLETB-1",
+      "KXMLBINNINGWIN-26OCT192008CLETB-2",
+      "KXMLBHR-26OCT192008CLETB",
+      "KXMLBINNINGWIN-26OCT192008CLETB-3",
+      "KXMLBHIT-26OCT192008CLETB",
+      "KXMLBINNINGWIN-26OCT192008CLETB-4",
+      "KXMLBTB-26OCT192008CLETB",
+      "KXMLBINNINGWIN-26OCT192008CLETB-5",
+      "KXMLBHRR-26OCT192008CLETB",
+      "KXMLBINNINGWIN-26OCT192008CLETB-6",
+      "KXMLBRBI-26OCT192008CLETB",
+      "KXMLBINNINGWIN-26OCT192008CLETB-7",
+      "KXMLBINNINGWIN-26OCT192008CLETB-8",
+      "KXMLBINNINGWIN-26OCT192008CLETB-9",
+      "KXMLBINNINGTOTAL-26OCT192008CLETB-1",
+      "KXMLBINNINGTOTAL-26OCT192008CLETB-2",
+      "KXMLBINNINGTOTAL-26OCT192008CLETB-3",
+      "KXMLBINNINGTOTAL-26OCT192008CLETB-4",
+      "KXMLBINNINGTOTAL-26OCT192008CLETB-5",
+      "KXMLBINNINGTOTAL-26OCT192008CLETB-6",
+      "KXMLBINNINGTOTAL-26OCT192008CLETB-7",
+      "KXMLBINNINGTOTAL-26OCT192008CLETB-8",
+      "KXMLBINNINGTOTAL-26OCT192008CLETB-9",
+      "KXMLBKS-26OCT192008CLETB",
+      "KXMLBOUTS-26OCT192008CLETB",
+      "KXMLBWA-26OCT192008CLETB",
+      "KXMLBHA-26OCT192008CLETB",
+      "KXMLBERA-26OCT192008CLETB",
+      "KXMLBSB-26OCT192008CLETB"
+    ],
+    "source_id": "a6a9ea50-3c0a-4a0b-967a-4380e5e37923",
+    "source_ids": {
+      "source_1_id": "3015189",
+      "source_2_id": "20261019E2E03AD0",
+      "source_3_id": "a6a9ea50-3c0a-4a0b-967a-4380e5e37923"
+    },
+    "start_date": "2026-10-20T00:08:00Z",
+    "title": "Cleveland vs Tampa Bay (Game 6)",
+    "type": "baseball_game",
+    "_collected_at_utc": "2026-10-19T23:33:36+00:00"
+  }
+]

@@ -328,6 +328,24 @@ class QuoteAuditTests(unittest.TestCase):
         self.assertFalse(passed)
         self.assertFalse(checks["quote prices, statuses and sources are valid"].passed)
 
+    def test_cancellation_caveat_cannot_be_removed_from_a_conditional_cross(self):
+        for item in self.markets:
+            item.bid, item.ask = (("0.7", "0.8") if item.venue == "kalshi" else ("0.4", "0.6"))
+            if item.venue == "kalshi":
+                item.extra["settlement"]["payouts"]["cancelled_before_start"] = "fair_market_price"
+        rows = self.rows()
+        self.assertTrue(all(row["comparison_status"] == "compatible" for row in rows))
+        self.assertTrue(all(row["cross_condition"] == "conditional" for row in rows))
+        passed, report, _ = self.audit_rows(rows)
+        self.assertTrue(passed, report)
+        for mutation in ({"cross_condition": "aligned"}, {"contingency_caveats": "[]"},
+                         {"strict_comparison_status": "compatible"}):
+            with self.subTest(mutation=mutation):
+                tampered = [dict(row) for row in rows]
+                tampered[0].update(mutation)
+                passed, _, _ = self.audit_rows(tampered)
+                self.assertFalse(passed)
+
     def test_forged_cross_from_stale_observations_blocks_publication(self):
         for item in self.markets:
             item.bid, item.ask = (("0.7", "0.8") if item.venue == "kalshi" else ("0.4", "0.6"))

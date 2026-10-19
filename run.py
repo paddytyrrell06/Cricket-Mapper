@@ -22,7 +22,7 @@ import sports as S
 VENUES = ["kalshi", "polymarket_intl"]
 ENABLED_SPORTS = tuple(filter(None, next(
     (arg.split("=", 1)[1] for arg in sys.argv[1:] if arg.startswith("--sports=")),
-    "cricket,basketball").split(",")))
+    ",".join(S.ADAPTERS)).split(",")))
 OUTPUT_DIR = Path("output")
 BUILD_DIR = Path(".cricket_matching_build")
 PREVIOUS_DIR = Path(".cricket_matching_previous_output")
@@ -86,12 +86,37 @@ def write_csv(path: Path, columns: list[str], rows: list[list]) -> None:
         writer.writerows(rows)
 
 
+def raw_key(sport: str, key: str) -> str:
+    """Preserve existing cricket snapshot filenames; namespace every other sport."""
+    return key if sport == "cricket" else f"{sport}_{key}"
+
+
+def scope_raw(raw: dict, sport: str) -> dict:
+    if sport == "cricket":
+        return {key: raw.get(key, []) for key in VENUES}
+    prefix = sport + "_"
+    return {key[len(prefix):]: items for key, items in raw.items() if key.startswith(prefix)}
+
+
+def collection_metadata(saved: object) -> dict:
+    meta = dict(saved) if isinstance(saved, dict) else {
+        "complete": False, "method": "snapshot_without_coverage_metadata",
+        "reason": "snapshot does not prove complete collection",
+    }
+    meta["complete"] = meta.get("complete") is True
+    meta["reason"] = str(meta.get("collection_reason", str(meta.get("reason") or "").split(
+        "COVERAGE_INCOMPLETE", 1)[0].rstrip("; ")))
+    for field in ("parse_complete", "mapping_coverage_complete"):
+        meta.pop(field, None)
+    return meta
+
+
 def load_snapshot(snapshot_dir: Path) -> tuple[dict, dict, list[str], dict]:
     """Read saved inputs before preparing the build, which may contain them."""
     raw: dict = {}
     status: dict = {}
     warnings: list[str] = []
-    coverage: dict = {}
+    coverage: dict = {"sports": {}}
     saved_meta = {}
     meta_path = snapshot_dir / "collection_meta.json"
     if meta_path.exists():
@@ -101,65 +126,41 @@ def load_snapshot(snapshot_dir: Path) -> tuple[dict, dict, list[str], dict]:
                 saved_meta = {}
         except (OSError, ValueError):
             saved_meta = {}
-    for venue in VENUES:
-        source = snapshot_dir / f"raw_{venue}.json"
-        saved_coverage = saved_meta.get(venue)
-        coverage[venue] = dict(saved_coverage) if isinstance(saved_coverage, dict) else {
-            "complete": False,
-            "method": "snapshot_without_coverage_metadata",
-            "reason": "snapshot does not prove complete collection",
-        }
-        coverage[venue]["complete"] = coverage[venue].get("complete") is True
-        # Parsing is performed again; old parser findings are not collection failures.
-        collection_reason = coverage[venue].get("collection_reason")
-        if collection_reason is None:
-            collection_reason = str(coverage[venue].get("reason") or "").split(
-                "COVERAGE_INCOMPLETE", 1)[0].rstrip("; ")
-        coverage[venue]["reason"] = str(collection_reason)
-        for field in ("parse_complete", "mapping_coverage_complete"):
-            coverage[venue].pop(field, None)
-        try:
-            items = json.loads(source.read_text(encoding="utf-8"))
-            if not isinstance(items, list) or any(not isinstance(item, dict) for item in items):
-                raise ValueError("raw snapshot must contain a list of records")
-            raw[venue] = items
-            status[venue] = f"snapshot replay, {len(items)} records"
-        except (OSError, ValueError) as exc:
-            reason = "snapshot missing" if isinstance(exc, FileNotFoundError) else f"snapshot invalid: {exc}"
-            raw[venue] = []
-            status[venue] = reason
-            warnings.append(f"{venue}: {reason}")
-            coverage[venue].update(complete=False, reason=reason)
-        coverage[venue]["records"] = len(raw[venue])
     sport_meta = saved_meta.get("sports") or {}
     if not isinstance(sport_meta, dict):
         sport_meta = {}
-    coverage["sports"] = {"cricket": {venue: dict(coverage[venue]) for venue in VENUES}}
-    if "basketball" in ENABLED_SPORTS:
-        basketball_meta = sport_meta.get("basketball", {})
-        if not isinstance(basketball_meta, dict):
-            basketball_meta = {}
-        coverage["sports"]["basketball"] = {}
-        for key in (*VENUES, "_teams", "_kalshi_series"):
-            path = snapshot_dir / f"raw_basketball_{key}.json"
+    for sport in ENABLED_SPORTS:
+        saved_scope = sport_meta.get(sport, saved_meta if sport == "cricket" else {})
+        if not isinstance(saved_scope, dict):
+            saved_scope = {}
+        coverage["sports"][sport] = {}
+        # Adapters may persist additional evidence, such as team registries or
+        # linked game milestones. Replay every namespaced metadata file.
+        prefix = f"raw_{sport}_"
+        extras = {path.stem[len(prefix):] for path in snapshot_dir.glob(prefix + "*.json")} if sport != "cricket" else set()
+        for key in (*VENUES, *sorted(extras - set(VENUES))):
+            name = raw_key(sport, key)
+            path = snapshot_dir / f"raw_{name}.json"
             try:
                 items = json.loads(path.read_text(encoding="utf-8"))
                 if not isinstance(items, list) or any(not isinstance(item, dict) for item in items):
                     raise ValueError("expected a list of records")
-                raw[f"basketball_{key}"] = items
+                raw[name] = items
                 reason = ""
             except (OSError, ValueError) as exc:
-                raw[f"basketball_{key}"] = []
-                reason = f"basketball snapshot unavailable: {exc}"
+                raw[name] = []
+                reason = "snapshot missing" if isinstance(exc, FileNotFoundError) else f"snapshot invalid: {exc}"
             if key in VENUES:
-                saved_scope = basketball_meta.get(key)
-                meta = dict(saved_scope) if isinstance(saved_scope, dict) else {}
-                meta["complete"] = meta.get("complete") is True and not reason
-                meta["reason"] = reason or str(meta.get("collection_reason", meta.get("reason", "")))
-                meta["records"] = len(raw[f"basketball_{key}"])
-                coverage["sports"]["basketball"][key] = meta
+                meta = collection_metadata(saved_scope.get(key))
                 if reason:
-                    warnings.append(f"{key}: {reason}")
+                    meta.update(complete=False, reason=reason)
+                meta["records"] = len(raw[name])
+                coverage["sports"][sport][key] = meta
+                status[name] = reason or f"snapshot replay, {len(raw[name])} records"
+                if sport == "cricket":
+                    coverage[key] = dict(meta)
+            if reason:
+                warnings.append(f"{sport} {key}: {reason}")
     return raw, status, warnings, coverage
 
 
@@ -274,26 +275,29 @@ def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
             json.dumps(raw[venue], indent=2), encoding="utf-8")
 
     coverage["sports"] = {"cricket": {venue: dict(coverage[venue]) for venue in VENUES}}
-    if "basketball" in ENABLED_SPORTS:
-        say("  basketball (NBA) ...")
+    for sport in ENABLED_SPORTS:
+        if sport == "cricket":
+            continue
+        adapter = S.ADAPTERS[sport]
+        say(f"  {adapter.label} ...")
         try:
-            basketball_raw, basketball_meta, basketball_warnings = S.collect_basketball()
-            warnings.extend(basketball_warnings)
+            sport_raw, sport_meta, sport_warnings = adapter.collect()
+            warnings.extend(sport_warnings)
         except Exception as exc:
-            basketball_raw = {venue: [] for venue in VENUES}
-            basketball_meta = {venue: {"complete": False, "reason": repr(exc), "records": 0}
-                               for venue in VENUES}
-            warnings.append(f"basketball collection failed: {exc!r}")
+            sport_raw = {venue: [] for venue in VENUES}
+            sport_meta = {venue: {"complete": False, "reason": repr(exc), "records": 0}
+                          for venue in VENUES}
+            warnings.append(f"{sport} collection failed: {exc!r}")
         observed_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
-        for key, items in basketball_raw.items():
+        for key, items in sport_raw.items():
             for record in items:
                 record.setdefault("_collected_at_utc", observed_at)
-            raw[f"basketball_{key}"] = items
-            (DATA_DIR / f"raw_basketball_{key}.json").write_text(
+            raw[raw_key(sport, key)] = items
+            (DATA_DIR / f"raw_{raw_key(sport, key)}.json").write_text(
                 json.dumps(items, indent=2), encoding="utf-8")
-        coverage["sports"]["basketball"] = basketball_meta
+        coverage["sports"][sport] = sport_meta
         for venue in VENUES:
-            say(f"    {venue}: {len(basketball_raw.get(venue, []))} NBA records")
+            say(f"    {venue}: {len(sport_raw.get(venue, []))} records")
     (DATA_DIR / "collection_meta.json").write_text(
         json.dumps(coverage, indent=2), encoding="utf-8")
     return raw, status, warnings, coverage
@@ -365,8 +369,8 @@ def review_mapping_rows(market_review: list[M.MarketMatch],
 
 
 def main() -> int:
-    if not ENABLED_SPORTS or set(ENABLED_SPORTS) - {"cricket", "basketball"}:
-        say("Choose --sports=cricket,basketball (either or both).")
+    if not ENABLED_SPORTS or set(ENABLED_SPORTS) - set(S.ADAPTERS):
+        say("Choose --sports=" + ",".join(S.ADAPTERS) + " (any subset).")
         return 2
     run_started = datetime.now(timezone.utc)
     mode = "snapshot replay" if SNAPSHOT_DIR is not None else "LIVE"
@@ -426,22 +430,23 @@ def main() -> int:
         )
 
     scope_parse = {"cricket": dict(parse_complete)}
-    if "basketball" in ENABLED_SPORTS:
-        basketball_raw = {key[len("basketball_"):]: items for key, items in raw.items()
-                          if key.startswith("basketball_")}
+    scope_parse_reasons = {"cricket": parse_incomplete_reasons}
+    for sport in ENABLED_SPORTS:
+        if sport == "cricket":
+            continue
         try:
-            basketball_fixtures, basketball_markets, basketball_warnings = S.parse_basketball(basketball_raw)
+            sport_fixtures, sport_markets, sport_warnings = S.ADAPTERS[sport].parse(scope_raw(raw, sport))
         except Exception as exc:
-            basketball_fixtures, basketball_markets = [], []
-            basketball_warnings = [f"COVERAGE_INCOMPLETE basketball: parse failed {exc!r}"]
-        fixtures.extend(basketball_fixtures)
-        markets.extend(basketball_markets)
-        warnings.extend(basketball_warnings)
-        scope_parse["basketball"] = {
-            venue: not any(str(w).startswith("COVERAGE_INCOMPLETE") and
-                           (venue in str(w) or "basketball:" in str(w))
-                           for w in basketball_warnings) for venue in VENUES}
-        say(f"  basketball: {len(basketball_fixtures)} fixtures, {len(basketball_markets)} outcomes")
+            sport_fixtures, sport_markets = [], []
+            sport_warnings = [f"COVERAGE_INCOMPLETE {sport}: parse failed {exc!r}"]
+        fixtures.extend(sport_fixtures)
+        markets.extend(sport_markets)
+        warnings.extend(sport_warnings)
+        scope_parse_reasons[sport] = {
+            venue: [str(w) for w in sport_warnings if str(w).startswith("COVERAGE_INCOMPLETE")
+                    and (venue in str(w) or f"{sport}:" in str(w))] for venue in VENUES}
+        scope_parse[sport] = {venue: not scope_parse_reasons[sport][venue] for venue in VENUES}
+        say(f"  {sport}: {len(sport_fixtures)} fixtures, {len(sport_markets)} outcomes")
 
     sport_coverage: dict[str, dict[str, bool]] = {}
     scoped_meta = coverage.setdefault("sports", {
@@ -450,26 +455,28 @@ def main() -> int:
         sport_coverage[sport] = {}
         for venue in VENUES:
             meta = scoped_meta.setdefault(sport, {}).setdefault(venue, {})
+            meta["collection_reason"] = str(meta.get("collection_reason", meta.get("reason") or "")).strip()
             meta["parse_complete"] = scope_parse.get(sport, {}).get(venue, False)
             meta["mapping_coverage_complete"] = bool(meta.get("complete")) and meta["parse_complete"]
+            reasons = scope_parse_reasons.get(sport, {}).get(venue, [])
+            meta["reason"] = "; ".join(filter(None, [meta["collection_reason"], *dict.fromkeys(reasons)]))
             sport_coverage[sport][venue] = meta["mapping_coverage_complete"]
 
-    coverage_complete: dict[str, bool] = {}
-    for venue in VENUES:
-        coverage_complete[venue] = (
-            bool(coverage.get(venue, {}).get("complete"))
-            and parse_complete[venue]
-        )
-        coverage.setdefault(venue, {})["parse_complete"] = parse_complete[venue]
-        coverage[venue]["mapping_coverage_complete"] = coverage_complete[venue]
-        coverage[venue]["collection_reason"] = str(coverage[venue].get("reason") or "").strip()
-        if parse_incomplete_reasons[venue]:
-            existing_reason = str(coverage[venue].get("reason") or "").strip()
-            parse_reason = "; ".join(dict.fromkeys(parse_incomplete_reasons[venue]))
-            coverage[venue]["reason"] = "; ".join(
-                part for part in (existing_reason, parse_reason) if part)
     coverage_complete = {venue: all(states.get(venue, False) for states in sport_coverage.values())
                          for venue in VENUES}
+    for venue in VENUES:
+        scopes = [scoped_meta[sport][venue] for sport in ENABLED_SPORTS]
+        coverage[venue] = dict(scopes[0]) if len(scopes) == 1 else {
+            "complete": all(meta.get("complete") for meta in scopes),
+            "parse_complete": all(meta.get("parse_complete") for meta in scopes),
+            "mapping_coverage_complete": coverage_complete[venue],
+            "method": "sport_adapters",
+            "records": sum(meta.get("records", 0) for meta in scopes),
+            "collection_reason": "; ".join(f"{sport}: {scoped_meta[sport][venue]['collection_reason']}"
+                                           for sport in ENABLED_SPORTS if scoped_meta[sport][venue]["collection_reason"]),
+            "reason": "; ".join(f"{sport}: {scoped_meta[sport][venue]['reason']}"
+                                for sport in ENABLED_SPORTS if scoped_meta[sport][venue]["reason"]),
+        }
     (DATA_DIR / "collection_meta.json").write_text(
         json.dumps(coverage, indent=2), encoding="utf-8")
     for venue in VENUES:
@@ -500,7 +507,8 @@ def main() -> int:
     quote_markets = list({id(market): market
                           for match in market_accepted + market_review
                           for market in (match.m1, match.m2)}.values())
-    quote_raw = {venue: (raw.get(venue, []) + raw.get(f"basketball_{venue}", []))
+    quote_raw = {venue: [record for sport in ENABLED_SPORTS
+                         for record in raw.get(raw_key(sport, venue), [])]
                  for venue in VENUES}
     quote_entries, quote_warnings = Q.enrich_quotes(
         quote_markets, quote_raw, live=SNAPSHOT_DIR is None, saved_quotes=saved_quotes,
@@ -646,7 +654,7 @@ def main() -> int:
         "VENUE COVERAGE",
     ]
     for venue in VENUES:
-        records = (len(raw.get(venue, [])) if "cricket" in ENABLED_SPORTS else 0) + len(raw.get(f"basketball_{venue}", []))
+        records = sum(len(raw.get(raw_key(sport, venue), [])) for sport in ENABLED_SPORTS)
         fixture_count = sum(fixture.venue == venue for fixture in fixtures)
         market_count = sum(market.venue == venue for market in markets)
         state = "COMPLETE" if coverage_complete.get(venue) else "INCOMPLETE"
@@ -657,7 +665,7 @@ def main() -> int:
             f"  {'':18} {records} records, {fixture_count} fixtures, "
             f"{market_count} markets",
             f"  {'':18} collection_complete={bool(coverage.get(venue, {}).get('complete'))}, "
-            f"parse_complete={parse_complete.get(venue, False)}",
+            f"parse_complete={coverage[venue].get('parse_complete', False)}",
         ])
         if coverage.get(venue, {}).get("reason"):
             report_lines.append(f"  {'':18} {coverage[venue]['reason']}")

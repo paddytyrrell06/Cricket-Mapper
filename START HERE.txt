@@ -1,11 +1,14 @@
-CRICKET EXCHANGE MATCHING
+SPORTS MARKET TERMINAL
 
 1. Open this folder in VS Code or Terminal.
 2. Run: python3 run.py
 3. The latest report should open automatically.
 4. Otherwise open: output/CricketMatchingReport.html
 
-Each run fetches current Kalshi, Polymarket International, and Polymarket US data.
-The report shows its collection timestamp, venue coverage, and any advisory items.
+Each run fetches current Kalshi and Polymarket International data for cricket, NBA,
+NFL, NHL, and MLB game winners. To select sports, pass for example:
+python3 run.py --sports=football,hockey,baseball --no-open
+The report shows its collection timestamp, sport/venue coverage, and advisories.
 
-Polymarket International uses public read-only APIs; if one endpoint is unavailable, the program attempts the official CLOB fallback.
+The scanner uses public read-only APIs, saves evidence for replay, and does not
+place orders. WebSocket streaming is not enabled yet.

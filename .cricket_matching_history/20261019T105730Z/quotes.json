@@ -1,0 +1,582 @@
+[
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5644978",
+    "outcome": "Pakistan",
+    "bid": "0.38",
+    "ask": "0.4",
+    "quote_time": "2026-10-19T10:57:30.250000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=86101236461313266244440145594352099357060675573312035175457352345472604141160"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1568348",
+    "outcome": "Pakistan",
+    "bid": "0.38",
+    "ask": "0.4",
+    "quote_time": "2026-10-19T10:57:30+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-odicr-pak-eng-2026-10-20/bbo long"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5644978",
+    "outcome": "England",
+    "bid": "0.6",
+    "ask": "0.62",
+    "quote_time": "2026-10-19T10:57:30.250000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=30516367391307844545117854906839028228695140471922682463436064258192659987920"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1568348",
+    "outcome": "England",
+    "bid": "0.6",
+    "ask": "0.62",
+    "quote_time": "2026-10-19T10:57:30+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-odicr-pak-eng-2026-10-20/bbo short complement"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5600711",
+    "outcome": "Afghanistan",
+    "bid": "0.71",
+    "ask": "0.73",
+    "quote_time": "2026-10-19T10:57:27.806000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=43158083288708377003204799686698103978063784622905827214805891629668676913940"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1488653",
+    "outcome": "Afghanistan",
+    "bid": "0.71",
+    "ask": "0.72",
+    "quote_time": "2026-10-19T10:57:30+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-odicr-afg-zim-2026-10-19/bbo long"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5600711",
+    "outcome": "Zimbabwe",
+    "bid": "0.27",
+    "ask": "0.29",
+    "quote_time": "2026-10-19T10:57:27.806000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=9572998009176192809790995777617611067006900707695816704927600133400241406451"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1488653",
+    "outcome": "Zimbabwe",
+    "bid": "0.28",
+    "ask": "0.29",
+    "quote_time": "2026-10-19T10:57:30+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-odicr-afg-zim-2026-10-19/bbo short complement"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXSSHIELDMATCH-26OCT182230BLUWEA-WEA",
+    "outcome": "Western Australia",
+    "bid": "0.03",
+    "ask": "0.66",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5702959",
+    "outcome": "Western Australia",
+    "bid": "0.16",
+    "ask": "0.41",
+    "quote_time": "2026-10-19T10:57:19.278000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=18165261665795592693546889981867602131698257526756680440967419756136052073679"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXSSHIELDMATCH-26OCT182230BLUWEA-BLU",
+    "outcome": "New South Wales Blues",
+    "bid": "0.04",
+    "ask": "0.95",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5702962",
+    "outcome": "New South Wales Blues",
+    "bid": "0.14",
+    "ask": "0.56",
+    "quote_time": "2026-10-19T10:57:27.283000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=54044444153122511088074191848577816345820936216053073560527913716419290421743"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT210500UGALES-UGA",
+    "outcome": "Uganda",
+    "bid": "0.94",
+    "ask": "0.96",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5799395",
+    "outcome": "Uganda",
+    "bid": "0.96",
+    "ask": "0.971",
+    "quote_time": "2026-10-19T10:56:58.129000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=13657708327379696096711431228678180294304506878415813719571981649904730937566"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT210500UGALES-LES",
+    "outcome": "Lesotho",
+    "bid": "0.04",
+    "ask": "0.05",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5799395",
+    "outcome": "Lesotho",
+    "bid": "0.029",
+    "ask": "0.04",
+    "quote_time": "2026-10-19T10:56:58.129000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=15024084024568932504136496361179032777245082095562160815213346826684111406156"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT210500GAMBIMOZ-MOZ",
+    "outcome": "Mozambique",
+    "bid": "0.04",
+    "ask": "0.8",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5799355",
+    "outcome": "Mozambique",
+    "bid": "0.07",
+    "ask": "0.82",
+    "quote_time": "2026-10-19T10:55:51.494000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=99035786165836205566601623793121070228663816986970527705894188621397254340452"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT210500GAMBIMOZ-GAMBI",
+    "outcome": "Gambia",
+    "bid": "0.15",
+    "ask": "0.74",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5799355",
+    "outcome": "Gambia",
+    "bid": "0.18",
+    "ask": "0.93",
+    "quote_time": "2026-10-19T10:55:51.494000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=51673275704526989349957469611833389328125344044230272217777609952478289989522"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT210900NIGZAM-ZAM",
+    "outcome": "Zambia",
+    "bid": "0.04",
+    "ask": "0.5",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5799343",
+    "outcome": "Zambia",
+    "bid": "0.04",
+    "ask": "0.48",
+    "quote_time": "2026-10-19T10:56:56.865000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=28467037610037885805494941371333140315988717120874203338060789035429263261053"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT210900NIGZAM-NIG",
+    "outcome": "Nigeria",
+    "bid": "0.5",
+    "ask": "0.78",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5799343",
+    "outcome": "Nigeria",
+    "bid": "0.52",
+    "ask": "0.96",
+    "quote_time": "2026-10-19T10:56:56.865000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=101885258202780794913958337498156165469744377091878808307291058023639079126743"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT200900GAMBINIG-NIG",
+    "outcome": "Nigeria",
+    "bid": "0.95",
+    "ask": "0.96",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5770088",
+    "outcome": "Nigeria",
+    "bid": "0.96",
+    "ask": "0.97",
+    "quote_time": "2026-10-19T10:57:13.693000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=36841010309164546691508744340944137739881395767733256415548707250055505860479"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT200900GAMBINIG-GAMBI",
+    "outcome": "Gambia",
+    "bid": "0.04",
+    "ask": "0.05",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5770088",
+    "outcome": "Gambia",
+    "bid": "0.03",
+    "ask": "0.04",
+    "quote_time": "2026-10-19T10:57:13.693000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=40052859760793463284324827596896987155015910201525127466904581367323251403734"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1526829",
+    "outcome": "Nigeria",
+    "bid": "0.95",
+    "ask": "0.97",
+    "quote_time": "2026-10-19T10:57:31+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20icr-nig-gam-2026-10-20/bbo long"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1526829",
+    "outcome": "Gambia",
+    "bid": "0.03",
+    "ask": "0.05",
+    "quote_time": "2026-10-19T10:57:31+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20icr-nig-gam-2026-10-20/bbo short complement"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT200900MOZLES-MOZ",
+    "outcome": "Mozambique",
+    "bid": "0.63",
+    "ask": "0.69",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5789521",
+    "outcome": "Mozambique",
+    "bid": "0.71",
+    "ask": "0.84",
+    "quote_time": "2026-10-19T10:57:29.425000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=30989122946294707384538277453793532195887122483473656974479600212457931016800"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT200900MOZLES-LES",
+    "outcome": "Lesotho",
+    "bid": "0.18",
+    "ask": "0.34",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5789521",
+    "outcome": "Lesotho",
+    "bid": "0.16",
+    "ask": "0.29",
+    "quote_time": "2026-10-19T10:57:29.425000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=28558042663732121402659056179249753473361072558358917652948912709763502755303"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1533983",
+    "outcome": "Mozambique",
+    "bid": "0.68",
+    "ask": "0.69",
+    "quote_time": "2026-10-19T10:57:30+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20icr-les-moz-2026-10-20/bbo short complement"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1533983",
+    "outcome": "Lesotho",
+    "bid": "0.31",
+    "ask": "0.32",
+    "quote_time": "2026-10-19T10:57:30+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20icr-les-moz-2026-10-20/bbo long"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT200500ZAMUGA-ZAM",
+    "outcome": "Zambia",
+    "bid": "0.04",
+    "ask": "0.05",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5789469",
+    "outcome": "Zambia",
+    "bid": "0.022",
+    "ask": "0.039",
+    "quote_time": "2026-10-19T10:57:03.152000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=50803968923158187032692892892605362489513724179663294683824091561785401816668"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXT20MATCH-26OCT200500ZAMUGA-UGA",
+    "outcome": "Uganda",
+    "bid": "0.95",
+    "ask": "0.96",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5789469",
+    "outcome": "Uganda",
+    "bid": "0.961",
+    "ask": "0.978",
+    "quote_time": "2026-10-19T10:57:03.152000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=80030932891673718935206069428923422063590466871168939829090881940384975131991"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1533981",
+    "outcome": "Zambia",
+    "bid": "0.02",
+    "ask": "0.03",
+    "quote_time": "2026-10-19T10:57:32+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20icr-uga-zam-2026-10-20/bbo short complement"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1533981",
+    "outcome": "Uganda",
+    "bid": "0.97",
+    "ask": "0.98",
+    "quote_time": "2026-10-19T10:57:32+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20icr-uga-zam-2026-10-20/bbo long"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5541301",
+    "outcome": "South Africa",
+    "bid": "0.11",
+    "ask": "0.15",
+    "quote_time": "2026-10-19T10:57:19.789000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=37620287111979136986917714333611399221351981460313439171230277799770592517916"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1460471",
+    "outcome": "South Africa",
+    "bid": "0.37",
+    "ask": "0.42",
+    "quote_time": "2026-10-19T10:57:32+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-testcr-sao-aus-2026-10-18/bbo long"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5541303",
+    "outcome": "Australia",
+    "bid": "0.33",
+    "ask": "0.34",
+    "quote_time": "2026-10-19T10:57:00.193000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=36077583283728959897790021512504631677115134098352063060942324082889624467045"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1460471",
+    "outcome": "Australia",
+    "bid": "0.58",
+    "ask": "0.63",
+    "quote_time": "2026-10-19T10:57:32+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-testcr-sao-aus-2026-10-18/bbo short complement"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXWT20MATCH-26OCT200415NZLAUS-NZL",
+    "outcome": "New Zealand",
+    "bid": "0.12",
+    "ask": "0.13",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1555409",
+    "outcome": "New Zealand",
+    "bid": "0.1",
+    "ask": "0.12",
+    "quote_time": "2026-10-19T10:57:31+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20iwcr-aus-nze-2026-10-20/bbo short complement"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXWT20MATCH-26OCT200415NZLAUS-AUS",
+    "outcome": "Australia",
+    "bid": "0.87",
+    "ask": "0.88",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1555409",
+    "outcome": "Australia",
+    "bid": "0.88",
+    "ask": "0.9",
+    "quote_time": "2026-10-19T10:57:31+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20iwcr-aus-nze-2026-10-20/bbo long"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXWT20MATCH-26OCT200930ZIMIND-ZIM",
+    "outcome": "Zimbabwe",
+    "bid": "0.02",
+    "ask": "0.03",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1568346",
+    "outcome": "Zimbabwe",
+    "bid": "0.02",
+    "ask": "0.04",
+    "quote_time": "2026-10-19T10:57:31+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20iwcr-india-zim-2026-10-20/bbo short complement"
+  },
+  {
+    "venue": "kalshi",
+    "market_id": "KXWT20MATCH-26OCT200930ZIMIND-IND",
+    "outcome": "India",
+    "bid": "0.96",
+    "ask": "0.97",
+    "quote_time": "2026-10-19T10:57:19+00:00",
+    "quote_status": "available",
+    "quote_source": "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1568346",
+    "outcome": "India",
+    "bid": "0.96",
+    "ask": "0.98",
+    "quote_time": "2026-10-19T10:57:31+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20iwcr-india-zim-2026-10-20/bbo long"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5789505",
+    "outcome": "New Zealand",
+    "bid": "0.36",
+    "ask": "0.4",
+    "quote_time": "2026-10-19T10:55:14.262000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=27434227642058136136522542241820006331644051276689427542901275863247238383760"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1584957",
+    "outcome": "New Zealand",
+    "bid": "0.37",
+    "ask": "0.41",
+    "quote_time": "2026-10-19T10:57:31+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20icr-nze-india-2026-10-22/bbo long"
+  },
+  {
+    "venue": "polymarket_intl",
+    "market_id": "5789505",
+    "outcome": "India",
+    "bid": "0.6",
+    "ask": "0.64",
+    "quote_time": "2026-10-19T10:55:14.262000+00:00",
+    "quote_status": "available",
+    "quote_source": "https://clob.polymarket.com/books token_id=69837270449695553708851862866981792075985691265800984282555755459337200804211"
+  },
+  {
+    "venue": "polymarket_us",
+    "market_id": "1584957",
+    "outcome": "India",
+    "bid": "0.59",
+    "ask": "0.63",
+    "quote_time": "2026-10-19T10:57:31+00:00",
+    "quote_status": "available",
+    "quote_source": "https://gateway.polymarket.us/v1/markets/aec-t20icr-nze-india-2026-10-22/bbo short complement"
+  }
+]

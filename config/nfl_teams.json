@@ -1,0 +1,266 @@
+{
+  "league": "nfl",
+  "source": "https://www.nfl.com/teams/",
+  "venue_metadata": "https://gamma-api.polymarket.com/teams?league=nfl",
+  "scope": "Exact current league franchise identities; require matching native league, team code and published alias.",
+  "code_aliases": {
+    "LA": "LAR"
+  },
+  "teams": [
+    {
+      "code": "ARI",
+      "canonical": "Arizona Cardinals",
+      "aliases": [
+        "Arizona",
+        "Cardinals"
+      ]
+    },
+    {
+      "code": "ATL",
+      "canonical": "Atlanta Falcons",
+      "aliases": [
+        "Atlanta",
+        "Falcons"
+      ]
+    },
+    {
+      "code": "BAL",
+      "canonical": "Baltimore Ravens",
+      "aliases": [
+        "Baltimore",
+        "Ravens"
+      ]
+    },
+    {
+      "code": "BUF",
+      "canonical": "Buffalo Bills",
+      "aliases": [
+        "Bills",
+        "Buffalo"
+      ]
+    },
+    {
+      "code": "CAR",
+      "canonical": "Carolina Panthers",
+      "aliases": [
+        "Carolina",
+        "Panthers"
+      ]
+    },
+    {
+      "code": "CHI",
+      "canonical": "Chicago Bears",
+      "aliases": [
+        "Bears",
+        "Chicago"
+      ]
+    },
+    {
+      "code": "CIN",
+      "canonical": "Cincinnati Bengals",
+      "aliases": [
+        "Bengals",
+        "Cincinnati"
+      ]
+    },
+    {
+      "code": "CLE",
+      "canonical": "Cleveland Browns",
+      "aliases": [
+        "Browns",
+        "Cleveland"
+      ]
+    },
+    {
+      "code": "DAL",
+      "canonical": "Dallas Cowboys",
+      "aliases": [
+        "Cowboys",
+        "Dallas"
+      ]
+    },
+    {
+      "code": "DEN",
+      "canonical": "Denver Broncos",
+      "aliases": [
+        "Broncos",
+        "Denver"
+      ]
+    },
+    {
+      "code": "DET",
+      "canonical": "Detroit Lions",
+      "aliases": [
+        "Detroit",
+        "Lions"
+      ]
+    },
+    {
+      "code": "GB",
+      "canonical": "Green Bay Packers",
+      "aliases": [
+        "Green Bay",
+        "Packers"
+      ]
+    },
+    {
+      "code": "HOU",
+      "canonical": "Houston Texans",
+      "aliases": [
+        "Houston",
+        "Texans"
+      ]
+    },
+    {
+      "code": "IND",
+      "canonical": "Indianapolis Colts",
+      "aliases": [
+        "Colts",
+        "Indianapolis"
+      ]
+    },
+    {
+      "code": "JAX",
+      "canonical": "Jacksonville Jaguars",
+      "aliases": [
+        "Jacksonville",
+        "Jaguars"
+      ]
+    },
+    {
+      "code": "KC",
+      "canonical": "Kansas City Chiefs",
+      "aliases": [
+        "Chiefs",
+        "Kansas City"
+      ]
+    },
+    {
+      "code": "LAC",
+      "canonical": "Los Angeles Chargers",
+      "aliases": [
+        "Chargers"
+      ]
+    },
+    {
+      "code": "LAR",
+      "canonical": "Los Angeles Rams",
+      "aliases": [
+        "Los Angeles R",
+        "Rams"
+      ]
+    },
+    {
+      "code": "LV",
+      "canonical": "Las Vegas Raiders",
+      "aliases": [
+        "Las Vegas",
+        "Raiders"
+      ]
+    },
+    {
+      "code": "MIA",
+      "canonical": "Miami Dolphins",
+      "aliases": [
+        "Dolphins",
+        "Miami"
+      ]
+    },
+    {
+      "code": "MIN",
+      "canonical": "Minnesota Vikings",
+      "aliases": [
+        "Minnesota",
+        "Vikings"
+      ]
+    },
+    {
+      "code": "NE",
+      "canonical": "New England Patriots",
+      "aliases": [
+        "New England",
+        "Patriots"
+      ]
+    },
+    {
+      "code": "NO",
+      "canonical": "New Orleans Saints",
+      "aliases": [
+        "New Orleans",
+        "Saints"
+      ]
+    },
+    {
+      "code": "NYG",
+      "canonical": "New York Giants",
+      "aliases": [
+        "Giants",
+        "New York G"
+      ]
+    },
+    {
+      "code": "NYJ",
+      "canonical": "New York Jets",
+      "aliases": [
+        "Jets",
+        "New York J"
+      ]
+    },
+    {
+      "code": "PHI",
+      "canonical": "Philadelphia Eagles",
+      "aliases": [
+        "Eagles",
+        "Philadelphia"
+      ]
+    },
+    {
+      "code": "PIT",
+      "canonical": "Pittsburgh Steelers",
+      "aliases": [
+        "Pittsburgh",
+        "Steelers"
+      ]
+    },
+    {
+      "code": "SEA",
+      "canonical": "Seattle Seahawks",
+      "aliases": [
+        "Seahawks",
+        "Seattle"
+      ]
+    },
+    {
+      "code": "SF",
+      "canonical": "San Francisco 49ers",
+      "aliases": [
+        "49ers",
+        "San Francisco"
+      ]
+    },
+    {
+      "code": "TB",
+      "canonical": "Tampa Bay Buccaneers",
+      "aliases": [
+        "Buccaneers",
+        "Tampa Bay"
+      ]
+    },
+    {
+      "code": "TEN",
+      "canonical": "Tennessee Titans",
+      "aliases": [
+        "Tennessee",
+        "Titans"
+      ]
+    },
+    {
+      "code": "WAS",
+      "canonical": "Washington Commanders",
+      "aliases": [
+        "Commanders",
+        "Washington"
+      ]
+    }
+  ]
+}

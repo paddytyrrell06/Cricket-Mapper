@@ -1,0 +1,35 @@
+Cricket exchange matching live-run safety audit
+
+[PASS] at least two venue collections complete
+       2/3 complete: kalshi, polymarket_us
+[ADVISORY] all venue coverage complete
+       polymarket_intl
+[ADVISORY] no unresolved fixture links
+       29 review links
+[ADVISORY] no unresolved market links
+       42 review links
+[PASS] fixture links are unique
+       19 links / 19 unique
+[PASS] market links are unique
+       38 links / 38 unique
+[PASS] accepted fixture pairs agree exactly
+       all pairs agree
+[PASS] accepted market pairs agree exactly
+       all pairs agree
+[PASS] wide rows are unique
+       26 rows / 26 unique
+[PASS] wide table statuses, identifiers and links are valid
+       all rows valid
+[PASS] match-winner fixtures contain both teams and no unknown outcomes
+       all winner fixtures complete
+[PASS] no plausible counterpart remains unmatched
+       none
+[PASS] no match-winner market is stranded on a confirmed fixture
+       none
+[PASS] wide table is lossless relative to accepted links
+       expected=26 actual=26
+
+Objects: 145 fixtures, 1000 markets
+Accepted: 19 fixture-pair links, 38 market-pair links
+Unmatched: 92 fixtures, 888 markets
+OVERALL PASS

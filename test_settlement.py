@@ -56,6 +56,41 @@ def known_profile():
 
 
 class SettlementProfileTests(unittest.TestCase):
+    def test_missing_incidental_states_do_not_block_evidenced_normal_completion(self):
+        a, b = known_profile(), known_profile()
+        for profile in (a, b):
+            profile["payouts"].pop("void")
+            profile["payouts"].pop("abandoned_after_start_no_winner")
+            profile["policies"].pop("postponement")
+            profile["status"] = "unknown"
+        result = S.compare_profiles(a, b)
+        self.assertEqual(result["status"], "compatible")
+        self.assertEqual(result["contingency_status"], "unknown")
+        self.assertTrue(result["caveats"])
+        strict = S.compare_profiles(a, b, strict=True)
+        self.assertEqual(strict["status"], "unknown")
+        self.assertEqual(strict["comparison_basis"], "full_contract")
+
+    def test_unknown_win_loss_period_or_tiebreak_logic_still_blocks(self):
+        for section, key in [("payouts", "win"), ("payouts", "loss"),
+                             ("payouts", "tie_without_tiebreak"),
+                             ("policies", "period"), ("policies", "tiebreakers")]:
+            with self.subTest(section=section, key=key):
+                a, b = known_profile(), known_profile()
+                b[section][key] = None
+                self.assertEqual(S.compare_profiles(a, b)["status"], "unknown")
+
+    def test_post_start_official_winner_disagreement_is_not_a_pre_start_caveat(self):
+        a, b = known_profile(), known_profile()
+        b["payouts"]["forfeit_after_start_win"] = "0.5"
+        result = S.compare_profiles(a, b)
+        self.assertEqual(result["status"], "incompatible")
+        self.assertIn("forfeit_after_start_win", result["reason"])
+        b["payouts"]["forfeit_after_start_win"] = None
+        result = S.compare_profiles(a, b)
+        self.assertEqual(result["status"], "compatible")
+        self.assertEqual(result["contingency_status"], "unknown")
+
     def test_reported_three_way_versus_half_draw_difference(self):
         for left, right in [(KALSHI_THREE, intl_description()),
                             (KALSHI_HALF, intl_description("draw"))]:
@@ -80,14 +115,18 @@ class SettlementProfileTests(unittest.TestCase):
         self.assertEqual(S.compare_profiles(a, b)["status"], "unknown")
         self.assertEqual(S.compare_profiles({}, {})["status"], "unknown")
 
-    def test_matching_known_draw_terms_do_not_hide_missing_cancellation_rules(self):
+    def test_missing_normal_result_rules_stay_unknown_and_incidental_differences_are_caveats(self):
         a = S.profile_market("kalshi", KALSHI_HALF, outcome="Australia")
         b = S.profile_market("polymarket_intl", intl_description(), outcome="Australia")
         self.assertEqual(a["payouts"]["draw"], b["payouts"]["draw"])
         self.assertEqual(a["status"], "unknown")
         self.assertIn("policy:postponement", a["missing"])
-        self.assertEqual(S.compare_profiles(a, b)["status"], "incompatible")
-        self.assertIn("forfeit_before_start", S.compare_profiles(a, b)["reason"])
+        comparison = S.compare_profiles(a, b)
+        self.assertEqual(comparison["status"], "unknown")
+        self.assertEqual(comparison["contingency_status"], "different")
+        self.assertIn("policy:tiebreakers", comparison["core_missing"])
+        self.assertTrue(any("forfeit_before_start" in caveat for caveat in comparison["caveats"]))
+        self.assertEqual(S.compare_profiles(a, b, strict=True)["status"], "incompatible")
 
     def test_equal_complete_models_are_compatible_with_exact_numeric_payments(self):
         a = known_profile()
@@ -115,7 +154,12 @@ class SettlementProfileTests(unittest.TestCase):
                 original["payouts"]["cancelled_before_start"] = symbolic
                 # Even an externally claimed known status cannot make two
                 # discretionary venue prices equal in the cancellation state.
-                self.assertEqual(S.compare_profiles(original, copy.deepcopy(original))["status"], "unknown")
+                normal = S.compare_profiles(original, copy.deepcopy(original))
+                self.assertEqual(normal["status"], "compatible")
+                self.assertEqual(normal["comparison_basis"], "normal_completion")
+                self.assertEqual(normal["contingency_status"], "unknown")
+                self.assertTrue(normal["caveats"])
+                self.assertEqual(S.compare_profiles(original, copy.deepcopy(original), strict=True)["status"], "unknown")
                 made = S.make_profile(sport="cricket", target_kind="team",
                                        payouts=original["payouts"], policies=original["policies"],
                                        evidence=original["evidence"])
@@ -125,7 +169,10 @@ class SettlementProfileTests(unittest.TestCase):
     def test_extra_symbolic_state_is_not_silently_excluded_from_comparison(self):
         a = known_profile()
         a["payouts"]["venue_discretionary_event"] = "fair_market_price"
-        self.assertEqual(S.compare_profiles(a, copy.deepcopy(a))["status"], "unknown")
+        result = S.compare_profiles(a, copy.deepcopy(a))
+        self.assertEqual(result["status"], "compatible")
+        self.assertIn("venue_discretionary_event", result["caveats"][0])
+        self.assertEqual(S.compare_profiles(a, copy.deepcopy(a), strict=True)["status"], "unknown")
 
     def test_explicit_full_rule_text_can_establish_compatible_models(self):
         # No part of this supplemental contract is inferred from a venue name.
@@ -152,7 +199,8 @@ class SettlementProfileTests(unittest.TestCase):
         for remove in ("void", "draw"):
             a = known_profile()
             a["payouts"].pop(remove)
-            self.assertEqual(S.compare_profiles(a, a)["status"], "unknown")
+            self.assertEqual(S.compare_profiles(a, a, strict=True)["status"], "unknown")
+            self.assertEqual(S.compare_profiles(a, a)["status"], "unknown" if remove == "draw" else "compatible")
         a = known_profile()
         a["evidence"] = []
         self.assertEqual(S.compare_profiles(a, a)["status"], "unknown")
@@ -185,8 +233,105 @@ class SettlementProfileTests(unittest.TestCase):
         b = S.profile_market("polymarket_intl", intl, sport="basketball", outcome="Boston")
         self.assertEqual(a["policies"]["overtime"], "included")
         self.assertEqual(b["policies"]["overtime"], "included")
+        comparison = S.compare_profiles(a, b)
+        self.assertEqual(comparison["status"], "compatible")
+        self.assertEqual(comparison["contingency_status"], "different")
+        self.assertTrue(any("cancelled_before_start" in caveat for caveat in comparison["caveats"]))
+        self.assertEqual(S.compare_profiles(a, b, strict=True)["status"], "incompatible")
+
+    def test_nba_native_regulation_override_beats_overtime_document_default(self):
+        raw = {"rules_primary": "If Boston wins the basketball game, the market resolves Yes.",
+               "rules_secondary": "This market covers regulation time only, excluding overtime.",
+               "_settlement_documents": [{"url": "https://example.com/default", "text":
+                                          "regulation time and any officially designated overtime periods"}]}
+        a = S.profile_market("kalshi", raw, sport="basketball", outcome="Boston")
+        b = S.profile_market("polymarket_intl", {"description": "If Boston wins the game. Including any overtime periods."},
+                             sport="basketball", outcome="Boston")
+        self.assertEqual(a["policies"]["overtime"], "excluded")
         self.assertEqual(S.compare_profiles(a, b)["status"], "incompatible")
-        self.assertIn("cancelled_before_start", S.compare_profiles(a, b)["reason"])
+
+    def test_nfl_native_tied_game_and_overtime_are_core(self):
+        kalshi = {"rules_primary": "If Washington wins the Pro Football game, the market resolves Yes.",
+                  "rules_secondary": "If the game ends in a tie, the market will resolve to $0.50 for each team.",
+                  "_settlement_documents": [{"url": "https://assets.kalshi.com/contract_terms/FOOTBALLGAMEWIN.pdf",
+                                             "text": "all overtime periods are included in determining the winner"}]}
+        intl = {"description": "If the Commanders win the game. Overtime is included if played. If the game ends in a tie, this market will resolve 50-50."}
+        a = S.profile_market("kalshi", kalshi, sport="football", outcome="Washington")
+        b = S.profile_market("polymarket_intl", intl, sport="football", outcome="Washington")
+        self.assertEqual(a["payouts"]["tie"], "0.5")
+        self.assertEqual(a["core_status"], "known")
+        self.assertEqual(S.compare_profiles(a, b)["status"], "compatible")
+        b["payouts"]["tie"] = "0"
+        self.assertEqual(S.compare_profiles(a, b)["status"], "incompatible")
+        b["payouts"]["tie"] = None
+        self.assertEqual(S.compare_profiles(a, b)["status"], "unknown")
+
+    def test_nhl_requires_both_overtime_and_shootout_agreement(self):
+        kalshi = {"rules_primary": "If New York wins the hockey game, the market resolves Yes.",
+                  "_settlement_documents": [{"url": "https://assets.kalshi.com/contract_terms/HOCKEYWINNINGINPERIOD.pdf",
+                                             "text": "regulation time, overtime, and the shootout"}]}
+        intl = {"description": "If New York wins the game. The final score includes any overtime periods and shootouts."}
+        a = S.profile_market("kalshi", kalshi, sport="hockey", outcome="New York")
+        # The actual Gamma template uses 'including', not this incomplete wording.
+        unknown = S.profile_market("polymarket_intl", intl, sport="hockey", outcome="New York")
+        self.assertEqual(S.compare_profiles(a, unknown)["status"], "unknown")
+        intl["description"] = "If New York wins the game. Final score including any overtime periods and shootouts."
+        b = S.profile_market("polymarket_intl", intl, sport="hockey", outcome="New York")
+        self.assertEqual(S.compare_profiles(a, b)["status"], "compatible")
+        b["policies"]["shootout"] = "excluded"
+        self.assertEqual(S.compare_profiles(a, b)["status"], "incompatible")
+
+    def test_mlb_does_not_guess_extra_innings_from_official_final_statistics(self):
+        kalshi = {"rules_primary": "If Cleveland wins the baseball game, the market resolves Yes.",
+                  "_settlement_documents": [{"url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+                                             "text": "including all regulation innings and any extra innings or tie-breaking procedures employed by the governing body"}]}
+        intl = {"description": "If Cleveland wins the game. The source is official final statistics. A tied game resolves 50-50."}
+        a = S.profile_market("kalshi", kalshi, sport="baseball", outcome="Cleveland")
+        b = S.profile_market("polymarket_intl", intl, sport="baseball", outcome="Cleveland")
+        self.assertEqual(a["policies"]["extra_innings"], "included")
+        self.assertEqual(S.compare_profiles(a, b)["status"], "unknown")
+        intl["description"] += " All extra innings are included in determining the winner."
+        b = S.profile_market("polymarket_intl", intl, sport="baseball", outcome="Cleveland")
+        self.assertEqual(S.compare_profiles(a, b)["status"], "compatible")
+
+    def test_official_kalshi_terms_establish_nfl_overtime_and_tie_rules(self):
+        document = {
+            "url": "https://assets.kalshi.com/contract_terms/FOOTBALLGAMEWIN.pdf",
+            "text": (
+                "All overtime periods are included in determining the winner. "
+                "If the game ends in a tie and no Tie strike is listed, each side "
+                "is paid $0.50."
+            ),
+        }
+        profile = S.profile_market(
+            "kalshi", {"rules_primary": "If Kansas City wins the football game, the market resolves Yes.",
+                       "_settlement_documents": [document]},
+            sport="football", outcome="Kansas City",
+        )
+        self.assertEqual(profile["policies"]["overtime"], "included")
+        self.assertEqual(profile["payouts"]["tie"], "0.5")
+        self.assertNotIn("policy:overtime", profile["core_missing"])
+
+    def test_official_kalshi_terms_establish_nhl_shootout_and_mlb_extra_innings(self):
+        hockey = S.profile_market(
+            "kalshi", {"rules_primary": "If Boston wins the hockey game, the market resolves Yes.",
+                       "_settlement_documents": [{
+                           "url": "https://assets.kalshi.com/contract_terms/HOCKEYWINNINGINPERIOD.pdf",
+                           "text": "An entire hockey game includes regulation time, overtime, and the shootout.",
+                       }]},
+            sport="hockey", outcome="Boston",
+        )
+        baseball = S.profile_market(
+            "kalshi", {"rules_primary": "If Boston wins the baseball game, the market resolves Yes.",
+                       "_settlement_documents": [{
+                           "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+                           "text": "All regulation innings and any extra innings are included in determining the winner.",
+                       }]},
+            sport="baseball", outcome="Boston",
+        )
+        self.assertEqual(hockey["policies"]["overtime"], "included")
+        self.assertEqual(hockey["policies"]["shootout"], "included")
+        self.assertEqual(baseball["policies"]["extra_innings"], "included")
 
     def test_evidence_is_retained_without_truncating_rules(self):
         raw = {**KALSHI_THREE, "description": "description", "resolutionSource": "https://example.com/rules"}
@@ -225,6 +370,18 @@ class SettlementMarketMatchingTests(unittest.TestCase):
         self.assertEqual(review, [])
         self.assertEqual(unmatched, [])
         self.assertGreater(Decimal(markets[0].bid), Decimal(markets[1].ask))
+
+    def test_pre_start_cancellation_difference_allows_explicitly_conditional_comparison(self):
+        a, b = known_profile(), known_profile()
+        a["payouts"]["cancelled_before_start"] = "fair_market_price"
+        (accepted, review, unmatched), _ = self.pair(a, b)
+        self.assertEqual(len(accepted), 1)
+        self.assertEqual(review, [])
+        self.assertEqual(unmatched, [])
+        self.assertEqual(accepted[0].comparison_basis, "normal_completion")
+        self.assertEqual(accepted[0].contingency_status, "different")
+        self.assertTrue(accepted[0].caveats)
+        self.assertIn("conditional", accepted[0].reason)
 
     def test_both_unknown_models_are_reviewed(self):
         (accepted, review, _), _ = self.pair({}, {})

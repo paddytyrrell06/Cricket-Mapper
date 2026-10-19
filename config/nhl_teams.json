@@ -1,0 +1,271 @@
+{
+  "league": "nhl",
+  "source": "https://www.nhl.com/info/teams/",
+  "venue_metadata": "https://gamma-api.polymarket.com/teams?league=nhl",
+  "scope": "Exact current league franchise identities; require matching native league, team code and published alias.",
+  "code_aliases": {
+    "CAL": "CGY",
+    "LAK": "LA",
+    "MON": "MTL",
+    "UTAH": "UTA",
+    "LAS": "VGK"
+  },
+  "teams": [
+    {
+      "code": "ANA",
+      "canonical": "Anaheim Ducks",
+      "aliases": [
+        "Anaheim",
+        "Ducks"
+      ]
+    },
+    {
+      "code": "BOS",
+      "canonical": "Boston Bruins",
+      "aliases": [
+        "Boston",
+        "Bruins"
+      ]
+    },
+    {
+      "code": "BUF",
+      "canonical": "Buffalo Sabres",
+      "aliases": [
+        "Buffalo",
+        "Sabres"
+      ]
+    },
+    {
+      "code": "CAR",
+      "canonical": "Carolina Hurricanes",
+      "aliases": [
+        "Carolina",
+        "Hurricanes"
+      ]
+    },
+    {
+      "code": "CBJ",
+      "canonical": "Columbus Blue Jackets",
+      "aliases": [
+        "Blue Jackets",
+        "Columbus"
+      ]
+    },
+    {
+      "code": "CGY",
+      "canonical": "Calgary Flames",
+      "aliases": [
+        "Calgary",
+        "Flames"
+      ]
+    },
+    {
+      "code": "CHI",
+      "canonical": "Chicago Blackhawks",
+      "aliases": [
+        "Blackhawks",
+        "Chicago"
+      ]
+    },
+    {
+      "code": "COL",
+      "canonical": "Colorado Avalanche",
+      "aliases": [
+        "Avalanche",
+        "Colorado"
+      ]
+    },
+    {
+      "code": "DAL",
+      "canonical": "Dallas Stars",
+      "aliases": [
+        "Dallas",
+        "Stars"
+      ]
+    },
+    {
+      "code": "DET",
+      "canonical": "Detroit Red Wings",
+      "aliases": [
+        "Detroit",
+        "Red Wings"
+      ]
+    },
+    {
+      "code": "EDM",
+      "canonical": "Edmonton Oilers",
+      "aliases": [
+        "Edmonton",
+        "Oilers"
+      ]
+    },
+    {
+      "code": "FLA",
+      "canonical": "Florida Panthers",
+      "aliases": [
+        "Florida",
+        "Panthers"
+      ]
+    },
+    {
+      "code": "LA",
+      "canonical": "Los Angeles Kings",
+      "aliases": [
+        "Kings",
+        "Los Angeles"
+      ]
+    },
+    {
+      "code": "MIN",
+      "canonical": "Minnesota Wild",
+      "aliases": [
+        "Minnesota",
+        "Wild"
+      ]
+    },
+    {
+      "code": "MTL",
+      "canonical": "Montreal Canadiens",
+      "aliases": [
+        "Canadiens",
+        "Montreal"
+      ]
+    },
+    {
+      "code": "NJ",
+      "canonical": "New Jersey Devils",
+      "aliases": [
+        "Devils",
+        "New Jersey"
+      ]
+    },
+    {
+      "code": "NSH",
+      "canonical": "Nashville Predators",
+      "aliases": [
+        "Nashville",
+        "Predators"
+      ]
+    },
+    {
+      "code": "NYI",
+      "canonical": "New York Islanders",
+      "aliases": [
+        "Islanders",
+        "New York I"
+      ]
+    },
+    {
+      "code": "NYR",
+      "canonical": "New York Rangers",
+      "aliases": [
+        "New York R",
+        "Rangers"
+      ]
+    },
+    {
+      "code": "OTT",
+      "canonical": "Ottawa Senators",
+      "aliases": [
+        "Ottawa",
+        "Senators"
+      ]
+    },
+    {
+      "code": "PHI",
+      "canonical": "Philadelphia Flyers",
+      "aliases": [
+        "Flyers",
+        "Philadelphia"
+      ]
+    },
+    {
+      "code": "PIT",
+      "canonical": "Pittsburgh Penguins",
+      "aliases": [
+        "Penguins",
+        "Pittsburgh"
+      ]
+    },
+    {
+      "code": "SEA",
+      "canonical": "Seattle Kraken",
+      "aliases": [
+        "Kraken",
+        "Seattle"
+      ]
+    },
+    {
+      "code": "SJ",
+      "canonical": "San Jose Sharks",
+      "aliases": [
+        "San Jose",
+        "Sharks"
+      ]
+    },
+    {
+      "code": "STL",
+      "canonical": "St. Louis Blues",
+      "aliases": [
+        "Blues",
+        "St. Louis"
+      ]
+    },
+    {
+      "code": "TB",
+      "canonical": "Tampa Bay Lightning",
+      "aliases": [
+        "Lightning",
+        "Tampa Bay"
+      ]
+    },
+    {
+      "code": "TOR",
+      "canonical": "Toronto Maple Leafs",
+      "aliases": [
+        "Maple Leafs",
+        "Toronto"
+      ]
+    },
+    {
+      "code": "UTA",
+      "canonical": "Utah Mammoth",
+      "aliases": [
+        "Mammoth",
+        "Utah"
+      ]
+    },
+    {
+      "code": "VAN",
+      "canonical": "Vancouver Canucks",
+      "aliases": [
+        "Canucks",
+        "Vancouver"
+      ]
+    },
+    {
+      "code": "VGK",
+      "canonical": "Vegas Golden Knights",
+      "aliases": [
+        "Golden Knights",
+        "Vegas"
+      ]
+    },
+    {
+      "code": "WPG",
+      "canonical": "Winnipeg Jets",
+      "aliases": [
+        "Jets",
+        "Winnipeg"
+      ]
+    },
+    {
+      "code": "WSH",
+      "canonical": "Washington Capitals",
+      "aliases": [
+        "Capitals",
+        "Washington"
+      ]
+    }
+  ]
+}

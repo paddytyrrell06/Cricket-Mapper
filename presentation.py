@@ -23,6 +23,8 @@ BASE_COLS = [
     "sport", "canonical_fixture_id", "fixture_date", "start_time_utc", "competition",
     "gender", "format", "team_a", "team_b", "canonical_market_type", "canonical_outcome",
     "venues_available", "venues_checked", "mapping_status", "comparison_status", "comparison_reason",
+    "comparison_basis", "contingency_status", "contingency_caveats", "strict_comparison_status",
+    "strict_comparison_reason", "cross_condition",
     "best_bid", "best_ask", "best_bid_venue", "best_ask_venue", "best_spread",
     "observed_crossed", "observed_cross_kind", "observed_cross_gap",
     "cross_eligible", "quote_check", "crossed", "cross_kind", "cross_gap",
@@ -56,7 +58,7 @@ def _json(value: Any) -> str:
 
 def _sport(fixture: Any) -> str:
     value = str(getattr(getattr(fixture, "key", None), "sport", "cricket") or "cricket").lower()
-    return "basketball" if value == "nba" else value
+    return {"nba": "basketball", "nfl": "football", "nhl": "hockey", "mlb": "baseball"}.get(value, value)
 
 
 def _profile(market: Any) -> dict:
@@ -158,13 +160,17 @@ def _eligible_quotes(row: dict[str, str], venues: list[str], as_of: datetime) ->
         "eligible_bid": _price_text(best[3]) if best else "",
         "eligible_ask": _price_text(best[4]) if best else "",
         "eligible_bid_venue": best[1] if best else "", "eligible_ask_venue": best[2] if best else "",
+        "cross_condition": ("conditional" if row.get("contingency_status") != "aligned" else "aligned") if crossed else "",
     }
 
 
-def _comparison(markets: dict[str, Any], mapping_status: str, reasons: list[str], fixture: Any) -> tuple[str, str]:
+def _comparison(markets: dict[str, Any], mapping_status: str, reasons: list[str], fixture: Any,
+                strict_settlement: bool = False) -> dict[str, str]:
     profiles = [_profile(market) for market in markets.values()]
-    comparisons = [S.compare_profiles(left, right) for i, left in enumerate(profiles)
+    comparisons = [S.compare_profiles(left, right, strict=strict_settlement) for i, left in enumerate(profiles)
                    for right in profiles[i + 1:]]
+    strict_results = [S.compare_profiles(left, right, strict=True) for i, left in enumerate(profiles)
+                      for right in profiles[i + 1:]]
     if any(result["status"] == "incompatible" for result in comparisons):
         status = "rules_differ"
     elif not comparisons or any(result["status"] != "compatible" for result in comparisons):
@@ -176,13 +182,28 @@ def _comparison(markets: dict[str, Any], mapping_status: str, reasons: list[str]
     details = [result.get("reason", "") for result in comparisons if result["status"] != "compatible"]
     if mapping_status != "accepted":
         details.extend(reasons)
-    return status, "; ".join(dict.fromkeys(reason for reason in details if reason)) or "Settlement profiles agree"
+    contingency = ("different" if any(result.get("contingency_status") == "different" for result in comparisons)
+                   else "unknown" if not comparisons or any(result.get("contingency_status") != "aligned" for result in comparisons)
+                   else "aligned")
+    strict_status = ("rules_differ" if any(result["status"] == "incompatible" for result in strict_results)
+                     else "rules_unknown" if not strict_results or any(result["status"] != "compatible" for result in strict_results)
+                     else "compatible")
+    caveats = list(dict.fromkeys(str(caveat) for result in comparisons for caveat in result.get("caveats", [])))
+    return {
+        "comparison_status": status,
+        "comparison_reason": "; ".join(dict.fromkeys(reason for reason in details if reason)) or "Normal-result payout terms agree",
+        "comparison_basis": "full_contract" if strict_settlement else "normal_completion",
+        "contingency_status": contingency, "contingency_caveats": _json(caveats),
+        "strict_comparison_status": strict_status,
+        "strict_comparison_reason": "; ".join(dict.fromkeys(result.get("reason", "") for result in strict_results if result.get("reason"))),
+    }
 
 
 def build_wide_rows(accepted: list[Any], review: list[Any], coverage_complete: dict[str, bool],
                     venues: list[str], fixture_review: Optional[list[Any]] = None,
                     include_review: bool = False, as_of: Optional[datetime] = None,
-                    sport_coverage: Optional[dict[str, dict[str, bool]]] = None) -> list[dict[str, str]]:
+                    sport_coverage: Optional[dict[str, dict[str, bool]]] = None,
+                    strict_settlement: bool = False) -> list[dict[str, str]]:
     as_of = as_of or datetime.now(timezone.utc)
     rows: dict[tuple, dict[str, Any]] = {}
     review_venues: dict[tuple, set[str]] = defaultdict(set)
@@ -225,7 +246,7 @@ def build_wide_rows(accepted: list[Any], review: list[Any], coverage_complete: d
     for key, record in rows.items():
         fixture, markets = record["fixture"], record["markets"]
         row_coverage = (sport_coverage or {}).get(key[0], coverage_complete)
-        comparison_status, reason = _comparison(record["sources"], record["mapping_status"], record["reasons"], fixture)
+        comparison = _comparison(record["sources"], record["mapping_status"], record["reasons"], fixture, strict_settlement)
         row = {
             "sport": key[0], "canonical_fixture_id": fixture.canonical_fixture_id,
             "fixture_date": fixture.key.date, "start_time_utc": fixture.start_time,
@@ -234,8 +255,7 @@ def build_wide_rows(accepted: list[Any], review: list[Any], coverage_complete: d
             "canonical_market_type": record["market_type"], "canonical_outcome": record["outcome"],
             "venues_available": str(len(markets)),
             "venues_checked": str(sum(bool(row_coverage.get(v)) for v in venues)),
-            "mapping_status": record["mapping_status"], "comparison_status": comparison_status,
-            "comparison_reason": reason,
+            "mapping_status": record["mapping_status"], **comparison,
         }
         for venue in venues:
             market = dict(markets[venue]) if venue in markets else None
@@ -285,26 +305,8 @@ def _cents(value: str) -> str:
 def _venue_cell(row: dict[str, str], venue: str) -> str:
     if row.get(f"{venue}_status") != "Available":
         return f'<span class="muted">{html.escape(row.get(f"{venue}_status", "Unavailable"))}</span>'
-    return (f'<div class="quotes"><div><span>Bid</span><strong>{_cents(row.get(f"{venue}_bid", ""))}</strong></div>'
-            f'<div><span>Ask</span><strong>{_cents(row.get(f"{venue}_ask", ""))}</strong></div></div>')
-
-
-def _edge_cell(row: dict[str, str], index: int) -> str:
-    status = row.get("comparison_status", "rules_unknown")
-    labels = {"rules_differ": "Rules differ", "rules_unknown": "Rules unknown",
-              "fixture_review": "Fixture review", "market_review": "Market review"}
-    if row.get("crossed") == "true":
-        main = f'<strong class="edge-positive">{_cents(row.get("cross_gap", ""))} edge</strong><span class="rule-state">Compatible rules</span>'
-    elif status != "compatible":
-        hint = _rule_hint(row) if status == "rules_differ" else "Comparison excluded"
-        main = f'<span class="rule-review">{labels.get(status, "Needs review")}</span><span class="rule-state">{html.escape(hint)}</span>'
-    elif row.get("quote_check") != "fresh":
-        labels = {"stale": "Quotes stale", "future": "Quote time conflict", "skewed": "Quotes out of sync",
-                  "unknown": "Quote time unknown", "unpriced": "Quotes incomplete"}
-        main = f'<span class="muted">{labels.get(row.get("quote_check"), "Quotes unavailable")}</span><span class="rule-state">Compatible rules</span>'
-    else:
-        main = '<span class="edge-flat">No cross</span><span class="rule-state">Compatible rules</span>'
-    return main + f'<button class="details-button" data-details="{index}" aria-haspopup="dialog">Details ↗</button>'
+    return (f'<div class="quotes"><strong>{_cents(row.get(f"{venue}_bid", ""))}</strong>'
+            f'<span class="quote-divider">/</span><strong>{_cents(row.get(f"{venue}_ask", ""))}</strong></div>')
 
 
 def _rule_hint(row: dict[str, str]) -> str:
@@ -317,19 +319,38 @@ def _rule_hint(row: dict[str, str]) -> str:
             policies = json.loads(row.get(f"{venue}_settlement_policies", "{}"))
         except (ValueError, TypeError):
             continue
-        profiles.append((VENUE_LABELS[venue], payouts, policies))
-    for state, label in (("draw", "Draw"), ("tie_without_tiebreak", "Tie"),
-                         ("cancelled_before_start", "Cancellation"), ("void", "Void")):
-        values = [(venue, payouts.get(state)) for venue, payouts, _ in profiles if payouts.get(state) is not None]
-        if len({str(value) for _, value in values}) > 1:
-            return label + ": " + " / ".join(_cents(str(value)) if _price(value) is not None else
-                                               {"fair_market_price": "fair price", "last_fair_market_price": "fair price"}.get(str(value), str(value))
-                                               for _, value in values)
-    for policy in ("postponement", "overtime", "period", "tiebreakers", "dls"):
-        values = {str(policies.get(policy)) for _, _, policies in profiles if policies.get(policy) is not None}
-        if len(values) > 1:
+        profiles.append((payouts, policies))
+    for state, label in (("draw", "Draw"), ("tie_without_tiebreak", "Tie"), ("win", "Win")):
+        values = [payouts.get(state) for payouts, _ in profiles if payouts.get(state) is not None]
+        if len({str(value) for value in values}) > 1:
+            return label + ": " + " / ".join(_cents(str(value)) if _price(value) is not None else str(value) for value in values)
+    for policy in ("period", "overtime", "tiebreakers", "dls"):
+        if len({str(policies.get(policy)) for _, policies in profiles if policies.get(policy) is not None}) > 1:
             return policy.replace("_", " ").capitalize() + " differs"
-    return "Payout rules differ"
+    return "Core payout terms differ"
+
+
+def _edge_cell(row: dict[str, str], index: int) -> str:
+    if row.get("crossed") == "true":
+        condition = ' <span class="conditional" title="Conditional: contingency terms differ or remain unspecified">C</span>' if row.get("cross_condition") == "conditional" else ""
+        return f'<span class="edge-positive">{_cents(row.get("cross_gap", ""))}{condition}</span><span class="expired-label" hidden>Stale</span>'
+    if row.get("comparison_status") != "compatible":
+        hint = _rule_hint(row) if row.get("comparison_status") == "rules_differ" else "Comparison requires review"
+        return f'<span class="muted" title="{html.escape(hint, quote=True)}">—</span>'
+    if row.get("quote_check") != "fresh":
+        labels = {"stale": "Stale", "future": "Time conflict", "skewed": "Out of sync", "unknown": "No time", "unpriced": "—"}
+        return f'<span class="muted">{labels.get(row.get("quote_check"), "—")}</span>'
+    return '<span class="muted">—</span>'
+
+
+def _rules_cell(row: dict[str, str]) -> str:
+    status = row.get("comparison_status", "rules_unknown")
+    if status == "compatible":
+        caveat = row.get("contingency_status", "unknown") != "aligned"
+        return ('<span class="rule-ok">Core ✓</span>' +
+                (' <span class="conditional" title="Contingency terms differ or remain unspecified; inspect details">C</span>' if caveat else ""))
+    labels = {"rules_differ": "Rules differ", "rules_unknown": "Rules unknown", "fixture_review": "Fixture review", "market_review": "Market review"}
+    return f'<span class="rule-review" title="{html.escape(row.get("comparison_reason", ""), quote=True)}">{labels.get(status, "Review")}</span>'
 
 
 def _json_details(raw: str) -> str:
@@ -340,26 +361,42 @@ def _json_details(raw: str) -> str:
 
 
 def _details(row: dict[str, str], venues: list[str]) -> str:
-    sections = [f'<p class="detail-reason">{html.escape(row.get("comparison_reason", ""))}</p>',
-                '<p class="detail-note">Crosses require compatible known settlement rules, observations no older than '
-                f'{QUOTE_MAX_AGE_SECONDS // 60} minutes and at most {QUOTE_MAX_SKEW_SECONDS} seconds apart. '
-                'Displayed gaps exclude fees and executable depth.</p>']
+    basis = "Full contract" if row.get("comparison_basis") == "full_contract" else "Normal completion"
+    sections = [f'<div class="detail-basis">{basis} comparison</div><p class="detail-reason">{html.escape(row.get("comparison_reason", ""))}</p>']
+    try:
+        caveats = json.loads(row.get("contingency_caveats", "[]"))
+    except (ValueError, TypeError):
+        caveats = []
+    if caveats:
+        sections.append('<details class="caveats"><summary>Contingency caveats <span class="conditional">C</span></summary><ul>' +
+                        "".join(f'<li>{html.escape(str(caveat))}</li>' for caveat in caveats) + '</ul></details>')
+    sections.append(f'<p class="detail-note">Quote observations: at most {QUOTE_MAX_AGE_SECONDS // 60} minutes old and '
+                    f'{QUOTE_MAX_SKEW_SECONDS} seconds apart. Edges exclude fees and executable depth. '
+                    'Conditional comparisons assume normal completion; cancellation and other contingency terms can differ.</p>')
     for venue in venues:
         if row.get(f"{venue}_status") != "Available":
             continue
         url = row.get(f"{venue}_url", "")
-        link = (f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">Open venue event ↗</a>' if url else "")
+        link = f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">Open event ↗</a>' if url else ""
+        try:
+            payouts = json.loads(row.get(f"{venue}_settlement_payouts", "{}"))
+        except (ValueError, TypeError):
+            payouts = {}
+        core_rows = "".join(f'<tr><td>{state.replace("_", " ").title()}</td><td>{_cents(str(payouts[state])) if _price(payouts[state]) is not None else html.escape(str(payouts[state]))}</td></tr>'
+                            for state in ("win", "loss", "draw", "tie_without_tiebreak") if payouts.get(state) is not None)
         sections.append(f'<section class="detail-venue"><h3>{html.escape(VENUE_LABELS[venue])}</h3>{link}'
                         f'<p>{html.escape(row.get(f"{venue}_title", ""))}</p>'
-                        f'<dl><dt>Market / outcome</dt><dd>{html.escape(row.get(f"{venue}_market_id", ""))}</dd>'
-                        f'<dt>Settlement model</dt><dd>{html.escape(row.get(f"{venue}_settlement_profile", "") or "Unknown")}</dd>'
-                        f'<dt>Rule summary</dt><dd>{html.escape(row.get(f"{venue}_settlement_label", "") or "Unknown")}</dd>'
-                        f'<dt>Observed at</dt><dd>{html.escape(row.get(f"{venue}_quote_time", "") or "Unknown")}</dd>'
-                        f'<dt>Quote source</dt><dd>{html.escape(row.get(f"{venue}_quote_source", "") or "Unavailable")}</dd></dl>'
-                        f'<h4>Payouts by result</h4><pre>{_json_details(row.get(f"{venue}_settlement_payouts", ""))}</pre>'
-                        f'<h4>Settlement policies</h4><pre>{_json_details(row.get(f"{venue}_settlement_policies", ""))}</pre>'
-                        f'<h4>Rule evidence</h4><pre>{_json_details(row.get(f"{venue}_settlement_evidence", ""))}</pre>'
-                        f'<h4>Unresolved rule fields</h4><pre>{_json_details(row.get(f"{venue}_settlement_missing", ""))}</pre>'
+                        f'<p class="detail-note">{html.escape(row.get(f"{venue}_settlement_label", ""))}</p>'
+                        f'<table class="payout-table"><tbody>{core_rows}</tbody></table>'
+                        f'<dl><dt>Outcome ID</dt><dd>{html.escape(row.get(f"{venue}_market_id", ""))}</dd>'
+                        f'<dt>Observed</dt><dd>{html.escape(row.get(f"{venue}_quote_time", "") or "Unknown")}</dd>'
+                        f'<dt>Source</dt><dd>{html.escape(row.get(f"{venue}_quote_source", "") or "Unavailable")}</dd></dl>'
+                        '<details><summary>Source rules and settlement evidence</summary>'
+                        f'<pre>{_json_details(row.get(f"{venue}_settlement_evidence", ""))}</pre></details>'
+                        '<details><summary>Full payout model and contingency policies</summary>'
+                        f'<pre>{_json_details(row.get(f"{venue}_settlement_payouts", ""))}</pre>'
+                        f'<pre>{_json_details(row.get(f"{venue}_settlement_policies", ""))}</pre>'
+                        f'<pre>{_json_details(row.get(f"{venue}_settlement_missing", ""))}</pre></details>'
                         '<details><summary>Quote and depth diagnostics</summary>'
                         f'<pre>{_json_details(row.get(f"{venue}_quote_details", ""))}</pre>'
                         f'<pre>{_json_details(row.get(f"{venue}_alternatives", ""))}</pre></details></section>')
@@ -371,7 +408,6 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str], covera
     quality = quality or {}
     replay = str(quality.get("Run type", "")).upper() == "REPLAY"
     unknown = str(quality.get("Source collection", "")).lower() == "unknown"
-    heading = "Market comparison · replay" if replay else "Market comparison"
     title = "Market Terminal · Snapshot Replay" if replay else "Market Terminal"
     badge = "SNAPSHOT REPLAY" if replay else "LIVE API REPORT"
     timestamp_label = "Source collection time unavailable" if unknown else "Snapshot collected" if replay else "Live collection completed"
@@ -379,57 +415,75 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str], covera
     freshness_time = datetime.now(timezone.utc) if replay else generated_at
     age_label = "Replay generated" if replay else "Generated"
     source_note = ("Venue availability reflects the saved collection. Replay generation does not refresh source quotes."
-                   if replay else "Point-in-time venue observations. Refresh with python3 run.py.")
-    matched = sum(row.get("mapping_status", "accepted") == "accepted" for row in rows)
-    crosses = sum(row.get("crossed") == "true" for row in rows)
-    reviews = sum(row.get("comparison_status") != "compatible" for row in rows)
-    coverage = " · ".join(f'{VENUE_LABELS[v]} {"complete" if coverage_complete.get(v) else "coverage incomplete"}' for v in venues)
-    body, templates = [], []
+                   if replay else "Point-in-time observations · run python3 run.py to refresh")
+    sport_labels = {"cricket": "Cricket", "basketball": "NBA", "football": "NFL", "hockey": "NHL", "baseball": "MLB"}
+    configured = quality.get("Sports", "")
+    configured = {value.strip() for value in configured.split(",")} if isinstance(configured, str) and configured else set(sport_labels)
+    present = {row.get("sport", "cricket") for row in rows}
+    sports = [sport for sport in sport_labels if sport in configured or sport in present]
+    sports += sorted(present - set(sports))
+    labels = {sport: sport_labels.get(sport, sport.replace("_", " ").title()) for sport in sports}
+    records = []
     for index, row in enumerate(rows):
         sport = row.get("sport", "cricket")
-        searchable = " ".join(str(value) for value in row.values()).lower()
-        quote_cells = "".join(f'<td class="venue-cell" data-label="{html.escape(VENUE_LABELS[v])}">{_venue_cell(row, v)}</td>' for v in venues)
+        fixture_name = f'{row["team_a"]} vs {row["team_b"]}'
+        name = f'{fixture_name} {row["canonical_outcome"]}'
+        date = f'{row["fixture_date"]} {row["start_time_utc"]}'
+        quoted_cells = "".join(f'<td class="venue-cell">{_venue_cell(row, venue)}</td>' for venue in venues)
+        pair_times = [_timestamp(row.get(f"{row.get(f'eligible_{side}_venue', '')}_quote_time", "")) for side in ("bid", "ask")]
+        expiry = int((min(pair_times).timestamp() + QUOTE_MAX_AGE_SECONDS) * 1000) if all(pair_times) and not replay else 0
         reviewed = row.get("comparison_status") != "compatible"
-        pair_times = [_timestamp(row.get(f"{row.get(f'eligible_{side}_venue', '')}_quote_time", ""))
-                      for side in ("bid", "ask")]
-        expires = (int((min(pair_times).timestamp() + QUOTE_MAX_AGE_SECONDS) * 1000)
-                   if all(pair_times) and not replay else 0)
-        body.append(f'<tr data-sport="{html.escape(sport, quote=True)}" data-crossed="{row.get("crossed", "false")}" '
-                    f'data-cross-expiry="{expires}" '
-                    f'data-review="{str(reviewed).lower()}" data-search="{html.escape(searchable, quote=True)}">'
-                    f'<td class="fixture-cell"><strong>{html.escape(row["team_a"])} <span class="versus">vs</span> {html.escape(row["team_b"])}</strong>'
-                    f'<span class="fixture-meta">{html.escape(row["fixture_date"])} · {html.escape(row["start_time_utc"] or "Time unavailable")} UTC · {html.escape(row["competition"])}</span></td>'
-                    f'<td class="outcome-cell"><strong>{html.escape(row["canonical_outcome"])}</strong>'
-                    f'<span class="fixture-meta">{html.escape(row["canonical_market_type"].replace("_", " ").title())}</span></td>'
-                    f'{quote_cells}<td class="edge-cell">{_edge_cell(row, index)}</td></tr>')
-        templates.append(f'<template id="detail-{index}"><h2>{html.escape(row["team_a"])} vs {html.escape(row["team_b"])}</h2>'
-                         f'<p class="detail-subtitle">{html.escape(row["canonical_outcome"])} · {html.escape(row["fixture_date"])}</p>{_details(row, venues)}</template>')
-    headers = "".join(f'<th scope="col">{html.escape(VENUE_LABELS[v])} <span>bid / ask</span></th>' for v in venues)
+        row_html = (f'<tr data-id="{index}" data-sport="{html.escape(sport, quote=True)}" data-crossed="{row.get("crossed", "false")}" data-review="{str(reviewed).lower()}" data-cross-expiry="{expiry}">'
+                    f'<td class="league-cell">{html.escape(labels.get(sport, sport))}</td>'
+                    f'<td class="fixture-cell" title="{html.escape(fixture_name, quote=True)}">{html.escape(fixture_name)}</td>'
+                    f'<td class="date-cell" title="{html.escape(date + " UTC", quote=True)}">{html.escape(row["fixture_date"][5:])} {html.escape(row["start_time_utc"] or "—")}</td>'
+                    f'<td class="outcome-cell" title="{html.escape(row["canonical_outcome"], quote=True)}">{html.escape(row["canonical_outcome"])}</td>'
+                    f'{quoted_cells}<td class="edge-cell">{_edge_cell(row, index)}</td><td class="rules-cell">{_rules_cell(row)}</td>'
+                    f'<td class="detail-cell"><button class="details-button" data-details="{index}" aria-haspopup="dialog" aria-label="Details for {html.escape(name, quote=True)}">↗</button></td></tr>')
+        searchable = " ".join([sport, row.get("competition", ""), name, date] + [row.get(f"{venue}_market_id", "") for venue in venues]).lower()
+        records.append({"id": index, "sport": sport, "name": name.lower(), "date": date, "search": searchable,
+                        "crossed": row.get("crossed") == "true", "review": reviewed,
+                        "strict": row.get("strict_comparison_status") == "compatible" and not reviewed,
+                        "edge": row.get("cross_gap") or "", "expiry": expiry, "stale": False,
+                        "html": row_html, "details": f'<h2>{html.escape(fixture_name)}</h2><p class="detail-subtitle">{html.escape(row["canonical_outcome"])} · {html.escape(date)} UTC</p>{_details(row, venues)}'})
+    crosses = sum(record["crossed"] for record in records)
+    matched = sum(row.get("mapping_status", "accepted") == "accepted" for row in rows)
+    reviews = sum(record["review"] for record in records)
+    tabs = [('all', 'All'), ('crosses', 'Crosses'), *[(sport, labels[sport]) for sport in sports]]
+    tabs_html = "".join(f'<button class="tab{" active" if key == "all" else ""}" id="tab-{html.escape(key, quote=True)}" role="tab" aria-selected="{str(key == "all").lower()}" aria-controls="marketPanel" data-tab="{html.escape(key, quote=True)}">{html.escape(label)}'
+                        + (f'<span id="crossCount">{crosses}</span>' if key == "crosses" else '') + '</button>' for key, label in tabs)
+    coverage = " · ".join(f'{VENUE_LABELS[venue]} {"complete" if coverage_complete.get(venue) else "incomplete"}' for venue in venues)
+    headers = "".join(f'<th scope="col" class="price-heading">{html.escape(VENUE_LABELS[venue])}<span>bid / ask</span></th>' for venue in venues)
+    payload = json.dumps(records, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c").replace("&", "\\u0026")
+    initial = "".join(record["html"] for record in records[:25])
     doc = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}</title>
 <style>
-:root{{--bg:#f6f8fa;--surface:#fff;--ink:#183046;--muted:#7b8996;--line:#e5ebef;--green:#087f6f;--amber:#98601a}}*{{box-sizing:border-box}}[hidden]{{display:none!important}}body{{margin:0;color:var(--ink);background:var(--bg);font:13px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}button,input{{font:inherit}}button,a{{-webkit-tap-highlight-color:transparent}}button:focus-visible,a:focus-visible,input:focus-visible{{outline:2px solid #218b7d;outline-offset:3px}}button{{cursor:pointer}}a{{color:var(--green)}}
-.topbar{{height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 34px;border-bottom:1px solid var(--line);background:#fff}}.brand{{font-weight:750;font-size:15px;letter-spacing:-.3px}}.brand span{{display:inline-block;color:var(--green);margin-right:9px}}.source-age{{color:var(--muted);font-size:11px}}.source-age strong{{font-weight:550;color:#587084}}.mode{{font-size:9px;letter-spacing:.8px;color:var(--green);margin-left:13px}}main{{max-width:1640px;margin:auto;padding:32px 34px 40px}}.page-heading{{display:flex;align-items:center;justify-content:space-between;margin:0 0 26px}}h1{{font-size:18px;letter-spacing:-.4px;font-weight:650;margin:0}}.summary{{color:var(--muted);font-size:11px}}.summary strong{{font-weight:650;color:var(--ink)}}
-.toolbar{{display:flex;justify-content:space-between;gap:24px;align-items:center;border-bottom:1px solid var(--line);margin-bottom:18px}}.tabs{{display:flex;gap:26px;align-items:center}}.tab{{padding:12px 0 14px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font-size:12px;font-weight:600;white-space:nowrap}}.tab.active{{color:var(--green);border-color:var(--green)}}.tab-count{{font-size:9px;background:#e7f1ed;padding:2px 5px;border-radius:4px;margin-left:5px;color:var(--green)}}.search{{position:relative;width:270px;margin-bottom:7px}}.search input{{width:100%;padding:9px 12px 9px 30px;background:#fff;border:1px solid var(--line);border-radius:6px;font-size:11px;color:var(--ink)}}.search::before{{content:'⌕';position:absolute;left:11px;top:5px;font-size:18px;color:var(--muted)}}.subtoolbar{{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin:0 0 13px;gap:15px}}.review-toggle{{display:flex;align-items:center;gap:6px}}.review-toggle input{{accent-color:var(--green);margin:0}}.tab-description{{color:var(--muted)}}
-.table-shell{{border:1px solid var(--line);border-radius:8px;overflow:auto;background:#fff}}table{{width:100%;border-collapse:collapse;min-width:940px}}th{{text-align:left;background:#fbfcfd;padding:15px 20px;border-bottom:1px solid var(--line);font-size:9px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:600}}th span{{font-size:9px;text-transform:none;letter-spacing:0;font-weight:400;margin-left:5px}}td{{padding:23px 20px;border-bottom:1px solid var(--line);vertical-align:middle}}tbody tr:last-child td{{border-bottom:0}}tbody tr:hover{{background:#fcfefd}}tr[data-crossed="true"] .edge-cell{{background:#f6fbf8}}.fixture-cell{{width:34%;min-width:270px}}.fixture-cell>strong{{font-size:12px;font-weight:600;display:block}}.versus{{color:#9ba6af;font-weight:400;margin:0 5px}}.fixture-meta{{display:block;color:var(--muted);font-size:9px;margin-top:6px}}.outcome-cell{{min-width:160px}}.outcome-cell>strong{{font-size:12px;font-weight:600;text-transform:capitalize}}.venue-cell{{min-width:155px}}.quotes{{display:flex;gap:25px;font-variant-numeric:tabular-nums}}.quotes span{{display:block;font-size:8px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);margin-bottom:4px}}.quotes strong{{display:block;font-size:17px;font-weight:550;letter-spacing:-.3px;min-width:40px}}.edge-cell{{min-width:160px}}.edge-positive{{display:block;font-size:16px;color:var(--green);font-weight:650}}.edge-flat{{font-size:11px;color:#627488}}.rule-state{{display:block;color:var(--muted);font-size:9px;margin-top:4px}}.rule-review{{font-size:10px;color:var(--amber);background:#faf3e8;padding:4px 7px;border-radius:4px;display:inline-block}}.muted{{color:var(--muted);font-size:10px}}.details-button{{display:block;background:none;border:0;padding:0;font-size:9px;color:#728898;margin-top:10px}}.details-button:hover{{color:var(--green)}}.empty{{padding:66px 25px;text-align:center;color:var(--muted);font-size:12px}}.empty strong{{display:block;color:#526b7b;font-size:13px;font-weight:550;margin-bottom:7px}}footer{{display:flex;justify-content:space-between;gap:25px;font-size:9px;line-height:1.7;color:var(--muted);margin-top:17px}}.source-note{{max-width:700px}}.coverage{{text-align:right}}
-.dialog{{position:fixed;inset:0 0 0 auto;width:min(560px,100%);height:100dvh;max-height:100dvh;max-width:100%;margin:0;border:0;border-left:1px solid var(--line);padding:29px;background:#fff;color:var(--ink);box-shadow:-12px 0 60px #18304612;overflow:auto}}.dialog::backdrop{{background:#18304640}}.close-dialog{{position:sticky;top:0;float:right;background:#f1f5f7;color:#637789;border:0;width:30px;height:30px;border-radius:5px;font-size:18px}}.dialog h2{{font-size:19px;line-height:1.4;letter-spacing:-.3px;margin:15px 32px 5px 0}}.detail-subtitle{{color:var(--muted);font-size:11px;margin:0 0 24px}}.detail-reason{{font-size:12px;line-height:1.8;color:#526b7b;background:#f6f8fa;border-radius:6px;padding:12px}}.detail-note{{font-size:10px;color:var(--muted);line-height:1.7}}.detail-venue{{border-top:1px solid var(--line);margin-top:25px;padding-top:20px}}.detail-venue h3{{font-size:14px;display:inline-block;margin:0 20px 10px 0}}.detail-venue>a{{font-size:10px;text-decoration:none}}.detail-venue p{{font-size:11px;color:#637789}}dl{{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px;font-size:10px}}dt{{color:var(--muted)}}dd{{margin:0;overflow-wrap:anywhere}}h4{{font-size:10px;font-weight:650;margin:18px 0 7px}}pre{{font:10px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;background:#f7f9fb;border:1px solid #edf1f4;border-radius:5px;padding:10px;white-space:pre-wrap;overflow-wrap:anywhere;color:#566e81}}summary{{cursor:pointer;font-size:10px;color:#637789;margin-top:17px}}
-@media(max-width:900px){{main{{padding:25px 18px}}.topbar{{padding:0 18px}}.page-heading{{align-items:flex-start;gap:10px;flex-direction:column;margin-bottom:18px}}.toolbar{{gap:15px}}.tabs{{gap:18px}}.search{{width:225px}}.mode{{display:none}}.source-age{{font-size:9px}}footer{{flex-direction:column;gap:6px}}.coverage{{text-align:left}}}}@media(max-width:620px){{.topbar{{height:auto;min-height:60px;align-items:flex-start;flex-direction:column;gap:3px;padding:12px 16px}}.brand{{font-size:14px}}main{{padding:22px 13px}}h1{{font-size:16px}}.toolbar{{flex-direction:column;align-items:stretch;gap:5px}}.tabs{{justify-content:space-between;gap:10px}}.tab{{font-size:11px;padding-top:0}}.search{{width:100%;margin:6px 0 13px}}.subtoolbar{{font-size:9px}}.table-shell{{border-radius:6px}}th,td{{padding-left:15px;padding-right:15px}}.fixture-cell{{min-width:235px}}table{{min-width:880px}}.dialog{{padding:22px}}}}
+:root{{--bg:#10161d;--surface:#151d26;--hover:#1a2631;--ink:#d7e1e9;--muted:#7e91a2;--line:#26333f;--green:#58d4ad;--amber:#d6ad66}}*{{box-sizing:border-box}}[hidden]{{display:none!important}}html,body{{height:100%;margin:0;overflow:hidden}}body{{display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font:12px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}button,input,select{{font:inherit}}button{{cursor:pointer}}button:disabled{{opacity:.35;cursor:default}}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{{outline:2px solid var(--green);outline-offset:2px}}button,input,select{{border:1px solid var(--line);border-radius:3px;background:#111a23;color:var(--ink)}}button{{padding:5px 8px}}a{{color:var(--green)}}
+.topbar{{height:42px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:0 16px;border-bottom:1px solid var(--line);background:#141d26}}h1{{font-size:13px;letter-spacing:-.2px;display:inline;margin:0;font-weight:650}}.brand-mark{{color:var(--green);font-size:19px;margin-right:9px}}.mode{{font-size:8px;letter-spacing:.7px;color:var(--green);margin-left:11px}}.source-age{{color:var(--muted);font-size:9px;white-space:nowrap}}.source-age strong{{font-weight:400}}.summary{{display:flex;gap:16px;font-size:10px;color:var(--muted)}}.summary b{{color:var(--ink);font-weight:550;font-variant-numeric:tabular-nums}}
+main{{flex:1;min-height:0;display:flex;flex-direction:column;padding:0 14px 0}}.navline{{flex:none;height:41px;display:flex;justify-content:space-between;align-items:stretch;gap:18px;border-bottom:1px solid var(--line)}}.tabs{{display:flex;gap:4px;align-items:stretch;overflow-x:auto;scrollbar-width:none}}.tab{{border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;color:var(--muted);padding:0 11px;font-size:11px;white-space:nowrap}}.tab.active{{color:var(--green);border-color:var(--green);background:#58d4ad06}}.tab span{{font:9px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--green);margin-left:6px}}.controls{{display:flex;align-items:center;gap:7px;flex:none}}.search{{width:220px;padding:5px 8px;font-size:10px}}.keyhint{{color:#506477;font-size:9px;border:1px solid #344452;border-radius:2px;padding:0 3px;margin-left:5px}}.toolline{{height:35px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:9px}}.toggles{{display:flex;gap:17px;align-items:center}}.toggle{{display:flex;align-items:center;gap:5px;white-space:nowrap}}.toggle input{{margin:0;accent-color:var(--green);width:11px;height:11px}}.sort-control{{display:flex;gap:6px;align-items:center}}select{{padding:3px 6px;font-size:9px}}.sort-direction{{font-size:10px;padding:2px 7px}}.legend{{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}.conditional{{display:inline-block;color:var(--amber);font:8px ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid #725c39;border-radius:2px;padding:0 3px;line-height:12px;vertical-align:middle}}
+#marketPanel{{display:flex;flex-direction:column;flex:1;min-height:0}}.table-shell{{flex:1;min-height:0;overflow:auto;border:1px solid var(--line);border-radius:3px;background:var(--surface);position:relative}}table{{border-collapse:separate;border-spacing:0;width:100%;min-width:1040px;table-layout:fixed}}th{{position:sticky;top:0;z-index:2;height:32px;background:#1a2631;border-bottom:1px solid #344451;color:#94a7b8;font-size:9px;font-weight:500;letter-spacing:.2px;text-align:left;padding:0 10px;white-space:nowrap}}th span{{font-size:8px;color:#617b90;margin-left:6px}}td{{height:35px;padding:0 10px;border-bottom:1px solid #22303b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:10px}}tbody tr:last-child td{{border-bottom:0}}tbody tr:hover{{background:var(--hover)}}tr[data-crossed="true"] .edge-cell{{background:#23524118}}.league-cell{{color:#7591a8;font-size:9px}}.league-head{{width:55px}}.fixture-head{{width:auto}}.date-head{{width:112px}}.outcome-head{{width:190px}}.price-heading{{width:137px}}.edge-head{{width:84px}}.rules-head{{width:112px}}.detail-head{{width:32px}}.fixture-cell{{font-weight:450}}.outcome-cell{{text-transform:capitalize;color:#b6c7d5}}.date-cell{{font:9px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)}}.quotes{{display:flex;align-items:center;gap:8px;font:11px ui-monospace,SFMono-Regular,Menlo,monospace;font-variant-numeric:tabular-nums}}.quotes strong{{font-weight:450;min-width:40px;text-align:right}}.quote-divider{{color:#456072;font-size:9px}}.edge-positive{{color:var(--green);font:11px ui-monospace,SFMono-Regular,Menlo,monospace}}.expired-label,.muted{{color:var(--muted);font-size:9px}}.rule-ok{{font-size:9px;color:#84b9a4}}.rule-review{{font-size:9px;color:var(--amber)}}.details-button{{border:0;background:transparent;color:#65869e;font-size:14px;padding:2px 0}}.details-button:hover{{color:var(--green)}}.empty{{position:sticky;left:0;padding:50px 20px;text-align:center;color:var(--muted);font-size:11px}}.empty strong{{display:block;font-weight:450;color:#b3c5d2;margin-bottom:7px}}.pager{{height:35px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:15px;color:var(--muted);font-size:9px}}.page-buttons{{display:flex;gap:4px;align-items:center}}.page-buttons button{{height:23px;min-width:25px;font-size:10px;padding:2px 6px}}#pageStatus{{min-width:75px;text-align:center;font:9px ui-monospace,SFMono-Regular,Menlo,monospace}}.page-size{{display:flex;gap:7px;align-items:center}}footer{{height:28px;flex:none;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:15px;padding:0 16px;color:#617b90;font-size:8px;white-space:nowrap;overflow:hidden}}footer span{{overflow:hidden;text-overflow:ellipsis}}.coverage{{text-align:right}}
+.dialog{{position:fixed;inset:0 0 0 auto;width:min(520px,100%);height:100dvh;max-height:100dvh;max-width:100%;margin:0;border:0;border-left:1px solid #344754;padding:22px;background:var(--surface);color:var(--ink);box-shadow:-12px 0 60px #0004;overflow:auto}}.dialog::backdrop{{background:#0007}}.close-dialog{{position:sticky;top:0;float:right;width:26px;height:26px;font-size:17px;padding:0;background:#1d2b37;color:var(--muted)}}.dialog h2{{font-size:16px;line-height:1.5;margin:12px 30px 3px 0;font-weight:550}}.detail-subtitle{{color:var(--muted);font-size:10px;margin-bottom:23px}}.detail-basis{{font-size:9px;text-transform:uppercase;letter-spacing:.6px;color:var(--green)}}.detail-reason{{font-size:11px;line-height:1.7;color:#b0c2d1}}.detail-note{{font-size:9px;line-height:1.7;color:var(--muted)}}.detail-venue{{border-top:1px solid var(--line);margin-top:22px;padding-top:17px}}.detail-venue h3{{font-size:12px;font-weight:550;display:inline;margin-right:18px}}.detail-venue>a{{font-size:9px;text-decoration:none}}.detail-venue p{{font-size:10px;color:var(--muted)}}dl{{display:grid;grid-template-columns:70px minmax(0,1fr);gap:7px;font-size:9px}}dt{{color:var(--muted)}}dd{{margin:0;overflow-wrap:anywhere}}summary{{cursor:pointer;color:#99adbe;font-size:10px;margin-top:14px}}.caveats li{{font-size:10px;color:var(--muted);margin:8px 0}}pre{{font:9px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;background:#101922;border:1px solid var(--line);border-radius:3px;padding:9px;white-space:pre-wrap;overflow-wrap:anywhere;color:#91a8bb}}.payout-table{{min-width:0;table-layout:auto;width:100%;margin-top:10px}}.payout-table td{{height:25px;font-size:10px;color:#9eb2c2}}.payout-table td:last-child{{text-align:right;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}}
+@media(max-width:950px){{.summary{{gap:10px}}.source-age strong{{display:none}}.legend{{display:none}}.search{{width:175px}}.tab{{padding:0 8px}}.fixture-head{{width:260px}}}}@media(max-width:620px){{.topbar{{padding:0 10px;height:38px}}.summary{{font-size:8px;gap:9px}}.summary .review-summary{{display:none}}.mode{{display:none}}.source-age{{font-size:8px}}main{{padding:0 7px}}.navline{{height:auto;min-height:66px;flex-wrap:wrap;gap:0;padding-bottom:6px}}.tabs{{width:100%;height:32px}}.controls{{width:100%}}.search{{width:100%}}.toolline{{height:33px}}.toggles{{gap:10px;font-size:8px}}.sort-control label{{display:none}}footer{{height:24px;padding:0 9px;font-size:7px}}footer .coverage{{display:none}}.page-size{{gap:4px}}.pager{{gap:8px}}.dialog{{padding:17px}}}}
 </style></head><body>
-<header class="topbar"><div class="brand"><span aria-hidden="true">≋</span>Market terminal<span class="mode">{badge}</span></div><div class="source-age"><span id="reportAge">Source age…</span> <span aria-hidden="true">·</span> <strong>{timestamp_label} {html.escape(timestamp_value)}</strong></div></header>
-<main><div class="page-heading"><h1>{heading}</h1><div class="summary"><strong>{matched}</strong> comparable · <strong id="crossSummary">{crosses}</strong> compatible crosses · <strong>{reviews}</strong> reviews</div></div>
-<div class="toolbar"><div class="tabs" role="tablist" aria-label="Sports and crosses"><button class="tab active" id="tab-crosses" role="tab" aria-selected="true" aria-controls="marketPanel" data-tab="crosses">All crosses <span class="tab-count">{crosses}</span></button><button class="tab" id="tab-cricket" role="tab" aria-selected="false" aria-controls="marketPanel" data-tab="cricket">Cricket</button><button class="tab" id="tab-basketball" role="tab" aria-selected="false" aria-controls="marketPanel" data-tab="basketball">Basketball <span class="muted">NBA</span></button></div><label class="search"><input id="search" type="search" aria-label="Search fixtures and outcomes" placeholder="Search fixtures or outcomes"></label></div>
-<div class="subtoolbar"><span id="tabDescription" class="tab-description">Compatible settlement rules · fresh quotes only</span><label class="review-toggle"><input id="showReviews" type="checkbox" checked>Show rule reviews</label><span id="resultCount" aria-live="polite">{len(rows)} outcomes</span></div>
-<section id="marketPanel" role="tabpanel" aria-labelledby="tab-crosses"><div class="table-shell"><table><thead><tr><th scope="col">Fixture / UTC</th><th scope="col">Outcome</th>{headers}<th scope="col">Edge / rules</th></tr></thead><tbody id="rows">{''.join(body)}</tbody></table><div id="empty" class="empty" hidden><strong id="emptyHeading">No compatible crosses</strong><span id="emptyMessage">Open a sport tab to see matched markets and rule reviews.</span></div></div></section>
-<footer><div class="source-note">{source_note} Observed edges exclude fees and depth; check venue settlement rules. A cross is not a guarantee of profit.</div><div class="coverage">{html.escape(coverage)} · Audited data beside this report</div></footer>
-</main><dialog id="detailsDialog" class="dialog" aria-label="Market comparison details"><button id="closeDetails" class="close-dialog" aria-label="Close details">×</button><div id="detailContent"></div></dialog>{''.join(templates)}
-<script>
-const search=document.getElementById('search'),rows=[...document.querySelectorAll('#rows tr')],empty=document.getElementById('empty'),count=document.getElementById('resultCount'),reviews=document.getElementById('showReviews'),tabs=[...document.querySelectorAll('[data-tab]')];let activeTab='crosses';
-function expireCrosses(){{let changed=false;rows.forEach(r=>{{const expiry=Number(r.dataset.crossExpiry);if(r.dataset.crossed==='true'&&expiry&&Date.now()>expiry){{r.dataset.crossed='false';const edge=r.querySelector('.edge-positive');if(edge){{edge.className='muted';edge.textContent='Quotes stale'}}changed=true}}}});if(changed){{const n=rows.filter(r=>r.dataset.crossed==='true').length;document.getElementById('crossSummary').textContent=n;document.querySelector('#tab-crosses .tab-count').textContent=n;apply()}}}}
-const generatedAt=new Date('{freshness_time.isoformat()}');const ageLabel='{age_label}';const age=document.getElementById('reportAge');function updateAge(){{const ageMinutes=Math.max(0,Math.floor((Date.now()-generatedAt.getTime())/60000));age.textContent=ageMinutes<2?ageLabel+' just now':ageMinutes<60?`${{ageLabel}} ${{ageMinutes}}m ago`:`${{ageLabel}} ${{Math.floor(ageMinutes/60)}}h ago`}}updateAge();
-function apply(){{const q=search.value.trim().toLowerCase();let visible=0;rows.forEach(r=>{{const sport=activeTab==='crosses'?r.dataset.crossed==='true':r.dataset.sport===activeTab;const review=reviews.checked||r.dataset.review!=='true';r.hidden=!(sport&&review&&(!q||r.dataset.search.includes(q)));if(!r.hidden)visible++}});empty.hidden=visible!==0;count.textContent=`${{visible}} outcome${{visible===1?'':'s'}}`;document.getElementById('emptyHeading').textContent=activeTab==='crosses'?'No compatible crosses':'No matching outcomes';document.getElementById('emptyMessage').textContent=activeTab==='crosses'?'Open a sport tab to see matched markets and rule reviews.':'Try another search or show rule reviews.';document.getElementById('tabDescription').textContent=activeTab==='crosses'?'Compatible settlement rules · fresh quotes only':'Prices in cents · rules and quote details available per row';}}
-function selectTab(tab){{activeTab=tab.dataset.tab;tabs.forEach(t=>{{const selected=t===tab;t.classList.toggle('active',selected);t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1}});document.getElementById('marketPanel').setAttribute('aria-labelledby',tab.id);apply()}}
-tabs.forEach((tab,index)=>{{tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',e=>{{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){{e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(index+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;selectTab(tabs[next]);tabs[next].focus()}}}})}});search.addEventListener('input',apply);reviews.addEventListener('change',apply);
-const dialog=document.getElementById('detailsDialog'),content=document.getElementById('detailContent');document.querySelectorAll('[data-details]').forEach(button=>button.addEventListener('click',()=>{{content.replaceChildren(document.getElementById('detail-'+button.dataset.details).content.cloneNode(true));dialog.showModal()}}));document.getElementById('closeDetails').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{{if(e.target===dialog&&e.clientX<dialog.getBoundingClientRect().left)dialog.close()}});expireCrosses();selectTab(rows.some(r=>r.dataset.crossed==='true')?tabs[0]:(tabs.find(t=>rows.some(r=>r.dataset.sport===t.dataset.tab))||tabs[0]));setInterval(()=>{{updateAge();expireCrosses()}},10000);
+<header class="topbar"><div><span class="brand-mark" aria-hidden="true">≋</span><h1>Market terminal</h1><span class="mode">{badge}</span></div><div class="summary"><span><b>{matched}</b> comparable</span><span><b id="crossSummary">{crosses}</b> crosses</span><span class="review-summary"><b>{reviews}</b> reviews</span></div><div class="source-age"><span id="reportAge">Source age…</span> <strong>· {timestamp_label} {html.escape(timestamp_value)}</strong></div></header>
+<main><div class="navline"><nav class="tabs" role="tablist" aria-label="Sports and crosses">{tabs_html}</nav><div class="controls"><input class="search" id="search" type="search" aria-label="Search fixtures and outcomes" placeholder="Search fixture, team, outcome  /" autocomplete="off"></div></div>
+<div class="toolline"><div class="toggles"><label class="toggle"><input id="showReviews" type="checkbox" checked>Reviews</label><label class="toggle"><input id="strictRules" type="checkbox">Full contract only</label><span class="legend"><span class="conditional">C</span> contingency caveat · core payouts must agree</span></div><div class="sort-control"><label for="sortBy">Sort</label><select id="sortBy" aria-label="Sort markets"><option value="date">Date</option><option value="edge">Edge</option><option value="name">Name</option></select><button class="sort-direction" id="sortDirection" aria-label="Reverse sort direction" title="Reverse sort">↑</button></div></div>
+<section id="marketPanel" role="tabpanel" aria-labelledby="tab-all"><div class="table-shell" id="tableScroll"><table><thead><tr><th scope="col" class="league-head">Sport</th><th scope="col" class="fixture-head">Fixture</th><th scope="col" class="date-head">Date / UTC</th><th scope="col" class="outcome-head">Outcome</th>{headers}<th scope="col" class="edge-head">Edge</th><th scope="col" class="rules-head">Rules</th><th scope="col" class="detail-head"><span class="muted">↗</span></th></tr></thead><tbody id="rows">{initial}</tbody></table><div id="empty" class="empty" hidden><strong id="emptyHeading">No matching markets</strong><span id="emptyMessage">Change sport, search, or settlement filter.</span></div></div>
+<div class="pager"><span id="resultCount" aria-live="polite">{len(rows)} outcomes</span><div class="page-buttons"><button id="firstPage" aria-label="First page">«</button><button id="prevPage" aria-label="Previous page">‹</button><span id="pageStatus">1 / 1</span><button id="nextPage" aria-label="Next page">›</button><button id="lastPage" aria-label="Last page">»</button></div><label class="page-size" for="pageSize">Rows<select id="pageSize" aria-label="Rows per page"><option value="25" selected>25</option><option value="50">50</option><option value="100">100</option></select></label></div></section></main>
+<footer><span title="{html.escape(source_note, quote=True)}">{source_note} · Edges exclude fees and depth; check venue settlement rules. A cross is not a guarantee of profit.</span><span class="coverage">{html.escape(coverage)}</span></footer>
+<dialog id="detailsDialog" class="dialog" aria-label="Market comparison details"><button id="closeDetails" class="close-dialog" aria-label="Close details">×</button><div id="detailContent"></div></dialog>
+<script type="application/json" id="marketData">{payload}</script><script>
+const records=JSON.parse(document.getElementById('marketData').textContent),tbody=document.getElementById('rows'),search=document.getElementById('search'),reviewToggle=document.getElementById('showReviews'),strictToggle=document.getElementById('strictRules'),sortBy=document.getElementById('sortBy'),pageSize=document.getElementById('pageSize'),tabs=[...document.querySelectorAll('[data-tab]')];let activeTab='all',page=0,direction=1,filtered=[];
+function matchingRecords(){{const q=search.value.trim().toLowerCase();return records.filter(r=>(activeTab==='all'||(activeTab==='crosses'?r.crossed:r.sport===activeTab))&&(reviewToggle.checked||!r.review)&&(!strictToggle.checked||r.strict)&&(!q||r.search.includes(q))).sort((a,b)=>{{let result=0;if(sortBy.value==='edge'){{const av=a.edge===''?-Infinity:Number(a.edge),bv=b.edge===''?-Infinity:Number(b.edge);result=av===bv?0:av>bv?-1:1}}else{{result=String(a[sortBy.value]||'').localeCompare(String(b[sortBy.value]||''))}}return direction*result||a.id-b.id}})}}
+function apply(reset=false){{if(reset)page=0;filtered=matchingRecords();const size=Number(pageSize.value),pages=Math.max(1,Math.ceil(filtered.length/size));page=Math.min(page,pages-1);const start=page*size,visible=filtered.slice(start,start+size);tbody.innerHTML=visible.map(r=>r.html).join('');visible.forEach(r=>{{if(r.stale){{const tr=tbody.querySelector(`[data-id="${{r.id}}"]`);tr.dataset.crossed='false';const edge=tr.querySelector('.edge-positive'),label=tr.querySelector('.expired-label');if(edge)edge.hidden=true;if(label)label.hidden=false}}}});document.getElementById('empty').hidden=filtered.length!==0;document.getElementById('emptyHeading').textContent=activeTab==='crosses'?'No eligible crosses':'No matching markets';document.getElementById('emptyMessage').textContent=activeTab==='crosses'?'Try All or a sport tab to inspect prices and comparisons.':'Change sport, search, or settlement filter.';document.getElementById('resultCount').textContent=filtered.length?`${{start+1}}–${{Math.min(start+size,filtered.length)}} of ${{filtered.length}} outcomes`:'0 outcomes';document.getElementById('pageStatus').textContent=`${{page+1}} / ${{pages}}`;document.getElementById('firstPage').disabled=document.getElementById('prevPage').disabled=page===0;document.getElementById('nextPage').disabled=document.getElementById('lastPage').disabled=page>=pages-1;if(reset)document.getElementById('tableScroll').scrollTop=0;}}
+function selectTab(tab){{activeTab=tab.dataset.tab;tabs.forEach(t=>{{const selected=t===tab;t.classList.toggle('active',selected);t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1}});document.getElementById('marketPanel').setAttribute('aria-labelledby',tab.id);apply(true)}}
+tabs.forEach((tab,index)=>{{tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',e=>{{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){{e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(index+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;selectTab(tabs[next]);tabs[next].focus()}}}})}});
+search.addEventListener('input',()=>apply(true));reviewToggle.addEventListener('change',()=>apply(true));strictToggle.addEventListener('change',()=>apply(true));pageSize.addEventListener('change',()=>apply(true));sortBy.addEventListener('change',()=>{{direction=1;document.getElementById('sortDirection').textContent='↑';apply(true)}});document.getElementById('sortDirection').addEventListener('click',()=>{{direction*=-1;document.getElementById('sortDirection').textContent=direction===1?'↑':'↓';apply(true)}});document.getElementById('firstPage').addEventListener('click',()=>{{page=0;apply(true)}});document.getElementById('prevPage').addEventListener('click',()=>{{page=Math.max(0,page-1);apply();document.getElementById('tableScroll').scrollTop=0}});document.getElementById('nextPage').addEventListener('click',()=>{{page++;apply();document.getElementById('tableScroll').scrollTop=0}});document.getElementById('lastPage').addEventListener('click',()=>{{page=Math.max(0,Math.ceil(filtered.length/Number(pageSize.value))-1);apply();document.getElementById('tableScroll').scrollTop=0}});
+const dialog=document.getElementById('detailsDialog'),content=document.getElementById('detailContent');tbody.addEventListener('click',e=>{{const button=e.target.closest('[data-details]');if(!button)return;content.innerHTML=records[Number(button.dataset.details)].details;dialog.showModal()}});document.getElementById('closeDetails').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{{if(e.target===dialog&&e.clientX<dialog.getBoundingClientRect().left)dialog.close()}});
+document.addEventListener('keydown',e=>{{const editing=['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName);if(e.key==='/'&&!editing&&!dialog.open){{e.preventDefault();search.focus()}}else if(e.key==='Escape'&&document.activeElement===search){{search.value='';apply(true);search.blur()}}else if(!editing&&!dialog.open&&['e','d','n'].includes(e.key.toLowerCase())){{sortBy.value={{e:'edge',d:'date',n:'name'}}[e.key.toLowerCase()];direction=1;apply(true)}}}});
+const generatedAt=new Date('{freshness_time.isoformat()}');const ageLabel='{age_label}';function updateAge(){{const minutes=Math.max(0,Math.floor((Date.now()-generatedAt.getTime())/60000));document.getElementById('reportAge').textContent=minutes<2?ageLabel+' just now':minutes<60?`${{ageLabel}} ${{minutes}}m ago`:`${{ageLabel}} ${{Math.floor(minutes/60)}}h ago`}}
+function expireCrosses(){{let changed=false;records.forEach(r=>{{if(r.crossed&&r.expiry&&Date.now()>r.expiry){{r.crossed=false;r.edge='';r.stale=true;changed=true}}}});if(changed){{const n=records.filter(r=>r.crossed).length;document.getElementById('crossSummary').textContent=n;document.getElementById('crossCount').textContent=n;apply()}}}}updateAge();expireCrosses();selectTab(tabs[0]);setInterval(()=>{{updateAge();expireCrosses()}},10000);
 </script></body></html>'''
     path.write_text(doc, encoding="utf-8")
 

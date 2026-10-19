@@ -1,0 +1,243 @@
+{
+  "league": "mlb",
+  "source": "https://www.mlb.com/team",
+  "venue_metadata": "https://gamma-api.polymarket.com/teams?league=mlb",
+  "scope": "Exact current league franchise identities; require matching native league, team code and published alias.",
+  "code_aliases": {
+    "CHW": "CWS",
+    "WSN": "WSH"
+  },
+  "teams": [
+    {
+      "code": "ARI",
+      "canonical": "Arizona Diamondbacks",
+      "aliases": [
+        "Arizona",
+        "Diamondbacks"
+      ]
+    },
+    {
+      "code": "ATL",
+      "canonical": "Atlanta Braves",
+      "aliases": [
+        "Atlanta",
+        "Braves"
+      ]
+    },
+    {
+      "code": "BAL",
+      "canonical": "Baltimore Orioles",
+      "aliases": [
+        "Baltimore",
+        "Orioles"
+      ]
+    },
+    {
+      "code": "BOS",
+      "canonical": "Boston Red Sox",
+      "aliases": [
+        "Boston",
+        "Red Sox"
+      ]
+    },
+    {
+      "code": "CHC",
+      "canonical": "Chicago Cubs",
+      "aliases": [
+        "Cubs"
+      ]
+    },
+    {
+      "code": "CIN",
+      "canonical": "Cincinnati Reds",
+      "aliases": [
+        "Cincinnati",
+        "Reds"
+      ]
+    },
+    {
+      "code": "CLE",
+      "canonical": "Cleveland Guardians",
+      "aliases": [
+        "Cleveland",
+        "Guardians"
+      ]
+    },
+    {
+      "code": "COL",
+      "canonical": "Colorado Rockies",
+      "aliases": [
+        "Colorado",
+        "Rockies"
+      ]
+    },
+    {
+      "code": "CWS",
+      "canonical": "Chicago White Sox",
+      "aliases": [
+        "White Sox"
+      ]
+    },
+    {
+      "code": "DET",
+      "canonical": "Detroit Tigers",
+      "aliases": [
+        "Detroit",
+        "Tigers"
+      ]
+    },
+    {
+      "code": "HOU",
+      "canonical": "Houston Astros",
+      "aliases": [
+        "Astros",
+        "Houston"
+      ]
+    },
+    {
+      "code": "KC",
+      "canonical": "Kansas City Royals",
+      "aliases": [
+        "Kansas City",
+        "Royals"
+      ]
+    },
+    {
+      "code": "LAA",
+      "canonical": "Los Angeles Angels",
+      "aliases": [
+        "Angels"
+      ]
+    },
+    {
+      "code": "LAD",
+      "canonical": "Los Angeles Dodgers",
+      "aliases": [
+        "Dodgers"
+      ]
+    },
+    {
+      "code": "MIA",
+      "canonical": "Miami Marlins",
+      "aliases": [
+        "Marlins",
+        "Miami"
+      ]
+    },
+    {
+      "code": "MIL",
+      "canonical": "Milwaukee Brewers",
+      "aliases": [
+        "Brewers",
+        "Milwaukee"
+      ]
+    },
+    {
+      "code": "MIN",
+      "canonical": "Minnesota Twins",
+      "aliases": [
+        "Minnesota",
+        "Twins"
+      ]
+    },
+    {
+      "code": "NYM",
+      "canonical": "New York Mets",
+      "aliases": [
+        "Mets"
+      ]
+    },
+    {
+      "code": "NYY",
+      "canonical": "New York Yankees",
+      "aliases": [
+        "Yankees"
+      ]
+    },
+    {
+      "code": "OAK",
+      "canonical": "Athletics",
+      "aliases": []
+    },
+    {
+      "code": "PHI",
+      "canonical": "Philadelphia Phillies",
+      "aliases": [
+        "Philadelphia",
+        "Phillies"
+      ]
+    },
+    {
+      "code": "PIT",
+      "canonical": "Pittsburgh Pirates",
+      "aliases": [
+        "Pirates",
+        "Pittsburgh"
+      ]
+    },
+    {
+      "code": "SD",
+      "canonical": "San Diego Padres",
+      "aliases": [
+        "Padres",
+        "San Diego"
+      ]
+    },
+    {
+      "code": "SEA",
+      "canonical": "Seattle Mariners",
+      "aliases": [
+        "Mariners",
+        "Seattle"
+      ]
+    },
+    {
+      "code": "SF",
+      "canonical": "San Francisco Giants",
+      "aliases": [
+        "Giants",
+        "San Francisco"
+      ]
+    },
+    {
+      "code": "STL",
+      "canonical": "St. Louis Cardinals",
+      "aliases": [
+        "Cardinals",
+        "St. Louis"
+      ]
+    },
+    {
+      "code": "TB",
+      "canonical": "Tampa Bay Rays",
+      "aliases": [
+        "Rays",
+        "Tampa Bay"
+      ]
+    },
+    {
+      "code": "TEX",
+      "canonical": "Texas Rangers",
+      "aliases": [
+        "Rangers",
+        "Texas"
+      ]
+    },
+    {
+      "code": "TOR",
+      "canonical": "Toronto Blue Jays",
+      "aliases": [
+        "Blue Jays",
+        "Toronto"
+      ]
+    },
+    {
+      "code": "WSH",
+      "canonical": "Washington Nationals",
+      "aliases": [
+        "Nationals",
+        "Washington"
+      ]
+    }
+  ]
+}

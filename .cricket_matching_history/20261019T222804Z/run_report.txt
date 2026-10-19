@@ -1,0 +1,73 @@
+Sports market terminal — live
+run_started_utc  2026-10-19T22:26:46+00:00
+data_fetched_utc 2026-10-19T22:28:04+00:00
+run_finished_utc 2026-10-19T22:28:07+00:00
+duration_seconds 81.2
+mode             LIVE
+
+VENUE COVERAGE
+  kalshi             COMPLETE
+                     COMPLETE, 106 records in 65.9s via sports_filter_plus_series
+                     106 records, 46 fixtures, 96 markets
+                     collection_complete=True, parse_complete=True
+  polymarket_intl    COMPLETE
+                     COMPLETE, 645 records in 9.6s via events_keyset_tag_slug_cricket
+                     645 records, 64 fixtures, 148 markets
+                     collection_complete=True, parse_complete=True
+
+RESULT
+  confirmed fixtures       0
+  mapped outcome rows      34
+  two-sided outcome quotes 58/68
+  crossed outcome rows     0
+  fixture links requiring review 16
+  market links requiring review  38
+  critical safety audit    PASS
+  advisory findings        3
+
+WARNINGS (45)
+  INFO kalshi: 10 markets outside requested market types skipped
+  INFO polymarket_intl: 541 markets outside requested market types skipped
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-bos-det-2026-10-20 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-phi-nyk-2026-10-20 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-okc-sas-2026-10-20 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-min-mia-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-atl-orl-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-mil-was-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-cha-bkn-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-chi-tor-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-uta-mem-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-ind-nop-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-dal-hou-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-gsw-lal-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-phx-por-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-sac-lac-2026-10-21 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-cle-phi-2026-10-22 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-den-okc-2026-10-22 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-nyk-bos-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-atl-cha-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-dal-ind-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-min-orl-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-tor-was-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-det-mia-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-chi-mil-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-hou-sas-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-nop-uta-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-mem-gsw-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-lac-lal-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-por-sac-2026-10-23 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-mia-cha-2026-10-24 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-bkn-cle-2026-10-24 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-mil-phi-2026-10-24 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-hou-atl-2026-10-24 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-was-chi-2026-10-24 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-sas-dal-2026-10-24 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-nop-den-2026-10-24 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-gsw-phx-2026-10-24 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-lal-uta-2026-10-25 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-ind-bkn-2026-10-25 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-orl-nyk-2026-10-25 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-tor-min-2026-10-25 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-lac-okc-2026-10-25 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-det-phi-2026-10-25 has no scheduled UTC start
+  COVERAGE_INCOMPLETE basketball polymarket_intl: nba-mem-sac-2026-10-25 has no scheduled UTC start

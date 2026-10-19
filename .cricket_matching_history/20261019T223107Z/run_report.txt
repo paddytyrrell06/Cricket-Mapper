@@ -1,0 +1,35 @@
+Sports market terminal — live
+run_started_utc  2026-10-19T22:29:51+00:00
+data_fetched_utc 2026-10-19T22:31:07+00:00
+run_finished_utc 2026-10-19T22:31:09+00:00
+duration_seconds 78.5
+mode             LIVE
+
+VENUE COVERAGE
+  kalshi             COMPLETE
+                     cricket: sports_filter_plus_series; basketball: KXNBAGAME_nested_open_events
+                     192 records, 89 fixtures, 182 markets
+                     collection_complete=True, parse_complete=True
+  polymarket_intl    COMPLETE
+                     cricket: events_keyset_tag_slug_cricket; basketball: events_keyset_tag_slug_nba_moneyline
+                     688 records, 107 fixtures, 234 markets
+                     collection_complete=True, parse_complete=True
+
+SPORT SCOPES
+  cricket: kalshi complete, polymarket_intl complete
+  basketball: kalshi complete, polymarket_intl complete
+
+RESULT
+  displayed fixtures       59
+  compatible outcome rows  0
+  mapped outcome rows      120
+  two-sided outcome quotes 230/240
+  crossed outcome rows     0
+  fixture links requiring review 59
+  market links requiring review  124
+  critical safety audit    PASS
+  advisory findings        3
+
+WARNINGS (2)
+  INFO kalshi: 10 markets outside requested market types skipped
+  INFO polymarket_intl: 541 markets outside requested market types skipped

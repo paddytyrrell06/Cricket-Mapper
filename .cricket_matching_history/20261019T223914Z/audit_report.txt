@@ -1,0 +1,43 @@
+Sports market terminal safety audit
+
+[PASS] at least two venue collections complete
+       2/2 complete: kalshi, polymarket_intl; complete sport scopes: cricket, basketball
+[PASS] all venue coverage complete
+       complete
+[ADVISORY] no unresolved fixture links
+       59 review links
+[ADVISORY] no unresolved market links
+       124 review links
+[PASS] fixture links are unique
+       7 links / 7 unique
+[PASS] market links are unique
+       0 links / 0 unique
+[PASS] accepted fixture pairs agree exactly
+       all pairs agree
+[PASS] accepted market pairs agree exactly
+       all pairs agree
+[PASS] wide rows are unique
+       120 rows / 120 unique
+[PASS] wide table statuses, identifiers and links are valid
+       all rows valid
+[PASS] quote prices, statuses and sources are valid
+       all quote fields valid
+[PASS] quote summaries and crossed flags agree
+       all summaries agree
+[PASS] no crossed quotes observed
+       none
+[ADVISORY] all mapped outcomes have bid and ask
+       226/240 mapped venue outcomes have two-sided quotes
+[PASS] match-winner fixtures contain both teams and no unknown outcomes
+       all winner fixtures complete
+[PASS] no plausible counterpart remains unmatched
+       none
+[PASS] no match-winner market is stranded on a confirmed fixture
+       none
+[PASS] wide table is lossless relative to accepted links
+       expected=0 actual=0
+
+Objects: 196 fixtures, 416 markets
+Accepted: 7 fixture-pair links, 0 market-pair links
+Unmatched: 73 fixtures, 176 markets
+OVERALL PASS
