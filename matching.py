@@ -12,6 +12,7 @@ from difflib import SequenceMatcher
 
 from canonical import (Fixture, FixtureKey, Market, OUTRIGHT, UNKNOWN,
                        TEAM_TOTAL, TOTAL_SIXES, TOTAL_FOURS, norm_team)
+import settlement as S
 
 
 PARAMETERISED_TYPES = {TEAM_TOTAL, TOTAL_SIXES, TOTAL_FOURS}
@@ -35,7 +36,8 @@ def _canon_id(key: FixtureKey) -> str:
     teams = sorted(key.teams)
     a, b = (teams + ["unknown", "unknown"])[:2]
     slug = f"{a}-{b}".replace(" ", "_")
-    return f"{key.date}:{key.gender or 'NA'}:{key.fmt or 'NA'}:{slug}"
+    value = f"{key.date}:{key.gender or 'NA'}:{key.fmt or 'NA'}:{slug}"
+    return value if key.sport == "cricket" else f"{key.sport}:{value}"
 
 
 def _norm_competition(value: str) -> str:
@@ -87,6 +89,8 @@ def _exact_group_problems(key: FixtureKey, group: list[Fixture]) -> list[str]:
         problems.append(f"multiple fixtures share the key on {', '.join(dup)}")
     if not key.date or len(key.teams) != 2 or not key.gender or not key.fmt:
         problems.append("canonical fixture key is incomplete")
+    if len({f.key.sport for f in group}) > 1:
+        problems.append("sport mismatch")
 
     competitions = {_norm_competition(f.competition) for f in group if f.competition}
     competitions.discard("")
@@ -163,6 +167,8 @@ def _pair_similarity(a: Fixture, b: Fixture) -> float:
 def _recall_candidate(a: Fixture, b: Fixture, threshold: float = 0.65) -> tuple[bool, float, str]:
     # Review must retain the same plausible candidates checked by the safety audit.
     # This threshold never authorises an accepted fixture or market link.
+    if a.key.sport != b.key.sport:
+        return False, 0.0, "different sports"
     weaker, stronger = _pair_similarity_components(a, b)
     ac = set(a.extra.get("team_codes") or [])
     bc = set(b.extra.get("team_codes") or [])
@@ -231,8 +237,8 @@ def match_fixtures(fixtures: list[Fixture]
 
     by_loose: dict[tuple, list[Fixture]] = defaultdict(list)
     for fixture in fixtures:
-        by_loose[(fixture.key.date, fixture.key.teams)].append(fixture)
-    for (_, teams), group in by_loose.items():
+        by_loose[(fixture.key.sport, fixture.key.date, fixture.key.teams)].append(fixture)
+    for (_, _, teams), group in by_loose.items():
         if len({f.venue for f in group}) < 2 or len(teams) != 2:
             continue
         for left, right in itertools.combinations(group, 2):
@@ -260,7 +266,7 @@ def match_fixtures(fixtures: list[Fixture]
     for a, b in itertools.combinations(fixtures, 2):
         if frozenset((id(a), id(b))) in linked_pairs:
             continue
-        if a.venue == b.venue or a.key.gender != b.key.gender:
+        if a.venue == b.venue or a.key.gender != b.key.gender or a.key.sport != b.key.sport:
             continue
         date_gap = _date_gap_days(a.key.date, b.key.date)
         if date_gap is None or date_gap > 1:
@@ -336,10 +342,10 @@ def _out_key(market: Market) -> str:
 
 def match_markets(fixture_matches: list[FixtureMatch], markets: list[Market]
                   ) -> tuple[list[MarketMatch], list[MarketMatch], list[Market]]:
-    by_fixture: dict[str, list[Market]] = defaultdict(list)
+    by_fixture: dict[tuple[str, str], list[Market]] = defaultdict(list)
     for market in markets:
         if market.venue_fixture_id:
-            by_fixture[market.venue_fixture_id].append(market)
+            by_fixture[(market.venue, market.venue_fixture_id)].append(market)
 
     accepted: list[MarketMatch] = []
     review: list[MarketMatch] = []
@@ -348,7 +354,7 @@ def match_markets(fixture_matches: list[FixtureMatch], markets: list[Market]
     for fixture_match in fixture_matches:
         pool: list[Market] = []
         for fixture in fixture_match.by_venue.values():
-            pool.extend(by_fixture.get(fixture.venue_fixture_id, []))
+            pool.extend(by_fixture.get((fixture.venue, fixture.venue_fixture_id), []))
         grouped: dict[tuple[str, str], list[Market]] = defaultdict(list)
         for market in pool:
             grouped[(market.market_type, _out_key(market))].append(market)
@@ -384,6 +390,11 @@ def match_markets(fixture_matches: list[FixtureMatch], markets: list[Market]
                     problems.append("empty outcome")
                 if fixture_match.status != "accepted":
                     problems.append("fixture is unresolved")
+                settlement = S.compare_profiles(m1.extra.get("settlement"), m2.extra.get("settlement"))
+                if settlement["status"] != "compatible":
+                    problems.append(settlement["reason"])
+                if any(m.fixture_key and m.fixture_key.sport != fixture_match.key.sport for m in (m1, m2)):
+                    problems.append("sport mismatch")
                 problems.extend(sorted({m.note for m in (m1, m2) if m.note}))
                 if problems:
                     mm.status, mm.confidence = "review", "low"
@@ -392,6 +403,7 @@ def match_markets(fixture_matches: list[FixtureMatch], markets: list[Market]
                 else:
                     mm.reason = ("confirmed fixture; canonical market type and "
                                  f"outcome agree ({market_type}/{outcome})")
+                    mm.reason += "; equal evidenced settlement payouts and policies"
                     if "trusted competition/date-scoped" in fixture_match.reason:
                         mm.reason += "; " + fixture_match.reason
                     accepted.append(mm)

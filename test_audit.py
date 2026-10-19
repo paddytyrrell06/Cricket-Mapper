@@ -1,12 +1,16 @@
 import unittest
+from datetime import datetime, timezone, timedelta
 
 import audit as A
 import canonical as C
 import matching as M
 import presentation as P
+import settlement as S
+from test_settlement import known_profile
 
 
-VENUES = ["kalshi", "polymarket_intl", "polymarket_us"]
+VENUES = ["kalshi", "polymarket_intl"]
+ALL_VENUES = VENUES + ["polymarket_us"]
 STRANDED_CHECK = "no match-winner market is stranded on a confirmed fixture"
 ROW_CHECK = "wide table statuses, identifiers and links are valid"
 
@@ -29,6 +33,7 @@ def market(source, outcome):
         source.venue, source.venue_fixture_id, source.key, C.MATCH_WINNER, outcome,
         market_id=f"{source.venue_fixture_id}:{outcome}",
         event_id=source.venue_fixture_id, title=f"{outcome} wins", url=url,
+        extra={"settlement": known_profile()},
     )
 
 
@@ -95,9 +100,9 @@ class FixtureReviewAbsenceTests(unittest.TestCase):
                    for outcome in (source.team_a, source.team_b)]
         market_accepted, market_review, market_unmatched = M.match_markets(
             accepted + review, markets)
-        coverage = dict.fromkeys(VENUES, True)
+        coverage = dict.fromkeys(ALL_VENUES, True)
         rows = P.build_wide_rows(
-            market_accepted, market_review, coverage, VENUES, fixture_review=review)
+            market_accepted, market_review, coverage, ALL_VENUES, fixture_review=review)
         older_rows = [row for row in rows if row["fixture_date"] == "2026-10-21"]
         self.assertEqual(len(older_rows), 2)
         self.assertTrue(all(row["kalshi_status"] == "Needs review" for row in older_rows))
@@ -106,7 +111,7 @@ class FixtureReviewAbsenceTests(unittest.TestCase):
             return A.audit_runtime(
                 fixtures, markets, accepted, review, unmatched,
                 market_accepted, market_review, market_unmatched,
-                rows, coverage, VENUES,
+                rows, coverage, ALL_VENUES,
             )
 
         passed, report, _ = audit_rows()
@@ -128,15 +133,15 @@ class FixtureReviewAbsenceTests(unittest.TestCase):
                    for outcome in ("Australia", "New Zealand")]
         market_accepted, market_review, market_unmatched = M.match_markets(
             accepted + review, markets)
-        coverage = dict.fromkeys(VENUES, True)
+        coverage = dict.fromkeys(ALL_VENUES, True)
         rows = P.build_wide_rows(
-            market_accepted, market_review, coverage, VENUES, fixture_review=review)
+            market_accepted, market_review, coverage, ALL_VENUES, fixture_review=review)
 
         def audit_rows(candidate_rows):
             return A.audit_runtime(
                 fixtures, markets, accepted, review, unmatched,
                 market_accepted, market_review, market_unmatched,
-                candidate_rows, coverage, VENUES,
+                candidate_rows, coverage, ALL_VENUES,
             )
 
         self.assertTrue(rows)
@@ -152,6 +157,8 @@ class FixtureReviewAbsenceTests(unittest.TestCase):
 
 
 class QuoteAuditTests(unittest.TestCase):
+    now = datetime(2026, 10, 20, 2, 0, tzinfo=timezone.utc)
+
     def setUp(self):
         self.fixtures = [fixture("kalshi", "k"), fixture("polymarket_intl", "p")]
         self.fixture_accepted, _, _ = M.match_fixtures(self.fixtures)
@@ -160,17 +167,17 @@ class QuoteAuditTests(unittest.TestCase):
         for item in self.markets:
             item.bid, item.ask = "0.4", "0.6"
             item.quote_source = "public order book"
-            item.quote_time = "2026-10-19T10:53:00+00:00"
+            item.quote_time = self.now.isoformat()
         self.accepted, _, _ = M.match_markets(self.fixture_accepted, self.markets)
         self.coverage = dict.fromkeys(VENUES, True)
 
     def rows(self):
-        return P.build_wide_rows(self.accepted, [], self.coverage, VENUES)
+        return P.build_wide_rows(self.accepted, [], self.coverage, VENUES, as_of=self.now)
 
     def audit_rows(self, rows):
         passed, report, checks = A.audit_runtime(
             self.fixtures, self.markets, self.fixture_accepted, [], [],
-            self.accepted, [], [], rows, self.coverage, VENUES,
+            self.accepted, [], [], rows, self.coverage, VENUES, as_of=self.now,
         )
         return passed, report, {check.name: check for check in checks}
 
@@ -193,7 +200,7 @@ class QuoteAuditTests(unittest.TestCase):
 
     def test_prices_on_unmapped_market_and_inconsistent_status_fail(self):
         mutations = [
-            {"polymarket_us_bid": "0.2"},
+            {"polymarket_intl_status": "Not currently open"},
             {"kalshi_quote_status": "one-sided"},
             {"kalshi_quote_source": ""},
             {"kalshi_quote_time": "2026-10-19T10:53:00"},
@@ -208,10 +215,14 @@ class QuoteAuditTests(unittest.TestCase):
                 self.assertFalse(checks["quote prices, statuses and sources are valid"].passed)
 
     def test_unknown_replayed_quote_time_is_allowed(self):
+        for item in self.markets:
+            if item.venue == "kalshi":
+                item.quote_time = ""
         rows = self.rows()
-        rows[0]["kalshi_quote_time"] = ""
         passed, report, _ = self.audit_rows(rows)
         self.assertTrue(passed, report)
+        self.assertTrue(all(row["quote_check"] == "unknown" for row in rows))
+        self.assertTrue(all(row["cross_eligible"] == "false" for row in rows))
 
     def test_crossed_quotes_are_flagged_advisories_and_remain_publishable(self):
         cases = [
@@ -226,8 +237,10 @@ class QuoteAuditTests(unittest.TestCase):
                 rows = self.rows()
                 passed, report, checks = self.audit_rows(rows)
                 self.assertTrue(passed, report)
-                self.assertTrue(all(row["cross_kind"] == kind for row in rows))
-                self.assertFalse(checks["no crossed quotes observed"].passed)
+                self.assertTrue(all(row["observed_cross_kind"] == kind for row in rows))
+                eligible_cross = kind != "within venue"
+                self.assertTrue(all(row["crossed"] == str(eligible_cross).lower() for row in rows))
+                self.assertEqual(checks["no crossed quotes observed"].passed, not eligible_cross)
                 self.assertEqual(checks["no crossed quotes observed"].severity, "advisory")
 
     def test_tied_prices_and_non_crossed_locked_quotes_are_not_crossed(self):
@@ -280,6 +293,98 @@ class QuoteAuditTests(unittest.TestCase):
         passed, report, checks = self.audit_rows(rows)
         self.assertTrue(passed, report)
         self.assertNotIn("quote prices, statuses and sources are valid", checks)
+
+    def test_settlement_mismatch_is_reviewable_but_cannot_advertise_a_cross(self):
+        for item in self.markets:
+            item.bid, item.ask = (("0.7", "0.8") if item.venue == "kalshi" else ("0.4", "0.6"))
+            if item.venue == "polymarket_intl":
+                item.extra["settlement"]["payouts"]["draw"] = "0"
+        accepted, review, unmatched = M.match_markets(self.fixture_accepted, self.markets)
+        self.assertEqual(accepted, [])
+        self.assertEqual(len(review), 2)
+        rows = P.build_wide_rows(accepted, review, self.coverage, VENUES,
+                                 include_review=True, as_of=self.now)
+
+        def audit_rows():
+            return A.audit_runtime(
+                self.fixtures, self.markets, self.fixture_accepted, [], [],
+                accepted, review, unmatched, rows, self.coverage, VENUES, as_of=self.now)
+
+        passed, report, _ = audit_rows()
+        self.assertTrue(passed, report)
+        self.assertTrue(all(row["observed_crossed"] == "true" for row in rows))
+        self.assertTrue(all(row["comparison_status"] == "rules_differ" for row in rows))
+        self.assertTrue(all(row["crossed"] == "false" for row in rows))
+        rows[0]["crossed"] = "true"
+        passed, _, checks = audit_rows()
+        self.assertFalse(passed)
+        self.assertFalse(next(check for check in checks
+                              if check.name == "quote summaries and crossed flags agree").passed)
+
+    def test_row_cannot_claim_compatible_rules_without_its_evidence(self):
+        rows = self.rows()
+        rows[0]["polymarket_intl_settlement_evidence"] = "[]"
+        passed, _, checks = self.audit_rows(rows)
+        self.assertFalse(passed)
+        self.assertFalse(checks["quote prices, statuses and sources are valid"].passed)
+
+    def test_forged_cross_from_stale_observations_blocks_publication(self):
+        for item in self.markets:
+            item.bid, item.ask = (("0.7", "0.8") if item.venue == "kalshi" else ("0.4", "0.6"))
+        rows = self.rows()
+        self.assertTrue(all(row["crossed"] == "true" for row in rows))
+        old_time = (self.now - timedelta(seconds=P.QUOTE_MAX_AGE_SECONDS + 1)).isoformat()
+        for row in rows:
+            for venue in VENUES:
+                row[f"{venue}_quote_time"] = old_time
+        passed, _, checks = self.audit_rows(rows)
+        self.assertFalse(passed)
+        self.assertFalse(checks["quote summaries and crossed flags agree"].passed)
+
+
+class SportCoverageAuditTests(unittest.TestCase):
+    def audit_empty(self, overall, scopes):
+        return A.audit_runtime([], [], [], [], [], [], [], [], [], overall, VENUES,
+                                sport_coverage=scopes)
+
+    def test_one_complete_sport_scope_can_publish_with_other_scope_incomplete(self):
+        scopes = {"cricket": dict.fromkeys(VENUES, True),
+                  "basketball": dict.fromkeys(VENUES, False)}
+        passed, report, checks = self.audit_empty(dict.fromkeys(VENUES, False), scopes)
+        self.assertTrue(passed, report)
+        gate = next(check for check in checks if check.name == "at least two venue collections complete")
+        self.assertIn("complete sport scopes: cricket", gate.detail)
+
+    def test_one_complete_venue_per_sport_does_not_prove_any_complete_scope(self):
+        scopes = {"cricket": {"kalshi": True, "polymarket_intl": False},
+                  "basketball": {"kalshi": False, "polymarket_intl": True}}
+        passed, _, checks = self.audit_empty(dict.fromkeys(VENUES, True), scopes)
+        self.assertFalse(passed)
+        self.assertFalse(next(check for check in checks
+                              if check.name == "at least two venue collections complete").passed)
+
+    def test_other_sport_coverage_cannot_justify_false_absence(self):
+        fixtures = [fixture("kalshi", "k"), fixture("polymarket_intl", "p")]
+        fixture_accepted, _, _ = M.match_fixtures(fixtures)
+        markets = [market(source, outcome) for source in fixtures
+                   for outcome in ("Australia", "New Zealand")]
+        accepted, review, unmatched = M.match_markets(fixture_accepted, markets)
+        overall = dict.fromkeys(ALL_VENUES, True)
+        scopes = {"cricket": {"kalshi": True, "polymarket_intl": True, "polymarket_us": False},
+                  "basketball": dict.fromkeys(ALL_VENUES, True)}
+        rows = P.build_wide_rows(accepted, review, overall, ALL_VENUES, sport_coverage=scopes)
+
+        def audit_rows():
+            return A.audit_runtime(fixtures, markets, fixture_accepted, [], [], accepted, review,
+                                    unmatched, rows, overall, ALL_VENUES, sport_coverage=scopes)
+
+        self.assertTrue(all(row["polymarket_us_status"] == "Coverage incomplete" for row in rows))
+        passed, report, _ = audit_rows()
+        self.assertTrue(passed, report)
+        rows[0]["polymarket_us_status"] = "Not currently open"
+        passed, _, checks = audit_rows()
+        self.assertFalse(passed)
+        self.assertFalse(next(check for check in checks if check.name == ROW_CHECK).passed)
 
 
 if __name__ == "__main__":

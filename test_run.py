@@ -8,6 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import run as R
+from test_settlement import known_profile
 
 
 class ReviewExportTests(unittest.TestCase):
@@ -127,6 +128,7 @@ class ReplayRunTests(unittest.TestCase):
             "OUTPUT_DIR": self.output, "PREVIOUS_DIR": self.previous,
             "HISTORY_DIR": self.history, "SNAPSHOT_DIR": self.source,
             "NO_OPEN": True,
+            "ENABLED_SPORTS": ("cricket",),
         }.items():
             self.stack.enter_context(patch.object(R, name, value))
         self.stack.enter_context(patch.object(R, "say"))
@@ -170,6 +172,7 @@ class ReplayRunTests(unittest.TestCase):
                     source.venue, source.venue_fixture_id, source.key, R.C.MATCH_WINNER,
                     outcome, market_id=f"{source.venue}:{outcome}",
                     event_id=source.venue_fixture_id, title=f"{outcome} wins", url=url,
+                    extra={"settlement": known_profile()},
                 ))
         unmatched = R.C.Market("kalshi", "k", key, R.C.TOSS_WINNER, "Australia",
                                market_id="unmatched-toss")
@@ -257,22 +260,27 @@ class ReplayRunTests(unittest.TestCase):
         with patch.object(R, "SNAPSHOT_DIR", None), patch.object(R, "collect", return_value=result), patch.object(
                 R.Q, "_request_json", return_value=(503, None, "2026-10-19T10:53:00+00:00")) as request:
             self.assertEqual(R.main(), 0)
-        request.assert_called_once()
-        self.assertEqual(request.call_args.args[1], "https://clob.polymarket.com/books")
-        self.assertEqual({entry["token_id"] for entry in request.call_args.args[2]}, {"1002", "1003"})
+        self.assertEqual(request.call_count, 2)
+        self.assertEqual(request.call_args_list[0].args[0], "GET")
+        self.assertIn("kalshi.com/trade-api/v2/markets?tickers=", request.call_args_list[0].args[1])
+        self.assertEqual(request.call_args_list[1].args[0], "POST")
+        self.assertEqual(request.call_args_list[1].args[1], "https://clob.polymarket.com/books")
+        self.assertEqual({entry["token_id"] for entry in request.call_args_list[1].args[2]}, {"1002", "1003"})
         rows = self.output_rows()
         self.assertEqual(len(rows), 2)
         self.assertTrue(all(row["polymarket_intl_status"] == "Available" for row in rows))
         self.assertTrue(all(row["polymarket_intl_quote_status"] == "unavailable" for row in rows))
         self.assertTrue(all(row["kalshi_quote_status"] == "available" for row in rows))
+        self.assertTrue(all("market snapshot" in row["kalshi_quote_source"] for row in rows))
         self.assertIsNone(unmatched.bid)
         self.assertIn("CLOB batch unavailable", (self.output / "data" / "run_report.txt").read_text())
+        self.assertIn("discovery snapshot retained", (self.output / "data" / "run_report.txt").read_text())
 
     def test_replay_inside_build_is_loaded_before_build_is_replaced(self):
         self.write_snapshot(self.data)
         with patch.object(R, "SNAPSHOT_DIR", self.data):
             self.assertEqual(R.main(), 0)
-        self.kalshi_parser.assert_called_once_with([{"venue": "kalshi"}])
+        self.kalshi_parser.assert_called_once_with([{"venue": "kalshi"}], market_types={R.C.MATCH_WINNER})
         for venue in R.VENUES:
             saved = self.output / "data" / f"raw_{venue}.json"
             self.assertEqual(json.loads(saved.read_text()), [{"venue": venue}])
@@ -298,7 +306,7 @@ class ReplayRunTests(unittest.TestCase):
                 self.assertEqual(raw["kalshi"], [])
                 self.assertIn("snapshot", status["kalshi"])
                 self.assertTrue(any("kalshi" in warning for warning in warnings))
-                self.assertTrue(coverage["polymarket_us"]["complete"])
+                self.assertTrue(coverage["polymarket_intl"]["complete"])
 
     def test_old_parse_findings_are_cleared_and_collection_reasons_retained(self):
         metadata = self.write_snapshot()
@@ -311,29 +319,36 @@ class ReplayRunTests(unittest.TestCase):
             reason="COVERAGE_INCOMPLETE polymarket_intl: old parser issue",
             parse_complete=False, mapping_coverage_complete=False,
         )
-        metadata["polymarket_us"].update(
+        (self.source / "collection_meta.json").write_text(json.dumps(metadata))
+        _, _, _, coverage = R.load_snapshot(self.source)
+        self.assertEqual(coverage["kalshi"]["reason"], "pagination stopped early")
+        self.assertFalse(coverage["kalshi"]["complete"])
+        self.assertNotIn("parse_complete", coverage["kalshi"])
+        self.assertEqual(coverage["polymarket_intl"]["reason"], "")
+        self.assertTrue(coverage["polymarket_intl"]["complete"])
+
+    def test_explicit_collection_note_survives_successful_reparse(self):
+        metadata = self.write_snapshot()
+        metadata["polymarket_intl"].update(
             collection_reason="saved collection note",
-            reason="saved collection note; COVERAGE_INCOMPLETE polymarket_us: old parser issue",
+            reason="saved collection note; COVERAGE_INCOMPLETE polymarket_intl: old parser issue",
         )
         (self.source / "collection_meta.json").write_text(json.dumps(metadata))
         self.assertEqual(R.main(), 0)
         coverage = self.output_metadata()
-        self.assertEqual(coverage["kalshi"]["reason"], "pagination stopped early")
-        self.assertFalse(coverage["kalshi"]["mapping_coverage_complete"])
-        self.assertEqual(coverage["polymarket_intl"]["reason"], "")
+        self.assertEqual(coverage["polymarket_intl"]["reason"], "saved collection note")
         self.assertTrue(coverage["polymarket_intl"]["mapping_coverage_complete"])
-        self.assertEqual(coverage["polymarket_us"]["reason"], "saved collection note")
-        self.assertTrue(all(item["parse_complete"] for item in coverage.values()))
+        self.assertTrue(all(coverage[venue]["parse_complete"] for venue in R.VENUES))
 
     def test_parse_exception_is_reported_in_coverage_and_run_report(self):
         self.write_snapshot()
         self.kalshi_parser.side_effect = ValueError("broken source record")
-        self.assertEqual(R.main(), 0)
-        metadata = self.output_metadata()["kalshi"]
+        self.assertEqual(R.main(), 4)
+        metadata = json.loads((self.data / "collection_meta.json").read_text())["kalshi"]
         self.assertFalse(metadata["parse_complete"])
         self.assertFalse(metadata["mapping_coverage_complete"])
         self.assertIn("parse failed ValueError('broken source record')", metadata["reason"])
-        report = (self.output / "data" / "run_report.txt").read_text()
+        report = (self.data / "run_report.txt").read_text()
         self.assertIn("broken source record", report)
         self.assertIn("parse_complete=False", report)
 

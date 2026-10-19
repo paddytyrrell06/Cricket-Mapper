@@ -1,4 +1,5 @@
 import unittest
+from urllib.parse import parse_qs, urlparse
 from unittest.mock import patch
 
 import canonical as C
@@ -113,6 +114,86 @@ class RawAndReplayQuotesTests(unittest.TestCase):
 
 
 class LiveQuotesTests(unittest.TestCase):
+    def test_kalshi_refresh_batches_only_requested_tickers_in_groups_of_forty(self):
+        tickers = {f"TICKER-{index:03d}" for index in range(83)}
+
+        def response(method, url, payload):
+            self.assertEqual(method, "GET")
+            self.assertIsNone(payload)
+            query = parse_qs(urlparse(url).query)
+            batch = query["tickers"][0].split(",")
+            self.assertLessEqual(len(batch), 40)
+            self.assertEqual(int(query["limit"][0]), len(batch))
+            return 200, {"markets": [{"ticker": ticker, "yes_bid_dollars": "0.2"}
+                                      for ticker in batch] + [{"ticker": "UNREQUESTED"}]}, COLLECTED
+
+        with patch.object(Q, "_request_json", side_effect=response) as request:
+            refreshed, warnings = Q._live_kalshi(tickers)
+        self.assertEqual(warnings, [])
+        self.assertEqual(request.call_count, 3)
+        self.assertEqual(set(refreshed), tickers)
+        self.assertTrue(all(row["_collected_at_utc"] == COLLECTED for row in refreshed.values()))
+
+    def test_kalshi_live_refresh_replaces_discovery_prices_and_observation_time(self):
+        m = market("kalshi")
+        original = {"ticker": "123", "status": "active", "yes_bid_dollars": "0.1",
+                    "yes_ask_dollars": "0.2", "_collected_at_utc": "2026-10-19T09:00:00Z"}
+        fresh = {"ticker": "123", "status": "active", "yes_bid_dollars": "0.7",
+                 "yes_ask_dollars": "0.8", "yes_bid_size_fp": "5", "yes_ask_size_fp": "8"}
+        with patch.object(Q, "_request_json", return_value=(200, {"markets": [fresh]}, COLLECTED)):
+            entries, warnings = Q.enrich_quotes([m], {"kalshi": [original]}, live=True)
+        self.assertEqual(warnings, [])
+        self.assertEqual((m.bid, m.ask, m.quote_time), ("0.7", "0.8", COLLECTED))
+        self.assertIn("refreshed market", m.quote_source)
+        self.assertEqual(entries[0]["quote_time"], COLLECTED)
+        self.assertEqual(original["yes_bid_dollars"], "0.1")
+
+    def test_kalshi_closed_refresh_suppresses_the_old_open_quote(self):
+        m = market("kalshi")
+        original = {"ticker": "123", "status": "active", "yes_bid_dollars": "0.1",
+                    "yes_ask_dollars": "0.2", "_collected_at_utc": "2026-10-19T09:00:00Z"}
+        closed = {"ticker": "123", "status": "settled", "yes_bid_dollars": "0.7",
+                  "yes_ask_dollars": "0.8"}
+        with patch.object(Q, "_request_json", return_value=(200, {"markets": [closed]}, COLLECTED)):
+            entries, warnings = Q.enrich_quotes([m], {"kalshi": [original]}, live=True)
+        self.assertEqual((m.bid, m.ask, m.quote_status), (None, None, "unavailable"))
+        self.assertEqual(m.quote_time, COLLECTED)
+        self.assertEqual(entries[0]["quote_status"], "unavailable")
+        self.assertIn("no longer open", m.quote_source)
+        self.assertTrue(any("no longer open" in warning for warning in warnings))
+
+    def test_kalshi_refresh_failure_keeps_the_original_observation_time(self):
+        m = market("kalshi")
+        original = {"ticker": "123", "status": "active", "yes_bid_dollars": "0.1",
+                    "yes_ask_dollars": "0.2", "_collected_at_utc": "2026-10-19T09:00:00Z"}
+        with patch.object(Q, "_request_json", return_value=(503, None, COLLECTED)):
+            entries, warnings = Q.enrich_quotes([m], {"kalshi": [original]}, live=True,
+                                                collected_at=COLLECTED)
+        self.assertEqual((m.bid, m.ask), ("0.1", "0.2"))
+        self.assertEqual(m.quote_time, "2026-10-19T09:00:00+00:00")
+        self.assertEqual(entries[0]["quote_time"], m.quote_time)
+        self.assertIn("market snapshot", m.quote_source)
+        self.assertTrue(any("refresh unavailable" in warning for warning in warnings))
+
+    def test_intl_observation_time_is_distinct_from_exchange_time_and_survives_replay(self):
+        m = market("polymarket_intl")
+        book = {"asset_id": "101", "timestamp": "1767225600000",
+                "bids": [{"price": "0.2", "size": "3"}],
+                "asks": [{"price": "0.3", "size": "4"}]}
+        with patch.object(Q, "_request_json", return_value=(200, [book], COLLECTED)):
+            entries, warnings = Q.enrich_quotes([m], {"polymarket_intl": [intl_record()]}, live=True)
+        self.assertEqual(warnings, [])
+        self.assertEqual(m.quote_time, COLLECTED)
+        self.assertEqual(m.extra["quote_exchange_time"], "2026-01-01T00:00:00+00:00")
+        self.assertEqual(entries[0]["exchange_time"], m.extra["quote_exchange_time"])
+        restored = market("polymarket_intl")
+        with patch.object(Q, "_request_json", side_effect=AssertionError("Replay requested network")):
+            saved, warnings = Q.enrich_quotes([restored], {}, live=False, saved_quotes=entries)
+        self.assertEqual(warnings, [])
+        self.assertEqual((restored.bid, restored.ask, restored.quote_time), ("0.2", "0.3", COLLECTED))
+        self.assertEqual(restored.extra["quote_exchange_time"], "2026-01-01T00:00:00+00:00")
+        self.assertEqual(saved[0]["exchange_time"], entries[0]["exchange_time"])
+
     def test_intl_outcomes_use_their_own_books_and_extrema_ignore_zero_size(self):
         a, b = market("polymarket_intl"), market("polymarket_intl", "New Zealand")
         books = [{"asset_id": "101", "timestamp": "1792406323000",

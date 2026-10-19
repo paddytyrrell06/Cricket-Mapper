@@ -131,6 +131,14 @@ class KalshiParsingTests(unittest.TestCase):
         fixtures, _, _ = C.parse_kalshi(raw)
         self.assertEqual(fixtures[0].competition, "")
 
+    def test_resolution_rules_and_profile_are_retained_on_each_market(self):
+        raw = kalshi_pair("KXT20MATCH", "ENGPAK", [("ENG", "England"), ("PAK", "Pakistan")])
+        raw[0]["rules_secondary"] = "If no result, the market resolves to a fair price."
+        _, markets, _ = C.parse_kalshi(raw)
+        self.assertEqual(markets[0].extra["resolution_evidence"]["rules_primary"], raw[0]["rules_primary"])
+        self.assertEqual(markets[0].extra["resolution_evidence"]["rules_secondary"], raw[0]["rules_secondary"])
+        self.assertEqual(markets[0].extra["settlement"]["status"], "unknown")
+
 
 class PolymarketParsingTests(unittest.TestCase):
     def test_three_way_winner_slugs_resolve_team_and_draw_targets(self):
@@ -198,6 +206,26 @@ class PolymarketParsingTests(unittest.TestCase):
             pm_market("unmapped", "a", "b", "Unknown T20: Team A vs Team B"),
         ], "polymarket_intl")
         self.assertTrue(any(w.startswith("COVERAGE_INCOMPLETE") for w in warnings))
+
+    def test_match_winner_scope_skips_known_props_but_keeps_unknown_semantics_visible(self):
+        raw = [pm_market("int", "zaf", "aus", "Test Match: South Africa vs Australia",
+                         suffix=suffix) for suffix in ("zaf", "aus", "draw", "match-to-day-3", "toss-winner")]
+        _, markets, warnings = C.parse_polymarket(raw, "polymarket_intl", market_types={C.MATCH_WINNER})
+        self.assertEqual(len(markets), 3)
+        self.assertEqual({market.market_type for market in markets}, {C.MATCH_WINNER})
+        self.assertFalse(any(w.startswith("COVERAGE_INCOMPLETE") for w in warnings))
+        self.assertTrue(any("2 markets outside" in w for w in warnings))
+        raw.append(pm_market("int", "zaf", "aus", "Test Match: South Africa vs Australia",
+                             suffix="undocumented-winner-contract"))
+        _, markets, warnings = C.parse_polymarket(raw, "polymarket_intl", market_types={C.MATCH_WINNER})
+        self.assertTrue(any(w.startswith("COVERAGE_INCOMPLETE") for w in warnings))
+
+    def test_fixture_sport_is_part_of_identity_with_cricket_backward_compatibility(self):
+        cricket = C.FixtureKey("2026-10-20", frozenset({"a", "b"}), "M", "T20")
+        basketball = C.FixtureKey("2026-10-20", frozenset({"a", "b"}), "M", "T20", sport="basketball")
+        self.assertEqual(cricket.sport, "cricket")
+        self.assertNotEqual(cricket, basketball)
+        self.assertTrue(basketball.pretty().startswith("basketball|"))
 
 
 if __name__ == "__main__":

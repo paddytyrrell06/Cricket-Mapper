@@ -11,6 +11,8 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any, Optional
 
+import settlement as S
+
 
 MATCH_WINNER = "match_winner"
 TOSS_WINNER = "toss_winner"
@@ -292,11 +294,13 @@ class FixtureKey:
     teams: frozenset
     gender: str
     fmt: str
+    sport: str = "cricket"
 
     def pretty(self) -> str:
         a, b = sorted(self.teams) if len(self.teams) == 2 else \
             (sorted(self.teams) + ["?"])[:2]
-        return f"{self.date}|{a} v {b}|{self.gender}|{self.fmt}"
+        value = f"{self.date}|{a} v {b}|{self.gender}|{self.fmt}"
+        return value if self.sport == "cricket" else f"{self.sport}|{value}"
 
 
 @dataclass
@@ -332,6 +336,17 @@ class Market:
     quote_time: str = ""
     quote_status: str = "unavailable"
     quote_source: str = ""
+
+
+def _attach_resolution_profiles(markets: list[Market], raw_by_id: dict[str, dict]) -> None:
+    for market in markets:
+        raw = raw_by_id.get(market.market_id, {})
+        market.extra["resolution_evidence"] = S.resolution_evidence(raw)
+        market.extra["settlement"] = S.profile_market(
+            market.venue, raw, sport=market.fixture_key.sport if market.fixture_key else "cricket",
+            outcome=market.outcome,
+            binary_target=bool(market.extra.get("binary_target_market")),
+            market_type=market.market_type)
 
 
 def _j(v: Any) -> Any:
@@ -484,9 +499,11 @@ def _kalshi_start_utc_parts(market: dict) -> tuple[str, str, str, str]:
             f"rules_primary_{published_zone}_to_utc", "")
 
 
-def parse_kalshi(markets: list[dict]) -> tuple[list[Fixture], list[Market],
+def parse_kalshi(markets: list[dict], market_types: Optional[set[str]] = None
+                 ) -> tuple[list[Fixture], list[Market],
                                                list[str]]:
     warnings: list[str] = []
+    skipped_types = 0
 
 
     code_name: dict[tuple[str, str], set[str]] = defaultdict(set)
@@ -540,6 +557,10 @@ def parse_kalshi(markets: list[dict]) -> tuple[list[Fixture], list[Market],
             else:
                 warnings.append(
                     f"INFO kalshi: safely inferred native cricket series {series}")
+
+        if market_types is not None and market_type != UNKNOWN and market_type not in market_types:
+            skipped_types += 1
+            continue
 
         if market_type == OUTRIGHT:
             out.append(Market(
@@ -632,6 +653,9 @@ def parse_kalshi(markets: list[dict]) -> tuple[list[Fixture], list[Market],
             extra={"series": series,
                    "series_page": f"https://kalshi.com/markets/{series.lower()}",
                    "outcome_code": outcome_code}))
+    _attach_resolution_profiles(out, {str(m.get("ticker") or ""): m for m in markets})
+    if skipped_types:
+        warnings.append(f"INFO kalshi: {skipped_types} markets outside requested market types skipped")
     return list(fixtures.values()), out, warnings
 
 
@@ -693,9 +717,10 @@ def _pm_competition_meta(league: str, title: str) -> tuple[str, str, str, bool]:
         fmt = text_fmt
     return gender, fmt, competition, inferred
 
-def parse_polymarket(markets: list[dict], venue: str
+def parse_polymarket(markets: list[dict], venue: str, market_types: Optional[set[str]] = None
                      ) -> tuple[list[Fixture], list[Market], list[str]]:
     warnings: list[str] = []
+    skipped_types = 0
 
     code_name: dict[tuple[tuple[str, str, str, str], str], set[str]] = defaultdict(set)
     for market in markets:
@@ -722,6 +747,13 @@ def parse_polymarket(markets: list[dict], venue: str
             warnings.append(f"COVERAGE_INCOMPLETE {venue}: unparsed slug {slug[:60]}")
             continue
 
+        suffix = match.group("suffix") or ""
+        market_type, target_code = _pm_target_type(
+            suffix, (match.group("a"), match.group("b")))
+        known_unsupported = bool(re.fullmatch(r"match-to-day-[1-5]", suffix))
+        if market_types is not None and market_type not in market_types and (market_type != UNKNOWN or known_unsupported):
+            skipped_types += 1
+            continue
         league = match.group("league")
         event_title = str(market.get("_event_title") or market.get("question") or "")
         gender, fmt, competition, inferred_league = _pm_competition_meta(
@@ -729,9 +761,6 @@ def parse_polymarket(markets: list[dict], venue: str
         if inferred_league:
             warnings.append(f"COVERAGE_INCOMPLETE {venue}: inferred unmapped league {league}")
 
-        suffix = match.group("suffix") or ""
-        market_type, target_code = _pm_target_type(
-            suffix, (match.group("a"), match.group("b")))
         notes: list[str] = []
         if market_type == UNKNOWN:
             notes.append(f"unmapped suffix {suffix}")
@@ -809,6 +838,9 @@ def parse_polymarket(markets: list[dict], venue: str
                 canonical, _ = canonical_team_name(canonical, competition, date)
             out.append(Market(**common, outcome=canonical,
                               raw_outcome=str(outcome_name)))
+    _attach_resolution_profiles(out, {str(m.get("id") or ""): m for m in markets})
+    if skipped_types:
+        warnings.append(f"INFO {venue}: {skipped_types} markets outside requested market types skipped")
     return list(fixtures.values()), out, warnings
 
 
@@ -1063,4 +1095,5 @@ def parse_polymarket_us(markets: list[dict]
                 out.append(Market(**common, outcome="", raw_outcome=""))
     if skipped:
         warnings.append(f"{venue}: {skipped} non-cricket fallback-search markets skipped")
+    _attach_resolution_profiles(out, {str(m.get("id") or ""): m for m in markets})
     return list(fixtures.values()), out, warnings

@@ -20,6 +20,27 @@ def pair_id(match):
 
 
 class FixtureReviewRecallTests(unittest.TestCase):
+    def test_sports_are_isolated_in_exact_loose_and_fuzzy_matching(self):
+        for fmt, teams in [("T20", ("Australia", "New Zealand")),
+                           ("", ("Australia", "New Zealand")),
+                           ("T20", ("Australia Women", "New Zealand Women"))]:
+            left = fixture("kalshi", "cricket")
+            right = fixture("polymarket_intl", "basketball", teams=teams, fmt=fmt)
+            right.key = C.FixtureKey(right.key.date, right.key.teams, right.key.gender,
+                                     right.key.fmt, sport="basketball")
+            accepted, review, unmatched = M.match_fixtures([left, right])
+            self.assertEqual(accepted, [])
+            self.assertEqual(review, [])
+            self.assertEqual(unmatched, [left, right])
+            self.assertFalse(M._recall_candidate(left, right)[0])
+
+    def test_non_cricket_canonical_fixture_id_includes_sport(self):
+        left, right = fixture("kalshi", "k"), fixture("polymarket_intl", "p")
+        for f in (left, right):
+            f.key = C.FixtureKey(f.key.date, f.key.teams, f.key.gender, f.key.fmt, sport="basketball")
+        accepted, _, _ = M.match_fixtures([left, right])
+        self.assertTrue(accepted[0].canonical_fixture_id.startswith("basketball:"))
+
     def test_womens_name_variants_are_reviewed_at_audit_recall_threshold(self):
         left = fixture("kalshi", "k")
         right = fixture("polymarket_intl", "p",

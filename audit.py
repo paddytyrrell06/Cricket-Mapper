@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 import itertools
+import json
 import re
 from collections import defaultdict
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any, Optional
@@ -14,6 +15,7 @@ from urllib.parse import urlparse
 
 import canonical as C
 import matching as M
+import settlement as S
 
 
 @dataclass
@@ -77,7 +79,8 @@ def _market_pair_id(match: M.MarketMatch) -> tuple[str, ...]:
     return (*pair, match.market_type, C.norm_team(match.outcome))
 
 
-def _quote_checks(rows: list[dict[str, str]], venues: list[str]) -> list[Check]:
+def _quote_checks(rows: list[dict[str, str]], venues: list[str],
+                  as_of: Optional[datetime] = None) -> list[Check]:
     priced_rows = [row for row in rows if any(f"{venue}_bid" in row for venue in venues)]
     if not priced_rows:
         return []
@@ -152,7 +155,6 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str]) -> list[Check]:
         ask_venue, best_ask = min(asks, key=lambda item: item[1]) if asks else ("", None)
         across_cross = any(bid > ask for bv, bid in bids for av, ask in asks if bv != av)
         is_crossed = local_cross or across_cross
-        crossed_count += int(is_crossed)
         kinds = (["within venue"] if local_cross else []) + (["across venues"] if across_cross else [])
         spread = best_ask - best_bid if best_bid is not None and best_ask is not None else None
         expected = {
@@ -162,6 +164,66 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str]) -> list[Check]:
             "cross_kind": " and ".join(kinds),
             "cross_gap": number_text(-spread if is_crossed and spread is not None else None),
         }
+        if "comparison_status" in row:
+            expected["observed_crossed"] = expected.pop("crossed")
+            expected["observed_cross_kind"] = expected.pop("cross_kind")
+            expected["observed_cross_gap"] = expected.pop("cross_gap")
+            pairs, problems = [], []
+            reference = as_of or datetime.now(timezone.utc)
+            for bid_venue, bid in bids:
+                for ask_venue, ask in asks:
+                    if bid_venue == ask_venue:
+                        continue
+                    stamps = []
+                    for venue in (bid_venue, ask_venue):
+                        try:
+                            stamp = datetime.fromisoformat(row.get(f"{venue}_quote_time", "").replace("Z", "+00:00"))
+                            stamps.append(stamp if stamp.tzinfo is not None else None)
+                        except ValueError:
+                            stamps.append(None)
+                    if any(stamp is None for stamp in stamps):
+                        problems.append("unknown")
+                        continue
+                    ages = [(reference - stamp).total_seconds() for stamp in stamps]
+                    if min(ages) < 0:
+                        problems.append("future")
+                    elif max(ages) > 300:
+                        problems.append("stale")
+                    elif abs((stamps[0] - stamps[1]).total_seconds()) > 30:
+                        problems.append("skewed")
+                    else:
+                        pairs.append((bid - ask, bid_venue, ask_venue, bid, ask))
+            quote_check = "fresh" if pairs else next((name for name in ("future", "stale", "skewed", "unknown")
+                                                       if name in problems), "unpriced")
+            compatible = row.get("comparison_status") == "compatible" and row.get("mapping_status") == "accepted"
+            profiles = []
+            for venue in venues:
+                if row.get(f"{venue}_status") != "Available":
+                    continue
+                try:
+                    profiles.append({"sport": row.get("sport", "cricket"),
+                                     "target_kind": "draw" if C.norm_team(row.get("canonical_outcome", "")) in {"draw", "tie"} else "team",
+                                     "status": row.get(f"{venue}_settlement_status", "unknown"),
+                                     "payouts": json.loads(row.get(f"{venue}_settlement_payouts", "{}")),
+                                     "policies": json.loads(row.get(f"{venue}_settlement_policies", "{}")),
+                                     "evidence": json.loads(row.get(f"{venue}_settlement_evidence", "[]"))})
+                except (ValueError, TypeError):
+                    invalid.append(f"{label}: invalid settlement evidence JSON")
+            if compatible and (len(profiles) < 2 or any(
+                    S.compare_profiles(left, right)["status"] != "compatible"
+                    for left, right in itertools.combinations(profiles, 2))):
+                invalid.append(f"{label}: compatible row has unverified or differing settlement profiles")
+            eligible = compatible and bool(pairs)
+            best = max(pairs, key=lambda pair: pair[0]) if eligible else None
+            is_crossed = best is not None and best[0] > 0
+            expected.update({"cross_eligible": str(eligible).lower(), "quote_check": quote_check,
+                             "crossed": str(is_crossed).lower(), "cross_kind": "across venues" if is_crossed else "",
+                             "cross_gap": number_text(best[0] if is_crossed else None),
+                             "eligible_bid": number_text(best[3]) if best else "",
+                             "eligible_ask": number_text(best[4]) if best else "",
+                             "eligible_bid_venue": best[1] if best else "",
+                             "eligible_ask_venue": best[2] if best else ""})
+        crossed_count += int(is_crossed)
         for field, value in expected.items():
             if row.get(field, "") != value:
                 inconsistent.append(f"{label}: {field} should be {value!r}")
@@ -187,16 +249,22 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
                   market_unmatched: list[C.Market],
                   wide_rows: list[dict[str, str]],
                   coverage_complete: dict[str, bool],
-                  venues: list[str]) -> tuple[bool, str, list[Check]]:
+                  venues: list[str], *,
+                  sport_coverage: Optional[dict[str, dict[str, bool]]] = None,
+                  as_of: Optional[datetime] = None
+                  ) -> tuple[bool, str, list[Check]]:
     checks: list[Check] = []
 
     complete_venues = [v for v in venues if coverage_complete.get(v, False)]
     incomplete = [v for v in venues if not coverage_complete.get(v, False)]
+    complete_sports = [sport for sport, states in (sport_coverage or {}).items()
+                       if sum(bool(states.get(venue)) for venue in venues) >= 2]
     checks.append(Check(
         "at least two venue collections complete",
-        len(complete_venues) >= 2,
+        bool(complete_sports) if sport_coverage is not None else len(complete_venues) >= 2,
         f"{len(complete_venues)}/{len(venues)} complete: "
-        + (", ".join(complete_venues) if complete_venues else "none"),
+        + (", ".join(complete_venues) if complete_venues else "none")
+        + (f"; complete sport scopes: {', '.join(complete_sports) or 'none'}" if sport_coverage is not None else ""),
     ))
     checks.append(Check("all venue coverage complete", not incomplete,
                         "complete" if not incomplete else ", ".join(incomplete),
@@ -244,6 +312,10 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
             bad_market_links.append(f"{match.m1.market_id}: type mismatch")
         if C.norm_team(match.m1.outcome) != C.norm_team(match.m2.outcome):
             bad_market_links.append(f"{match.m1.market_id}: outcome mismatch")
+        compatibility = S.compare_profiles(match.m1.extra.get("settlement"),
+                                            match.m2.extra.get("settlement"))
+        if compatibility["status"] != "compatible":
+            bad_market_links.append(f"{match.m1.market_id}: settlement {compatibility['status']}")
     checks.append(Check("accepted market pairs agree exactly",
                         not bad_market_links,
                         "all pairs agree" if not bad_market_links
@@ -271,6 +343,7 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
                C.norm_team(row.get("canonical_outcome", "")))
         row_keys.append(key)
         per_fixture.setdefault(key[0], []).append(row)
+        row_coverage = (sport_coverage or {}).get(row.get("sport", "cricket"), coverage_complete)
         available = 0
         for venue in venues:
             status = row.get(f"{venue}_status", "")
@@ -284,7 +357,7 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
                         venue, row.get(f"{venue}_url", ""),
                         row.get(f"{venue}_event_id", "")):
                     bad_rows.append(f"{key}: {venue} invalid public URL")
-            elif status == "Not currently open" and not coverage_complete.get(venue, False):
+            elif status == "Not currently open" and not row_coverage.get(venue, False):
                 bad_rows.append(f"{key}: false absence claim on {venue}")
             elif (status == "Not currently open" and
                   venue in reviewed_venues.get(key[0], set())):
@@ -298,12 +371,13 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
                         not bad_rows,
                         "all rows valid" if not bad_rows
                         else "; ".join(bad_rows[:15])))
-    checks.extend(_quote_checks(wide_rows, venues))
+    checks.extend(_quote_checks(wide_rows, venues, as_of=as_of))
 
     bad_outcomes: list[str] = []
     for fixture_id, rows in per_fixture.items():
         winners = [r for r in rows
-                   if r.get("canonical_market_type") == C.MATCH_WINNER]
+                   if r.get("canonical_market_type") == C.MATCH_WINNER
+                   and r.get("comparison_status", "compatible") == "compatible"]
         if not winners:
             continue
         outcomes = {C.norm_team(r.get("canonical_outcome", "")) for r in winners}
@@ -323,6 +397,8 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
     plausible: list[str] = []
     for left, right in itertools.combinations(fixture_unmatched, 2):
         if left.venue == right.venue:
+            continue
+        if left.key.sport != right.key.sport:
             continue
         if left.key.gender != right.key.gender:
             continue
@@ -387,13 +463,19 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
         (m.fixture.canonical_fixture_id, m.market_type, C.norm_team(m.outcome))
         for m in market_accepted
     }
-    actual_wide = set(row_keys)
+    actual_wide = {(row.get("canonical_fixture_id", ""),
+                    row.get("canonical_market_type", ""),
+                    C.norm_team(row.get("canonical_outcome", ""))) for row in wide_rows
+                   if row.get("comparison_status", "compatible") == "compatible"}
+    review_wide = {(m.fixture.canonical_fixture_id, m.market_type, C.norm_team(m.outcome))
+                   for m in market_review}
+    unexplained_rows = set(row_keys) - expected_wide - review_wide
     checks.append(Check("wide table is lossless relative to accepted links",
-                        actual_wide == expected_wide,
+                        actual_wide == expected_wide and not unexplained_rows,
                         f"expected={len(expected_wide)} actual={len(actual_wide)}"))
 
     passed = all(check.passed for check in checks if check.severity == "critical")
-    lines = ["Cricket exchange matching live-run safety audit", ""]
+    lines = ["Sports market terminal safety audit", ""]
     for check in checks:
         if check.passed:
             label = "PASS"

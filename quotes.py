@@ -25,6 +25,7 @@ import canonical as C
 
 CLOB = "https://clob.polymarket.com"
 PMUS = "https://gateway.polymarket.us"
+KALSHI = "https://external-api.kalshi.com/trade-api/v2"
 TIMEOUT = 8
 RETRIES = 2
 WORKERS = 4
@@ -256,9 +257,30 @@ def _book_quote(market: C.Market, book: dict, observed: str,
         prices[side] = (max(values) if side == "bids" else min(values)) if values else None
     if invalid:
         warnings.append(f"QUOTES polymarket_intl {asset}: invalid order-book level ignored")
-    _set_quote(market, prices["bids"], prices["asks"],
-               _iso_time(book.get("timestamp")) or observed,
+    market.extra["quote_exchange_time"] = _iso_time(book.get("timestamp"))
+    _set_quote(market, prices["bids"], prices["asks"], observed,
                f"{CLOB}/books token_id={asset}", empty=not invalid)
+
+
+def _live_kalshi(tickers: set[str]) -> tuple[dict[str, dict], list[str]]:
+    """Refresh selected contracts after discovery instead of using its older BBO."""
+    jobs = []
+    ordered = sorted(tickers)
+    for offset in range(0, len(ordered), 40):
+        batch = tuple(ordered[offset:offset + 40])
+        url = KALSHI + "/markets?" + urllib.parse.urlencode({
+            "tickers": ",".join(batch), "limit": len(batch),
+        })
+        jobs.append((batch, "GET", url, None))
+    refreshed, warnings = {}, []
+    for batch, status, body, observed in _run_requests(jobs):
+        if status != 200 or not isinstance(body, dict) or not isinstance(body.get("markets"), list):
+            warnings.append(f"QUOTES kalshi: refresh unavailable (HTTP {status}); discovery snapshot retained")
+            continue
+        for record in body["markets"]:
+            if isinstance(record, dict) and record.get("ticker") in batch:
+                refreshed[record["ticker"]] = {**record, "_collected_at_utc": observed}
+    return refreshed, warnings
 
 
 def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: bool,
@@ -289,6 +311,10 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
             assets[_key(market)] = _intl_asset(market, record)
         if live and market.venue == "polymarket_us" and record.get("slug"):
             us_slugs.add(str(record["slug"]))
+    fresh_kalshi, kalshi_warnings = (_live_kalshi({market.market_id for market in markets
+                                                if market.venue == "kalshi"})
+                                    if live else ({}, []))
+    warnings.extend(kalshi_warnings)
     books, us_quotes, network_warnings = (_live_books(set(assets.values()) - {""}, us_slugs)
                                          if live else ({}, {}, []))
     warnings.extend(network_warnings)
@@ -296,6 +322,8 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
     for market in markets:
         key = _key(market)
         record = records.get((market.venue, str(market.market_id)), {})
+        if live and market.venue == "kalshi":
+            record = fresh_kalshi.get(market.market_id, record)
         stamp = _raw_quote_time(record, collected_at)
         if not live and key in saved and key not in duplicate_saved:
             entry = saved[key]
@@ -304,14 +332,25 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
             _set_quote(market, bid, ask, _iso_time(entry.get("quote_time")),
                        str(entry.get("quote_source") or "saved quote snapshot"),
                        empty=entry.get("quote_status") == "empty")
+            market.extra["quote_exchange_time"] = _iso_time(entry.get("exchange_time"))
         elif not live and key in duplicate_saved:
             warnings.append(f"QUOTES {key}: conflicting saved quote entries")
         elif market.venue == "kalshi" and record:
+            if record.get("status") not in (None, "", "open", "active"):
+                warnings.append(f"QUOTES {key}: market is no longer open")
+                entries.append({"venue": market.venue, "market_id": str(market.market_id),
+                                "outcome": market.outcome, "bid": None, "ask": None,
+                                "quote_time": stamp, "quote_status": "unavailable",
+                                "quote_source": "Kalshi market no longer open"})
+                market.quote_time, market.quote_source = stamp, "Kalshi market no longer open"
+                continue
             warning_count = len(warnings)
             bid = _side_price(record.get("yes_bid_dollars"), record.get("yes_bid_size_fp"), str(key), warnings)
             ask = _side_price(record.get("yes_ask_dollars"), record.get("yes_ask_size_fp"), str(key), warnings)
             _set_quote(market, bid, ask, stamp,
-                       "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars",
+                       ("Kalshi refreshed market yes_bid_dollars/yes_ask_dollars"
+                        if market.market_id in fresh_kalshi else
+                        "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"),
                        empty=len(warnings) == warning_count and
                        ("yes_bid_dollars" in record or "yes_ask_dollars" in record))
         elif market.venue == "polymarket_us" and record:
@@ -351,5 +390,6 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
         entries.append({"venue": market.venue, "market_id": str(market.market_id),
                         "outcome": market.outcome, "bid": market.bid, "ask": market.ask,
                         "quote_time": market.quote_time, "quote_status": market.quote_status,
-                        "quote_source": market.quote_source})
+                        "quote_source": market.quote_source,
+                        "exchange_time": market.extra.get("quote_exchange_time", "")})
     return entries, list(dict.fromkeys(warnings))
