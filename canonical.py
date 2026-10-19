@@ -28,8 +28,8 @@ UNKNOWN = "unknown"
 KALSHI_SERIES: dict[str, tuple[str, str, str, str]] = {
     "KXHUNDREDMATCH":    ("M", "HUNDRED", "The Hundred", MATCH_WINNER),
     "KXWHUNDREDMATCH":   ("W", "HUNDRED", "The Hundred", MATCH_WINNER),
-    "KXODIMATCH":        ("M", "LISTA", "One-Day Cup", MATCH_WINNER),
-    "KXWODIMATCH":       ("W", "LISTA", "One-Day Cup", MATCH_WINNER),
+    "KXODIMATCH":        ("M", "LISTA", "", MATCH_WINNER),
+    "KXWODIMATCH":       ("W", "LISTA", "", MATCH_WINNER),
     "KXTESTMATCH":       ("M", "TEST", "Test", MATCH_WINNER),
     "KXWTESTMATCH":      ("W", "TEST", "Test", MATCH_WINNER),
     "KXT20MATCH":        ("M", "T20", "", MATCH_WINNER),
@@ -39,6 +39,7 @@ KALSHI_SERIES: dict[str, tuple[str, str, str, str]] = {
     "KXIPLGAME":         ("M", "T20", "Indian Premier League", MATCH_WINNER),
     "KXCOUNTYCHAMPMATCH": ("M", "FIRSTCLASS", "County Championship",
                            MATCH_WINNER),
+    "KXSSHIELDMATCH":    ("M", "FIRSTCLASS", "Sheffield Shield", MATCH_WINNER),
     "KXWT20TEAMTOTAL":   ("W", "T20", "", TEAM_TOTAL),
     "KXIPLTEAMTOTAL":    ("M", "T20", "Indian Premier League", TEAM_TOTAL),
     "KXIPLSIX":          ("M", "T20", "Indian Premier League", TOTAL_SIXES),
@@ -102,6 +103,11 @@ PM_LEAGUES: dict[str, tuple[str, str, str]] = {
     "ss":         ("M", "T20", "Super Smash"),
     "sm":         ("M", "T20", "Super Smash"),
     "maharaja":   ("M", "T20", "Maharaja Trophy"),
+    # Formats confirmed by the governing bodies' competition/match listings:
+    # https://www.cricket.com.au/matches/series/CA%3A4689/sheffield-shield-2026-27
+    # https://www.bcci.tv/matches/239985/More/squads
+    "shield":     ("M", "FIRSTCLASS", "Sheffield Shield"),
+    "ranji":      ("M", "FIRSTCLASS", "Ranji Trophy"),
 }
 
 
@@ -128,9 +134,36 @@ KALSHI_TICKER = re.compile(
     r"^(?P<series>KX[A-Z0-9]+?)-"
     r"(?P<yy>\d{2})(?P<mon>[A-Z]{3})(?P<dd>\d{2})"
     r"(?P<hhmm>\d{4})?"
-    r"(?P<teams>[A-Z0-9]{4,12})"
+    r"(?P<teams>[A-Z0-9]{4,})"
     r"-(?P<outcome>[A-Z0-9.]+)$"
 )
+
+KALSHI_EVENT_TICKER = re.compile(
+    r"^(?P<series>KX[A-Z0-9]+?)-"
+    r"(?P<yy>\d{2})(?P<mon>[A-Z]{3})(?P<dd>\d{2})"
+    r"(?P<hhmm>\d{4})?"
+    r"(?P<teams>[A-Z0-9]+(?:-[A-Z0-9]+)*)$"
+)
+
+
+def _kalshi_ticker_parts(market: dict) -> Optional[dict[str, str]]:
+    ticker = str(market.get("ticker") or "")
+    event_ticker = str(market.get("event_ticker") or "")
+    if event_ticker:
+        # Codes can contain hyphens, so the published event boundary is needed
+        # to distinguish the team pair from an outcome such as ART-B or SS-W.
+        event_match = KALSHI_EVENT_TICKER.fullmatch(event_ticker)
+        prefix = event_ticker + "-"
+        if not event_match or not ticker.startswith(prefix):
+            return None
+        outcome = ticker[len(prefix):]
+        if not re.fullmatch(r"[A-Z0-9]+(?:[.-][A-Z0-9]+)*", outcome):
+            return None
+        return {**{key: value or "" for key, value in event_match.groupdict().items()},
+                "outcome": outcome}
+    match = KALSHI_TICKER.fullmatch(ticker)
+    return ({key: value or "" for key, value in match.groupdict().items()}
+            if match else None)
 
 MONTHS = {m: i for i, m in enumerate(
     ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
@@ -343,9 +376,9 @@ def _gender_format_from_text(*parts: str) -> tuple[str, str]:
         fmt = "HUNDRED"
     elif re.search(r"\bt10\b", blob):
         fmt = "T10"
-    elif re.search(r"\bt20\b|twenty[ -]?20|\bipl\b|\blpl\b|\bpsl\b|\bbbl\b|\bsa20\b|\bcpl\b", blob):
+    elif re.search(r"\bt20s?\b|twenty[ -]?20|\bipl\b|\blpl\b|\bpsl\b|\bbbl\b|\bsa20\b|\bcpl\b", blob):
         fmt = "T20"
-    elif re.search(r"\bodi\b|one[- ]day|list[ -]?a", blob):
+    elif re.search(r"\bodis?\b|one[- ]day|list[ -]?a", blob):
         fmt = "LISTA"
     else:
         fmt = ""
@@ -386,6 +419,14 @@ def _infer_kalshi_meta(series: str, title: str, series_title: str
 
 def _event_scope(m: dict, fallback: str = "") -> str:
     return str(m.get("event_ticker") or m.get("_event_id") or fallback)
+
+
+def _kalshi_published_competition(market: dict) -> str:
+    match = re.search(
+        r"\b(?:men|women)(?:'s|s)?\s+professional\s+"
+        r"(?P<competition>.+?)\s+cricket match\b",
+        str(market.get("rules_primary") or ""), re.I)
+    return match.group("competition").strip() if match else ""
 
 
 _KALSHI_RULE_START = re.compile(
@@ -444,19 +485,22 @@ def parse_kalshi(markets: list[dict]) -> tuple[list[Fixture], list[Market],
 
 
     code_name: dict[tuple[str, str], set[str]] = defaultdict(set)
+    event_codes: dict[str, set[str]] = defaultdict(set)
     for market in markets:
-        match = KALSHI_TICKER.match(market.get("ticker") or "")
+        match = _kalshi_ticker_parts(market)
         if not match:
             continue
-        scope = _event_scope(market, match.group("teams"))
+        scope = _event_scope(market, match["teams"])
+        if match["outcome"] not in {"TIE", "DRAW"}:
+            event_codes[scope].add(match["outcome"])
         subtitle = str(market.get("yes_sub_title") or "").strip()
         if subtitle:
-            code_name[(scope, match.group("outcome"))].add(subtitle)
+            code_name[(scope, match["outcome"])].add(subtitle)
         title_teams = _teams_from_title(str(market.get("title") or ""))
-        codes = _split_codes(match.group("teams"), match.group("outcome"))
+        codes = _split_codes(match["teams"], match["outcome"])
         if len(title_teams) == 2 and len(codes) == 2 and subtitle:
             other_names = [n for n in title_teams if norm_team(n) != norm_team(subtitle)]
-            other_codes = [c for c in codes if c != match.group("outcome")]
+            other_codes = [c for c in codes if c != match["outcome"]]
             if len(other_names) == 1 and len(other_codes) == 1:
                 code_name[(scope, other_codes[0])].add(other_names[0])
 
@@ -474,6 +518,8 @@ def parse_kalshi(markets: list[dict]) -> tuple[list[Fixture], list[Market],
         inferred = False
         if meta:
             gender, fmt, competition, market_type = meta
+            if series in {"KXODIMATCH", "KXWODIMATCH"}:
+                competition = _kalshi_published_competition(market)
         else:
             inferred = True
             gender, fmt, competition, market_type = _infer_kalshi_meta(
@@ -501,25 +547,25 @@ def parse_kalshi(markets: list[dict]) -> tuple[list[Fixture], list[Market],
                 note="tournament outright, no fixture"))
             continue
 
-        match = KALSHI_TICKER.match(ticker)
+        match = _kalshi_ticker_parts(market)
         if not match:
             warnings.append(f"COVERAGE_INCOMPLETE kalshi: unparsed ticker {ticker}")
             continue
-        month = MONTHS.get(match.group("mon"), 0)
+        month = MONTHS.get(match["mon"], 0)
         if not month:
             warnings.append(f"COVERAGE_INCOMPLETE kalshi: bad month in {ticker}")
             continue
-        ticker_date = f"20{match.group('yy')}-{month:02d}-{match.group('dd')}"
-        hhmm = match.group("hhmm") or ""
+        ticker_date = f"20{match['yy']}-{month:02d}-{match['dd']}"
+        hhmm = match["hhmm"] or ""
         utc_date, utc_time, time_basis, time_error = _kalshi_start_utc_parts(market)
         date = utc_date or ticker_date
-        blob = match.group("teams")
-        outcome_code = match.group("outcome")
+        blob = match["teams"]
+        outcome_code = match["outcome"]
         scope = _event_scope(market, blob)
 
         names: list[str] = []
         notes: list[str] = []
-        codes = _split_codes(blob, outcome_code)
+        codes = _split_codes(blob, outcome_code, event_codes.get(scope, set()))
         for code in codes:
             found = code_name.get((scope, code), set())
             if len(found) == 1:
@@ -584,7 +630,14 @@ def parse_kalshi(markets: list[dict]) -> tuple[list[Fixture], list[Market],
     return list(fixtures.values()), out, warnings
 
 
-def _split_codes(blob: str, outcome: str) -> list[str]:
+def _split_codes(blob: str, outcome: str, known_codes: set[str] | None = None
+                 ) -> list[str]:
+    # Draw markets have no team code of their own. Use sibling outcome codes
+    # so an early draw record cannot create a different fixture key.
+    known = known_codes or set()
+    pairs = [(a, b) for a in known for b in known if a != b and a + b == blob]
+    if len(pairs) == 1:
+        return list(pairs[0])
     if outcome and outcome not in ("TIE", "DRAW") and len(blob) > len(outcome):
         if blob.endswith(outcome):
             return [blob[:-len(outcome)], outcome]
@@ -601,9 +654,11 @@ def _pm_fixture_tuple(match: re.Match) -> tuple[str, str, str, str]:
             match.group("b"), match.group("date"))
 
 
-def _pm_target_type(suffix: str) -> tuple[str, str]:
+def _pm_target_type(suffix: str, team_codes: tuple[str, ...] = ()) -> tuple[str, str]:
     if suffix in PM_SUFFIX:
         return PM_SUFFIX[suffix], ""
+    if suffix in (*team_codes, "draw", "tie"):
+        return MATCH_WINNER, suffix
     for prefix, market_type in (
         ("toss-match-double-", TOSS_MATCH_DOUBLE),
         ("most-sixes-", MOST_SIXES),
@@ -670,10 +725,14 @@ def parse_polymarket(markets: list[dict], venue: str
             warnings.append(f"COVERAGE_INCOMPLETE {venue}: inferred unmapped league {league}")
 
         suffix = match.group("suffix") or ""
-        market_type, target_code = _pm_target_type(suffix)
+        market_type, target_code = _pm_target_type(
+            suffix, (match.group("a"), match.group("b")))
         notes: list[str] = []
         if market_type == UNKNOWN:
             notes.append(f"unmapped suffix {suffix}")
+            warnings.append(
+                f"COVERAGE_INCOMPLETE {venue}: unmapped market suffix "
+                f"{suffix} for {slug}")
         if not fmt:
             notes.append("format not established")
 
@@ -766,9 +825,9 @@ def _pmus_gender_format(*text: str) -> tuple[str, str]:
         fmt = "HUNDRED"
     elif re.search(r"\bt10\b", blob):
         fmt = "T10"
-    elif re.search(r"\bt20\b|\btwenty20\b", blob):
+    elif re.search(r"\bt20s?\b|\btwenty20\b", blob):
         fmt = "T20"
-    elif re.search(r"\bodi\b|one[- ]day", blob):
+    elif re.search(r"\bodis?\b|one[- ]day", blob):
         fmt = "LISTA"
     else:
         fmt = ""

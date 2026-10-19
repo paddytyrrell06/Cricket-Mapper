@@ -22,6 +22,20 @@ The report shows its collection time and the coverage status for each venue. If 
 
 Venue links open the shared event page; the mapped team outcome is identified by its row and venue market ID.
 
+Use `python3 run.py --no-open` to generate the report without opening a browser.
+
+If a run is blocked, its specific failures appear in the terminal and in `.cricket_matching_build/data/audit_report.txt`. After fixing a parser or matching issue, replay those saved records without fetching again:
+
+```bash
+python3 run.py --no-open --snapshot-dir=.cricket_matching_build/data
+```
+
+Replay reports retain the original collection time and identify themselves as saved data. Missing or invalid snapshot files cannot count as complete venue coverage.
+
+Publication requires complete collection and parsing for at least two venues and all critical audit checks to pass. Unsupported market types keep the affected venue's coverage incomplete. A draw outcome offered by only one venue stays in the unmatched data; it does not block valid mappings for the teams.
+
+Run the offline regression tests with `python3 -m unittest discover -v`.
+
 
 The report compares currently open markets. If a venue completed successfully but a fixture is no longer present there, the cell is shown as `Not currently open`; this does not make venue coverage incomplete.
 # Cricket-Mapper

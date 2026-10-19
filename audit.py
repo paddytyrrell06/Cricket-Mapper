@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import itertools
 import re
+from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Optional
@@ -149,6 +150,18 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
     row_keys: list[tuple[str, str, str]] = []
     bad_rows: list[str] = []
     per_fixture: dict[str, list[dict[str, str]]] = {}
+    fixture_anchors: dict[tuple[str, str], set[str]] = defaultdict(set)
+    for match in fixture_accepted:
+        for fixture in match.by_venue.values():
+            fixture_anchors[(fixture.venue, fixture.venue_fixture_id)].add(
+                match.canonical_fixture_id)
+    reviewed_venues: dict[str, set[str]] = defaultdict(set)
+    for match in fixture_review:
+        anchors = {match.canonical_fixture_id}
+        for fixture in match.by_venue.values():
+            anchors.update(fixture_anchors.get((fixture.venue, fixture.venue_fixture_id), set()))
+        for anchor in anchors:
+            reviewed_venues[anchor].update(match.by_venue)
     for row in wide_rows:
         key = (row.get("canonical_fixture_id", ""),
                row.get("canonical_market_type", ""),
@@ -170,6 +183,9 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
                     bad_rows.append(f"{key}: {venue} invalid public URL")
             elif status == "Not currently open" and not coverage_complete.get(venue, False):
                 bad_rows.append(f"{key}: false absence claim on {venue}")
+            elif (status == "Not currently open" and
+                  venue in reviewed_venues.get(key[0], set())):
+                bad_rows.append(f"{key}: unresolved fixture candidate on {venue}")
         if available < 2:
             bad_rows.append(f"{key}: only {available} venues available")
     checks.append(Check("wide rows are unique",
@@ -235,12 +251,25 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
                         "none" if not plausible else "; ".join(plausible[:10])))
 
 
-    accepted_keys = {match.key for match in fixture_accepted}
+    markets_by_fixture: dict[tuple[str, str], list[C.Market]] = defaultdict(list)
+    confirmed_counterparts: dict[tuple[str, str], set[tuple[str, str]]] = defaultdict(set)
+    for market in markets:
+        markets_by_fixture[(market.venue, market.venue_fixture_id)].append(market)
+    for match in fixture_accepted:
+        sources = [(fixture.venue, fixture.venue_fixture_id)
+                   for fixture in match.by_venue.values()]
+        for source in sources:
+            confirmed_counterparts[source].update(other for other in sources if other != source)
     hidden_markets: list[str] = []
     for market in market_unmatched:
-        if (market.market_type == C.MATCH_WINNER and
-                market.fixture_key in accepted_keys and
-                C.norm_team(market.outcome)):
+        outcome = M._out_key(market)
+        if market.market_type != C.MATCH_WINNER or not outcome:
+            continue
+        # An outcome offered by only one venue (for example a draw) is legitimately
+        # unmatched. Only a published counterpart on a confirmed pair is stranded.
+        counterparts = confirmed_counterparts.get((market.venue, market.venue_fixture_id), set())
+        if any(candidate.market_type == C.MATCH_WINNER and M._out_key(candidate) == outcome
+               for source in counterparts for candidate in markets_by_fixture.get(source, [])):
             hidden_markets.append(
                 f"{market.venue} {market.market_id}: "
                 f"{market.outcome} on confirmed fixture")

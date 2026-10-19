@@ -5,7 +5,7 @@ from __future__ import annotations
 import csv
 import html
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
@@ -35,9 +35,25 @@ def _market_dict(market: Any) -> dict[str, str]:
 
 def build_wide_rows(accepted: list[Any], review: list[Any],
                     coverage_complete: dict[str, bool],
-                    venues: list[str]) -> list[dict[str, str]]:
+                    venues: list[str],
+                    fixture_review: Optional[list[Any]] = None) -> list[dict[str, str]]:
     rows: dict[tuple[str, str, str], dict[str, Any]] = {}
     review_venues: dict[tuple[str, str, str], set[str]] = defaultdict(set)
+    fixture_review_venues: dict[str, set[str]] = defaultdict(set)
+    accepted_anchors: dict[tuple[str, str], set[str]] = defaultdict(set)
+
+    for match in accepted:
+        for venue, market in ((match.venue_1, match.m1),
+                              (match.venue_2, match.m2)):
+            accepted_anchors[(venue, market.venue_fixture_id)].add(
+                match.fixture.canonical_fixture_id)
+
+    for match in fixture_review or []:
+        anchors = {match.canonical_fixture_id}
+        for venue, fixture in match.by_venue.items():
+            anchors.update(accepted_anchors.get((venue, fixture.venue_fixture_id), set()))
+        for canonical_fixture_id in anchors:
+            fixture_review_venues[canonical_fixture_id].update(match.by_venue)
 
     for match in review:
         key = (match.fixture.canonical_fixture_id, match.market_type, match.outcome)
@@ -83,7 +99,8 @@ def build_wide_rows(accepted: list[Any], review: list[Any],
             market = venue_markets.get(venue)
             if market:
                 status = "Available"
-            elif venue in review_venues.get(key, set()):
+            elif (venue in review_venues.get(key, set())
+                  or venue in fixture_review_venues.get(key[0], set())):
                 status = "Needs review"
             elif coverage_complete.get(venue, False):
                 status = "Not currently open"
@@ -165,6 +182,45 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str],
     three_count = sum(1 for r in rows if r["venues_available"] == "3")
     two_count = sum(1 for r in rows if r["venues_available"] == "2")
     quality = quality or {}
+    is_replay = str(quality.get("Run type", "")).upper() == "REPLAY"
+    source_time_unknown = str(quality.get("Source collection", "")).lower() == "unknown"
+    if is_replay:
+        page_title = "Cricket Exchange Matching · Snapshot Replay"
+        badge_label = "SNAPSHOT REPLAY"
+        heading = "Cricket Market Map Replay"
+        description = (
+            "Confirmed equivalent outcomes across Kalshi, Polymarket International "
+            "and Polymarket US, rebuilt from saved venue records. "
+            "Venue availability reflects the saved collection."
+        )
+        timestamp_label = ("Source collection time unavailable" if source_time_unknown
+                           else "Snapshot collected")
+        timestamp_value = ("" if source_time_unknown
+                           else generated_at.strftime('%d %b %Y, %H:%M:%S UTC'))
+        freshness_description = (
+            "This replay uses saved venue records. Report generation time is separate "
+            "from source collection time. Run <code>python3 run.py</code> to collect "
+            "current markets."
+        )
+        freshness_time = datetime.now(timezone.utc)
+        age_label = "Replay generated"
+    else:
+        page_title = "Cricket Exchange Matching · Live Report"
+        badge_label = "LIVE API REPORT"
+        heading = "Live Cricket Market Map"
+        description = (
+            "Confirmed equivalent outcomes across Kalshi, Polymarket International "
+            "and Polymarket US. This file is regenerated from live venue APIs on "
+            "every successful run."
+        )
+        timestamp_label = "Live collection completed"
+        timestamp_value = generated_at.strftime('%d %b %Y, %H:%M:%S UTC')
+        freshness_description = (
+            "This HTML is a point-in-time live snapshot. Run <code>python3 run.py</code> "
+            "again to refresh it."
+        )
+        freshness_time = generated_at
+        age_label = "Generated"
     quality_cards = "".join(
         f'<div class="quality-item"><span>{html.escape(label)}</span>'
         f'<strong>{html.escape(str(value))}</strong></div>'
@@ -192,10 +248,10 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str],
           <td>{_venue_cell(row, 'polymarket_us')}</td>
         </tr>''')
 
-    generated_iso = generated_at.isoformat()
+    generated_iso = freshness_time.isoformat()
     doc = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cricket Exchange Matching · Live Report</title>
+<title>{html.escape(page_title)}</title>
 <style>
 :root{{--bg:#07111f;--panel:#0d1b2a;--panel2:#12243a;--text:#edf4ff;--muted:#91a4bd;--line:#233a55;--accent:#5de1c2;--gold:#f1c75b;--danger:#ff7d8a}}
 *{{box-sizing:border-box}} body{{margin:0;background:linear-gradient(145deg,#06101d,#0a1830 55%,#07111f);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}
@@ -210,8 +266,8 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str],
 .market-title{{font-weight:650;margin:8px 0 4px;max-width:330px}} .id-label{{margin-top:7px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.45px}} .market-id{{max-width:300px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--muted);font:11px ui-monospace,SFMono-Regular,Menlo,monospace}} .open-link{{display:inline-block;margin-top:8px;color:var(--accent);text-decoration:none;font-weight:700}} .open-link:hover{{text-decoration:underline}} .event-note{{max-width:310px;margin-top:4px;color:var(--muted);font-size:11px}} .freshness{{display:flex;justify-content:space-between;gap:16px;align-items:center;margin:0 0 18px;padding:12px 14px;border:1px solid rgba(93,225,194,.28);border-radius:12px;background:rgba(93,225,194,.07)}} .freshness.stale{{border-color:rgba(241,199,91,.4);background:rgba(241,199,91,.08)}} .freshness strong{{color:var(--accent)}} .freshness.stale strong{{color:var(--gold)}} .empty{{padding:40px;text-align:center;color:var(--muted)}}
 footer{{color:var(--muted);margin-top:18px;font-size:12px}} @media(max-width:800px){{.hero{{display:block}}.stamp{{text-align:left;margin-top:10px}}.cards{{grid-template-columns:1fr 1fr}}.wrap{{padding:24px 14px}}}}
 </style></head><body><div class="wrap">
-<div class="hero"><div><div class="live-label">LIVE API REPORT</div><h1>Live Cricket Market Map</h1><p class="lede">Confirmed equivalent outcomes across Kalshi, Polymarket International and Polymarket US. This file is regenerated from live venue APIs on every successful run.</p></div><div class="stamp">Live collection completed<br><strong>{html.escape(generated_at.strftime('%d %b %Y, %H:%M:%S UTC'))}</strong></div></div>
-<div id="freshness" class="freshness"><div><strong id="reportAge">Calculating report age…</strong><div class="meta">This HTML is a point-in-time live snapshot. Run <code>python3 run.py</code> again to refresh it.</div></div><div class="meta">Venue links open shared event pages; outcome identity is shown in each row.</div></div>
+<div class="hero"><div><div class="live-label">{badge_label}</div><h1>{heading}</h1><p class="lede">{html.escape(description)}</p></div><div class="stamp">{timestamp_label}<br><strong>{html.escape(timestamp_value)}</strong></div></div>
+<div id="freshness" class="freshness"><div><strong id="reportAge">Calculating report age…</strong><div class="meta">{freshness_description}</div></div><div class="meta">Venue links open shared event pages; outcome identity is shown in each row.</div></div>
 <div class="cards"><div class="card"><strong>{fixture_count}</strong><span>cross-venue fixtures</span></div><div class="card"><strong>{len(rows)}</strong><span>mapped outcome rows</span></div><div class="card"><strong>{three_count}</strong><span>listed on all 3 venues</span></div><div class="card"><strong>{two_count}</strong><span>listed on exactly 2</span></div></div>
 <div class="coverage">{coverage_cards}</div><div class="quality">{quality_cards}</div>
 <div class="controls"><input id="search" placeholder="Search teams, competition, outcome or market ID…"><button class="filter active" data-filter="all">All rows</button><button class="filter" data-filter="3">All 3 venues</button><button class="filter" data-filter="2">Exactly 2 venues</button></div>
@@ -219,7 +275,7 @@ footer{{color:var(--muted);margin-top:18px;font-size:12px}} @media(max-width:800
 <footer>This file was published only after all critical safety checks passed. Incomplete venue coverage and unresolved candidates are shown explicitly and are never forced into accepted mappings. “Not currently open” appears only when that venue's collection and parsing completed successfully. Venue links intentionally open shared event pages; the specific mapped outcome is represented by the row and venue ID. Exact source records, review items, and audit diagnostics are stored in the adjacent <strong>data</strong> folder.</footer>
 </div><script>
 const search=document.getElementById('search'), rows=[...document.querySelectorAll('tbody tr')], empty=document.getElementById('empty');let venueFilter='all';
-const generatedAt=new Date('{html.escape(generated_iso, quote=True)}');const ageMinutes=Math.max(0,Math.floor((Date.now()-generatedAt.getTime())/60000));const age=document.getElementById('reportAge'),freshness=document.getElementById('freshness');if(ageMinutes<2){{age.textContent='Generated just now'}}else if(ageMinutes<60){{age.textContent=`Generated ${{ageMinutes}} minutes ago`}}else{{const hours=Math.floor(ageMinutes/60);age.textContent=`Generated ${{hours}} hour${{hours===1?'':'s'}} ago`;freshness.classList.add('stale')}}
+const generatedAt=new Date('{html.escape(generated_iso, quote=True)}');const ageLabel='{age_label}';const ageMinutes=Math.max(0,Math.floor((Date.now()-generatedAt.getTime())/60000));const age=document.getElementById('reportAge'),freshness=document.getElementById('freshness');if(ageMinutes<2){{age.textContent=ageLabel+' just now'}}else if(ageMinutes<60){{age.textContent=`${{ageLabel}} ${{ageMinutes}} minutes ago`}}else{{const hours=Math.floor(ageMinutes/60);age.textContent=`${{ageLabel}} ${{hours}} hour${{hours===1?'':'s'}} ago`;freshness.classList.add('stale')}}
 function apply(){{const q=search.value.trim().toLowerCase();let visible=0;rows.forEach(r=>{{const okText=!q||r.dataset.search.includes(q),okVenue=venueFilter==='all'||r.dataset.venues===venueFilter;r.hidden=!(okText&&okVenue);if(!r.hidden)visible++}});empty.hidden=visible!==0}}
 search.addEventListener('input',apply);document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');venueFilter=b.dataset.filter;apply()}}));
 </script></body></html>'''

@@ -37,6 +37,8 @@ def say(message: str) -> None:
 
 
 def prepare_build() -> None:
+    if PREVIOUS_DIR.exists() and not OUTPUT_DIR.exists():
+        PREVIOUS_DIR.replace(OUTPUT_DIR)
     if BUILD_DIR.exists():
         shutil.rmtree(BUILD_DIR)
     if PREVIOUS_DIR.exists():
@@ -79,43 +81,94 @@ def write_csv(path: Path, columns: list[str], rows: list[list]) -> None:
         writer.writerows(rows)
 
 
-def collect() -> tuple[dict, dict, list[str], dict]:
+def load_snapshot(snapshot_dir: Path) -> tuple[dict, dict, list[str], dict]:
+    """Read saved inputs before preparing the build, which may contain them."""
     raw: dict = {}
     status: dict = {}
     warnings: list[str] = []
     coverage: dict = {}
-
-
-    if SNAPSHOT_DIR is not None:
-        meta_path = SNAPSHOT_DIR / "collection_meta.json"
-        saved_meta = {}
-        if meta_path.exists():
-            try:
-                saved_meta = json.loads(meta_path.read_text(encoding="utf-8"))
-            except (OSError, ValueError):
+    saved_meta = {}
+    meta_path = snapshot_dir / "collection_meta.json"
+    if meta_path.exists():
+        try:
+            saved_meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            if not isinstance(saved_meta, dict):
                 saved_meta = {}
+        except (OSError, ValueError):
+            saved_meta = {}
+    for venue in VENUES:
+        source = snapshot_dir / f"raw_{venue}.json"
+        saved_coverage = saved_meta.get(venue)
+        coverage[venue] = dict(saved_coverage) if isinstance(saved_coverage, dict) else {
+            "complete": False,
+            "method": "snapshot_without_coverage_metadata",
+            "reason": "snapshot does not prove complete collection",
+        }
+        coverage[venue]["complete"] = coverage[venue].get("complete") is True
+        # Parsing is performed again; old parser findings are not collection failures.
+        collection_reason = coverage[venue].get("collection_reason")
+        if collection_reason is None:
+            collection_reason = str(coverage[venue].get("reason") or "").split(
+                "COVERAGE_INCOMPLETE", 1)[0].rstrip("; ")
+        coverage[venue]["reason"] = str(collection_reason)
+        for field in ("parse_complete", "mapping_coverage_complete"):
+            coverage[venue].pop(field, None)
+        try:
+            items = json.loads(source.read_text(encoding="utf-8"))
+            if not isinstance(items, list) or any(not isinstance(item, dict) for item in items):
+                raise ValueError("raw snapshot must contain a list of records")
+            raw[venue] = items
+            status[venue] = f"snapshot replay, {len(items)} records"
+        except (OSError, ValueError) as exc:
+            reason = "snapshot missing" if isinstance(exc, FileNotFoundError) else f"snapshot invalid: {exc}"
+            raw[venue] = []
+            status[venue] = reason
+            warnings.append(f"{venue}: {reason}")
+            coverage[venue].update(complete=False, reason=reason)
+        coverage[venue]["records"] = len(raw[venue])
+    return raw, status, warnings, coverage
+
+
+def snapshot_collection_time(snapshot_dir: Path) -> datetime | None:
+    meta_path = snapshot_dir / "snapshot_meta.json"
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        value = meta.get("collected_at_utc") if isinstance(meta, dict) else None
+    except (OSError, ValueError):
+        value = None
+    if not meta_path.exists():
+        # Older snapshots recorded the source timestamp only in the text report.
+        try:
+            value = next((line.split(maxsplit=1)[1]
+                          for line in (snapshot_dir / "run_report.txt").read_text(
+                              encoding="utf-8").splitlines()
+                          if line.startswith("data_fetched_utc ")), None)
+        except (OSError, IndexError):
+            value = None
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        return parsed.astimezone(timezone.utc) if parsed.tzinfo is not None else None
+    except ValueError:
+        return None
+
+
+def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
+            ) -> tuple[dict, dict, list[str], dict]:
+    if snapshot is None and SNAPSHOT_DIR is not None:
+        snapshot = load_snapshot(SNAPSHOT_DIR)
+    if snapshot is not None:
+        raw, status, warnings, coverage = snapshot
         for venue in VENUES:
-            source = SNAPSHOT_DIR / f"raw_{venue}.json"
-            if source.exists():
-                raw[venue] = json.loads(source.read_text(encoding="utf-8"))
-                status[venue] = f"snapshot replay, {len(raw[venue])} records"
-            else:
-                raw[venue] = []
-                status[venue] = "snapshot missing"
-                warnings.append(f"{venue}: snapshot missing")
-            coverage[venue] = saved_meta.get(venue) or {
-                "complete": False,
-                "method": "snapshot_without_coverage_metadata",
-                "reason": "snapshot does not prove complete collection",
-                "records": len(raw[venue]),
-            }
-            coverage[venue]["records"] = len(raw[venue])
             (DATA_DIR / f"raw_{venue}.json").write_text(
                 json.dumps(raw[venue], indent=2), encoding="utf-8")
         (DATA_DIR / "collection_meta.json").write_text(
             json.dumps(coverage, indent=2), encoding="utf-8")
         return raw, status, warnings, coverage
 
+    raw: dict = {}
+    status: dict = {}
+    warnings: list[str] = []
+    coverage: dict = {}
     try:
         import collectors
         collectors.COLLECTION_META.clear()
@@ -185,6 +238,9 @@ MAPPING_COLS = [
     "venue_2_title", "venue_2_url", "match_status", "match_confidence",
     "match_reason",
 ]
+REVIEW_COLS = MAPPING_COLS + [
+    "record_kind", "venue_1_fixture_id", "venue_2_fixture_id",
+]
 
 
 def mapping_row(match: M.MarketMatch) -> list:
@@ -201,16 +257,62 @@ def mapping_row(match: M.MarketMatch) -> list:
     ]
 
 
+def review_mapping_rows(market_review: list[M.MarketMatch],
+                        fixture_review: list[M.FixtureMatch],
+                        markets: list[C.Market]) -> list[list]:
+    rows = [mapping_row(match) + ["market", match.m1.venue_fixture_id,
+                                  match.m2.venue_fixture_id]
+            for match in market_review]
+    markets_by_fixture: dict[tuple[str, str], list[C.Market]] = {}
+    for market in markets:
+        markets_by_fixture.setdefault((market.venue, market.venue_fixture_id), []).append(market)
+
+    for match in fixture_review:
+        source_fields: list[str] = []
+        fixture_ids: list[str] = []
+        for venue, fixture in sorted(match.by_venue.items()):
+            fixture_ids.append(fixture.venue_fixture_id)
+            published_teams = f"{fixture.team_a} v {fixture.team_b}"
+            candidates = markets_by_fixture.get((venue, fixture.venue_fixture_id), [])
+            source = next((market for market in candidates
+                           if market.market_type == C.MATCH_WINNER),
+                          candidates[0] if candidates else None)
+            event_id = str((source.event_id if source else "") or
+                           fixture.extra.get("event_ticker") or "")
+            title = published_teams
+            if source and source.title:
+                title += f" | {source.title}"
+            source_fields.extend([
+                venue, event_id, "", "", title, source.url if source else "",
+            ])
+        rows.append([
+            match.canonical_fixture_id, match.key.date, match.start_time,
+            match.competition, match.key.gender, match.key.fmt,
+            match.team_a, match.team_b, "", "", *source_fields,
+            match.status, match.confidence, match.reason, "fixture", *fixture_ids,
+        ])
+    return rows
+
+
 def main() -> int:
     run_started = datetime.now(timezone.utc)
     mode = "snapshot replay" if SNAPSHOT_DIR is not None else "LIVE"
-    say("Cricket exchange matching — live run")
+    say(f"Cricket exchange matching — {mode.lower()}")
     say(f"Run started: {run_started.isoformat(timespec='seconds')}")
+    snapshot = load_snapshot(SNAPSHOT_DIR) if SNAPSHOT_DIR is not None else None
+    source_collected_at = (snapshot_collection_time(SNAPSHOT_DIR)
+                           if SNAPSHOT_DIR is not None else None)
     prepare_build()
 
-    say("\n[1/6] Collect all three venues")
-    raw, status, warnings, coverage = collect()
-    data_fetched_at = datetime.now(timezone.utc)
+    say("\n[1/6] " + ("Load saved venue data" if snapshot is not None
+                         else "Collect all three venues"))
+    raw, status, warnings, coverage = collect(snapshot)
+    data_fetched_at = source_collected_at or datetime.now(timezone.utc)
+    source_time_known = SNAPSHOT_DIR is None or source_collected_at is not None
+    (DATA_DIR / "snapshot_meta.json").write_text(json.dumps({
+        "collected_at_utc": (data_fetched_at.isoformat(timespec="seconds")
+                             if source_time_known else None),
+    }, indent=2), encoding="utf-8")
 
     say("\n[2/6] Parse venue records")
     fixtures: list = []
@@ -229,8 +331,8 @@ def main() -> int:
                 parsed_fixtures, parsed_markets, parse_warnings = C.parse_polymarket(
                     items, venue)
         except Exception as exc:
-            parsed_fixtures, parsed_markets, parse_warnings = [], [], []
-            warnings.append(f"{venue}: parse failed {exc!r}")
+            parsed_fixtures, parsed_markets = [], []
+            parse_warnings = [f"COVERAGE_INCOMPLETE {venue}: parse failed {exc!r}"]
             parse_complete[venue] = False
         coverage_warnings = [
             str(w) for w in parse_warnings
@@ -256,6 +358,7 @@ def main() -> int:
         )
         coverage.setdefault(venue, {})["parse_complete"] = parse_complete[venue]
         coverage[venue]["mapping_coverage_complete"] = coverage_complete[venue]
+        coverage[venue]["collection_reason"] = str(coverage[venue].get("reason") or "").strip()
         if parse_incomplete_reasons[venue]:
             existing_reason = str(coverage[venue].get("reason") or "").strip()
             parse_reason = "; ".join(dict.fromkeys(parse_incomplete_reasons[venue]))
@@ -266,7 +369,11 @@ def main() -> int:
     for venue in VENUES:
         if not coverage_complete[venue]:
             reason = str(coverage.get(venue, {}).get("reason") or "unspecified").strip()
-            say(f"  {venue} coverage incomplete: {reason}")
+            reasons = reason.split("; ")
+            preview = "; ".join(reasons[:3])
+            if len(reasons) > 3:
+                preview += f"; {len(reasons) - 3} more (see data/coverage_status.csv)"
+            say(f"  {venue} coverage incomplete: {preview}")
 
     say("\n[3/6] Match equivalent fixtures")
     fixture_accepted, fixture_review, fixture_unmatched = M.match_fixtures(fixtures)
@@ -289,31 +396,16 @@ def main() -> int:
         MAPPING_COLS,
         [mapping_row(match) for match in market_accepted],
     )
-    review_rows = [mapping_row(match) + ["market"] for match in market_review]
-    for fixture_match in fixture_review:
-        review_rows.append([
-            fixture_match.canonical_fixture_id,
-            fixture_match.key.date,
-            fixture_match.start_time,
-            fixture_match.competition,
-            fixture_match.key.gender,
-            fixture_match.key.fmt,
-            fixture_match.team_a,
-            fixture_match.team_b,
-            "", "", *[""] * 12,
-            fixture_match.status,
-            fixture_match.confidence,
-            fixture_match.reason,
-            "fixture",
-        ])
+    review_rows = review_mapping_rows(market_review, fixture_review, markets)
     write_csv(
         DATA_DIR / "review_queue.csv",
-        MAPPING_COLS + ["record_kind"],
+        REVIEW_COLS,
         review_rows,
     )
 
     wide_rows = P.build_wide_rows(
-        market_accepted, market_review, coverage_complete, VENUES)
+        market_accepted, market_review, coverage_complete, VENUES,
+        fixture_review=fixture_review)
     P.write_wide_csv(DATA_DIR / "market_map.csv", wide_rows, VENUES)
 
     unmatched_market_rows = []
@@ -377,7 +469,7 @@ def main() -> int:
         ] for venue in VENUES],
     )
 
-    say("\n[6/6] Audit the newly collected live result")
+    say("\n[6/6] Audit the result")
     audit_ok, audit_report, audit_checks = A.audit_runtime(
         fixtures, markets,
         fixture_accepted, fixture_review, fixture_unmatched,
@@ -401,15 +493,18 @@ def main() -> int:
         say(f"  PASS: all critical checks passed{suffix}")
     else:
         say(f"  FAIL: {len(critical_failures)} critical check(s) failed")
+        for check in critical_failures:
+            say(f"    {check.name}: {check.detail}")
 
     run_finished = datetime.now(timezone.utc)
     unique_fixtures = len({
         match.fixture.canonical_fixture_id for match in market_accepted
     })
     report_lines = [
-        "Cricket exchange matching — live run",
+        f"Cricket exchange matching — {mode.lower()}",
         f"run_started_utc  {run_started.isoformat(timespec='seconds')}",
-        f"data_fetched_utc {data_fetched_at.isoformat(timespec='seconds')}",
+        "data_fetched_utc " + (data_fetched_at.isoformat(timespec="seconds")
+                               if source_time_known else "unknown"),
         f"run_finished_utc {run_finished.isoformat(timespec='seconds')}",
         f"duration_seconds {(run_finished - run_started).total_seconds():.1f}",
         f"mode             {mode}",
@@ -424,7 +519,11 @@ def main() -> int:
             f"  {'':18} {status.get(venue, 'not run')}",
             f"  {'':18} {records} records, {fixture_count} fixtures, "
             f"{market_count} markets",
+            f"  {'':18} collection_complete={bool(coverage.get(venue, {}).get('complete'))}, "
+            f"parse_complete={parse_complete.get(venue, False)}",
         ])
+        if coverage.get(venue, {}).get("reason"):
+            report_lines.append(f"  {'':18} {coverage[venue]['reason']}")
     report_lines.extend([
         "",
         "RESULT",
@@ -456,6 +555,8 @@ def main() -> int:
         "Critical safety audit": "PASS",
         "Review queue": f"{review_count} item" + ("" if review_count == 1 else "s"),
     }
+    if not source_time_known:
+        quality["Source collection"] = "Unknown"
     P.write_html(
         BUILD_DIR / REPORT_NAME,
         wide_rows,
@@ -468,7 +569,7 @@ def main() -> int:
     publish_build()
 
     report_path = OUTPUT_DIR / REPORT_NAME
-    say("\nSUCCESS — latest audited live report published")
+    say(f"\nSUCCESS — audited {mode.lower()} report published")
     say(f"  {len(wide_rows)} mapped outcome rows across {unique_fixtures} fixtures")
     if advisories:
         say(f"  {len(advisories)} advisory finding(s); see output/data/audit_report.txt")

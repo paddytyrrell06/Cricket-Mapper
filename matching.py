@@ -160,7 +160,9 @@ def _pair_similarity(a: Fixture, b: Fixture) -> float:
     return weaker
 
 
-def _recall_candidate(a: Fixture, b: Fixture, threshold: float = 0.82) -> tuple[bool, float, str]:
+def _recall_candidate(a: Fixture, b: Fixture, threshold: float = 0.65) -> tuple[bool, float, str]:
+    # Review must retain the same plausible candidates checked by the safety audit.
+    # This threshold never authorises an accepted fixture or market link.
     weaker, stronger = _pair_similarity_components(a, b)
     ac = set(a.extra.get("team_codes") or [])
     bc = set(b.extra.get("team_codes") or [])
@@ -182,7 +184,7 @@ def match_fixtures(fixtures: list[Fixture]
 
     accepted: list[FixtureMatch] = []
     review: list[FixtureMatch] = []
-    consumed: set[int] = set()
+    linked_pairs: set[frozenset[int]] = set()
 
 
     for key, group in by_key.items():
@@ -193,58 +195,71 @@ def match_fixtures(fixtures: list[Fixture]
             continue
         for venue_a, venue_b in itertools.combinations(sorted(by_venue), 2):
             pair = by_venue[venue_a] + by_venue[venue_b]
-            fm = _fixture_match_from_group(key, pair)
             problems = _exact_group_problems(key, pair)
-            if problems:
-                fm.status, fm.confidence = "review", "low"
-                fm.reason = "; ".join(problems)
-                review.append(fm)
-            else:
-                alias_rules = sorted({
-                    str(alias.get("rule_id") or "")
-                    for fixture in pair
-                    for alias in (fixture.extra.get("trusted_aliases") or [])
-                    if alias.get("rule_id")
-                })
-                if alias_rules:
-                    fm.reason = ("exact agreement after trusted competition/date-scoped "
-                                 "team identity normalisation: " + ", ".join(alias_rules))
+            for left, right in itertools.product(by_venue[venue_a], by_venue[venue_b]):
+                fm = _fixture_match_from_group(key, [left, right])
+                if problems:
+                    fm.status, fm.confidence = "review", "low"
+                    fm.reason = "; ".join(problems)
+                    review.append(fm)
                 else:
-                    fm.reason = ("exact agreement on date, published teams, gender, "
-                                 "format and compatible metadata")
-                accepted.append(fm)
-        consumed.update(id(f) for f in group)
+                    alias_rules = sorted({
+                        str(alias.get("rule_id") or "")
+                        for fixture in (left, right)
+                        for alias in (fixture.extra.get("trusted_aliases") or [])
+                        if alias.get("rule_id")
+                    })
+                    if alias_rules:
+                        fm.reason = ("exact agreement after trusted competition/date-scoped "
+                                     "team identity normalisation: " + ", ".join(alias_rules))
+                    else:
+                        fm.reason = ("exact agreement on date, published teams, gender, "
+                                     "format and compatible metadata")
+                    accepted.append(fm)
+                linked_pairs.add(frozenset((id(left), id(right))))
 
-    remaining = [f for f in fixtures if id(f) not in consumed]
+    accepted_keys = {
+        id(fixture): match.key
+        for match in accepted
+        for fixture in match.by_venue.values()
+    }
+
+    def review_key(left: Fixture, right: Fixture) -> FixtureKey:
+        # Keep a possible third venue attached to the existing report fixture.
+        return accepted_keys.get(id(left), accepted_keys.get(id(right), left.key))
 
 
     by_loose: dict[tuple, list[Fixture]] = defaultdict(list)
-    for fixture in remaining:
+    for fixture in fixtures:
         by_loose[(fixture.key.date, fixture.key.teams)].append(fixture)
     for (_, teams), group in by_loose.items():
         if len({f.venue for f in group}) < 2 or len(teams) != 2:
             continue
-        reasons: list[str] = []
-        genders = {f.key.gender for f in group}
-        formats = {f.key.fmt for f in group}
-        if len(genders) > 1:
-            reasons.append(f"gender mismatch {sorted(genders)}")
-        if len(formats) > 1:
-            reasons.append(f"format mismatch {sorted(formats)}")
-        competitions = {_norm_competition(f.competition) for f in group if f.competition}
-        competitions.discard("")
-        if len(competitions) > 1:
-            reasons.append(f"competition mismatch {sorted(competitions)}")
-        fm = _fixture_match_from_group(group[0].key, group)
-        fm.status, fm.confidence = "review", "low"
-        fm.reason = "; ".join(reasons) or "same date and teams but unresolved metadata"
-        review.append(fm)
-        consumed.update(id(f) for f in group)
+        for left, right in itertools.combinations(group, 2):
+            pair_id = frozenset((id(left), id(right)))
+            if left.venue == right.venue or pair_id in linked_pairs:
+                continue
+            reasons: list[str] = []
+            genders = {left.key.gender, right.key.gender}
+            formats = {left.key.fmt, right.key.fmt}
+            if len(genders) > 1:
+                reasons.append(f"gender mismatch {sorted(genders)}")
+            if len(formats) > 1:
+                reasons.append(f"format mismatch {sorted(formats)}")
+            key = review_key(left, right)
+            reasons.extend(_exact_group_problems(key, [left, right]))
+            fm = _fixture_match_from_group(key, [left, right])
+            fm.status, fm.confidence = "review", "low"
+            fm.reason = ("; ".join(dict.fromkeys(reasons)) or
+                         "same date and teams but unresolved metadata")
+            review.append(fm)
+            linked_pairs.add(pair_id)
 
 
-    remaining = [f for f in fixtures if id(f) not in consumed]
     candidates: list[tuple[float, Fixture, Fixture, str]] = []
-    for a, b in itertools.combinations(remaining, 2):
+    for a, b in itertools.combinations(fixtures, 2):
+        if frozenset((id(a), id(b))) in linked_pairs:
+            continue
         if a.venue == b.venue or a.key.gender != b.key.gender:
             continue
         date_gap = _date_gap_days(a.key.date, b.key.date)
@@ -258,6 +273,8 @@ def match_fixtures(fixtures: list[Fixture]
         discrepancies: list[str] = []
         if date_gap:
             discrepancies.append(f"published dates differ by {date_gap} day")
+        if a.key.fmt != b.key.fmt:
+            discrepancies.append(f"format mismatch {sorted({a.key.fmt, b.key.fmt})}")
         competitions = {_norm_competition(a.competition),
                         _norm_competition(b.competition)} - {""}
         if len(competitions) > 1:
@@ -265,35 +282,34 @@ def match_fixtures(fixtures: list[Fixture]
         ta, tb = _time_minutes(a.start_time), _time_minutes(b.start_time)
         if ta is not None and tb is not None and _time_gap(ta, tb) > 30:
             discrepancies.append("published start times differ by more than 30 minutes")
+        discrepancies.extend(sorted({f.note for f in (a, b) if f.note}))
         detail = evidence
         if discrepancies:
             detail += "; " + "; ".join(discrepancies)
         candidates.append((score, a, b, detail))
 
-    candidate_counts: dict[int, int] = defaultdict(int)
+    candidate_counts: dict[tuple[int, str], int] = defaultdict(int)
     for _, a, b, _ in candidates:
-        candidate_counts[id(a)] += 1
-        candidate_counts[id(b)] += 1
+        candidate_counts[(id(a), b.venue)] += 1
+        candidate_counts[(id(b), a.venue)] += 1
     for score, a, b, evidence in sorted(candidates, key=lambda x: -x[0]):
-        if id(a) in consumed or id(b) in consumed:
-            continue
         reason = (f"probable team identity variant: {evidence} "
                   f"(weaker-team similarity {score:.2f})")
-        if candidate_counts[id(a)] > 1 or candidate_counts[id(b)] > 1:
+        if (candidate_counts[(id(a), b.venue)] > 1 or
+                candidate_counts[(id(b), a.venue)] > 1):
             reason += "; multiple candidate counterparts"
-        fm = _fixture_match_from_group(a.key, [a, b])
+        fm = _fixture_match_from_group(review_key(a, b), [a, b])
         fm.status, fm.confidence = "review", "low"
         fm.reason = reason
         review.append(fm)
-        consumed.update((id(a), id(b)))
 
     matched_fixture_ids = {
-        f.venue_fixture_id
+        id(f)
         for fm in accepted + review
         for f in fm.by_venue.values()
     }
     unmatched = [f for f in fixtures
-                 if f.venue_fixture_id not in matched_fixture_ids]
+                 if id(f) not in matched_fixture_ids]
     return accepted, review, unmatched
 
 
