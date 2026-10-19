@@ -16,6 +16,7 @@ import audit as A
 import canonical as C
 import matching as M
 import presentation as P
+import quotes as Q
 
 VENUES = ["kalshi", "polymarket_intl", "polymarket_us"]
 OUTPUT_DIR = Path("output")
@@ -152,6 +153,19 @@ def snapshot_collection_time(snapshot_dir: Path) -> datetime | None:
         return None
 
 
+def load_saved_quotes(snapshot_dir: Path) -> tuple[list[dict] | None, list[str]]:
+    path = snapshot_dir / "quotes.json"
+    if not path.exists():
+        return None, []
+    try:
+        entries = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(entries, list) or any(not isinstance(entry, dict) for entry in entries):
+            raise ValueError("quote snapshot must contain a list of records")
+        return entries, []
+    except (OSError, ValueError) as exc:
+        return [], [f"quote snapshot invalid: {exc}"]
+
+
 def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
             ) -> tuple[dict, dict, list[str], dict]:
     if snapshot is None and SNAPSHOT_DIR is not None:
@@ -196,6 +210,9 @@ def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
             result = fetchers[venue]()
             items = result[0] if isinstance(result, tuple) else result
             raw[venue] = items or []
+            observed_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+            for record in raw[venue]:
+                record["_collected_at_utc"] = observed_at
             coverage[venue] = dict(collectors.COLLECTION_META.get(venue) or {
                 "complete": False,
                 "method": "collector_without_coverage_metadata",
@@ -302,11 +319,14 @@ def main() -> int:
     snapshot = load_snapshot(SNAPSHOT_DIR) if SNAPSHOT_DIR is not None else None
     source_collected_at = (snapshot_collection_time(SNAPSHOT_DIR)
                            if SNAPSHOT_DIR is not None else None)
+    saved_quotes, snapshot_quote_warnings = (load_saved_quotes(SNAPSHOT_DIR)
+                                             if SNAPSHOT_DIR is not None else (None, []))
     prepare_build()
 
     say("\n[1/6] " + ("Load saved venue data" if snapshot is not None
                          else "Collect all three venues"))
     raw, status, warnings, coverage = collect(snapshot)
+    warnings.extend(snapshot_quote_warnings)
     data_fetched_at = source_collected_at or datetime.now(timezone.utc)
     source_time_known = SNAPSHOT_DIR is None or source_collected_at is not None
     (DATA_DIR / "snapshot_meta.json").write_text(json.dumps({
@@ -389,6 +409,21 @@ def main() -> int:
         f"  {len(market_accepted)} accepted venue-pair links, "
         f"{len(market_review)} review, {len(market_unmatched)} unmatched"
     )
+
+    say("  Collect bid / ask quotes for confirmed outcomes ...")
+    quote_markets = list({id(market): market
+                          for match in market_accepted
+                          for market in (match.m1, match.m2)}.values())
+    quote_entries, quote_warnings = Q.enrich_quotes(
+        quote_markets, raw, live=SNAPSHOT_DIR is None, saved_quotes=saved_quotes,
+        collected_at=(data_fetched_at.isoformat(timespec="seconds")
+                      if source_time_known else ""))
+    warnings.extend(quote_warnings)
+    (DATA_DIR / "quotes.json").write_text(
+        json.dumps(quote_entries, indent=2), encoding="utf-8")
+    two_sided_quotes = sum(market.bid is not None and market.ask is not None
+                           for market in quote_markets)
+    say(f"  {two_sided_quotes}/{len(quote_markets)} outcome quotes have both sides")
 
     say("\n[5/6] Build report data")
     write_csv(
@@ -529,11 +564,16 @@ def main() -> int:
         "RESULT",
         f"  confirmed fixtures       {unique_fixtures}",
         f"  mapped outcome rows      {len(wide_rows)}",
+        f"  two-sided outcome quotes {two_sided_quotes}/{len(quote_markets)}",
+        f"  crossed outcome rows     {sum(row.get('crossed') == 'true' for row in wide_rows)}",
         f"  fixture links requiring review {len(fixture_review)}",
         f"  market links requiring review  {len(market_review)}",
         f"  critical safety audit    {'PASS' if audit_ok else 'FAIL'}",
         f"  advisory findings        {len(advisories)}",
     ])
+    if snapshot_quote_warnings or quote_warnings:
+        report_lines.extend(["", "QUOTE WARNINGS"])
+        report_lines.extend(f"  {warning}" for warning in snapshot_quote_warnings + quote_warnings)
     if warnings:
         report_lines.extend(["", f"WARNINGS ({len(warnings)})"])
         report_lines.extend(f"  {warning}" for warning in warnings[:60])

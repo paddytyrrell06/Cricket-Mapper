@@ -155,6 +155,119 @@ class ReplayRunTests(unittest.TestCase):
     def output_metadata(self):
         return json.loads((self.output / "data" / "collection_meta.json").read_text())
 
+    def install_matched_markets(self):
+        key = R.C.FixtureKey("2026-10-22", frozenset({"australia", "new zealand"}),
+                             "W", "T20")
+        fixtures = [R.C.Fixture(key, venue, fixture_id, competition="International",
+                                start_time="08:15", team_a="Australia", team_b="New Zealand")
+                    for venue, fixture_id in (("kalshi", "k"), ("polymarket_intl", "p"))]
+        markets = []
+        for source in fixtures:
+            for outcome in ("Australia", "New Zealand"):
+                url = ("https://kalshi.com/markets/series/title/k" if source.venue == "kalshi"
+                       else "https://polymarket.com/event/p")
+                markets.append(R.C.Market(
+                    source.venue, source.venue_fixture_id, source.key, R.C.MATCH_WINNER,
+                    outcome, market_id=f"{source.venue}:{outcome}",
+                    event_id=source.venue_fixture_id, title=f"{outcome} wins", url=url,
+                ))
+        unmatched = R.C.Market("kalshi", "k", key, R.C.TOSS_WINNER, "Australia",
+                               market_id="unmatched-toss")
+        self.kalshi_parser.return_value = ([fixtures[0]], markets[:2] + [unmatched], [])
+        self.stack.enter_context(patch.object(
+            R.C, "parse_polymarket", return_value=([fixtures[1]], markets[2:], [])))
+        return markets, unmatched
+
+    def saved_quotes(self, markets, *, bid="0.4000", ask="0.6000"):
+        return [{"venue": market.venue, "market_id": market.market_id,
+                 "outcome": market.outcome, "bid": bid, "ask": ask,
+                 "quote_time": "2026-10-18T05:01:00Z", "quote_status": "available",
+                 "quote_source": "saved public order book"}
+                for market in markets]
+
+    def output_rows(self):
+        with (self.output / "data" / "market_map.csv").open(newline="") as handle:
+            return list(csv.DictReader(handle))
+
+    def test_quote_snapshot_inside_build_replays_offline_before_cleanup(self):
+        self.write_snapshot(self.data)
+        markets, unmatched = self.install_matched_markets()
+        entries = self.saved_quotes(markets + [unmatched])
+        (self.data / "quotes.json").write_text(json.dumps(entries), encoding="utf-8")
+        with patch.object(R, "SNAPSHOT_DIR", self.data), patch.object(
+                R.Q, "_request_json", side_effect=AssertionError("replay made an HTTP request")) as request:
+            self.assertEqual(R.main(), 0)
+        request.assert_not_called()
+        saved = json.loads((self.output / "data" / "quotes.json").read_text())
+        self.assertEqual(len(saved), 4)
+        self.assertNotIn(unmatched.market_id, {entry["market_id"] for entry in saved})
+        self.assertTrue(all(entry["bid"] == "0.4" and entry["ask"] == "0.6" for entry in saved))
+        self.assertTrue(all(entry["quote_time"] == "2026-10-18T05:01:00+00:00" for entry in saved))
+        self.assertEqual(len(self.output_rows()), 2)
+        for row in self.output_rows():
+            for venue in ("kalshi", "polymarket_intl"):
+                self.assertEqual(row[f"{venue}_bid"], "0.4")
+                self.assertEqual(row[f"{venue}_ask"], "0.6")
+                self.assertEqual(row[f"{venue}_quote_source"], "saved public order book")
+        self.assertIsNone(unmatched.bid)
+
+    def test_invalid_quote_json_warns_without_blocking_fixture_mapping(self):
+        self.write_snapshot()
+        self.install_matched_markets()
+        for content in ("{", "{}", "[1]"):
+            with self.subTest(content=content):
+                (self.source / "quotes.json").write_text(content, encoding="utf-8")
+                with patch.object(R.Q, "_request_json") as request:
+                    self.assertEqual(R.main(), 0)
+                request.assert_not_called()
+                self.assertEqual(len(self.output_rows()), 2)
+                self.assertIn("quote snapshot invalid", (self.output / "data" / "run_report.txt").read_text())
+                self.assertTrue(all(row["polymarket_intl_quote_status"] == "unavailable"
+                                    for row in self.output_rows()))
+
+    def test_invalid_saved_probability_is_explicit_and_nonfatal(self):
+        self.write_snapshot()
+        markets, _ = self.install_matched_markets()
+        entries = self.saved_quotes(markets)
+        entries[0]["bid"] = "NaN"
+        (self.source / "quotes.json").write_text(json.dumps(entries), encoding="utf-8")
+        with patch.object(R.Q, "_request_json") as request:
+            self.assertEqual(R.main(), 0)
+        request.assert_not_called()
+        row = next(row for row in self.output_rows() if row["canonical_outcome"] == "australia")
+        self.assertEqual(row["kalshi_bid"], "")
+        self.assertEqual(row["kalshi_ask"], "0.6")
+        self.assertEqual(row["kalshi_quote_status"], "one-sided")
+        self.assertIn("invalid price outside finite 0..1", (self.output / "data" / "run_report.txt").read_text())
+
+    def test_failed_live_quote_requests_leave_confirmed_mapping_available(self):
+        markets, unmatched = self.install_matched_markets()
+        raw = {venue: [] for venue in R.VENUES}
+        for index, item in enumerate(markets):
+            if item.venue == "kalshi":
+                raw[item.venue].append({"ticker": item.market_id,
+                                        "yes_bid_dollars": "0.4", "yes_ask_dollars": "0.6"})
+            else:
+                raw[item.venue].append({"id": item.market_id,
+                                        "outcomes": [item.outcome, "Other"],
+                                        "clobTokenIds": [str(1000 + index), str(2000 + index)]})
+        coverage = {venue: {"complete": True, "method": "test collection", "reason": ""}
+                    for venue in R.VENUES}
+        result = (raw, dict.fromkeys(R.VENUES, "test collection"), [], coverage)
+        with patch.object(R, "SNAPSHOT_DIR", None), patch.object(R, "collect", return_value=result), patch.object(
+                R.Q, "_request_json", return_value=(503, None, "2026-10-19T10:53:00+00:00")) as request:
+            self.assertEqual(R.main(), 0)
+        request.assert_called_once()
+        self.assertEqual(request.call_args.args[1], "https://clob.polymarket.com/books")
+        self.assertEqual({entry["token_id"] for entry in request.call_args.args[2]}, {"1002", "1003"})
+        rows = self.output_rows()
+        self.assertEqual(len(rows), 2)
+        self.assertTrue(all(row["polymarket_intl_status"] == "Available" for row in rows))
+        self.assertTrue(all(row["polymarket_intl_quote_status"] == "unavailable" for row in rows))
+        self.assertTrue(all(row["kalshi_quote_status"] == "available" for row in rows))
+        self.assertIsNone(unmatched.bid)
+        self.assertIn("CLOB batch unavailable", (self.output / "data" / "run_report.txt").read_text())
+
     def test_replay_inside_build_is_loaded_before_build_is_replaced(self):
         self.write_snapshot(self.data)
         with patch.object(R, "SNAPSHOT_DIR", self.data):

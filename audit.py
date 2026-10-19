@@ -6,6 +6,8 @@ import itertools
 import re
 from collections import defaultdict
 from dataclasses import dataclass
+from datetime import datetime
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any, Optional
 from urllib.parse import urlparse
@@ -73,6 +75,107 @@ def _market_pair_id(match: M.MarketMatch) -> tuple[str, ...]:
     right = (match.venue_2, match.m2.market_id)
     pair = (*left, *right) if left <= right else (*right, *left)
     return (*pair, match.market_type, C.norm_team(match.outcome))
+
+
+def _quote_checks(rows: list[dict[str, str]], venues: list[str]) -> list[Check]:
+    priced_rows = [row for row in rows if any(f"{venue}_bid" in row for venue in venues)]
+    if not priced_rows:
+        return []
+    invalid: list[str] = []
+    inconsistent: list[str] = []
+    crossed_count = 0
+    quoted_count = 0
+    mapped_count = 0
+
+    def price(value: Any, label: str) -> Optional[Decimal]:
+        if value == "":
+            return None
+        try:
+            parsed = Decimal(value) if isinstance(value, str) else None
+        except InvalidOperation:
+            parsed = None
+        if parsed is None or not parsed.is_finite() or not Decimal(0) <= parsed <= Decimal(1):
+            invalid.append(f"{label}: invalid probability {value!r}")
+            return None
+        return parsed
+
+    def number_text(value: Optional[Decimal]) -> str:
+        return format(value.normalize(), "f") if value is not None else ""
+
+    for index, row in enumerate(priced_rows, start=1):
+        label = f"row {index} ({row.get('canonical_outcome', '')})"
+        bids: list[tuple[str, Decimal]] = []
+        asks: list[tuple[str, Decimal]] = []
+        local_cross = False
+        for venue in venues:
+            prefix = f"{label} {venue}"
+            bid = price(row.get(f"{venue}_bid", ""), f"{prefix} bid")
+            ask = price(row.get(f"{venue}_ask", ""), f"{prefix} ask")
+            if bid is not None:
+                bids.append((venue, bid))
+            if ask is not None:
+                asks.append((venue, ask))
+            mapped = row.get(f"{venue}_status") == "Available"
+            status = row.get(f"{venue}_quote_status", "")
+            source = row.get(f"{venue}_quote_source", "")
+            quote_time = row.get(f"{venue}_quote_time", "")
+            if not isinstance(source, str) or not isinstance(quote_time, str):
+                invalid.append(f"{prefix}: quote source and time must be strings")
+            if quote_time:
+                try:
+                    stamp = datetime.fromisoformat(str(quote_time).replace("Z", "+00:00"))
+                    if stamp.tzinfo is None:
+                        raise ValueError("timezone missing")
+                except ValueError:
+                    invalid.append(f"{prefix}: invalid quote time {quote_time!r}")
+            both = bid is not None and ask is not None
+            any_price = bid is not None or ask is not None
+            if mapped:
+                mapped_count += 1
+                quoted_count += int(both)
+                expected_statuses = ({"available"} if both else {"one-sided"} if any_price
+                                     else {"unavailable", "empty"})
+                if status not in expected_statuses:
+                    invalid.append(f"{prefix}: quote status {status!r} disagrees with prices")
+                if (any_price or status == "empty") and not (isinstance(source, str) and source.strip()):
+                    invalid.append(f"{prefix}: observed quote has no source")
+            elif any(row.get(f"{venue}_{field}", "") != ""
+                     for field in ("bid", "ask", "quote_status", "quote_source", "quote_time", "crossed")):
+                invalid.append(f"{prefix}: quote data on a market that is not Available")
+            is_crossed = both and bid > ask
+            local_cross = local_cross or is_crossed
+            expected_crossed = str(is_crossed).lower() if mapped else ""
+            if row.get(f"{venue}_crossed", "") != expected_crossed:
+                inconsistent.append(f"{prefix}: incorrect crossed flag")
+
+        bid_venue, best_bid = max(bids, key=lambda item: item[1]) if bids else ("", None)
+        ask_venue, best_ask = min(asks, key=lambda item: item[1]) if asks else ("", None)
+        across_cross = any(bid > ask for bv, bid in bids for av, ask in asks if bv != av)
+        is_crossed = local_cross or across_cross
+        crossed_count += int(is_crossed)
+        kinds = (["within venue"] if local_cross else []) + (["across venues"] if across_cross else [])
+        spread = best_ask - best_bid if best_bid is not None and best_ask is not None else None
+        expected = {
+            "best_bid": number_text(best_bid), "best_ask": number_text(best_ask),
+            "best_bid_venue": bid_venue, "best_ask_venue": ask_venue,
+            "best_spread": number_text(spread), "crossed": str(is_crossed).lower(),
+            "cross_kind": " and ".join(kinds),
+            "cross_gap": number_text(-spread if is_crossed and spread is not None else None),
+        }
+        for field, value in expected.items():
+            if row.get(field, "") != value:
+                inconsistent.append(f"{label}: {field} should be {value!r}")
+
+    return [
+        Check("quote prices, statuses and sources are valid", not invalid,
+              "; ".join(invalid[:15]) if invalid else "all quote fields valid"),
+        Check("quote summaries and crossed flags agree", not inconsistent,
+              "; ".join(inconsistent[:15]) if inconsistent else "all summaries agree"),
+        Check("no crossed quotes observed", crossed_count == 0,
+              f"{crossed_count} crossed outcome rows" if crossed_count else "none", "advisory"),
+        Check("all mapped outcomes have bid and ask", quoted_count == mapped_count,
+              f"{quoted_count}/{mapped_count} mapped venue outcomes have two-sided quotes", "advisory"),
+    ]
 
 
 def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
@@ -195,6 +298,7 @@ def audit_runtime(fixtures: list[C.Fixture], markets: list[C.Market],
                         not bad_rows,
                         "all rows valid" if not bad_rows
                         else "; ".join(bad_rows[:15])))
+    checks.extend(_quote_checks(wide_rows, venues))
 
     bad_outcomes: list[str] = []
     for fixture_id, rows in per_fixture.items():

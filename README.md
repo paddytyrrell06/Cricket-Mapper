@@ -22,6 +22,12 @@ The report shows its collection time and the coverage status for each venue. If 
 
 Venue links open the shared event page; the mapped team outcome is identified by its row and venue market ID.
 
+Each confirmed venue outcome includes its current bid and ask, displayed in cents per $1 payout. The report highlights the best bid and ask and flags a crossed outcome when a bid is strictly above an ask, either within one venue or across venues. Equal prices are not crossed. Use the crossed-only filter to inspect those rows. Crosses compare captured quotes before fees; prices can move between venue requests.
+
+Quotes come from Kalshi's dollar bid/ask fields, Polymarket International's outcome-token order books, and Polymarket US's public BBO. Opposite outcomes use the opposite side of the book (`bid = 1 - other ask`, `ask = 1 - other bid`) only when the published outcome mapping establishes the relationship. Missing sides stay missing. Last trades and outcome display prices are never substituted for bid/ask quotes.
+
+`output/data/market_map.csv` includes venue prices and crossed flags in probability units from 0 to 1. `output/data/quotes.json` preserves the normalized quotes, sources, and observation times for audited replay. A quote request failure leaves that price unavailable and keeps the confirmed fixture mapping intact.
+
 Use `python3 run.py --no-open` to generate the report without opening a browser.
 
 If a run is blocked, its specific failures appear in the terminal and in `.cricket_matching_build/data/audit_report.txt`. After fixing a parser or matching issue, replay those saved records without fetching again:

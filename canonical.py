@@ -327,6 +327,11 @@ class Market:
     raw_outcome: str = ""
     note: str = ""
     extra: dict = field(default_factory=dict)
+    bid: Optional[str] = None
+    ask: Optional[str] = None
+    quote_time: str = ""
+    quote_status: str = "unavailable"
+    quote_source: str = ""
 
 
 def _j(v: Any) -> Any:
