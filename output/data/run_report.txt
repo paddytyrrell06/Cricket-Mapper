@@ -1,14 +1,14 @@
 Sports market terminal — live
-run_started_utc  2026-10-19T23:32:31+00:00
-data_fetched_utc 2026-10-19T23:33:36+00:00
-run_finished_utc 2026-10-19T23:33:39+00:00
-duration_seconds 68.0
+run_started_utc  2026-10-19T23:44:44+00:00
+data_fetched_utc 2026-10-19T23:45:52+00:00
+run_finished_utc 2026-10-19T23:45:56+00:00
+duration_seconds 71.9
 mode             LIVE
 
 VENUE COVERAGE
   kalshi             COMPLETE
                      cricket: sports_filter_plus_series; basketball: KXNBAGAME_nested_open_events; football: KXNFLGAME_nested_open_events; hockey: KXNHLGAME_nested_open_events; baseball: KXMLBGAME_nested_open_events
-                     324 records, 155 fixtures, 314 markets
+                     328 records, 157 fixtures, 318 markets
                      collection_complete=True, parse_complete=True
   polymarket_intl    COMPLETE
                      cricket: events_keyset_tag_slug_cricket; basketball: events_series_id_10345_moneyline; football: events_series_id_12185_moneyline; hockey: events_series_id_10346_moneyline; baseball: events_series_id_3_moneyline
@@ -27,7 +27,7 @@ RESULT
   compatible outcome rows  212
   mapped outcome rows      248
   two-sided outcome quotes 487/498
-  crossed outcome rows     8
+  crossed outcome rows     7
   fixture links requiring review 17
   market links requiring review  42
   critical safety audit    PASS

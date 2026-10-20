@@ -20,7 +20,7 @@
     "no_sub_title": "San Francisco",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T03:15:00Z",
-    "open_interest_fp": "3278304.22",
+    "open_interest_fp": "3476423.00",
     "open_time": "2026-10-06T04:06:00Z",
     "previous_price_dollars": "0.7900",
     "previous_yes_ask_dollars": "0.7900",
@@ -43,12 +43,12 @@
     "ticker": "KXNFLGAME-26OCT19WASSF-SF",
     "title": "San Francisco wins",
     "updated_time": "2026-10-06T04:06:00.764221Z",
-    "volume_24h_fp": "3054230.61",
-    "volume_fp": "3499281.85",
+    "volume_24h_fp": "3186240.63",
+    "volume_fp": "3707879.64",
     "yes_ask_dollars": "0.7700",
-    "yes_ask_size_fp": "12140184.47",
+    "yes_ask_size_fp": "11938689.78",
     "yes_bid_dollars": "0.7600",
-    "yes_bid_size_fp": "896556.06",
+    "yes_bid_size_fp": "898389.29",
     "yes_sub_title": "San Francisco",
     "_event_title": "WAS Commanders vs SF 49ers",
     "_event_ticker": "KXNFLGAME-26OCT19WASSF",
@@ -167,7 +167,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -190,7 +190,7 @@
     "no_sub_title": "Washington",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T03:15:00Z",
-    "open_interest_fp": "5322572.23",
+    "open_interest_fp": "5607060.69",
     "open_time": "2026-10-06T04:06:00Z",
     "previous_price_dollars": "0.2200",
     "previous_yes_ask_dollars": "0.2200",
@@ -213,12 +213,12 @@
     "ticker": "KXNFLGAME-26OCT19WASSF-WAS",
     "title": "Washington wins",
     "updated_time": "2026-10-06T04:06:00.764221Z",
-    "volume_24h_fp": "5089696.58",
-    "volume_fp": "5542366.44",
+    "volume_24h_fp": "5221164.83",
+    "volume_fp": "5837480.28",
     "yes_ask_dollars": "0.2400",
-    "yes_ask_size_fp": "3584496.28",
+    "yes_ask_size_fp": "3351143.00",
     "yes_bid_dollars": "0.2300",
-    "yes_bid_size_fp": "335189.92",
+    "yes_bid_size_fp": "327434.09",
     "yes_sub_title": "Washington",
     "_event_title": "WAS Commanders vs SF 49ers",
     "_event_ticker": "KXNFLGAME-26OCT19WASSF",
@@ -337,7 +337,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -360,10 +360,10 @@
     "no_sub_title": "Chicago",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T03:15:00Z",
-    "open_interest_fp": "86766.91",
+    "open_interest_fp": "86979.40",
     "open_time": "2026-10-13T04:05:00Z",
-    "previous_price_dollars": "0.5800",
-    "previous_yes_ask_dollars": "0.5800",
+    "previous_price_dollars": "0.5900",
+    "previous_yes_ask_dollars": "0.5900",
     "previous_yes_bid_dollars": "0.5700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -383,12 +383,12 @@
     "ticker": "KXNFLGAME-26OCT22NECHI-CHI",
     "title": "Chicago wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "76468.26",
-    "volume_fp": "100570.85",
+    "volume_24h_fp": "75930.47",
+    "volume_fp": "100847.16",
     "yes_ask_dollars": "0.6100",
-    "yes_ask_size_fp": "614170.97",
+    "yes_ask_size_fp": "615323.55",
     "yes_bid_dollars": "0.6000",
-    "yes_bid_size_fp": "939.70",
+    "yes_bid_size_fp": "1032.79",
     "yes_sub_title": "Chicago",
     "_event_title": "New England vs Chicago",
     "_event_ticker": "KXNFLGAME-26OCT22NECHI",
@@ -449,7 +449,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -472,10 +472,10 @@
     "no_sub_title": "New England",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T03:15:00Z",
-    "open_interest_fp": "173982.25",
+    "open_interest_fp": "175381.23",
     "open_time": "2026-10-13T04:05:00Z",
-    "previous_price_dollars": "0.4400",
-    "previous_yes_ask_dollars": "0.4400",
+    "previous_price_dollars": "0.4300",
+    "previous_yes_ask_dollars": "0.4300",
     "previous_yes_bid_dollars": "0.4200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -495,12 +495,12 @@
     "ticker": "KXNFLGAME-26OCT22NECHI-NE",
     "title": "New England wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "136903.10",
-    "volume_fp": "201159.93",
+    "volume_24h_fp": "136852.01",
+    "volume_fp": "202655.61",
     "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "631868.42",
+    "yes_ask_size_fp": "632109.53",
     "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "32966.42",
+    "yes_bid_size_fp": "32867.72",
     "yes_sub_title": "New England",
     "_event_title": "New England vs Chicago",
     "_event_ticker": "KXNFLGAME-26OCT22NECHI",
@@ -561,7 +561,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -584,7 +584,7 @@
     "no_sub_title": "New Orleans",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T16:30:00Z",
-    "open_interest_fp": "27581.71",
+    "open_interest_fp": "27808.43",
     "open_time": "2026-10-13T04:05:00Z",
     "previous_price_dollars": "0.4600",
     "previous_yes_ask_dollars": "0.4600",
@@ -607,10 +607,10 @@
     "ticker": "KXNFLGAME-26OCT25PITNO-NO",
     "title": "New Orleans wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "7044.91",
-    "volume_fp": "31603.47",
+    "volume_24h_fp": "7241.93",
+    "volume_fp": "31830.19",
     "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "60952.96",
+    "yes_ask_size_fp": "63227.24",
     "yes_bid_dollars": "0.4000",
     "yes_bid_size_fp": "391.39",
     "yes_sub_title": "New Orleans",
@@ -659,7 +659,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -682,7 +682,7 @@
     "no_sub_title": "Pittsburgh",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T16:30:00Z",
-    "open_interest_fp": "23075.26",
+    "open_interest_fp": "23463.28",
     "open_time": "2026-10-13T04:05:00Z",
     "previous_price_dollars": "0.5500",
     "previous_yes_ask_dollars": "0.5500",
@@ -705,12 +705,12 @@
     "ticker": "KXNFLGAME-26OCT25PITNO-PIT",
     "title": "Pittsburgh wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "13352.75",
-    "volume_fp": "31476.85",
+    "volume_24h_fp": "13744.75",
+    "volume_fp": "31864.87",
     "yes_ask_dollars": "0.6200",
-    "yes_ask_size_fp": "9482.90",
+    "yes_ask_size_fp": "20385.31",
     "yes_bid_dollars": "0.6100",
-    "yes_bid_size_fp": "7.91",
+    "yes_bid_size_fp": "48.77",
     "yes_sub_title": "Pittsburgh",
     "_event_title": "Pittsburgh vs New Orleans",
     "_event_ticker": "KXNFLGAME-26OCT25PITNO",
@@ -757,7 +757,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -772,7 +772,7 @@
     "expected_expiration_time": "2026-10-25T20:00:00Z",
     "expiration_time": "2026-10-27T17:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5600",
+    "last_price_dollars": "0.5700",
     "latest_expiration_time": "2026-10-27T17:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4400",
@@ -780,10 +780,10 @@
     "no_sub_title": "Baltimore",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "8464.65",
+    "open_interest_fp": "8473.16",
     "open_time": "2026-10-13T04:06:00Z",
-    "previous_price_dollars": "0.5800",
-    "previous_yes_ask_dollars": "0.5900",
+    "previous_price_dollars": "0.6000",
+    "previous_yes_ask_dollars": "0.6000",
     "previous_yes_bid_dollars": "0.5800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -803,12 +803,12 @@
     "ticker": "KXNFLGAME-26OCT25CINBAL-BAL",
     "title": "Baltimore wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "3482.40",
-    "volume_fp": "13713.67",
+    "volume_24h_fp": "3480.58",
+    "volume_fp": "13722.18",
     "yes_ask_dollars": "0.5700",
-    "yes_ask_size_fp": "8566.68",
+    "yes_ask_size_fp": "11239.84",
     "yes_bid_dollars": "0.5600",
-    "yes_bid_size_fp": "0.38",
+    "yes_bid_size_fp": "60.38",
     "yes_sub_title": "Baltimore",
     "_event_title": "Cincinnati vs Baltimore",
     "_event_ticker": "KXNFLGAME-26OCT25CINBAL",
@@ -855,7 +855,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -873,12 +873,12 @@
     "last_price_dollars": "0.4500",
     "latest_expiration_time": "2026-10-27T17:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5700",
+    "no_ask_dollars": "0.5600",
     "no_bid_dollars": "0.5500",
     "no_sub_title": "Cincinnati",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "37535.37",
+    "open_interest_fp": "37634.10",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.4100",
     "previous_yes_ask_dollars": "0.4100",
@@ -901,12 +901,12 @@
     "ticker": "KXNFLGAME-26OCT25CINBAL-CIN",
     "title": "Cincinnati wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "11999.58",
-    "volume_fp": "47296.72",
+    "volume_24h_fp": "11992.05",
+    "volume_fp": "47395.45",
     "yes_ask_dollars": "0.4500",
-    "yes_ask_size_fp": "53073.76",
-    "yes_bid_dollars": "0.4300",
-    "yes_bid_size_fp": "235.36",
+    "yes_ask_size_fp": "20851.91",
+    "yes_bid_dollars": "0.4400",
+    "yes_bid_size_fp": "60.00",
     "yes_sub_title": "Cincinnati",
     "_event_title": "Cincinnati vs Baltimore",
     "_event_ticker": "KXNFLGAME-26OCT25CINBAL",
@@ -953,7 +953,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -999,7 +999,7 @@
     "ticker": "KXNFLGAME-26OCT25CLETEN-TEN",
     "title": "Tennessee wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "1926.12",
+    "volume_24h_fp": "1887.94",
     "volume_fp": "3202.10",
     "yes_ask_dollars": "0.4600",
     "yes_ask_size_fp": "57171.75",
@@ -1051,7 +1051,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1066,7 +1066,7 @@
     "expected_expiration_time": "2026-10-25T20:00:00Z",
     "expiration_time": "2026-10-27T17:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5400",
+    "last_price_dollars": "0.5500",
     "latest_expiration_time": "2026-10-27T17:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4600",
@@ -1074,7 +1074,7 @@
     "no_sub_title": "Cleveland",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "12764.49",
+    "open_interest_fp": "12798.49",
     "open_time": "2026-10-13T04:05:00Z",
     "previous_price_dollars": "0.5600",
     "previous_yes_ask_dollars": "0.5600",
@@ -1097,12 +1097,12 @@
     "ticker": "KXNFLGAME-26OCT25CLETEN-CLE",
     "title": "Cleveland wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "10596.40",
-    "volume_fp": "14917.80",
+    "volume_24h_fp": "10564.46",
+    "volume_fp": "14951.80",
     "yes_ask_dollars": "0.5500",
-    "yes_ask_size_fp": "172597.02",
+    "yes_ask_size_fp": "172567.85",
     "yes_bid_dollars": "0.5400",
-    "yes_bid_size_fp": "35.46",
+    "yes_bid_size_fp": "79.56",
     "yes_sub_title": "Cleveland",
     "_event_title": "Cleveland vs Tennessee",
     "_event_ticker": "KXNFLGAME-26OCT25CLETEN",
@@ -1149,7 +1149,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1172,10 +1172,10 @@
     "no_sub_title": "Minnesota",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "38171.94",
+    "open_interest_fp": "38197.32",
     "open_time": "2026-10-13T04:05:00Z",
     "previous_price_dollars": "0.7200",
-    "previous_yes_ask_dollars": "0.7100",
+    "previous_yes_ask_dollars": "0.7200",
     "previous_yes_bid_dollars": "0.7000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -1195,12 +1195,12 @@
     "ticker": "KXNFLGAME-26OCT25INDMIN-MIN",
     "title": "Minnesota wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "12440.18",
-    "volume_fp": "44237.68",
+    "volume_24h_fp": "12399.09",
+    "volume_fp": "44297.48",
     "yes_ask_dollars": "0.7000",
-    "yes_ask_size_fp": "3417.91",
+    "yes_ask_size_fp": "3392.53",
     "yes_bid_dollars": "0.6900",
-    "yes_bid_size_fp": "63693.15",
+    "yes_bid_size_fp": "57617.20",
     "yes_sub_title": "Minnesota",
     "_event_title": "Indianapolis vs Minnesota",
     "_event_ticker": "KXNFLGAME-26OCT25INDMIN",
@@ -1247,7 +1247,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1270,7 +1270,7 @@
     "no_sub_title": "Indianapolis",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "22623.12",
+    "open_interest_fp": "22700.77",
     "open_time": "2026-10-13T04:05:00Z",
     "previous_price_dollars": "0.3000",
     "previous_yes_ask_dollars": "0.3000",
@@ -1293,12 +1293,12 @@
     "ticker": "KXNFLGAME-26OCT25INDMIN-IND",
     "title": "Indianapolis wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "12378.03",
-    "volume_fp": "28051.05",
+    "volume_24h_fp": "11540.75",
+    "volume_fp": "28128.70",
     "yes_ask_dollars": "0.3000",
-    "yes_ask_size_fp": "108029.23",
+    "yes_ask_size_fp": "107168.86",
     "yes_bid_dollars": "0.2900",
-    "yes_bid_size_fp": "221.05",
+    "yes_bid_size_fp": "249.17",
     "yes_sub_title": "Indianapolis",
     "_event_title": "Indianapolis vs Minnesota",
     "_event_ticker": "KXNFLGAME-26OCT25INDMIN",
@@ -1345,7 +1345,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1368,7 +1368,7 @@
     "no_sub_title": "New York J",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "8249.53",
+    "open_interest_fp": "8256.72",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.6800",
     "previous_yes_ask_dollars": "0.6800",
@@ -1391,12 +1391,12 @@
     "ticker": "KXNFLGAME-26OCT25MIANYJ-NYJ",
     "title": "New York J wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "2861.38",
-    "volume_fp": "9067.86",
+    "volume_24h_fp": "2848.18",
+    "volume_fp": "9075.05",
     "yes_ask_dollars": "0.6800",
-    "yes_ask_size_fp": "117328.07",
+    "yes_ask_size_fp": "117318.88",
     "yes_bid_dollars": "0.6700",
-    "yes_bid_size_fp": "13098.03",
+    "yes_bid_size_fp": "13096.03",
     "yes_sub_title": "New York J",
     "_event_title": "Miami vs New York J",
     "_event_ticker": "KXNFLGAME-26OCT25MIANYJ",
@@ -1443,7 +1443,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1466,7 +1466,7 @@
     "no_sub_title": "Miami",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "15310.50",
+    "open_interest_fp": "15313.39",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.3400",
     "previous_yes_ask_dollars": "0.3400",
@@ -1489,10 +1489,10 @@
     "ticker": "KXNFLGAME-26OCT25MIANYJ-MIA",
     "title": "Miami wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "8671.62",
-    "volume_fp": "18538.27",
+    "volume_24h_fp": "8258.64",
+    "volume_fp": "18541.16",
     "yes_ask_dollars": "0.3300",
-    "yes_ask_size_fp": "174379.74",
+    "yes_ask_size_fp": "174376.85",
     "yes_bid_dollars": "0.3200",
     "yes_bid_size_fp": "12747.24",
     "yes_sub_title": "Miami",
@@ -1541,7 +1541,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1564,7 +1564,7 @@
     "no_sub_title": "Houston",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "19525.16",
+    "open_interest_fp": "19901.90",
     "open_time": "2026-10-13T04:05:00Z",
     "previous_price_dollars": "0.7800",
     "previous_yes_ask_dollars": "0.7800",
@@ -1587,12 +1587,12 @@
     "ticker": "KXNFLGAME-26OCT25NYGHOU-HOU",
     "title": "Houston wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "11459.53",
-    "volume_fp": "24961.51",
+    "volume_24h_fp": "11248.91",
+    "volume_fp": "25338.25",
     "yes_ask_dollars": "0.7900",
-    "yes_ask_size_fp": "2255.23",
+    "yes_ask_size_fp": "1831.46",
     "yes_bid_dollars": "0.7800",
-    "yes_bid_size_fp": "40885.05",
+    "yes_bid_size_fp": "40992.21",
     "yes_sub_title": "Houston",
     "_event_title": "New York G vs Houston",
     "_event_ticker": "KXNFLGAME-26OCT25NYGHOU",
@@ -1639,7 +1639,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1657,15 +1657,15 @@
     "last_price_dollars": "0.2200",
     "latest_expiration_time": "2026-10-27T17:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8000",
+    "no_ask_dollars": "0.7900",
     "no_bid_dollars": "0.7800",
     "no_sub_title": "New York G",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "187829.29",
+    "open_interest_fp": "188914.71",
     "open_time": "2026-10-13T04:05:00Z",
-    "previous_price_dollars": "0.2600",
-    "previous_yes_ask_dollars": "0.2600",
+    "previous_price_dollars": "0.2400",
+    "previous_yes_ask_dollars": "0.2400",
     "previous_yes_bid_dollars": "0.2300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -1685,12 +1685,12 @@
     "ticker": "KXNFLGAME-26OCT25NYGHOU-NYG",
     "title": "New York G wins",
     "updated_time": "2026-10-13T04:05:00.562467Z",
-    "volume_24h_fp": "81352.01",
-    "volume_fp": "241420.60",
+    "volume_24h_fp": "81281.00",
+    "volume_fp": "242506.02",
     "yes_ask_dollars": "0.2200",
-    "yes_ask_size_fp": "269134.88",
-    "yes_bid_dollars": "0.2000",
-    "yes_bid_size_fp": "15212.08",
+    "yes_ask_size_fp": "225847.90",
+    "yes_bid_dollars": "0.2100",
+    "yes_bid_size_fp": "646.61",
     "yes_sub_title": "New York G",
     "_event_title": "New York G vs Houston",
     "_event_ticker": "KXNFLGAME-26OCT25NYGHOU",
@@ -1737,7 +1737,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1760,11 +1760,11 @@
     "no_sub_title": "Atlanta",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "10521.37",
+    "open_interest_fp": "10544.51",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.3300",
     "previous_yes_ask_dollars": "0.3300",
-    "previous_yes_bid_dollars": "0.3200",
+    "previous_yes_bid_dollars": "0.3100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1783,10 +1783,10 @@
     "ticker": "KXNFLGAME-26OCT25SFATL-ATL",
     "title": "Atlanta wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "6437.77",
-    "volume_fp": "13176.16",
+    "volume_24h_fp": "6284.02",
+    "volume_fp": "13199.30",
     "yes_ask_dollars": "0.3300",
-    "yes_ask_size_fp": "483.64",
+    "yes_ask_size_fp": "460.50",
     "yes_bid_dollars": "0.3200",
     "yes_bid_size_fp": "174.06",
     "yes_sub_title": "Atlanta",
@@ -1835,7 +1835,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1858,7 +1858,7 @@
     "no_sub_title": "San Francisco",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "33550.79",
+    "open_interest_fp": "33949.68",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.6900",
     "previous_yes_ask_dollars": "0.6900",
@@ -1881,12 +1881,12 @@
     "ticker": "KXNFLGAME-26OCT25SFATL-SF",
     "title": "San Francisco wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "17973.31",
-    "volume_fp": "37202.53",
+    "volume_24h_fp": "17858.58",
+    "volume_fp": "37609.99",
     "yes_ask_dollars": "0.6800",
-    "yes_ask_size_fp": "10630.24",
+    "yes_ask_size_fp": "10231.47",
     "yes_bid_dollars": "0.6700",
-    "yes_bid_size_fp": "239.25",
+    "yes_bid_size_fp": "108.08",
     "yes_sub_title": "San Francisco",
     "_event_title": "San Francisco vs Atlanta",
     "_event_ticker": "KXNFLGAME-26OCT25SFATL",
@@ -1933,7 +1933,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -1956,11 +1956,11 @@
     "no_sub_title": "Carolina",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "10457.50",
+    "open_interest_fp": "10489.23",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.6300",
-    "previous_yes_ask_dollars": "0.6200",
-    "previous_yes_bid_dollars": "0.6100",
+    "previous_yes_ask_dollars": "0.6300",
+    "previous_yes_bid_dollars": "0.6200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1979,12 +1979,12 @@
     "ticker": "KXNFLGAME-26OCT25TBCAR-CAR",
     "title": "Carolina wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "7575.08",
-    "volume_fp": "12470.30",
+    "volume_24h_fp": "7566.45",
+    "volume_fp": "12502.03",
     "yes_ask_dollars": "0.6200",
-    "yes_ask_size_fp": "238741.62",
+    "yes_ask_size_fp": "238709.89",
     "yes_bid_dollars": "0.6100",
-    "yes_bid_size_fp": "33.80",
+    "yes_bid_size_fp": "79.57",
     "yes_sub_title": "Carolina",
     "_event_title": "Tampa Bay vs Carolina",
     "_event_ticker": "KXNFLGAME-26OCT25TBCAR",
@@ -2031,7 +2031,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2054,9 +2054,9 @@
     "no_sub_title": "Tampa Bay",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T20:00:00Z",
-    "open_interest_fp": "5345.63",
+    "open_interest_fp": "5382.51",
     "open_time": "2026-10-13T04:06:00Z",
-    "previous_price_dollars": "0.4000",
+    "previous_price_dollars": "0.3800",
     "previous_yes_ask_dollars": "0.4000",
     "previous_yes_bid_dollars": "0.3800",
     "price_level_structure": "linear_cent",
@@ -2077,10 +2077,10 @@
     "ticker": "KXNFLGAME-26OCT25TBCAR-TB",
     "title": "Tampa Bay wins",
     "updated_time": "2026-10-13T04:06:00.565631Z",
-    "volume_24h_fp": "3604.57",
-    "volume_fp": "6830.06",
+    "volume_24h_fp": "3556.22",
+    "volume_fp": "6866.94",
     "yes_ask_dollars": "0.3900",
-    "yes_ask_size_fp": "1226.43",
+    "yes_ask_size_fp": "1189.55",
     "yes_bid_dollars": "0.3800",
     "yes_bid_size_fp": "41354.68",
     "yes_sub_title": "Tampa Bay",
@@ -2129,7 +2129,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2152,11 +2152,11 @@
     "no_sub_title": "Arizona",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T23:05:00Z",
-    "open_interest_fp": "5755.91",
+    "open_interest_fp": "5828.26",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.3500",
     "previous_yes_ask_dollars": "0.3500",
-    "previous_yes_bid_dollars": "0.3300",
+    "previous_yes_bid_dollars": "0.3400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2175,12 +2175,12 @@
     "ticker": "KXNFLGAME-26OCT25DENARI-ARI",
     "title": "Arizona wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "3657.22",
-    "volume_fp": "7199.59",
+    "volume_24h_fp": "3507.87",
+    "volume_fp": "7271.94",
     "yes_ask_dollars": "0.3300",
-    "yes_ask_size_fp": "1103.33",
+    "yes_ask_size_fp": "1030.98",
     "yes_bid_dollars": "0.3200",
-    "yes_bid_size_fp": "82296.19",
+    "yes_bid_size_fp": "66237.19",
     "yes_sub_title": "Arizona",
     "_event_title": "Denver vs Arizona",
     "_event_ticker": "KXNFLGAME-26OCT25DENARI",
@@ -2227,7 +2227,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2250,7 +2250,7 @@
     "no_sub_title": "Denver",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T23:05:00Z",
-    "open_interest_fp": "19358.42",
+    "open_interest_fp": "19365.71",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.6800",
     "previous_yes_ask_dollars": "0.6800",
@@ -2273,10 +2273,10 @@
     "ticker": "KXNFLGAME-26OCT25DENARI-DEN",
     "title": "Denver wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "13562.84",
-    "volume_fp": "26787.08",
+    "volume_24h_fp": "13479.55",
+    "volume_fp": "26794.37",
     "yes_ask_dollars": "0.6700",
-    "yes_ask_size_fp": "150714.52",
+    "yes_ask_size_fp": "89334.23",
     "yes_bid_dollars": "0.6600",
     "yes_bid_size_fp": "181.89",
     "yes_sub_title": "Denver",
@@ -2325,7 +2325,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2340,15 +2340,15 @@
     "expected_expiration_time": "2026-10-25T23:25:00Z",
     "expiration_time": "2026-10-27T20:25:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6000",
+    "last_price_dollars": "0.6100",
     "latest_expiration_time": "2026-10-27T20:25:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4100",
-    "no_bid_dollars": "0.4000",
+    "no_ask_dollars": "0.4000",
+    "no_bid_dollars": "0.3900",
     "no_sub_title": "Detroit",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T23:25:00Z",
-    "open_interest_fp": "16702.49",
+    "open_interest_fp": "16786.48",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.6200",
     "previous_yes_ask_dollars": "0.6200",
@@ -2371,12 +2371,12 @@
     "ticker": "KXNFLGAME-26OCT25GBDET-DET",
     "title": "Detroit wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "10041.17",
-    "volume_fp": "18940.94",
-    "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "1267.46",
-    "yes_bid_dollars": "0.5900",
-    "yes_bid_size_fp": "30544.15",
+    "volume_24h_fp": "9996.44",
+    "volume_fp": "19420.73",
+    "yes_ask_dollars": "0.6100",
+    "yes_ask_size_fp": "67181.51",
+    "yes_bid_dollars": "0.6000",
+    "yes_bid_size_fp": "117.84",
     "yes_sub_title": "Detroit",
     "_event_title": "Green Bay vs Detroit",
     "_event_ticker": "KXNFLGAME-26OCT25GBDET",
@@ -2423,7 +2423,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2446,11 +2446,11 @@
     "no_sub_title": "Green Bay",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T23:25:00Z",
-    "open_interest_fp": "75884.15",
+    "open_interest_fp": "76262.82",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.4000",
     "previous_yes_ask_dollars": "0.4000",
-    "previous_yes_bid_dollars": "0.3800",
+    "previous_yes_bid_dollars": "0.3900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2469,12 +2469,12 @@
     "ticker": "KXNFLGAME-26OCT25GBDET-GB",
     "title": "Green Bay wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "60604.50",
-    "volume_fp": "94737.31",
+    "volume_24h_fp": "60784.06",
+    "volume_fp": "95115.98",
     "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "31713.27",
+    "yes_ask_size_fp": "26325.60",
     "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "20314.66",
+    "yes_bid_size_fp": "20108.72",
     "yes_sub_title": "Green Bay",
     "_event_title": "Green Bay vs Detroit",
     "_event_ticker": "KXNFLGAME-26OCT25GBDET",
@@ -2521,7 +2521,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2544,11 +2544,11 @@
     "no_sub_title": "Las Vegas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T23:25:00Z",
-    "open_interest_fp": "79707.13",
+    "open_interest_fp": "80872.75",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.3400",
     "previous_yes_ask_dollars": "0.3400",
-    "previous_yes_bid_dollars": "0.3100",
+    "previous_yes_bid_dollars": "0.3300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2567,10 +2567,10 @@
     "ticker": "KXNFLGAME-26OCT25LARLV-LV",
     "title": "Las Vegas wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "60944.99",
-    "volume_fp": "95132.43",
+    "volume_24h_fp": "60304.94",
+    "volume_fp": "96407.75",
     "yes_ask_dollars": "0.3400",
-    "yes_ask_size_fp": "237274.09",
+    "yes_ask_size_fp": "235997.69",
     "yes_bid_dollars": "0.3300",
     "yes_bid_size_fp": "17864.05",
     "yes_sub_title": "Las Vegas",
@@ -2619,7 +2619,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2642,11 +2642,11 @@
     "no_sub_title": "Los Angeles R",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T23:25:00Z",
-    "open_interest_fp": "9632.41",
+    "open_interest_fp": "9633.47",
     "open_time": "2026-10-13T04:06:00Z",
-    "previous_price_dollars": "0.7000",
-    "previous_yes_ask_dollars": "0.7000",
-    "previous_yes_bid_dollars": "0.6700",
+    "previous_price_dollars": "0.6800",
+    "previous_yes_ask_dollars": "0.6900",
+    "previous_yes_bid_dollars": "0.6800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2665,10 +2665,10 @@
     "ticker": "KXNFLGAME-26OCT25LARLV-LAR",
     "title": "Los Angeles R wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "4246.32",
-    "volume_fp": "14228.86",
+    "volume_24h_fp": "4062.40",
+    "volume_fp": "14229.92",
     "yes_ask_dollars": "0.6800",
-    "yes_ask_size_fp": "677868.07",
+    "yes_ask_size_fp": "685087.48",
     "yes_bid_dollars": "0.6700",
     "yes_bid_size_fp": "217.41",
     "yes_sub_title": "Los Angeles R",
@@ -2717,7 +2717,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2740,11 +2740,11 @@
     "no_sub_title": "Seattle",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T03:20:00Z",
-    "open_interest_fp": "15469.64",
+    "open_interest_fp": "15462.13",
     "open_time": "2026-10-13T04:06:00Z",
-    "previous_price_dollars": "0.5100",
-    "previous_yes_ask_dollars": "0.5100",
-    "previous_yes_bid_dollars": "0.4900",
+    "previous_price_dollars": "0.5300",
+    "previous_yes_ask_dollars": "0.5300",
+    "previous_yes_bid_dollars": "0.5000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2763,12 +2763,12 @@
     "ticker": "KXNFLGAME-26OCT25KCSEA-SEA",
     "title": "Seattle wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "13991.79",
-    "volume_fp": "19130.10",
+    "volume_24h_fp": "13806.51",
+    "volume_fp": "19306.19",
     "yes_ask_dollars": "0.5600",
-    "yes_ask_size_fp": "80695.88",
+    "yes_ask_size_fp": "104271.56",
     "yes_bid_dollars": "0.5400",
-    "yes_bid_size_fp": "141491.64",
+    "yes_bid_size_fp": "143488.67",
     "yes_sub_title": "Seattle",
     "_event_title": "Kansas City vs Seattle",
     "_event_ticker": "KXNFLGAME-26OCT25KCSEA",
@@ -2815,7 +2815,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2838,7 +2838,7 @@
     "no_sub_title": "Kansas City",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T03:20:00Z",
-    "open_interest_fp": "327984.91",
+    "open_interest_fp": "331733.46",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.5000",
     "previous_yes_ask_dollars": "0.5000",
@@ -2861,12 +2861,12 @@
     "ticker": "KXNFLGAME-26OCT25KCSEA-KC",
     "title": "Kansas City wins",
     "updated_time": "2026-10-13T04:06:00.407282Z",
-    "volume_24h_fp": "295160.02",
-    "volume_fp": "344949.41",
+    "volume_24h_fp": "296638.67",
+    "volume_fp": "348784.31",
     "yes_ask_dollars": "0.4600",
-    "yes_ask_size_fp": "129446.92",
+    "yes_ask_size_fp": "124379.03",
     "yes_bid_dollars": "0.4400",
-    "yes_bid_size_fp": "32498.41",
+    "yes_bid_size_fp": "36950.97",
     "yes_sub_title": "Kansas City",
     "_event_title": "Kansas City vs Seattle",
     "_event_ticker": "KXNFLGAME-26OCT25KCSEA",
@@ -2913,7 +2913,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -2936,7 +2936,7 @@
     "no_sub_title": "Philadelphia",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T03:15:00Z",
-    "open_interest_fp": "44257.08",
+    "open_interest_fp": "44300.79",
     "open_time": "2026-10-13T04:06:00Z",
     "previous_price_dollars": "0.3200",
     "previous_yes_ask_dollars": "0.3200",
@@ -2959,12 +2959,12 @@
     "ticker": "KXNFLGAME-26OCT26DALPHI-PHI",
     "title": "Philadelphia wins",
     "updated_time": "2026-10-13T04:06:00.565631Z",
-    "volume_24h_fp": "23142.71",
-    "volume_fp": "51963.49",
+    "volume_24h_fp": "22891.47",
+    "volume_fp": "52007.20",
     "yes_ask_dollars": "0.3500",
-    "yes_ask_size_fp": "28806.87",
+    "yes_ask_size_fp": "31161.87",
     "yes_bid_dollars": "0.3300",
-    "yes_bid_size_fp": "30002.54",
+    "yes_bid_size_fp": "30004.68",
     "yes_sub_title": "Philadelphia",
     "_event_title": "Dallas vs Philadelphia",
     "_event_ticker": "KXNFLGAME-26OCT26DALPHI",
@@ -3004,7 +3004,7 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   },
   {
     "can_close_early": true,
@@ -3022,14 +3022,14 @@
     "last_price_dollars": "0.6700",
     "latest_expiration_time": "2026-10-29T00:15:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.3400",
+    "no_ask_dollars": "0.3500",
     "no_bid_dollars": "0.3300",
     "no_sub_title": "Dallas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T03:15:00Z",
-    "open_interest_fp": "53917.66",
+    "open_interest_fp": "53981.78",
     "open_time": "2026-10-13T04:06:00Z",
-    "previous_price_dollars": "0.7000",
+    "previous_price_dollars": "0.6900",
     "previous_yes_ask_dollars": "0.7000",
     "previous_yes_bid_dollars": "0.6900",
     "price_level_structure": "linear_cent",
@@ -3050,12 +3050,12 @@
     "ticker": "KXNFLGAME-26OCT26DALPHI-DAL",
     "title": "Dallas wins",
     "updated_time": "2026-10-13T04:06:00.565631Z",
-    "volume_24h_fp": "14703.40",
-    "volume_fp": "60185.66",
+    "volume_24h_fp": "14604.53",
+    "volume_fp": "60249.78",
     "yes_ask_dollars": "0.6700",
-    "yes_ask_size_fp": "75608.49",
-    "yes_bid_dollars": "0.6600",
-    "yes_bid_size_fp": "7.91",
+    "yes_ask_size_fp": "75548.77",
+    "yes_bid_dollars": "0.6500",
+    "yes_bid_size_fp": "20507.65",
     "yes_sub_title": "Dallas",
     "_event_title": "Dallas vs Philadelphia",
     "_event_ticker": "KXNFLGAME-26OCT26DALPHI",
@@ -3095,6 +3095,6 @@
         "text": "Unless otherwise specified, a football game covers full regulation time, including any overtime. All overtime periods are included in determining the winner. If the game ends in a tie and no Tie strike is listed, Yes holders and No holders are each paid $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:32+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:47+00:00"
   }
 ]

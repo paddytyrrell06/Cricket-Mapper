@@ -416,7 +416,7 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str], covera
     age_label = "Replay generated" if replay else "Generated"
     source_note = ("Venue availability reflects the saved collection. Replay generation does not refresh source quotes."
                    if replay else "Point-in-time observations · run python3 run.py to refresh")
-    sport_labels = {"cricket": "Cricket", "basketball": "NBA", "football": "NFL", "hockey": "NHL", "baseball": "MLB"}
+    sport_labels = {"cricket": "Cricket", "soccer": "Soccer", "basketball": "NBA", "football": "NFL", "hockey": "NHL", "baseball": "MLB"}
     configured = quality.get("Sports", "")
     configured = {value.strip() for value in configured.split(",")} if isinstance(configured, str) and configured else set(sport_labels)
     present = {row.get("sport", "cricket") for row in rows}

@@ -281,6 +281,48 @@ class SettlementProfileTests(unittest.TestCase):
         b["policies"]["shootout"] = "excluded"
         self.assertEqual(S.compare_profiles(a, b)["status"], "incompatible")
 
+    def test_soccer_three_way_regulation_markets_have_equal_core_payouts(self):
+        kalshi_team = {
+            "rules_primary": (
+                "If Ipswich Town wins the match after 90 minutes plus stoppage time "
+                "(does not include extra time or penalties), then the market resolves Yes."
+            ),
+            "rules_secondary": (
+                'If the game ends in a tie, the market called "Tie" resolves to Yes. '
+                "If postponed beyond 48 hours, resolve to a fair price."
+            ),
+        }
+        polymarket_team = {
+            "description": (
+                'If Ipswich Town FC wins, this market will resolve to "Yes". '
+                'Otherwise, this market will resolve to "No". '
+                "This market refers only to the outcome within the first 90 minutes "
+                "of regular play plus stoppage time. If postponed, remain open until "
+                "the game has been completed."
+            )
+        }
+        kalshi = S.profile_market("kalshi", kalshi_team, sport="soccer",
+                                  outcome="Ipswich Town")
+        polymarket = S.profile_market("polymarket_intl", polymarket_team,
+                                      sport="soccer", outcome="Ipswich Town FC")
+        self.assertEqual(kalshi["payouts"]["draw"], "0")
+        self.assertEqual(polymarket["payouts"]["draw"], "0")
+        self.assertEqual(kalshi["policies"]["period"], "regulation_time")
+        self.assertEqual(polymarket["policies"]["period"], "regulation_time")
+        comparison = S.compare_profiles(kalshi, polymarket)
+        self.assertEqual(comparison["status"], "compatible")
+        self.assertNotEqual(comparison["contingency_status"], "aligned")
+
+    def test_soccer_draw_target_is_not_a_team_win(self):
+        kalshi = S.profile_market(
+            "kalshi", {"rules_primary": "If Tie is the result, the market resolves Yes.",
+                       "rules_secondary": "After 90 minutes plus stoppage time (does not include extra time or penalties)."},
+            sport="soccer", outcome="draw",
+        )
+        self.assertEqual(kalshi["payouts"]["draw"], "1")
+        self.assertEqual(kalshi["payouts"]["win"], "0")
+        self.assertEqual(kalshi["payouts"]["loss"], "0")
+
     def test_mlb_does_not_guess_extra_innings_from_official_final_statistics(self):
         kalshi = {"rules_primary": "If Cleveland wins the baseball game, the market resolves Yes.",
                   "_settlement_documents": [{"url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",

@@ -20,11 +20,11 @@
     "no_sub_title": "Cleveland",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T03:08:00Z",
-    "open_interest_fp": "705217.60",
+    "open_interest_fp": "756953.78",
     "open_time": "2026-10-18T22:55:00Z",
-    "previous_price_dollars": "0.4500",
-    "previous_yes_ask_dollars": "0.4500",
-    "previous_yes_bid_dollars": "0.4400",
+    "previous_price_dollars": "0.4200",
+    "previous_yes_ask_dollars": "0.4200",
+    "previous_yes_bid_dollars": "0.3900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -43,12 +43,12 @@
     "ticker": "KXMLBGAME-26OCT192008CLETB-CLE",
     "title": "Cleveland wins",
     "updated_time": "2026-10-18T22:55:00.169183Z",
-    "volume_24h_fp": "680690.14",
-    "volume_fp": "718967.45",
+    "volume_24h_fp": "753107.85",
+    "volume_fp": "771347.73",
     "yes_ask_dollars": "0.4200",
-    "yes_ask_size_fp": "4228252.32",
+    "yes_ask_size_fp": "4190368.75",
     "yes_bid_dollars": "0.4100",
-    "yes_bid_size_fp": "248501.15",
+    "yes_bid_size_fp": "246999.53",
     "yes_sub_title": "Cleveland",
     "_event_title": "Game 6: Cleveland vs Tampa Bay",
     "_event_ticker": "KXMLBGAME-26OCT192008CLETB",
@@ -138,7 +138,7 @@
         "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:36+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:52+00:00"
   },
   {
     "can_close_early": true,
@@ -161,10 +161,10 @@
     "no_sub_title": "Tampa Bay",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T03:08:00Z",
-    "open_interest_fp": "1666575.83",
+    "open_interest_fp": "1778755.91",
     "open_time": "2026-10-18T22:55:00Z",
-    "previous_price_dollars": "0.6500",
-    "previous_yes_ask_dollars": "0.6500",
+    "previous_price_dollars": "0.6400",
+    "previous_yes_ask_dollars": "0.6400",
     "previous_yes_bid_dollars": "0.5800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -184,12 +184,12 @@
     "ticker": "KXMLBGAME-26OCT192008CLETB-TB",
     "title": "Tampa Bay wins",
     "updated_time": "2026-10-18T22:55:00.169183Z",
-    "volume_24h_fp": "1712690.42",
-    "volume_fp": "1733663.65",
+    "volume_24h_fp": "1818776.55",
+    "volume_fp": "1847686.38",
     "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "3589755.31",
+    "yes_ask_size_fp": "3438555.07",
     "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "258701.06",
+    "yes_bid_size_fp": "250234.89",
     "yes_sub_title": "Tampa Bay",
     "_event_title": "Game 6: Cleveland vs Tampa Bay",
     "_event_ticker": "KXMLBGAME-26OCT192008CLETB",
@@ -279,6 +279,6 @@
         "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:36+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:52+00:00"
   }
 ]

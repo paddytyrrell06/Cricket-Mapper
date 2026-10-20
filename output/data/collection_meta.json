@@ -4,7 +4,7 @@
     "parse_complete": true,
     "mapping_coverage_complete": true,
     "method": "sport_adapters",
-    "records": 324,
+    "records": 328,
     "collection_reason": "",
     "reason": ""
   },
@@ -42,7 +42,7 @@
       "kalshi": {
         "complete": true,
         "method": "KXNBAGAME_nested_open_events",
-        "records": 90,
+        "records": 94,
         "reason": "",
         "collection_reason": "",
         "parse_complete": true,

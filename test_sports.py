@@ -91,6 +91,68 @@ def configured_sports_raw(sport, *, include_kalshi=True, include_polymarket=True
     return raw
 
 
+def configured_soccer_raw():
+    competition = "epl"
+    date = "2026-10-23"
+    start = "2026-10-23T19:00:00Z"
+    series = S.SOCCER_COMPETITIONS[competition]["series"]
+    event = f"{series}-26OCT23IPSNFO"
+    kalshi_rules = (
+        "If Ipswich Town wins the Ipswich Town vs Nottingham Forest professional EPL soccer game "
+        "originally scheduled for Oct 23, 2026 after 90 minutes plus stoppage time "
+        "(does not include extra time or penalties), then the market resolves to Yes."
+    )
+    secondary = (
+        'If the game ends in a tie, the market called "Tie" resolves to Yes. '
+        "If the game is cancelled or rescheduled to over 48 hours away, the market will resolve to a fair price."
+    )
+    kalshi = []
+    for code, name, title in (
+        ("IPS", "Ipswich Town", "Ipswich Town wins"),
+        ("NFO", "Nottingham Forest", "Nottingham Forest wins"),
+        ("TIE", "Tie", "Tie is the result"),
+    ):
+        kalshi.append({
+            "ticker": f"{event}-{code}", "event_ticker": event,
+            "market_type": "binary", "yes_sub_title": name, "title": title,
+            "status": "active", "occurrence_datetime": start,
+            "rules_primary": kalshi_rules, "rules_secondary": secondary,
+            "_queried_series": series, "_series_title": "English Premier League Game",
+            "_soccer_competition": competition,
+        })
+    teams = [
+        {"name": "Ipswich Town FC", "abbreviation": "ips", "league": competition,
+         "alias": "Ipswich"},
+        {"name": "Nottingham Forest FC", "abbreviation": "not", "league": competition,
+         "alias": "Forest"},
+    ]
+    descriptions = {
+        "ips": ("If Ipswich Town FC wins, this market will resolve to \"Yes\". "
+                "Otherwise, this market will resolve to \"No\". "
+                "This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time."),
+        "draw": ("If the game ends in a draw, this market will resolve to \"Yes\". "
+                 "Otherwise, this market will resolve to \"No\". "
+                 "This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time."),
+        "not": ("If Nottingham Forest FC wins, this market will resolve to \"Yes\". "
+                "Otherwise, this market will resolve to \"No\". "
+                "This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time."),
+    }
+    gamma = []
+    for suffix in ("ips", "draw", "not"):
+        market_slug = f"epl-ips-not-{date}-{suffix}"
+        gamma.append({
+            "id": f"pm-{suffix}", "slug": market_slug,
+            "_event_slug": f"epl-ips-not-{date}", "_event_id": "epl-event",
+            "_event_teams": teams, "_event_start_time": start,
+            "_native_league": competition, "_soccer_competition": competition,
+            "gameStartTime": start, "sportsMarketType": "moneyline",
+            "outcomes": '["Yes", "No"]', "clobTokenIds": '["100", "200"]',
+            "question": descriptions[suffix].split(".")[0],
+            "description": descriptions[suffix], "active": True, "closed": False,
+        })
+    return {"kalshi": kalshi, "polymarket_intl": gamma}
+
+
 def flatten_samples():
     event = kalshi_event()
     kalshi = []
@@ -320,7 +382,7 @@ class NbaCollectorTests(unittest.TestCase):
         self.assertTrue(warnings)
 
     def test_registry_exposes_two_venues_and_distinct_sport_adapters(self):
-        self.assertEqual(set(S.ADAPTERS), {"cricket", "basketball", "football", "hockey", "baseball"})
+        self.assertEqual(set(S.ADAPTERS), {"cricket", "soccer", "basketball", "football", "hockey", "baseball"})
         self.assertEqual(S.ADAPTERS["basketball"].label, "Basketball (NBA)")
         self.assertTrue(all(adapter.venues == ("kalshi", "polymarket_intl")
                             for adapter in S.ADAPTERS.values()))
@@ -346,6 +408,72 @@ class NbaCollectorTests(unittest.TestCase):
         self.assertEqual(fixtures, [])
         self.assertEqual(markets, [])
         self.assertTrue(any("unresolved" in warning for warning in warnings))
+
+    def test_soccer_gamma_collection_keeps_home_away_and_draw_but_not_props(self):
+        slug = "epl-ips-not-2026-10-23"
+        teams = [
+            {"name": "Ipswich Town FC", "abbreviation": "ips", "league": "epl"},
+            {"name": "Nottingham Forest FC", "abbreviation": "not", "league": "epl"},
+        ]
+        event = {
+            "id": "event-epl", "slug": slug, "title": "Ipswich Town FC vs Nottingham Forest FC",
+            "startTime": "2026-10-23T19:00:00Z", "teams": teams,
+            "markets": [
+                {"id": "home", "slug": slug + "-ips", "sportsMarketType": "moneyline",
+                 "outcomes": '["Yes", "No"]', "active": True},
+                {"id": "draw", "slug": slug + "-draw", "sportsMarketType": "moneyline",
+                 "outcomes": '["Yes", "No"]', "active": True},
+                {"id": "away", "slug": slug + "-not", "sportsMarketType": "moneyline",
+                 "outcomes": '["Yes", "No"]', "active": True},
+                {"id": "half", "slug": slug + "-halftime-result-ips", "sportsMarketType": "moneyline",
+                 "outcomes": '["Yes", "No"]', "active": True},
+            ],
+        }
+        with patch.object(S.K.http, "get", return_value=(200, [event])) as get:
+            records, coverage, warnings = S._collect_gamma_series(
+                league="epl", series_id=S.SOCCER_COMPETITIONS["epl"]["series_id"])
+        self.assertTrue(coverage["complete"])
+        self.assertEqual(warnings, [])
+        self.assertEqual({record["id"] for record in records}, {"home", "draw", "away"})
+        self.assertTrue(all(record["_event_slug"] == slug for record in records))
+        self.assertEqual(get.call_args.args[1]["series_id"], 10188)
+
+    def test_soccer_parser_maps_two_team_and_draw_markets_exactly(self):
+        raw = configured_soccer_raw()
+        fixtures, markets, warnings = S.ADAPTERS["soccer"].parse(raw)
+        self.assertEqual(warnings, [])
+        self.assertEqual(len(fixtures), 2)
+        self.assertEqual(len(markets), 6)
+        self.assertEqual({fixture.key.sport for fixture in fixtures}, {"soccer"})
+        self.assertEqual({fixture.key.fmt for fixture in fixtures}, {"SOCCER"})
+        pm_targets = {market.outcome for market in markets
+                      if market.venue == "polymarket_intl"}
+        self.assertEqual(pm_targets,
+                         {"Ipswich Town FC", "Nottingham Forest FC", "draw"})
+        self.assertTrue(all(market.extra.get("binary_target_market")
+                            for market in markets if market.venue == "polymarket_intl"))
+        accepted_fixtures, fixture_review, _ = M.match_fixtures(fixtures)
+        self.assertEqual((len(accepted_fixtures), len(fixture_review)), (1, 0))
+        accepted, review, unmatched = M.match_markets(accepted_fixtures, markets)
+        self.assertEqual((len(accepted), len(review), len(unmatched)), (3, 0, 0))
+        self.assertTrue(all(market.comparison_basis == "normal_completion"
+                            for market in accepted))
+        self.assertTrue(all(market.contingency_status != "aligned" for market in accepted))
+
+    def test_soccer_parser_rejects_unknown_competition_team_and_scope(self):
+        for mutate in (
+            lambda raw: raw["polymarket_intl"][0]["_event_teams"][0].update(league="lal"),
+            lambda raw: raw["polymarket_intl"][0].update(slug="epl-ips-not-2026-10-23-first-half-result-ips"),
+            lambda raw: raw["polymarket_intl"][0].update(outcomes='["Over", "Under"]'),
+        ):
+            raw = configured_soccer_raw()
+            raw["kalshi"] = []
+            raw["polymarket_intl"] = raw["polymarket_intl"][:1]
+            mutate(raw)
+            fixtures, markets, warnings = S.ADAPTERS["soccer"].parse(raw)
+            self.assertEqual(fixtures, [])
+            self.assertEqual(markets, [])
+            self.assertTrue(any(w.startswith("COVERAGE_INCOMPLETE") for w in warnings))
 
     def test_cricket_registry_requests_winner_scope_before_parsing_props(self):
         with patch.object(S.C, "parse_kalshi", return_value=([], [], [])) as kalshi, patch.object(

@@ -1,6 +1,6 @@
 # Sports Market Terminal
 
-A read-only comparison terminal for **Kalshi and Polymarket International**, covering cricket match winners and full-game winners in the NBA, NFL, NHL, and MLB. Polymarket US is excluded from the active scanner.
+A read-only comparison terminal for **Kalshi and Polymarket International**, covering cricket, soccer, and full-game winners in the NBA, NFL, NHL, and MLB. Soccer currently includes the English Premier League, LaLiga, Bundesliga, Serie A, Ligue 1, UEFA Champions League, and MLS. Polymarket US is excluded from the active scanner.
 
 ## Run
 
@@ -12,6 +12,7 @@ Python 3.9+ and the standard library are sufficient. No API keys or package inst
 
 ```bash
 python3 run.py --sports=cricket --no-open
+python3 run.py --sports=soccer --no-open
 python3 run.py --sports=basketball --no-open
 python3 run.py --sports=football,hockey,baseball --no-open
 ```
@@ -20,7 +21,7 @@ The generated terminal remains at `output/CricketMatchingReport.html` for compat
 
 ## Settlement compatibility
 
-Matching teams and dates is insufficient. A team contract paying zero on a draw is different from one paying 0.50. The scanner compares evidenced normal-completion payout states and sport-specific policies: cricket draw, tie-breaks and DLS; NFL tied games and overtime; NHL overtime and shootouts; MLB extra innings; and NBA overtime. Cancellation, postponement, abandonment and other exceptional-state differences appear as conditional caveats, rather than making otherwise matching normal-result terms look different. Missing normal-result evidence or genuinely different completed-game payouts remain review rows and cannot produce an eligible cross. Discretionary fair-price or refund language cannot establish a fixed equivalent payoff.
+Matching teams and dates is insufficient. A team contract paying zero on a draw is different from one paying 0.50. Soccer compares team-win and draw payouts within 90 minutes plus stoppage time; extra-time/penalty advancement is intentionally excluded. The scanner also compares cricket draw, tie-breaks and DLS; NFL tied games and overtime; NHL overtime and shootouts; MLB extra innings; and NBA overtime. Cancellation, postponement, abandonment and other exceptional-state differences appear as conditional caveats, rather than making otherwise matching normal-result terms look different. Missing normal-result evidence or genuinely different completed-game payouts remain review rows and cannot produce an eligible cross. Discretionary fair-price or refund language cannot establish a fixed equivalent payoff.
 
 This intentionally removes apparent opportunities caused by different contracts. For example, current NBA venue rules have different cancellation/postponement treatment even where both markets include overtime. A review row still shows both prices; it is not presented as an arbitrage.
 
@@ -28,7 +29,7 @@ Prices use exact decimals. A cross requires a bid strictly above a distinct venu
 
 ## Sources and expansion
 
-Cricket reuses the project's competition and team-normalization logic. NBA, NFL, NHL and MLB use their league-specific game series, published team metadata and separate exact team registries. Props, futures, unresolved team identities and conflicting start times are kept out of accepted comparisons. Sport identifiers form part of fixture identity, so similar names cannot link across sports.
+Cricket reuses the project's competition and team-normalization logic. Soccer initially covers seven high-activity competitions with league-scoped published club metadata and game-winner feeds. NBA, NFL, NHL and MLB use their league-specific game series and exact team registries. Props, futures, unresolved team identities and conflicting start times are kept out of accepted comparisons. Sport identifiers form part of fixture identity, so similar names cannot link across sports.
 
 The sport adapters, shared settlement model, matching, quote collection and audit provide the expansion points for additional sports. The supported scope is currently match winners, not every market type on either exchange.
 

@@ -25,7 +25,7 @@ Sports market terminal safety audit
 [PASS] quote summaries and crossed flags agree
        all summaries agree
 [ADVISORY] no crossed quotes observed
-       8 crossed outcome rows
+       7 crossed outcome rows
 [ADVISORY] all mapped outcomes have bid and ask
        479/496 mapped venue outcomes have two-sided quotes
 [PASS] match-winner fixtures contain both teams and no unknown outcomes
@@ -37,7 +37,7 @@ Sports market terminal safety audit
 [PASS] wide table is lossless relative to accepted links
        expected=212 actual=212
 
-Objects: 501 fixtures, 1026 markets
+Objects: 503 fixtures, 1030 markets
 Accepted: 114 fixture-pair links, 212 market-pair links
-Unmatched: 249 fixtures, 528 markets
+Unmatched: 251 fixtures, 532 markets
 OVERALL PASS

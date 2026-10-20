@@ -31,16 +31,20 @@ NBA_POLICIES = ("period", "overtime", "postponement")
 FOOTBALL_STATES = NBA_STATES + ("tie",)
 HOCKEY_STATES = NBA_STATES + ("tie",)
 BASEBALL_STATES = NBA_STATES + ("tie",)
-SPORTS = {"cricket", "basketball", "football", "hockey", "baseball"}
+SOCCER_STATES = NBA_STATES + ("draw",)
+SOCCER_STATES = NBA_STATES + ("draw",)
+SPORTS = {"cricket", "basketball", "football", "hockey", "baseball", "soccer"}
 CORE_STATES = {"cricket": ("win", "loss", "draw", "tie_without_tiebreak"),
                "basketball": ("win", "loss"), "football": ("win", "loss", "tie"),
-               "hockey": ("win", "loss"), "baseball": ("win", "loss")}
+                             "hockey": ("win", "loss"), "baseball": ("win", "loss"),
+                             "soccer": ("win", "loss", "draw")}
 CORE_POLICIES = {"cricket": ("period", "tiebreakers", "dls"),
                  "basketball": ("period", "overtime"),
                  "football": ("period", "overtime"),
                  "hockey": ("period", "overtime", "shootout"),
-                 "baseball": ("period", "extra_innings")}
-POLICY_VALUES = {"period": {"full_match", "regulation"}, "overtime": {"included", "excluded"},
+                                 "baseball": ("period", "extra_innings"),
+                                 "soccer": ("period",)}
+POLICY_VALUES = {"period": {"full_match", "regulation", "regulation_time"}, "overtime": {"included", "excluded"},
                  "shootout": {"included", "excluded"}, "extra_innings": {"included", "excluded"},
                  "tiebreakers": {"included_if_played", "excluded", "not_applicable"},
                  "dls": {"official_result", "excluded", "not_applicable"}}
@@ -57,13 +61,15 @@ def resolution_evidence(raw: dict) -> dict:
 
 def _states(sport: str) -> tuple:
     return {"basketball": NBA_STATES, "football": FOOTBALL_STATES,
-            "hockey": HOCKEY_STATES, "baseball": BASEBALL_STATES}.get(sport, CRICKET_STATES)
+            "hockey": HOCKEY_STATES, "baseball": BASEBALL_STATES,
+            "soccer": SOCCER_STATES}.get(sport, CRICKET_STATES)
 
 
 def _policies(sport: str) -> tuple:
     return {"basketball": NBA_POLICIES, "football": NBA_POLICIES,
             "hockey": ("period", "overtime", "shootout", "postponement"),
-            "baseball": ("period", "extra_innings", "postponement")}.get(sport, CRICKET_POLICIES)
+            "baseball": ("period", "extra_innings", "postponement"),
+            "soccer": ("period", "postponement")}.get(sport, CRICKET_POLICIES)
 
 
 def _fixed_payout(value: Any) -> Any:
@@ -134,6 +140,42 @@ def profile_market(venue: str, raw: dict, *, sport: str = "cricket", outcome: st
     if winner_stated:
         payouts.update(win="0" if target == "draw" else "1", loss="0")
         policies["period"] = "full_match"
+
+    if sport == "soccer":
+        scope_terms = re.sub(r"\s+", " ", text)
+        regulation_only = bool(re.search(
+            r"(?:first 90 minutes|90 minutes plus stoppage time|regulation time)"
+            r"[^.]{0,120}(?:does not include|excluding|not include)"
+            r"[^.]{0,80}(?:extra time|penalt)", scope_terms) or
+            re.search(r"only the outcome within the first 90 minutes", scope_terms))
+        full_match = ("full match" in scope_terms and
+                      "officially confirmed by the organizer" in scope_terms)
+        if regulation_only:
+            policies["period"] = "regulation_time"
+        elif full_match:
+            policies["period"] = "full_match"
+        if target == "draw":
+            if ("game ends in a draw" in scope_terms or
+                    'market called "tie" resolves to yes' in scope_terms or
+                    "if tie is the result" in scope_terms):
+                payouts.update(win="0", loss="0", draw="1")
+        elif winner_stated:
+            payouts.update(win="1", loss="0", draw="0")
+        if target != "draw" and ("market called \"tie\" resolves to yes" in scope_terms or
+                                  ("otherwise" in scope_terms and
+                                   re.search(r"otherwise.{0,40}resolve to [\"']no", scope_terms))):
+            payouts["draw"] = "0"
+        if venue == "kalshi" and "within 48 hours" in scope_terms and "last fair price" in scope_terms:
+            policies["postponement"] = "last_fair_market_price_if_not_resumed_within_48_hours"
+            payouts["cancelled_before_start"] = "last_fair_market_price"
+        elif venue == "polymarket_intl" and "remain open until the game has been completed" in scope_terms:
+            policies["postponement"] = "wait_until_completed"
+            if re.search(r"game is canceled entirely[^.]{0,120}resolve\s+[\"']?no\b", scope_terms):
+                payouts["cancelled_before_start"] = "0"
+        label = ("Regulation-time result" if policies["period"] == "regulation_time"
+                 else "Full-match result")
+        return make_profile(sport=sport, target_kind=target, payouts=payouts,
+                            policies=policies, evidence=citations, label=label)
 
     if sport in {"basketball", "football", "hockey", "baseball"}:
         native_text = re.sub(r"\s+", " ", " ".join(value for key, value in parts

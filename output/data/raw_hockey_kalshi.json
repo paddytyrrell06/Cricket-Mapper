@@ -12,19 +12,19 @@
     "expected_expiration_time": "2026-10-20T02:00:00Z",
     "expiration_time": "2026-10-21T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.7200",
+    "last_price_dollars": "0.7300",
     "latest_expiration_time": "2026-10-21T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.2900",
-    "no_bid_dollars": "0.2800",
+    "no_ask_dollars": "0.2800",
+    "no_bid_dollars": "0.2700",
     "no_sub_title": "New York R",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T02:00:00Z",
-    "open_interest_fp": "130018.03",
+    "open_interest_fp": "134422.11",
     "open_time": "2026-10-13T01:06:00Z",
-    "previous_price_dollars": "0.5700",
-    "previous_yes_ask_dollars": "0.5700",
-    "previous_yes_bid_dollars": "0.5600",
+    "previous_price_dollars": "0.5500",
+    "previous_yes_ask_dollars": "0.5600",
+    "previous_yes_bid_dollars": "0.5500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -43,12 +43,12 @@
     "ticker": "KXNHLGAME-26OCT19ANANYR-NYR",
     "title": "New York R wins",
     "updated_time": "2026-10-13T01:06:00.703795Z",
-    "volume_24h_fp": "154575.90",
-    "volume_fp": "157747.59",
-    "yes_ask_dollars": "0.7200",
-    "yes_ask_size_fp": "27535.36",
-    "yes_bid_dollars": "0.7100",
-    "yes_bid_size_fp": "1917.28",
+    "volume_24h_fp": "158972.76",
+    "volume_fp": "164834.30",
+    "yes_ask_dollars": "0.7300",
+    "yes_ask_size_fp": "66421.48",
+    "yes_bid_dollars": "0.7200",
+    "yes_bid_size_fp": "4348.71",
     "yes_sub_title": "New York R",
     "_event_title": "Anaheim vs New York R",
     "_event_ticker": "KXNHLGAME-26OCT19ANANYR",
@@ -125,7 +125,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -140,15 +140,15 @@
     "expected_expiration_time": "2026-10-20T02:00:00Z",
     "expiration_time": "2026-10-21T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.2900",
+    "last_price_dollars": "0.2800",
     "latest_expiration_time": "2026-10-21T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7200",
-    "no_bid_dollars": "0.7100",
+    "no_ask_dollars": "0.7300",
+    "no_bid_dollars": "0.7200",
     "no_sub_title": "Anaheim",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T02:00:00Z",
-    "open_interest_fp": "186452.83",
+    "open_interest_fp": "193955.00",
     "open_time": "2026-10-13T01:06:00Z",
     "previous_price_dollars": "0.4400",
     "previous_yes_ask_dollars": "0.4400",
@@ -171,12 +171,12 @@
     "ticker": "KXNHLGAME-26OCT19ANANYR-ANA",
     "title": "Anaheim wins",
     "updated_time": "2026-10-13T01:06:00.703795Z",
-    "volume_24h_fp": "205899.15",
-    "volume_fp": "211193.71",
-    "yes_ask_dollars": "0.2900",
-    "yes_ask_size_fp": "4212.90",
-    "yes_bid_dollars": "0.2800",
-    "yes_bid_size_fp": "20492.91",
+    "volume_24h_fp": "217232.91",
+    "volume_fp": "222159.37",
+    "yes_ask_dollars": "0.2800",
+    "yes_ask_size_fp": "21916.84",
+    "yes_bid_dollars": "0.2700",
+    "yes_bid_size_fp": "40077.36",
     "yes_sub_title": "Anaheim",
     "_event_title": "Anaheim vs New York R",
     "_event_ticker": "KXNHLGAME-26OCT19ANANYR",
@@ -253,7 +253,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -268,15 +268,15 @@
     "expected_expiration_time": "2026-10-20T02:00:00Z",
     "expiration_time": "2026-10-21T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4700",
+    "last_price_dollars": "0.4800",
     "latest_expiration_time": "2026-10-21T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5400",
-    "no_bid_dollars": "0.5300",
+    "no_ask_dollars": "0.5300",
+    "no_bid_dollars": "0.5200",
     "no_sub_title": "Philadelphia",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T02:00:00Z",
-    "open_interest_fp": "71641.24",
+    "open_interest_fp": "89285.17",
     "open_time": "2026-10-13T01:06:00Z",
     "previous_price_dollars": "0.3400",
     "previous_yes_ask_dollars": "0.3400",
@@ -299,12 +299,12 @@
     "ticker": "KXNHLGAME-26OCT19COLPHI-PHI",
     "title": "Philadelphia wins",
     "updated_time": "2026-10-13T01:06:00.703795Z",
-    "volume_24h_fp": "112622.48",
-    "volume_fp": "133547.92",
-    "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "10752.37",
-    "yes_bid_dollars": "0.4600",
-    "yes_bid_size_fp": "360.00",
+    "volume_24h_fp": "158328.17",
+    "volume_fp": "161417.87",
+    "yes_ask_dollars": "0.4800",
+    "yes_ask_size_fp": "336.00",
+    "yes_bid_dollars": "0.4700",
+    "yes_bid_size_fp": "1634.19",
     "yes_sub_title": "Philadelphia",
     "_event_title": "Colorado vs Philadelphia",
     "_event_ticker": "KXNHLGAME-26OCT19COLPHI",
@@ -381,7 +381,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -396,15 +396,15 @@
     "expected_expiration_time": "2026-10-20T02:00:00Z",
     "expiration_time": "2026-10-21T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5400",
+    "last_price_dollars": "0.5300",
     "latest_expiration_time": "2026-10-21T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4700",
-    "no_bid_dollars": "0.4600",
+    "no_ask_dollars": "0.4800",
+    "no_bid_dollars": "0.4700",
     "no_sub_title": "Colorado",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T02:00:00Z",
-    "open_interest_fp": "248463.29",
+    "open_interest_fp": "311703.99",
     "open_time": "2026-10-13T01:06:00Z",
     "previous_price_dollars": "0.6700",
     "previous_yes_ask_dollars": "0.6700",
@@ -427,12 +427,12 @@
     "ticker": "KXNHLGAME-26OCT19COLPHI-COL",
     "title": "Colorado wins",
     "updated_time": "2026-10-13T01:06:00.703795Z",
-    "volume_24h_fp": "235961.11",
-    "volume_fp": "260381.49",
-    "yes_ask_dollars": "0.5400",
-    "yes_ask_size_fp": "4715.13",
-    "yes_bid_dollars": "0.5300",
-    "yes_bid_size_fp": "10652.28",
+    "volume_24h_fp": "313048.86",
+    "volume_fp": "353268.76",
+    "yes_ask_dollars": "0.5300",
+    "yes_ask_size_fp": "7088.34",
+    "yes_bid_dollars": "0.5200",
+    "yes_bid_size_fp": "856.90",
     "yes_sub_title": "Colorado",
     "_event_title": "Colorado vs Philadelphia",
     "_event_ticker": "KXNHLGAME-26OCT19COLPHI",
@@ -509,7 +509,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -524,15 +524,15 @@
     "expected_expiration_time": "2026-10-20T02:30:00Z",
     "expiration_time": "2026-10-21T23:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5700",
+    "last_price_dollars": "0.5800",
     "latest_expiration_time": "2026-10-21T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4400",
-    "no_bid_dollars": "0.4300",
+    "no_ask_dollars": "0.4200",
+    "no_bid_dollars": "0.4100",
     "no_sub_title": "Toronto",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T02:30:00Z",
-    "open_interest_fp": "70023.70",
+    "open_interest_fp": "77828.95",
     "open_time": "2026-10-13T01:06:00Z",
     "previous_price_dollars": "0.5700",
     "previous_yes_ask_dollars": "0.5700",
@@ -555,12 +555,12 @@
     "ticker": "KXNHLGAME-26OCT19SJTOR-TOR",
     "title": "Toronto wins",
     "updated_time": "2026-10-13T01:06:00.703795Z",
-    "volume_24h_fp": "74465.34",
-    "volume_fp": "76122.08",
-    "yes_ask_dollars": "0.5700",
-    "yes_ask_size_fp": "6786.99",
-    "yes_bid_dollars": "0.5600",
-    "yes_bid_size_fp": "85975.17",
+    "volume_24h_fp": "82982.36",
+    "volume_fp": "84791.42",
+    "yes_ask_dollars": "0.5900",
+    "yes_ask_size_fp": "1823.18",
+    "yes_bid_dollars": "0.5800",
+    "yes_bid_size_fp": "4245.13",
     "yes_sub_title": "Toronto",
     "_event_title": "San Jose vs Toronto",
     "_event_ticker": "KXNHLGAME-26OCT19SJTOR",
@@ -637,7 +637,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -652,17 +652,17 @@
     "expected_expiration_time": "2026-10-20T02:30:00Z",
     "expiration_time": "2026-10-21T23:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4300",
+    "last_price_dollars": "0.4200",
     "latest_expiration_time": "2026-10-21T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5800",
-    "no_bid_dollars": "0.5700",
+    "no_ask_dollars": "0.5900",
+    "no_bid_dollars": "0.5800",
     "no_sub_title": "San Jose",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T02:30:00Z",
-    "open_interest_fp": "115383.32",
+    "open_interest_fp": "129126.12",
     "open_time": "2026-10-13T01:06:00Z",
-    "previous_price_dollars": "0.4500",
+    "previous_price_dollars": "0.4400",
     "previous_yes_ask_dollars": "0.4400",
     "previous_yes_bid_dollars": "0.4300",
     "price_level_structure": "linear_cent",
@@ -683,12 +683,12 @@
     "ticker": "KXNHLGAME-26OCT19SJTOR-SJ",
     "title": "San Jose wins",
     "updated_time": "2026-10-13T01:06:00.703795Z",
-    "volume_24h_fp": "113119.95",
-    "volume_fp": "117003.01",
-    "yes_ask_dollars": "0.4300",
-    "yes_ask_size_fp": "4845.20",
-    "yes_bid_dollars": "0.4200",
-    "yes_bid_size_fp": "2197.85",
+    "volume_24h_fp": "127137.18",
+    "volume_fp": "130966.12",
+    "yes_ask_dollars": "0.4200",
+    "yes_ask_size_fp": "5286.14",
+    "yes_bid_dollars": "0.4100",
+    "yes_bid_size_fp": "410.00",
     "yes_sub_title": "San Jose",
     "_event_title": "San Jose vs Toronto",
     "_event_ticker": "KXNHLGAME-26OCT19SJTOR",
@@ -765,7 +765,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -788,7 +788,7 @@
     "no_sub_title": "Utah",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T04:00:00Z",
-    "open_interest_fp": "54010.61",
+    "open_interest_fp": "54895.44",
     "open_time": "2026-10-13T01:06:00Z",
     "previous_price_dollars": "0.6300",
     "previous_yes_ask_dollars": "0.6300",
@@ -811,12 +811,12 @@
     "ticker": "KXNHLGAME-26OCT19PITUTA-UTA",
     "title": "Utah wins",
     "updated_time": "2026-10-13T01:06:00.703795Z",
-    "volume_24h_fp": "57094.47",
-    "volume_fp": "57644.21",
+    "volume_24h_fp": "57741.15",
+    "volume_fp": "58529.04",
     "yes_ask_dollars": "0.6400",
-    "yes_ask_size_fp": "208713.00",
+    "yes_ask_size_fp": "207461.17",
     "yes_bid_dollars": "0.6300",
-    "yes_bid_size_fp": "2971.01",
+    "yes_bid_size_fp": "3334.01",
     "yes_sub_title": "Utah",
     "_event_title": "Pittsburgh vs Utah",
     "_event_ticker": "KXNHLGAME-26OCT19PITUTA",
@@ -893,7 +893,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -916,7 +916,7 @@
     "no_sub_title": "Pittsburgh",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T04:00:00Z",
-    "open_interest_fp": "14944.41",
+    "open_interest_fp": "15662.24",
     "open_time": "2026-10-13T01:06:00Z",
     "previous_price_dollars": "0.3800",
     "previous_yes_ask_dollars": "0.3800",
@@ -939,12 +939,12 @@
     "ticker": "KXNHLGAME-26OCT19PITUTA-PIT",
     "title": "Pittsburgh wins",
     "updated_time": "2026-10-13T01:06:00.703795Z",
-    "volume_24h_fp": "12024.94",
-    "volume_fp": "15393.97",
+    "volume_24h_fp": "12664.51",
+    "volume_fp": "16111.80",
     "yes_ask_dollars": "0.3700",
-    "yes_ask_size_fp": "227988.74",
+    "yes_ask_size_fp": "209270.91",
     "yes_bid_dollars": "0.3600",
-    "yes_bid_size_fp": "121432.85",
+    "yes_bid_size_fp": "121435.71",
     "yes_sub_title": "Pittsburgh",
     "_event_title": "Pittsburgh vs Utah",
     "_event_ticker": "KXNHLGAME-26OCT19PITUTA",
@@ -1021,7 +1021,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -1070,7 +1070,7 @@
     "volume_24h_fp": "214.64",
     "volume_fp": "468.57",
     "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "11119.57",
+    "yes_ask_size_fp": "14119.57",
     "yes_bid_dollars": "0.5800",
     "yes_bid_size_fp": "222.29",
     "yes_sub_title": "New York I",
@@ -1144,7 +1144,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -1167,7 +1167,7 @@
     "no_sub_title": "Anaheim",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "453.32",
+    "open_interest_fp": "467.82",
     "open_time": "2026-10-14T01:06:00Z",
     "previous_price_dollars": "0.4500",
     "previous_yes_ask_dollars": "0.4600",
@@ -1190,10 +1190,10 @@
     "ticker": "KXNHLGAME-26OCT20ANANYI-ANA",
     "title": "Anaheim wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "201.65",
-    "volume_fp": "533.36",
+    "volume_24h_fp": "216.15",
+    "volume_fp": "547.86",
     "yes_ask_dollars": "0.4200",
-    "yes_ask_size_fp": "15564.48",
+    "yes_ask_size_fp": "15549.98",
     "yes_bid_dollars": "0.4100",
     "yes_bid_size_fp": "95.99",
     "yes_sub_title": "Anaheim",
@@ -1267,7 +1267,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -1318,7 +1318,7 @@
     "yes_ask_dollars": "0.4900",
     "yes_ask_size_fp": "1390.48",
     "yes_bid_dollars": "0.4800",
-    "yes_bid_size_fp": "383.25",
+    "yes_bid_size_fp": "332.89",
     "yes_sub_title": "New Jersey",
     "_event_title": "Colorado vs New Jersey",
     "_event_ticker": "KXNHLGAME-26OCT20COLNJ",
@@ -1390,7 +1390,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -1439,7 +1439,7 @@
     "volume_24h_fp": "1005.37",
     "volume_fp": "1369.86",
     "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "13831.74",
+    "yes_ask_size_fp": "13781.40",
     "yes_bid_dollars": "0.5100",
     "yes_bid_size_fp": "62.00",
     "yes_sub_title": "Colorado",
@@ -1513,7 +1513,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -1536,7 +1536,7 @@
     "no_sub_title": "Washington",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "3570.08",
+    "open_interest_fp": "3573.08",
     "open_time": "2026-10-14T01:06:00Z",
     "previous_price_dollars": "0.5800",
     "previous_yes_ask_dollars": "0.5900",
@@ -1559,10 +1559,10 @@
     "ticker": "KXNHLGAME-26OCT20LAWSH-WSH",
     "title": "Washington wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "3257.65",
-    "volume_fp": "3571.08",
+    "volume_24h_fp": "3259.27",
+    "volume_fp": "3574.08",
     "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "15429.55",
+    "yes_ask_size_fp": "14343.66",
     "yes_bid_dollars": "0.5900",
     "yes_bid_size_fp": "419.35",
     "yes_sub_title": "Washington",
@@ -1636,7 +1636,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -1687,7 +1687,7 @@
     "yes_ask_dollars": "0.4100",
     "yes_ask_size_fp": "3863.23",
     "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "6807.89",
+    "yes_bid_size_fp": "6915.01",
     "yes_sub_title": "Los Angeles",
     "_event_title": "Los Angeles vs Washington",
     "_event_ticker": "KXNHLGAME-26OCT20LAWSH",
@@ -1759,7 +1759,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -1808,7 +1808,7 @@
     "volume_24h_fp": "181.28",
     "volume_fp": "551.74",
     "yes_ask_dollars": "0.6600",
-    "yes_ask_size_fp": "37893.16",
+    "yes_ask_size_fp": "36023.09",
     "yes_bid_dollars": "0.6500",
     "yes_bid_size_fp": "121.92",
     "yes_sub_title": "Montreal",
@@ -1882,7 +1882,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -1905,7 +1905,7 @@
     "no_sub_title": "San Jose",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "1174.44",
+    "open_interest_fp": "1177.17",
     "open_time": "2026-10-14T01:06:00Z",
     "previous_price_dollars": "0.3600",
     "previous_yes_ask_dollars": "0.3600",
@@ -1928,10 +1928,10 @@
     "ticker": "KXNHLGAME-26OCT20SJMTL-SJ",
     "title": "San Jose wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "243.61",
-    "volume_fp": "1220.21",
+    "volume_24h_fp": "246.34",
+    "volume_fp": "1222.94",
     "yes_ask_dollars": "0.3500",
-    "yes_ask_size_fp": "118.74",
+    "yes_ask_size_fp": "116.01",
     "yes_bid_dollars": "0.3400",
     "yes_bid_size_fp": "1553.36",
     "yes_sub_title": "San Jose",
@@ -2005,7 +2005,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -2056,7 +2056,7 @@
     "yes_ask_dollars": "0.5900",
     "yes_ask_size_fp": "386.00",
     "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "502.06",
+    "yes_bid_size_fp": "505.06",
     "yes_sub_title": "Columbus",
     "_event_title": "Toronto vs Columbus",
     "_event_ticker": "KXNHLGAME-26OCT20TORCBJ",
@@ -2128,7 +2128,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -2151,7 +2151,7 @@
     "no_sub_title": "Toronto",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "221.19",
+    "open_interest_fp": "576.98",
     "open_time": "2026-10-14T01:06:00Z",
     "previous_price_dollars": "0.4100",
     "previous_yes_ask_dollars": "0.4200",
@@ -2175,11 +2175,11 @@
     "title": "Toronto wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
     "volume_24h_fp": "66.07",
-    "volume_fp": "222.19",
+    "volume_fp": "577.98",
     "yes_ask_dollars": "0.4200",
-    "yes_ask_size_fp": "10754.90",
+    "yes_ask_size_fp": "10777.96",
     "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "4478.81",
+    "yes_bid_size_fp": "4361.69",
     "yes_sub_title": "Toronto",
     "_event_title": "Toronto vs Columbus",
     "_event_ticker": "KXNHLGAME-26OCT20TORCBJ",
@@ -2251,7 +2251,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -2274,7 +2274,7 @@
     "no_sub_title": "Dallas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T03:00:00Z",
-    "open_interest_fp": "1256.08",
+    "open_interest_fp": "1268.64",
     "open_time": "2026-10-14T01:06:00Z",
     "previous_price_dollars": "0.6400",
     "previous_yes_ask_dollars": "0.6300",
@@ -2297,10 +2297,10 @@
     "ticker": "KXNHLGAME-26OCT20BOSDAL-DAL",
     "title": "Dallas wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "945.54",
-    "volume_fp": "1301.82",
+    "volume_24h_fp": "992.68",
+    "volume_fp": "1314.38",
     "yes_ask_dollars": "0.6200",
-    "yes_ask_size_fp": "26639.00",
+    "yes_ask_size_fp": "27571.44",
     "yes_bid_dollars": "0.6000",
     "yes_bid_size_fp": "9518.91",
     "yes_sub_title": "Dallas",
@@ -2374,7 +2374,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -2397,9 +2397,9 @@
     "no_sub_title": "Boston",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T03:00:00Z",
-    "open_interest_fp": "7599.37",
+    "open_interest_fp": "7610.09",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.4200",
+    "previous_price_dollars": "0.3900",
     "previous_yes_ask_dollars": "0.3900",
     "previous_yes_bid_dollars": "0.3800",
     "price_level_structure": "linear_cent",
@@ -2420,12 +2420,12 @@
     "ticker": "KXNHLGAME-26OCT20BOSDAL-BOS",
     "title": "Boston wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "7252.03",
-    "volume_fp": "9125.88",
+    "volume_24h_fp": "7356.20",
+    "volume_fp": "9136.60",
     "yes_ask_dollars": "0.3900",
-    "yes_ask_size_fp": "4650.37",
+    "yes_ask_size_fp": "4639.65",
     "yes_bid_dollars": "0.3800",
-    "yes_bid_size_fp": "13880.09",
+    "yes_bid_size_fp": "14769.09",
     "yes_sub_title": "Boston",
     "_event_title": "Boston vs Dallas",
     "_event_ticker": "KXNHLGAME-26OCT20BOSDAL",
@@ -2497,7 +2497,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -2522,7 +2522,7 @@
     "occurrence_datetime": "2026-10-21T03:00:00Z",
     "open_interest_fp": "98.82",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.5800",
+    "previous_price_dollars": "0.6000",
     "previous_yes_ask_dollars": "0.6000",
     "previous_yes_bid_dollars": "0.5600",
     "price_level_structure": "linear_cent",
@@ -2543,7 +2543,7 @@
     "ticker": "KXNHLGAME-26OCT20WPGSTL-STL",
     "title": "St. Louis wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "62.62",
+    "volume_24h_fp": "46.41",
     "volume_fp": "98.82",
     "yes_ask_dollars": "0.5800",
     "yes_ask_size_fp": "15337.02",
@@ -2620,7 +2620,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -2743,7 +2743,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -2769,8 +2769,8 @@
     "open_interest_fp": "555.75",
     "open_time": "2026-10-14T01:06:00Z",
     "previous_price_dollars": "0.5100",
-    "previous_yes_ask_dollars": "0.5500",
-    "previous_yes_bid_dollars": "0.5100",
+    "previous_yes_ask_dollars": "0.5400",
+    "previous_yes_bid_dollars": "0.5000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2794,7 +2794,7 @@
     "yes_ask_dollars": "0.5400",
     "yes_ask_size_fp": "2790.30",
     "yes_bid_dollars": "0.5300",
-    "yes_bid_size_fp": "10708.99",
+    "yes_bid_size_fp": "10736.99",
     "yes_sub_title": "Edmonton",
     "_event_title": "Minnesota vs Edmonton",
     "_event_ticker": "KXNHLGAME-26OCT20MINEDM",
@@ -2866,7 +2866,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -2892,7 +2892,7 @@
     "open_interest_fp": "2029.03",
     "open_time": "2026-10-14T01:06:00Z",
     "previous_price_dollars": "0.4900",
-    "previous_yes_ask_dollars": "0.4900",
+    "previous_yes_ask_dollars": "0.5000",
     "previous_yes_bid_dollars": "0.4600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -2912,10 +2912,10 @@
     "ticker": "KXNHLGAME-26OCT20MINEDM-MIN",
     "title": "Minnesota wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "1632.37",
+    "volume_24h_fp": "1673.40",
     "volume_fp": "2106.07",
     "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "70461.47",
+    "yes_ask_size_fp": "70489.47",
     "yes_bid_dollars": "0.4600",
     "yes_bid_size_fp": "98.00",
     "yes_sub_title": "Minnesota",
@@ -2989,7 +2989,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -3112,7 +3112,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -3235,7 +3235,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -3358,7 +3358,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -3407,7 +3407,7 @@
     "volume_24h_fp": "971.67",
     "volume_fp": "1458.93",
     "yes_ask_dollars": "0.7300",
-    "yes_ask_size_fp": "32268.06",
+    "yes_ask_size_fp": "32645.37",
     "yes_bid_dollars": "0.7200",
     "yes_bid_size_fp": "30359.86",
     "yes_sub_title": "Carolina",
@@ -3481,7 +3481,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -3504,7 +3504,7 @@
     "no_sub_title": "Vegas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T05:30:00Z",
-    "open_interest_fp": "2278.52",
+    "open_interest_fp": "2321.52",
     "open_time": "2026-10-14T04:06:00Z",
     "previous_price_dollars": "0.5400",
     "previous_yes_ask_dollars": "0.5500",
@@ -3527,10 +3527,10 @@
     "ticker": "KXNHLGAME-26OCT20TBVGK-VGK",
     "title": "Vegas wins",
     "updated_time": "2026-10-14T04:06:00.39758Z",
-    "volume_24h_fp": "584.71",
-    "volume_fp": "2288.36",
+    "volume_24h_fp": "633.29",
+    "volume_fp": "2331.36",
     "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "69758.67",
+    "yes_ask_size_fp": "69725.67",
     "yes_bid_dollars": "0.5100",
     "yes_bid_size_fp": "169.33",
     "yes_sub_title": "Vegas",
@@ -3604,7 +3604,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -3629,8 +3629,8 @@
     "occurrence_datetime": "2026-10-21T05:30:00Z",
     "open_interest_fp": "381.42",
     "open_time": "2026-10-14T04:06:00Z",
-    "previous_price_dollars": "0.4700",
-    "previous_yes_ask_dollars": "0.4800",
+    "previous_price_dollars": "0.4800",
+    "previous_yes_ask_dollars": "0.5000",
     "previous_yes_bid_dollars": "0.4600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -3650,7 +3650,7 @@
     "ticker": "KXNHLGAME-26OCT20TBVGK-TB",
     "title": "Tampa Bay wins",
     "updated_time": "2026-10-14T04:06:00.39758Z",
-    "volume_24h_fp": "408.29",
+    "volume_24h_fp": "398.29",
     "volume_fp": "680.87",
     "yes_ask_dollars": "0.4900",
     "yes_ask_size_fp": "24969.67",
@@ -3727,7 +3727,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -3746,7 +3746,7 @@
     "latest_expiration_time": "2026-10-23T23:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5200",
-    "no_bid_dollars": "0.4800",
+    "no_bid_dollars": "0.4900",
     "no_sub_title": "Ottawa",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T02:30:00Z",
@@ -3754,7 +3754,7 @@
     "open_time": "2026-10-15T01:06:00Z",
     "previous_price_dollars": "0.4700",
     "previous_yes_ask_dollars": "0.4500",
-    "previous_yes_bid_dollars": "0.4100",
+    "previous_yes_bid_dollars": "0.4200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -3775,8 +3775,8 @@
     "updated_time": "2026-10-15T01:06:00.525465Z",
     "volume_24h_fp": "145.20",
     "volume_fp": "442.07",
-    "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "6084.13",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "1024.26",
     "yes_bid_dollars": "0.4800",
     "yes_bid_size_fp": "104.00",
     "yes_sub_title": "Ottawa",
@@ -3826,7 +3826,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -3844,12 +3844,12 @@
     "last_price_dollars": "0.5000",
     "latest_expiration_time": "2026-10-23T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5200",
+    "no_ask_dollars": "0.5100",
     "no_bid_dollars": "0.5000",
     "no_sub_title": "Florida",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T02:30:00Z",
-    "open_interest_fp": "3771.12",
+    "open_interest_fp": "3788.12",
     "open_time": "2026-10-15T01:06:00Z",
     "previous_price_dollars": "0.5600",
     "previous_yes_ask_dollars": "0.5600",
@@ -3872,12 +3872,12 @@
     "ticker": "KXNHLGAME-26OCT21FLAOTT-FLA",
     "title": "Florida wins",
     "updated_time": "2026-10-15T01:06:00.525465Z",
-    "volume_24h_fp": "249.80",
-    "volume_fp": "3773.13",
+    "volume_24h_fp": "266.80",
+    "volume_fp": "3790.13",
     "yes_ask_dollars": "0.5000",
-    "yes_ask_size_fp": "4007.68",
-    "yes_bid_dollars": "0.4800",
-    "yes_bid_size_fp": "201.00",
+    "yes_ask_size_fp": "3990.68",
+    "yes_bid_dollars": "0.4900",
+    "yes_bid_size_fp": "525.00",
     "yes_sub_title": "Florida",
     "_event_title": "Florida vs Ottawa",
     "_event_ticker": "KXNHLGAME-26OCT21FLAOTT",
@@ -3925,7 +3925,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4024,7 +4024,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4123,7 +4123,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4218,7 +4218,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4313,7 +4313,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4332,7 +4332,7 @@
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5400",
-    "no_bid_dollars": "0.4700",
+    "no_bid_dollars": "0.4800",
     "no_sub_title": "Pittsburgh",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
@@ -4361,7 +4361,7 @@
     "updated_time": "2026-10-16T01:06:01.035467Z",
     "volume_24h_fp": "0.93",
     "volume_fp": "29.02",
-    "yes_ask_dollars": "0.5300",
+    "yes_ask_dollars": "0.5200",
     "yes_ask_size_fp": "50.00",
     "yes_bid_dollars": "0.4600",
     "yes_bid_size_fp": "10.00",
@@ -4408,7 +4408,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4426,7 +4426,7 @@
     "last_price_dollars": "0.5100",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5400",
+    "no_ask_dollars": "0.5500",
     "no_bid_dollars": "0.4800",
     "no_sub_title": "Florida",
     "notional_value_dollars": "1.0000",
@@ -4457,9 +4457,9 @@
     "volume_24h_fp": "114.94",
     "volume_fp": "636.85",
     "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "20.00",
-    "yes_bid_dollars": "0.4600",
-    "yes_bid_size_fp": "50.00",
+    "yes_ask_size_fp": "10.00",
+    "yes_bid_dollars": "0.4500",
+    "yes_bid_size_fp": "87.00",
     "yes_sub_title": "Florida",
     "_event_title": "Florida vs Pittsburgh",
     "_event_ticker": "KXNHLGAME-26OCT22FLAPIT",
@@ -4503,7 +4503,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4529,8 +4529,8 @@
     "open_interest_fp": "117.28",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.5900",
-    "previous_yes_ask_dollars": "0.5900",
-    "previous_yes_bid_dollars": "0.5700",
+    "previous_yes_ask_dollars": "0.6000",
+    "previous_yes_bid_dollars": "0.5500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -4598,7 +4598,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4616,7 +4616,7 @@
     "last_price_dollars": "0.4700",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6200",
+    "no_ask_dollars": "0.6100",
     "no_bid_dollars": "0.5700",
     "no_sub_title": "Nashville",
     "notional_value_dollars": "1.0000",
@@ -4624,7 +4624,7 @@
     "open_interest_fp": "30.00",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.4700",
-    "previous_yes_ask_dollars": "0.4500",
+    "previous_yes_ask_dollars": "0.4300",
     "previous_yes_bid_dollars": "0.4000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -4648,8 +4648,8 @@
     "volume_fp": "30.00",
     "yes_ask_dollars": "0.4300",
     "yes_ask_size_fp": "48.29",
-    "yes_bid_dollars": "0.3800",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_dollars": "0.3900",
+    "yes_bid_size_fp": "38.00",
     "yes_sub_title": "Nashville",
     "_event_title": "Nashville vs Boston",
     "_event_ticker": "KXNHLGAME-26OCT22NSHBOS",
@@ -4693,7 +4693,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4744,7 +4744,7 @@
     "yes_ask_dollars": "0.4900",
     "yes_ask_size_fp": "34.00",
     "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_size_fp": "100.00",
     "yes_sub_title": "Toronto",
     "_event_title": "New York R vs Toronto",
     "_event_ticker": "KXNHLGAME-26OCT22NYRTOR",
@@ -4788,7 +4788,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4883,7 +4883,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -4978,7 +4978,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5073,7 +5073,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5168,7 +5168,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5263,7 +5263,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5358,7 +5358,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5409,7 +5409,7 @@
     "yes_ask_dollars": "0.5700",
     "yes_ask_size_fp": "43.90",
     "yes_bid_dollars": "0.5300",
-    "yes_bid_size_fp": "49.00",
+    "yes_bid_size_fp": "124.00",
     "yes_sub_title": "Vegas",
     "_event_title": "Vegas vs St. Louis",
     "_event_ticker": "KXNHLGAME-26OCT22VGKSTL",
@@ -5453,7 +5453,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5548,7 +5548,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5643,7 +5643,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5662,15 +5662,15 @@
     "latest_expiration_time": "2026-10-25T01:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5800",
-    "no_bid_dollars": "0.5500",
+    "no_bid_dollars": "0.5400",
     "no_sub_title": "Edmonton",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T04:00:00Z",
     "open_interest_fp": "3.94",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.4900",
-    "previous_yes_ask_dollars": "0.4700",
-    "previous_yes_bid_dollars": "0.4300",
+    "previous_yes_ask_dollars": "0.4600",
+    "previous_yes_bid_dollars": "0.4200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5691,10 +5691,10 @@
     "updated_time": "2026-10-16T01:06:01.035467Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "3.94",
-    "yes_ask_dollars": "0.4500",
-    "yes_ask_size_fp": "2.80",
+    "yes_ask_dollars": "0.4600",
+    "yes_ask_size_fp": "10.00",
     "yes_bid_dollars": "0.4200",
-    "yes_bid_size_fp": "105.00",
+    "yes_bid_size_fp": "55.00",
     "yes_sub_title": "Edmonton",
     "_event_title": "Carolina vs Edmonton",
     "_event_ticker": "KXNHLGAME-26OCT22CAREDM",
@@ -5738,7 +5738,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5756,7 +5756,7 @@
     "last_price_dollars": "0.5600",
     "latest_expiration_time": "2026-10-25T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4700",
+    "no_ask_dollars": "0.4600",
     "no_bid_dollars": "0.4400",
     "no_sub_title": "Carolina",
     "notional_value_dollars": "1.0000",
@@ -5765,7 +5765,7 @@
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.5600",
     "previous_yes_ask_dollars": "0.5500",
-    "previous_yes_bid_dollars": "0.5200",
+    "previous_yes_bid_dollars": "0.5100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5788,8 +5788,8 @@
     "volume_fp": "32.23",
     "yes_ask_dollars": "0.5600",
     "yes_ask_size_fp": "2179.00",
-    "yes_bid_dollars": "0.5300",
-    "yes_bid_size_fp": "24.00",
+    "yes_bid_dollars": "0.5400",
+    "yes_bid_size_fp": "3.02",
     "yes_sub_title": "Carolina",
     "_event_title": "Carolina vs Edmonton",
     "_event_ticker": "KXNHLGAME-26OCT22CAREDM",
@@ -5833,7 +5833,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5928,7 +5928,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -5954,7 +5954,7 @@
     "open_interest_fp": "281.10",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.6600",
-    "previous_yes_ask_dollars": "0.6600",
+    "previous_yes_ask_dollars": "0.6500",
     "previous_yes_bid_dollars": "0.6300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -6023,7 +6023,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6118,7 +6118,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6213,7 +6213,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6231,7 +6231,7 @@
     "last_price_dollars": "0.4200",
     "latest_expiration_time": "2026-10-25T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6300",
+    "no_ask_dollars": "0.6500",
     "no_bid_dollars": "0.5800",
     "no_sub_title": "Seattle",
     "notional_value_dollars": "1.0000",
@@ -6263,8 +6263,8 @@
     "volume_fp": "59.19",
     "yes_ask_dollars": "0.4200",
     "yes_ask_size_fp": "17.00",
-    "yes_bid_dollars": "0.3700",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_dollars": "0.3500",
+    "yes_bid_size_fp": "37.00",
     "yes_sub_title": "Seattle",
     "_event_title": "Utah vs Seattle",
     "_event_ticker": "KXNHLGAME-26OCT22UTASEA",
@@ -6308,7 +6308,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6403,7 +6403,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6454,7 +6454,7 @@
     "yes_ask_dollars": "0.3900",
     "yes_ask_size_fp": "64.00",
     "yes_bid_dollars": "0.3500",
-    "yes_bid_size_fp": "55.00",
+    "yes_bid_size_fp": "56.00",
     "yes_sub_title": "Chicago",
     "_event_title": "Montreal vs Chicago",
     "_event_ticker": "KXNHLGAME-26OCT23MTLCHI",
@@ -6498,7 +6498,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6516,8 +6516,8 @@
     "last_price_dollars": "0.6300",
     "latest_expiration_time": "2026-10-26T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4100",
-    "no_bid_dollars": "0.3700",
+    "no_ask_dollars": "0.4000",
+    "no_bid_dollars": "0.3800",
     "no_sub_title": "Montreal",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T03:00:00Z",
@@ -6546,10 +6546,10 @@
     "updated_time": "2026-10-17T01:07:00.234886Z",
     "volume_24h_fp": "93.98",
     "volume_fp": "103.52",
-    "yes_ask_dollars": "0.6300",
-    "yes_ask_size_fp": "65.06",
-    "yes_bid_dollars": "0.5900",
-    "yes_bid_size_fp": "50.00",
+    "yes_ask_dollars": "0.6200",
+    "yes_ask_size_fp": "1.00",
+    "yes_bid_dollars": "0.6000",
+    "yes_bid_size_fp": "101.00",
     "yes_sub_title": "Montreal",
     "_event_title": "Montreal vs Chicago",
     "_event_ticker": "KXNHLGAME-26OCT23MTLCHI",
@@ -6593,7 +6593,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6611,7 +6611,7 @@
     "last_price_dollars": "0.5900",
     "latest_expiration_time": "2026-10-26T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4500",
+    "no_ask_dollars": "0.5100",
     "no_bid_dollars": "0.4100",
     "no_sub_title": "Colorado",
     "notional_value_dollars": "1.0000",
@@ -6643,7 +6643,7 @@
     "volume_fp": "33.76",
     "yes_ask_dollars": "0.5900",
     "yes_ask_size_fp": "2031.03",
-    "yes_bid_dollars": "0.5500",
+    "yes_bid_dollars": "0.4900",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Colorado",
     "_event_title": "Tampa Bay vs Colorado",
@@ -6688,7 +6688,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6783,7 +6783,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6801,7 +6801,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-26T17:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5500",
+    "no_ask_dollars": "0.5400",
     "no_bid_dollars": "0.4900",
     "no_sub_title": "Philadelphia",
     "notional_value_dollars": "1.0000",
@@ -6833,7 +6833,7 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.5100",
     "yes_ask_size_fp": "37.00",
-    "yes_bid_dollars": "0.4500",
+    "yes_bid_dollars": "0.4600",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Philadelphia",
     "_event_title": "Anaheim vs Philadelphia",
@@ -6878,7 +6878,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6973,7 +6973,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -6991,7 +6991,7 @@
     "last_price_dollars": "0.6000",
     "latest_expiration_time": "2026-10-26T19:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4600",
+    "no_ask_dollars": "0.4800",
     "no_bid_dollars": "0.4100",
     "no_sub_title": "New Jersey",
     "notional_value_dollars": "1.0000",
@@ -7023,8 +7023,8 @@
     "volume_fp": "83.68",
     "yes_ask_dollars": "0.5900",
     "yes_ask_size_fp": "38.00",
-    "yes_bid_dollars": "0.5400",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_dollars": "0.5200",
+    "yes_bid_size_fp": "87.00",
     "yes_sub_title": "New Jersey",
     "_event_title": "Los Angeles vs New Jersey",
     "_event_ticker": "KXNHLGAME-26OCT24LANJ",
@@ -7068,7 +7068,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7163,7 +7163,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7181,7 +7181,7 @@
     "last_price_dollars": "0.5900",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5500",
+    "no_ask_dollars": "0.4600",
     "no_bid_dollars": "0.4200",
     "no_sub_title": "Washington",
     "notional_value_dollars": "1.0000",
@@ -7190,7 +7190,7 @@
     "open_time": "2026-10-18T01:18:00Z",
     "previous_price_dollars": "0.5900",
     "previous_yes_ask_dollars": "0.5900",
-    "previous_yes_bid_dollars": "0.5100",
+    "previous_yes_bid_dollars": "0.4800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -7213,8 +7213,8 @@
     "volume_fp": "2.64",
     "yes_ask_dollars": "0.5800",
     "yes_ask_size_fp": "47.00",
-    "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "87.00",
+    "yes_bid_dollars": "0.5400",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Washington",
     "_event_title": "Buffalo vs Washington",
     "_event_ticker": "KXNHLGAME-26OCT24BUFWSH",
@@ -7258,7 +7258,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7284,7 +7284,7 @@
     "open_interest_fp": "70.51",
     "open_time": "2026-10-18T01:18:00Z",
     "previous_price_dollars": "0.4700",
-    "previous_yes_ask_dollars": "0.4700",
+    "previous_yes_ask_dollars": "0.4600",
     "previous_yes_bid_dollars": "0.4100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -7353,7 +7353,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7372,7 +7372,7 @@
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6200",
-    "no_bid_dollars": "0.5600",
+    "no_bid_dollars": "0.5700",
     "no_sub_title": "St. Louis",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T02:00:00Z",
@@ -7401,8 +7401,8 @@
     "updated_time": "2026-10-18T01:19:00.183774Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.4400",
-    "yes_ask_size_fp": "38.00",
+    "yes_ask_dollars": "0.4300",
+    "yes_ask_size_fp": "22.19",
     "yes_bid_dollars": "0.3800",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "St. Louis",
@@ -7448,7 +7448,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7499,7 +7499,7 @@
     "yes_ask_dollars": "0.6100",
     "yes_ask_size_fp": "50.00",
     "yes_bid_dollars": "0.5700",
-    "yes_bid_size_fp": "22.19",
+    "yes_bid_size_fp": "20.00",
     "yes_sub_title": "Carolina",
     "_event_title": "Carolina vs St. Louis",
     "_event_ticker": "KXNHLGAME-26OCT24CARSTL",
@@ -7543,7 +7543,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7561,8 +7561,8 @@
     "last_price_dollars": "0.5900",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4500",
-    "no_bid_dollars": "0.4100",
+    "no_ask_dollars": "0.4600",
+    "no_bid_dollars": "0.4200",
     "no_sub_title": "Pittsburgh",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T02:00:00Z",
@@ -7591,10 +7591,10 @@
     "updated_time": "2026-10-18T01:18:00.367322Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "17.47",
-    "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "1920.53",
-    "yes_bid_dollars": "0.5500",
-    "yes_bid_size_fp": "50.00",
+    "yes_ask_dollars": "0.5800",
+    "yes_ask_size_fp": "5.00",
+    "yes_bid_dollars": "0.5400",
+    "yes_bid_size_fp": "55.00",
     "yes_sub_title": "Pittsburgh",
     "_event_title": "Nashville vs Pittsburgh",
     "_event_ticker": "KXNHLGAME-26OCT24NSHPIT",
@@ -7638,7 +7638,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7656,8 +7656,8 @@
     "last_price_dollars": "0.4600",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5900",
-    "no_bid_dollars": "0.5500",
+    "no_ask_dollars": "0.6100",
+    "no_bid_dollars": "0.5400",
     "no_sub_title": "Nashville",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T02:00:00Z",
@@ -7686,10 +7686,10 @@
     "updated_time": "2026-10-18T01:18:00.367322Z",
     "volume_24h_fp": "115.73",
     "volume_fp": "115.73",
-    "yes_ask_dollars": "0.4500",
-    "yes_ask_size_fp": "50.00",
-    "yes_bid_dollars": "0.4100",
-    "yes_bid_size_fp": "35.00",
+    "yes_ask_dollars": "0.4600",
+    "yes_ask_size_fp": "55.00",
+    "yes_bid_dollars": "0.3900",
+    "yes_bid_size_fp": "5.00",
     "yes_sub_title": "Nashville",
     "_event_title": "Nashville vs Pittsburgh",
     "_event_ticker": "KXNHLGAME-26OCT24NSHPIT",
@@ -7733,7 +7733,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7751,7 +7751,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4800",
+    "no_ask_dollars": "0.5000",
     "no_bid_dollars": "0.4300",
     "no_sub_title": "Ottawa",
     "notional_value_dollars": "1.0000",
@@ -7759,7 +7759,7 @@
     "open_interest_fp": "0.00",
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.5600",
+    "previous_yes_ask_dollars": "0.5700",
     "previous_yes_bid_dollars": "0.4900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -7783,8 +7783,8 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.5700",
     "yes_ask_size_fp": "37.00",
-    "yes_bid_dollars": "0.5200",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_dollars": "0.5000",
+    "yes_bid_size_fp": "87.00",
     "yes_sub_title": "Ottawa",
     "_event_title": "New York R vs Ottawa",
     "_event_ticker": "KXNHLGAME-26OCT24NYROTT",
@@ -7828,7 +7828,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7855,7 +7855,7 @@
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.5000",
     "previous_yes_ask_dollars": "0.4900",
-    "previous_yes_bid_dollars": "0.4200",
+    "previous_yes_bid_dollars": "0.4300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -7923,7 +7923,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -7949,7 +7949,7 @@
     "open_interest_fp": "2.59",
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.6200",
-    "previous_yes_ask_dollars": "0.6200",
+    "previous_yes_ask_dollars": "0.6100",
     "previous_yes_bid_dollars": "0.5400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -8018,7 +8018,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8045,7 +8045,7 @@
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.4400",
     "previous_yes_ask_dollars": "0.4400",
-    "previous_yes_bid_dollars": "0.3600",
+    "previous_yes_bid_dollars": "0.3700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -8113,7 +8113,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8131,7 +8131,7 @@
     "last_price_dollars": "0.6300",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4200",
+    "no_ask_dollars": "0.4400",
     "no_bid_dollars": "0.3700",
     "no_sub_title": "Edmonton",
     "notional_value_dollars": "1.0000",
@@ -8163,8 +8163,8 @@
     "volume_fp": "1.00",
     "yes_ask_dollars": "0.6300",
     "yes_ask_size_fp": "38.00",
-    "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_dollars": "0.5600",
+    "yes_bid_size_fp": "87.00",
     "yes_sub_title": "Edmonton",
     "_event_title": "Toronto vs Edmonton",
     "_event_ticker": "KXNHLGAME-26OCT24TOREDM",
@@ -8208,7 +8208,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8303,7 +8303,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8398,7 +8398,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8493,7 +8493,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8511,7 +8511,7 @@
     "last_price_dollars": "0.5700",
     "latest_expiration_time": "2026-10-27T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4900",
+    "no_ask_dollars": "0.5000",
     "no_bid_dollars": "0.4500",
     "no_sub_title": "Utah",
     "notional_value_dollars": "1.0000",
@@ -8543,7 +8543,7 @@
     "volume_fp": "102.78",
     "yes_ask_dollars": "0.5500",
     "yes_ask_size_fp": "6.00",
-    "yes_bid_dollars": "0.5100",
+    "yes_bid_dollars": "0.5000",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Utah",
     "_event_title": "Tampa Bay vs Utah",
@@ -8588,7 +8588,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8683,7 +8683,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8778,7 +8778,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8873,7 +8873,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -8891,7 +8891,7 @@
     "last_price_dollars": "0.4300",
     "latest_expiration_time": "2026-10-27T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6400",
+    "no_ask_dollars": "0.6500",
     "no_bid_dollars": "0.5800",
     "no_sub_title": "Seattle",
     "notional_value_dollars": "1.0000",
@@ -8923,7 +8923,7 @@
     "volume_fp": "17.00",
     "yes_ask_dollars": "0.4200",
     "yes_ask_size_fp": "5.00",
-    "yes_bid_dollars": "0.3600",
+    "yes_bid_dollars": "0.3500",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Seattle",
     "_event_title": "Minnesota vs Seattle",
@@ -8968,7 +8968,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9063,7 +9063,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9081,7 +9081,7 @@
     "last_price_dollars": "0.3900",
     "latest_expiration_time": "2026-10-27T19:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6600",
+    "no_ask_dollars": "0.6700",
     "no_bid_dollars": "0.6200",
     "no_sub_title": "Chicago",
     "notional_value_dollars": "1.0000",
@@ -9090,7 +9090,7 @@
     "open_time": "2026-10-18T19:06:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.3900",
-    "previous_yes_bid_dollars": "0.2900",
+    "previous_yes_bid_dollars": "0.3000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -9113,7 +9113,7 @@
     "volume_fp": "47.00",
     "yes_ask_dollars": "0.3800",
     "yes_ask_size_fp": "92.67",
-    "yes_bid_dollars": "0.3400",
+    "yes_bid_dollars": "0.3300",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Chicago",
     "_event_title": "Florida vs Chicago",
@@ -9158,7 +9158,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9253,7 +9253,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9272,7 +9272,7 @@
     "latest_expiration_time": "2026-10-27T22:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.3800",
-    "no_bid_dollars": "0.3500",
+    "no_bid_dollars": "0.3600",
     "no_sub_title": "Dallas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T01:00:00Z",
@@ -9280,7 +9280,7 @@
     "open_time": "2026-10-18T22:06:00Z",
     "previous_price_dollars": "0.6800",
     "previous_yes_ask_dollars": "0.6700",
-    "previous_yes_bid_dollars": "0.5100",
+    "previous_yes_bid_dollars": "0.5200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -9301,8 +9301,8 @@
     "updated_time": "2026-10-18T22:06:00.40356Z",
     "volume_24h_fp": "30.24",
     "volume_fp": "31.24",
-    "yes_ask_dollars": "0.6500",
-    "yes_ask_size_fp": "234.99",
+    "yes_ask_dollars": "0.6400",
+    "yes_ask_size_fp": "52.56",
     "yes_bid_dollars": "0.6200",
     "yes_bid_size_fp": "9.00",
     "yes_sub_title": "Dallas",
@@ -9348,7 +9348,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9366,7 +9366,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-27T22:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6500",
+    "no_ask_dollars": "0.6600",
     "no_bid_dollars": "0.6200",
     "no_sub_title": "New York I",
     "notional_value_dollars": "1.0000",
@@ -9375,7 +9375,7 @@
     "open_time": "2026-10-18T22:06:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.3900",
-    "previous_yes_bid_dollars": "0.2000",
+    "previous_yes_bid_dollars": "0.1900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -9398,8 +9398,8 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.3800",
     "yes_ask_size_fp": "2060.00",
-    "yes_bid_dollars": "0.3500",
-    "yes_bid_size_fp": "52.88",
+    "yes_bid_dollars": "0.3400",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "New York I",
     "_event_title": "New York I vs Dallas",
     "_event_ticker": "KXNHLGAME-26OCT25NYIDAL",
@@ -9443,7 +9443,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9538,7 +9538,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9633,7 +9633,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9728,7 +9728,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9823,7 +9823,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9918,7 +9918,7 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "can_close_early": true,
@@ -9936,7 +9936,7 @@
     "last_price_dollars": "0.6800",
     "latest_expiration_time": "2026-10-28T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.3600",
+    "no_ask_dollars": "0.3700",
     "no_bid_dollars": "0.3200",
     "no_sub_title": "Minnesota",
     "notional_value_dollars": "1.0000",
@@ -9968,7 +9968,7 @@
     "volume_fp": "4.01",
     "yes_ask_dollars": "0.6800",
     "yes_ask_size_fp": "422.99",
-    "yes_bid_dollars": "0.6400",
+    "yes_bid_dollars": "0.6300",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Minnesota",
     "_event_title": "Minnesota vs Vancouver",
@@ -10013,6 +10013,6 @@
         "text": "Unless otherwise specified, an entire hockey game includes regulation time, overtime, and the shootout. Statistics during regulation time, overtime periods, and the shootout count. A team must score strictly more goals to win; if teams are drawn, the team contract may resolve No and a Tie strike, if present, may resolve Yes."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   }
 ]

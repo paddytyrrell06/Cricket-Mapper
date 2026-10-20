@@ -1,0 +1,122 @@
+{
+  "kalshi": {
+    "complete": true,
+    "parse_complete": true,
+    "mapping_coverage_complete": true,
+    "method": "sport_adapters",
+    "records": 328,
+    "collection_reason": "",
+    "reason": ""
+  },
+  "polymarket_intl": {
+    "complete": true,
+    "parse_complete": true,
+    "mapping_coverage_complete": true,
+    "method": "sport_adapters",
+    "records": 927,
+    "collection_reason": "",
+    "reason": ""
+  },
+  "sports": {
+    "cricket": {
+      "kalshi": {
+        "complete": true,
+        "method": "sports_filter_plus_series",
+        "reason": "",
+        "records": 106,
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      },
+      "polymarket_intl": {
+        "complete": true,
+        "method": "events_keyset_tag_slug_cricket",
+        "reason": "",
+        "records": 645,
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      }
+    },
+    "basketball": {
+      "kalshi": {
+        "complete": true,
+        "method": "KXNBAGAME_nested_open_events",
+        "records": 94,
+        "reason": "",
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      },
+      "polymarket_intl": {
+        "complete": true,
+        "method": "events_series_id_10345_moneyline",
+        "records": 43,
+        "reason": "",
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      }
+    },
+    "football": {
+      "kalshi": {
+        "complete": true,
+        "method": "KXNFLGAME_nested_open_events",
+        "records": 30,
+        "reason": "",
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      },
+      "polymarket_intl": {
+        "complete": true,
+        "method": "events_series_id_12185_moneyline",
+        "records": 43,
+        "reason": "",
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      }
+    },
+    "hockey": {
+      "kalshi": {
+        "complete": true,
+        "method": "KXNHLGAME_nested_open_events",
+        "records": 96,
+        "reason": "",
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      },
+      "polymarket_intl": {
+        "complete": true,
+        "method": "events_series_id_10346_moneyline",
+        "records": 194,
+        "reason": "",
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      }
+    },
+    "baseball": {
+      "kalshi": {
+        "complete": true,
+        "method": "KXMLBGAME_nested_open_events",
+        "records": 2,
+        "reason": "",
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      },
+      "polymarket_intl": {
+        "complete": true,
+        "method": "events_series_id_3_moneyline",
+        "records": 2,
+        "reason": "",
+        "collection_reason": "",
+        "parse_complete": true,
+        "mapping_coverage_complete": true
+      }
+    }
+  }
+}

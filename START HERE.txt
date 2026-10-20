@@ -8,6 +8,8 @@ SPORTS MARKET TERMINAL
 Each run fetches current Kalshi and Polymarket International data for cricket, NBA,
 NFL, NHL, and MLB game winners. To select sports, pass for example:
 python3 run.py --sports=football,hockey,baseball --no-open
+For soccer's selected major competitions, run:
+python3 run.py --sports=soccer --no-open
 The report shows its collection timestamp, sport/venue coverage, and advisories.
 
 The scanner uses public read-only APIs, saves evidence for replay, and does not

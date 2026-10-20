@@ -1,6 +1,6 @@
 # Market data and expansion
 
-The current terminal is a read-only snapshot scanner for cricket match winners and NBA, NFL, NHL, and MLB full-game winners on Kalshi and Polymarket International. It does not place orders or claim that a displayed price difference guarantees a profit.
+The current terminal is a read-only snapshot scanner for cricket, seven selected soccer competitions, and NBA, NFL, NHL, and MLB game winners on Kalshi and Polymarket International. Soccer covers regulation time plus stoppage time; advancement and extra-time outcomes are not yet in scope. It does not place orders or claim that a displayed price difference guarantees a profit.
 
 ## Rules before prices
 
@@ -12,7 +12,7 @@ The cross tab is a shortlist of comparable, fresh cross-venue quotes before fees
 
 ## Current collection
 
-Sport adapters separate discovery and parsing from the shared fixture matcher, rule checks, quote collector, audit and terminal. Basketball, football, hockey and baseball discovery uses each league's game-series endpoint; identities require published venue metadata and that league's exact team registry rather than fuzzy abbreviations. Raw records, linked Kalshi game milestones and authoritative team metadata are saved for replay.
+Sport adapters separate discovery and parsing from the shared fixture matcher, rule checks, quote collector, audit and terminal. Basketball, football, hockey and baseball discovery uses each league's game-series endpoint; identities require published venue metadata and that league's exact team registry rather than fuzzy abbreviations. Soccer discovery is scoped to the English Premier League, LaLiga, Bundesliga, Serie A, Ligue 1, UEFA Champions League and MLS; each participant must match the event's published competition-scoped name/alias metadata. Raw records, linked Kalshi game milestones and authoritative team metadata are saved for replay.
 
 Discovery is slower than price collection and should remain a separate, periodic task. Selected Kalshi contracts are refreshed using the documented comma-separated `tickers` filter. Polymarket books are requested in batches for exact outcome-token IDs. The code uses bounded request concurrency and retains missing sides as missing. [Kalshi markets API](https://docs.kalshi.com/api-reference/market/get-markets), [Polymarket order books](https://docs.polymarket.com/market-data/prices-order-books).
 

@@ -6,19 +6,19 @@
     "slug": "nhl-col-phi-2026-10-19",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-19T23:00:00Z",
-    "liquidity": "23359.4896",
+    "liquidity": "19879.9022",
     "startDate": "2026-09-22T15:30:25Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 19 at 7:00PM ET:\nIf the Avalanche win, the market will resolve to \"Avalanche\".\nIf the Flyers win, the market will resolve to \"Flyers\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Avalanche\", \"Flyers\"]",
     "outcomePrices": "[\"0.525\", \"0.475\"]",
-    "volume": "163370.626737",
+    "volume": "169545.79602500002",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-22T15:30:13.435746Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -29,15 +29,15 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 163370.626737,
-    "liquidityNum": 23359.4896,
+    "volumeNum": 169545.79602500002,
+    "liquidityNum": 19879.9022,
     "endDateIso": "2026-10-19",
     "startDateIso": "2026-09-22",
     "hasReviewedDates": true,
-    "volume24hr": 166472.89345000003,
-    "volume1wk": 167380.15941,
-    "volume1mo": 167380.15941,
-    "volume1yr": 167380.15941,
+    "volume24hr": 179015.545939,
+    "volume1wk": 179922.811899,
+    "volume1mo": 179922.811899,
+    "volume1yr": 179922.811899,
     "gameStartTime": "2026-10-19 23:00:00+00",
     "secondsDelay": 1,
     "clobTokenIds": "[\"27478765205176197916184060773291512799621576836994965341289697253109501493067\", \"22755181383245166284346092140295696285782167792297702662729273008159320314598\"]",
@@ -48,12 +48,12 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "volume24hrClob": 166472.89345000003,
-    "volume1wkClob": 167380.15941,
-    "volume1moClob": 167380.15941,
-    "volume1yrClob": 167380.15941,
-    "volumeClob": 163370.626737,
-    "liquidityClob": 23359.4896,
+    "volume24hrClob": 179015.545939,
+    "volume1wkClob": 179922.811899,
+    "volume1moClob": 179922.811899,
+    "volume1yrClob": 179922.811899,
+    "volumeClob": 169545.79602500002,
+    "liquidityClob": 19879.9022,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -71,7 +71,7 @@
     "oneDayPriceChange": -0.14,
     "oneHourPriceChange": -0.17,
     "oneWeekPriceChange": -0.135,
-    "lastTradePrice": 0.53,
+    "lastTradePrice": 0.54,
     "bestBid": 0.52,
     "bestAsk": 0.53,
     "automaticallyActive": true,
@@ -130,7 +130,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4841689",
@@ -139,19 +139,19 @@
     "slug": "nhl-ana-nyr-2026-10-19",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-19T23:00:00Z",
-    "liquidity": "41928.1285",
+    "liquidity": "24019.8467",
     "startDate": "2026-09-22T15:30:27Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 19 at 7:00PM ET:\nIf the Ducks win, the market will resolve to \"Ducks\".\nIf the Rangers win, the market will resolve to \"Rangers\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Ducks\", \"Rangers\"]",
-    "outcomePrices": "[\"0.285\", \"0.715\"]",
-    "volume": "70991.69636399999",
+    "outcomePrices": "[\"0.275\", \"0.725\"]",
+    "volume": "75461.104664",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-22T15:30:15.129685Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -162,15 +162,15 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 70991.69636399999,
-    "liquidityNum": 41928.1285,
+    "volumeNum": 75461.104664,
+    "liquidityNum": 24019.8467,
     "endDateIso": "2026-10-19",
     "startDateIso": "2026-09-22",
     "hasReviewedDates": true,
-    "volume24hr": 72715.80265499999,
-    "volume1wk": 73819.835952,
-    "volume1mo": 73819.835952,
-    "volume1yr": 73819.835952,
+    "volume24hr": 74605.881213,
+    "volume1wk": 75709.91451,
+    "volume1mo": 75709.91451,
+    "volume1yr": 75709.91451,
     "gameStartTime": "2026-10-19 23:00:00+00",
     "secondsDelay": 1,
     "clobTokenIds": "[\"98565930803831823007480627305358462916260014005483554765420794108251250617934\", \"58364876603920607311080517827997727706334620111758985887287899370208604505041\"]",
@@ -181,12 +181,12 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "volume24hrClob": 72715.80265499999,
-    "volume1wkClob": 73819.835952,
-    "volume1moClob": 73819.835952,
-    "volume1yrClob": 73819.835952,
-    "volumeClob": 70991.69636399999,
-    "liquidityClob": 41928.1285,
+    "volume24hrClob": 74605.881213,
+    "volume1wkClob": 75709.91451,
+    "volume1moClob": 75709.91451,
+    "volume1yrClob": 75709.91451,
+    "volumeClob": 75461.104664,
+    "liquidityClob": 24019.8467,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -196,17 +196,17 @@
     "funded": false,
     "acceptingOrdersTimestamp": "2026-09-22T15:30:27Z",
     "cyom": false,
-    "competitive": 0.9558173433056943,
+    "competitive": 0.9518143961927424,
     "approved": true,
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
     "spread": 0.01,
-    "oneDayPriceChange": -0.16,
-    "oneHourPriceChange": -0.13,
-    "oneWeekPriceChange": -0.14,
-    "lastTradePrice": 0.28,
-    "bestBid": 0.28,
-    "bestAsk": 0.29,
+    "oneDayPriceChange": -0.17,
+    "oneHourPriceChange": -0.14,
+    "oneWeekPriceChange": -0.15,
+    "lastTradePrice": 0.3,
+    "bestBid": 0.27,
+    "bestAsk": 0.28,
     "automaticallyActive": true,
     "clearBookOnStart": true,
     "manualActivation": false,
@@ -263,7 +263,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4841694",
@@ -272,19 +272,19 @@
     "slug": "nhl-sj-tor-2026-10-19",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-19T23:30:00Z",
-    "liquidity": "255477.2381",
+    "liquidity": "27301.1225",
     "startDate": "2026-09-22T15:30:29Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 19 at 7:30PM ET:\nIf the Sharks win, the market will resolve to \"Sharks\".\nIf the Maple Leafs win, the market will resolve to \"Maple Leafs\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Sharks\", \"Maple Leafs\"]",
     "outcomePrices": "[\"0.425\", \"0.575\"]",
-    "volume": "43233.538350999996",
+    "volume": "44025.588351",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-22T15:30:17.091694Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -295,15 +295,15 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 43233.538350999996,
-    "liquidityNum": 255477.2381,
+    "volumeNum": 44025.588351,
+    "liquidityNum": 27301.1225,
     "endDateIso": "2026-10-19",
     "startDateIso": "2026-09-22",
     "hasReviewedDates": true,
-    "volume24hr": 39652.86390599999,
-    "volume1wk": 44025.588351,
-    "volume1mo": 44025.588351,
-    "volume1yr": 44025.588351,
+    "volume24hr": 40333.421645999995,
+    "volume1wk": 44739.611607,
+    "volume1mo": 44739.611607,
+    "volume1yr": 44739.611607,
     "gameStartTime": "2026-10-19 23:30:00+00",
     "secondsDelay": 1,
     "clobTokenIds": "[\"70156582826163990502757071463321149459850460543912606073775789678061120048966\", \"72995316711572786105212753658542673394460751297805827523728208509587429921930\"]",
@@ -314,12 +314,12 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "volume24hrClob": 39652.86390599999,
-    "volume1wkClob": 44025.588351,
-    "volume1moClob": 44025.588351,
-    "volume1yrClob": 44025.588351,
-    "volumeClob": 43233.538350999996,
-    "liquidityClob": 255477.2381,
+    "volume24hrClob": 40333.421645999995,
+    "volume1wkClob": 44739.611607,
+    "volume1moClob": 44739.611607,
+    "volume1yrClob": 44739.611607,
+    "volumeClob": 44025.588351,
+    "liquidityClob": 27301.1225,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -334,9 +334,9 @@
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
     "spread": 0.01,
-    "oneHourPriceChange": -0.03,
+    "oneHourPriceChange": -0.02,
     "oneWeekPriceChange": -0.005,
-    "lastTradePrice": 0.45,
+    "lastTradePrice": 0.43,
     "bestBid": 0.42,
     "bestAsk": 0.43,
     "automaticallyActive": true,
@@ -395,7 +395,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4841699",
@@ -404,19 +404,19 @@
     "slug": "nhl-pit-utah-2026-10-19",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-20T01:00:00Z",
-    "liquidity": "485417.1717",
+    "liquidity": "483524.6082",
     "startDate": "2026-09-22T15:30:31Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 19 at 9:00PM ET:\nIf the Penguins win, the market will resolve to \"Penguins\".\nIf the Utah win, the market will resolve to \"Utah\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Penguins\", \"Utah\"]",
     "outcomePrices": "[\"0.365\", \"0.635\"]",
-    "volume": "16530.244704999997",
+    "volume": "16538.057204999997",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-22T15:30:18.850687Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -427,15 +427,15 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 16530.244704999997,
-    "liquidityNum": 485417.1717,
+    "volumeNum": 16538.057204999997,
+    "liquidityNum": 483524.6082,
     "endDateIso": "2026-10-20",
     "startDateIso": "2026-09-22",
     "hasReviewedDates": true,
-    "volume24hr": 14186.071316,
-    "volume1wk": 16530.244705,
-    "volume1mo": 16530.244705,
-    "volume1yr": 16530.244705,
+    "volume24hr": 14193.883816000001,
+    "volume1wk": 16538.057205,
+    "volume1mo": 16538.057205,
+    "volume1yr": 16538.057205,
     "gameStartTime": "2026-10-20 01:00:00+00",
     "secondsDelay": 1,
     "clobTokenIds": "[\"39927314887680958079209731731847023698788218996363089378422466627100012566361\", \"1094862368299468032019865600458537782704345525486576815108889100826444134809\"]",
@@ -446,12 +446,12 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "volume24hrClob": 14186.071316,
-    "volume1wkClob": 16530.244705,
-    "volume1moClob": 16530.244705,
-    "volume1yrClob": 16530.244705,
-    "volumeClob": 16530.244704999997,
-    "liquidityClob": 485417.1717,
+    "volume24hrClob": 14193.883816000001,
+    "volume1wkClob": 16538.057205,
+    "volume1moClob": 16538.057205,
+    "volume1yrClob": 16538.057205,
+    "volumeClob": 16538.057204999997,
+    "liquidityClob": 483524.6082,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -468,7 +468,7 @@
     "spread": 0.01,
     "oneDayPriceChange": -0.01,
     "oneWeekPriceChange": -0.095,
-    "lastTradePrice": 0.37,
+    "lastTradePrice": 0.36,
     "bestBid": 0.36,
     "bestAsk": 0.37,
     "automaticallyActive": true,
@@ -527,7 +527,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882628",
@@ -536,7 +536,7 @@
     "slug": "nhl-tor-cbj-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-20T23:00:00Z",
-    "liquidity": "37900.784",
+    "liquidity": "38010.9991",
     "startDate": "2026-09-23T15:30:22Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -548,7 +548,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:13.619254Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -560,14 +560,14 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 2370.2868260000005,
-    "liquidityNum": 37900.784,
+    "liquidityNum": 38010.9991,
     "endDateIso": "2026-10-20",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
-    "volume24hr": 2170.8183750000003,
-    "volume1wk": 2370.286826,
-    "volume1mo": 2370.286826,
-    "volume1yr": 2370.286826,
+    "volume24hr": 9498.818375,
+    "volume1wk": 9698.286826,
+    "volume1mo": 9698.286826,
+    "volume1yr": 9698.286826,
     "gameStartTime": "2026-10-20 23:00:00+00",
     "secondsDelay": 1,
     "clobTokenIds": "[\"94148277393623176691821230871036770421974641301237566661250277738287724008720\", \"95603211098044682131021222506320965804352379180852460219270667191978675380491\"]",
@@ -578,12 +578,12 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "volume24hrClob": 2170.8183750000003,
-    "volume1wkClob": 2370.286826,
-    "volume1moClob": 2370.286826,
-    "volume1yrClob": 2370.286826,
+    "volume24hrClob": 9498.818375,
+    "volume1wkClob": 9698.286826,
+    "volume1moClob": 9698.286826,
+    "volume1yrClob": 9698.286826,
     "volumeClob": 2370.2868260000005,
-    "liquidityClob": 37900.784,
+    "liquidityClob": 38010.9991,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -660,7 +660,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882633",
@@ -669,19 +669,19 @@
     "slug": "nhl-lak-wsh-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-20T23:00:00Z",
-    "liquidity": "63034.6041",
+    "liquidity": "61332.4473",
     "startDate": "2026-09-23T15:30:25Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 20 at 7:00PM ET:\nIf the Kings win, the market will resolve to \"Kings\".\nIf the Capitals win, the market will resolve to \"Capitals\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Kings\", \"Capitals\"]",
     "outcomePrices": "[\"0.415\", \"0.585\"]",
-    "volume": "4145.118232000001",
+    "volume": "4145.118232",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:15.002887Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -692,8 +692,8 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 4145.118232000001,
-    "liquidityNum": 63034.6041,
+    "volumeNum": 4145.118232,
+    "liquidityNum": 61332.4473,
     "endDateIso": "2026-10-20",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
@@ -715,8 +715,8 @@
     "volume1wkClob": 4145.118232,
     "volume1moClob": 4145.118232,
     "volume1yrClob": 4145.118232,
-    "volumeClob": 4145.118232000001,
-    "liquidityClob": 63034.6041,
+    "volumeClob": 4145.118232,
+    "liquidityClob": 61332.4473,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -792,7 +792,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882638",
@@ -801,19 +801,19 @@
     "slug": "nhl-ana-nyi-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-20T23:00:00Z",
-    "liquidity": "43683.7982",
+    "liquidity": "39367.9312",
     "startDate": "2026-09-23T15:30:25Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 20 at 7:00PM ET:\nIf the Ducks win, the market will resolve to \"Ducks\".\nIf the Islanders win, the market will resolve to \"Islanders\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Ducks\", \"Islanders\"]",
     "outcomePrices": "[\"0.425\", \"0.575\"]",
-    "volume": "980.147514",
+    "volume": "980.1475139999999",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:16.388971Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -824,8 +824,8 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 980.147514,
-    "liquidityNum": 43683.7982,
+    "volumeNum": 980.1475139999999,
+    "liquidityNum": 39367.9312,
     "endDateIso": "2026-10-20",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
@@ -847,8 +847,8 @@
     "volume1wkClob": 980.147514,
     "volume1moClob": 980.147514,
     "volume1yrClob": 980.147514,
-    "volumeClob": 980.147514,
-    "liquidityClob": 43683.7982,
+    "volumeClob": 980.1475139999999,
+    "liquidityClob": 39367.9312,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -924,7 +924,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882643",
@@ -933,7 +933,7 @@
     "slug": "nhl-col-nj-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-20T23:00:00Z",
-    "liquidity": "37495.5932",
+    "liquidity": "37650.0174",
     "startDate": "2026-09-23T15:30:28Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -945,7 +945,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:18.037677Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -957,7 +957,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 422.77099699999997,
-    "liquidityNum": 37495.5932,
+    "liquidityNum": 37650.0174,
     "endDateIso": "2026-10-20",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
@@ -980,7 +980,7 @@
     "volume1moClob": 422.770997,
     "volume1yrClob": 422.770997,
     "volumeClob": 422.77099699999997,
-    "liquidityClob": 37495.5932,
+    "liquidityClob": 37650.0174,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1056,7 +1056,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882648",
@@ -1065,7 +1065,7 @@
     "slug": "nhl-sj-mon-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-20T23:00:00Z",
-    "liquidity": "28701.2916",
+    "liquidity": "28712.2924",
     "startDate": "2026-09-23T15:30:33Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -1077,7 +1077,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:21.282554Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -1089,7 +1089,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 3309.0318709999997,
-    "liquidityNum": 28701.2916,
+    "liquidityNum": 28712.2924,
     "endDateIso": "2026-10-20",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
@@ -1112,7 +1112,7 @@
     "volume1moClob": 3309.0318709999997,
     "volume1yrClob": 3309.0318709999997,
     "volumeClob": 3309.0318709999997,
-    "liquidityClob": 28701.2916,
+    "liquidityClob": 28712.2924,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1188,7 +1188,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882653",
@@ -1197,19 +1197,19 @@
     "slug": "nhl-wpg-stl-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-21T00:00:00Z",
-    "liquidity": "62039.6716",
+    "liquidity": "60538.4258",
     "startDate": "2026-09-23T15:30:36Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 20 at 8:00PM ET:\nIf the Jets win, the market will resolve to \"Jets\".\nIf the Blues win, the market will resolve to \"Blues\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Jets\", \"Blues\"]",
     "outcomePrices": "[\"0.435\", \"0.565\"]",
-    "volume": "2164.752214",
+    "volume": "2164.7522140000005",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:24.846162Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -1220,8 +1220,8 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 2164.752214,
-    "liquidityNum": 62039.6716,
+    "volumeNum": 2164.7522140000005,
+    "liquidityNum": 60538.4258,
     "endDateIso": "2026-10-21",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
@@ -1243,8 +1243,8 @@
     "volume1wkClob": 2164.752214,
     "volume1moClob": 2164.752214,
     "volume1yrClob": 2164.752214,
-    "volumeClob": 2164.752214,
-    "liquidityClob": 62039.6716,
+    "volumeClob": 2164.7522140000005,
+    "liquidityClob": 60538.4258,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1320,7 +1320,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882658",
@@ -1329,7 +1329,7 @@
     "slug": "nhl-bos-dal-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-21T00:00:00Z",
-    "liquidity": "64251.1697",
+    "liquidity": "63291.1798",
     "startDate": "2026-09-23T15:30:39Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -1341,7 +1341,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:28.307739Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -1353,7 +1353,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 878.89117,
-    "liquidityNum": 64251.1697,
+    "liquidityNum": 63291.1798,
     "endDateIso": "2026-10-21",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
@@ -1376,7 +1376,7 @@
     "volume1moClob": 878.89117,
     "volume1yrClob": 878.89117,
     "volumeClob": 878.89117,
-    "liquidityClob": 64251.1697,
+    "liquidityClob": 63291.1798,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1452,7 +1452,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882663",
@@ -1461,19 +1461,19 @@
     "slug": "nhl-min-edm-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-21T01:00:00Z",
-    "liquidity": "67180.2281",
+    "liquidity": "65739.5931",
     "startDate": "2026-09-23T15:30:43Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 20 at 9:00PM ET:\nIf the Wild win, the market will resolve to \"Wild\".\nIf the Oilers win, the market will resolve to \"Oilers\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Wild\", \"Oilers\"]",
     "outcomePrices": "[\"0.455\", \"0.545\"]",
-    "volume": "643.729235",
+    "volume": "643.7292349999999",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:31.700699Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -1484,8 +1484,8 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 643.729235,
-    "liquidityNum": 67180.2281,
+    "volumeNum": 643.7292349999999,
+    "liquidityNum": 65739.5931,
     "endDateIso": "2026-10-21",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
@@ -1507,8 +1507,8 @@
     "volume1wkClob": 643.729235,
     "volume1moClob": 643.729235,
     "volume1yrClob": 643.729235,
-    "volumeClob": 643.729235,
-    "liquidityClob": 67180.2281,
+    "volumeClob": 643.7292349999999,
+    "liquidityClob": 65739.5931,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1583,7 +1583,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882668",
@@ -1592,7 +1592,7 @@
     "slug": "nhl-det-sea-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-21T01:40:00Z",
-    "liquidity": "54699.4161",
+    "liquidity": "53367.5361",
     "startDate": "2026-09-23T15:30:45Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -1604,7 +1604,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:35.26551Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -1616,7 +1616,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 1733.42732,
-    "liquidityNum": 54699.4161,
+    "liquidityNum": 53367.5361,
     "endDateIso": "2026-10-21",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
@@ -1639,7 +1639,7 @@
     "volume1moClob": 1733.4273199999998,
     "volume1yrClob": 1733.4273199999998,
     "volumeClob": 1733.42732,
-    "liquidityClob": 54699.4161,
+    "liquidityClob": 53367.5361,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1715,7 +1715,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882673",
@@ -1724,7 +1724,7 @@
     "slug": "nhl-car-van-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-21T02:00:00Z",
-    "liquidity": "88971.227",
+    "liquidity": "86622.0464",
     "startDate": "2026-09-23T15:30:48Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -1736,7 +1736,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:38.603342Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -1748,14 +1748,14 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 12955.190910999998,
-    "liquidityNum": 88971.227,
+    "liquidityNum": 86622.0464,
     "endDateIso": "2026-10-21",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
-    "volume24hr": 12894.560372999998,
-    "volume1wk": 12955.190910999998,
-    "volume1mo": 12955.190910999998,
-    "volume1yr": 12955.190910999998,
+    "volume24hr": 12894.560373,
+    "volume1wk": 12955.190911,
+    "volume1mo": 12955.190911,
+    "volume1yr": 12955.190911,
     "gameStartTime": "2026-10-21 02:00:00+00",
     "secondsDelay": 1,
     "clobTokenIds": "[\"60476050258955511764540469838857154458361542624547035635895515210139269260692\", \"15718691302924047003365944511828768222119118661281107494027298144625067694369\"]",
@@ -1766,12 +1766,12 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "volume24hrClob": 12894.560372999998,
-    "volume1wkClob": 12955.190910999998,
-    "volume1moClob": 12955.190910999998,
-    "volume1yrClob": 12955.190910999998,
+    "volume24hrClob": 12894.560373,
+    "volume1wkClob": 12955.190911,
+    "volume1moClob": 12955.190911,
+    "volume1yrClob": 12955.190911,
     "volumeClob": 12955.190910999998,
-    "liquidityClob": 88971.227,
+    "liquidityClob": 86622.0464,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1847,7 +1847,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4882678",
@@ -1856,19 +1856,19 @@
     "slug": "nhl-tb-las-2026-10-20",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-21T02:30:00Z",
-    "liquidity": "58651.0437",
+    "liquidity": "57320.2387",
     "startDate": "2026-09-23T15:30:51Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 20 at 10:30PM ET:\nIf the Lightning win, the market will resolve to \"Lightning\".\nIf the Golden Knights win, the market will resolve to \"Golden Knights\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Lightning\", \"Golden Knights\"]",
     "outcomePrices": "[\"0.485\", \"0.515\"]",
-    "volume": "129.465313",
+    "volume": "129.46531299999998",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-23T15:30:42.214478Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:38:45.517072Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -1879,8 +1879,8 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 129.465313,
-    "liquidityNum": 58651.0437,
+    "volumeNum": 129.46531299999998,
+    "liquidityNum": 57320.2387,
     "endDateIso": "2026-10-21",
     "startDateIso": "2026-09-23",
     "hasReviewedDates": true,
@@ -1902,8 +1902,8 @@
     "volume1wkClob": 129.465313,
     "volume1moClob": 129.465313,
     "volume1yrClob": 129.465313,
-    "volumeClob": 129.465313,
-    "liquidityClob": 58651.0437,
+    "volumeClob": 129.46531299999998,
+    "liquidityClob": 57320.2387,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1979,7 +1979,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4908727",
@@ -1988,19 +1988,19 @@
     "slug": "nhl-fla-ott-2026-10-21",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-21T23:30:00Z",
-    "liquidity": "8290.6523",
+    "liquidity": "9840.7425",
     "startDate": "2026-09-24T15:30:23Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 21 at 7:30PM ET:\nIf the Panthers win, the market will resolve to \"Panthers\".\nIf the Senators win, the market will resolve to \"Senators\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Panthers\", \"Senators\"]",
     "outcomePrices": "[\"0.505\", \"0.495\"]",
-    "volume": "413.440979",
+    "volume": "413.4409790000001",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-24T15:30:14.609613Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -2011,8 +2011,8 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "volumeNum": 413.440979,
-    "liquidityNum": 8290.6523,
+    "volumeNum": 413.4409790000001,
+    "liquidityNum": 9840.7425,
     "endDateIso": "2026-10-21",
     "startDateIso": "2026-09-24",
     "hasReviewedDates": true,
@@ -2034,8 +2034,8 @@
     "volume1wkClob": 413.440979,
     "volume1moClob": 413.440979,
     "volume1yrClob": 413.440979,
-    "volumeClob": 413.440979,
-    "liquidityClob": 8290.6523,
+    "volumeClob": 413.4409790000001,
+    "liquidityClob": 9840.7425,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -2111,7 +2111,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4908732",
@@ -2120,7 +2120,7 @@
     "slug": "nhl-phi-buf-2026-10-21",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-21T23:30:00Z",
-    "liquidity": "14818.897",
+    "liquidity": "14992.6648",
     "startDate": "2026-09-24T15:30:26Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -2132,7 +2132,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-24T15:30:15.857795Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:38:45.517072Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -2144,7 +2144,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 55.05,
-    "liquidityNum": 14818.897,
+    "liquidityNum": 14992.6648,
     "endDateIso": "2026-10-21",
     "startDateIso": "2026-09-24",
     "hasReviewedDates": true,
@@ -2167,7 +2167,7 @@
     "volume1moClob": 55.05,
     "volume1yrClob": 55.05,
     "volumeClob": 55.05,
-    "liquidityClob": 14818.897,
+    "liquidityClob": 14992.6648,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -2243,7 +2243,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950257",
@@ -2366,7 +2366,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950262",
@@ -2375,7 +2375,7 @@
     "slug": "nhl-fla-pit-2026-10-22",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-22T23:00:00Z",
-    "liquidity": "3750.495",
+    "liquidity": "3773.072",
     "startDate": "2026-09-25T15:30:24Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -2387,7 +2387,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-25T15:30:18.173237Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -2399,7 +2399,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 10.05,
-    "liquidityNum": 3750.495,
+    "liquidityNum": 3773.072,
     "endDateIso": "2026-10-22",
     "startDateIso": "2026-09-25",
     "hasReviewedDates": true,
@@ -2422,7 +2422,7 @@
     "volume1moClob": 10.05,
     "volume1yrClob": 10.05,
     "volumeClob": 10.05,
-    "liquidityClob": 3750.495,
+    "liquidityClob": 3773.072,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -2498,7 +2498,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950267",
@@ -2507,7 +2507,7 @@
     "slug": "nhl-sj-ott-2026-10-22",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-22T23:00:00Z",
-    "liquidity": "2521.7391",
+    "liquidity": "2672.2188",
     "startDate": "2026-09-25T15:30:28Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -2519,7 +2519,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-25T15:30:19.44867Z",
-    "updatedAt": "2026-10-19T23:28:45.578423Z",
+    "updatedAt": "2026-10-19T23:36:45.873924Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -2531,7 +2531,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 15.100000000000001,
-    "liquidityNum": 2521.7391,
+    "liquidityNum": 2672.2188,
     "endDateIso": "2026-10-22",
     "startDateIso": "2026-09-25",
     "hasReviewedDates": true,
@@ -2554,7 +2554,7 @@
     "volume1moClob": 15.100000000000001,
     "volume1yrClob": 15.100000000000001,
     "volumeClob": 15.100000000000001,
-    "liquidityClob": 2521.7391,
+    "liquidityClob": 2672.2188,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -2630,7 +2630,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950272",
@@ -2753,7 +2753,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950277",
@@ -2762,7 +2762,7 @@
     "slug": "nhl-nsh-bos-2026-10-22",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-22T23:00:00Z",
-    "liquidity": "3935.0731",
+    "liquidity": "4021.9831",
     "startDate": "2026-09-25T15:30:30Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -2774,7 +2774,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-25T15:30:22.311799Z",
-    "updatedAt": "2026-10-19T23:28:45.578423Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -2786,7 +2786,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 9.677417,
-    "liquidityNum": 3935.0731,
+    "liquidityNum": 4021.9831,
     "endDateIso": "2026-10-22",
     "startDateIso": "2026-09-25",
     "hasReviewedDates": true,
@@ -2809,7 +2809,7 @@
     "volume1moClob": 9.677417,
     "volume1yrClob": 9.677417,
     "volumeClob": 9.677417,
-    "liquidityClob": 3935.0731,
+    "liquidityClob": 4021.9831,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -2883,7 +2883,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950282",
@@ -3014,7 +3014,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950287",
@@ -3023,7 +3023,7 @@
     "slug": "nhl-las-stl-2026-10-22",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-23T00:00:00Z",
-    "liquidity": "3789.2532",
+    "liquidity": "3786.4232",
     "startDate": "2026-09-25T15:30:36Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -3035,7 +3035,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-25T15:30:25.92212Z",
-    "updatedAt": "2026-10-19T23:28:45.578423Z",
+    "updatedAt": "2026-10-19T23:32:46.697351Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -3047,7 +3047,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 5.05,
-    "liquidityNum": 3789.2532,
+    "liquidityNum": 3786.4232,
     "endDateIso": "2026-10-23",
     "startDateIso": "2026-09-25",
     "hasReviewedDates": true,
@@ -3062,7 +3062,7 @@
     "umaBond": "250",
     "umaReward": "0.8",
     "volumeClob": 5.05,
-    "liquidityClob": 3789.2532,
+    "liquidityClob": 3786.4232,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -3137,7 +3137,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950292",
@@ -3146,7 +3146,7 @@
     "slug": "nhl-wpg-dal-2026-10-22",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-23T00:00:00Z",
-    "liquidity": "4658.1169",
+    "liquidity": "4716.4169",
     "startDate": "2026-09-25T15:30:36Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -3158,7 +3158,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-25T15:30:27.599175Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -3170,7 +3170,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 307.88709599999993,
-    "liquidityNum": 4658.1169,
+    "liquidityNum": 4716.4169,
     "endDateIso": "2026-10-23",
     "startDateIso": "2026-09-25",
     "hasReviewedDates": true,
@@ -3185,7 +3185,7 @@
     "umaBond": "250",
     "umaReward": "0.8",
     "volumeClob": 307.88709599999993,
-    "liquidityClob": 4658.1169,
+    "liquidityClob": 4716.4169,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -3260,7 +3260,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950297",
@@ -3269,7 +3269,7 @@
     "slug": "nhl-car-edm-2026-10-22",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-23T01:00:00Z",
-    "liquidity": "3293.8705",
+    "liquidity": "4065.3605",
     "startDate": "2026-09-25T15:30:36Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -3280,7 +3280,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-25T15:30:28.784085Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -3291,7 +3291,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 3293.8705,
+    "liquidityNum": 4065.3605,
     "endDateIso": "2026-10-23",
     "startDateIso": "2026-09-25",
     "hasReviewedDates": true,
@@ -3305,7 +3305,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 3293.8705,
+    "liquidityClob": 4065.3605,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -3378,7 +3378,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950302",
@@ -3387,7 +3387,7 @@
     "slug": "nhl-min-cal-2026-10-22",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-23T01:00:00Z",
-    "liquidity": "4061.5724",
+    "liquidity": "4061.7224",
     "startDate": "2026-09-25T15:30:38Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -3398,7 +3398,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-25T15:30:30.028708Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:32:46.697351Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -3409,7 +3409,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 4061.5724,
+    "liquidityNum": 4061.7224,
     "endDateIso": "2026-10-23",
     "startDateIso": "2026-09-25",
     "hasReviewedDates": true,
@@ -3423,7 +3423,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 4061.5724,
+    "liquidityClob": 4061.7224,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -3497,7 +3497,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950307",
@@ -3506,7 +3506,7 @@
     "slug": "nhl-utah-sea-2026-10-22",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-23T02:00:00Z",
-    "liquidity": "4194.6164",
+    "liquidity": "4065.7264",
     "startDate": "2026-09-25T15:30:38Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -3518,7 +3518,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-25T15:30:31.12928Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -3530,7 +3530,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 5.09,
-    "liquidityNum": 4194.6164,
+    "liquidityNum": 4065.7264,
     "endDateIso": "2026-10-23",
     "startDateIso": "2026-09-25",
     "hasReviewedDates": true,
@@ -3545,7 +3545,7 @@
     "umaBond": "250",
     "umaReward": "0.8",
     "volumeClob": 5.09,
-    "liquidityClob": 4194.6164,
+    "liquidityClob": 4065.7264,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -3620,7 +3620,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4950312",
@@ -3629,7 +3629,7 @@
     "slug": "nhl-det-van-2026-10-22",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-23T02:00:00Z",
-    "liquidity": "3697.8755",
+    "liquidity": "3716.4755",
     "startDate": "2026-09-25T15:30:40Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -3641,7 +3641,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-25T15:30:32.305732Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -3653,7 +3653,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 231.357873,
-    "liquidityNum": 3697.8755,
+    "liquidityNum": 3716.4755,
     "endDateIso": "2026-10-23",
     "startDateIso": "2026-09-25",
     "hasReviewedDates": true,
@@ -3676,7 +3676,7 @@
     "volume1moClob": 231.357873,
     "volume1yrClob": 231.357873,
     "volumeClob": 231.357873,
-    "liquidityClob": 3697.8755,
+    "liquidityClob": 3716.4755,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -3752,7 +3752,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4984345",
@@ -3761,7 +3761,7 @@
     "slug": "nhl-mon-chi-2026-10-23",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-24T00:00:00Z",
-    "liquidity": "8169.5095",
+    "liquidity": "3286.1799",
     "startDate": "2026-09-26T15:30:22Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -3772,7 +3772,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-26T15:30:14.467241Z",
-    "updatedAt": "2026-10-19T23:28:45.578423Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -3783,7 +3783,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 8169.5095,
+    "liquidityNum": 3286.1799,
     "endDateIso": "2026-10-24",
     "startDateIso": "2026-09-26",
     "hasReviewedDates": true,
@@ -3797,7 +3797,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 8169.5095,
+    "liquidityClob": 3286.1799,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -3871,7 +3871,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "4984350",
@@ -3880,7 +3880,7 @@
     "slug": "nhl-tb-col-2026-10-23",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-24T01:00:00Z",
-    "liquidity": "7833.3717",
+    "liquidity": "3047.1788",
     "startDate": "2026-09-26T15:30:24Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -3891,7 +3891,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-26T15:30:16.845381Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -3902,7 +3902,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 7833.3717,
+    "liquidityNum": 3047.1788,
     "endDateIso": "2026-10-24",
     "startDateIso": "2026-09-26",
     "hasReviewedDates": true,
@@ -3916,7 +3916,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 7833.3717,
+    "liquidityClob": 3047.1788,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -3989,7 +3989,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035379",
@@ -4010,7 +4010,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:18.266828Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -4111,7 +4111,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035384",
@@ -4120,7 +4120,7 @@
     "slug": "nhl-lak-nj-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-24T19:30:00Z",
-    "liquidity": "11718.6995",
+    "liquidity": "11679.2095",
     "startDate": "2026-09-27T15:30:28Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -4131,7 +4131,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:20.164015Z",
-    "updatedAt": "2026-10-19T23:28:45.578423Z",
+    "updatedAt": "2026-10-19T23:38:45.517072Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -4142,7 +4142,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 11718.6995,
+    "liquidityNum": 11679.2095,
     "endDateIso": "2026-10-24",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -4156,7 +4156,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 11718.6995,
+    "liquidityClob": 11679.2095,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -4230,7 +4230,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035389",
@@ -4239,7 +4239,7 @@
     "slug": "nhl-las-cbj-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-24T23:00:00Z",
-    "liquidity": "11234.8894",
+    "liquidity": "10425.8894",
     "startDate": "2026-09-27T15:30:30Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -4250,7 +4250,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:21.501398Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:38:45.517072Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -4261,7 +4261,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 11234.8894,
+    "liquidityNum": 10425.8894,
     "endDateIso": "2026-10-24",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -4275,7 +4275,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 11234.8894,
+    "liquidityClob": 10425.8894,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -4349,7 +4349,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035394",
@@ -4358,7 +4358,7 @@
     "slug": "nhl-buf-wsh-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-24T23:00:00Z",
-    "liquidity": "10306.8459",
+    "liquidity": "10315.7959",
     "startDate": "2026-09-27T15:30:32Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -4369,7 +4369,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:23.068967Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -4380,7 +4380,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 10306.8459,
+    "liquidityNum": 10315.7959,
     "endDateIso": "2026-10-24",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -4394,7 +4394,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 10306.8459,
+    "liquidityClob": 10315.7959,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -4468,7 +4468,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035399",
@@ -4477,7 +4477,7 @@
     "slug": "nhl-car-stl-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-24T23:00:00Z",
-    "liquidity": "10315.9634",
+    "liquidity": "10462.5234",
     "startDate": "2026-09-27T15:30:32Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -4488,7 +4488,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:24.86311Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -4499,7 +4499,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 10315.9634,
+    "liquidityNum": 10462.5234,
     "endDateIso": "2026-10-24",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -4513,7 +4513,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 10315.9634,
+    "liquidityClob": 10462.5234,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -4587,7 +4587,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035404",
@@ -4596,7 +4596,7 @@
     "slug": "nhl-nsh-pit-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-24T23:00:00Z",
-    "liquidity": "10458.1379",
+    "liquidity": "10813.9279",
     "startDate": "2026-09-27T15:30:36Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -4607,7 +4607,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:26.618191Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:36:45.873924Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -4618,7 +4618,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 10458.1379,
+    "liquidityNum": 10813.9279,
     "endDateIso": "2026-10-24",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -4632,7 +4632,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 10458.1379,
+    "liquidityClob": 10813.9279,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -4706,7 +4706,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035409",
@@ -4715,7 +4715,7 @@
     "slug": "nhl-nyr-ott-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-24T23:00:00Z",
-    "liquidity": "1522.7027",
+    "liquidity": "1998.5836",
     "startDate": "2026-09-27T15:30:36Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -4726,7 +4726,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:28.047447Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -4737,7 +4737,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 1522.7027,
+    "liquidityNum": 1998.5836,
     "endDateIso": "2026-10-24",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -4751,7 +4751,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 1522.7027,
+    "liquidityClob": 1998.5836,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -4825,7 +4825,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035414",
@@ -4845,7 +4845,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:29.470371Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -4944,7 +4944,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035419",
@@ -4953,7 +4953,7 @@
     "slug": "nhl-sj-bos-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-24T23:00:00Z",
-    "liquidity": "10773.5226",
+    "liquidity": "10772.9926",
     "startDate": "2026-09-27T15:30:40Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -4965,7 +4965,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:30.838862Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -4977,7 +4977,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 14,
-    "liquidityNum": 10773.5226,
+    "liquidityNum": 10772.9926,
     "endDateIso": "2026-10-24",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -4992,7 +4992,7 @@
     "umaBond": "250",
     "umaReward": "0.8",
     "volumeClob": 14,
-    "liquidityClob": 10773.5226,
+    "liquidityClob": 10772.9926,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -5068,7 +5068,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035426",
@@ -5077,7 +5077,7 @@
     "slug": "nhl-tb-utah-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-25T01:00:00Z",
-    "liquidity": "10531.245",
+    "liquidity": "10536.845",
     "startDate": "2026-09-27T15:30:40Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -5088,7 +5088,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:32.179169Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -5099,7 +5099,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 10531.245,
+    "liquidityNum": 10536.845,
     "endDateIso": "2026-10-25",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -5113,7 +5113,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 10531.245,
+    "liquidityClob": 10536.845,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -5187,7 +5187,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035431",
@@ -5196,7 +5196,7 @@
     "slug": "nhl-min-sea-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-25T02:00:00Z",
-    "liquidity": "10638.013",
+    "liquidity": "10660.463",
     "startDate": "2026-09-27T15:30:42Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -5208,7 +5208,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:34.360849Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -5220,7 +5220,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 5.05,
-    "liquidityNum": 10638.013,
+    "liquidityNum": 10660.463,
     "endDateIso": "2026-10-25",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -5243,7 +5243,7 @@
     "volume1moClob": 5.05,
     "volume1yrClob": 5.05,
     "volumeClob": 5.05,
-    "liquidityClob": 10638.013,
+    "liquidityClob": 10660.463,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -5319,7 +5319,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5035436",
@@ -5328,7 +5328,7 @@
     "slug": "nhl-det-cal-2026-10-24",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-25T02:00:00Z",
-    "liquidity": "11291.9617",
+    "liquidity": "11271.6117",
     "startDate": "2026-09-27T15:30:44Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -5339,7 +5339,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-27T15:30:36.008062Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -5350,7 +5350,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 11291.9617,
+    "liquidityNum": 11271.6117,
     "endDateIso": "2026-10-25",
     "startDateIso": "2026-09-27",
     "hasReviewedDates": true,
@@ -5364,7 +5364,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 11291.9617,
+    "liquidityClob": 11271.6117,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -5438,7 +5438,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5080551",
@@ -5458,7 +5458,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-28T15:30:14.192683Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:40:46.106045Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -5557,7 +5557,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5080564",
@@ -5577,7 +5577,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-28T15:30:15.424906Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:38:45.517072Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -5677,7 +5677,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5080576",
@@ -5686,7 +5686,7 @@
     "slug": "nhl-mon-wpg-2026-10-25",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-25T23:00:00Z",
-    "liquidity": "11228.6666",
+    "liquidity": "11205.5166",
     "startDate": "2026-09-28T15:30:24Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -5697,7 +5697,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-28T15:30:16.620277Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:36:45.873924Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -5708,7 +5708,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 11228.6666,
+    "liquidityNum": 11205.5166,
     "endDateIso": "2026-10-25",
     "startDateIso": "2026-09-28",
     "hasReviewedDates": true,
@@ -5722,7 +5722,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 11228.6666,
+    "liquidityClob": 11205.5166,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -5797,7 +5797,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5080590",
@@ -5917,7 +5917,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5080600",
@@ -5926,7 +5926,7 @@
     "slug": "nhl-min-van-2026-10-25",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-26T02:00:00Z",
-    "liquidity": "10348.5284",
+    "liquidity": "10357.1684",
     "startDate": "2026-09-28T15:30:28Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -5937,7 +5937,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-28T15:30:18.979162Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:34:45.98145Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -5948,7 +5948,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 10348.5284,
+    "liquidityNum": 10357.1684,
     "endDateIso": "2026-10-26",
     "startDateIso": "2026-09-28",
     "hasReviewedDates": true,
@@ -5962,7 +5962,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 10348.5284,
+    "liquidityClob": 10357.1684,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -6037,7 +6037,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5126653",
@@ -6046,7 +6046,7 @@
     "slug": "nhl-lak-nyr-2026-10-26",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-26T23:00:00Z",
-    "liquidity": "9668.6708",
+    "liquidity": "9663.8208",
     "startDate": "2026-09-29T15:30:22Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -6057,7 +6057,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-29T15:30:13.9178Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:34:45.98145Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -6068,7 +6068,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 9668.6708,
+    "liquidityNum": 9663.8208,
     "endDateIso": "2026-10-26",
     "startDateIso": "2026-09-29",
     "hasReviewedDates": true,
@@ -6082,7 +6082,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 9668.6708,
+    "liquidityClob": 9663.8208,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -6157,7 +6157,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5126658",
@@ -6166,7 +6166,7 @@
     "slug": "nhl-tor-cal-2026-10-26",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-27T00:30:00Z",
-    "liquidity": "9813.5433",
+    "liquidity": "9817.7733",
     "startDate": "2026-09-29T15:30:23Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -6177,7 +6177,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-29T15:30:15.844584Z",
-    "updatedAt": "2026-10-19T23:10:46.841054Z",
+    "updatedAt": "2026-10-19T23:34:45.98145Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -6188,7 +6188,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 9813.5433,
+    "liquidityNum": 9817.7733,
     "endDateIso": "2026-10-27",
     "startDateIso": "2026-09-29",
     "hasReviewedDates": true,
@@ -6202,7 +6202,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 9813.5433,
+    "liquidityClob": 9817.7733,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -6276,7 +6276,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5126663",
@@ -6395,7 +6395,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156463",
@@ -6404,7 +6404,7 @@
     "slug": "nhl-cbj-phi-2026-10-27",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-27T23:00:00Z",
-    "liquidity": "9542.2409",
+    "liquidity": "9542.0009",
     "startDate": "2026-09-30T15:30:34Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -6415,7 +6415,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-30T15:30:24.799829Z",
-    "updatedAt": "2026-10-19T23:14:46.006485Z",
+    "updatedAt": "2026-10-19T23:38:45.517072Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -6426,7 +6426,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 9542.2409,
+    "liquidityNum": 9542.0009,
     "endDateIso": "2026-10-27",
     "startDateIso": "2026-09-30",
     "hasReviewedDates": true,
@@ -6440,7 +6440,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 9542.2409,
+    "liquidityClob": 9542.0009,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -6514,7 +6514,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156468",
@@ -6633,7 +6633,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156473",
@@ -6642,7 +6642,7 @@
     "slug": "nhl-nyi-nsh-2026-10-27",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-28T00:00:00Z",
-    "liquidity": "9559.9243",
+    "liquidity": "9560.1643",
     "startDate": "2026-09-30T15:30:36Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -6653,7 +6653,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-30T15:30:27.959568Z",
-    "updatedAt": "2026-10-19T23:10:46.841054Z",
+    "updatedAt": "2026-10-19T23:34:45.98145Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -6664,7 +6664,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 9559.9243,
+    "liquidityNum": 9560.1643,
     "endDateIso": "2026-10-28",
     "startDateIso": "2026-09-30",
     "hasReviewedDates": true,
@@ -6678,7 +6678,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 9559.9243,
+    "liquidityClob": 9560.1643,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -6752,7 +6752,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156478",
@@ -6871,7 +6871,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156483",
@@ -6880,18 +6880,18 @@
     "slug": "nhl-nj-dal-2026-10-27",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-28T00:00:00Z",
-    "liquidity": "9591.6366",
+    "liquidity": "9585.8536",
     "startDate": "2026-09-30T15:30:40Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 27 at 8:00PM ET:\nIf the Devils win, the market will resolve to \"Devils\".\nIf the Stars win, the market will resolve to \"Stars\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Devils\", \"Stars\"]",
-    "outcomePrices": "[\"0.365\", \"0.635\"]",
+    "outcomePrices": "[\"0.37\", \"0.63\"]",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-30T15:30:30.846915Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:34:45.98145Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -6902,7 +6902,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 9591.6366,
+    "liquidityNum": 9585.8536,
     "endDateIso": "2026-10-28",
     "startDateIso": "2026-09-30",
     "hasReviewedDates": true,
@@ -6916,7 +6916,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 9591.6366,
+    "liquidityClob": 9585.8536,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -6926,14 +6926,14 @@
     "funded": false,
     "acceptingOrdersTimestamp": "2026-09-30T15:30:40Z",
     "cyom": false,
-    "competitive": 0.9821012055292297,
+    "competitive": 0.9833808634083981,
     "approved": true,
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
-    "spread": 0.13,
-    "oneHourPriceChange": -0.005,
-    "oneWeekPriceChange": -0.03,
-    "bestBid": 0.3,
+    "spread": 0.12,
+    "oneDayPriceChange": 0.005,
+    "oneWeekPriceChange": -0.025,
+    "bestBid": 0.31,
     "bestAsk": 0.43,
     "automaticallyActive": true,
     "clearBookOnStart": true,
@@ -6991,7 +6991,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156488",
@@ -7110,7 +7110,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156493",
@@ -7229,7 +7229,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156498",
@@ -7238,7 +7238,7 @@
     "slug": "nhl-min-utah-2026-10-27",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-28T01:00:00Z",
-    "liquidity": "9571.2617",
+    "liquidity": "9587.3217",
     "startDate": "2026-09-30T15:30:43Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -7249,7 +7249,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-09-30T15:30:34.617317Z",
-    "updatedAt": "2026-10-19T23:14:46.006485Z",
+    "updatedAt": "2026-10-19T23:38:45.517072Z",
     "new": false,
     "featured": false,
     "archived": false,
@@ -7260,7 +7260,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 9571.2617,
+    "liquidityNum": 9587.3217,
     "endDateIso": "2026-10-28",
     "startDateIso": "2026-09-30",
     "hasReviewedDates": true,
@@ -7274,7 +7274,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 9571.2617,
+    "liquidityClob": 9587.3217,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -7349,7 +7349,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156503",
@@ -7470,7 +7470,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156508",
@@ -7589,7 +7589,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5156513",
@@ -7708,7 +7708,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5179036",
@@ -7717,7 +7717,7 @@
     "slug": "nhl-phi-wsh-2026-10-28",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-28T23:30:00Z",
-    "liquidity": "9664.7178",
+    "liquidity": "9665.3878",
     "startDate": "2026-10-01T15:30:30Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -7728,7 +7728,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-01T15:30:22.073585Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:36:45.873924Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -7740,7 +7740,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 9664.7178,
+    "liquidityNum": 9665.3878,
     "endDateIso": "2026-10-28",
     "startDateIso": "2026-10-01",
     "hasReviewedDates": true,
@@ -7754,7 +7754,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 9664.7178,
+    "liquidityClob": 9665.3878,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -7828,7 +7828,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5179041",
@@ -7948,7 +7948,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5179046",
@@ -7957,18 +7957,18 @@
     "slug": "nhl-nj-col-2026-10-28",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-29T01:00:00Z",
-    "liquidity": "9667.6387",
+    "liquidity": "9667.6395",
     "startDate": "2026-10-01T15:30:33Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 28 at 9:00PM ET:\nIf the Devils win, the market will resolve to \"Devils\".\nIf the Avalanche win, the market will resolve to \"Avalanche\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Devils\", \"Avalanche\"]",
-    "outcomePrices": "[\"0.32\", \"0.68\"]",
+    "outcomePrices": "[\"0.325\", \"0.675\"]",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-01T15:30:24.859471Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:32:46.697351Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -7980,7 +7980,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 9667.6387,
+    "liquidityNum": 9667.6395,
     "endDateIso": "2026-10-29",
     "startDateIso": "2026-10-01",
     "hasReviewedDates": true,
@@ -7994,7 +7994,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 9667.6387,
+    "liquidityClob": 9667.6395,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -8004,14 +8004,14 @@
     "funded": false,
     "acceptingOrdersTimestamp": "2026-10-01T15:30:33Z",
     "cyom": false,
-    "competitive": 0.9686168151879117,
+    "competitive": 0.9702850212249848,
     "approved": true,
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
-    "spread": 0.14,
-    "oneHourPriceChange": -0.005,
-    "oneWeekPriceChange": 0.005,
-    "bestBid": 0.25,
+    "spread": 0.13,
+    "oneDayPriceChange": 0.005,
+    "oneWeekPriceChange": 0.01,
+    "bestBid": 0.26,
     "bestAsk": 0.39,
     "automaticallyActive": true,
     "clearBookOnStart": true,
@@ -8069,7 +8069,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5179051",
@@ -8189,7 +8189,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5237580",
@@ -8311,7 +8311,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5237585",
@@ -8431,7 +8431,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5237590",
@@ -8552,7 +8552,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285912",
@@ -8672,7 +8672,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285917",
@@ -8792,7 +8792,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285922",
@@ -8911,7 +8911,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285927",
@@ -9031,7 +9031,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285932",
@@ -9151,7 +9151,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285937",
@@ -9271,7 +9271,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285942",
@@ -9391,7 +9391,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285947",
@@ -9511,7 +9511,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285952",
@@ -9631,7 +9631,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5285957",
@@ -9752,7 +9752,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5329746",
@@ -9876,7 +9876,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5329751",
@@ -9996,7 +9996,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5329756",
@@ -10117,7 +10117,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5329761",
@@ -10237,7 +10237,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5329766",
@@ -10357,7 +10357,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5377056",
@@ -10477,7 +10477,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5377061",
@@ -10596,7 +10596,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5377066",
@@ -10716,7 +10716,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5377071",
@@ -10725,18 +10725,18 @@
     "slug": "nhl-cal-sj-2026-11-02",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-11-03T02:00:00Z",
-    "liquidity": "71.4384",
+    "liquidity": "71.0784",
     "startDate": "2026-10-06T15:30:41Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for November 2 at 9:00PM ET:\nIf the Flames win, the market will resolve to \"Flames\".\nIf the Sharks win, the market will resolve to \"Sharks\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Flames\", \"Sharks\"]",
-    "outcomePrices": "[\"0.42\", \"0.58\"]",
+    "outcomePrices": "[\"0.415\", \"0.585\"]",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-06T15:30:33.299237Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:38:45.517072Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -10748,7 +10748,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 71.4384,
+    "liquidityNum": 71.0784,
     "endDateIso": "2026-11-03",
     "startDateIso": "2026-10-06",
     "hasReviewedDates": true,
@@ -10762,7 +10762,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 71.4384,
+    "liquidityClob": 71.0784,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -10772,15 +10772,16 @@
     "funded": false,
     "acceptingOrdersTimestamp": "2026-10-06T15:30:41Z",
     "cyom": false,
-    "competitive": 0.9936406995230525,
+    "competitive": 0.9928268261808434,
     "approved": true,
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
-    "spread": 0.2,
-    "oneDayPriceChange": -0.035,
-    "oneWeekPriceChange": -0.035,
+    "spread": 0.19,
+    "oneDayPriceChange": -0.04,
+    "oneHourPriceChange": -0.005,
+    "oneWeekPriceChange": -0.04,
     "bestBid": 0.32,
-    "bestAsk": 0.52,
+    "bestAsk": 0.51,
     "automaticallyActive": true,
     "clearBookOnStart": true,
     "manualActivation": false,
@@ -10837,7 +10838,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406584",
@@ -10846,18 +10847,18 @@
     "slug": "nhl-wpg-tb-2026-10-29",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-29T23:00:00Z",
-    "liquidity": "74.4487",
+    "liquidity": "69.453",
     "startDate": "2026-10-07T15:30:28Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "description": "In the upcoming NHL game, scheduled for October 29 at 7:00PM ET:\nIf the Jets win, the market will resolve to \"Jets\".\nIf the Lightning win, the market will resolve to \"Lightning\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.\nThe result will be determined based on the final score including any overtime periods and shootouts. In the event of a shootout, one goal will be added to the winning team's score for the purpose of resolution.",
     "outcomes": "[\"Jets\", \"Lightning\"]",
-    "outcomePrices": "[\"0.365\", \"0.635\"]",
+    "outcomePrices": "[\"0.36\", \"0.64\"]",
     "active": true,
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-07T15:30:20.540256Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:32:46.697351Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -10869,7 +10870,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 74.4487,
+    "liquidityNum": 69.453,
     "endDateIso": "2026-10-29",
     "startDateIso": "2026-10-07",
     "hasReviewedDates": true,
@@ -10883,7 +10884,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 74.4487,
+    "liquidityClob": 69.453,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -10893,16 +10894,15 @@
     "funded": false,
     "acceptingOrdersTimestamp": "2026-10-07T15:30:28Z",
     "cyom": false,
-    "competitive": 0.9821012055292297,
+    "competitive": 0.9807767752059631,
     "approved": true,
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
-    "spread": 0.15,
-    "oneDayPriceChange": 0.02,
-    "oneHourPriceChange": 0.005,
-    "oneWeekPriceChange": -0.02,
+    "spread": 0.14,
+    "oneDayPriceChange": 0.015,
+    "oneWeekPriceChange": -0.025,
     "bestBid": 0.29,
-    "bestAsk": 0.44,
+    "bestAsk": 0.43,
     "automaticallyActive": true,
     "clearBookOnStart": true,
     "manualActivation": false,
@@ -10959,7 +10959,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406597",
@@ -11080,7 +11080,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406610",
@@ -11089,7 +11089,7 @@
     "slug": "nhl-cbj-car-2026-10-29",
     "resolutionSource": "https://www.nhl.com/scores",
     "endDate": "2026-10-29T23:00:00Z",
-    "liquidity": "74.9394",
+    "liquidity": "69.9394",
     "startDate": "2026-10-07T15:30:32Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nhl-2027-champion-20260612185656162-9rCX2UxqNvUj.png",
@@ -11100,7 +11100,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-07T15:30:23.083707Z",
-    "updatedAt": "2026-10-19T23:30:47.40528Z",
+    "updatedAt": "2026-10-19T23:32:46.697351Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -11112,7 +11112,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 74.9394,
+    "liquidityNum": 69.9394,
     "endDateIso": "2026-10-29",
     "startDateIso": "2026-10-07",
     "hasReviewedDates": true,
@@ -11126,7 +11126,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 74.9394,
+    "liquidityClob": 69.9394,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -11201,7 +11201,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406624",
@@ -11321,7 +11321,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406632",
@@ -11442,7 +11442,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406645",
@@ -11562,7 +11562,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406659",
@@ -11683,7 +11683,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406673",
@@ -11803,7 +11803,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406687",
@@ -11923,7 +11923,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406700",
@@ -12043,7 +12043,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406713",
@@ -12163,7 +12163,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406728",
@@ -12283,7 +12283,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406742",
@@ -12303,7 +12303,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-07T15:30:44.401215Z",
-    "updatedAt": "2026-10-19T23:28:45.578423Z",
+    "updatedAt": "2026-10-19T23:30:47.40528Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -12345,7 +12345,6 @@
     "rewardsMaxSpread": 4.5,
     "spread": 0.21,
     "oneDayPriceChange": 0.05,
-    "oneHourPriceChange": 0.005,
     "oneWeekPriceChange": 0.06,
     "bestBid": 0.47,
     "bestAsk": 0.68,
@@ -12405,7 +12404,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406757",
@@ -12425,7 +12424,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-07T15:30:47.364966Z",
-    "updatedAt": "2026-10-19T23:28:45.578423Z",
+    "updatedAt": "2026-10-19T23:30:47.40528Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -12467,7 +12466,6 @@
     "rewardsMaxSpread": 4.5,
     "spread": 0.22,
     "oneDayPriceChange": 0.015,
-    "oneHourPriceChange": -0.01,
     "oneWeekPriceChange": 0.025,
     "bestBid": 0.23,
     "bestAsk": 0.45,
@@ -12527,7 +12525,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406771",
@@ -12647,7 +12645,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406786",
@@ -12767,7 +12765,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406799",
@@ -12888,7 +12886,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406813",
@@ -13008,7 +13006,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406820",
@@ -13127,7 +13125,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406831",
@@ -13247,7 +13245,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406845",
@@ -13367,7 +13365,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5406859",
@@ -13486,7 +13484,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5431618",
@@ -13607,7 +13605,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5431623",
@@ -13726,7 +13724,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5431628",
@@ -13746,7 +13744,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-08T15:30:26.125811Z",
-    "updatedAt": "2026-10-19T23:04:45.96639Z",
+    "updatedAt": "2026-10-19T23:30:47.40528Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -13787,7 +13785,7 @@
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
     "spread": 0.31,
-    "oneDayPriceChange": -0.02,
+    "oneDayPriceChange": 0.005,
     "oneWeekPriceChange": 0.01,
     "bestBid": 0.28,
     "bestAsk": 0.59,
@@ -13847,7 +13845,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5431633",
@@ -13970,7 +13968,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458630",
@@ -14091,7 +14089,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458635",
@@ -14211,7 +14209,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458640",
@@ -14331,7 +14329,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458645",
@@ -14451,7 +14449,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458650",
@@ -14570,7 +14568,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458655",
@@ -14690,7 +14688,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458660",
@@ -14809,7 +14807,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458665",
@@ -14929,7 +14927,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458672",
@@ -15048,7 +15046,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458677",
@@ -15172,7 +15170,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5458682",
@@ -15292,7 +15290,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5504958",
@@ -15412,7 +15410,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5504963",
@@ -15531,7 +15529,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5504968",
@@ -15651,7 +15649,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563938",
@@ -15671,7 +15669,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-11T15:30:30.441242Z",
-    "updatedAt": "2026-10-19T23:04:45.96639Z",
+    "updatedAt": "2026-10-19T23:30:47.40528Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -15712,7 +15710,6 @@
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
     "spread": 0.31,
-    "oneDayPriceChange": 0.015,
     "oneWeekPriceChange": 0.02,
     "bestBid": 0.35,
     "bestAsk": 0.66,
@@ -15772,7 +15769,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563943",
@@ -15893,7 +15890,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563948",
@@ -16012,7 +16009,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563953",
@@ -16132,7 +16129,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563958",
@@ -16252,7 +16249,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563963",
@@ -16372,7 +16369,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563968",
@@ -16493,7 +16490,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563975",
@@ -16613,7 +16610,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563980",
@@ -16732,7 +16729,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563985",
@@ -16852,7 +16849,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563990",
@@ -16971,7 +16968,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5563995",
@@ -16991,7 +16988,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-11T15:30:51.949284Z",
-    "updatedAt": "2026-10-19T23:04:45.96639Z",
+    "updatedAt": "2026-10-19T23:30:47.40528Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -17032,7 +17029,6 @@
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
     "spread": 0.31,
-    "oneDayPriceChange": -0.005,
     "oneWeekPriceChange": -0.01,
     "bestBid": 0.16,
     "bestAsk": 0.47,
@@ -17092,7 +17088,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5609555",
@@ -17112,7 +17108,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-12T15:30:29.219976Z",
-    "updatedAt": "2026-10-19T23:04:45.96639Z",
+    "updatedAt": "2026-10-19T23:30:47.40528Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -17153,7 +17149,7 @@
     "rewardsMinSize": 50,
     "rewardsMaxSpread": 4.5,
     "spread": 0.31,
-    "oneDayPriceChange": 0.01,
+    "oneDayPriceChange": 0.02,
     "oneWeekPriceChange": -0.01,
     "bestBid": 0.29,
     "bestAsk": 0.6,
@@ -17213,7 +17209,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5609560",
@@ -17333,7 +17329,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5609565",
@@ -17452,7 +17448,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5609570",
@@ -17572,7 +17568,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5609575",
@@ -17692,7 +17688,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5609580",
@@ -17811,7 +17807,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5651096",
@@ -17930,7 +17926,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5651101",
@@ -18050,7 +18046,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5651106",
@@ -18169,7 +18165,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5689442",
@@ -18288,7 +18284,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5689447",
@@ -18407,7 +18403,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5689452",
@@ -18526,7 +18522,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5689459",
@@ -18645,7 +18641,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5689466",
@@ -18764,7 +18760,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5689473",
@@ -18883,7 +18879,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5689482",
@@ -19002,7 +18998,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5733998",
@@ -19122,7 +19118,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5734003",
@@ -19241,7 +19237,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5734008",
@@ -19360,7 +19356,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5734013",
@@ -19480,7 +19476,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5734018",
@@ -19600,7 +19596,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5734023",
@@ -19719,7 +19715,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776259",
@@ -19839,7 +19835,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776264",
@@ -19958,7 +19954,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776269",
@@ -20077,7 +20073,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776274",
@@ -20196,7 +20192,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776279",
@@ -20315,7 +20311,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776284",
@@ -20434,7 +20430,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776289",
@@ -20558,7 +20554,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776294",
@@ -20677,7 +20673,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776299",
@@ -20796,7 +20792,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776304",
@@ -20915,7 +20911,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5776309",
@@ -21034,7 +21030,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5821324",
@@ -21153,7 +21149,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5821329",
@@ -21272,7 +21268,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887297",
@@ -21391,7 +21387,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887302",
@@ -21510,7 +21506,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887307",
@@ -21630,7 +21626,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887312",
@@ -21749,7 +21745,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887317",
@@ -21868,7 +21864,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887322",
@@ -21987,7 +21983,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887327",
@@ -22106,7 +22102,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887332",
@@ -22225,7 +22221,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887337",
@@ -22344,7 +22340,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887342",
@@ -22464,7 +22460,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887347",
@@ -22583,7 +22579,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887352",
@@ -22702,7 +22698,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887357",
@@ -22821,7 +22817,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5887362",
@@ -22941,7 +22937,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5928319",
@@ -23060,7 +23056,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5928324",
@@ -23179,7 +23175,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5928329",
@@ -23298,7 +23294,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5928334",
@@ -23417,7 +23413,7 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   },
   {
     "id": "5928339",
@@ -23536,6 +23532,6 @@
       }
     ],
     "_native_league": "nhl",
-    "_collected_at_utc": "2026-10-19T23:33:34+00:00"
+    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
   }
 ]
