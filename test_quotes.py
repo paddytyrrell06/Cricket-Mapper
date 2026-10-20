@@ -1,4 +1,5 @@
 import unittest
+from threading import Barrier
 from urllib.parse import parse_qs, urlparse
 from unittest.mock import patch
 
@@ -114,6 +115,53 @@ class RawAndReplayQuotesTests(unittest.TestCase):
 
 
 class LiveQuotesTests(unittest.TestCase):
+    def test_both_venues_refresh_concurrently(self):
+        ready = Barrier(2, timeout=2)
+
+        def kalshi(tickers):
+            ready.wait()
+            return {}, []
+
+        def books(assets, slugs):
+            ready.wait()
+            return {}, {}, []
+
+        with patch.object(Q, "_live_kalshi", side_effect=kalshi), patch.object(
+                Q, "_live_books", side_effect=books):
+            Q.enrich_quotes([], {}, live=True)
+
+    def test_subscription_manifest_uses_exact_outcome_tokens_and_deduplicates(self):
+        a, b = market("polymarket_intl"), market("polymarket_intl", "New Zealand")
+        k = market("kalshi", market_id="KX-TICKER")
+        entries = Q.stream_instruments([a, b, a, k], {"polymarket_intl": [intl_record()]})
+        self.assertEqual(len(entries), 3)
+        self.assertEqual({(row["outcome"], row["instrument_id"]) for row in entries},
+                         {("australia", "101"), ("new zealand", "202"), ("australia", "KX-TICKER")})
+        self.assertEqual(Q.stream_instruments([a], {}), [])
+
+    def test_best_level_depth_is_aggregated_and_survives_replay(self):
+        m = market("polymarket_intl")
+        book = {"asset_id": "101", "bids": [
+            {"price": "0.40", "size": "2"}, {"price": "0.4", "size": "3.5"},
+            {"price": "0.3", "size": "90"}],
+            "asks": [{"price": "0.5", "size": "4"}, {"price": "0.6", "size": "80"}]}
+        with patch.object(Q, "_request_json", return_value=(200, [book], COLLECTED)):
+            entries, _ = Q.enrich_quotes([m], {"polymarket_intl": [intl_record()]}, live=True)
+        self.assertEqual((entries[0]["bid_size"], entries[0]["ask_size"]), ("5.5", "4"))
+        restored = market("polymarket_intl")
+        Q.enrich_quotes([restored], {}, live=False, saved_quotes=entries)
+        self.assertEqual(restored.extra["quote_bid_size"], "5.5")
+        self.assertEqual(restored.extra["quote_ask_size"], "4")
+
+    def test_saved_zero_depth_cannot_restore_a_price(self):
+        m = market("kalshi")
+        entries, _ = Q.enrich_quotes([m], {}, live=False, saved_quotes=[{
+            "venue": "kalshi", "market_id": "123", "outcome": "Australia",
+            "bid": "0.4", "ask": "0.5", "bid_size": "0", "ask_size": "3",
+            "quote_time": COLLECTED}])
+        self.assertEqual((m.bid, m.ask, m.quote_status), (None, "0.5", "one-sided"))
+        self.assertIsNone(entries[0]["bid"])
+
     def test_kalshi_refresh_batches_only_requested_tickers_in_groups_of_forty(self):
         tickers = {f"TICKER-{index:03d}" for index in range(83)}
 

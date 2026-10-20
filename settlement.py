@@ -32,23 +32,26 @@ FOOTBALL_STATES = NBA_STATES + ("tie",)
 HOCKEY_STATES = NBA_STATES + ("tie",)
 BASEBALL_STATES = NBA_STATES + ("tie",)
 SOCCER_STATES = NBA_STATES + ("draw",)
-SOCCER_STATES = NBA_STATES + ("draw",)
-SPORTS = {"cricket", "basketball", "football", "hockey", "baseball", "soccer"}
+TENNIS_STATES = NBA_STATES + ("walkover_win", "walkover_loss", "retirement_win", "retirement_loss")
+MMA_STATES = NBA_STATES + ("draw", "no_contest")
+SPORTS = {"cricket", "basketball", "football", "hockey", "baseball", "soccer", "tennis", "mma"}
 CORE_STATES = {"cricket": ("win", "loss", "draw", "tie_without_tiebreak"),
                "basketball": ("win", "loss"), "football": ("win", "loss", "tie"),
                              "hockey": ("win", "loss"), "baseball": ("win", "loss"),
-                             "soccer": ("win", "loss", "draw")}
+                             "soccer": ("win", "loss", "draw"),
+                             "tennis": ("win", "loss"), "mma": ("win", "loss", "draw", "no_contest")}
 CORE_POLICIES = {"cricket": ("period", "tiebreakers", "dls"),
                  "basketball": ("period", "overtime"),
                  "football": ("period", "overtime"),
                  "hockey": ("period", "overtime", "shootout"),
                                  "baseball": ("period", "extra_innings"),
-                                 "soccer": ("period",)}
+                                 "soccer": ("period",), "tennis": ("period",), "mma": ("period",)}
 POLICY_VALUES = {"period": {"full_match", "regulation", "regulation_time"}, "overtime": {"included", "excluded"},
                  "shootout": {"included", "excluded"}, "extra_innings": {"included", "excluded"},
                  "tiebreakers": {"included_if_played", "excluded", "not_applicable"},
                  "dls": {"official_result", "excluded", "not_applicable"}}
-OFFICIAL_FORFEIT_STATES = {"forfeit_after_start_win", "forfeit_after_start_loss"}
+OFFICIAL_FORFEIT_STATES = {"forfeit_after_start_win", "forfeit_after_start_loss",
+                          "retirement_win", "retirement_loss"}
 
 
 def resolution_evidence(raw: dict) -> dict:
@@ -62,14 +65,17 @@ def resolution_evidence(raw: dict) -> dict:
 def _states(sport: str) -> tuple:
     return {"basketball": NBA_STATES, "football": FOOTBALL_STATES,
             "hockey": HOCKEY_STATES, "baseball": BASEBALL_STATES,
-            "soccer": SOCCER_STATES}.get(sport, CRICKET_STATES)
+            "soccer": SOCCER_STATES, "tennis": TENNIS_STATES,
+            "mma": MMA_STATES}.get(sport, CRICKET_STATES)
 
 
 def _policies(sport: str) -> tuple:
     return {"basketball": NBA_POLICIES, "football": NBA_POLICIES,
             "hockey": ("period", "overtime", "shootout", "postponement"),
             "baseball": ("period", "extra_innings", "postponement"),
-            "soccer": ("period", "postponement")}.get(sport, CRICKET_POLICIES)
+            "soccer": ("period", "postponement"),
+            "tennis": ("period", "postponement", "retirement", "walkover"),
+            "mma": ("period", "postponement")}.get(sport, CRICKET_POLICIES)
 
 
 def _fixed_payout(value: Any) -> Any:
@@ -136,6 +142,7 @@ def profile_market(venue: str, raw: dict, *, sport: str = "cricket", outcome: st
 
     # The parser has classified a winner contract; require actual winner language.
     winner_stated = bool(re.search(r"\bwin(?:s|ner)?\b", text) or
+                         (sport == "tennis" and re.search(r"\badvances against\b", text)) or
                          (target == "draw" and "draw or tie" in text))
     if winner_stated:
         payouts.update(win="0" if target == "draw" else "1", loss="0")
@@ -147,7 +154,7 @@ def profile_market(venue: str, raw: dict, *, sport: str = "cricket", outcome: st
             r"(?:first 90 minutes|90 minutes plus stoppage time|regulation time)"
             r"[^.]{0,120}(?:does not include|excluding|not include)"
             r"[^.]{0,80}(?:extra time|penalt)", scope_terms) or
-            re.search(r"only the outcome within the first 90 minutes", scope_terms))
+            re.search(r"only (?:to )?(?:the )?outcome within the first 90 minutes", scope_terms))
         full_match = ("full match" in scope_terms and
                       "officially confirmed by the organizer" in scope_terms)
         if regulation_only:
@@ -174,6 +181,40 @@ def profile_market(venue: str, raw: dict, *, sport: str = "cricket", outcome: st
                 payouts["cancelled_before_start"] = "0"
         label = ("Regulation-time result" if policies["period"] == "regulation_time"
                  else "Full-match result")
+        return make_profile(sport=sport, target_kind=target, payouts=payouts,
+                            policies=policies, evidence=citations, label=label)
+
+    if sport in {"tennis", "mma"}:
+        if sport == "tennis":
+            # Native Gamma match-winner contracts specify advancing; neither
+            # that clause nor a completed-match winner establishes a walkover.
+            if "walkover" in text and re.search(r"walkover[^.]{0,180}50[- ]50", text):
+                payouts.update(walkover_win="0.5", walkover_loss="0.5")
+                policies["walkover"] = "half_if_before_start"
+            if "retirement, default, or disqualification" in text and "player who advances" in text:
+                payouts.update(retirement_win="1", retirement_loss="0")
+                policies["retirement"] = "advancing_player_after_start"
+            if venue == "kalshi" and "all before the match starts" in text and "fair price" in text:
+                payouts.update(walkover_win="fair_market_price", walkover_loss="fair_market_price",
+                               cancelled_before_start="fair_market_price")
+                policies["walkover"] = "fair_market_price_before_start"
+            if "14 days after the scheduled start" in text:
+                policies["postponement"] = "half_if_no_winner_within_14_days"
+            elif "within two weeks" in text:
+                policies["postponement"] = "wait_up_to_two_weeks"
+            label = "Match winner; retirement and walkover terms retained"
+        else:
+            # Bind both states to the same explicit payout clause. Separate
+            # draw and no-contest sentences can have different payments.
+            if re.search(r"draw\s*/\s*no contest[^.]{0,100}\$0\.50", text):
+                payouts.update(draw="0.5", no_contest="0.5")
+            elif re.search(r"draw or technical draw,\s*ruled a no contest[^.]{0,250}"
+                           r"resolv\w*[^.]{0,60}[\"']?50[- ]50", text):
+                payouts.update(draw="0.5", no_contest="0.5")
+            if "within 48 hours" in text and "fair price" in text:
+                policies["postponement"] = "fair_market_price_if_not_started_within_48_hours"
+                payouts["cancelled_before_start"] = "fair_market_price"
+            label = "Official fight winner; draw and no-contest terms retained"
         return make_profile(sport=sport, target_kind=target, payouts=payouts,
                             policies=policies, evidence=citations, label=label)
 

@@ -1,0 +1,135 @@
+{
+  "league": "wnba",
+  "source": "https://www.wnba.com/teams",
+  "venue_metadata": "https://gamma-api.polymarket.com/teams?league=wnba",
+  "scope": "Exact WNBA franchise names and native team codes verified against Kalshi KXWNBAGAME event outcomes and Gamma /teams; excludes all-star teams.",
+  "verified_on": "2026-10-20",
+  "code_aliases": {
+    "GS": "GSV",
+    "NY": "NYL",
+    "PDX": "POR",
+    "LV": "LAS"
+  },
+  "teams": [
+    {
+      "code": "ATL",
+      "canonical": "Atlanta Dream",
+      "aliases": [
+        "Atlanta",
+        "Dream"
+      ]
+    },
+    {
+      "code": "CHI",
+      "canonical": "Chicago Sky",
+      "aliases": [
+        "Chicago",
+        "Sky"
+      ]
+    },
+    {
+      "code": "CONN",
+      "canonical": "Connecticut Sun",
+      "aliases": [
+        "Connecticut",
+        "Sun"
+      ]
+    },
+    {
+      "code": "DAL",
+      "canonical": "Dallas Wings",
+      "aliases": [
+        "Dallas",
+        "Wings"
+      ]
+    },
+    {
+      "code": "GSV",
+      "canonical": "Golden State Valkyries",
+      "aliases": [
+        "Golden State",
+        "Valkyries"
+      ]
+    },
+    {
+      "code": "IND",
+      "canonical": "Indiana Fever",
+      "aliases": [
+        "Indiana",
+        "Fever"
+      ]
+    },
+    {
+      "code": "LA",
+      "canonical": "Los Angeles Sparks",
+      "aliases": [
+        "Los Angeles",
+        "Sparks"
+      ]
+    },
+    {
+      "code": "LAS",
+      "canonical": "Las Vegas Aces",
+      "aliases": [
+        "Las Vegas",
+        "Aces"
+      ]
+    },
+    {
+      "code": "MIN",
+      "canonical": "Minnesota Lynx",
+      "aliases": [
+        "Minnesota",
+        "Lynx"
+      ]
+    },
+    {
+      "code": "NYL",
+      "canonical": "New York Liberty",
+      "aliases": [
+        "New York",
+        "Liberty"
+      ]
+    },
+    {
+      "code": "PHX",
+      "canonical": "Phoenix Mercury",
+      "aliases": [
+        "Phoenix",
+        "Mercury"
+      ]
+    },
+    {
+      "code": "POR",
+      "canonical": "Portland Fire",
+      "aliases": [
+        "Portland",
+        "Fire"
+      ]
+    },
+    {
+      "code": "SEA",
+      "canonical": "Seattle Storm",
+      "aliases": [
+        "Seattle",
+        "Storm"
+      ]
+    },
+    {
+      "code": "TOR",
+      "canonical": "Toronto Tempo",
+      "aliases": [
+        "Toronto",
+        "Tempo"
+      ]
+    },
+    {
+      "code": "WSH",
+      "canonical": "Washington Mystics",
+      "aliases": [
+        "Washington",
+        "Mystics"
+      ]
+    }
+  ]
+}

@@ -79,7 +79,30 @@ SOCCER_COMPETITIONS = {
     "fl1": {"label": "Ligue 1", "name": "Ligue 1", "series": "KXLIGUE1GAME", "series_id": 10195},
     "ucl": {"label": "UCL", "name": "UEFA Champions League", "series": "KXUCLGAME", "series_id": 10204},
     "mls": {"label": "MLS", "name": "Major League Soccer", "series": "KXMLSGAME", "series_id": 10189},
+    # Verified against the public Kalshi /series and Gamma /sports catalogs.
+    "uel": {"label": "UEL", "name": "UEFA Europa League", "series": "KXUELGAME", "series_id": 10209},
+    "col": {"label": "UECL", "name": "UEFA Conference League", "series": "KXUECLGAME", "series_id": 10437},
+    "elc": {"label": "Championship", "name": "EFL Championship", "series": "KXEFLCHAMPIONSHIPGAME", "series_id": 10355},
+    "ere": {"label": "Eredivisie", "name": "Eredivisie", "series": "KXEREDIVISIEGAME", "series_id": 10286},
+    "por": {"label": "Primeira Liga", "name": "Primeira Liga", "series": "KXLIGAPORTUGALGAME", "series_id": 10330},
+    "scop": {"label": "Scottish Premiership", "name": "Scottish Premiership", "series": "KXSCOTTISHPREMGAME", "series_id": 10674},
+    "mex": {"label": "Liga MX", "name": "Liga MX", "series": "KXLIGAMXGAME", "series_id": 10290},
+    "bl2": {"label": "2. Bundesliga", "name": "2. Bundesliga", "series": "KXBUNDESLIGA2GAME", "series_id": 10670},
+    "aus": {"label": "A-League", "name": "A-League Men", "series": "KXALEAGUEGAME", "series_id": 10438},
+    "uslc": {"label": "USL Championship", "name": "USL Championship", "series": "KXUSLGAME", "series_id": 12318},
 }
+# New competitions use native participant metadata, rather than a shared global
+# team-name dictionary. Tour/league identity remains part of every fixture key.
+NATIVE_COMPETITIONS = {
+    "wnba": {"sport": "basketball", "label": "WNBA", "name": "WNBA", "series": "KXWNBAGAME", "series_id": 10105, "gender": "W", "config": "wnba_teams.json"},
+    "atp": {"sport": "tennis", "label": "ATP", "name": "ATP Tour", "series": "KXATPMATCH", "series_id": 10365, "gender": "M"},
+    "wta": {"sport": "tennis", "label": "WTA", "name": "WTA Tour", "series": "KXWTAMATCH", "series_id": 10366, "gender": "W"},
+    "ufc": {"sport": "mma", "label": "UFC", "name": "UFC", "series": "KXUFCFIGHT", "series_id": 38, "gender": ""},
+    "cfb": {"sport": "football", "label": "NCAAF", "name": "College Football", "series": "KXNCAAFGAME", "series_id": 12756, "gender": "M", "school_identity": True},
+    "cbb": {"sport": "basketball", "label": "NCAAM", "name": "Men's College Basketball", "series": "KXNCAAMBGAME", "series_id": 10470, "gender": "M", "school_identity": True},
+    "cwbb": {"sport": "basketball", "label": "NCAAW", "name": "Women's College Basketball", "series": "KXNCAAWBGAME", "series_id": 10471, "gender": "W", "school_identity": True},
+}
+DISCOVERY_WORKERS = 3
 TEAM_CONFIGS = {
     sport: json.loads((Path(__file__).parent / "config" / details["config"])
                       .read_text(encoding="utf-8"))
@@ -325,13 +348,15 @@ def _collect_gamma_series(*, league: str, series_id: int
                 reasons.append("league event record malformed")
                 continue
             slug = str(event.get("slug") or "")
-            if not matcher.fullmatch(slug) or K._record_explicitly_closed(event):
-                continue
             event_id = str(event.get("id") or slug)
             if event_id in seen_events:
                 continue
             seen_events.add(event_id)
             added += 1
+            # Progress counts native records, including prop-only events. A
+            # full page of corners/period props must not hide later winners.
+            if not matcher.fullmatch(slug) or K._record_explicitly_closed(event):
+                continue
             nested = event.get("markets")
             if not isinstance(nested, list):
                 reasons.append(f"{league.upper()} game event has no market data: {slug}")
@@ -436,8 +461,8 @@ def _start(record: dict, venue: str) -> tuple[str, str, str, list[str]]:
     if native_date and event_date and (native_date, native_time) != (event_date, event_time):
         notes.append("native game and event start timestamps disagree")
     if not native_date and event_date:
-        if native:
-            notes.append("native game start is invalid or lacks a timezone; using published timezone-aware event start")
+        # A valid timezone-aware native event start establishes the start. Its
+        # explicit basis records this fallback; no unresolved conflict exists.
         return event_date, event_time, "native_event_start_timestamp_to_utc", notes
     if not native_date:
         notes.append("NBA scheduled start time not established")
@@ -483,41 +508,66 @@ def _collect_soccer_competition(competition: str
     return raw, {"kalshi": k_coverage, "polymarket_intl": p_coverage}, warnings
 
 
-def _collect_soccer() -> tuple[dict, dict, list[str]]:
+def _collect_competitions(configs: dict, *, scope_field: str
+                          ) -> tuple[dict, dict, list[str]]:
+    """One bounded pool for all venue discovery; preserve failures per league.
+
+    Metadata discovery is the cold path. Collectors return original venue IDs
+    so the quote/subscription path never has to rediscover league identities.
+    """
     raw: dict = {"kalshi": [], "polymarket_intl": []}
     coverage: dict = {}
     warnings: list[str] = []
-    for competition in SOCCER_COMPETITIONS:
-        try:
-            section, scope, notes = _collect_soccer_competition(competition)
-        except Exception as exc:
-            section = {"kalshi": [], "polymarket_intl": [], "_teams": [],
-                       "_kalshi_series": [], "_milestones": []}
-            scope = {venue: _coverage(False, "collection_failed", 0, [repr(exc)])
-                     for venue in ("kalshi", "polymarket_intl")}
-            notes = [f"soccer:{competition}: collection failed: {exc!r}"]
-        for key, records in section.items():
-            if key in {"kalshi", "polymarket_intl"}:
-                for record in records:
-                    record["_soccer_competition"] = competition
-                raw[key].extend(records)
-            else:
-                raw[f"_{competition}_{key[1:]}"] = records
-        for venue, state in scope.items():
+    with ThreadPoolExecutor(max_workers=DISCOVERY_WORKERS) as pool:
+        jobs = {}
+        for competition, details in configs.items():
+            document = KALSHI_DOCUMENTS.get(details.get("sport", "soccer"), {})
+            jobs[(competition, "kalshi")] = pool.submit(
+                _collect_kalshi, series=details["series"], league=competition,
+                document=document)
+            jobs[(competition, "polymarket_intl")] = pool.submit(
+                _collect_gamma_series, league=competition,
+                series_id=details["series_id"])
+        for (competition, venue), future in jobs.items():
+            try:
+                result = future.result()
+                records, state, notes = result[:3]
+                if venue == "kalshi":
+                    raw[f"_{competition}_kalshi_series"] = result[3]
+                    raw[f"_{competition}_milestones"] = result[4]
+            except Exception as exc:
+                records = []
+                state = _coverage(False, "collection_failed", 0, [repr(exc)])
+                notes = [f"{competition} {venue}: collection failed: {exc!r}"]
+            for record in records:
+                record[scope_field] = competition
+            raw[venue].extend(records)
             current = coverage.setdefault(venue, {
-                "complete": True, "method": "selected_soccer_league_series",
+                "complete": True, "method": "selected_native_league_series",
                 "records": 0, "reason": "",
             })
+            current.setdefault("competitions", {})[competition] = dict(state)
             current["complete"] = bool(current["complete"] and state.get("complete"))
             current["records"] += int(state.get("records") or 0)
             if state.get("reason"):
                 current.setdefault("reasons", []).append(
                     f"{competition}: {state['reason']}")
-        warnings.extend(notes)
+            warnings.extend(notes)
     for meta in coverage.values():
         reasons = meta.pop("reasons", [])
         meta["reason"] = "; ".join(reasons)
     return raw, coverage, warnings
+
+
+def _collect_soccer(competitions: list[str] | tuple[str, ...] | None = None
+                     ) -> tuple[dict, dict, list[str]]:
+    selected = tuple(SOCCER_COMPETITIONS) if competitions is None else tuple(competitions)
+    unknown = set(selected) - set(SOCCER_COMPETITIONS)
+    if unknown:
+        raise ValueError("Unknown soccer competitions: " + ", ".join(sorted(unknown)))
+    return _collect_competitions(
+        {key: SOCCER_COMPETITIONS[key] for key in selected},
+        scope_field="_soccer_competition")
 
 
 def _parse_soccer(raw: dict) -> tuple[list[C.Fixture], list[C.Market], list[str]]:
@@ -531,6 +581,196 @@ def _parse_soccer(raw: dict) -> tuple[list[C.Fixture], list[C.Market], list[str]
                         if record.get("_soccer_competition") == competition]
         parsed_fixtures, parsed_markets, notes = _parse_soccer_competition(
             competition, details, scoped_kalshi, scoped_gamma)
+        fixtures.extend(parsed_fixtures)
+        markets.extend(parsed_markets)
+        warnings.extend(notes)
+    return fixtures, markets, warnings
+
+
+def _native_participants(record: dict, league: str, details: dict
+                          ) -> tuple[list[tuple[str, str, set[str]]], str]:
+    """Return (native code, canonical name, exact published names), or reject."""
+    slug = str(record.get("_event_slug") or "")
+    match = game_slug(league).fullmatch(slug)
+    if not match:
+        return [], "unsupported native game slug"
+    metadata = defaultdict(list)
+    for team in record.get("_event_teams") or []:
+        if isinstance(team, dict):
+            metadata[str(team.get("abbreviation") or "").lower()].append(team)
+    participants = []
+    for code in (match.group("a"), match.group("b")):
+        rows = metadata.get(code, [])
+        if len(rows) != 1 or str(rows[0].get("league") or "").lower() != league:
+            return [], "missing or ambiguous league participant metadata"
+        row = rows[0]
+        name, alias = str(row.get("name") or "").strip(), str(row.get("alias") or "").strip()
+        canonical = alias if details.get("school_identity") else name
+        if not canonical:
+            return [], "published school/player identity missing"
+        names = {C.norm_team(value) for value in (name, alias) if value}
+        participants.append((code, canonical, names))
+    if len({C.norm_team(row[1]) for row in participants}) != 2:
+        return [], "participants are not two distinct identities"
+    return participants, ""
+
+
+def _parse_native_competition(raw: dict, league: str, details: dict
+                              ) -> tuple[list[C.Fixture], list[C.Market], list[str]]:
+    sport, series = details["sport"], details["series"]
+    if details.get("config"):
+        config = json.loads((Path(__file__).parent / "config" / details["config"]).read_text())
+        fixtures, markets, warnings = parse_league(
+            raw, sport=sport, league=league, series=series, config=config)
+        # Generic league parsing predates women's competitions. Set gender on
+        # both fixture and market keys together; never share an NBA/men's key.
+        for fixture in fixtures:
+            fixture.key = C.FixtureKey(fixture.key.date, fixture.key.teams,
+                                       details["gender"], league.upper(), sport=sport)
+        by_id = {fixture.venue_fixture_id: fixture.key for fixture in fixtures}
+        for market in markets:
+            market.fixture_key = by_id[market.venue_fixture_id]
+        return fixtures, markets, warnings
+    fixtures, markets, warnings = [], [], []
+    identity_index: dict[str, set[str]] = defaultdict(set)
+    for record in raw.get("polymarket_intl") or []:
+        participants, error = _native_participants(record, league, details)
+        if not error:
+            for _, canonical, names in participants:
+                # A mascot being unique in this discovery window does not
+                # establish a school identity across venues. Gamma's exact
+                # code ties its own outcomes to the school; Kalshi must publish
+                # the canonical school name, not just Huskies/Tigers/etc.
+                identity_names = {C.norm_team(canonical)} if details.get("school_identity") else names
+                for name in identity_names:
+                    identity_index[name].add(canonical)
+
+    kalshi_events = defaultdict(list)
+    for record in raw.get("kalshi") or []:
+        if not isinstance(record, dict) or K._record_explicitly_closed(record):
+            continue
+        event = str(record.get("event_ticker") or record.get("_event_ticker") or "")
+        if (event.startswith(series + "-") and record.get("market_type") == "binary"
+                and str(record.get("ticker") or "").startswith(event + "-")):
+            kalshi_events[event].append(record)
+    for event, records in kalshi_events.items():
+        names = [str(record.get("yes_sub_title") or "").strip() for record in records]
+        if len(records) != 2 or len({C.norm_team(name) for name in names if name}) != 2:
+            warnings.append(f"COVERAGE_INCOMPLETE {sport}:{league} kalshi: expected two distinct winner outcomes for {event}")
+            continue
+        canonical_names = names
+        if details.get("school_identity"):
+            resolved = [identity_index.get(C.norm_team(name), set()) for name in names]
+            if not all(len(options) == 1 for options in resolved):
+                warnings.append(f"COVERAGE_INCOMPLETE {sport}:{league} kalshi: unverified exact school identities for {event}")
+                continue
+            canonical_names = [next(iter(options)) for options in resolved]
+        elif not all(len(name.split()) >= 2 for name in names):
+            warnings.append(f"COVERAGE_INCOMPLETE {sport}:{league} kalshi: full participant names required for {event}")
+            continue
+        if len({C.norm_team(name) for name in canonical_names}) != 2:
+            continue
+        date, start, basis, notes = _start(records[0], "kalshi")
+        for record in records[1:]:
+            if _start(record, "kalshi")[:2] != (date, start):
+                notes.append("native event outcomes publish conflicting start timestamps")
+        if not date:
+            warnings.append(f"COVERAGE_INCOMPLETE {sport}:{league} kalshi: no scheduled UTC start for {event}")
+            continue
+        key = C.FixtureKey(date, frozenset(C.norm_team(name) for name in canonical_names),
+                           details.get("gender") or "X", league.upper(), sport=sport)
+        fixture_id = f"kalshi:{sport}:{league}:{event}"
+        aliases = [{"published_name": published, "canonical_name": canonical,
+                    "competition": league.upper(), "rule_id": f"native:{league}:exact-name",
+                    "evidence": "Exact league-scoped native participant name or published alias"}
+                   for published, canonical in zip(names, canonical_names)]
+        note = "; ".join(dict.fromkeys(notes))
+        fixtures.append(C.Fixture(key, "kalshi", fixture_id, details["name"], start,
+                                  canonical_names[0], canonical_names[1], note,
+                                  {"event_ticker": event, "series": series,
+                                   "start_time_basis": basis, "trusted_aliases": aliases}))
+        for record, outcome in zip(records, canonical_names):
+            markets.append(C.Market(
+                "kalshi", fixture_id, key, C.MATCH_WINNER, outcome, event_id=event,
+                market_id=str(record.get("ticker") or ""), slug=str(record.get("ticker") or ""),
+                title=str(record.get("title") or ""), raw_outcome=str(record.get("yes_sub_title") or ""),
+                url=f"https://kalshi.com/markets/{series.lower()}/{C._url_slug(details['name'])}/{event.lower()}",
+                note=note, extra={"settlement": _profile("kalshi", record, outcome, sport),
+                                  "resolution_evidence": {field: record.get(field) for field in
+                                      ("rules_primary", "rules_secondary", "_contract_terms_url")}}))
+
+    for record in raw.get("polymarket_intl") or []:
+        if not isinstance(record, dict) or K._record_explicitly_closed(record):
+            continue
+        slug = str(record.get("_event_slug") or "")
+        participants, error = _native_participants(record, league, details)
+        outcomes = C._j(record.get("outcomes"))
+        if (error or record.get("slug") != slug or record.get("sportsMarketType") != "moneyline"
+                or not isinstance(outcomes, list) or len(outcomes) != 2):
+            warnings.append(f"COVERAGE_INCOMPLETE {sport}:{league} polymarket_intl: {error or 'unsupported winner market'} for {slug}")
+            continue
+        resolved = []
+        for published in outcomes:
+            choices = [canonical for _, canonical, names in participants
+                       if C.norm_team(str(published)) in names]
+            if len(choices) == 1:
+                resolved.append((str(published), choices[0]))
+        if len(resolved) != 2 or len({name for _, name in resolved}) != 2:
+            warnings.append(f"COVERAGE_INCOMPLETE {sport}:{league} polymarket_intl: outcomes disagree with participant metadata for {slug}")
+            continue
+        date, start, basis, notes = _start(record, "polymarket_intl")
+        if not date:
+            warnings.append(f"COVERAGE_INCOMPLETE {sport}:{league} polymarket_intl: no scheduled UTC start for {slug}")
+            continue
+        key = C.FixtureKey(date, frozenset(C.norm_team(row[1]) for row in participants),
+                           details.get("gender") or "X", league.upper(), sport=sport)
+        fixture_id = f"polymarket_intl:{sport}:{league}:{slug}"
+        note = "; ".join(notes)
+        fixtures.append(C.Fixture(key, "polymarket_intl", fixture_id, details["name"], start,
+                                  participants[0][1], participants[1][1], note,
+                                  {"event_slug": slug, "start_time_basis": basis,
+                                   "team_codes": [row[0] for row in participants]}))
+        for published, outcome in resolved:
+            markets.append(C.Market(
+                "polymarket_intl", fixture_id, key, C.MATCH_WINNER, outcome,
+                event_id=str(record.get("_event_id") or ""), market_id=str(record.get("id") or ""),
+                slug=slug, title=str(record.get("question") or ""), raw_outcome=published,
+                url="https://polymarket.com/event/" + slug, note=note,
+                extra={"settlement": _profile("polymarket_intl", record, outcome, sport),
+                       "resolution_evidence": {field: record.get(field) for field in
+                                               ("description", "resolutionSource")}}))
+    return fixtures, markets, warnings
+
+
+def _sport_competitions(sport: str) -> dict:
+    configs = {key: dict(row) for key, row in NATIVE_COMPETITIONS.items() if row["sport"] == sport}
+    if sport in SPORT_CONFIGS:
+        base = SPORT_CONFIGS[sport]
+        configs = {base["league"]: dict(base, sport=sport, name=base["league"].upper(),
+                                        label=base["league"].upper(), gender="M"), **configs}
+    return configs
+
+
+def collect_native_sport(sport: str) -> tuple[dict, dict, list[str]]:
+    return _collect_competitions(
+        _sport_competitions(sport),
+        scope_field="_native_competition")
+
+
+def parse_native_sport(raw: dict, sport: str) -> tuple[list[C.Fixture], list[C.Market], list[str]]:
+    fixtures, markets, warnings = [], [], []
+    for league, details in _sport_competitions(sport).items():
+        def belongs(row: dict) -> bool:
+            declared = row.get("_native_competition") or row.get("_native_league")
+            if declared:
+                return declared == league
+            event = str(row.get("event_ticker") or row.get("_event_ticker") or "")
+            slug = str(row.get("_event_slug") or row.get("slug") or "")
+            return event.startswith(details["series"] + "-") or bool(game_slug(league).fullmatch(slug))
+        section = {venue: [row for row in raw.get(venue) or []
+                           if isinstance(row, dict) and belongs(row)]
+                   for venue in ("kalshi", "polymarket_intl")}
+        parsed_fixtures, parsed_markets, notes = _parse_native_competition(section, league, details)
         fixtures.extend(parsed_fixtures)
         markets.extend(parsed_markets)
         warnings.extend(notes)
@@ -566,6 +806,16 @@ def _parse_soccer_competition(
     markets: list[C.Market] = []
     warnings: list[str] = []
     series, comp_name = details["series"], details["name"]
+    # Build one league-scoped exact-name index rather than rescanning every
+    # Gamma event for every Kalshi event. Conflicting aliases remain unresolved.
+    identity_index: dict[str, set[str]] = defaultdict(set)
+    for row in gamma_rows:
+        for team in row.get("_event_teams") or []:
+            if (isinstance(team, dict) and str(team.get("league") or "").lower() == competition
+                    and str(team.get("name") or "").strip()):
+                for name in (team.get("name"), team.get("alias")):
+                    if name:
+                        identity_index[_soccer_identity_key(str(name))].add(str(team["name"]).strip())
 
     kalshi_events: dict[str, list[dict]] = defaultdict(list)
     for record in kalshi_rows:
@@ -588,21 +838,13 @@ def _parse_soccer_competition(
         if len(team_records) != 2:
             warnings.append(f"COVERAGE_INCOMPLETE soccer:{competition} kalshi: {event} does not have exactly two team outcomes")
             continue
-        canonical_by_code: dict[str, str] = {}
-        for reference_gamma in gamma_rows:
-            event_teams = [team for team in
-                           (reference_gamma.get("_event_teams") or [])
-                           if isinstance(team, dict) and
-                           str(team.get("league") or "").lower() == competition]
-            candidate = {
-                code: _soccer_canonical_name(
-                    str(record.get("yes_sub_title") or "").strip(), event_teams)
-                for code, record in team_records.items()
-            }
-            if (len(candidate) == 2 and all(candidate.values()) and
-                    len(set(candidate.values())) == 2):
-                canonical_by_code = candidate
-                break
+        candidate = {code: identity_index.get(_soccer_identity_key(
+                        str(record.get("yes_sub_title") or "")), set())
+                     for code, record in team_records.items()}
+        canonical_by_code = {code: next(iter(options)) for code, options in candidate.items()
+                             if len(options) == 1}
+        if len(set(canonical_by_code.values())) != 2:
+            canonical_by_code = {}
         if len(canonical_by_code) != 2:
             warnings.append(
                 f"COVERAGE_INCOMPLETE soccer:{competition} kalshi: "
@@ -625,7 +867,8 @@ def _parse_soccer_competition(
         fixtures[("kalshi", fixture_id)] = fixture
         for record in [*team_records.values(), *([tie_record] if tie_record else [])]:
             is_draw = record is tie_record
-            outcome = "draw" if is_draw else str(record.get("yes_sub_title") or "").strip()
+            code = str(record.get("ticker") or "").rsplit("-", 1)[-1]
+            outcome = "draw" if is_draw else canonical_by_code[code]
             markets.append(C.Market(
                 "kalshi", fixture_id, key, C.MATCH_WINNER, outcome,
                 event_id=event, market_id=str(record.get("ticker") or ""),
@@ -877,19 +1120,16 @@ class SportAdapter:
 ADAPTERS = {
     "cricket": SportAdapter("cricket", "Cricket", ("kalshi", "polymarket_intl"), _collect_cricket, _parse_cricket),
     "soccer": SportAdapter("soccer", "Soccer", ("kalshi", "polymarket_intl"), _collect_soccer, _parse_soccer),
-    "basketball": SportAdapter("basketball", "Basketball (NBA)", ("kalshi", "polymarket_intl"),
-                               collect_basketball, parse_basketball),
 }
 
 
-for sport, label in (("football", "Football (NFL)"),
+for sport, label in (("basketball", "Basketball"),
+                     ("football", "American Football"),
                      ("hockey", "Hockey (NHL)"),
-                     ("baseball", "Baseball (MLB)")):
-    details = SPORT_CONFIGS[sport]
+                     ("baseball", "Baseball (MLB)"),
+                     ("tennis", "Tennis"), ("mma", "MMA (UFC)")):
     ADAPTERS[sport] = SportAdapter(
         sport, label, ("kalshi", "polymarket_intl"),
-        lambda sport=sport: collect_team_sport(sport),
-        lambda raw, sport=sport, details=details: parse_league(
-            raw, sport=sport, league=details["league"],
-            series=details["series"], config=TEAM_CONFIGS[sport]),
+        lambda sport=sport: collect_native_sport(sport),
+        lambda raw, sport=sport: parse_native_sport(raw, sport),
     )

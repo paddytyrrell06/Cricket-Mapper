@@ -1,0 +1,15 @@
+{
+  "mode": "rest_snapshot",
+  "discovery_reused": true,
+  "timings": {
+    "discovery_ms": 407.169,
+    "parse_and_match_ms": 3877.611,
+    "quote_refresh_ms": 10934.324,
+    "audit_and_render_ms": 811.235,
+    "before_archive_total_ms": 16030.359
+  },
+  "discovery_workers": 3,
+  "quote_workers_per_venue": 4,
+  "instruments": 2040,
+  "comparison_pairs": 1027
+}

@@ -2,6 +2,8 @@ import csv
 import json
 import tempfile
 import unittest
+from threading import Barrier
+from types import SimpleNamespace
 from contextlib import ExitStack
 from datetime import datetime, timezone
 from pathlib import Path
@@ -206,6 +208,16 @@ class ReplayRunTests(unittest.TestCase):
         self.assertNotIn(unmatched.market_id, {entry["market_id"] for entry in saved})
         self.assertTrue(all(entry["bid"] == "0.4" and entry["ask"] == "0.6" for entry in saved))
         self.assertTrue(all(entry["quote_time"] == "2026-10-18T05:01:00+00:00" for entry in saved))
+        manifest = json.loads((self.output / "data" / "stream_manifest.json").read_text())
+        self.assertFalse(manifest["websockets_connected"])
+        self.assertEqual(manifest["mode"], "replay")
+        self.assertEqual(set(manifest["subscriptions"]["kalshi"]),
+                         {market.market_id for market in markets if market.venue == "kalshi"})
+        state = json.loads((self.output / "data" / "live_state.json").read_text())
+        self.assertEqual(state["instrument_count"], 4)
+        self.assertEqual(state["comparison_count"], 2)
+        self.assertTrue(all(not comparison["crossed"] for comparison in state["comparisons"]))
+        self.assertEqual(json.loads((self.output / "data" / "latency.json").read_text())["mode"], "replay")
         self.assertEqual(len(self.output_rows()), 2)
         for row in self.output_rows():
             for venue in ("kalshi", "polymarket_intl"):
@@ -227,6 +239,30 @@ class ReplayRunTests(unittest.TestCase):
                 self.assertIn("quote snapshot invalid", (self.output / "data" / "run_report.txt").read_text())
                 self.assertTrue(all(row["polymarket_intl_quote_status"] == "unavailable"
                                     for row in self.output_rows()))
+
+    def test_live_quote_refresh_reuses_discovery_and_ignores_old_saved_quotes(self):
+        self.write_snapshot()
+        markets, _ = self.install_matched_markets()
+        (self.source / "snapshot_meta.json").write_text(json.dumps({
+            "collected_at_utc": "2026-10-18T00:00:00Z"}))
+        (self.source / "quotes.json").write_text(json.dumps(self.saved_quotes(markets, bid="0.95", ask="0.99")))
+        kalshi = [{"ticker": market.market_id, "status": "active",
+                   "yes_bid_dollars": "0.7", "yes_ask_dollars": "0.8"}
+                  for market in markets if market.venue == "kalshi"]
+        with patch.object(R, "REFRESH_QUOTES", True), patch.object(
+                R.Q, "_request_json", return_value=(200, {"markets": kalshi}, "2026-10-20T07:00:00Z")) as request:
+            self.assertEqual(R.main(), 0)
+        self.assertEqual(request.call_count, 1)
+        self.assertEqual(request.call_args.args[0], "GET")
+        rows = self.output_rows()
+        self.assertTrue(all(row["kalshi_bid"] == "0.7" for row in rows))
+        self.assertTrue(all(row["polymarket_intl_bid"] == "" for row in rows))
+        metadata = json.loads((self.output / "data" / "snapshot_meta.json").read_text())
+        self.assertEqual(metadata["collected_at_utc"], "2026-10-18T00:00:00+00:00")
+        self.assertEqual(metadata["quote_mode"], "live_rest")
+        manifest = json.loads((self.output / "data" / "stream_manifest.json").read_text())
+        self.assertEqual(manifest["mode"], "rest_snapshot")
+        self.assertTrue(manifest["discovery_reused"])
 
     def test_invalid_saved_probability_is_explicit_and_nonfatal(self):
         self.write_snapshot()
@@ -261,11 +297,10 @@ class ReplayRunTests(unittest.TestCase):
                 R.Q, "_request_json", return_value=(503, None, "2026-10-19T10:53:00+00:00")) as request:
             self.assertEqual(R.main(), 0)
         self.assertEqual(request.call_count, 2)
-        self.assertEqual(request.call_args_list[0].args[0], "GET")
-        self.assertIn("kalshi.com/trade-api/v2/markets?tickers=", request.call_args_list[0].args[1])
-        self.assertEqual(request.call_args_list[1].args[0], "POST")
-        self.assertEqual(request.call_args_list[1].args[1], "https://clob.polymarket.com/books")
-        self.assertEqual({entry["token_id"] for entry in request.call_args_list[1].args[2]}, {"1002", "1003"})
+        requests = {call.args[0]: call.args for call in request.call_args_list}
+        self.assertIn("kalshi.com/trade-api/v2/markets?tickers=", requests["GET"][1])
+        self.assertEqual(requests["POST"][1], "https://clob.polymarket.com/books")
+        self.assertEqual({entry["token_id"] for entry in requests["POST"][2]}, {"1002", "1003"})
         rows = self.output_rows()
         self.assertEqual(len(rows), 2)
         self.assertTrue(all(row["polymarket_intl_status"] == "Available" for row in rows))
@@ -440,6 +475,32 @@ class ReplayRunTests(unittest.TestCase):
         self.assertFalse(self.previous.exists())
         self.assertTrue(self.data.is_dir())
         self.assertFalse((self.data / "stale.txt").exists())
+
+
+class DiscoveryConcurrencyTests(unittest.TestCase):
+    def test_independent_sports_overlap_and_keep_failure_scoped(self):
+        ready = Barrier(3, timeout=2)
+
+        def collect_one(sport):
+            ready.wait()
+            if sport == "hockey":
+                raise RuntimeError("one feed unavailable")
+            raw = {venue: [{"id": sport}] for venue in R.VENUES}
+            meta = {venue: {"complete": True, "records": 1} for venue in R.VENUES}
+            return raw, meta, []
+
+        sports = ("basketball", "hockey", "baseball")
+        adapters = {sport: SimpleNamespace(label=sport, collect=lambda s=sport: collect_one(s))
+                    for sport in sports}
+        with tempfile.TemporaryDirectory() as directory, patch.object(
+                R, "DATA_DIR", Path(directory)), patch.object(R, "ENABLED_SPORTS", sports), patch.object(
+                R, "SNAPSHOT_DIR", None), patch.dict(R.S.ADAPTERS, adapters, clear=True), patch.object(R, "say"):
+            raw, _, warnings, coverage = R.collect()
+        self.assertTrue(coverage["sports"]["basketball"]["kalshi"]["complete"])
+        self.assertTrue(coverage["sports"]["baseball"]["polymarket_intl"]["complete"])
+        self.assertFalse(coverage["sports"]["hockey"]["kalshi"]["complete"])
+        self.assertIn("_collected_at_utc", raw["basketball_kalshi"][0])
+        self.assertTrue(any("one feed unavailable" in warning for warning in warnings))
 
 
 if __name__ == "__main__":

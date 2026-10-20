@@ -1,0 +1,393 @@
+[
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "11993776-1534-4e44-9e27-a445988ba2f4",
+      "coverage": {},
+      "home_team_id": "03c321c1-1e5b-48fe-bde8-b3df48b347d5",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24PORMIL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "6210ea3a-51df-55f3-8b2f-737c412adf2a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24PORMIL"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24PORMIL"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102435FA8478"
+    },
+    "start_date": "2026-10-24T11:30:00Z",
+    "title": "Portsmouth vs Millwall",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "30808845-9850-4244-a380-f244ee3094ca",
+      "coverage": {},
+      "home_team_id": "2a502bbe-407e-42f1-a60b-3ca856e9ce9b",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24SHUDER",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "cd5fd94e-c3f1-58f1-a272-4014fecd1f50",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24SHUDER"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24SHUDER"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024AFAEF730"
+    },
+    "start_date": "2026-10-24T11:30:00Z",
+    "title": "Sheffield United vs Derby",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "f0ca0f58-f522-40ca-9b8d-d11332faed3c",
+      "coverage": {},
+      "home_team_id": "a167633a-7aed-42fc-bc59-249714d520c3",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24QPRSWA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "2abc3c6a-8a8a-5f95-9a95-d05ae90a341e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24QPRSWA"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24QPRSWA"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024D3F13AA0"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "QPR vs Swansea",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "6183f0da-7d6c-4d4b-9c70-b3f52b05592d",
+      "coverage": {},
+      "home_team_id": "277d05a4-b167-47c8-a90e-24730727c1fe",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24WHUSOU",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c3a22cff-c1d9-50fb-9a3e-2ca65ea47a3f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24WHUSOU"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24WHUSOU"
+    ],
+    "source_ids": {
+      "source_2_id": "202610246558B8B6"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "West Ham vs Southampton",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8099cd72-e8e5-4f6d-852e-85feb2e51618",
+      "coverage": {},
+      "home_team_id": "c568246b-b817-4dde-ac6d-6e1145ca32f3",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24WOLWAT",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "170e2027-d8c3-5e4b-bf68-d1a867ffe843",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24WOLWAT"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24WOLWAT"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024FF834F7F"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Wolverhampton vs Watford",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "27461b1c-ecf0-4202-b4fd-e9c4f9e8ec08",
+      "coverage": {},
+      "home_team_id": "6d2d5718-39c1-4334-b213-0279649539bb",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24BLAWRE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "2a9cae27-7cc0-5428-9624-5fb3437f6f50",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24BLAWRE"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24BLAWRE"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024FA93A3CC"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Blackburn vs Wrexham",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "5abb1e53-44dc-422f-b789-40990aee7d98",
+      "coverage": {},
+      "home_team_id": "3a983351-9f3b-43a6-ba02-a86105d1aa04",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24CARBC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "77f5f058-b58c-5c57-a3ed-9e1f7c7ab423",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24CARBC"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24CARBC"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024305CF341"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Cardiff vs Birmingham",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "39a9cc77-8830-446c-810e-332fbfcd6c49",
+      "coverage": {},
+      "home_team_id": "02dfca9a-b1be-4db7-bba4-03c109f0532b",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24LICBUR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "49527cfe-285c-58f1-9a2d-13cbeeba3152",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24LICBUR"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24LICBUR"
+    ],
+    "source_ids": {
+      "source_2_id": "202610245016781B"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Lincoln vs Burnley",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "0a477d37-7c8b-4f79-9a8a-824d07a66975",
+      "coverage": {},
+      "home_team_id": "aa75ddd1-5344-482a-8777-13c45c2b0e7c",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24PNEWBA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "3186dbb0-1d91-5e20-9c94-2197ff964232",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24PNEWBA"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24PNEWBA"
+    ],
+    "source_ids": {
+      "source_2_id": "202610245DA97BE9"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Preston vs West Bromwich",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c72fae8d-68e0-4fce-842d-4ab05ed04c28",
+      "coverage": {},
+      "home_team_id": "5e4ebc35-e6f2-4fab-9562-db21b028a3d5",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24STKBRC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7e0ea753-9fe5-5e13-8c63-9a1edcc1ce87",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24STKBRC"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24STKBRC"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024BC840785"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Stoke vs Bristol City",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "03c321c1-1e5b-48fe-bde8-b3df48b347d5",
+      "coverage": {},
+      "home_team_id": "c568246b-b817-4dde-ac6d-6e1145ca32f3",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT20WOLPOR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "45aa6466-f54a-5ed3-99d0-f4f5d451bce3",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIPSPREAD-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIPTOTAL-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIPBTTS-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIP1H-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIP1HSPREAD-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIP1HTOTAL-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIP1HBTTS-26OCT20WOLPOR"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIPSPREAD-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIPTOTAL-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIPBTTS-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIP1H-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIP1HSPREAD-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIP1HTOTAL-26OCT20WOLPOR",
+      "KXEFLCHAMPIONSHIP1HBTTS-26OCT20WOLPOR"
+    ],
+    "source_ids": {
+      "source_2_id": "2026090809C33996"
+    },
+    "start_date": "2026-10-20T18:45:00Z",
+    "title": "Wolverhampton vs Portsmouth",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8c1c83c0-ca55-444a-aa4f-ad24532a6864",
+      "coverage": {},
+      "home_team_id": "0bcfe4bc-7c9d-44c9-9951-a0e0c291442b",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT23BOLMID",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "06f56309-137f-57f7-bdf3-0aa81000fc8c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT23BOLMID"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT23BOLMID"
+    ],
+    "source_ids": {
+      "source_2_id": "202610241BFB49CF"
+    },
+    "start_date": "2026-10-23T19:00:00Z",
+    "title": "Bolton vs Middlesbrough",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "20507a8d-03f7-49c4-a13a-81256f26a40e",
+      "coverage": {},
+      "home_team_id": "07fc230f-2671-4f9f-bd3f-5737d23e3d26",
+      "is_ko": false,
+      "league": "EFL Championship",
+      "main_game_event_ticker": "KXEFLCHAMPIONSHIPGAME-26OCT24CHANOR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "d9bf4c86-271b-5f8a-9f23-da53f6f44565",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24CHANOR"
+    ],
+    "related_event_tickers": [
+      "KXEFLCHAMPIONSHIPGAME-26OCT24CHANOR"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024D3DEB9F5"
+    },
+    "start_date": "2026-10-24T11:30:00Z",
+    "title": "Charlton vs Norwich",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  }
+]

@@ -1,0 +1,560 @@
+[
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "dcaae7b8-7422-415c-a3c9-2531926daae9",
+      "coverage": {},
+      "home_team_id": "5f32114f-e756-4f90-ac5d-6577ff768add",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT31NICREN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "5fc3f9ec-740e-5344-b2ed-948e0c076bf6",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT31NICREN"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT31NICREN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T16:15:00Z",
+    "title": "Nice vs Stade Rennais",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "329f5cd5-aa14-449e-8af0-9edff2b4516b",
+      "coverage": {},
+      "home_team_id": "eb75f92c-7b8f-4a17-92fb-b9068dfba2d7",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT31OLANG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "38eda6b9-38da-5dfb-9feb-abc49b9ae712",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT31OLANG"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT31OLANG"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T19:45:00Z",
+    "title": "Lyon vs Angers",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "5771a079-b487-491f-ac9c-96e61f85e336",
+      "coverage": {},
+      "home_team_id": "56635ac9-ca4c-487a-9892-cfe5e8b039dc",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26NOV01RCSAUX",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "46925b4a-c237-5d9b-8b63-3ab18bbe316b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26NOV01RCSAUX"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26NOV01RCSAUX"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T14:00:00Z",
+    "title": "Strasbourg Alsace vs Auxerre",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7020b25c-8c0a-4f0b-a672-efa63c8e1990",
+      "coverage": {},
+      "home_team_id": "13d9035e-e8ee-4b61-9eb1-5b628e29c3b4",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26NOV01PARASM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "b4d8694a-7d09-5c43-9444-e0f53d42130a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26NOV01PARASM"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26NOV01PARASM"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T16:15:00Z",
+    "title": "Paris FC vs Monaco",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "037e6593-99d0-464b-a28c-ac1211d6a6f3",
+      "coverage": {},
+      "home_team_id": "a572e730-a7c1-40c3-b036-ad065635a8d0",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT30LILRCL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "bf72d5ca-1ddb-5b28-b31b-b87106640da2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT30LILRCL"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT30LILRCL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-30T20:05:00Z",
+    "title": "Lille vs Lens",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "10edc47b-07ac-458a-b5f3-6cffef6e45d2",
+      "coverage": {},
+      "home_team_id": "ad4277a2-305e-4181-9d7c-7601e1abf1d8",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT31ESTMAN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f6c69a8a-e507-5442-b1ff-f097cb009c42",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT31ESTMAN"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT31ESTMAN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T19:45:00Z",
+    "title": "Troyes vs Le Mans",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c2267bd3-224d-43fb-8d9c-ff087318c7a1",
+      "coverage": {},
+      "home_team_id": "5cc2a488-c8de-4d8f-b9b3-02eef80a027a",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT31FCLSTB",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "44f7df4f-7ad7-5b0b-a40c-781003e33a60",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT31FCLSTB"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT31FCLSTB"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T19:45:00Z",
+    "title": "Lorient vs Stade Brest 29",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "5f32114f-e756-4f90-ac5d-6577ff768add",
+      "coverage": {},
+      "home_team_id": "c2267bd3-224d-43fb-8d9c-ff087318c7a1",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT23STBNIC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7a7b3a14-a6fd-5bd8-a376-0468add3fd19",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT23STBNIC",
+      "KXLIGUE1SPREAD-26OCT23STBNIC",
+      "KXLIGUE1TOTAL-26OCT23STBNIC",
+      "KXLIGUE1BTTS-26OCT23STBNIC"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT23STBNIC",
+      "KXLIGUE1SPREAD-26OCT23STBNIC",
+      "KXLIGUE1TOTAL-26OCT23STBNIC",
+      "KXLIGUE1BTTS-26OCT23STBNIC"
+    ],
+    "source_ids": {
+      "source_2_id": "202610232ECD85B1"
+    },
+    "start_date": "2026-10-23T18:45:00Z",
+    "title": "Stade Brest 29 vs Nice",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "ad4277a2-305e-4181-9d7c-7601e1abf1d8",
+      "coverage": {},
+      "home_team_id": "00049ee0-cd95-4b49-b619-fcac66a3a697",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT24TFCEST",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "3887b8a2-218d-5e90-ad49-d14fba3c811f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT24TFCEST",
+      "KXLIGUE1SPREAD-26OCT24TFCEST",
+      "KXLIGUE1TOTAL-26OCT24TFCEST",
+      "KXLIGUE1BTTS-26OCT24TFCEST"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT24TFCEST",
+      "KXLIGUE1SPREAD-26OCT24TFCEST",
+      "KXLIGUE1TOTAL-26OCT24TFCEST",
+      "KXLIGUE1BTTS-26OCT24TFCEST"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102479E6E5EB"
+    },
+    "start_date": "2026-10-24T15:15:00Z",
+    "title": "Toulouse vs Troyes",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "13d9035e-e8ee-4b61-9eb1-5b628e29c3b4",
+      "coverage": {},
+      "home_team_id": "037e6593-99d0-464b-a28c-ac1211d6a6f3",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT24RCLPAR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "83ee79d8-1442-5d16-b26a-043af4db9fd5",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT24RCLPAR",
+      "KXLIGUE1SPREAD-26OCT24RCLPAR",
+      "KXLIGUE1TOTAL-26OCT24RCLPAR",
+      "KXLIGUE1BTTS-26OCT24RCLPAR"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT24RCLPAR",
+      "KXLIGUE1SPREAD-26OCT24RCLPAR",
+      "KXLIGUE1TOTAL-26OCT24RCLPAR",
+      "KXLIGUE1BTTS-26OCT24RCLPAR"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102453BEB416"
+    },
+    "start_date": "2026-10-24T18:45:00Z",
+    "title": "Lens vs Paris FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "5cc2a488-c8de-4d8f-b9b3-02eef80a027a",
+      "coverage": {},
+      "home_team_id": "329f5cd5-aa14-449e-8af0-9edff2b4516b",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT25ANGFCL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ee465cf5-9dd8-504f-8282-863910e41d2c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT25ANGFCL",
+      "KXLIGUE1SPREAD-26OCT25ANGFCL",
+      "KXLIGUE1TOTAL-26OCT25ANGFCL",
+      "KXLIGUE1BTTS-26OCT25ANGFCL"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT25ANGFCL",
+      "KXLIGUE1SPREAD-26OCT25ANGFCL",
+      "KXLIGUE1TOTAL-26OCT25ANGFCL",
+      "KXLIGUE1BTTS-26OCT25ANGFCL"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102529A43894"
+    },
+    "start_date": "2026-10-25T16:15:00Z",
+    "title": "Angers vs Lorient",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "eb75f92c-7b8f-4a17-92fb-b9068dfba2d7",
+      "coverage": {},
+      "home_team_id": "ccdc8659-ec81-4278-bc14-a0d10d78d6d1",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT25PSGOL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "1a4da8a5-e8d1-545e-834d-626e68971d40",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT25PSGOL",
+      "KXLIGUE1SPREAD-26OCT25PSGOL",
+      "KXLIGUE1TOTAL-26OCT25PSGOL",
+      "KXLIGUE1BTTS-26OCT25PSGOL"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT25PSGOL",
+      "KXLIGUE1SPREAD-26OCT25PSGOL",
+      "KXLIGUE1TOTAL-26OCT25PSGOL",
+      "KXLIGUE1BTTS-26OCT25PSGOL"
+    ],
+    "source_ids": {
+      "source_2_id": "20261025B4ADAD0C"
+    },
+    "start_date": "2026-10-25T19:45:00Z",
+    "title": "PSG vs Lyon",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a572e730-a7c1-40c3-b036-ad065635a8d0",
+      "coverage": {},
+      "home_team_id": "7020b25c-8c0a-4f0b-a672-efa63c8e1990",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT25ASMLIL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "a10af51e-b056-5979-bf4a-677d069cc89e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT25ASMLIL",
+      "KXLIGUE1SPREAD-26OCT25ASMLIL",
+      "KXLIGUE1TOTAL-26OCT25ASMLIL",
+      "KXLIGUE1BTTS-26OCT25ASMLIL"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT25ASMLIL",
+      "KXLIGUE1SPREAD-26OCT25ASMLIL",
+      "KXLIGUE1TOTAL-26OCT25ASMLIL",
+      "KXLIGUE1BTTS-26OCT25ASMLIL"
+    ],
+    "source_ids": {
+      "source_2_id": "202610257E6C7A05"
+    },
+    "start_date": "2026-10-25T14:00:00Z",
+    "title": "Monaco vs Lille",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8ea42e42-cce3-4ad9-a513-0dd5279fd774",
+      "coverage": {},
+      "home_team_id": "3986fe47-3e06-4718-91a0-074e5c58421a",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT25OLMHAC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7e2e2b05-0386-5840-b86c-611584faf4fc",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT25OLMHAC",
+      "KXLIGUE1SPREAD-26OCT25OLMHAC",
+      "KXLIGUE1TOTAL-26OCT25OLMHAC",
+      "KXLIGUE1BTTS-26OCT25OLMHAC"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT25OLMHAC",
+      "KXLIGUE1SPREAD-26OCT25OLMHAC",
+      "KXLIGUE1TOTAL-26OCT25OLMHAC",
+      "KXLIGUE1BTTS-26OCT25OLMHAC"
+    ],
+    "source_ids": {
+      "source_2_id": "202610250706DA9F"
+    },
+    "start_date": "2026-10-25T16:15:00Z",
+    "title": "Marseille vs Le Havre",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "56635ac9-ca4c-487a-9892-cfe5e8b039dc",
+      "coverage": {},
+      "home_team_id": "dcaae7b8-7422-415c-a3c9-2531926daae9",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT25RENRCS",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "31a50c23-5de5-53e1-a363-d581bb46091b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT25RENRCS",
+      "KXLIGUE1SPREAD-26OCT25RENRCS",
+      "KXLIGUE1TOTAL-26OCT25RENRCS",
+      "KXLIGUE1BTTS-26OCT25RENRCS"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT25RENRCS",
+      "KXLIGUE1SPREAD-26OCT25RENRCS",
+      "KXLIGUE1TOTAL-26OCT25RENRCS",
+      "KXLIGUE1BTTS-26OCT25RENRCS"
+    ],
+    "source_ids": {
+      "source_2_id": "20261025A5AA0386"
+    },
+    "start_date": "2026-10-25T16:15:00Z",
+    "title": "Stade Rennais vs Strasbourg Alsace",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "ccdc8659-ec81-4278-bc14-a0d10d78d6d1",
+      "coverage": {},
+      "home_team_id": "8ea42e42-cce3-4ad9-a513-0dd5279fd774",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT30HACPSG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "45f0fb94-973d-5fc0-bbc9-3f8bbc5d1eae",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT30HACPSG"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT30HACPSG"
+    ],
+    "source_ids": {
+      "source_2_id": "2026103006894AF0"
+    },
+    "start_date": "2026-10-30T18:00:00Z",
+    "title": "Le Havre vs PSG",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "00049ee0-cd95-4b49-b619-fcac66a3a697",
+      "coverage": {},
+      "home_team_id": "3986fe47-3e06-4718-91a0-074e5c58421a",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26NOV01OLMTFC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7a5bebdf-e02f-5f06-8c7b-7bf5d14365bf",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26NOV01OLMTFC"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26NOV01OLMTFC"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T19:45:00Z",
+    "title": "Marseille vs Toulouse",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "10edc47b-07ac-458a-b5f3-6cffef6e45d2",
+      "coverage": {},
+      "home_team_id": "5771a079-b487-491f-ac9c-96e61f85e336",
+      "is_ko": false,
+      "league": "Ligue 1",
+      "main_game_event_ticker": "KXLIGUE1GAME-26OCT25AUXMAN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "6a0bbeff-8f14-5ae7-aa35-651f5279128f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGUE1GAME-26OCT25AUXMAN",
+      "KXLIGUE1SPREAD-26OCT25AUXMAN",
+      "KXLIGUE1TOTAL-26OCT25AUXMAN",
+      "KXLIGUE1BTTS-26OCT25AUXMAN"
+    ],
+    "related_event_tickers": [
+      "KXLIGUE1GAME-26OCT25AUXMAN",
+      "KXLIGUE1SPREAD-26OCT25AUXMAN",
+      "KXLIGUE1TOTAL-26OCT25AUXMAN",
+      "KXLIGUE1BTTS-26OCT25AUXMAN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T16:15:00Z",
+    "title": "Auxerre vs Le Mans",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  }
+]

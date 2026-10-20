@@ -1,171 +1,30 @@
 [
   {
     "can_close_early": true,
-    "close_time": "2026-10-23T00:08:00Z",
-    "created_time": "2026-10-18T22:45:43.98098Z",
-    "custom_strike": {
-      "baseball_team": "60097777-bab8-4215-8d29-b92466b5bb65"
-    },
-    "early_close_condition": "This market will close and expire after a winner is declared.",
-    "event_ticker": "KXMLBGAME-26OCT192008CLETB",
-    "exchange_index": 3,
-    "expected_expiration_time": "2026-10-20T03:08:00Z",
-    "expiration_time": "2026-10-23T00:08:00Z",
-    "expiration_value": "",
-    "last_price_dollars": "0.4200",
-    "latest_expiration_time": "2026-10-23T00:08:00Z",
-    "market_type": "binary",
-    "no_ask_dollars": "0.5900",
-    "no_bid_dollars": "0.5800",
-    "no_sub_title": "Cleveland",
-    "notional_value_dollars": "1.0000",
-    "occurrence_datetime": "2026-10-20T03:08:00Z",
-    "open_interest_fp": "756953.78",
-    "open_time": "2026-10-18T22:55:00Z",
-    "previous_price_dollars": "0.4200",
-    "previous_yes_ask_dollars": "0.4200",
-    "previous_yes_bid_dollars": "0.3900",
-    "price_level_structure": "linear_cent",
-    "price_ranges": [
-      {
-        "end": "1.0000",
-        "start": "0.0000",
-        "step": "0.0100"
-      }
-    ],
-    "result": "",
-    "rules_primary": "If Cleveland wins the Cleveland vs Tampa Bay professional baseball game originally scheduled for Oct 19, 2026, then the market resolves to Yes.",
-    "rules_secondary": "The following market refers to the Cleveland vs Tampa Bay professional baseball game originally scheduled for Oct 19, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
-    "settlement_bounds_type": "default",
-    "settlement_timer_seconds": 120,
-    "status": "active",
-    "strike_type": "structured",
-    "ticker": "KXMLBGAME-26OCT192008CLETB-CLE",
-    "title": "Cleveland wins",
-    "updated_time": "2026-10-18T22:55:00.169183Z",
-    "volume_24h_fp": "753107.85",
-    "volume_fp": "771347.73",
-    "yes_ask_dollars": "0.4200",
-    "yes_ask_size_fp": "4190368.75",
-    "yes_bid_dollars": "0.4100",
-    "yes_bid_size_fp": "246999.53",
-    "yes_sub_title": "Cleveland",
-    "_event_title": "Game 6: Cleveland vs Tampa Bay",
-    "_event_ticker": "KXMLBGAME-26OCT192008CLETB",
-    "_event_id": "KXMLBGAME-26OCT192008CLETB",
-    "_event_metadata": {
-      "competition": "Pro Baseball",
-      "competition_scope": "Game"
-    },
-    "_event_start_time": "2026-10-20T03:08:00Z",
-    "_event_milestone": {
-      "id": "f4f317b9-da52-5733-9198-f9d99f36dee8",
-      "start_date": "2026-10-20T00:08:00Z",
-      "type": "baseball_game",
-      "primary_event_tickers": [
-        "KXMLBGAME-26OCT192008CLETB",
-        "KXMLBSPREAD-26OCT192008CLETB",
-        "KXMLBTOTAL-26OCT192008CLETB",
-        "KXMLBEXTRAS-26OCT192008CLETB"
-      ],
-      "related_event_tickers": [
-        "KXMLBGAME-26OCT192008CLETB",
-        "KXMLBSPREAD-26OCT192008CLETB",
-        "KXMLBTOTAL-26OCT192008CLETB",
-        "KXMLBRFI-26OCT192008CLETB",
-        "KXMLBEXTRAS-26OCT192008CLETB",
-        "KXMLBF5-26OCT192008CLETB",
-        "KXMLBF3-26OCT192008CLETB",
-        "KXMLBF7-26OCT192008CLETB",
-        "KXMLBTEAMTOTAL-26OCT192008CLETB",
-        "KXMLBF5SPREAD-26OCT192008CLETB",
-        "KXMLBF5TOTAL-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-1",
-        "KXMLBINNINGWIN-26OCT192008CLETB-2",
-        "KXMLBHR-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-3",
-        "KXMLBHIT-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-4",
-        "KXMLBTB-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-5",
-        "KXMLBHRR-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-6",
-        "KXMLBRBI-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-7",
-        "KXMLBINNINGWIN-26OCT192008CLETB-8",
-        "KXMLBINNINGWIN-26OCT192008CLETB-9",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-1",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-2",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-3",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-4",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-5",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-6",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-7",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-8",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-9",
-        "KXMLBKS-26OCT192008CLETB",
-        "KXMLBOUTS-26OCT192008CLETB",
-        "KXMLBWA-26OCT192008CLETB",
-        "KXMLBHA-26OCT192008CLETB",
-        "KXMLBERA-26OCT192008CLETB",
-        "KXMLBSB-26OCT192008CLETB"
-      ],
-      "details": {
-        "league": "mlb",
-        "main_game_event_ticker": "KXMLBGAME-26OCT192008CLETB"
-      }
-    },
-    "_series_title": "Professional Baseball Game",
-    "_native_league": "mlb",
-    "_settlement_sources": [
-      {
-        "name": "ESPN",
-        "url": "https://www.espn.com"
-      },
-      {
-        "name": "Fox Sports",
-        "url": "https://www.foxsports.com"
-      },
-      {
-        "name": "the Governing League",
-        "url": "https://www.mlb.com/"
-      }
-    ],
-    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
-    "_settlement_documents": [
-      {
-        "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
-        "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
-      }
-    ],
-    "_collected_at_utc": "2026-10-19T23:45:52+00:00"
-  },
-  {
-    "can_close_early": true,
-    "close_time": "2026-10-23T00:08:00Z",
-    "created_time": "2026-10-18T22:45:43.98098Z",
+    "close_time": "2026-10-27T00:00:00Z",
+    "created_time": "2026-10-20T03:31:31.076776Z",
     "custom_strike": {
       "baseball_team": "942f3f85-869a-4f7a-8e5a-336365c5294b"
     },
     "early_close_condition": "This market will close and expire after a winner is declared.",
-    "event_ticker": "KXMLBGAME-26OCT192008CLETB",
+    "event_ticker": "KXMLBGAME-26OCT232000TBMIL",
     "exchange_index": 3,
-    "expected_expiration_time": "2026-10-20T03:08:00Z",
-    "expiration_time": "2026-10-23T00:08:00Z",
+    "expected_expiration_time": "2026-10-24T03:00:00Z",
+    "expiration_time": "2026-10-27T00:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5900",
-    "latest_expiration_time": "2026-10-23T00:08:00Z",
+    "last_price_dollars": "0.4100",
+    "latest_expiration_time": "2026-10-27T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4200",
-    "no_bid_dollars": "0.4100",
+    "no_ask_dollars": "0.6000",
+    "no_bid_dollars": "0.5900",
     "no_sub_title": "Tampa Bay",
     "notional_value_dollars": "1.0000",
-    "occurrence_datetime": "2026-10-20T03:08:00Z",
-    "open_interest_fp": "1778755.91",
-    "open_time": "2026-10-18T22:55:00Z",
-    "previous_price_dollars": "0.6400",
-    "previous_yes_ask_dollars": "0.6400",
-    "previous_yes_bid_dollars": "0.5800",
+    "occurrence_datetime": "2026-10-24T03:00:00Z",
+    "open_interest_fp": "8976.16",
+    "open_time": "2026-10-20T03:41:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -175,85 +34,66 @@
       }
     ],
     "result": "",
-    "rules_primary": "If Tampa Bay wins the Cleveland vs Tampa Bay professional baseball game originally scheduled for Oct 19, 2026, then the market resolves to Yes.",
-    "rules_secondary": "The following market refers to the Cleveland vs Tampa Bay professional baseball game originally scheduled for Oct 19, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "rules_primary": "If Tampa Bay wins the Tampa Bay vs Milwaukee professional baseball game originally scheduled for Oct 23, 2026, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Tampa Bay vs Milwaukee professional baseball game originally scheduled for Oct 23, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
     "settlement_bounds_type": "default",
     "settlement_timer_seconds": 120,
     "status": "active",
     "strike_type": "structured",
-    "ticker": "KXMLBGAME-26OCT192008CLETB-TB",
+    "ticker": "KXMLBGAME-26OCT232000TBMIL-TB",
     "title": "Tampa Bay wins",
-    "updated_time": "2026-10-18T22:55:00.169183Z",
-    "volume_24h_fp": "1818776.55",
-    "volume_fp": "1847686.38",
-    "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "3438555.07",
-    "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "250234.89",
+    "updated_time": "2026-10-20T03:41:00.418055Z",
+    "volume_24h_fp": "9050.60",
+    "volume_fp": "9081.86",
+    "yes_ask_dollars": "0.4100",
+    "yes_ask_size_fp": "430064.12",
+    "yes_bid_dollars": "0.4000",
+    "yes_bid_size_fp": "31.63",
     "yes_sub_title": "Tampa Bay",
-    "_event_title": "Game 6: Cleveland vs Tampa Bay",
-    "_event_ticker": "KXMLBGAME-26OCT192008CLETB",
-    "_event_id": "KXMLBGAME-26OCT192008CLETB",
+    "_event_title": "Game 1: Tampa Bay vs Milwaukee",
+    "_event_ticker": "KXMLBGAME-26OCT232000TBMIL",
+    "_event_id": "KXMLBGAME-26OCT232000TBMIL",
     "_event_metadata": {
       "competition": "Pro Baseball",
       "competition_scope": "Game"
     },
-    "_event_start_time": "2026-10-20T03:08:00Z",
+    "_event_start_time": "2026-10-24T03:00:00Z",
     "_event_milestone": {
-      "id": "f4f317b9-da52-5733-9198-f9d99f36dee8",
-      "start_date": "2026-10-20T00:08:00Z",
+      "id": "39ca0841-4faf-55bd-9940-bb68f21cc91f",
+      "start_date": "2026-10-24T00:00:00Z",
       "type": "baseball_game",
       "primary_event_tickers": [
-        "KXMLBGAME-26OCT192008CLETB",
-        "KXMLBSPREAD-26OCT192008CLETB",
-        "KXMLBTOTAL-26OCT192008CLETB",
-        "KXMLBEXTRAS-26OCT192008CLETB"
+        "KXMLBGAME-26OCT232000TBMIL",
+        "KXMLBSPREAD-26OCT232000TBMIL",
+        "KXMLBTOTAL-26OCT232000TBMIL",
+        "KXMLBEXTRAS-26OCT232000TBMIL"
       ],
       "related_event_tickers": [
-        "KXMLBGAME-26OCT192008CLETB",
-        "KXMLBSPREAD-26OCT192008CLETB",
-        "KXMLBTOTAL-26OCT192008CLETB",
-        "KXMLBRFI-26OCT192008CLETB",
-        "KXMLBEXTRAS-26OCT192008CLETB",
-        "KXMLBF5-26OCT192008CLETB",
-        "KXMLBF3-26OCT192008CLETB",
-        "KXMLBF7-26OCT192008CLETB",
-        "KXMLBTEAMTOTAL-26OCT192008CLETB",
-        "KXMLBF5SPREAD-26OCT192008CLETB",
-        "KXMLBF5TOTAL-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-1",
-        "KXMLBINNINGWIN-26OCT192008CLETB-2",
-        "KXMLBHR-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-3",
-        "KXMLBHIT-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-4",
-        "KXMLBTB-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-5",
-        "KXMLBHRR-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-6",
-        "KXMLBRBI-26OCT192008CLETB",
-        "KXMLBINNINGWIN-26OCT192008CLETB-7",
-        "KXMLBINNINGWIN-26OCT192008CLETB-8",
-        "KXMLBINNINGWIN-26OCT192008CLETB-9",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-1",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-2",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-3",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-4",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-5",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-6",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-7",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-8",
-        "KXMLBINNINGTOTAL-26OCT192008CLETB-9",
-        "KXMLBKS-26OCT192008CLETB",
-        "KXMLBOUTS-26OCT192008CLETB",
-        "KXMLBWA-26OCT192008CLETB",
-        "KXMLBHA-26OCT192008CLETB",
-        "KXMLBERA-26OCT192008CLETB",
-        "KXMLBSB-26OCT192008CLETB"
+        "KXMLBGAME-26OCT232000TBMIL",
+        "KXMLBSPREAD-26OCT232000TBMIL",
+        "KXMLBTOTAL-26OCT232000TBMIL",
+        "KXMLBRFI-26OCT232000TBMIL",
+        "KXMLBEXTRAS-26OCT232000TBMIL",
+        "KXMLBF5-26OCT232000TBMIL",
+        "KXMLBF3-26OCT232000TBMIL",
+        "KXMLBF7-26OCT232000TBMIL",
+        "KXMLBTEAMTOTAL-26OCT232000TBMIL",
+        "KXMLBF5SPREAD-26OCT232000TBMIL",
+        "KXMLBF5TOTAL-26OCT232000TBMIL",
+        "KXMLBHR-26OCT232000TBMIL",
+        "KXMLBHIT-26OCT232000TBMIL",
+        "KXMLBTB-26OCT232000TBMIL",
+        "KXMLBHRR-26OCT232000TBMIL",
+        "KXMLBRBI-26OCT232000TBMIL",
+        "KXMLBKS-26OCT232000TBMIL",
+        "KXMLBOUTS-26OCT232000TBMIL",
+        "KXMLBWA-26OCT232000TBMIL",
+        "KXMLBHA-26OCT232000TBMIL",
+        "KXMLBERA-26OCT232000TBMIL"
       ],
       "details": {
         "league": "mlb",
-        "main_game_event_ticker": "KXMLBGAME-26OCT192008CLETB"
+        "main_game_event_ticker": "KXMLBGAME-26OCT232000TBMIL"
       }
     },
     "_series_title": "Professional Baseball Game",
@@ -279,6 +119,748 @@
         "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
       }
     ],
-    "_collected_at_utc": "2026-10-19T23:45:52+00:00"
+    "_native_competition": "mlb",
+    "_collected_at_utc": "2026-10-20T07:41:38.605+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-27T00:00:00Z",
+    "created_time": "2026-10-20T03:31:31.076776Z",
+    "custom_strike": {
+      "baseball_team": "087f0ae7-c231-4dcd-b7e5-f026c1769e40"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXMLBGAME-26OCT232000TBMIL",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-24T03:00:00Z",
+    "expiration_time": "2026-10-27T00:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.6100",
+    "latest_expiration_time": "2026-10-27T00:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4000",
+    "no_bid_dollars": "0.3900",
+    "no_sub_title": "Milwaukee",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T03:00:00Z",
+    "open_interest_fp": "40171.28",
+    "open_time": "2026-10-20T03:41:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Milwaukee wins the Tampa Bay vs Milwaukee professional baseball game originally scheduled for Oct 23, 2026, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Tampa Bay vs Milwaukee professional baseball game originally scheduled for Oct 23, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 120,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXMLBGAME-26OCT232000TBMIL-MIL",
+    "title": "Milwaukee wins",
+    "updated_time": "2026-10-20T03:41:00.418055Z",
+    "volume_24h_fp": "39659.77",
+    "volume_fp": "40617.56",
+    "yes_ask_dollars": "0.6100",
+    "yes_ask_size_fp": "375780.60",
+    "yes_bid_dollars": "0.6000",
+    "yes_bid_size_fp": "229.09",
+    "yes_sub_title": "Milwaukee",
+    "_event_title": "Game 1: Tampa Bay vs Milwaukee",
+    "_event_ticker": "KXMLBGAME-26OCT232000TBMIL",
+    "_event_id": "KXMLBGAME-26OCT232000TBMIL",
+    "_event_metadata": {
+      "competition": "Pro Baseball",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T03:00:00Z",
+    "_event_milestone": {
+      "id": "39ca0841-4faf-55bd-9940-bb68f21cc91f",
+      "start_date": "2026-10-24T00:00:00Z",
+      "type": "baseball_game",
+      "primary_event_tickers": [
+        "KXMLBGAME-26OCT232000TBMIL",
+        "KXMLBSPREAD-26OCT232000TBMIL",
+        "KXMLBTOTAL-26OCT232000TBMIL",
+        "KXMLBEXTRAS-26OCT232000TBMIL"
+      ],
+      "related_event_tickers": [
+        "KXMLBGAME-26OCT232000TBMIL",
+        "KXMLBSPREAD-26OCT232000TBMIL",
+        "KXMLBTOTAL-26OCT232000TBMIL",
+        "KXMLBRFI-26OCT232000TBMIL",
+        "KXMLBEXTRAS-26OCT232000TBMIL",
+        "KXMLBF5-26OCT232000TBMIL",
+        "KXMLBF3-26OCT232000TBMIL",
+        "KXMLBF7-26OCT232000TBMIL",
+        "KXMLBTEAMTOTAL-26OCT232000TBMIL",
+        "KXMLBF5SPREAD-26OCT232000TBMIL",
+        "KXMLBF5TOTAL-26OCT232000TBMIL",
+        "KXMLBHR-26OCT232000TBMIL",
+        "KXMLBHIT-26OCT232000TBMIL",
+        "KXMLBTB-26OCT232000TBMIL",
+        "KXMLBHRR-26OCT232000TBMIL",
+        "KXMLBRBI-26OCT232000TBMIL",
+        "KXMLBKS-26OCT232000TBMIL",
+        "KXMLBOUTS-26OCT232000TBMIL",
+        "KXMLBWA-26OCT232000TBMIL",
+        "KXMLBHA-26OCT232000TBMIL",
+        "KXMLBERA-26OCT232000TBMIL"
+      ],
+      "details": {
+        "league": "mlb",
+        "main_game_event_ticker": "KXMLBGAME-26OCT232000TBMIL"
+      }
+    },
+    "_series_title": "Professional Baseball Game",
+    "_native_league": "mlb",
+    "_settlement_sources": [
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://www.foxsports.com"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.mlb.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+    "_settlement_documents": [
+      {
+        "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+        "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
+      }
+    ],
+    "_native_competition": "mlb",
+    "_collected_at_utc": "2026-10-20T07:41:38.605+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-28T00:00:00Z",
+    "created_time": "2026-10-20T03:32:00.185749Z",
+    "custom_strike": {
+      "baseball_team": "942f3f85-869a-4f7a-8e5a-336365c5294b"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXMLBGAME-26OCT242000TBMIL",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-25T03:00:00Z",
+    "expiration_time": "2026-10-28T00:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4600",
+    "latest_expiration_time": "2026-10-28T00:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.6400",
+    "no_bid_dollars": "0.5500",
+    "no_sub_title": "Tampa Bay",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-25T03:00:00Z",
+    "open_interest_fp": "475.18",
+    "open_time": "2026-10-20T03:41:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Tampa Bay wins the Tampa Bay vs Milwaukee professional baseball game originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Tampa Bay vs Milwaukee professional baseball game originally scheduled for Oct 24, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 120,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXMLBGAME-26OCT242000TBMIL-TB",
+    "title": "Tampa Bay wins",
+    "updated_time": "2026-10-20T03:41:00.418055Z",
+    "volume_24h_fp": "517.84",
+    "volume_fp": "517.84",
+    "yes_ask_dollars": "0.4500",
+    "yes_ask_size_fp": "14.00",
+    "yes_bid_dollars": "0.3600",
+    "yes_bid_size_fp": "17.32",
+    "yes_sub_title": "Tampa Bay",
+    "_event_title": "Game 2: Tampa Bay vs Milwaukee",
+    "_event_ticker": "KXMLBGAME-26OCT242000TBMIL",
+    "_event_id": "KXMLBGAME-26OCT242000TBMIL",
+    "_event_metadata": {
+      "competition": "Pro Baseball",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-25T03:00:00Z",
+    "_event_milestone": {
+      "id": "03dc603a-bf50-580b-ad57-1d38f53943d8",
+      "start_date": "2026-10-25T00:00:00Z",
+      "type": "baseball_game",
+      "primary_event_tickers": [
+        "KXMLBGAME-26OCT242000TBMIL",
+        "KXMLBEXTRAS-26OCT242000TBMIL"
+      ],
+      "related_event_tickers": [
+        "KXMLBGAME-26OCT242000TBMIL",
+        "KXMLBRFI-26OCT242000TBMIL",
+        "KXMLBEXTRAS-26OCT242000TBMIL"
+      ],
+      "details": {
+        "league": "mlb",
+        "main_game_event_ticker": "KXMLBGAME-26OCT242000TBMIL"
+      }
+    },
+    "_series_title": "Professional Baseball Game",
+    "_native_league": "mlb",
+    "_settlement_sources": [
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://www.foxsports.com"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.mlb.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+    "_settlement_documents": [
+      {
+        "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+        "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
+      }
+    ],
+    "_native_competition": "mlb",
+    "_collected_at_utc": "2026-10-20T07:41:38.605+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-28T00:00:00Z",
+    "created_time": "2026-10-20T03:32:00.185749Z",
+    "custom_strike": {
+      "baseball_team": "087f0ae7-c231-4dcd-b7e5-f026c1769e40"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXMLBGAME-26OCT242000TBMIL",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-25T03:00:00Z",
+    "expiration_time": "2026-10-28T00:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.6100",
+    "latest_expiration_time": "2026-10-28T00:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4300",
+    "no_bid_dollars": "0.3800",
+    "no_sub_title": "Milwaukee",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-25T03:00:00Z",
+    "open_interest_fp": "769.43",
+    "open_time": "2026-10-20T03:41:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Milwaukee wins the Tampa Bay vs Milwaukee professional baseball game originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Tampa Bay vs Milwaukee professional baseball game originally scheduled for Oct 24, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 120,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXMLBGAME-26OCT242000TBMIL-MIL",
+    "title": "Milwaukee wins",
+    "updated_time": "2026-10-20T03:41:00.418055Z",
+    "volume_24h_fp": "785.91",
+    "volume_fp": "834.17",
+    "yes_ask_dollars": "0.6200",
+    "yes_ask_size_fp": "920.00",
+    "yes_bid_dollars": "0.5700",
+    "yes_bid_size_fp": "4.00",
+    "yes_sub_title": "Milwaukee",
+    "_event_title": "Game 2: Tampa Bay vs Milwaukee",
+    "_event_ticker": "KXMLBGAME-26OCT242000TBMIL",
+    "_event_id": "KXMLBGAME-26OCT242000TBMIL",
+    "_event_metadata": {
+      "competition": "Pro Baseball",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-25T03:00:00Z",
+    "_event_milestone": {
+      "id": "03dc603a-bf50-580b-ad57-1d38f53943d8",
+      "start_date": "2026-10-25T00:00:00Z",
+      "type": "baseball_game",
+      "primary_event_tickers": [
+        "KXMLBGAME-26OCT242000TBMIL",
+        "KXMLBEXTRAS-26OCT242000TBMIL"
+      ],
+      "related_event_tickers": [
+        "KXMLBGAME-26OCT242000TBMIL",
+        "KXMLBRFI-26OCT242000TBMIL",
+        "KXMLBEXTRAS-26OCT242000TBMIL"
+      ],
+      "details": {
+        "league": "mlb",
+        "main_game_event_ticker": "KXMLBGAME-26OCT242000TBMIL"
+      }
+    },
+    "_series_title": "Professional Baseball Game",
+    "_native_league": "mlb",
+    "_settlement_sources": [
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://www.foxsports.com"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.mlb.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+    "_settlement_documents": [
+      {
+        "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+        "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
+      }
+    ],
+    "_native_competition": "mlb",
+    "_collected_at_utc": "2026-10-20T07:41:38.605+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-30T00:00:00Z",
+    "created_time": "2026-10-20T03:32:29.269737Z",
+    "custom_strike": {
+      "baseball_team": "087f0ae7-c231-4dcd-b7e5-f026c1769e40"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXMLBGAME-26OCT262000MILTB",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-27T03:00:00Z",
+    "expiration_time": "2026-10-30T00:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4900",
+    "latest_expiration_time": "2026-10-30T00:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5600",
+    "no_bid_dollars": "0.4900",
+    "no_sub_title": "Milwaukee",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-27T03:00:00Z",
+    "open_interest_fp": "359.75",
+    "open_time": "2026-10-20T03:41:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Milwaukee wins the Milwaukee vs Tampa Bay professional baseball game originally scheduled for Oct 26, 2026, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Milwaukee vs Tampa Bay professional baseball game originally scheduled for Oct 26, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 120,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXMLBGAME-26OCT262000MILTB-MIL",
+    "title": "Milwaukee wins",
+    "updated_time": "2026-10-20T03:41:00.418055Z",
+    "volume_24h_fp": "420.18",
+    "volume_fp": "440.23",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "37.12",
+    "yes_bid_dollars": "0.4400",
+    "yes_bid_size_fp": "1.00",
+    "yes_sub_title": "Milwaukee",
+    "_event_title": "Game 3: Milwaukee vs Tampa Bay",
+    "_event_ticker": "KXMLBGAME-26OCT262000MILTB",
+    "_event_id": "KXMLBGAME-26OCT262000MILTB",
+    "_event_metadata": {
+      "competition": "Pro Baseball",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-27T03:00:00Z",
+    "_event_milestone": {
+      "id": "45e42ac8-14d1-5aac-a262-4333d499012b",
+      "start_date": "2026-10-27T00:00:00Z",
+      "type": "baseball_game",
+      "primary_event_tickers": [
+        "KXMLBGAME-26OCT262000MILTB",
+        "KXMLBEXTRAS-26OCT262000MILTB"
+      ],
+      "related_event_tickers": [
+        "KXMLBGAME-26OCT262000MILTB",
+        "KXMLBRFI-26OCT262000MILTB",
+        "KXMLBEXTRAS-26OCT262000MILTB"
+      ],
+      "details": {
+        "league": "mlb",
+        "main_game_event_ticker": "KXMLBGAME-26OCT262000MILTB"
+      }
+    },
+    "_series_title": "Professional Baseball Game",
+    "_native_league": "mlb",
+    "_settlement_sources": [
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://www.foxsports.com"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.mlb.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+    "_settlement_documents": [
+      {
+        "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+        "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
+      }
+    ],
+    "_native_competition": "mlb",
+    "_collected_at_utc": "2026-10-20T07:41:38.605+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-30T00:00:00Z",
+    "created_time": "2026-10-20T03:32:29.269737Z",
+    "custom_strike": {
+      "baseball_team": "942f3f85-869a-4f7a-8e5a-336365c5294b"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXMLBGAME-26OCT262000MILTB",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-27T03:00:00Z",
+    "expiration_time": "2026-10-30T00:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5600",
+    "latest_expiration_time": "2026-10-30T00:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5300",
+    "no_bid_dollars": "0.4400",
+    "no_sub_title": "Tampa Bay",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-27T03:00:00Z",
+    "open_interest_fp": "78.65",
+    "open_time": "2026-10-20T03:41:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Tampa Bay wins the Milwaukee vs Tampa Bay professional baseball game originally scheduled for Oct 26, 2026, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Milwaukee vs Tampa Bay professional baseball game originally scheduled for Oct 26, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 120,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXMLBGAME-26OCT262000MILTB-TB",
+    "title": "Tampa Bay wins",
+    "updated_time": "2026-10-20T03:41:00.418055Z",
+    "volume_24h_fp": "131.47",
+    "volume_fp": "131.47",
+    "yes_ask_dollars": "0.5600",
+    "yes_ask_size_fp": "88.00",
+    "yes_bid_dollars": "0.4700",
+    "yes_bid_size_fp": "2.84",
+    "yes_sub_title": "Tampa Bay",
+    "_event_title": "Game 3: Milwaukee vs Tampa Bay",
+    "_event_ticker": "KXMLBGAME-26OCT262000MILTB",
+    "_event_id": "KXMLBGAME-26OCT262000MILTB",
+    "_event_metadata": {
+      "competition": "Pro Baseball",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-27T03:00:00Z",
+    "_event_milestone": {
+      "id": "45e42ac8-14d1-5aac-a262-4333d499012b",
+      "start_date": "2026-10-27T00:00:00Z",
+      "type": "baseball_game",
+      "primary_event_tickers": [
+        "KXMLBGAME-26OCT262000MILTB",
+        "KXMLBEXTRAS-26OCT262000MILTB"
+      ],
+      "related_event_tickers": [
+        "KXMLBGAME-26OCT262000MILTB",
+        "KXMLBRFI-26OCT262000MILTB",
+        "KXMLBEXTRAS-26OCT262000MILTB"
+      ],
+      "details": {
+        "league": "mlb",
+        "main_game_event_ticker": "KXMLBGAME-26OCT262000MILTB"
+      }
+    },
+    "_series_title": "Professional Baseball Game",
+    "_native_league": "mlb",
+    "_settlement_sources": [
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://www.foxsports.com"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.mlb.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+    "_settlement_documents": [
+      {
+        "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+        "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
+      }
+    ],
+    "_native_competition": "mlb",
+    "_collected_at_utc": "2026-10-20T07:41:38.605+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-31T00:00:00Z",
+    "created_time": "2026-10-20T03:32:58.388303Z",
+    "custom_strike": {
+      "baseball_team": "087f0ae7-c231-4dcd-b7e5-f026c1769e40"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXMLBGAME-26OCT272000MILTB",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-28T03:00:00Z",
+    "expiration_time": "2026-10-31T00:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5700",
+    "latest_expiration_time": "2026-10-31T00:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4600",
+    "no_bid_dollars": "0.4100",
+    "no_sub_title": "Milwaukee",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-28T03:00:00Z",
+    "open_interest_fp": "221.90",
+    "open_time": "2026-10-20T03:41:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Milwaukee wins the Milwaukee vs Tampa Bay professional baseball game originally scheduled for Oct 27, 2026, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Milwaukee vs Tampa Bay professional baseball game originally scheduled for Oct 27, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 120,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXMLBGAME-26OCT272000MILTB-MIL",
+    "title": "Milwaukee wins",
+    "updated_time": "2026-10-20T03:41:00.418055Z",
+    "volume_24h_fp": "204.62",
+    "volume_fp": "221.90",
+    "yes_ask_dollars": "0.5900",
+    "yes_ask_size_fp": "1910.00",
+    "yes_bid_dollars": "0.5400",
+    "yes_bid_size_fp": "40.89",
+    "yes_sub_title": "Milwaukee",
+    "_event_title": "Game 4: Milwaukee vs Tampa Bay",
+    "_event_ticker": "KXMLBGAME-26OCT272000MILTB",
+    "_event_id": "KXMLBGAME-26OCT272000MILTB",
+    "_event_metadata": {
+      "competition": "Pro Baseball",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-28T03:00:00Z",
+    "_event_milestone": {
+      "id": "ad2f2b6b-27c6-511a-a732-24c90a02bd39",
+      "start_date": "2026-10-28T00:00:00Z",
+      "type": "baseball_game",
+      "primary_event_tickers": [
+        "KXMLBGAME-26OCT272000MILTB",
+        "KXMLBEXTRAS-26OCT272000MILTB"
+      ],
+      "related_event_tickers": [
+        "KXMLBGAME-26OCT272000MILTB",
+        "KXMLBRFI-26OCT272000MILTB",
+        "KXMLBEXTRAS-26OCT272000MILTB"
+      ],
+      "details": {
+        "league": "mlb",
+        "main_game_event_ticker": "KXMLBGAME-26OCT272000MILTB"
+      }
+    },
+    "_series_title": "Professional Baseball Game",
+    "_native_league": "mlb",
+    "_settlement_sources": [
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://www.foxsports.com"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.mlb.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+    "_settlement_documents": [
+      {
+        "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+        "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
+      }
+    ],
+    "_native_competition": "mlb",
+    "_collected_at_utc": "2026-10-20T07:41:38.605+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-31T00:00:00Z",
+    "created_time": "2026-10-20T03:32:58.388303Z",
+    "custom_strike": {
+      "baseball_team": "942f3f85-869a-4f7a-8e5a-336365c5294b"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXMLBGAME-26OCT272000MILTB",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-28T03:00:00Z",
+    "expiration_time": "2026-10-31T00:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5000",
+    "latest_expiration_time": "2026-10-31T00:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.6100",
+    "no_bid_dollars": "0.5100",
+    "no_sub_title": "Tampa Bay",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-28T03:00:00Z",
+    "open_interest_fp": "147.53",
+    "open_time": "2026-10-20T03:41:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Tampa Bay wins the Milwaukee vs Tampa Bay professional baseball game originally scheduled for Oct 27, 2026, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Milwaukee vs Tampa Bay professional baseball game originally scheduled for Oct 27, 2026. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 120,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXMLBGAME-26OCT272000MILTB-TB",
+    "title": "Tampa Bay wins",
+    "updated_time": "2026-10-20T03:41:00.418055Z",
+    "volume_24h_fp": "148.76",
+    "volume_fp": "148.76",
+    "yes_ask_dollars": "0.4900",
+    "yes_ask_size_fp": "10.59",
+    "yes_bid_dollars": "0.3900",
+    "yes_bid_size_fp": "141.93",
+    "yes_sub_title": "Tampa Bay",
+    "_event_title": "Game 4: Milwaukee vs Tampa Bay",
+    "_event_ticker": "KXMLBGAME-26OCT272000MILTB",
+    "_event_id": "KXMLBGAME-26OCT272000MILTB",
+    "_event_metadata": {
+      "competition": "Pro Baseball",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-28T03:00:00Z",
+    "_event_milestone": {
+      "id": "ad2f2b6b-27c6-511a-a732-24c90a02bd39",
+      "start_date": "2026-10-28T00:00:00Z",
+      "type": "baseball_game",
+      "primary_event_tickers": [
+        "KXMLBGAME-26OCT272000MILTB",
+        "KXMLBEXTRAS-26OCT272000MILTB"
+      ],
+      "related_event_tickers": [
+        "KXMLBGAME-26OCT272000MILTB",
+        "KXMLBRFI-26OCT272000MILTB",
+        "KXMLBEXTRAS-26OCT272000MILTB"
+      ],
+      "details": {
+        "league": "mlb",
+        "main_game_event_ticker": "KXMLBGAME-26OCT272000MILTB"
+      }
+    },
+    "_series_title": "Professional Baseball Game",
+    "_native_league": "mlb",
+    "_settlement_sources": [
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://www.foxsports.com"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.mlb.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+    "_settlement_documents": [
+      {
+        "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+        "text": "Unless otherwise specified, a baseball game covers the full game, including all regulation innings and extra innings or tie-breaking procedures. All extra innings are included in determining the winner. If the game ends in a tie and no Tie strike is listed, each team strike pays $0.50."
+      }
+    ],
+    "_native_competition": "mlb",
+    "_collected_at_utc": "2026-10-20T07:41:38.605+00:00"
   }
 ]

@@ -1,12 +1,16 @@
 {
-  "collected_at_utc": "2026-10-19T23:45:52+00:00",
-  "quotes_checked_at_utc": "2026-10-19T23:45:56+00:00",
+  "collected_at_utc": "2026-10-20T07:42:01+00:00",
+  "quotes_checked_at_utc": "2026-10-20T07:44:18+00:00",
+  "quote_mode": "live_rest",
   "sports": [
     "cricket",
+    "soccer",
     "basketball",
     "football",
     "hockey",
-    "baseball"
+    "baseball",
+    "tennis",
+    "mma"
   ],
   "venues": [
     "kalshi",

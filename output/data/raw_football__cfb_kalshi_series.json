@@ -12,31 +12,31 @@
       "Sports"
     ],
     "category": "Sports",
-    "contract_terms_url": "https://assets.kalshi.com/contract_terms/HOCKEYWINNINGINPERIOD.pdf",
-    "contract_url": "https://assets.kalshi.com/regulatory/product-certifications/HOCKEYWINNINGINPERIOD.pdf",
+    "contract_terms_url": "https://assets.kalshi.com/contract_terms/FOOTBALLGAMEWIN.pdf",
+    "contract_url": "https://assets.kalshi.com/regulatory/product-certifications/FOOTBALLGAMEWIN.pdf",
     "exchange_index": 0,
     "fee_multiplier": 1,
     "fee_type": "quadratic_with_maker_fees",
     "frequency": "custom",
-    "last_updated_ts": "2026-10-19T16:27:16.864512Z",
+    "last_updated_ts": "2026-10-06T14:58:29.703542Z",
     "product_metadata": {
       "scope": "Game"
     },
     "settlement_sources": [
       {
-        "name": "NHL",
-        "url": "https://www.nhl.com"
+        "name": "Kalshi using information originating from the NCAA",
+        "url": "https://www.ncaa.com/sports/football/fbs"
       },
       {
         "name": "ESPN",
-        "url": "https://espn.com"
+        "url": "https://www.espn.com"
       }
     ],
     "tags": [
-      "Hockey"
+      "Football"
     ],
-    "ticker": "KXNHLGAME",
-    "title": "NHL Game",
-    "_collected_at_utc": "2026-10-19T23:45:50+00:00"
+    "ticker": "KXNCAAFGAME",
+    "title": "College Football Game",
+    "_collected_at_utc": "2026-10-20T07:41:32.910+00:00"
   }
 ]

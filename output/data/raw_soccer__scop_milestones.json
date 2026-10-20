@@ -1,0 +1,176 @@
+[
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "6358a477-56ea-4ec9-bec9-59102e9d7573",
+      "coverage": {},
+      "home_team_id": "60738cf6-61d9-4ad2-b00b-3e9785c7a035",
+      "is_ko": false,
+      "league": "Scottish Premiership",
+      "main_game_event_ticker": "KXSCOTTISHPREMGAME-26OCT24DUUABE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "89a3b1f8-01eb-51b0-bab4-2f5dbd0369ce",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24DUUABE"
+    ],
+    "related_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24DUUABE"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102453A92EA4"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Dundee United vs Aberdeen",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "e4d74382-289d-4e62-9f1e-8554ed89c5fa",
+      "coverage": {},
+      "home_team_id": "8504af39-51bb-4970-93b8-252f7fe1b967",
+      "is_ko": false,
+      "league": "Scottish Premiership",
+      "main_game_event_ticker": "KXSCOTTISHPREMGAME-26OCT24FALKIL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f7afca3f-d752-5aca-a759-97b26d23a024",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24FALKIL"
+    ],
+    "related_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24FALKIL"
+    ],
+    "source_ids": {
+      "source_2_id": "202610243838A8F5"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Falkirk vs Kilmarnock",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "e4bda32c-b4a5-417b-93dc-64858ae7df1f",
+      "coverage": {},
+      "home_team_id": "ca980ba1-c9cb-4f27-8778-6f268d805766",
+      "is_ko": false,
+      "league": "Scottish Premiership",
+      "main_game_event_ticker": "KXSCOTTISHPREMGAME-26OCT24HIBCEL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "36d7a626-c00d-55ed-b2a6-ba3be07196bd",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24HIBCEL"
+    ],
+    "related_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24HIBCEL"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024CBF99FCE"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Hibernian vs Celtic",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8d4495fc-0cbd-40f0-83d6-20e343ff5da7",
+      "coverage": {},
+      "home_team_id": "db6f419e-d853-44ec-ac18-f7e380400add",
+      "is_ko": false,
+      "league": "Scottish Premiership",
+      "main_game_event_ticker": "KXSCOTTISHPREMGAME-26OCT24MIRDUN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "1e3890c9-34f7-5c5f-81a1-1893a7b7c277",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24MIRDUN"
+    ],
+    "related_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24MIRDUN"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102473DCD07B"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "St. Mirren vs Dundee FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "ee7d18ea-9ba2-4242-b46f-0ef45ac392cf",
+      "coverage": {},
+      "home_team_id": "8f168310-ad4c-484f-b3c6-a236510e0415",
+      "is_ko": false,
+      "league": "Scottish Premiership",
+      "main_game_event_ticker": "KXSCOTTISHPREMGAME-26OCT24RFCJOH",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "b24feac2-68ae-576d-afb5-e8dcc8e2abde",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24RFCJOH"
+    ],
+    "related_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT24RFCJOH"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024A6098F81"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Rangers vs St. Johnstone",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "62141dba-aa48-493a-9c3e-3fe0ee5fcf54",
+      "coverage": {},
+      "home_team_id": "25246a75-cae3-44a9-a56b-eeb03a632883",
+      "is_ko": false,
+      "league": "Scottish Premiership",
+      "main_game_event_ticker": "KXSCOTTISHPREMGAME-26OCT25MOTHOM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7aad21a4-f932-5275-87c9-171fdb33bcdc",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT25MOTHOM"
+    ],
+    "related_event_tickers": [
+      "KXSCOTTISHPREMGAME-26OCT25MOTHOM"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024D0064E71"
+    },
+    "start_date": "2026-10-25T14:00:00Z",
+    "title": "Motherwell vs Heart of Midlothian",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  }
+]

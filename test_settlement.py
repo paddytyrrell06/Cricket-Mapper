@@ -313,6 +313,56 @@ class SettlementProfileTests(unittest.TestCase):
         self.assertEqual(comparison["status"], "compatible")
         self.assertNotEqual(comparison["contingency_status"], "aligned")
 
+    def test_tennis_advancement_retains_different_prestart_walkover_payouts(self):
+        kalshi = S.profile_market("kalshi", {
+            "rules_primary": "If Terence Atmane wins the tennis match after a ball has been played, resolve Yes.",
+            "rules_secondary": "If the match does not occur due to a walkover (all before the match starts), resolve to a fair price. If delayed, remain open within two weeks.",
+        }, sport="tennis", outcome="Terence Atmane")
+        polymarket = S.profile_market("polymarket_intl", {
+            "description": "If Terence Atmane advances against Rinky Hijikata, resolve to Terence Atmane. If the match ends in a walkover, this market resolves 50-50. If the match begins but is not completed, and one player advances due to the opponent's retirement, default, or disqualification, this market will resolve to the player who advances. A winner must be determined within 14 days after the scheduled start.",
+        }, sport="tennis", outcome="Terence Atmane")
+        self.assertEqual(polymarket["payouts"]["retirement_win"], "1")
+        self.assertEqual(polymarket["payouts"]["walkover_win"], "0.5")
+        self.assertEqual(kalshi["payouts"]["walkover_win"], "fair_market_price")
+        compared = S.compare_profiles(kalshi, polymarket)
+        self.assertEqual(compared["status"], "compatible")
+        self.assertEqual(compared["contingency_status"], "different")
+        self.assertEqual(S.compare_profiles(kalshi, polymarket, strict=True)["status"], "incompatible")
+
+    def test_known_tennis_retirement_payout_difference_cannot_be_accepted(self):
+        raw = {"description": "If Terence Atmane advances against Rinky Hijikata, resolve to Terence Atmane. If one player advances due to the opponent's retirement, default, or disqualification, this market will resolve to the player who advances."}
+        left = S.profile_market("polymarket_intl", raw, sport="tennis", outcome="Terence Atmane")
+        right = copy.deepcopy(left)
+        right["payouts"]["retirement_win"] = "0.5"
+        comparison = S.compare_profiles(left, right)
+        self.assertEqual(comparison["status"], "incompatible")
+        self.assertTrue(any("retirement_win" in reason for reason in comparison["differences"]))
+
+    def test_mma_draw_and_no_contest_payouts_are_required_core_evidence(self):
+        kalshi = S.profile_market("kalshi", {
+            "rules_primary": "If Jasmin Lucindo wins the professional MMA fight, resolve Yes.",
+            "rules_secondary": "If the fight ends in a draw/no contest, both markets resolve to $0.50.",
+        }, sport="mma", outcome="Jasmin Lucindo")
+        polymarket = S.profile_market("polymarket_intl", {
+            "description": "This market resolves to the officially declared winner. If declared a draw or technical draw, ruled a No Contest, this market resolves 50-50.",
+        }, sport="mma", outcome="Jasmin Lucindo")
+        self.assertEqual(S.compare_profiles(kalshi, polymarket)["status"], "compatible")
+        polymarket["payouts"]["no_contest"] = None
+        self.assertEqual(S.compare_profiles(kalshi, polymarket)["status"], "unknown")
+        polymarket["payouts"]["no_contest"] = "0"
+        self.assertEqual(S.compare_profiles(kalshi, polymarket)["status"], "incompatible")
+
+    def test_mma_separate_draw_payout_does_not_infer_no_contest_payment(self):
+        kalshi = S.profile_market("kalshi", {
+            "rules_primary": "If Jasmin Lucindo wins the fight, resolve Yes.",
+            "rules_secondary": "If the fight ends in a draw/no contest, both markets resolve to $0.50.",
+        }, sport="mma", outcome="Jasmin Lucindo")
+        polymarket = S.profile_market("polymarket_intl", {
+            "description": "The market resolves to the officially declared winner. If the fight is declared a draw or technical draw, this market will resolve 50-50. If the fight is ruled a No Contest, this market will resolve to No.",
+        }, sport="mma", outcome="Jasmin Lucindo")
+        self.assertIsNone(polymarket["payouts"]["no_contest"])
+        self.assertNotEqual(S.compare_profiles(kalshi, polymarket)["status"], "compatible")
+
     def test_soccer_draw_target_is_not_a_team_win(self):
         kalshi = S.profile_market(
             "kalshi", {"rules_primary": "If Tie is the result, the market resolves Yes.",

@@ -1,0 +1,60 @@
+[
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "3a304675-4cba-4be8-842c-7b9044b572e5",
+      "home_team_id": "2dc561b2-4bfc-4af6-b4d5-ae5a22791e37",
+      "league": "NCAAMB",
+      "main_game_event_ticker": "KXNCAAMBGAME-26NOV01NDVILL",
+      "player_id_mapping": {},
+      "source": "statsperform",
+      "source_id": "3006229",
+      "status": "scheduled"
+    },
+    "id": "d208f24a-7b03-58c6-8764-13c4a7230e28",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin!",
+    "primary_event_tickers": [
+      "KXNCAAMBGAME-26NOV01NDVILL"
+    ],
+    "related_event_tickers": [
+      "KXNCAAMBGAME-26NOV01NDVILL"
+    ],
+    "source_ids": {
+      "source_1_id": "3006229"
+    },
+    "start_date": "2026-11-01T14:30:00Z",
+    "title": "Notre Dame at Villanova",
+    "type": "basketball_game",
+    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c403e7ee-c530-4968-a9c7-3034df684de6",
+      "home_team_id": "e6ac946b-2870-4e37-ba43-48ef0f6c3f2a",
+      "league": "NCAAMB",
+      "main_game_event_ticker": "KXNCAAMBGAME-26NOV02LIBHP",
+      "player_id_mapping": {},
+      "source": "statsperform",
+      "source_id": "3007239",
+      "status": "scheduled"
+    },
+    "id": "72a2b9d7-a732-5a71-a450-46e0a211cc37",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin!",
+    "primary_event_tickers": [
+      "KXNCAAMBGAME-26NOV02LIBHP"
+    ],
+    "related_event_tickers": [
+      "KXNCAAMBGAME-26NOV02LIBHP"
+    ],
+    "source_ids": {
+      "source_1_id": "3007239"
+    },
+    "start_date": "2026-11-02T05:00:00Z",
+    "title": "Liberty at High Point",
+    "type": "basketball_game",
+    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+  }
+]

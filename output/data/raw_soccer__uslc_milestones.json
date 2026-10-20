@@ -1,0 +1,420 @@
+[
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "3c2d763a-8907-4600-817d-9b409a0c65f1",
+      "coverage": {},
+      "home_team_id": "fe116a74-74e8-4ecb-aad8-91c10a6ab677",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24LOUBRO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "0a6bb4ee-c0e3-5b19-a5f2-a5045cd42080",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24LOUBRO"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24LOUBRO"
+    ],
+    "source_ids": {
+      "source_2_id": "202610242AB2769E"
+    },
+    "start_date": "2026-10-24T21:00:00Z",
+    "title": "Loudoun United FC vs Brooklyn FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "4442ee1b-7046-4edc-8f80-5c5cb8922c28",
+      "coverage": {},
+      "home_team_id": "481705c8-206a-42b2-aa06-61af0a5cc912",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24CHAIEL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "76627344-df93-5548-85b3-5028981c7ded",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24CHAIEL"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24CHAIEL"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024577866F0"
+    },
+    "start_date": "2026-10-24T22:00:00Z",
+    "title": "Charleston vs Indy Eleven",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "63af99aa-4932-469e-8bc7-18222be80917",
+      "coverage": {},
+      "home_team_id": "c3c0302e-59c5-4e31-a832-9d0dd041bdaa",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24LFCDET",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "84207687-9ba9-57ad-bba4-135b500fe3ac",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24LFCDET"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24LFCDET"
+    ],
+    "source_ids": {
+      "source_2_id": "202610240A40CCA4"
+    },
+    "start_date": "2026-10-24T23:00:00Z",
+    "title": "Louisville City vs Detroit City FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c8f52b28-03fa-40d7-991c-01706aa4c124",
+      "coverage": {},
+      "home_team_id": "ddc8b443-ec56-4223-86fe-55f8784b2b24",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24PITBIR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "08c4fdac-27cb-504a-b7cb-f1025999bed4",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24PITBIR"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24PITBIR"
+    ],
+    "source_ids": {
+      "source_2_id": "202610245AE9A5BC"
+    },
+    "start_date": "2026-10-24T23:00:00Z",
+    "title": "Pittsburgh vs Birmingham Legion FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "828216de-f7a9-4fe9-b3d4-21e27f8462aa",
+      "coverage": {},
+      "home_team_id": "21c5b116-14ab-4cd0-9a0b-8f7f7f349701",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24TAMSPO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ce16e5bb-5d9d-5220-bb68-bac1203d1477",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24TAMSPO"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24TAMSPO"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024C3906856"
+    },
+    "start_date": "2026-10-24T23:30:00Z",
+    "title": "Tampa Bay vs Sporting Jax",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "fd45ce59-368a-4bac-8317-718efd8bc63d",
+      "coverage": {},
+      "home_team_id": "ba40502b-87e0-4d81-bf1f-047b99791ddc",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24MONLAS",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "07a62f30-2472-5189-800c-5108320d88ce",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24MONLAS"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24MONLAS"
+    ],
+    "source_ids": {
+      "source_2_id": "202610258B1100DA"
+    },
+    "start_date": "2026-10-25T02:00:00Z",
+    "title": "Monterey Bay FC vs Las Vegas Lights",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c8f52b28-03fa-40d7-991c-01706aa4c124",
+      "coverage": {},
+      "home_team_id": "3c2d763a-8907-4600-817d-9b409a0c65f1",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT21BROBIR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f00f0b89-97b5-552c-a2c5-ce2ca138043f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT21BROBIR",
+      "KXUSLSPREAD-26OCT21BROBIR",
+      "KXUSLTOTAL-26OCT21BROBIR",
+      "KXUSLBTTS-26OCT21BROBIR"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT21BROBIR",
+      "KXUSLSPREAD-26OCT21BROBIR",
+      "KXUSLTOTAL-26OCT21BROBIR",
+      "KXUSLBTTS-26OCT21BROBIR"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021277CE31A"
+    },
+    "start_date": "2026-10-21T22:30:00Z",
+    "title": "Brooklyn FC vs Birmingham Legion FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7af069bd-1164-4a96-9747-ba7925b6412b",
+      "coverage": {},
+      "home_team_id": "2fa4ca72-fb5f-4869-a435-e578af0f33bc",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24HARRHO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "79566c2c-230c-5f4c-a518-13d0b20ae501",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24HARRHO"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24HARRHO"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024828B446D"
+    },
+    "start_date": "2026-10-24T23:00:00Z",
+    "title": "Hartford Athletic vs Rhode Island FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "b00b5df2-a476-4bfe-99e3-25625c65f226",
+      "coverage": {},
+      "home_team_id": "d3305a1a-7ee5-4c93-8b25-8b3a71e70a32",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24SANOC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "a694e5c1-deb6-5b00-9bf2-4ab36d385058",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24SANOC"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24SANOC"
+    ],
+    "source_ids": {
+      "source_2_id": "20261025F0F930BB"
+    },
+    "start_date": "2026-10-25T00:30:00Z",
+    "title": "San Antonio vs Orange County",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "2ae6b2b1-1cd2-4c6f-968c-a357541d6b0d",
+      "coverage": {},
+      "home_team_id": "81fa77ca-8751-4373-9769-b03b8b01446b",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24CSSTUL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "e4e74815-87f4-5c2b-9224-e98cef5841e9",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24CSSTUL"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24CSSTUL"
+    ],
+    "source_ids": {
+      "source_2_id": "202610251FCD2DBB"
+    },
+    "start_date": "2026-10-25T01:00:00Z",
+    "title": "Colorado Springs Sw. vs Tulsa",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "eab1b831-0d0e-4bfe-a1ee-60afc3e26e7b",
+      "coverage": {},
+      "home_team_id": "bde82d87-1e81-408c-9d28-725967da78e3",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24PASNEW",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "cb405112-03bf-5473-964e-c022c019734c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24PASNEW"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24PASNEW"
+    ],
+    "source_ids": {
+      "source_2_id": "20261025FB74B00B"
+    },
+    "start_date": "2026-10-25T01:00:00Z",
+    "title": "El Paso Locomotive FC vs New Mexico United",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "65fb155e-9a1b-4931-b604-bfa13e659367",
+      "coverage": {},
+      "home_team_id": "36e227e0-abeb-4b9a-9051-890d4e66dee4",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24PHOLEX",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "27de381e-1193-5b73-86dc-7104f59b775d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24PHOLEX"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24PHOLEX"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102526B52DFD"
+    },
+    "start_date": "2026-10-25T02:00:00Z",
+    "title": "Phoenix Rising vs Lexington SC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "b6070f35-4bb8-436b-912f-d4013c26263a",
+      "coverage": {},
+      "home_team_id": "514456d4-57a8-4aa1-933a-d4753705e0c8",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT24SRPOAK",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "53223f90-b155-5ab9-a72a-37f9408b0527",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT24SRPOAK"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT24SRPOAK"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102518D94909"
+    },
+    "start_date": "2026-10-25T02:00:00Z",
+    "title": "Sacramento Republic vs Oakland Roots SC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c3c0302e-59c5-4e31-a832-9d0dd041bdaa",
+      "coverage": {},
+      "home_team_id": "828216de-f7a9-4fe9-b3d4-21e27f8462aa",
+      "is_ko": false,
+      "league": "USL Championship",
+      "main_game_event_ticker": "KXUSLGAME-26OCT21SPOLFC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "013b81ab-414e-5ea2-b4dd-597311466034",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUSLGAME-26OCT21SPOLFC",
+      "KXUSLSPREAD-26OCT21SPOLFC",
+      "KXUSLTOTAL-26OCT21SPOLFC",
+      "KXUSLBTTS-26OCT21SPOLFC"
+    ],
+    "related_event_tickers": [
+      "KXUSLGAME-26OCT21SPOLFC",
+      "KXUSLSPREAD-26OCT21SPOLFC",
+      "KXUSLTOTAL-26OCT21SPOLFC",
+      "KXUSLBTTS-26OCT21SPOLFC"
+    ],
+    "source_ids": {
+      "source_2_id": "20261003318CB74D"
+    },
+    "start_date": "2026-10-21T23:30:00Z",
+    "title": "Sporting Jax vs Louisville City",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  }
+]

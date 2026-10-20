@@ -1,0 +1,2858 @@
+[
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:00:00Z",
+    "created_time": "2026-10-19T16:35:30.232564Z",
+    "custom_strike": {
+      "ufc_competitor": "9f77a9c0-fe00-4b12-a8df-054276a49620"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24LUCCAL",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:00:00Z",
+    "expiration_time": "2026-10-26T14:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.7700",
+    "latest_expiration_time": "2026-10-26T14:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.2600",
+    "no_bid_dollars": "0.2300",
+    "no_sub_title": "Jasmin Lucindo",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:00:00Z",
+    "open_interest_fp": "256.94",
+    "open_time": "2026-10-19T16:45:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Jasmin Lucindo  wins the Jasmin Lucindo vs Nicolle Caliari professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24LUCCAL-LUC",
+    "title": "Jasmin Lucindo wins",
+    "updated_time": "2026-10-19T16:45:00.243902Z",
+    "volume_24h_fp": "256.94",
+    "volume_fp": "256.94",
+    "yes_ask_dollars": "0.7700",
+    "yes_ask_size_fp": "309.19",
+    "yes_bid_dollars": "0.7400",
+    "yes_bid_size_fp": "818.81",
+    "yes_sub_title": "Jasmin Lucindo",
+    "_event_title": "333: Jasmin Lucindo vs Nicolle Caliari",
+    "_event_ticker": "KXUFCFIGHT-26OCT24LUCCAL",
+    "_event_id": "KXUFCFIGHT-26OCT24LUCCAL",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:00:00Z",
+    "_event_milestone": {
+      "id": "9d9491c6-0e80-4a8e-8587-8abe3c9303db",
+      "start_date": "2026-10-24T14:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24LUCCAL"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24LUCCAL"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24LUCCAL"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:00:00Z",
+    "created_time": "2026-10-19T16:35:30.232564Z",
+    "custom_strike": {
+      "ufc_competitor": "a5120c8a-0438-4098-820a-51768c03d28d"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24LUCCAL",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:00:00Z",
+    "expiration_time": "2026-10-26T14:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.2600",
+    "latest_expiration_time": "2026-10-26T14:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.7800",
+    "no_bid_dollars": "0.7500",
+    "no_sub_title": "Nicolle Caliari",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:00:00Z",
+    "open_interest_fp": "860.10",
+    "open_time": "2026-10-19T16:45:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Nicolle Caliari  wins the Jasmin Lucindo vs Nicolle Caliari professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24LUCCAL-CAL",
+    "title": "Nicolle Caliari wins",
+    "updated_time": "2026-10-19T16:45:00.243902Z",
+    "volume_24h_fp": "860.10",
+    "volume_fp": "860.10",
+    "yes_ask_dollars": "0.2500",
+    "yes_ask_size_fp": "83.00",
+    "yes_bid_dollars": "0.2200",
+    "yes_bid_size_fp": "147.00",
+    "yes_sub_title": "Nicolle Caliari",
+    "_event_title": "333: Jasmin Lucindo vs Nicolle Caliari",
+    "_event_ticker": "KXUFCFIGHT-26OCT24LUCCAL",
+    "_event_id": "KXUFCFIGHT-26OCT24LUCCAL",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:00:00Z",
+    "_event_milestone": {
+      "id": "9d9491c6-0e80-4a8e-8587-8abe3c9303db",
+      "start_date": "2026-10-24T14:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24LUCCAL"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24LUCCAL"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24LUCCAL"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:00:00Z",
+    "created_time": "2026-10-14T20:35:29.480548Z",
+    "custom_strike": {
+      "ufc_competitor": "8502cbd3-5428-4157-9291-a8f26b39f2ca"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24THICHO",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:00:00Z",
+    "expiration_time": "2026-10-26T14:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.1700",
+    "latest_expiration_time": "2026-10-26T14:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.8400",
+    "no_bid_dollars": "0.8300",
+    "no_sub_title": "Colby Thicknesse",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:00:00Z",
+    "open_interest_fp": "9762.10",
+    "open_time": "2026-10-14T20:45:00Z",
+    "previous_price_dollars": "0.1900",
+    "previous_yes_ask_dollars": "0.1900",
+    "previous_yes_bid_dollars": "0.1800",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Colby Thicknesse  wins the Colby Thicknesse vs Asaf Chopurov professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24THICHO-THI",
+    "title": "Colby Thicknesse wins",
+    "updated_time": "2026-10-19T16:01:05.534367Z",
+    "volume_24h_fp": "5690.91",
+    "volume_fp": "13353.79",
+    "yes_ask_dollars": "0.1700",
+    "yes_ask_size_fp": "46.91",
+    "yes_bid_dollars": "0.1600",
+    "yes_bid_size_fp": "7512.05",
+    "yes_sub_title": "Colby Thicknesse",
+    "_event_title": "333: Colby Thicknesse vs Asaf Chopurov",
+    "_event_ticker": "KXUFCFIGHT-26OCT24THICHO",
+    "_event_id": "KXUFCFIGHT-26OCT24THICHO",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:00:00Z",
+    "_event_milestone": {
+      "id": "e1325243-9b92-4e3e-b859-82f303a2a419",
+      "start_date": "2026-10-24T15:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24THICHO"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24THICHO"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24THICHO"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:00:00Z",
+    "created_time": "2026-10-14T20:35:29.480548Z",
+    "custom_strike": {
+      "ufc_competitor": "5b06b152-2adc-4575-933f-1739e9249cbe"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24THICHO",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:00:00Z",
+    "expiration_time": "2026-10-26T14:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.8300",
+    "latest_expiration_time": "2026-10-26T14:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.1900",
+    "no_bid_dollars": "0.1700",
+    "no_sub_title": "Asaf Chopurov",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:00:00Z",
+    "open_interest_fp": "4326.46",
+    "open_time": "2026-10-14T20:45:00Z",
+    "previous_price_dollars": "0.8200",
+    "previous_yes_ask_dollars": "0.8200",
+    "previous_yes_bid_dollars": "0.8100",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Asaf Chopurov  wins the Colby Thicknesse vs Asaf Chopurov professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24THICHO-CHO",
+    "title": "Asaf Chopurov wins",
+    "updated_time": "2026-10-19T16:01:05.534367Z",
+    "volume_24h_fp": "3498.16",
+    "volume_fp": "4612.53",
+    "yes_ask_dollars": "0.8300",
+    "yes_ask_size_fp": "1608.00",
+    "yes_bid_dollars": "0.8100",
+    "yes_bid_size_fp": "3170.92",
+    "yes_sub_title": "Asaf Chopurov",
+    "_event_title": "333: Colby Thicknesse vs Asaf Chopurov",
+    "_event_ticker": "KXUFCFIGHT-26OCT24THICHO",
+    "_event_id": "KXUFCFIGHT-26OCT24THICHO",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:00:00Z",
+    "_event_milestone": {
+      "id": "e1325243-9b92-4e3e-b859-82f303a2a419",
+      "start_date": "2026-10-24T15:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24THICHO"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24THICHO"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24THICHO"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:20:00Z",
+    "created_time": "2026-10-19T16:35:30.69853Z",
+    "custom_strike": {
+      "ufc_competitor": "ece85c32-d571-4c38-a9df-3b3a795de950"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24STEGUG",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:20:00Z",
+    "expiration_time": "2026-10-26T14:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5800",
+    "latest_expiration_time": "2026-10-26T14:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4200",
+    "no_bid_dollars": "0.4100",
+    "no_sub_title": "Kody Steele",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:20:00Z",
+    "open_interest_fp": "836.85",
+    "open_time": "2026-10-19T16:45:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Kody Steele  wins the Kody Steele vs Noah Gugnon professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24STEGUG-STE",
+    "title": "Kody Steele wins",
+    "updated_time": "2026-10-19T16:45:00.243902Z",
+    "volume_24h_fp": "897.83",
+    "volume_fp": "897.83",
+    "yes_ask_dollars": "0.5900",
+    "yes_ask_size_fp": "418.00",
+    "yes_bid_dollars": "0.5800",
+    "yes_bid_size_fp": "3275.48",
+    "yes_sub_title": "Kody Steele",
+    "_event_title": "333: Kody Steele vs Noah Gugnon",
+    "_event_ticker": "KXUFCFIGHT-26OCT24STEGUG",
+    "_event_id": "KXUFCFIGHT-26OCT24STEGUG",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:20:00Z",
+    "_event_milestone": {
+      "id": "d76393cb-4a24-4192-a173-b654f7bd3af7",
+      "start_date": "2026-10-24T14:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24STEGUG"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24STEGUG"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24STEGUG"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:20:00Z",
+    "created_time": "2026-10-19T16:35:30.69853Z",
+    "custom_strike": {
+      "ufc_competitor": "e7d524e3-b64b-40a2-98bc-8f33335eeea7"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24STEGUG",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:20:00Z",
+    "expiration_time": "2026-10-26T14:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4200",
+    "latest_expiration_time": "2026-10-26T14:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.6000",
+    "no_bid_dollars": "0.5800",
+    "no_sub_title": "Noah Gugnon",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:20:00Z",
+    "open_interest_fp": "829.42",
+    "open_time": "2026-10-19T16:45:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Noah Gugnon  wins the Kody Steele vs Noah Gugnon professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24STEGUG-GUG",
+    "title": "Noah Gugnon wins",
+    "updated_time": "2026-10-19T16:45:00.243902Z",
+    "volume_24h_fp": "829.42",
+    "volume_fp": "829.42",
+    "yes_ask_dollars": "0.4200",
+    "yes_ask_size_fp": "5584.32",
+    "yes_bid_dollars": "0.4000",
+    "yes_bid_size_fp": "538.00",
+    "yes_sub_title": "Noah Gugnon",
+    "_event_title": "333: Kody Steele vs Noah Gugnon",
+    "_event_ticker": "KXUFCFIGHT-26OCT24STEGUG",
+    "_event_id": "KXUFCFIGHT-26OCT24STEGUG",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:20:00Z",
+    "_event_milestone": {
+      "id": "d76393cb-4a24-4192-a173-b654f7bd3af7",
+      "start_date": "2026-10-24T14:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24STEGUG"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24STEGUG"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24STEGUG"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:20:00Z",
+    "created_time": "2026-10-15T04:35:24.645509Z",
+    "custom_strike": {
+      "ufc_competitor": "d995535b-bafe-4659-9872-1782044082e8"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24VAGMAL",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:20:00Z",
+    "expiration_time": "2026-10-26T14:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.6000",
+    "latest_expiration_time": "2026-10-26T14:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4100",
+    "no_bid_dollars": "0.4000",
+    "no_sub_title": "Abubakar Vagaev",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:20:00Z",
+    "open_interest_fp": "6011.14",
+    "open_time": "2026-10-15T04:45:00Z",
+    "previous_price_dollars": "0.6300",
+    "previous_yes_ask_dollars": "0.6300",
+    "previous_yes_bid_dollars": "0.6200",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Abubakar Vagaev  wins the Abubakar Vagaev vs Jacob Malkoun professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24VAGMAL-VAG",
+    "title": "Abubakar Vagaev wins",
+    "updated_time": "2026-10-19T16:01:06.26555Z",
+    "volume_24h_fp": "4253.91",
+    "volume_fp": "7300.94",
+    "yes_ask_dollars": "0.6000",
+    "yes_ask_size_fp": "4391.68",
+    "yes_bid_dollars": "0.5900",
+    "yes_bid_size_fp": "1223.58",
+    "yes_sub_title": "Abubakar Vagaev",
+    "_event_title": "333: Abubakar Vagaev vs Jacob Malkoun",
+    "_event_ticker": "KXUFCFIGHT-26OCT24VAGMAL",
+    "_event_id": "KXUFCFIGHT-26OCT24VAGMAL",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:20:00Z",
+    "_event_milestone": {
+      "id": "7f5fb204-9fd1-418e-a6b6-d69634d8c5e2",
+      "start_date": "2026-10-24T15:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24VAGMAL"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24VAGMAL"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24VAGMAL"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:20:00Z",
+    "created_time": "2026-10-15T04:35:24.645509Z",
+    "custom_strike": {
+      "ufc_competitor": "1fbed041-8ece-42a2-90aa-119adbc82322"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24VAGMAL",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:20:00Z",
+    "expiration_time": "2026-10-26T14:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4100",
+    "latest_expiration_time": "2026-10-26T14:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.6000",
+    "no_bid_dollars": "0.5900",
+    "no_sub_title": "Jacob Malkoun",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:20:00Z",
+    "open_interest_fp": "21738.71",
+    "open_time": "2026-10-15T04:45:00Z",
+    "previous_price_dollars": "0.3900",
+    "previous_yes_ask_dollars": "0.3800",
+    "previous_yes_bid_dollars": "0.3700",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Jacob Malkoun  wins the Abubakar Vagaev vs Jacob Malkoun professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24VAGMAL-MAL",
+    "title": "Jacob Malkoun wins",
+    "updated_time": "2026-10-19T16:01:06.26555Z",
+    "volume_24h_fp": "5075.06",
+    "volume_fp": "24009.94",
+    "yes_ask_dollars": "0.4100",
+    "yes_ask_size_fp": "5112.00",
+    "yes_bid_dollars": "0.4000",
+    "yes_bid_size_fp": "2518.48",
+    "yes_sub_title": "Jacob Malkoun",
+    "_event_title": "333: Abubakar Vagaev vs Jacob Malkoun",
+    "_event_ticker": "KXUFCFIGHT-26OCT24VAGMAL",
+    "_event_id": "KXUFCFIGHT-26OCT24VAGMAL",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:20:00Z",
+    "_event_milestone": {
+      "id": "7f5fb204-9fd1-418e-a6b6-d69634d8c5e2",
+      "start_date": "2026-10-24T15:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24VAGMAL"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24VAGMAL"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24VAGMAL"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:40:00Z",
+    "created_time": "2026-10-19T16:35:31.154613Z",
+    "custom_strike": {
+      "ufc_competitor": "da36edd5-31c6-4e56-a8b2-4f6b5cdfd7d8"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24OKISAN",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:40:00Z",
+    "expiration_time": "2026-10-26T14:40:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4500",
+    "latest_expiration_time": "2026-10-26T14:40:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5400",
+    "no_bid_dollars": "0.5100",
+    "no_sub_title": "Bolaji Oki",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:40:00Z",
+    "open_interest_fp": "3807.00",
+    "open_time": "2026-10-19T16:45:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Bolaji Oki  wins the Bolaji Oki vs Daniel Gustavo Santos professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24OKISAN-OKI",
+    "title": "Bolaji Oki wins",
+    "updated_time": "2026-10-19T16:45:00.243902Z",
+    "volume_24h_fp": "3966.70",
+    "volume_fp": "3966.70",
+    "yes_ask_dollars": "0.4900",
+    "yes_ask_size_fp": "1142.00",
+    "yes_bid_dollars": "0.4600",
+    "yes_bid_size_fp": "100.00",
+    "yes_sub_title": "Bolaji Oki",
+    "_event_title": "333: Bolaji Oki vs Daniel Gustavo Santos",
+    "_event_ticker": "KXUFCFIGHT-26OCT24OKISAN",
+    "_event_id": "KXUFCFIGHT-26OCT24OKISAN",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:40:00Z",
+    "_event_milestone": {
+      "id": "aef02eb0-ba20-45d2-b59d-f7bbe4254e3e",
+      "start_date": "2026-10-24T14:40:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24OKISAN"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24OKISAN"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24OKISAN"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T14:40:00Z",
+    "created_time": "2026-10-19T16:35:31.154613Z",
+    "custom_strike": {
+      "ufc_competitor": "4cb0374e-e571-41fd-a38a-0f4df40401ef"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24OKISAN",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T19:40:00Z",
+    "expiration_time": "2026-10-26T14:40:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5400",
+    "latest_expiration_time": "2026-10-26T14:40:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4800",
+    "no_bid_dollars": "0.4600",
+    "no_sub_title": "Daniel Gustavo Santos",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T19:40:00Z",
+    "open_interest_fp": "1328.06",
+    "open_time": "2026-10-19T16:45:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Daniel Gustavo Santos  wins the Bolaji Oki vs Daniel Gustavo Santos professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24OKISAN-SAN",
+    "title": "Daniel Gustavo Santos wins",
+    "updated_time": "2026-10-19T16:45:00.243902Z",
+    "volume_24h_fp": "1517.18",
+    "volume_fp": "1517.18",
+    "yes_ask_dollars": "0.5400",
+    "yes_ask_size_fp": "2340.79",
+    "yes_bid_dollars": "0.5200",
+    "yes_bid_size_fp": "589.92",
+    "yes_sub_title": "Daniel Gustavo Santos",
+    "_event_title": "333: Bolaji Oki vs Daniel Gustavo Santos",
+    "_event_ticker": "KXUFCFIGHT-26OCT24OKISAN",
+    "_event_id": "KXUFCFIGHT-26OCT24OKISAN",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T19:40:00Z",
+    "_event_milestone": {
+      "id": "aef02eb0-ba20-45d2-b59d-f7bbe4254e3e",
+      "start_date": "2026-10-24T14:40:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24OKISAN"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24OKISAN"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24OKISAN"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T16:00:00Z",
+    "created_time": "2026-10-13T00:35:29.181183Z",
+    "custom_strike": {
+      "ufc_competitor": "2c579840-adab-41e5-9ab8-74fdd861afd5"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24PICKEI",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T21:00:00Z",
+    "expiration_time": "2026-10-26T16:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5200",
+    "latest_expiration_time": "2026-10-26T16:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4800",
+    "no_bid_dollars": "0.4700",
+    "no_sub_title": "Aaron Pico",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T21:00:00Z",
+    "open_interest_fp": "11155.93",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.5100",
+    "previous_yes_ask_dollars": "0.5100",
+    "previous_yes_bid_dollars": "0.5000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Aaron Pico  wins the Aaron Pico vs Losene Keita professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24PICKEI-PIC",
+    "title": "Aaron Pico wins",
+    "updated_time": "2026-10-15T23:30:35.972021Z",
+    "volume_24h_fp": "13134.25",
+    "volume_fp": "19087.05",
+    "yes_ask_dollars": "0.5300",
+    "yes_ask_size_fp": "5479.07",
+    "yes_bid_dollars": "0.5200",
+    "yes_bid_size_fp": "11564.66",
+    "yes_sub_title": "Aaron Pico",
+    "_event_title": "333: Aaron Pico vs Losene Keita",
+    "_event_ticker": "KXUFCFIGHT-26OCT24PICKEI",
+    "_event_id": "KXUFCFIGHT-26OCT24PICKEI",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T21:00:00Z",
+    "_event_milestone": {
+      "id": "ffedd9fb-58f4-4c20-8fe6-7ac589fb608d",
+      "start_date": "2026-10-24T18:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24PICKEI"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24PICKEI"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24PICKEI"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T16:00:00Z",
+    "created_time": "2026-10-13T00:35:29.181183Z",
+    "custom_strike": {
+      "ufc_competitor": "ccd89ac9-3ca7-4d22-9938-61b5cf3b576a"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24PICKEI",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T21:00:00Z",
+    "expiration_time": "2026-10-26T16:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4800",
+    "latest_expiration_time": "2026-10-26T16:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5300",
+    "no_bid_dollars": "0.5200",
+    "no_sub_title": "Losene Keita",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T21:00:00Z",
+    "open_interest_fp": "2826.85",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.5000",
+    "previous_yes_ask_dollars": "0.5000",
+    "previous_yes_bid_dollars": "0.4800",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Losene Keita  wins the Aaron Pico vs Losene Keita professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24PICKEI-KEI",
+    "title": "Losene Keita wins",
+    "updated_time": "2026-10-15T23:30:35.972021Z",
+    "volume_24h_fp": "1266.36",
+    "volume_fp": "3447.16",
+    "yes_ask_dollars": "0.4800",
+    "yes_ask_size_fp": "1715.35",
+    "yes_bid_dollars": "0.4700",
+    "yes_bid_size_fp": "22.07",
+    "yes_sub_title": "Losene Keita",
+    "_event_title": "333: Aaron Pico vs Losene Keita",
+    "_event_ticker": "KXUFCFIGHT-26OCT24PICKEI",
+    "_event_id": "KXUFCFIGHT-26OCT24PICKEI",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T21:00:00Z",
+    "_event_milestone": {
+      "id": "ffedd9fb-58f4-4c20-8fe6-7ac589fb608d",
+      "start_date": "2026-10-24T18:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24PICKEI"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24PICKEI"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24PICKEI"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T16:20:00Z",
+    "created_time": "2026-10-13T00:35:29.704382Z",
+    "custom_strike": {
+      "ufc_competitor": "011fe8b5-2037-4708-afaf-a0a5ade1994d"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24DAWALI",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T21:20:00Z",
+    "expiration_time": "2026-10-26T16:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5400",
+    "latest_expiration_time": "2026-10-26T16:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4700",
+    "no_bid_dollars": "0.4600",
+    "no_sub_title": "Grant Dawson",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T21:20:00Z",
+    "open_interest_fp": "3904.56",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.5400",
+    "previous_yes_ask_dollars": "0.5400",
+    "previous_yes_bid_dollars": "0.5300",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Grant Dawson  wins the Grant Dawson vs Nurullo Aliev professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24DAWALI-DAW",
+    "title": "Grant Dawson wins",
+    "updated_time": "2026-10-15T23:30:37.445939Z",
+    "volume_24h_fp": "797.63",
+    "volume_fp": "4006.12",
+    "yes_ask_dollars": "0.5400",
+    "yes_ask_size_fp": "12417.66",
+    "yes_bid_dollars": "0.5300",
+    "yes_bid_size_fp": "101.87",
+    "yes_sub_title": "Grant Dawson",
+    "_event_title": "333: Grant Dawson vs Nurullo Aliev",
+    "_event_ticker": "KXUFCFIGHT-26OCT24DAWALI",
+    "_event_id": "KXUFCFIGHT-26OCT24DAWALI",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T21:20:00Z",
+    "_event_milestone": {
+      "id": "f350bfb6-ce66-4c73-9d3e-8309db6ad0a3",
+      "start_date": "2026-10-24T16:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24DAWALI"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24DAWALI"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24DAWALI"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T16:20:00Z",
+    "created_time": "2026-10-13T00:35:29.704382Z",
+    "custom_strike": {
+      "ufc_competitor": "f0d99aaf-c59f-41b0-82d4-301125e02461"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24DAWALI",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T21:20:00Z",
+    "expiration_time": "2026-10-26T16:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4700",
+    "latest_expiration_time": "2026-10-26T16:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5500",
+    "no_bid_dollars": "0.5300",
+    "no_sub_title": "Nurullo Aliev",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T21:20:00Z",
+    "open_interest_fp": "4377.65",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.4700",
+    "previous_yes_ask_dollars": "0.4700",
+    "previous_yes_bid_dollars": "0.4600",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Nurullo Aliev  wins the Grant Dawson vs Nurullo Aliev professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24DAWALI-ALI",
+    "title": "Nurullo Aliev wins",
+    "updated_time": "2026-10-15T23:30:37.445939Z",
+    "volume_24h_fp": "1925.28",
+    "volume_fp": "4617.72",
+    "yes_ask_dollars": "0.4700",
+    "yes_ask_size_fp": "23854.18",
+    "yes_bid_dollars": "0.4500",
+    "yes_bid_size_fp": "10041.60",
+    "yes_sub_title": "Nurullo Aliev",
+    "_event_title": "333: Grant Dawson vs Nurullo Aliev",
+    "_event_ticker": "KXUFCFIGHT-26OCT24DAWALI",
+    "_event_id": "KXUFCFIGHT-26OCT24DAWALI",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T21:20:00Z",
+    "_event_milestone": {
+      "id": "f350bfb6-ce66-4c73-9d3e-8309db6ad0a3",
+      "start_date": "2026-10-24T16:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24DAWALI"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24DAWALI"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24DAWALI"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T16:40:00Z",
+    "created_time": "2026-10-13T00:35:30.234315Z",
+    "custom_strike": {
+      "ufc_competitor": "8e020085-9322-46ff-9b25-74345d88e5c7"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24MAGROW",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T21:40:00Z",
+    "expiration_time": "2026-10-26T16:40:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5300",
+    "latest_expiration_time": "2026-10-26T16:40:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4800",
+    "no_bid_dollars": "0.4700",
+    "no_sub_title": "Abusupiyan Magomedov",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T21:40:00Z",
+    "open_interest_fp": "3774.31",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.5400",
+    "previous_yes_ask_dollars": "0.5400",
+    "previous_yes_bid_dollars": "0.5100",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Abusupiyan Magomedov  wins the Abusupiyan Magomedov vs Cameron Rowston professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24MAGROW-MAG",
+    "title": "Abusupiyan Magomedov wins",
+    "updated_time": "2026-10-15T23:30:38.801377Z",
+    "volume_24h_fp": "262.60",
+    "volume_fp": "3830.22",
+    "yes_ask_dollars": "0.5300",
+    "yes_ask_size_fp": "620.78",
+    "yes_bid_dollars": "0.5200",
+    "yes_bid_size_fp": "33.28",
+    "yes_sub_title": "Abusupiyan Magomedov",
+    "_event_title": "333: Abusupiyan Magomedov vs Cameron Rowston",
+    "_event_ticker": "KXUFCFIGHT-26OCT24MAGROW",
+    "_event_id": "KXUFCFIGHT-26OCT24MAGROW",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T21:40:00Z",
+    "_event_milestone": {
+      "id": "12fe2942-6509-4163-aa7f-a8f0c4b9be34",
+      "start_date": "2026-10-24T16:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24MAGROW"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24MAGROW"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24MAGROW"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T16:40:00Z",
+    "created_time": "2026-10-13T00:35:30.234315Z",
+    "custom_strike": {
+      "ufc_competitor": "b2ecd4b7-84af-4d0b-abbb-0ecbbd11e6b0"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24MAGROW",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T21:40:00Z",
+    "expiration_time": "2026-10-26T16:40:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4700",
+    "latest_expiration_time": "2026-10-26T16:40:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5400",
+    "no_bid_dollars": "0.5200",
+    "no_sub_title": "Cameron Rowston",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T21:40:00Z",
+    "open_interest_fp": "2569.64",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.4900",
+    "previous_yes_ask_dollars": "0.4900",
+    "previous_yes_bid_dollars": "0.4700",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Cameron Rowston  wins the Abusupiyan Magomedov vs Cameron Rowston professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24MAGROW-ROW",
+    "title": "Cameron Rowston wins",
+    "updated_time": "2026-10-15T23:30:38.801377Z",
+    "volume_24h_fp": "937.70",
+    "volume_fp": "2689.64",
+    "yes_ask_dollars": "0.4800",
+    "yes_ask_size_fp": "430.00",
+    "yes_bid_dollars": "0.4600",
+    "yes_bid_size_fp": "1542.00",
+    "yes_sub_title": "Cameron Rowston",
+    "_event_title": "333: Abusupiyan Magomedov vs Cameron Rowston",
+    "_event_ticker": "KXUFCFIGHT-26OCT24MAGROW",
+    "_event_id": "KXUFCFIGHT-26OCT24MAGROW",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T21:40:00Z",
+    "_event_milestone": {
+      "id": "12fe2942-6509-4163-aa7f-a8f0c4b9be34",
+      "start_date": "2026-10-24T16:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24MAGROW"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24MAGROW"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24MAGROW"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T17:00:00Z",
+    "created_time": "2026-10-13T00:35:30.775463Z",
+    "custom_strike": {
+      "ufc_competitor": "3fba8bad-b5f1-47e0-ae80-a470f505c811"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24KRYYAK",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T22:00:00Z",
+    "expiration_time": "2026-10-26T17:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.1800",
+    "latest_expiration_time": "2026-10-26T17:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.8300",
+    "no_bid_dollars": "0.8200",
+    "no_sub_title": "Nikita Krylov",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T22:00:00Z",
+    "open_interest_fp": "8742.39",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.2000",
+    "previous_yes_ask_dollars": "0.2000",
+    "previous_yes_bid_dollars": "0.1900",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Nikita Krylov  wins the Nikita Krylov vs Abdul-Rakhman Yakhyaev professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24KRYYAK-KRY",
+    "title": "Nikita Krylov wins",
+    "updated_time": "2026-10-15T23:30:40.211999Z",
+    "volume_24h_fp": "2965.14",
+    "volume_fp": "9694.48",
+    "yes_ask_dollars": "0.1800",
+    "yes_ask_size_fp": "807.81",
+    "yes_bid_dollars": "0.1700",
+    "yes_bid_size_fp": "13000.76",
+    "yes_sub_title": "Nikita Krylov",
+    "_event_title": "333: Nikita Krylov vs Abdul-Rakhman Yakhyaev",
+    "_event_ticker": "KXUFCFIGHT-26OCT24KRYYAK",
+    "_event_id": "KXUFCFIGHT-26OCT24KRYYAK",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T22:00:00Z",
+    "_event_milestone": {
+      "id": "3633dc6f-10bd-4c54-9055-2b958659264f",
+      "start_date": "2026-10-24T16:40:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24KRYYAK"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24KRYYAK"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24KRYYAK"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T17:00:00Z",
+    "created_time": "2026-10-13T00:35:30.775463Z",
+    "custom_strike": {
+      "ufc_competitor": "4483d0ba-8b66-4c56-b1f3-934c8fef72bf"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24KRYYAK",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T22:00:00Z",
+    "expiration_time": "2026-10-26T17:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.8200",
+    "latest_expiration_time": "2026-10-26T17:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.1900",
+    "no_bid_dollars": "0.1800",
+    "no_sub_title": "Abdul-Rakhman Yakhyaev",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T22:00:00Z",
+    "open_interest_fp": "5051.85",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.8100",
+    "previous_yes_ask_dollars": "0.8100",
+    "previous_yes_bid_dollars": "0.8000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Abdul-Rakhman Yakhyaev  wins the Nikita Krylov vs Abdul-Rakhman Yakhyaev professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24KRYYAK-YAK",
+    "title": "Abdul-Rakhman Yakhyaev wins",
+    "updated_time": "2026-10-15T23:30:40.211999Z",
+    "volume_24h_fp": "2502.89",
+    "volume_fp": "5331.42",
+    "yes_ask_dollars": "0.8200",
+    "yes_ask_size_fp": "3690.60",
+    "yes_bid_dollars": "0.8100",
+    "yes_bid_size_fp": "1614.00",
+    "yes_sub_title": "Abdul-Rakhman Yakhyaev",
+    "_event_title": "333: Nikita Krylov vs Abdul-Rakhman Yakhyaev",
+    "_event_ticker": "KXUFCFIGHT-26OCT24KRYYAK",
+    "_event_id": "KXUFCFIGHT-26OCT24KRYYAK",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T22:00:00Z",
+    "_event_milestone": {
+      "id": "3633dc6f-10bd-4c54-9055-2b958659264f",
+      "start_date": "2026-10-24T16:40:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24KRYYAK"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24KRYYAK"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24KRYYAK"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T17:20:00Z",
+    "created_time": "2026-10-13T00:35:31.322796Z",
+    "custom_strike": {
+      "ufc_competitor": "03070d7d-dd3a-42cf-912f-fb89f5b9a073"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24MURREY",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T22:20:00Z",
+    "expiration_time": "2026-10-26T17:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.6700",
+    "latest_expiration_time": "2026-10-26T17:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.3400",
+    "no_bid_dollars": "0.3300",
+    "no_sub_title": "Azamat Murzakanov",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T22:20:00Z",
+    "open_interest_fp": "2212.12",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.6600",
+    "previous_yes_ask_dollars": "0.6600",
+    "previous_yes_bid_dollars": "0.6500",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Azamat Murzakanov  wins the Azamat Murzakanov vs Dominick Reyes professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24MURREY-MUR",
+    "title": "Azamat Murzakanov wins",
+    "updated_time": "2026-10-15T23:30:41.537406Z",
+    "volume_24h_fp": "1607.22",
+    "volume_fp": "2783.80",
+    "yes_ask_dollars": "0.6700",
+    "yes_ask_size_fp": "396.42",
+    "yes_bid_dollars": "0.6600",
+    "yes_bid_size_fp": "83.00",
+    "yes_sub_title": "Azamat Murzakanov",
+    "_event_title": "333: Azamat Murzakanov vs Dominick Reyes",
+    "_event_ticker": "KXUFCFIGHT-26OCT24MURREY",
+    "_event_id": "KXUFCFIGHT-26OCT24MURREY",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T22:20:00Z",
+    "_event_milestone": {
+      "id": "aece198e-1f60-463a-aa89-f840690f4f94",
+      "start_date": "2026-10-24T17:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24MURREY"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24MURREY"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24MURREY"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T17:20:00Z",
+    "created_time": "2026-10-13T00:35:31.322796Z",
+    "custom_strike": {
+      "ufc_competitor": "58d6fb85-a891-49ea-abb6-6aae0be32d69"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24MURREY",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T22:20:00Z",
+    "expiration_time": "2026-10-26T17:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.3500",
+    "latest_expiration_time": "2026-10-26T17:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.6600",
+    "no_bid_dollars": "0.6500",
+    "no_sub_title": "Dominick Reyes",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T22:20:00Z",
+    "open_interest_fp": "4892.65",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.3600",
+    "previous_yes_ask_dollars": "0.3600",
+    "previous_yes_bid_dollars": "0.3400",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Dominick Reyes  wins the Azamat Murzakanov vs Dominick Reyes professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24MURREY-REY",
+    "title": "Dominick Reyes wins",
+    "updated_time": "2026-10-15T23:30:41.537406Z",
+    "volume_24h_fp": "855.05",
+    "volume_fp": "5432.41",
+    "yes_ask_dollars": "0.3500",
+    "yes_ask_size_fp": "25705.05",
+    "yes_bid_dollars": "0.3400",
+    "yes_bid_size_fp": "58.45",
+    "yes_sub_title": "Dominick Reyes",
+    "_event_title": "333: Azamat Murzakanov vs Dominick Reyes",
+    "_event_ticker": "KXUFCFIGHT-26OCT24MURREY",
+    "_event_id": "KXUFCFIGHT-26OCT24MURREY",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T22:20:00Z",
+    "_event_milestone": {
+      "id": "aece198e-1f60-463a-aa89-f840690f4f94",
+      "start_date": "2026-10-24T17:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24MURREY"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24MURREY"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24MURREY"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T18:00:00Z",
+    "created_time": "2026-10-13T00:35:31.845191Z",
+    "custom_strike": {
+      "ufc_competitor": "1851ca5c-ea99-4f61-bd6b-053e7b342e39"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24VOLKUN",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T23:00:00Z",
+    "expiration_time": "2026-10-26T18:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5400",
+    "latest_expiration_time": "2026-10-26T18:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4700",
+    "no_bid_dollars": "0.4600",
+    "no_sub_title": "Alexander Volkov",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T23:00:00Z",
+    "open_interest_fp": "24085.75",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.5300",
+    "previous_yes_ask_dollars": "0.5300",
+    "previous_yes_bid_dollars": "0.5200",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Alexander Volkov  wins the Alexander Volkov vs Rizvan Kuniev professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24VOLKUN-VOL",
+    "title": "Alexander Volkov wins",
+    "updated_time": "2026-10-15T23:30:42.676779Z",
+    "volume_24h_fp": "7199.22",
+    "volume_fp": "25116.51",
+    "yes_ask_dollars": "0.5400",
+    "yes_ask_size_fp": "3033.26",
+    "yes_bid_dollars": "0.5300",
+    "yes_bid_size_fp": "569.12",
+    "yes_sub_title": "Alexander Volkov",
+    "_event_title": "333: Alexander Volkov vs Rizvan Kuniev",
+    "_event_ticker": "KXUFCFIGHT-26OCT24VOLKUN",
+    "_event_id": "KXUFCFIGHT-26OCT24VOLKUN",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T23:00:00Z",
+    "_event_milestone": {
+      "id": "5e8cd14b-ed7e-4a94-ab56-e4a0f9fae9d0",
+      "start_date": "2026-10-24T18:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24VOLKUN"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24VOLKUN"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24VOLKUN"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T18:00:00Z",
+    "created_time": "2026-10-13T00:35:31.845191Z",
+    "custom_strike": {
+      "ufc_competitor": "f974a620-d6ab-436c-80ed-79a2aa545e05"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24VOLKUN",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T23:00:00Z",
+    "expiration_time": "2026-10-26T18:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4700",
+    "latest_expiration_time": "2026-10-26T18:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5300",
+    "no_bid_dollars": "0.5200",
+    "no_sub_title": "Rizvan Kuniev",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T23:00:00Z",
+    "open_interest_fp": "14282.88",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.4800",
+    "previous_yes_ask_dollars": "0.4800",
+    "previous_yes_bid_dollars": "0.4700",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Rizvan Kuniev  wins the Alexander Volkov vs Rizvan Kuniev professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24VOLKUN-KUN",
+    "title": "Rizvan Kuniev wins",
+    "updated_time": "2026-10-15T23:30:42.676779Z",
+    "volume_24h_fp": "1842.80",
+    "volume_fp": "14509.62",
+    "yes_ask_dollars": "0.4800",
+    "yes_ask_size_fp": "8182.29",
+    "yes_bid_dollars": "0.4700",
+    "yes_bid_size_fp": "14.78",
+    "yes_sub_title": "Rizvan Kuniev",
+    "_event_title": "333: Alexander Volkov vs Rizvan Kuniev",
+    "_event_ticker": "KXUFCFIGHT-26OCT24VOLKUN",
+    "_event_id": "KXUFCFIGHT-26OCT24VOLKUN",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T23:00:00Z",
+    "_event_milestone": {
+      "id": "5e8cd14b-ed7e-4a94-ab56-e4a0f9fae9d0",
+      "start_date": "2026-10-24T18:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24VOLKUN"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24VOLKUN"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24VOLKUN"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T18:20:00Z",
+    "created_time": "2026-10-13T00:35:32.351519Z",
+    "custom_strike": {
+      "ufc_competitor": "26edb6d6-6fae-466c-919f-e4c9792fde64"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24KAVTEM",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T23:20:00Z",
+    "expiration_time": "2026-10-26T18:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5000",
+    "latest_expiration_time": "2026-10-26T18:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5100",
+    "no_bid_dollars": "0.5000",
+    "no_sub_title": "Loneer Kavanagh",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T23:20:00Z",
+    "open_interest_fp": "7223.25",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.4900",
+    "previous_yes_ask_dollars": "0.4900",
+    "previous_yes_bid_dollars": "0.4800",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Loneer Kavanagh  wins the Loneer Kavanagh vs Ramazonbek Temirov professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24KAVTEM-KAV",
+    "title": "Loneer Kavanagh wins",
+    "updated_time": "2026-10-15T23:30:43.952528Z",
+    "volume_24h_fp": "1603.32",
+    "volume_fp": "13172.61",
+    "yes_ask_dollars": "0.5000",
+    "yes_ask_size_fp": "10378.86",
+    "yes_bid_dollars": "0.4900",
+    "yes_bid_size_fp": "127.02",
+    "yes_sub_title": "Loneer Kavanagh",
+    "_event_title": "333: Loneer Kavanagh vs Ramazonbek Temirov",
+    "_event_ticker": "KXUFCFIGHT-26OCT24KAVTEM",
+    "_event_id": "KXUFCFIGHT-26OCT24KAVTEM",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T23:20:00Z",
+    "_event_milestone": {
+      "id": "84423ed9-d01e-4796-9a62-ad48eab201f9",
+      "start_date": "2026-10-24T18:40:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24KAVTEM"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24KAVTEM"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24KAVTEM"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T18:20:00Z",
+    "created_time": "2026-10-13T00:35:32.351519Z",
+    "custom_strike": {
+      "ufc_competitor": "99a29fb2-24ee-431e-b35e-3609ae0ebe27"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24KAVTEM",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T23:20:00Z",
+    "expiration_time": "2026-10-26T18:20:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5100",
+    "latest_expiration_time": "2026-10-26T18:20:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5000",
+    "no_bid_dollars": "0.4900",
+    "no_sub_title": "Ramazonbek Temirov",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T23:20:00Z",
+    "open_interest_fp": "12657.15",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.5100",
+    "previous_yes_ask_dollars": "0.5100",
+    "previous_yes_bid_dollars": "0.5000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Ramazonbek Temirov  wins the Loneer Kavanagh vs Ramazonbek Temirov professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24KAVTEM-TEM",
+    "title": "Ramazonbek Temirov wins",
+    "updated_time": "2026-10-15T23:30:43.952528Z",
+    "volume_24h_fp": "2650.02",
+    "volume_fp": "15810.98",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "2384.23",
+    "yes_bid_dollars": "0.5000",
+    "yes_bid_size_fp": "5645.46",
+    "yes_sub_title": "Ramazonbek Temirov",
+    "_event_title": "333: Loneer Kavanagh vs Ramazonbek Temirov",
+    "_event_ticker": "KXUFCFIGHT-26OCT24KAVTEM",
+    "_event_id": "KXUFCFIGHT-26OCT24KAVTEM",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T23:20:00Z",
+    "_event_milestone": {
+      "id": "84423ed9-d01e-4796-9a62-ad48eab201f9",
+      "start_date": "2026-10-24T18:40:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24KAVTEM"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24KAVTEM"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24KAVTEM"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T18:40:00Z",
+    "created_time": "2026-10-13T00:35:32.867207Z",
+    "custom_strike": {
+      "ufc_competitor": "7ad2dd6a-aea9-4603-a2c2-212d7f2578ef"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24YANDVA",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T23:40:00Z",
+    "expiration_time": "2026-10-26T18:40:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.6100",
+    "latest_expiration_time": "2026-10-26T18:40:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.4000",
+    "no_bid_dollars": "0.3900",
+    "no_sub_title": "Petr Yan",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T23:40:00Z",
+    "open_interest_fp": "17469.28",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.6100",
+    "previous_yes_ask_dollars": "0.6100",
+    "previous_yes_bid_dollars": "0.6000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Petr Yan  wins the Petr Yan vs Merab Dvalishvili professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24YANDVA-YAN",
+    "title": "Petr Yan wins",
+    "updated_time": "2026-10-15T23:30:45.309384Z",
+    "volume_24h_fp": "7223.13",
+    "volume_fp": "20074.16",
+    "yes_ask_dollars": "0.6100",
+    "yes_ask_size_fp": "912664.63",
+    "yes_bid_dollars": "0.6000",
+    "yes_bid_size_fp": "7526.49",
+    "yes_sub_title": "Petr Yan",
+    "_event_title": "333: Petr Yan vs Merab Dvalishvili",
+    "_event_ticker": "KXUFCFIGHT-26OCT24YANDVA",
+    "_event_id": "KXUFCFIGHT-26OCT24YANDVA",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T23:40:00Z",
+    "_event_milestone": {
+      "id": "86bd0357-a6b4-4653-897a-7b9f10ac12e9",
+      "start_date": "2026-10-24T19:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24YANDVA"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24YANDVA"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24YANDVA"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T18:40:00Z",
+    "created_time": "2026-10-13T00:35:32.867207Z",
+    "custom_strike": {
+      "ufc_competitor": "38003e6c-6be6-4f83-a634-28b3620d460e"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24YANDVA",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-24T23:40:00Z",
+    "expiration_time": "2026-10-26T18:40:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.4000",
+    "latest_expiration_time": "2026-10-26T18:40:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.6000",
+    "no_bid_dollars": "0.5900",
+    "no_sub_title": "Merab Dvalishvili",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-24T23:40:00Z",
+    "open_interest_fp": "41379.14",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.4100",
+    "previous_yes_ask_dollars": "0.4100",
+    "previous_yes_bid_dollars": "0.4000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Merab Dvalishvili  wins the Petr Yan vs Merab Dvalishvili professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24YANDVA-DVA",
+    "title": "Merab Dvalishvili wins",
+    "updated_time": "2026-10-15T23:30:45.309384Z",
+    "volume_24h_fp": "18177.32",
+    "volume_fp": "48774.97",
+    "yes_ask_dollars": "0.4100",
+    "yes_ask_size_fp": "536044.03",
+    "yes_bid_dollars": "0.4000",
+    "yes_bid_size_fp": "10097.42",
+    "yes_sub_title": "Merab Dvalishvili",
+    "_event_title": "333: Petr Yan vs Merab Dvalishvili",
+    "_event_ticker": "KXUFCFIGHT-26OCT24YANDVA",
+    "_event_id": "KXUFCFIGHT-26OCT24YANDVA",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-24T23:40:00Z",
+    "_event_milestone": {
+      "id": "86bd0357-a6b4-4653-897a-7b9f10ac12e9",
+      "start_date": "2026-10-24T19:00:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24YANDVA"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24YANDVA"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24YANDVA"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T19:10:00Z",
+    "created_time": "2026-10-13T00:35:33.402593Z",
+    "custom_strike": {
+      "ufc_competitor": "619243e0-589c-438f-a480-c4e8d1551c2e"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24VOLEVL",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-25T00:10:00Z",
+    "expiration_time": "2026-10-26T19:10:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5100",
+    "latest_expiration_time": "2026-10-26T19:10:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5000",
+    "no_bid_dollars": "0.4900",
+    "no_sub_title": "Alex Volkanovski",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-25T00:10:00Z",
+    "open_interest_fp": "150445.99",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.5100",
+    "previous_yes_ask_dollars": "0.5100",
+    "previous_yes_bid_dollars": "0.5000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Alex Volkanovski  wins the Alex Volkanovski vs Movsar Evloev professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24VOLEVL-VOL",
+    "title": "Alex Volkanovski wins",
+    "updated_time": "2026-10-15T23:30:46.368279Z",
+    "volume_24h_fp": "47933.02",
+    "volume_fp": "165351.02",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "816546.88",
+    "yes_bid_dollars": "0.5000",
+    "yes_bid_size_fp": "11436.27",
+    "yes_sub_title": "Alex Volkanovski",
+    "_event_title": "333: Alex Volkanovski vs Movsar Evloev",
+    "_event_ticker": "KXUFCFIGHT-26OCT24VOLEVL",
+    "_event_id": "KXUFCFIGHT-26OCT24VOLEVL",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-25T00:10:00Z",
+    "_event_milestone": {
+      "id": "6a7923ae-f291-4c42-bb09-3eb005a174c3",
+      "start_date": "2026-10-24T19:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24VOLEVL"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24VOLEVL"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24VOLEVL"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-10-26T19:10:00Z",
+    "created_time": "2026-10-13T00:35:33.402593Z",
+    "custom_strike": {
+      "ufc_competitor": "8eee9ddc-8a66-45ee-a3b1-ddab1cca66f3"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXUFCFIGHT-26OCT24VOLEVL",
+    "exchange_index": 0,
+    "expected_expiration_time": "2026-10-25T00:10:00Z",
+    "expiration_time": "2026-10-26T19:10:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.5100",
+    "latest_expiration_time": "2026-10-26T19:10:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.5000",
+    "no_bid_dollars": "0.4900",
+    "no_sub_title": "Movsar Evloev",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-25T00:10:00Z",
+    "open_interest_fp": "99523.58",
+    "open_time": "2026-10-13T00:45:00Z",
+    "previous_price_dollars": "0.5000",
+    "previous_yes_ask_dollars": "0.5000",
+    "previous_yes_bid_dollars": "0.4900",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Movsar Evloev  wins the Alex Volkanovski vs Movsar Evloev professional MMA fight originally scheduled for Oct 24, 2026, then the market resolves to Yes.",
+    "rules_secondary": "If the fight ends in a draw/no contest, both markets will resolve to $0.50. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution. If the fight is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the fight is cancelled or not started within 48 hours of its originally scheduled start, both markets will resolve to a fair price.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 300,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXUFCFIGHT-26OCT24VOLEVL-EVL",
+    "title": "Movsar Evloev wins",
+    "updated_time": "2026-10-15T23:30:46.368279Z",
+    "volume_24h_fp": "21135.02",
+    "volume_fp": "113692.13",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "878796.94",
+    "yes_bid_dollars": "0.5000",
+    "yes_bid_size_fp": "10070.77",
+    "yes_sub_title": "Movsar Evloev",
+    "_event_title": "333: Alex Volkanovski vs Movsar Evloev",
+    "_event_ticker": "KXUFCFIGHT-26OCT24VOLEVL",
+    "_event_id": "KXUFCFIGHT-26OCT24VOLEVL",
+    "_event_metadata": {
+      "competition": "333",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-25T00:10:00Z",
+    "_event_milestone": {
+      "id": "6a7923ae-f291-4c42-bb09-3eb005a174c3",
+      "start_date": "2026-10-24T19:20:00Z",
+      "type": "mma_match",
+      "primary_event_tickers": [
+        "KXUFCFIGHT-26OCT24VOLEVL"
+      ],
+      "related_event_tickers": [
+        "KXUFCFIGHT-26OCT24VOLEVL"
+      ],
+      "details": {
+        "league": "ufc",
+        "main_game_event_ticker": "KXUFCFIGHT-26OCT24VOLEVL"
+      }
+    },
+    "_series_title": "UFC Fight",
+    "_native_league": "ufc",
+    "_settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "_native_competition": "ufc",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  }
+]

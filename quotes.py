@@ -33,7 +33,7 @@ BOOK_BATCH_SIZE = 100
 
 
 def _now() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+    return datetime.now(timezone.utc).isoformat(timespec="milliseconds")
 
 
 def _iso_time(value: Any) -> str:
@@ -244,6 +244,7 @@ def _book_quote(market: C.Market, book: dict, observed: str,
             warnings.append(f"QUOTES polymarket_intl {asset}: malformed order book")
             return
         values = []
+        quantities: dict[Decimal, Decimal] = {}
         for level in levels:
             if not isinstance(level, dict):
                 invalid = True
@@ -254,7 +255,10 @@ def _book_quote(market: C.Market, book: dict, observed: str,
                 invalid = True
             elif size > 0:
                 values.append(price)
+                quantities[price] = quantities.get(price, Decimal(0)) + size
         prices[side] = (max(values) if side == "bids" else min(values)) if values else None
+        market.extra["quote_bid_size" if side == "bids" else "quote_ask_size"] = _text(
+            quantities.get(prices[side]))
     if invalid:
         warnings.append(f"QUOTES polymarket_intl {asset}: invalid order-book level ignored")
     market.extra["quote_exchange_time"] = _iso_time(book.get("timestamp"))
@@ -283,6 +287,27 @@ def _live_kalshi(tickers: set[str]) -> tuple[dict[str, dict], list[str]]:
     return refreshed, warnings
 
 
+def stream_instruments(markets: list[C.Market], raw: dict[str, list[dict]]) -> list[dict]:
+    """Resolve feed subscription IDs once during discovery, never per tick.
+
+    Polymarket subscribes to outcome tokens, not its enclosing market ID. This
+    manifest is also reproducible offline; unsupported identities stay absent.
+    """
+    records = {(venue, str(record.get("ticker") if venue == "kalshi" else record.get("id"))): record
+               for venue, rows in raw.items() for record in rows if isinstance(record, dict)}
+    instruments = {}
+    for market in markets:
+        instrument = (str(market.market_id) if market.venue == "kalshi" else
+                      _intl_asset(market, records.get((market.venue, str(market.market_id)), {}))
+                      if market.venue == "polymarket_intl" else "")
+        if instrument:
+            instruments[_key(market)] = {
+                "venue": market.venue, "market_id": str(market.market_id),
+                "outcome": C.norm_team(market.outcome), "instrument_id": instrument,
+            }
+    return [instruments[key] for key in sorted(instruments)]
+
+
 def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: bool,
                   saved_quotes: Optional[list[dict]] = None, collected_at: str = ""
                   ) -> tuple[list[dict], list[str]]:
@@ -306,18 +331,26 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
     assets, us_slugs = {}, set()
     for market in markets:
         _set_quote(market, None, None, "", "")
+        for field in ("quote_bid_size", "quote_ask_size", "quote_exchange_time"):
+            market.extra.pop(field, None)
         record = records.get((market.venue, str(market.market_id)), {})
         if live and market.venue == "polymarket_intl":
             assets[_key(market)] = _intl_asset(market, record)
         if live and market.venue == "polymarket_us" and record.get("slug"):
             us_slugs.add(str(record["slug"]))
-    fresh_kalshi, kalshi_warnings = (_live_kalshi({market.market_id for market in markets
-                                                if market.venue == "kalshi"})
-                                    if live else ({}, []))
-    warnings.extend(kalshi_warnings)
-    books, us_quotes, network_warnings = (_live_books(set(assets.values()) - {""}, us_slugs)
-                                         if live else ({}, {}, []))
-    warnings.extend(network_warnings)
+    if live:
+        # Refresh both venues at once to reduce wall time and quote-time skew.
+        # Each venue retains its bounded batch workers and failure isolation.
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            kalshi_job = pool.submit(_live_kalshi, {market.market_id for market in markets
+                                                   if market.venue == "kalshi"})
+            books_job = pool.submit(_live_books, set(assets.values()) - {""}, us_slugs)
+            fresh_kalshi, kalshi_warnings = kalshi_job.result()
+            books, us_quotes, network_warnings = books_job.result()
+        warnings.extend(kalshi_warnings)
+        warnings.extend(network_warnings)
+    else:
+        fresh_kalshi, books, us_quotes = {}, {}, {}
     entries = []
     for market in markets:
         key = _key(market)
@@ -333,6 +366,14 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                        str(entry.get("quote_source") or "saved quote snapshot"),
                        empty=entry.get("quote_status") == "empty")
             market.extra["quote_exchange_time"] = _iso_time(entry.get("exchange_time"))
+            for side in ("bid", "ask"):
+                size = _number(entry.get(side + "_size"))
+                if size is not None and size >= 0:
+                    market.extra["quote_" + side + "_size"] = _text(size)
+                    if size == 0:
+                        setattr(market, side, None)
+            _set_quote(market, _price(market.bid), _price(market.ask), market.quote_time,
+                       market.quote_source, empty=market.quote_status == "empty")
         elif not live and key in duplicate_saved:
             warnings.append(f"QUOTES {key}: conflicting saved quote entries")
         elif market.venue == "kalshi" and record:
@@ -353,6 +394,10 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                         "Kalshi market snapshot yes_bid_dollars/yes_ask_dollars"),
                        empty=len(warnings) == warning_count and
                        ("yes_bid_dollars" in record or "yes_ask_dollars" in record))
+            for side in ("bid", "ask"):
+                size = _number(record.get("yes_" + side + "_size_fp"))
+                if size is not None and size >= 0:
+                    market.extra["quote_" + side + "_size"] = _text(size)
         elif market.venue == "polymarket_us" and record:
             is_long = _us_long(market, record)
             slug = str(record.get("slug") or "")
@@ -391,5 +436,7 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                         "outcome": market.outcome, "bid": market.bid, "ask": market.ask,
                         "quote_time": market.quote_time, "quote_status": market.quote_status,
                         "quote_source": market.quote_source,
-                        "exchange_time": market.extra.get("quote_exchange_time", "")})
+                        "exchange_time": market.extra.get("quote_exchange_time", ""),
+                        "bid_size": market.extra.get("quote_bid_size"),
+                        "ask_size": market.extra.get("quote_ask_size")})
     return entries, list(dict.fromkeys(warnings))

@@ -9,6 +9,7 @@ import sys
 import time
 import traceback
 import webbrowser
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -20,9 +21,12 @@ import quotes as Q
 import sports as S
 
 VENUES = ["kalshi", "polymarket_intl"]
+DISCOVERY_WORKERS = 3
 ENABLED_SPORTS = tuple(filter(None, next(
     (arg.split("=", 1)[1] for arg in sys.argv[1:] if arg.startswith("--sports=")),
     ",".join(S.ADAPTERS)).split(",")))
+SOCCER_LEAGUES = next((tuple(filter(None, arg.split("=", 1)[1].split(",")))
+                      for arg in sys.argv[1:] if arg.startswith("--soccer-leagues=")), None)
 OUTPUT_DIR = Path("output")
 BUILD_DIR = Path(".cricket_matching_build")
 PREVIOUS_DIR = Path(".cricket_matching_previous_output")
@@ -30,6 +34,7 @@ HISTORY_DIR = Path(".cricket_matching_history")
 DATA_DIR = BUILD_DIR / "data"
 REPORT_NAME = "CricketMatchingReport.html"
 NO_OPEN = "--no-open" in sys.argv
+REFRESH_QUOTES = "--refresh-quotes" in sys.argv
 SNAPSHOT_DIR = next(
     (Path(arg.split("=", 1)[1]) for arg in sys.argv[1:]
      if arg.startswith("--snapshot-dir=")),
@@ -236,16 +241,39 @@ def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
         "kalshi": collectors.fetch_kalshi,
         "polymarket_intl": collectors.fetch_polymarket_intl,
     }
+    # Discovery is a slow control-plane operation. Independent sport/venue
+    # scopes overlap, while each adapter keeps its own cursor chain serial.
+    def collect_cricket(venue: str):
+        started = time.perf_counter()
+        result = fetchers[venue]()
+        items = (result[0] if isinstance(result, tuple) else result) or []
+        observed_at = datetime.now(timezone.utc).isoformat(timespec="milliseconds")
+        for record in items:
+            record.setdefault("_collected_at_utc", observed_at)
+        return items, time.perf_counter() - started
+
+    def collect_sport(sport: str):
+        result = (S._collect_soccer(competitions=SOCCER_LEAGUES)
+                  if sport == "soccer" and SOCCER_LEAGUES is not None else
+                  S.ADAPTERS[sport].collect())
+        observed_at = datetime.now(timezone.utc).isoformat(timespec="milliseconds")
+        for items in result[0].values():
+            for record in items:
+                record.setdefault("_collected_at_utc", observed_at)
+        return result
+
+    pool = ThreadPoolExecutor(max_workers=DISCOVERY_WORKERS)
+    cricket_jobs = {venue: pool.submit(collect_cricket, venue) for venue in VENUES
+                    if "cricket" in ENABLED_SPORTS}
+    sport_jobs = {sport: pool.submit(collect_sport, sport)
+                  for sport in ENABLED_SPORTS if sport != "cricket"}
+    # Consume in configured order to keep saved reports deterministic. Workers
+    # stamp records at receipt; waiting here must never make old prices newer.
     for venue in VENUES:
         say(f"  {venue} ...")
-        started = time.time()
         try:
-            result = fetchers[venue]() if "cricket" in ENABLED_SPORTS else []
-            items = result[0] if isinstance(result, tuple) else result
-            raw[venue] = items or []
-            observed_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
-            for record in raw[venue]:
-                record["_collected_at_utc"] = observed_at
+            items, elapsed = cricket_jobs[venue].result() if venue in cricket_jobs else ([], 0.0)
+            raw[venue] = items
             coverage[venue] = dict(collectors.COLLECTION_META.get(venue) or {
                 "complete": False,
                 "method": "collector_without_coverage_metadata",
@@ -256,7 +284,7 @@ def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
             flag = "COMPLETE" if coverage[venue].get("complete") else "INCOMPLETE"
             status[venue] = (
                 f"{flag}, {len(raw[venue])} records in "
-                f"{time.time() - started:.1f}s via "
+                f"{elapsed:.1f}s via "
                 f"{coverage[venue].get('method', 'unknown')}"
             )
         except Exception as exc:
@@ -281,14 +309,14 @@ def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
         adapter = S.ADAPTERS[sport]
         say(f"  {adapter.label} ...")
         try:
-            sport_raw, sport_meta, sport_warnings = adapter.collect()
+            sport_raw, sport_meta, sport_warnings = sport_jobs[sport].result()
             warnings.extend(sport_warnings)
         except Exception as exc:
             sport_raw = {venue: [] for venue in VENUES}
             sport_meta = {venue: {"complete": False, "reason": repr(exc), "records": 0}
                           for venue in VENUES}
             warnings.append(f"{sport} collection failed: {exc!r}")
-        observed_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        observed_at = datetime.now(timezone.utc).isoformat(timespec="milliseconds")
         for key, items in sport_raw.items():
             for record in items:
                 record.setdefault("_collected_at_utc", observed_at)
@@ -298,6 +326,7 @@ def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
         coverage["sports"][sport] = sport_meta
         for venue in VENUES:
             say(f"    {venue}: {len(sport_raw.get(venue, []))} records")
+    pool.shutdown(wait=True)
     (DATA_DIR / "collection_meta.json").write_text(
         json.dumps(coverage, indent=2), encoding="utf-8")
     return raw, status, warnings, coverage
@@ -372,20 +401,33 @@ def main() -> int:
     if not ENABLED_SPORTS or set(ENABLED_SPORTS) - set(S.ADAPTERS):
         say("Choose --sports=" + ",".join(S.ADAPTERS) + " (any subset).")
         return 2
+    if SOCCER_LEAGUES is not None and (not SOCCER_LEAGUES or
+                                       set(SOCCER_LEAGUES) - set(S.SOCCER_COMPETITIONS)):
+        say("Choose --soccer-leagues=" + ",".join(S.SOCCER_COMPETITIONS) + " (any subset).")
+        return 2
+    if REFRESH_QUOTES and SNAPSHOT_DIR is None:
+        say("Use --refresh-quotes with --snapshot-dir=output/data to reuse discovery and refresh prices.")
+        return 2
     run_started = datetime.now(timezone.utc)
-    mode = "snapshot replay" if SNAPSHOT_DIR is not None else "LIVE"
+    run_clock = phase_clock = time.perf_counter()
+    timings = {}
+    live_quotes = SNAPSHOT_DIR is None or REFRESH_QUOTES
+    mode = ("saved discovery + live quotes" if REFRESH_QUOTES else
+            "snapshot replay" if SNAPSHOT_DIR is not None else "LIVE")
     say(f"Sports market terminal — {mode.lower()}")
     say(f"Run started: {run_started.isoformat(timespec='seconds')}")
     snapshot = load_snapshot(SNAPSHOT_DIR) if SNAPSHOT_DIR is not None else None
     source_collected_at = (snapshot_collection_time(SNAPSHOT_DIR)
                            if SNAPSHOT_DIR is not None else None)
     saved_quotes, snapshot_quote_warnings = (load_saved_quotes(SNAPSHOT_DIR)
-                                             if SNAPSHOT_DIR is not None else (None, []))
+                                             if SNAPSHOT_DIR is not None and not REFRESH_QUOTES else (None, []))
     prepare_build()
 
     say("\n[1/6] " + ("Load saved venue data" if snapshot is not None
                          else "Collect Kalshi and Polymarket"))
     raw, status, warnings, coverage = collect(snapshot)
+    timings["discovery_ms"] = round((time.perf_counter() - phase_clock) * 1000, 3)
+    phase_clock = time.perf_counter()
     warnings.extend(snapshot_quote_warnings)
     data_fetched_at = source_collected_at or datetime.now(timezone.utc)
     source_time_known = SNAPSHOT_DIR is None or source_collected_at is not None
@@ -504,6 +546,8 @@ def main() -> int:
     )
 
     say("  Collect bid / ask quotes for confirmed outcomes ...")
+    timings["parse_and_match_ms"] = round((time.perf_counter() - phase_clock) * 1000, 3)
+    phase_clock = time.perf_counter()
     quote_markets = list({id(market): market
                           for match in market_accepted + market_review
                           for market in (match.m1, match.m2)}.values())
@@ -511,16 +555,19 @@ def main() -> int:
                          for record in raw.get(raw_key(sport, venue), [])]
                  for venue in VENUES}
     quote_entries, quote_warnings = Q.enrich_quotes(
-        quote_markets, quote_raw, live=SNAPSHOT_DIR is None, saved_quotes=saved_quotes,
+        quote_markets, quote_raw, live=live_quotes, saved_quotes=saved_quotes,
         collected_at=(data_fetched_at.isoformat(timespec="seconds")
                       if source_time_known else ""))
     warnings.extend(quote_warnings)
+    timings["quote_refresh_ms"] = round((time.perf_counter() - phase_clock) * 1000, 3)
+    phase_clock = time.perf_counter()
     (DATA_DIR / "quotes.json").write_text(
         json.dumps(quote_entries, indent=2), encoding="utf-8")
     quotes_checked_at = datetime.now(timezone.utc)
     (DATA_DIR / "snapshot_meta.json").write_text(json.dumps({
         "collected_at_utc": data_fetched_at.isoformat(timespec="seconds") if source_time_known else None,
         "quotes_checked_at_utc": quotes_checked_at.isoformat(timespec="seconds"),
+        "quote_mode": "live_rest" if live_quotes else "saved_replay",
         "sports": list(ENABLED_SPORTS), "venues": VENUES,
     }, indent=2), encoding="utf-8")
     two_sided_quotes = sum(market.bid is not None and market.ask is not None
@@ -706,7 +753,7 @@ def main() -> int:
     complete_count = sum(bool(coverage_complete.get(venue)) for venue in VENUES)
     review_count = len(fixture_review) + len(market_review)
     quality = {
-        "Run type": "LIVE" if SNAPSHOT_DIR is None else "REPLAY",
+        "Run type": "LIVE" if live_quotes else "REPLAY",
         "Venue coverage": f"{complete_count}/{len(VENUES)} complete",
         "Critical safety audit": "PASS",
         "Review queue": f"{review_count} item" + ("" if review_count == 1 else "s"),
@@ -714,6 +761,24 @@ def main() -> int:
     }
     if not source_time_known:
         quality["Source collection"] = "Unknown"
+    # The audited discovery output seeds a separate incremental price path.
+    # Future websocket transports resolve subscription IDs here and send only
+    # normalized QuoteUpdate objects through streaming.LiveQuoteEngine.
+    import streaming
+    stream_engine = streaming.LiveQuoteEngine.from_matches(market_accepted + market_review)
+    stream_engine.seed(quote_markets)
+    instruments = Q.stream_instruments(quote_markets, quote_raw)
+    (DATA_DIR / "stream_manifest.json").write_text(json.dumps({
+        "version": 1, "mode": "rest_snapshot" if live_quotes else "replay",
+        "discovery_reused": SNAPSHOT_DIR is not None,
+        "instruments": instruments,
+        "subscriptions": {
+            venue: sorted({item["instrument_id"] for item in instruments if item["venue"] == venue})
+            for venue in VENUES},
+        "websockets_connected": False,
+    }, indent=2), encoding="utf-8")
+    (DATA_DIR / "live_state.json").write_text(
+        json.dumps(stream_engine.snapshot(), indent=2), encoding="utf-8")
     P.write_html(
         BUILD_DIR / REPORT_NAME,
         wide_rows,
@@ -722,6 +787,15 @@ def main() -> int:
         data_fetched_at,
         quality,
     )
+    timings["audit_and_render_ms"] = round((time.perf_counter() - phase_clock) * 1000, 3)
+    timings["before_archive_total_ms"] = round((time.perf_counter() - run_clock) * 1000, 3)
+    (DATA_DIR / "latency.json").write_text(json.dumps({
+        "mode": "rest_snapshot" if live_quotes else "replay",
+        "discovery_reused": SNAPSHOT_DIR is not None,
+        "timings": timings, "discovery_workers": DISCOVERY_WORKERS,
+        "quote_workers_per_venue": Q.WORKERS,
+        "instruments": len(instruments), "comparison_pairs": len(market_accepted + market_review),
+    }, indent=2), encoding="utf-8")
     snapshot_path = archive_audited_snapshot(data_fetched_at)
     publish_build()
 

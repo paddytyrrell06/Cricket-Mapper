@@ -1,6 +1,6 @@
 # Sports Market Terminal
 
-A read-only comparison terminal for **Kalshi and Polymarket International**, covering cricket, soccer, and full-game winners in the NBA, NFL, NHL, and MLB. Soccer currently includes the English Premier League, LaLiga, Bundesliga, Serie A, Ligue 1, UEFA Champions League, and MLS. Polymarket US is excluded from the active scanner.
+A comparison terminal and streaming-ready quote infrastructure for **Kalshi and Polymarket International**. Coverage includes cricket, 17 soccer competitions, NBA/WNBA/college basketball, NFL/college football, NHL, MLB, ATP/WTA tennis and UFC. Polymarket US is excluded from the active scanner. The application currently collects public REST snapshots; sockets and order execution are not connected.
 
 ## Run
 
@@ -15,9 +15,11 @@ python3 run.py --sports=cricket --no-open
 python3 run.py --sports=soccer --no-open
 python3 run.py --sports=basketball --no-open
 python3 run.py --sports=football,hockey,baseball --no-open
+python3 run.py --sports=tennis,mma --no-open
+python3 run.py --sports=soccer --soccer-leagues=epl,ucl,uel --no-open
 ```
 
-The generated terminal remains at `output/CricketMatchingReport.html` for compatibility. Sport tabs show bid/ask quotes with a compact rule status; the Crosses tab collates only comparable, fresh cross-venue quotes. Details opens the original venue links, payouts, policy differences, supporting rule text, observation times and diagnostics.
+The generated terminal remains at `output/CricketMatchingReport.html` for compatibility. Its black/amber palette, dense 25px rows, league column and tabular prices support scanning many outcomes. Sport tabs show bid/ask quotes with a compact rule status; the Crosses tab collates comparable, fresh cross-venue quotes. Details shows the same normalized bid/ask as the row, with status, observation time and original venue links. Settlement payouts at resolution are separately labeled; they never populate missing bid/ask prices.
 
 ## Settlement compatibility
 
@@ -29,13 +31,29 @@ Prices use exact decimals. A cross requires a bid strictly above a distinct venu
 
 ## Sources and expansion
 
-Cricket reuses the project's competition and team-normalization logic. Soccer initially covers seven high-activity competitions with league-scoped published club metadata and game-winner feeds. NBA, NFL, NHL and MLB use their league-specific game series and exact team registries. Props, futures, unresolved team identities and conflicting start times are kept out of accepted comparisons. Sport identifiers form part of fixture identity, so similar names cannot link across sports.
+Soccer includes EPL, LaLiga, Bundesliga, Serie A, Ligue 1, Champions League, MLS, Europa League, Conference League, EFL Championship, Eredivisie, Primeira Liga, Scottish Premiership, Liga MX, 2. Bundesliga, A-League Men and USL Championship. Use `--soccer-leagues` with codes from `sports.SOCCER_COMPETITIONS` to narrow live discovery. NBA/WNBA, men's/women's college basketball, NFL/college football, NHL, MLB, ATP/WTA and UFC use league-specific game series and exact registries or published participant metadata. Cricket retains the project's competition and team normalization. Props, futures, unresolved identities and conflicting start times stay outside accepted comparisons. A configured league can have no open games; availability depends on both venues.
 
 The sport adapters, shared settlement model, matching, quote collection and audit provide the expansion points for additional sports. The supported scope is currently match winners, not every market type on either exchange.
 
-Selected Kalshi quotes are refreshed in batches after discovery. Polymarket quotes come from exact outcome-token order books. Last trades and display probabilities are never substituted for bids or asks. Observation time and exchange book time are recorded separately. Missing or failed quotes stay unavailable without erasing a fixture comparison.
+Discovery overlaps independent scopes with bounded requests per origin. Both venues' quote refreshes then run concurrently. Kalshi contracts refresh in batches; Polymarket quotes come from exact outcome-token order books. Last trades and display probabilities are never substituted for bids or asks. Observation time, exchange book time and available best-level sizes are recorded separately. Missing or failed quotes stay unavailable without erasing a fixture comparison.
 
-WebSocket options, authentication requirements, cache recovery, rate limits and the next service architecture are documented in [docs/FEEDS.md](docs/FEEDS.md). Streaming and order execution are not enabled in this version.
+Refresh prices using saved discovery to skip the slower catalog scan:
+
+```bash
+python3 run.py --snapshot-dir=output/data --refresh-quotes --no-open
+```
+
+This still reparses and audits the saved universe, and fetches current matched quotes. It retains the discovery timestamp and cannot discover games opened since that snapshot; run a full scan periodically. Omit `--refresh-quotes` for a strictly offline replay.
+
+`streaming.LiveQuoteEngine` compiles audited matches into an instrument index and recomputes only affected comparisons on a quote update. It supports atomic BBO replacements, freshness expiry, sequence-gap invalidation, reconnect generations and snapshot recovery. Its live defaults are five seconds of quote age and one second of skew. Discovery, settlement parsing, disk writes and HTML rendering stay outside that update path. `output/data/stream_manifest.json` maps exact feed IDs to outcomes; `live_state.json` records the seeded engine; `latency.json` records scanner phase times.
+
+Benchmark local quote processing independently of network latency:
+
+```bash
+python3 benchmark_streaming.py --pairs=1000 --updates=20000
+```
+
+The verified competition catalog is in [docs/SPORTS.md](docs/SPORTS.md). WebSocket integration, authentication requirements, cache recovery and service boundaries are documented in [docs/FEEDS.md](docs/FEEDS.md). The generated HTML is a snapshot. A future service must own sockets and publish engine changes to the browser; unknown depth, fees and contingency differences still need to be handled before implementing execution.
 
 ## Audit and replay
 

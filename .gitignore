@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+.cricket_matching_build/
+.cricket_matching_previous_output/
+.cricket_matching_history/

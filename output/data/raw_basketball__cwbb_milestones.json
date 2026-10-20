@@ -1,0 +1,30 @@
+[
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8ea6f31e-e0e3-481f-8f91-df91ac1ac109",
+      "home_team_id": "0eea27f3-db3e-4f42-9ab5-dec7a392fbeb",
+      "league": "NCAAWB",
+      "main_game_event_ticker": "KXNCAAWBGAME-26NOV01VILLND",
+      "source": "statsperform",
+      "source_id": "3009301",
+      "status": "scheduled"
+    },
+    "id": "ef259e4e-e8ae-52ec-8e51-7b7833aaf816",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin!",
+    "primary_event_tickers": [
+      "KXNCAAWBGAME-26NOV01VILLND"
+    ],
+    "related_event_tickers": [
+      "KXNCAAWBGAME-26NOV01VILLND"
+    ],
+    "source_ids": {
+      "source_1_id": "3009301"
+    },
+    "start_date": "2026-11-01T17:00:00Z",
+    "title": "Villanova at Notre Dame",
+    "type": "basketball_game",
+    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+  }
+]

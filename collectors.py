@@ -9,6 +9,7 @@ import socket
 import urllib.error
 import urllib.parse
 import urllib.request
+from threading import BoundedSemaphore, Lock
 from dataclasses import dataclass, field
 from typing import Any, Optional
 
@@ -52,9 +53,21 @@ class Http:
     def __init__(self) -> None:
         self.log: list[dict] = []
         self.dns_failed_hosts: set[str] = set()
+        self._host_lock = Lock()
+        self._host_slots: dict = {}
 
     def get(self, url: str, params: Optional[dict] = None, note: str = "",
             quiet: bool = False) -> tuple[Optional[int], Any]:
+        # Expanding leagues must not multiply simultaneous requests without
+        # bound. Pagination remains serial per scope; origins overlap safely.
+        host = urllib.parse.urlparse(url).netloc
+        with self._host_lock:
+            slot = self._host_slots.setdefault(host, BoundedSemaphore(4))
+        with slot:
+            return self._get(url, params, note, quiet)
+
+    def _get(self, url: str, params: Optional[dict], note: str,
+             quiet: bool) -> tuple[Optional[int], Any]:
         full = f"{url}?{urllib.parse.urlencode(params)}" if params else url
         host = urllib.parse.urlparse(url).hostname or ""
         if host in self.dns_failed_hosts:

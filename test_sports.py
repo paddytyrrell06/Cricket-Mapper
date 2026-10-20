@@ -166,6 +166,48 @@ def flatten_samples():
     return {"kalshi": kalshi, "polymarket_intl": gamma, "_teams": event["teams"]}
 
 
+def native_match_raw(league="atp"):
+    details = S.NATIVE_COMPETITIONS[league]
+    pairs = {
+        "atp": (("atmane", "Terence Atmane", "T. Atmane"), ("hijikata", "Rinky Hijikata", "R. Hijikata")),
+        "wta": (("joint", "Maya Joint", "M. Joint"), ("sonmez", "Zeynep Sonmez", "Z. Sonmez")),
+        "ufc": (("jasluc", "Jasmin Lucindo", ""), ("niccal", "Nicolle Caliari", "")),
+        "cfb": (("nill", "Huskies", "Northern Illinois"), ("iowa", "Hawkeyes", "Iowa")),
+    }
+    players = pairs[league]
+    teams = [{"abbreviation": code, "name": name, "alias": alias, "league": league}
+             for code, name, alias in players]
+    names = [alias if details.get("school_identity") else name for _, name, alias in players]
+    slug = f"{league}-{players[0][0]}-{players[1][0]}-2026-10-20"
+    start = "2026-10-20T18:00:00Z"
+    event = details["series"] + "-26OCT20TEST"
+    if details["sport"] == "tennis":
+        description = f"If {names[0]} advances against {names[1]}, resolve to {names[0]}. If {names[1]} advances against {names[0]}, resolve to {names[1]}. "
+        description += "If the match ends in a walkover, this market will resolve to 50-50. If the match begins but is not completed, and one player advances due to the opponent's retirement, default, or disqualification, this market will resolve to the player who advances."
+        secondary = "If a walkover occurs (all before the match starts), resolve to a fair price. If postponed, remain open within two weeks."
+    elif details["sport"] == "mma":
+        description = "The market resolves to the officially declared winner. If the fight is declared a draw or technical draw, ruled a No Contest, not scored, canceled, this market will resolve 50-50."
+        secondary = "If the fight ends in a draw/no contest, both markets will resolve to $0.50. If postponed but begins within 48 hours, remain open; otherwise resolve to a fair price."
+    else:
+        description = "The market resolves to the winner including any overtime periods. If the game ends in a tie, resolve 50-50."
+        secondary = "If postponed but begins within 48 hours, remain open. Otherwise resolve to a fair price."
+    kalshi = [{"ticker": f"{event}-{index}", "event_ticker": event,
+               "market_type": "binary", "yes_sub_title": name, "title": name + " wins",
+               "status": "active", "occurrence_datetime": start,
+               "rules_primary": f"If {name} wins the full match, the market resolves Yes.",
+               "rules_secondary": secondary, "_native_competition": league,
+               "_settlement_documents": [S.KALSHI_DOCUMENTS[details["sport"]]]
+                   if details["sport"] in S.KALSHI_DOCUMENTS else []}
+              for index, name in enumerate(names)]
+    gamma = {"id": "native-winner", "slug": slug, "_event_slug": slug,
+             "_event_id": "native-event", "_event_teams": teams,
+             "_event_start_time": start, "_native_competition": league,
+             "sportsMarketType": "moneyline", "outcomes": json.dumps(names),
+             "clobTokenIds": '["200","100"]', "gameStartTime": start,
+             "description": description, "active": True, "closed": False}
+    return {"kalshi": kalshi, "polymarket_intl": [gamma]}
+
+
 class NbaTeamRegistryTests(unittest.TestCase):
     def test_exact_league_code_and_published_alias_are_all_required(self):
         registry = S.TeamRegistry()
@@ -244,7 +286,7 @@ class NbaParserTests(unittest.TestCase):
         fixture = next(item for item in fixtures if item.venue == "polymarket_intl")
         self.assertEqual((fixture.key.date, fixture.start_time), ("2026-10-20", "19:00"))
         self.assertEqual(fixture.extra["start_time_basis"], "native_event_start_timestamp_to_utc")
-        self.assertIn("lacks a timezone", fixture.note)
+        self.assertEqual(fixture.note, "")
 
     def test_outcome_token_mapping_preserves_native_order_and_published_names(self):
         raw = flatten_samples()
@@ -382,8 +424,8 @@ class NbaCollectorTests(unittest.TestCase):
         self.assertTrue(warnings)
 
     def test_registry_exposes_two_venues_and_distinct_sport_adapters(self):
-        self.assertEqual(set(S.ADAPTERS), {"cricket", "soccer", "basketball", "football", "hockey", "baseball"})
-        self.assertEqual(S.ADAPTERS["basketball"].label, "Basketball (NBA)")
+        self.assertEqual(set(S.ADAPTERS), {"cricket", "soccer", "basketball", "football", "hockey", "baseball", "tennis", "mma"})
+        self.assertEqual(S.ADAPTERS["basketball"].label, "Basketball")
         self.assertTrue(all(adapter.venues == ("kalshi", "polymarket_intl")
                             for adapter in S.ADAPTERS.values()))
 
@@ -481,6 +523,96 @@ class NbaCollectorTests(unittest.TestCase):
             S.ADAPTERS["cricket"].parse({"kalshi": [], "polymarket_intl": []})
         kalshi.assert_called_once_with([], market_types={S.C.MATCH_WINNER})
         gamma.assert_called_once_with([], "polymarket_intl", market_types={S.C.MATCH_WINNER})
+
+    def test_new_native_sports_preserve_exact_identities_tokens_and_contingencies(self):
+        for league in ("atp", "wta", "ufc", "cfb"):
+            with self.subTest(league=league):
+                raw = native_match_raw(league)
+                sport = S.NATIVE_COMPETITIONS[league]["sport"]
+                fixtures, markets, warnings = S.ADAPTERS[sport].parse(raw)
+                self.assertEqual(warnings, [])
+                self.assertEqual((len(fixtures), len(markets)), (2, 4))
+                self.assertEqual({fixture.key.fmt for fixture in fixtures}, {league.upper()})
+                accepted, review, _ = M.match_fixtures(fixtures)
+                self.assertEqual((len(accepted), len(review)), (1, 0))
+                matched, review, _ = M.match_markets(accepted, markets)
+                self.assertEqual((len(matched), len(review)), (2, 0))
+                polymarket = [market for market in markets if market.venue == "polymarket_intl"]
+                self.assertEqual(Q._intl_asset(polymarket[0], raw["polymarket_intl"][0]), "200")
+                self.assertEqual(Q._intl_asset(polymarket[1], raw["polymarket_intl"][0]), "100")
+                if sport == "tennis":
+                    self.assertTrue(all(market.contingency_status == "different" for market in matched))
+
+    def test_native_winner_rejects_wrong_league_metadata_and_period_props(self):
+        for mutate in (
+            lambda row: row["_event_teams"][0].update(league="wta"),
+            lambda row: row.update(slug=row["slug"] + "-set-1"),
+            lambda row: row.update(sportsMarketType="tennis_first_set_winner"),
+            lambda row: row.update(outcomes='["Yes","No"]'),
+        ):
+            raw = native_match_raw()
+            raw["kalshi"] = []
+            mutate(raw["polymarket_intl"][0])
+            fixtures, markets, warnings = S.ADAPTERS["tennis"].parse(raw)
+            self.assertEqual((fixtures, markets), ([], []))
+            self.assertTrue(any("COVERAGE_INCOMPLETE" in note for note in warnings))
+
+    def test_college_mascot_cannot_establish_cross_venue_school_identity(self):
+        raw = native_match_raw("cfb")
+        raw["kalshi"][0].update(
+            yes_sub_title="Huskies", title="Washington Huskies at Iowa",
+            rules_primary="If Washington wins the full match, the market resolves Yes.")
+        fixtures, markets, warnings = S.ADAPTERS["football"].parse(raw)
+        self.assertEqual({fixture.venue for fixture in fixtures}, {"polymarket_intl"})
+        self.assertEqual({market.venue for market in markets}, {"polymarket_intl"})
+        self.assertTrue(any("unverified exact school identities" in note for note in warnings))
+
+    def test_wnba_registry_handles_verified_native_code_aliases_and_gender(self):
+        config = json.loads((Path(S.__file__).parent / "config" / "wnba_teams.json").read_text())
+        registry = S.TeamRegistry(config=config)
+        self.assertEqual(registry.resolve("Golden State", "GS"), "Golden State Valkyries")
+        self.assertEqual(registry.resolve("Las Vegas", "LV"), "Las Vegas Aces")
+        self.assertEqual(registry.resolve("Golden State", "GS", league="nba"), "")
+        details = S.NATIVE_COMPETITIONS["wnba"]
+        with patch.dict(S.SPORT_CONFIGS, {"wnba": dict(details, league="wnba")}):
+            raw = configured_sports_raw("wnba")
+        fixtures, markets, warnings = S.ADAPTERS["basketball"].parse(raw)
+        self.assertEqual(warnings, [])
+        self.assertEqual((len(fixtures), len(markets)), (2, 4))
+        self.assertEqual({fixture.key.gender for fixture in fixtures}, {"W"})
+        self.assertEqual({market.fixture_key.fmt for market in markets}, {"WNBA"})
+
+    def test_prop_only_event_page_does_not_end_winner_discovery(self):
+        props = [{"id": str(index), "slug": f"atp-a-b-2026-10-20-prop-{index}"}
+                 for index in range(100)]
+        raw = native_match_raw()
+        record = raw["polymarket_intl"][0]
+        event = {"id": "game", "slug": record["slug"], "teams": record["_event_teams"],
+                 "startTime": record["gameStartTime"], "markets": [record]}
+        with patch.object(S.K.http, "get", side_effect=[(200, props), (200, [event])]) as get:
+            records, coverage, warnings = S._collect_gamma_series(league="atp", series_id=10365)
+        self.assertEqual(len(records), 1)
+        self.assertTrue(coverage["complete"])
+        self.assertEqual(warnings, [])
+        self.assertEqual(get.call_args.args[1]["offset"], 100)
+
+    def test_selected_soccer_discovery_is_bounded_and_preserves_one_venue_failure(self):
+        def kalshi(**kwargs):
+            raise RuntimeError("temporary Kalshi outage")
+        def gamma(**kwargs):
+            return [], S._coverage(True, "series", 0, []), []
+        with patch.object(S, "_collect_kalshi", side_effect=kalshi), patch.object(
+                S, "_collect_gamma_series", side_effect=gamma), patch.object(
+                S, "ThreadPoolExecutor", wraps=S.ThreadPoolExecutor) as pool:
+            raw, coverage, warnings = S._collect_soccer(["uel", "col"])
+        pool.assert_called_once_with(max_workers=3)
+        self.assertEqual(raw["kalshi"], [])
+        self.assertFalse(coverage["kalshi"]["complete"])
+        self.assertTrue(coverage["polymarket_intl"]["complete"])
+        self.assertEqual(set(coverage["polymarket_intl"]["competitions"]), {"uel", "col"})
+        self.assertEqual(len(warnings), 2)
+        with self.assertRaises(ValueError):
+            S._collect_soccer(["unverified-league"])
 
 
 if __name__ == "__main__":

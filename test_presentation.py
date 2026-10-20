@@ -1,6 +1,7 @@
 import tempfile
 import unittest
 import csv
+import json
 from datetime import datetime, timezone, timedelta
 from copy import deepcopy
 from pathlib import Path
@@ -313,6 +314,59 @@ class QuotePresentationTests(unittest.TestCase):
         self.assertNotIn('class="cards"', document)
         self.assertIn("\\u0026lt;unsafe\\u0026gt;", document)
         self.assertNotIn("<unsafe>", document)
+
+    @staticmethod
+    def detail_quotes(details):
+        return details.split(f'aria-label="Observed bid and ask">', 1)[1].split('<dl>', 1)[0]
+
+    def test_details_quotes_use_normalized_prices_and_label_settlement_separately(self):
+        self.left.bid, self.left.ask = "0.6525", "0.70"
+        # Raw diagnostic values must never override the selected outcome quote.
+        self.left.extra.update(raw_quote_bid="0", raw_quote_ask="1")
+        details = P._details(self.row(), VENUES)
+        quotes = self.detail_quotes(details)
+        self.assertIn('class="bid" data-side="bid">65.25¢</strong>', quotes)
+        self.assertIn('class="ask" data-side="ask">70¢</strong>', quotes)
+        self.assertIn('class="quote-status">available</span>', quotes)
+        self.assertNotIn(">0¢<", quotes)
+        self.assertNotIn(">100¢<", quotes)
+        self.assertIn('<details><summary>Settlement payouts at resolution</summary>', details)
+        self.assertIn('<caption>Payout per $1 contract at resolution</caption>', details)
+        self.assertIn('<td>Win</td><td>100¢</td>', details)
+        self.assertIn('<td>Loss</td><td>0¢</td>', details)
+
+    def test_details_keep_missing_side_unavailable_and_display_real_zero(self):
+        for bid, ask, expected_bid, expected_ask, status in (
+            (None, None, "—", "—", "unavailable"),
+            ("0", None, "0¢", "—", "one-sided"),
+            (None, "1", "—", "100¢", "one-sided"),
+            ("0", "1", "0¢", "100¢", "available"),
+        ):
+            with self.subTest(bid=bid, ask=ask):
+                self.left.bid, self.left.ask = bid, ask
+                quotes = self.detail_quotes(P._details(self.row(), VENUES))
+                self.assertIn(f'class="bid" data-side="bid">{expected_bid}</strong>', quotes)
+                self.assertIn(f'class="ask" data-side="ask">{expected_ask}</strong>', quotes)
+                self.assertIn(f'class="quote-status">{status}</span>', quotes)
+
+    def test_popup_payload_and_table_quotes_agree_for_each_venue(self):
+        self.crossing_quotes()
+        self.left.market_id = 'market"<unsafe>'
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "terminal.html"
+            P.write_html(path, [self.row()], VENUES, self.coverage, self.as_of)
+            document = path.read_text()
+        payload = document.split('id="marketData">', 1)[1].split('</script>', 1)[0]
+        record = json.loads(payload)[0]
+        for venue, bid, ask in (("kalshi", "65¢", "70¢"), ("polymarket_intl", "60¢", "62¢")):
+            section = record["details"].split(f'data-venue="{venue}"', 1)[1].split('<dl>', 1)[0]
+            self.assertIn(f'data-side="bid">{bid}</strong>', section)
+            self.assertIn(f'data-side="ask">{ask}</strong>', section)
+            self.assertIn(f'data-side="bid">{bid}</strong>', record["html"])
+            self.assertIn(f'data-side="ask">{ask}</strong>', record["html"])
+        self.assertIn('data-market-id="market&quot;&lt;unsafe&gt;"', record["html"])
+        self.assertIn('class="competition-cell" title="Example cup">Example cup</td>', record["html"])
+        self.assertIn('class="competition-head">League</th>', document)
 
     def crossing_quotes(self):
         self.left.bid, self.left.ask = "0.65", "0.70"

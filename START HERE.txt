@@ -5,12 +5,15 @@ SPORTS MARKET TERMINAL
 3. The latest report should open automatically.
 4. Otherwise open: output/CricketMatchingReport.html
 
-Each run fetches current Kalshi and Polymarket International data for cricket, NBA,
-NFL, NHL, and MLB game winners. To select sports, pass for example:
+Each run fetches current Kalshi and Polymarket International match winners for
+cricket, soccer, basketball, American football, hockey, baseball, tennis and MMA.
+Basketball and American football include women's/college leagues where available.
+To select sports, pass for example:
 python3 run.py --sports=football,hockey,baseball --no-open
-For soccer's selected major competitions, run:
-python3 run.py --sports=soccer --no-open
+For a subset of the 17 supported soccer competitions, run:
+python3 run.py --sports=soccer --soccer-leagues=epl,ucl,uel --no-open
 The report shows its collection timestamp, sport/venue coverage, and advisories.
 
 The scanner uses public read-only APIs, saves evidence for replay, and does not
-place orders. WebSocket streaming is not enabled yet.
+place orders. The incremental quote engine and subscription manifests prepare
+for WebSocket integration; sockets are not connected yet. See docs/FEEDS.md.

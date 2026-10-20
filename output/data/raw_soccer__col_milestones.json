@@ -1,0 +1,596 @@
+[
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "9f09795e-e6be-4444-960f-7f66ab1b0fed",
+      "coverage": {},
+      "home_team_id": "edef5d35-7e82-4523-bddd-0ddef7cbce36",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22KAZSKB",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "411a23af-8841-50d6-8364-e352fa02540e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22KAZSKB",
+      "KXUECLSPREAD-26OCT22KAZSKB",
+      "KXUECLTOTAL-26OCT22KAZSKB",
+      "KXUECLBTTS-26OCT22KAZSKB"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22KAZSKB",
+      "KXUECLSPREAD-26OCT22KAZSKB",
+      "KXUECLTOTAL-26OCT22KAZSKB",
+      "KXUECLBTTS-26OCT22KAZSKB"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Kauno vs Brann",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "eaf4c3cc-f5d7-4043-9106-e8599fd796b9",
+      "coverage": {},
+      "home_team_id": "6b15b65e-1a7e-4e04-b99d-f12019224b80",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22NJACSK",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7684cc44-6363-5117-bb6c-508da759132a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22NJACSK",
+      "KXUECLSPREAD-26OCT22NJACSK",
+      "KXUECLTOTAL-26OCT22NJACSK",
+      "KXUECLBTTS-26OCT22NJACSK"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22NJACSK",
+      "KXUECLSPREAD-26OCT22NJACSK",
+      "KXUECLTOTAL-26OCT22NJACSK",
+      "KXUECLBTTS-26OCT22NJACSK"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Nordsjaelland vs CSKA Sofia",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "60582c8e-196a-40f3-9df5-56688c57255b",
+      "coverage": {},
+      "home_team_id": "c90a46e4-ea7c-426a-a9cc-4da81ed58bd9",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22BRAKAA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "98ad4e01-d1b8-58eb-a5e4-1d2b74d71c11",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22BRAKAA",
+      "KXUECLSPREAD-26OCT22BRAKAA",
+      "KXUECLTOTAL-26OCT22BRAKAA",
+      "KXUECLBTTS-26OCT22BRAKAA"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22BRAKAA",
+      "KXUECLSPREAD-26OCT22BRAKAA",
+      "KXUECLTOTAL-26OCT22BRAKAA",
+      "KXUECLBTTS-26OCT22BRAKAA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Braga vs Gent",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "801c4014-deff-4d49-92e1-b20a8a228d46",
+      "coverage": {},
+      "home_team_id": "e09612c0-22f1-4713-9e5c-740a862495a7",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22FCMSTT",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "41e07856-12bb-5d99-ab0f-e91df35b313f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22FCMSTT",
+      "KXUECLSPREAD-26OCT22FCMSTT",
+      "KXUECLTOTAL-26OCT22FCMSTT",
+      "KXUECLBTTS-26OCT22FCMSTT"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22FCMSTT",
+      "KXUECLSPREAD-26OCT22FCMSTT",
+      "KXUECLTOTAL-26OCT22FCMSTT",
+      "KXUECLBTTS-26OCT22FCMSTT"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Midtjylland vs St. Truidense",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8f29d883-77a5-46ce-8f64-ed4e060be808",
+      "coverage": {},
+      "home_team_id": "9032b97d-cea6-412b-8ffc-4b42a87e7003",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22PAFRFC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "62d14e9c-8845-5ae0-82aa-9e5c29590bce",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22PAFRFC",
+      "KXUECLSPREAD-26OCT22PAFRFC",
+      "KXUECLTOTAL-26OCT22PAFRFC",
+      "KXUECLBTTS-26OCT22PAFRFC"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22PAFRFC",
+      "KXUECLSPREAD-26OCT22PAFRFC",
+      "KXUECLTOTAL-26OCT22PAFRFC",
+      "KXUECLBTTS-26OCT22PAFRFC"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Pafos vs Riga FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "139b1e61-312d-4fb6-8e98-2dd6017e8660",
+      "coverage": {},
+      "home_team_id": "504a448b-32d0-4125-88c6-856fcbabf0e0",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22AJAATA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "d3496129-de95-51b8-9263-5ba506d1e524",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22AJAATA",
+      "KXUECLSPREAD-26OCT22AJAATA",
+      "KXUECLTOTAL-26OCT22AJAATA",
+      "KXUECLBTTS-26OCT22AJAATA"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22AJAATA",
+      "KXUECLSPREAD-26OCT22AJAATA",
+      "KXUECLTOTAL-26OCT22AJAATA",
+      "KXUECLBTTS-26OCT22AJAATA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Ajax vs Atalanta",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "16e7e190-07ed-44b7-8aaf-37d08742e3cc",
+      "coverage": {},
+      "home_team_id": "c363459f-57b8-4230-a7c1-916f63f962f1",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22ALMPAN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "6064f348-2afc-547a-b47f-e2647b1faccb",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22ALMPAN",
+      "KXUECLSPREAD-26OCT22ALMPAN",
+      "KXUECLTOTAL-26OCT22ALMPAN",
+      "KXUECLBTTS-26OCT22ALMPAN"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22ALMPAN",
+      "KXUECLSPREAD-26OCT22ALMPAN",
+      "KXUECLTOTAL-26OCT22ALMPAN",
+      "KXUECLBTTS-26OCT22ALMPAN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T14:30:00Z",
+    "title": "Kairat vs Panathinaikos",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "0391a761-6994-4f9c-9a24-b8c784a75b17",
+      "coverage": {},
+      "home_team_id": "75d7819d-e0de-4072-b8f1-395d8e81de43",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22ESCCSU",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "e912f71e-a698-599d-8ef2-7c7c3a96d7c4",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22ESCCSU",
+      "KXUECLSPREAD-26OCT22ESCCSU",
+      "KXUECLTOTAL-26OCT22ESCCSU",
+      "KXUECLBTTS-26OCT22ESCCSU"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22ESCCSU",
+      "KXUECLSPREAD-26OCT22ESCCSU",
+      "KXUECLTOTAL-26OCT22ESCCSU",
+      "KXUECLBTTS-26OCT22ESCCSU"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "IC Escaldes vs Uni Craiova",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "75575478-e8c9-4d59-ae3b-b117c1d42890",
+      "coverage": {},
+      "home_team_id": "de4ee287-4c70-4106-b68c-23b309fb3615",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22FKJBRI",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "850f7d5f-4598-565e-93ff-af7e708658d8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22FKJBRI",
+      "KXUECLSPREAD-26OCT22FKJBRI",
+      "KXUECLTOTAL-26OCT22FKJBRI",
+      "KXUECLBTTS-26OCT22FKJBRI"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22FKJBRI",
+      "KXUECLSPREAD-26OCT22FKJBRI",
+      "KXUECLTOTAL-26OCT22FKJBRI",
+      "KXUECLBTTS-26OCT22FKJBRI"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Jablonec vs Brighton",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "219608d8-8201-43eb-b799-923cec84696d",
+      "coverage": {},
+      "home_team_id": "92c70f92-d547-4b72-b511-169706085f8a",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22IBEMJA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "06703b34-b672-5806-921f-20bec2f87ac4",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22IBEMJA",
+      "KXUECLSPREAD-26OCT22IBEMJA",
+      "KXUECLTOTAL-26OCT22IBEMJA",
+      "KXUECLBTTS-26OCT22IBEMJA"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22IBEMJA",
+      "KXUECLSPREAD-26OCT22IBEMJA",
+      "KXUECLTOTAL-26OCT22IBEMJA",
+      "KXUECLBTTS-26OCT22IBEMJA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Iberia vs Mjallby",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "920ec4be-00be-4bc0-8e8a-a71848337fde",
+      "coverage": {},
+      "home_team_id": "7020b25c-8c0a-4f0b-a672-efa63c8e1990",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22ASMSCF",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "992248ef-0caa-5ea3-80a6-ca70f57d5ced",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22ASMSCF",
+      "KXUECLSPREAD-26OCT22ASMSCF",
+      "KXUECLTOTAL-26OCT22ASMSCF",
+      "KXUECLBTTS-26OCT22ASMSCF"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22ASMSCF",
+      "KXUECLSPREAD-26OCT22ASMSCF",
+      "KXUECLTOTAL-26OCT22ASMSCF",
+      "KXUECLBTTS-26OCT22ASMSCF"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Monaco vs Freiburg",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "27940d0a-8b5e-404a-b576-d19ed5bace87",
+      "coverage": {},
+      "home_team_id": "8d19aa4f-a6f4-4875-8060-3e8974b5b9eb",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22BBLKUPS",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "03848384-dd55-5fc4-9a1b-b4c209d87c6e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22BBLKUPS",
+      "KXUECLSPREAD-26OCT22BBLKUPS",
+      "KXUECLTOTAL-26OCT22BBLKUPS",
+      "KXUECLBTTS-26OCT22BBLKUPS"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22BBLKUPS",
+      "KXUECLSPREAD-26OCT22BBLKUPS",
+      "KXUECLTOTAL-26OCT22BBLKUPS",
+      "KXUECLBTTS-26OCT22BBLKUPS"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Banja Luka vs Kuopion Palloseura",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "5497d95d-de5c-4e5c-a376-caa6e95837ad",
+      "coverage": {},
+      "home_team_id": "69077214-79cd-41d9-a06d-67c8250da3ec",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22CZVFCC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "4f0fd2af-cecd-501f-a02f-ccd53e3ed85a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22CZVFCC",
+      "KXUECLSPREAD-26OCT22CZVFCC",
+      "KXUECLTOTAL-26OCT22CZVFCC",
+      "KXUECLBTTS-26OCT22CZVFCC"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22CZVFCC",
+      "KXUECLSPREAD-26OCT22CZVFCC",
+      "KXUECLTOTAL-26OCT22CZVFCC",
+      "KXUECLBTTS-26OCT22CZVFCC"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Crvena Zvezda vs Copenhagen",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "62141dba-aa48-493a-9c3e-3fe0ee5fcf54",
+      "coverage": {},
+      "home_team_id": "3ac6e1d1-f2a9-45a6-a7cb-a8e11a3ea234",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22TRAHOM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "48a45567-8016-5cda-a12d-3416025e485f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22TRAHOM",
+      "KXUECLSPREAD-26OCT22TRAHOM",
+      "KXUECLTOTAL-26OCT22TRAHOM",
+      "KXUECLBTTS-26OCT22TRAHOM"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22TRAHOM",
+      "KXUECLSPREAD-26OCT22TRAHOM",
+      "KXUECLTOTAL-26OCT22TRAHOM",
+      "KXUECLBTTS-26OCT22TRAHOM"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Trabzonspor vs Heart of Midlothian",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "4f5d705d-ee5f-45a8-b065-7093870b43d6",
+      "coverage": {},
+      "home_team_id": "4b919ca1-def0-4f33-ab94-b4926a3e55e3",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22AGFEGR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "9f329413-4051-5105-9d31-3b29b75dcfe8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22AGFEGR",
+      "KXUECLSPREAD-26OCT22AGFEGR",
+      "KXUECLTOTAL-26OCT22AGFEGR",
+      "KXUECLBTTS-26OCT22AGFEGR"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22AGFEGR",
+      "KXUECLSPREAD-26OCT22AGFEGR",
+      "KXUECLTOTAL-26OCT22AGFEGR",
+      "KXUECLBTTS-26OCT22AGFEGR"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Aarhus vs Egnatia Rrogozhine",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "b2806203-e12d-434b-b4b5-01561a0369f9",
+      "coverage": {},
+      "home_team_id": "f4ecfbbf-bc8b-4150-bccb-bb17cd54afdd",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22LINTWE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "91c78bbd-4822-5c5a-928e-c37d28a49f40",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22LINTWE",
+      "KXUECLSPREAD-26OCT22LINTWE",
+      "KXUECLTOTAL-26OCT22LINTWE",
+      "KXUECLBTTS-26OCT22LINTWE"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22LINTWE",
+      "KXUECLSPREAD-26OCT22LINTWE",
+      "KXUECLTOTAL-26OCT22LINTWE",
+      "KXUECLBTTS-26OCT22LINTWE"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Lincoln Red Imps vs Enschede",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "bf610eab-5923-4944-8e54-364e383c4339",
+      "coverage": {},
+      "home_team_id": "cfeec59c-236e-4b3b-bbac-f69789884fdc",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22THUHAJ",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "836aeb8b-69ac-5e0a-9989-6cade1f147d8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22THUHAJ",
+      "KXUECLSPREAD-26OCT22THUHAJ",
+      "KXUECLTOTAL-26OCT22THUHAJ",
+      "KXUECLBTTS-26OCT22THUHAJ"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22THUHAJ",
+      "KXUECLSPREAD-26OCT22THUHAJ",
+      "KXUECLTOTAL-26OCT22THUHAJ",
+      "KXUECLBTTS-26OCT22THUHAJ"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Thun vs Hajduk",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "ea882d72-e312-424f-b805-8854ca144c8f",
+      "coverage": {},
+      "home_team_id": "d8edf5f1-fafb-4875-8587-d8b5f5829e57",
+      "is_ko": false,
+      "league": "Conference League",
+      "main_game_event_ticker": "KXUECLGAME-26OCT22GETLUG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "794bb296-8593-5647-9f75-68fb76d1833c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUECLGAME-26OCT22GETLUG",
+      "KXUECLSPREAD-26OCT22GETLUG",
+      "KXUECLTOTAL-26OCT22GETLUG",
+      "KXUECLBTTS-26OCT22GETLUG"
+    ],
+    "related_event_tickers": [
+      "KXUECLGAME-26OCT22GETLUG",
+      "KXUECLSPREAD-26OCT22GETLUG",
+      "KXUECLTOTAL-26OCT22GETLUG",
+      "KXUECLBTTS-26OCT22GETLUG"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Getafe vs Lugano",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+  }
+]

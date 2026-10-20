@@ -1,23 +1,23 @@
 Sports market terminal safety audit
 
 [PASS] at least two venue collections complete
-       2/2 complete: kalshi, polymarket_intl; complete sport scopes: cricket, basketball, football, hockey, baseball
-[PASS] all venue coverage complete
-       complete
+       0/2 complete: none; complete sport scopes: cricket, hockey, baseball, tennis, mma
+[ADVISORY] all venue coverage complete
+       kalshi, polymarket_intl
 [ADVISORY] no unresolved fixture links
-       17 review links
+       300 review links
 [ADVISORY] no unresolved market links
-       42 review links
+       690 review links
 [PASS] fixture links are unique
-       114 links / 114 unique
+       163 links / 163 unique
 [PASS] market links are unique
-       212 links / 212 unique
+       337 links / 337 unique
 [PASS] accepted fixture pairs agree exactly
        all pairs agree
 [PASS] accepted market pairs agree exactly
        all pairs agree
 [PASS] wide rows are unique
-       248 rows / 248 unique
+       1019 rows / 1019 unique
 [PASS] wide table statuses, identifiers and links are valid
        all rows valid
 [PASS] quote prices, statuses and sources are valid
@@ -25,9 +25,9 @@ Sports market terminal safety audit
 [PASS] quote summaries and crossed flags agree
        all summaries agree
 [ADVISORY] no crossed quotes observed
-       7 crossed outcome rows
+       9 crossed outcome rows
 [ADVISORY] all mapped outcomes have bid and ask
-       479/496 mapped venue outcomes have two-sided quotes
+       2017/2038 mapped venue outcomes have two-sided quotes
 [PASS] match-winner fixtures contain both teams and no unknown outcomes
        all winner fixtures complete
 [PASS] no plausible counterpart remains unmatched
@@ -35,9 +35,9 @@ Sports market terminal safety audit
 [PASS] no match-winner market is stranded on a confirmed fixture
        none
 [PASS] wide table is lossless relative to accepted links
-       expected=212 actual=212
+       expected=337 actual=337
 
-Objects: 503 fixtures, 1030 markets
-Accepted: 114 fixture-pair links, 212 market-pair links
-Unmatched: 251 fixtures, 532 markets
+Objects: 1576 fixtures, 3647 markets
+Accepted: 163 fixture-pair links, 337 market-pair links
+Unmatched: 662 fixtures, 1607 markets
 OVERALL PASS

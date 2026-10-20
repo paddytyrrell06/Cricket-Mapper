@@ -1,0 +1,60 @@
+[
+  {
+    "additional_prohibitions": [
+      "Current players, coaches, and staff of the league, association, or organization(s) governing the event. For college leagues/associations specifically, or where otherwise appropriate (as identified by the Exchange), this applies to current players/coaches/staff of the specific sport in <event> rather than the league/association as a whole (e.g., if the Division I Gonzaga Men\u2019s Basketball Team is playing in <event>, this prohibition will restrict trades by current players/coaches/staff on NCAA Basketball, rather than all current players/coaches/staff in any NCAA sport).",
+      "Paid employees of the league and league participants",
+      "Owners of teams and the league",
+      "and household members and immediate family of all above",
+      "Persons who are employed by any of the Source Agencies are not permitted to trade on the Contract.",
+      "Persons who hold any material, non-public information on the Underlying are not permitted to trade on the Contract."
+    ],
+    "categories": [
+      "Sports"
+    ],
+    "category": "Sports",
+    "contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
+    "contract_url": "https://assets.kalshi.com/regulatory/product-certifications/UFCFIGHTWINNER.pdf",
+    "exchange_index": 0,
+    "fee_multiplier": 1,
+    "fee_type": "quadratic",
+    "frequency": "custom",
+    "last_updated_ts": "2026-10-12T03:28:53.274649Z",
+    "product_metadata": {
+      "important_info": {
+        "id": "UFC-RULES4",
+        "markdown": "**Important information:** If the fight ends in a draw/no contest, both markets will resolve to **$0.50**. If the fight is cancelled or postponed more than 48 hours from its originally scheduled start, both markets will resolve to a **fair price**. Note that any revisions after Expiration will not be considered. Therefore, if a fighter is disqualified, removed, or the official result of the fight is reversed or changed in any way after the Contract expires, that will not impact resolution.",
+        "message": "",
+        "title": ""
+      },
+      "scope": "Game"
+    },
+    "settlement_sources": [
+      {
+        "name": "DAZN",
+        "url": "https://www.dazn.com/en-US"
+      },
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://foxsports.com"
+      },
+      {
+        "name": "Tapology",
+        "url": "https://www.tapology.com/"
+      },
+      {
+        "name": "the Governing League",
+        "url": "https://www.ufc.com/"
+      }
+    ],
+    "tags": [
+      "MMA"
+    ],
+    "ticker": "KXUFCFIGHT",
+    "title": "UFC Fight",
+    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+  }
+]

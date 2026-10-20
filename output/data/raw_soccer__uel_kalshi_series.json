@@ -12,31 +12,37 @@
       "Sports"
     ],
     "category": "Sports",
-    "contract_terms_url": "https://assets.kalshi.com/contract_terms/BASKETBALLGAMEWIN.pdf",
-    "contract_url": "https://assets.kalshi.com/regulatory/product-certifications/BASKETBALLGAMEWIN.pdf",
-    "exchange_index": 3,
+    "contract_terms_url": "https://assets.kalshi.com/contract_terms/SOCCERGAMEWIN.pdf",
+    "contract_url": "https://assets.kalshi.com/regulatory/product-certifications/SOCCERGAMEWIN.pdf",
+    "exchange_index": 0,
     "fee_multiplier": 1,
-    "fee_type": "quadratic_with_maker_fees",
+    "fee_type": "quadratic",
     "frequency": "custom",
-    "last_updated_ts": "2026-10-19T16:32:29.600271Z",
+    "last_updated_ts": "2026-10-14T19:05:10.400647Z",
     "product_metadata": {
+      "important_info": {
+        "id": "SOCCERGAME-bulk-2026-04-09",
+        "markdown": "**Important information:** The following market is based on the outcome after 90 minutes plus stoppage time. This does not include extra time or penalties.",
+        "message": "",
+        "title": ""
+      },
       "scope": "Game"
     },
     "settlement_sources": [
       {
-        "name": "the Governing League",
-        "url": "https://www.nba.com"
+        "name": "ESPN",
+        "url": "https://www.espn.com/"
       },
       {
-        "name": "ESPN",
-        "url": "https://www.espn.com"
+        "name": "Fox Sports",
+        "url": "https://www.foxsports.com/"
       }
     ],
     "tags": [
-      "Basketball"
+      "Soccer"
     ],
-    "ticker": "KXNBAGAME",
-    "title": "NBA Game",
-    "_collected_at_utc": "2026-10-19T23:45:44+00:00"
+    "ticker": "KXUELGAME",
+    "title": "UEFA Europa League Game",
+    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
   }
 ]
