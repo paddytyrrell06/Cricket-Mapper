@@ -97,3 +97,11 @@ Run offline regression tests with:
 ```bash
 python3 -m unittest discover -v
 ```
+
+Audit the saved coverage and closest near-misses without any API requests:
+
+```bash
+python3 coverage_audit.py
+```
+
+The report at `output/coverage_audit/report.md` includes pipeline counts, exclusion reasons, both trading directions and 20 distinct near-miss outcomes under the existing runtime freshness, liquidity and known minimum-order gates. `near_misses.csv`, `routes.csv` and `summary.json` provide exact fee, size and depth diagnostics. It evaluates the saved quote checkpoint, so results are historical, not current trading signals. Observed depth is reported separately from review and quote-timing eligibility; no filters or contract checks are relaxed.

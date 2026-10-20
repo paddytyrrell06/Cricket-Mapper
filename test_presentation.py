@@ -816,6 +816,31 @@ class TerminalWorkspaceTests(unittest.TestCase):
         self.assertIsNone(estimate["sized_quantity"])
         self.assertEqual(estimate["buy_venue"], "polymarket_intl")
 
+    def test_measured_depth_survives_review_stale_and_skew_without_profit_eligibility(self):
+        for state in ("review", "stale", "skewed"):
+            row = self.case.row()
+            if state == "review":
+                row["comparison_status"] = "fixture_review"
+            else:
+                row["kalshi_quote_time"] = (self.case.as_of - timedelta(seconds=301 if state == "stale" else 31)).isoformat()
+            row.update(P._eligible_quotes(row, VENUES, self.case.as_of))
+            record = P.build_terminal_records([row], VENUES)[0]
+            self.assertEqual(record["observedDepth"], {"status": "known", "notional": "840.0"})
+            self.assertEqual(record["estimates"], {})
+            self.assertFalse(record["netCrossed"])
+            self.assertEqual(record["quoteCheck"], "fresh" if state == "review" else state)
+
+    def test_observed_depth_distinguishes_absent_prices_sizes_and_invalid_books(self):
+        row = self.case.row()
+        for venue in VENUES:
+            row[venue + "_bid_size"] = row[venue + "_ask_size"] = ""
+        self.assertEqual(P._observed_depth(row, VENUES)["status"], "missing_depth")
+        for venue in VENUES:
+            row[venue + "_bid"] = row[venue + "_ask"] = ""
+        self.assertEqual(P._observed_depth(row, VENUES)["status"], "unpriced")
+        row.update(kalshi_bid="0.9", kalshi_ask="0.1")
+        self.assertEqual(P._observed_depth(row, VENUES)["status"], "invalid_book")
+
     def test_unknown_fees_preserve_gross_instead_of_a_known_losing_reverse_route(self):
         self.case.left.extra.pop("fee_type")
         estimate = P.build_terminal_records([self.case.row()], VENUES)[0]["estimates"]["100"]
@@ -915,6 +940,8 @@ evaluate("activeTab='all';sortBy.value='pnl';direction=1");assert.deepEqual(ids(
 evaluate('direction=-1');assert.deepEqual(ids(),[4,1,0,2]);
 evaluate("activeTab='net';records[0].stale=true");assert.deepEqual(ids(),[1]);
 evaluate("records[1].estimates['100'].minimum_order_status='below_minimum'");assert.deepEqual(ids(),[]);
+evaluate("activeTab='all';minLiquidity.value='100';unknownDepth.checked=false;records[2].observedDepth={status:'known',notional:'500'};records[2].estimates={};records[2].review=true;records[2].quoteCheck='skewed'");assert.equal(evaluate('liquidity(records[2])'),500);assert.equal(evaluate('positiveNet(records[2])'),false);assert.equal(evaluate('quoteLabel(records[2])'),'Review');assert.ok(ids().includes(2));
+evaluate("records[2].review=false");assert.equal(evaluate('quoteLabel(records[2])'),'Out of sync');evaluate("records[2].estimates={'100':{paired_top_notional_usd:null}}");assert.equal(evaluate('liquidity(records[2])'),null);assert.ok(!ids().includes(2));
 '''
         result = subprocess.run([shutil.which("node"), "-e", "const SCRIPT=" + json.dumps(script) + ";\n" + harness],
                                 capture_output=True, text=True, timeout=10)
