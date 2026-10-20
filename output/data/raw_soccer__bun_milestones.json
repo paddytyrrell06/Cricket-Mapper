@@ -2,161 +2,35 @@
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "a6be58d6-9bd3-4b92-8782-43a3c27dbcf4",
+      "away_team_id": "4d7f3dc3-83df-4548-8738-69148d2fa3b9",
       "coverage": {},
-      "home_team_id": "d08e9809-a307-4a53-921c-a29a78486f7c",
+      "home_team_id": "6df4b125-21a4-475a-997b-491dddd73059",
       "is_ko": false,
       "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT24BVBSGE",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT24KOESCH",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "878f7ea7-09ce-5b25-aec2-709090bd35a5",
+    "id": "98c225ed-b2ab-55b4-88fd-9d4b5cea7b49",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT24BVBSGE",
-      "KXBUNDESLIGASPREAD-26OCT24BVBSGE",
-      "KXBUNDESLIGATOTAL-26OCT24BVBSGE",
-      "KXBUNDESLIGABTTS-26OCT24BVBSGE"
+      "KXBUNDESLIGAGAME-26OCT24KOESCH",
+      "KXBUNDESLIGASPREAD-26OCT24KOESCH",
+      "KXBUNDESLIGATOTAL-26OCT24KOESCH",
+      "KXBUNDESLIGABTTS-26OCT24KOESCH"
     ],
     "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT24BVBSGE",
-      "KXBUNDESLIGASPREAD-26OCT24BVBSGE",
-      "KXBUNDESLIGATOTAL-26OCT24BVBSGE",
-      "KXBUNDESLIGABTTS-26OCT24BVBSGE"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T16:30:00Z",
-    "title": "Dortmund vs Frankfurt",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "8ed8296e-a161-4435-a529-ebf3a845dfdc",
-      "coverage": {},
-      "home_team_id": "163ba3b0-cc73-4949-b3c9-d37d7927d972",
-      "is_ko": false,
-      "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT25TSGLEV",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "61f1695c-0172-5f8f-8392-1a1fe6a454f4",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT25TSGLEV",
-      "KXBUNDESLIGASPREAD-26OCT25TSGLEV",
-      "KXBUNDESLIGATOTAL-26OCT25TSGLEV",
-      "KXBUNDESLIGABTTS-26OCT25TSGLEV"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT25TSGLEV",
-      "KXBUNDESLIGASPREAD-26OCT25TSGLEV",
-      "KXBUNDESLIGATOTAL-26OCT25TSGLEV",
-      "KXBUNDESLIGABTTS-26OCT25TSGLEV"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T14:30:00Z",
-    "title": "Hoffenheim vs Leverkusen",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "bc9180c6-9094-4ad9-a4c9-d37ea2eb51ca",
-      "coverage": {},
-      "home_team_id": "4d7f3dc3-83df-4548-8738-69148d2fa3b9",
-      "is_ko": false,
-      "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31SCHRBL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "e0b0d2cf-20df-55db-8c9a-b902e7e1094e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31SCHRBL"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31SCHRBL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T14:30:00Z",
-    "title": "Schalke vs Leipzig",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "82b4b2cd-5e56-46ee-ab51-5091a260d6b8",
-      "coverage": {},
-      "home_team_id": "fa1055e7-cad7-4b85-81f0-a1285af3b387",
-      "is_ko": false,
-      "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT23VFBBMG",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "266e308a-4eb5-5252-8ff1-8997cb616ba7",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT23VFBBMG",
-      "KXBUNDESLIGASPREAD-26OCT23VFBBMG",
-      "KXBUNDESLIGATOTAL-26OCT23VFBBMG",
-      "KXBUNDESLIGABTTS-26OCT23VFBBMG"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT23VFBBMG",
-      "KXBUNDESLIGASPREAD-26OCT23VFBBMG",
-      "KXBUNDESLIGATOTAL-26OCT23VFBBMG",
-      "KXBUNDESLIGABTTS-26OCT23VFBBMG"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-23T18:30:00Z",
-    "title": "Stuttgart vs M\u00b4gladbach",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a971c973-65e6-418f-8f4e-79fbbeb0967a",
-      "coverage": {},
-      "home_team_id": "6fa9028d-b76a-48fb-8ab3-9ff16535fa76",
-      "is_ko": false,
-      "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT24FCAUNI",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "837420c1-8e39-524d-9d19-c39c77984b12",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT24FCAUNI",
-      "KXBUNDESLIGASPREAD-26OCT24FCAUNI",
-      "KXBUNDESLIGATOTAL-26OCT24FCAUNI",
-      "KXBUNDESLIGABTTS-26OCT24FCAUNI"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT24FCAUNI",
-      "KXBUNDESLIGASPREAD-26OCT24FCAUNI",
-      "KXBUNDESLIGATOTAL-26OCT24FCAUNI",
-      "KXBUNDESLIGABTTS-26OCT24FCAUNI"
+      "KXBUNDESLIGAGAME-26OCT24KOESCH",
+      "KXBUNDESLIGASPREAD-26OCT24KOESCH",
+      "KXBUNDESLIGATOTAL-26OCT24KOESCH",
+      "KXBUNDESLIGABTTS-26OCT24KOESCH"
     ],
     "source_ids": {},
     "start_date": "2026-10-24T13:30:00Z",
-    "title": "Augsburg vs Union Berlin",
+    "title": "FC K\u00f6ln vs Schalke",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -189,7 +63,7 @@
     "start_date": "2026-10-24T13:30:00Z",
     "title": "Mainz vs Bremen",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -222,61 +96,67 @@
     "start_date": "2026-10-24T13:30:00Z",
     "title": "Leipzig vs Elversberg",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "920ec4be-00be-4bc0-8e8a-a71848337fde",
+      "away_team_id": "0d65d14f-6bb0-4e1f-a08e-a6135ac3b473",
+      "coverage": {},
+      "home_team_id": "82b4b2cd-5e56-46ee-ab51-5091a260d6b8",
+      "is_ko": false,
+      "league": "Bundesliga",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31BMGPAD",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "9e8464e1-5b3e-54d9-9c76-cb0c8f1abc63",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT31BMGPAD"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT31BMGPAD"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T14:30:00Z",
+    "title": "M\u00b4gladbach vs Paderborn",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a971c973-65e6-418f-8f4e-79fbbeb0967a",
       "coverage": {},
       "home_team_id": "6fa9028d-b76a-48fb-8ab3-9ff16535fa76",
       "is_ko": false,
       "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31FCASCF",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT24FCAUNI",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "07ff1e1a-0642-540a-876a-2395f527c849",
+    "id": "837420c1-8e39-524d-9d19-c39c77984b12",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31FCASCF"
+      "KXBUNDESLIGAGAME-26OCT24FCAUNI",
+      "KXBUNDESLIGASPREAD-26OCT24FCAUNI",
+      "KXBUNDESLIGATOTAL-26OCT24FCAUNI",
+      "KXBUNDESLIGABTTS-26OCT24FCAUNI"
     ],
     "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31FCASCF"
+      "KXBUNDESLIGAGAME-26OCT24FCAUNI",
+      "KXBUNDESLIGASPREAD-26OCT24FCAUNI",
+      "KXBUNDESLIGATOTAL-26OCT24FCAUNI",
+      "KXBUNDESLIGABTTS-26OCT24FCAUNI"
     ],
     "source_ids": {},
-    "start_date": "2026-10-31T14:30:00Z",
-    "title": "Augsburg vs Freiburg",
+    "start_date": "2026-10-24T13:30:00Z",
+    "title": "Augsburg vs Union Berlin",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "619b5caa-bfa4-4c96-a510-837e1f5ab0df",
-      "coverage": {},
-      "home_team_id": "a6be58d6-9bd3-4b92-8782-43a3c27dbcf4",
-      "is_ko": false,
-      "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26NOV01SGEHSV",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c4188a3a-9ee4-5a8b-a4fb-1f9420ae5fc6",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26NOV01SGEHSV"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26NOV01SGEHSV"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T16:30:00Z",
-    "title": "Frankfurt vs Hamburg",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -309,7 +189,7 @@
     "start_date": "2026-10-24T13:30:00Z",
     "title": "Paderborn vs Hamburg",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -342,7 +222,7 @@
     "start_date": "2026-10-25T16:30:00Z",
     "title": "Freiburg vs Bayern Munich",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -369,121 +249,34 @@
     "start_date": "2026-10-30T19:30:00Z",
     "title": "Elversberg vs Mainz",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "0d65d14f-6bb0-4e1f-a08e-a6135ac3b473",
+      "away_team_id": "920ec4be-00be-4bc0-8e8a-a71848337fde",
       "coverage": {},
-      "home_team_id": "82b4b2cd-5e56-46ee-ab51-5091a260d6b8",
+      "home_team_id": "6fa9028d-b76a-48fb-8ab3-9ff16535fa76",
       "is_ko": false,
       "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31BMGPAD",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31FCASCF",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "9e8464e1-5b3e-54d9-9c76-cb0c8f1abc63",
+    "id": "07ff1e1a-0642-540a-876a-2395f527c849",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31BMGPAD"
+      "KXBUNDESLIGAGAME-26OCT31FCASCF"
     ],
     "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31BMGPAD"
+      "KXBUNDESLIGAGAME-26OCT31FCASCF"
     ],
     "source_ids": {},
     "start_date": "2026-10-31T14:30:00Z",
-    "title": "M\u00b4gladbach vs Paderborn",
+    "title": "Augsburg vs Freiburg",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "163ba3b0-cc73-4949-b3c9-d37d7927d972",
-      "coverage": {},
-      "home_team_id": "9de69b07-1ae3-4d3d-846e-15bee5eddba7",
-      "is_ko": false,
-      "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31SVWTSG",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f03949e6-b6a6-5448-a6df-52b4c95f0d7d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31SVWTSG"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31SVWTSG"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T14:30:00Z",
-    "title": "Bremen vs Hoffenheim",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "d08e9809-a307-4a53-921c-a29a78486f7c",
-      "coverage": {},
-      "home_team_id": "d443a482-af73-41ca-8d4b-f49502861dc4",
-      "is_ko": false,
-      "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31BMUBVB",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f9ea8228-f7ef-5576-a6a3-e5c29f6aac91",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31BMUBVB"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT31BMUBVB"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T17:30:00Z",
-    "title": "Bayern Munich vs Dortmund",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "4d7f3dc3-83df-4548-8738-69148d2fa3b9",
-      "coverage": {},
-      "home_team_id": "6df4b125-21a4-475a-997b-491dddd73059",
-      "is_ko": false,
-      "league": "Bundesliga",
-      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT24KOESCH",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "98c225ed-b2ab-55b4-88fd-9d4b5cea7b49",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT24KOESCH",
-      "KXBUNDESLIGASPREAD-26OCT24KOESCH",
-      "KXBUNDESLIGATOTAL-26OCT24KOESCH",
-      "KXBUNDESLIGABTTS-26OCT24KOESCH"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGAGAME-26OCT24KOESCH",
-      "KXBUNDESLIGASPREAD-26OCT24KOESCH",
-      "KXBUNDESLIGATOTAL-26OCT24KOESCH",
-      "KXBUNDESLIGABTTS-26OCT24KOESCH"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T13:30:00Z",
-    "title": "FC K\u00f6ln vs Schalke",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -510,7 +303,214 @@
     "start_date": "2026-10-31T14:30:00Z",
     "title": "Leverkusen vs Stuttgart",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "163ba3b0-cc73-4949-b3c9-d37d7927d972",
+      "coverage": {},
+      "home_team_id": "9de69b07-1ae3-4d3d-846e-15bee5eddba7",
+      "is_ko": false,
+      "league": "Bundesliga",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31SVWTSG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f03949e6-b6a6-5448-a6df-52b4c95f0d7d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT31SVWTSG"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT31SVWTSG"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T14:30:00Z",
+    "title": "Bremen vs Hoffenheim",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "d08e9809-a307-4a53-921c-a29a78486f7c",
+      "coverage": {},
+      "home_team_id": "d443a482-af73-41ca-8d4b-f49502861dc4",
+      "is_ko": false,
+      "league": "Bundesliga",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31BMUBVB",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f9ea8228-f7ef-5576-a6a3-e5c29f6aac91",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT31BMUBVB"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT31BMUBVB"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T17:30:00Z",
+    "title": "Bayern Munich vs Dortmund",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "bc9180c6-9094-4ad9-a4c9-d37ea2eb51ca",
+      "coverage": {},
+      "home_team_id": "4d7f3dc3-83df-4548-8738-69148d2fa3b9",
+      "is_ko": false,
+      "league": "Bundesliga",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT31SCHRBL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "e0b0d2cf-20df-55db-8c9a-b902e7e1094e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT31SCHRBL"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT31SCHRBL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T14:30:00Z",
+    "title": "Schalke vs Leipzig",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "619b5caa-bfa4-4c96-a510-837e1f5ab0df",
+      "coverage": {},
+      "home_team_id": "a6be58d6-9bd3-4b92-8782-43a3c27dbcf4",
+      "is_ko": false,
+      "league": "Bundesliga",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26NOV01SGEHSV",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c4188a3a-9ee4-5a8b-a4fb-1f9420ae5fc6",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGAGAME-26NOV01SGEHSV"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGAGAME-26NOV01SGEHSV"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T16:30:00Z",
+    "title": "Frankfurt vs Hamburg",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "82b4b2cd-5e56-46ee-ab51-5091a260d6b8",
+      "coverage": {},
+      "home_team_id": "fa1055e7-cad7-4b85-81f0-a1285af3b387",
+      "is_ko": false,
+      "league": "Bundesliga",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT23VFBBMG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "266e308a-4eb5-5252-8ff1-8997cb616ba7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT23VFBBMG",
+      "KXBUNDESLIGASPREAD-26OCT23VFBBMG",
+      "KXBUNDESLIGATOTAL-26OCT23VFBBMG",
+      "KXBUNDESLIGABTTS-26OCT23VFBBMG"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT23VFBBMG",
+      "KXBUNDESLIGASPREAD-26OCT23VFBBMG",
+      "KXBUNDESLIGATOTAL-26OCT23VFBBMG",
+      "KXBUNDESLIGABTTS-26OCT23VFBBMG"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-23T18:30:00Z",
+    "title": "Stuttgart vs M\u00b4gladbach",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a6be58d6-9bd3-4b92-8782-43a3c27dbcf4",
+      "coverage": {},
+      "home_team_id": "d08e9809-a307-4a53-921c-a29a78486f7c",
+      "is_ko": false,
+      "league": "Bundesliga",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT24BVBSGE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "878f7ea7-09ce-5b25-aec2-709090bd35a5",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT24BVBSGE",
+      "KXBUNDESLIGASPREAD-26OCT24BVBSGE",
+      "KXBUNDESLIGATOTAL-26OCT24BVBSGE",
+      "KXBUNDESLIGABTTS-26OCT24BVBSGE"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT24BVBSGE",
+      "KXBUNDESLIGASPREAD-26OCT24BVBSGE",
+      "KXBUNDESLIGATOTAL-26OCT24BVBSGE",
+      "KXBUNDESLIGABTTS-26OCT24BVBSGE"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T16:30:00Z",
+    "title": "Dortmund vs Frankfurt",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8ed8296e-a161-4435-a529-ebf3a845dfdc",
+      "coverage": {},
+      "home_team_id": "163ba3b0-cc73-4949-b3c9-d37d7927d972",
+      "is_ko": false,
+      "league": "Bundesliga",
+      "main_game_event_ticker": "KXBUNDESLIGAGAME-26OCT25TSGLEV",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "61f1695c-0172-5f8f-8392-1a1fe6a454f4",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT25TSGLEV",
+      "KXBUNDESLIGASPREAD-26OCT25TSGLEV",
+      "KXBUNDESLIGATOTAL-26OCT25TSGLEV",
+      "KXBUNDESLIGABTTS-26OCT25TSGLEV"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGAGAME-26OCT25TSGLEV",
+      "KXBUNDESLIGASPREAD-26OCT25TSGLEV",
+      "KXBUNDESLIGATOTAL-26OCT25TSGLEV",
+      "KXBUNDESLIGABTTS-26OCT25TSGLEV"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T14:30:00Z",
+    "title": "Hoffenheim vs Leverkusen",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -537,6 +537,6 @@
     "start_date": "2026-11-01T14:30:00Z",
     "title": "Union Berlin vs FC K\u00f6ln",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   }
 ]

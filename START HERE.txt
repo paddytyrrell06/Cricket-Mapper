@@ -1,29 +1,54 @@
-SPORTS MARKET TERMINAL
+PREDICTION MARKET TERMINAL
 
 1. Open this folder in VS Code or Terminal.
 2. Start the browser terminal: python3 server.py
 3. Keep it running and use http://127.0.0.1:8765/CricketMatchingReport.html
-4. Reload the browser or click Refresh prices to fetch new quotes.
+4. Quotes refresh automatically every 15 seconds. Reload or click Refresh prices
+   to request another refresh. The table updates without reopening the page.
    First-time setup needs one full scan: python3 run.py
+
+Use --interval=30 for a slower cycle or --interval=0 for manual refresh.
 
 For a standalone CLI price refresh:
 python3 run.py --snapshot-dir=output/data --refresh-quotes
 The direct output/CricketMatchingReport.html file is a snapshot export; use the
 HTTP terminal above for browser-triggered refreshes. Ctrl+C stops the service.
 
-The Net + tab and Net / Gross edge column subtract taker fees on both legs.
-Best bid/ask quantities are displayed beside the prices; fee and depth
-assumptions are available in the detail panel and docs/FEES.md.
+The Sports and Esports category tabs separate the market universes. Esports
+starts with CS2 and League of Legends; Finance and Tech are future categories.
+
+Gross cents - Fees cents = Net cents per paired contract. Est. PnL dollars is
+the total estimated profit at the actual displayed size. The default request
+is 100 contracts, capped to confirmed top depth; both taker fees are rounded
+for that order size. After fees + keeps positive estimates. A 2c or 3c gross
+cross can disappear after fees. Click an event for the full fee breakdown.
+
+Min top liquidity defaults to $100 of paired top notional on each selected
+leg. This is available depth, not market volume. Unknown depth is hidden until
+you explicitly include it. Thin markets are probed again after 60 seconds.
+Star useful rows, then open Watchlist to narrow the service's quote requests.
+The service shares these settings across its browser tabs.
+
+Bid/ask quantities appear beside their prices. Click column headings to sort,
+use league/search filters, or enable Extra columns. Full names, settlement
+payouts and fee/depth/capital assumptions are in details and docs/FEES.md.
 
 Each run fetches current Kalshi and Polymarket International match winners for
-cricket, soccer, basketball, American football, hockey, baseball, tennis and MMA.
+cricket, soccer, basketball, American football, hockey, baseball, tennis, MMA,
+Counter-Strike 2 and League of Legends.
 Basketball and American football include women's/college leagues where available.
 To select sports, pass for example:
 python3 run.py --sports=football,hockey,baseball --no-open
+python3 run.py --sports=esports --no-open
 For a subset of the 17 supported soccer competitions, run:
 python3 run.py --sports=soccer --soccer-leagues=epl,ucl,uel --no-open
 The report shows its collection timestamp, sport/venue coverage, and advisories.
 
-The scanner uses public read-only APIs, saves evidence for replay, and does not
-place orders. The incremental quote engine and subscription manifests prepare
-for WebSocket integration; sockets are not connected yet. See docs/FEEDS.md.
+The local Python service keeps the market universe in memory; routine quote
+refreshes do not rebuild HTML or archive snapshots. Run a full scan periodically
+to discover newly opened markets. HTML/JavaScript remains the browser UI, with
+Python owning data collection and the future exchange socket connections.
+
+The scanner uses public read-only APIs and does not place orders. The
+incremental quote engine and subscription manifests prepare for WebSocket
+integration; venue sockets are not connected yet. See docs/FEEDS.md.

@@ -2,72 +2,37 @@
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "7abb495c-193e-4baf-b3d3-108e99eab8ed",
+      "away_team_id": "f5d3f1b2-8ff6-4165-835f-45406eae5fb6",
       "coverage": {},
-      "home_team_id": "246a91c5-f145-401f-bf0d-2a436e25a5f6",
+      "home_team_id": "bfb98900-9759-436c-bc1f-8bf8c5ae249f",
       "is_ko": false,
       "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT24ARSEVE",
+      "main_game_event_ticker": "KXEPLGAME-26OCT24AVLMCI",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "75002702-7c20-5032-b5f1-d3fe934ec610",
+    "id": "f1cd7a4d-b659-509d-9181-608cef834cd1",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXEPLGAME-26OCT24ARSEVE",
-      "KXEPLSPREAD-26OCT24ARSEVE",
-      "KXEPLTOTAL-26OCT24ARSEVE",
-      "KXEPLBTTS-26OCT24ARSEVE"
+      "KXEPLGAME-26OCT24AVLMCI",
+      "KXEPLSPREAD-26OCT24AVLMCI",
+      "KXEPLTOTAL-26OCT24AVLMCI",
+      "KXEPLBTTS-26OCT24AVLMCI"
     ],
     "related_event_tickers": [
-      "KXEPLGAME-26OCT24ARSEVE",
-      "KXEPLSPREAD-26OCT24ARSEVE",
-      "KXEPLTOTAL-26OCT24ARSEVE",
-      "KXEPLBTTS-26OCT24ARSEVE"
+      "KXEPLGAME-26OCT24AVLMCI",
+      "KXEPLSPREAD-26OCT24AVLMCI",
+      "KXEPLTOTAL-26OCT24AVLMCI",
+      "KXEPLBTTS-26OCT24AVLMCI"
     ],
     "source_ids": {
-      "source_2_id": "20261024050577FD"
+      "source_2_id": "20261024CD1B2D5D"
     },
-    "start_date": "2026-10-24T14:00:00Z",
-    "title": "Arsenal vs Everton",
+    "start_date": "2026-10-24T11:30:00Z",
+    "title": "Aston Villa vs Manchester City",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "95c3aaf8-3f26-4129-b67c-c99562cb3dc9",
-      "coverage": {},
-      "home_team_id": "894cf22a-8360-49a1-812c-7556fb97cbcd",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT24CFCTOT",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "9f463e46-315a-59a3-9d9e-b15b4eaf635e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT24CFCTOT",
-      "KXEPLSPREAD-26OCT24CFCTOT",
-      "KXEPLTOTAL-26OCT24CFCTOT",
-      "KXEPLBTTS-26OCT24CFCTOT"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT24CFCTOT",
-      "KXEPLSPREAD-26OCT24CFCTOT",
-      "KXEPLTOTAL-26OCT24CFCTOT",
-      "KXEPLBTTS-26OCT24CFCTOT"
-    ],
-    "source_ids": {
-      "source_2_id": "20261024C12116EC"
-    },
-    "start_date": "2026-10-24T16:30:00Z",
-    "title": "Chelsea vs Tottenham",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -102,129 +67,7 @@
     "start_date": "2026-10-25T14:00:00Z",
     "title": "Hull City vs Brentford",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "f0a69f43-b3c4-4049-bf6d-4717809000a1",
-      "coverage": {},
-      "home_team_id": "6fe2874c-1926-4182-b52c-c223bf8b4c2c",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT31COVSUN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "49068c78-4bd3-5303-a7e6-dbc68382e4f7",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT31COVSUN"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT31COVSUN"
-    ],
-    "source_ids": {
-      "source_2_id": "202610311CD4382E"
-    },
-    "start_date": "2026-10-31T15:00:00Z",
-    "title": "Coventry vs Sunderland",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "75575478-e8c9-4d59-ae3b-b117c1d42890",
-      "coverage": {},
-      "home_team_id": "f5d3f1b2-8ff6-4165-835f-45406eae5fb6",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT31MCIBRI",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "d9a82905-9019-548a-a286-dcbbebd5372d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT31MCIBRI"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT31MCIBRI"
-    ],
-    "source_ids": {
-      "source_2_id": "20261031B49D4A6A"
-    },
-    "start_date": "2026-10-31T15:00:00Z",
-    "title": "Manchester City vs Brighton",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "664077ba-242b-43e3-975d-cd754a774727",
-      "coverage": {},
-      "home_team_id": "bfb98900-9759-436c-bc1f-8bf8c5ae249f",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT31AVLFUL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "6b80bba4-ce1d-59ae-a345-20551214665e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT31AVLFUL"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT31AVLFUL"
-    ],
-    "source_ids": {
-      "source_2_id": "2026103116D056A1"
-    },
-    "start_date": "2026-10-31T20:00:00Z",
-    "title": "Aston Villa vs Fulham",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "f5d3f1b2-8ff6-4165-835f-45406eae5fb6",
-      "coverage": {},
-      "home_team_id": "bfb98900-9759-436c-bc1f-8bf8c5ae249f",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT24AVLMCI",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f1cd7a4d-b659-509d-9181-608cef834cd1",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT24AVLMCI",
-      "KXEPLSPREAD-26OCT24AVLMCI",
-      "KXEPLTOTAL-26OCT24AVLMCI",
-      "KXEPLBTTS-26OCT24AVLMCI"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT24AVLMCI",
-      "KXEPLSPREAD-26OCT24AVLMCI",
-      "KXEPLTOTAL-26OCT24AVLMCI",
-      "KXEPLBTTS-26OCT24AVLMCI"
-    ],
-    "source_ids": {
-      "source_2_id": "20261024CD1B2D5D"
-    },
-    "start_date": "2026-10-24T11:30:00Z",
-    "title": "Aston Villa vs Manchester City",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -259,321 +102,7 @@
     "start_date": "2026-10-25T14:00:00Z",
     "title": "Manchester United vs Bournemouth",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7e273345-6669-4db7-8a38-7f3ccb608937",
-      "coverage": {},
-      "home_team_id": "894cf22a-8360-49a1-812c-7556fb97cbcd",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT31CFCMUN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "7214c5d2-7076-5bc4-bd0c-8b9fa28967fc",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT31CFCMUN"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT31CFCMUN"
-    ],
-    "source_ids": {
-      "source_2_id": "20261031BC87AB12"
-    },
-    "start_date": "2026-10-31T12:30:00Z",
-    "title": "Chelsea vs Manchester United",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "98aa1226-ef50-4226-9216-33a1096b597f",
-      "coverage": {},
-      "home_team_id": "845da653-13fc-4d80-b0e0-a48179c37ffa",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT31BOULEE",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "42d5d75b-a73c-5ac9-8580-a4362848c68e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT31BOULEE"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT31BOULEE"
-    ],
-    "source_ids": {
-      "source_2_id": "202610312FB82BA3"
-    },
-    "start_date": "2026-10-31T15:00:00Z",
-    "title": "Bournemouth vs Leeds United",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "8d0773c5-7765-4da5-9be1-84707ae9ddce",
-      "coverage": {},
-      "home_team_id": "244308db-fa16-4065-905e-9053d68370e6",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT31BRENFO",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "2191cc71-c66a-50c2-963b-af874c13fa8d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT31BRENFO"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT31BRENFO"
-    ],
-    "source_ids": {
-      "source_2_id": "20261031F9807E3D"
-    },
-    "start_date": "2026-10-31T15:00:00Z",
-    "title": "Brentford vs Nottingham Forest",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "8d0773c5-7765-4da5-9be1-84707ae9ddce",
-      "coverage": {},
-      "home_team_id": "0a9eca41-bd4f-415c-b804-58214e97a77f",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT23IPSNFO",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "7a344aca-7c71-5423-a911-175ebcb66e4b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT23IPSNFO",
-      "KXEPLSPREAD-26OCT23IPSNFO",
-      "KXEPLTOTAL-26OCT23IPSNFO",
-      "KXEPLBTTS-26OCT23IPSNFO"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT23IPSNFO",
-      "KXEPLSPREAD-26OCT23IPSNFO",
-      "KXEPLTOTAL-26OCT23IPSNFO",
-      "KXEPLBTTS-26OCT23IPSNFO"
-    ],
-    "source_ids": {
-      "source_2_id": "20261024FD87819C"
-    },
-    "start_date": "2026-10-23T19:00:00Z",
-    "title": "Ipswich Town vs Nottingham Forest",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "664077ba-242b-43e3-975d-cd754a774727",
-      "coverage": {},
-      "home_team_id": "6fe2874c-1926-4182-b52c-c223bf8b4c2c",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT24COVFUL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ff48b82a-44af-565c-b66e-b461bccda7f7",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT24COVFUL",
-      "KXEPLSPREAD-26OCT24COVFUL",
-      "KXEPLTOTAL-26OCT24COVFUL",
-      "KXEPLBTTS-26OCT24COVFUL"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT24COVFUL",
-      "KXEPLSPREAD-26OCT24COVFUL",
-      "KXEPLTOTAL-26OCT24COVFUL",
-      "KXEPLBTTS-26OCT24COVFUL"
-    ],
-    "source_ids": {
-      "source_2_id": "20261024D157D6DC"
-    },
-    "start_date": "2026-10-24T14:00:00Z",
-    "title": "Coventry vs Fulham",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "2f4b2ba6-f0dd-4d68-96eb-96cff8389c1a",
-      "coverage": {},
-      "home_team_id": "7fd3376e-2256-4010-95a5-5b2a29a73e09",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT25CRYNEW",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "d752f334-8e8f-50a4-85ae-d08cdb0e4e14",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT25CRYNEW",
-      "KXEPLSPREAD-26OCT25CRYNEW",
-      "KXEPLTOTAL-26OCT25CRYNEW",
-      "KXEPLBTTS-26OCT25CRYNEW"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT25CRYNEW",
-      "KXEPLSPREAD-26OCT25CRYNEW",
-      "KXEPLTOTAL-26OCT25CRYNEW",
-      "KXEPLBTTS-26OCT25CRYNEW"
-    ],
-    "source_ids": {
-      "source_2_id": "202610248A2B2DC3"
-    },
-    "start_date": "2026-10-25T14:00:00Z",
-    "title": "Crystal Palace vs Newcastle",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7fd3376e-2256-4010-95a5-5b2a29a73e09",
-      "coverage": {},
-      "home_team_id": "95c3aaf8-3f26-4129-b67c-c99562cb3dc9",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT31TOTCRY",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "32fd03de-1be4-558b-9add-b331fb6e0a60",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT31TOTCRY"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT31TOTCRY"
-    ],
-    "source_ids": {
-      "source_2_id": "2026103178BB7096"
-    },
-    "start_date": "2026-10-31T17:30:00Z",
-    "title": "Tottenham vs Crystal Palace",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "246a91c5-f145-401f-bf0d-2a436e25a5f6",
-      "coverage": {},
-      "home_team_id": "cfd4b999-b080-4c2b-8a5b-640c992aff6e",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26NOV01LFCARS",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c5ea0923-8494-5b45-9e61-e52aa4dba988",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26NOV01LFCARS"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26NOV01LFCARS"
-    ],
-    "source_ids": {
-      "source_2_id": "2026103180DD0526"
-    },
-    "start_date": "2026-11-01T16:30:00Z",
-    "title": "Liverpool vs Arsenal",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7abb495c-193e-4baf-b3d3-108e99eab8ed",
-      "coverage": {},
-      "home_team_id": "2f4b2ba6-f0dd-4d68-96eb-96cff8389c1a",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26NOV02NEWEVE",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "94cdaa1f-435a-5cae-aeab-b7ffc05eee6e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26NOV02NEWEVE"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26NOV02NEWEVE"
-    ],
-    "source_ids": {
-      "source_2_id": "202610311A221B7E"
-    },
-    "start_date": "2026-11-02T20:00:00Z",
-    "title": "Newcastle vs Everton",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "75575478-e8c9-4d59-ae3b-b117c1d42890",
-      "coverage": {},
-      "home_team_id": "cfd4b999-b080-4c2b-8a5b-640c992aff6e",
-      "is_ko": false,
-      "league": "EPL",
-      "main_game_event_ticker": "KXEPLGAME-26OCT25LFCBRI",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "642cca91-152f-5d2c-966e-04239c764bf1",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEPLGAME-26OCT25LFCBRI",
-      "KXEPLSPREAD-26OCT25LFCBRI",
-      "KXEPLTOTAL-26OCT25LFCBRI",
-      "KXEPLBTTS-26OCT25LFCBRI"
-    ],
-    "related_event_tickers": [
-      "KXEPLGAME-26OCT25LFCBRI",
-      "KXEPLSPREAD-26OCT25LFCBRI",
-      "KXEPLTOTAL-26OCT25LFCBRI",
-      "KXEPLBTTS-26OCT25LFCBRI"
-    ],
-    "source_ids": {
-      "source_2_id": "20261024413B0340"
-    },
-    "start_date": "2026-10-25T14:00:00Z",
-    "title": "Liverpool vs Brighton",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -608,7 +137,451 @@
     "start_date": "2026-10-25T16:30:00Z",
     "title": "Sunderland vs Leeds United",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8d0773c5-7765-4da5-9be1-84707ae9ddce",
+      "coverage": {},
+      "home_team_id": "0a9eca41-bd4f-415c-b804-58214e97a77f",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT23IPSNFO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7a344aca-7c71-5423-a911-175ebcb66e4b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT23IPSNFO",
+      "KXEPLSPREAD-26OCT23IPSNFO",
+      "KXEPLTOTAL-26OCT23IPSNFO",
+      "KXEPLBTTS-26OCT23IPSNFO"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT23IPSNFO",
+      "KXEPLSPREAD-26OCT23IPSNFO",
+      "KXEPLTOTAL-26OCT23IPSNFO",
+      "KXEPLBTTS-26OCT23IPSNFO",
+      "KXEPLTCORNERS-26OCT23IPSNFO",
+      "KXEPLCORNERS-26OCT23IPSNFO"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024FD87819C"
+    },
+    "start_date": "2026-10-23T19:00:00Z",
+    "title": "Ipswich Town vs Nottingham Forest",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7abb495c-193e-4baf-b3d3-108e99eab8ed",
+      "coverage": {},
+      "home_team_id": "246a91c5-f145-401f-bf0d-2a436e25a5f6",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT24ARSEVE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "75002702-7c20-5032-b5f1-d3fe934ec610",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT24ARSEVE",
+      "KXEPLSPREAD-26OCT24ARSEVE",
+      "KXEPLTOTAL-26OCT24ARSEVE",
+      "KXEPLBTTS-26OCT24ARSEVE"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT24ARSEVE",
+      "KXEPLSPREAD-26OCT24ARSEVE",
+      "KXEPLTOTAL-26OCT24ARSEVE",
+      "KXEPLBTTS-26OCT24ARSEVE"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024050577FD"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Arsenal vs Everton",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7e273345-6669-4db7-8a38-7f3ccb608937",
+      "coverage": {},
+      "home_team_id": "894cf22a-8360-49a1-812c-7556fb97cbcd",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT31CFCMUN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7214c5d2-7076-5bc4-bd0c-8b9fa28967fc",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT31CFCMUN"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT31CFCMUN"
+    ],
+    "source_ids": {
+      "source_2_id": "20261031BC87AB12"
+    },
+    "start_date": "2026-10-31T12:30:00Z",
+    "title": "Chelsea vs Manchester United",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7fd3376e-2256-4010-95a5-5b2a29a73e09",
+      "coverage": {},
+      "home_team_id": "95c3aaf8-3f26-4129-b67c-c99562cb3dc9",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT31TOTCRY",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "32fd03de-1be4-558b-9add-b331fb6e0a60",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT31TOTCRY"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT31TOTCRY"
+    ],
+    "source_ids": {
+      "source_2_id": "2026103178BB7096"
+    },
+    "start_date": "2026-10-31T17:30:00Z",
+    "title": "Tottenham vs Crystal Palace",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "246a91c5-f145-401f-bf0d-2a436e25a5f6",
+      "coverage": {},
+      "home_team_id": "cfd4b999-b080-4c2b-8a5b-640c992aff6e",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26NOV01LFCARS",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c5ea0923-8494-5b45-9e61-e52aa4dba988",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26NOV01LFCARS"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26NOV01LFCARS"
+    ],
+    "source_ids": {
+      "source_2_id": "2026103180DD0526"
+    },
+    "start_date": "2026-11-01T16:30:00Z",
+    "title": "Liverpool vs Arsenal",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "664077ba-242b-43e3-975d-cd754a774727",
+      "coverage": {},
+      "home_team_id": "6fe2874c-1926-4182-b52c-c223bf8b4c2c",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT24COVFUL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ff48b82a-44af-565c-b66e-b461bccda7f7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT24COVFUL",
+      "KXEPLSPREAD-26OCT24COVFUL",
+      "KXEPLTOTAL-26OCT24COVFUL",
+      "KXEPLBTTS-26OCT24COVFUL"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT24COVFUL",
+      "KXEPLSPREAD-26OCT24COVFUL",
+      "KXEPLTOTAL-26OCT24COVFUL",
+      "KXEPLBTTS-26OCT24COVFUL"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024D157D6DC"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Coventry vs Fulham",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "95c3aaf8-3f26-4129-b67c-c99562cb3dc9",
+      "coverage": {},
+      "home_team_id": "894cf22a-8360-49a1-812c-7556fb97cbcd",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT24CFCTOT",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "9f463e46-315a-59a3-9d9e-b15b4eaf635e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT24CFCTOT",
+      "KXEPLSPREAD-26OCT24CFCTOT",
+      "KXEPLTOTAL-26OCT24CFCTOT",
+      "KXEPLBTTS-26OCT24CFCTOT"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT24CFCTOT",
+      "KXEPLSPREAD-26OCT24CFCTOT",
+      "KXEPLTOTAL-26OCT24CFCTOT",
+      "KXEPLBTTS-26OCT24CFCTOT"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024C12116EC"
+    },
+    "start_date": "2026-10-24T16:30:00Z",
+    "title": "Chelsea vs Tottenham",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8d0773c5-7765-4da5-9be1-84707ae9ddce",
+      "coverage": {},
+      "home_team_id": "244308db-fa16-4065-905e-9053d68370e6",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT31BRENFO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "2191cc71-c66a-50c2-963b-af874c13fa8d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT31BRENFO"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT31BRENFO"
+    ],
+    "source_ids": {
+      "source_2_id": "20261031F9807E3D"
+    },
+    "start_date": "2026-10-31T15:00:00Z",
+    "title": "Brentford vs Nottingham Forest",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "f0a69f43-b3c4-4049-bf6d-4717809000a1",
+      "coverage": {},
+      "home_team_id": "6fe2874c-1926-4182-b52c-c223bf8b4c2c",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT31COVSUN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "49068c78-4bd3-5303-a7e6-dbc68382e4f7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT31COVSUN"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT31COVSUN"
+    ],
+    "source_ids": {
+      "source_2_id": "202610311CD4382E"
+    },
+    "start_date": "2026-10-31T15:00:00Z",
+    "title": "Coventry vs Sunderland",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "75575478-e8c9-4d59-ae3b-b117c1d42890",
+      "coverage": {},
+      "home_team_id": "f5d3f1b2-8ff6-4165-835f-45406eae5fb6",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT31MCIBRI",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "d9a82905-9019-548a-a286-dcbbebd5372d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT31MCIBRI"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT31MCIBRI"
+    ],
+    "source_ids": {
+      "source_2_id": "20261031B49D4A6A"
+    },
+    "start_date": "2026-10-31T15:00:00Z",
+    "title": "Manchester City vs Brighton",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "664077ba-242b-43e3-975d-cd754a774727",
+      "coverage": {},
+      "home_team_id": "bfb98900-9759-436c-bc1f-8bf8c5ae249f",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT31AVLFUL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "6b80bba4-ce1d-59ae-a345-20551214665e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT31AVLFUL"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT31AVLFUL"
+    ],
+    "source_ids": {
+      "source_2_id": "2026103116D056A1"
+    },
+    "start_date": "2026-10-31T20:00:00Z",
+    "title": "Aston Villa vs Fulham",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "2f4b2ba6-f0dd-4d68-96eb-96cff8389c1a",
+      "coverage": {},
+      "home_team_id": "7fd3376e-2256-4010-95a5-5b2a29a73e09",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT25CRYNEW",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "d752f334-8e8f-50a4-85ae-d08cdb0e4e14",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT25CRYNEW",
+      "KXEPLSPREAD-26OCT25CRYNEW",
+      "KXEPLTOTAL-26OCT25CRYNEW",
+      "KXEPLBTTS-26OCT25CRYNEW"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT25CRYNEW",
+      "KXEPLSPREAD-26OCT25CRYNEW",
+      "KXEPLTOTAL-26OCT25CRYNEW",
+      "KXEPLBTTS-26OCT25CRYNEW"
+    ],
+    "source_ids": {
+      "source_2_id": "202610248A2B2DC3"
+    },
+    "start_date": "2026-10-25T14:00:00Z",
+    "title": "Crystal Palace vs Newcastle",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "75575478-e8c9-4d59-ae3b-b117c1d42890",
+      "coverage": {},
+      "home_team_id": "cfd4b999-b080-4c2b-8a5b-640c992aff6e",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT25LFCBRI",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "642cca91-152f-5d2c-966e-04239c764bf1",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT25LFCBRI",
+      "KXEPLSPREAD-26OCT25LFCBRI",
+      "KXEPLTOTAL-26OCT25LFCBRI",
+      "KXEPLBTTS-26OCT25LFCBRI"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT25LFCBRI",
+      "KXEPLSPREAD-26OCT25LFCBRI",
+      "KXEPLTOTAL-26OCT25LFCBRI",
+      "KXEPLBTTS-26OCT25LFCBRI"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024413B0340"
+    },
+    "start_date": "2026-10-25T14:00:00Z",
+    "title": "Liverpool vs Brighton",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "98aa1226-ef50-4226-9216-33a1096b597f",
+      "coverage": {},
+      "home_team_id": "845da653-13fc-4d80-b0e0-a48179c37ffa",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26OCT31BOULEE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "42d5d75b-a73c-5ac9-8580-a4362848c68e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26OCT31BOULEE"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26OCT31BOULEE"
+    ],
+    "source_ids": {
+      "source_2_id": "202610312FB82BA3"
+    },
+    "start_date": "2026-10-31T15:00:00Z",
+    "title": "Bournemouth vs Leeds United",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   },
   {
     "category": "Sports",
@@ -637,6 +610,35 @@
     "start_date": "2026-10-31T15:00:00Z",
     "title": "Hull City vs Ipswich Town",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7abb495c-193e-4baf-b3d3-108e99eab8ed",
+      "coverage": {},
+      "home_team_id": "2f4b2ba6-f0dd-4d68-96eb-96cff8389c1a",
+      "is_ko": false,
+      "league": "EPL",
+      "main_game_event_ticker": "KXEPLGAME-26NOV02NEWEVE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "94cdaa1f-435a-5cae-aeab-b7ffc05eee6e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEPLGAME-26NOV02NEWEVE"
+    ],
+    "related_event_tickers": [
+      "KXEPLGAME-26NOV02NEWEVE"
+    ],
+    "source_ids": {
+      "source_2_id": "202610311A221B7E"
+    },
+    "start_date": "2026-11-02T20:00:00Z",
+    "title": "Newcastle vs Everton",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
   }
 ]

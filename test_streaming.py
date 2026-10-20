@@ -8,6 +8,7 @@ import canonical as C
 import matching as M
 import settlement as S
 import fees as F
+from liquidity import LiquidityPolicy
 from streaming import Comparison, LiveQuoteEngine, QuoteUpdate, _Deadlines, instrument_key
 
 
@@ -93,6 +94,37 @@ class LiveQuoteTests(unittest.TestCase):
         invalid = self.engine.disconnect("kalshi").comparisons[0]
         self.assertIsNone(invalid.taker_fees)
         self.assertIsNone(invalid.to_dict()["net_gap"])
+
+    def test_liquidity_screening_keeps_gross_diagnostics_but_suppresses_thin_routes(self):
+        self.engine.update_fee_schedule(LEFT, F.compile_schedule("kalshi", {
+            "fee_type": "quadratic", "fee_multiplier": 1}))
+        self.engine.update_fee_schedule(RIGHT, F.compile_schedule("polymarket_intl", {"feesEnabled": False}))
+        thin = self.crossed().comparisons[0].to_dict()
+        self.assertTrue(thin["crossed"])
+        self.assertTrue(thin["net_positive"])
+        self.assertEqual(thin["liquidity_status"], "insufficient")
+        self.assertFalse(thin["monitor_eligible"])
+        self.assertFalse(thin["actionable_estimate"])
+        self.update(LEFT, bid=".7", ask=".8", bid_size=1000, ask_size=1000, sequence=11)
+        deep = self.update(RIGHT, bid=".3", ask=".4", bid_size=1000, ask_size=1000, sequence=101).comparisons[0].to_dict()
+        self.assertTrue(deep["monitor_eligible"])
+        self.assertTrue(deep["actionable_estimate"])
+        self.assertEqual(deep["sized_taker_fees"]["sized_quantity"], "100")
+        self.assertEqual(Decimal(deep["sized_net_total"]), Decimal("28.53"))
+        self.assertFalse(self.engine.disconnect("kalshi").comparisons[0].to_dict()["actionable_estimate"])
+
+    def test_explicit_policy_change_rechecks_cached_pairs_and_unknown_depth_stays_ineligible(self):
+        self.crossed()
+        self.engine.update_liquidity_policy(LiquidityPolicy(min_top_notional_usd=0, desired_contracts=10))
+        current = self.engine.snapshot()["comparisons"][0]
+        self.assertTrue(current["monitor_eligible"])
+        self.assertEqual(current["sized_taker_fees"]["sized_quantity"], "7")
+        unknown = self.update(LEFT, bid=".7", ask=".8", sequence=11).comparisons[0].to_dict()
+        self.assertEqual(unknown["liquidity_status"], "unknown")
+        self.assertFalse(unknown["monitor_eligible"])
+        self.assertIsNone(unknown["sized_net_total"])
+        with self.assertRaises(TypeError):
+            self.engine.update_liquidity_policy({"min_top_notional_usd": "0"})
 
     def test_match_compilation_caches_fee_metadata_outside_quote_updates(self):
         matches, markets = matched()

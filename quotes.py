@@ -263,6 +263,11 @@ def _book_quote(market: C.Market, book: dict, observed: str,
             quantities.get(prices[side]))
     if invalid:
         warnings.append(f"QUOTES polymarket_intl {asset}: invalid order-book level ignored")
+    minimum = _number(book.get("min_order_size"))
+    if minimum is not None and minimum >= 0:
+        # CLOB book constraint is shares; Gamma orderMinSize is documented
+        # separately as a notional constraint and must not replace this field.
+        market.extra["minimum_order_size"] = _text(minimum)
     market.extra["quote_exchange_time"] = _iso_time(book.get("timestamp"))
     _set_quote(market, prices["bids"], prices["asks"], observed,
                f"{CLOB}/books token_id={asset}", empty=not invalid)
@@ -396,7 +401,8 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
     assets, us_slugs = {}, set()
     for market in markets:
         _set_quote(market, None, None, "", "")
-        for field in ("quote_bid_size", "quote_ask_size", "quote_exchange_time"):
+        for field in ("quote_bid_size", "quote_ask_size", "quote_exchange_time",
+                      "minimum_order_size", "minimum_order_notional_usd"):
             market.extra.pop(field, None)
         market.extra.pop("taker_fee", None)
         record = records.get((market.venue, str(market.market_id)), {})
@@ -439,6 +445,12 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                       GAMMA + "/markets/" + str(market.market_id) if market.venue == "polymarket_intl" else "")
         market.extra["taker_fee"] = _fee_parameters(market.venue, fee_record,
                                                    source=fee_source, checked_at=fee_stamp)
+        if market.venue == "polymarket_intl" and fee_record:
+            if "liquidityClob" in fee_record:
+                market.extra["liquidityClob"] = fee_record["liquidityClob"]
+                market.extra["liquidity_observed_at"] = fee_stamp
+            if "orderMinSize" in fee_record:
+                market.extra["minimum_order_notional_usd"] = fee_record["orderMinSize"]
         if not live and key in saved and isinstance(saved[key].get("taker_fee"), dict):
             market.extra["taker_fee"] = dict(saved[key]["taker_fee"])
         if live and market.venue == "kalshi":
@@ -458,6 +470,10 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                     market.extra["quote_" + side + "_size"] = _text(size)
                     if size == 0:
                         setattr(market, side, None)
+            for field in ("minimum_order_size", "minimum_order_notional_usd"):
+                minimum = _number(entry.get(field))
+                if minimum is not None and minimum >= 0:
+                    market.extra[field] = _text(minimum)
             _set_quote(market, _price(market.bid), _price(market.ask), market.quote_time,
                        market.quote_source, empty=market.quote_status == "empty")
         elif not live and key in duplicate_saved:
@@ -530,5 +546,7 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                         "exchange_time": market.extra.get("quote_exchange_time", ""),
                         "bid_size": market.extra.get("quote_bid_size"),
                         "ask_size": market.extra.get("quote_ask_size"),
+                        "minimum_order_size": market.extra.get("minimum_order_size"),
+                        "minimum_order_notional_usd": market.extra.get("minimum_order_notional_usd"),
                         "taker_fee": market.extra.get("taker_fee")})
     return entries, list(dict.fromkeys(warnings))

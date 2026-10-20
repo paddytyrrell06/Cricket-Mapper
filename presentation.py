@@ -22,7 +22,7 @@ VENUE_LABELS = {
 QUOTE_MAX_AGE_SECONDS = 300
 QUOTE_MAX_SKEW_SECONDS = 30
 BASE_COLS = [
-    "sport", "canonical_fixture_id", "fixture_date", "start_time_utc", "competition",
+    "sport", "domain", "canonical_fixture_id", "fixture_date", "start_time_utc", "competition",
     "gender", "format", "team_a", "team_b", "canonical_market_type", "canonical_outcome",
     "venues_available", "venues_checked", "mapping_status", "comparison_status", "comparison_reason",
     "comparison_basis", "contingency_status", "contingency_caveats", "strict_comparison_status",
@@ -30,14 +30,15 @@ BASE_COLS = [
     "best_bid", "best_ask", "best_bid_venue", "best_ask_venue", "best_spread",
     "observed_crossed", "observed_cross_kind", "observed_cross_gap",
     "cross_eligible", "quote_check", "crossed", "cross_kind", "cross_gap",
-    "eligible_bid", "eligible_ask", "eligible_bid_venue", "eligible_ask_venue",
+    "eligible_bid", "eligible_ask", "eligible_bid_venue", "eligible_ask_venue", "eligible_routes",
     "net_crossed", "net_cross_eligible", "net_gap", "net_total", "net_quantity",
     "net_buy_venue", "net_sell_venue", "net_buy_fee", "net_sell_fee", "net_total_fees",
     "net_fee_status", "net_fee_reason", "net_top_size", "net_top_quantity", "net_depth_confirmed",
     "net_top_total", "net_top_gap", "net_gross_gap",
 ]
 VENUE_FIELDS = [
-    "event_id", "market_id", "slug", "title", "url", "bid", "ask", "bid_size", "ask_size", "fee_schedule", "fee_metadata", "quote_time",
+    "event_id", "market_id", "slug", "title", "url", "bid", "ask", "bid_size", "ask_size",
+    "minimum_order_size", "minimum_order_notional_usd", "fee_schedule", "fee_metadata", "quote_time",
     "quote_status", "quote_source", "crossed", "settlement_profile", "settlement_status",
     "settlement_payouts", "settlement_policies", "settlement_evidence", "settlement_missing",
     "settlement_label", "quote_details", "alternatives",
@@ -98,6 +99,8 @@ def _market_dict(market: Any, venue: str = "") -> dict[str, str]:
         "bid": _price_text(bid), "ask": _price_text(ask),
         "bid_size": _price_text(_size(extra.get("quote_bid_size"))) if bid is not None else "",
         "ask_size": _price_text(_size(extra.get("quote_ask_size"))) if ask is not None else "",
+        "minimum_order_size": _price_text(_size(extra.get("minimum_order_size"))),
+        "minimum_order_notional_usd": _price_text(_size(extra.get("minimum_order_notional_usd"))),
         "fee_schedule": _json(F.compile_schedule(venue or getattr(market, "venue", ""), extra).to_dict()),
         "fee_metadata": _json({key: value for key, value in extra.items()
                                 if "fee" in key.lower() or key == "_kalshi_series"}),
@@ -144,7 +147,9 @@ def _timestamp(value: str) -> Optional[datetime]:
         return None
 
 
-def _eligible_quotes(row: dict[str, str], venues: list[str], as_of: datetime) -> dict[str, str]:
+def _eligible_quotes(row: dict[str, str], venues: list[str], as_of: datetime, *,
+                     max_age_seconds: int = QUOTE_MAX_AGE_SECONDS,
+                     max_skew_seconds: int = QUOTE_MAX_SKEW_SECONDS) -> dict[str, str]:
     pairs = []
     invalid_books = {venue for venue in venues
                      if (bid := _price(row.get(f"{venue}_bid"))) is not None
@@ -165,9 +170,9 @@ def _eligible_quotes(row: dict[str, str], venues: list[str], as_of: datetime) ->
             ages = [(as_of - stamp).total_seconds() for stamp in times]
             if min(ages) < 0:
                 problems.append("future")
-            elif max(ages) > QUOTE_MAX_AGE_SECONDS:
+            elif max(ages) > max_age_seconds:
                 problems.append("stale")
-            elif abs((times[0] - times[1]).total_seconds()) > QUOTE_MAX_SKEW_SECONDS:
+            elif abs((times[0] - times[1]).total_seconds()) > max_skew_seconds:
                 problems.append("skewed")
             else:
                 pairs.append((bid - ask, bid_venue, ask_venue, bid, ask))
@@ -184,6 +189,7 @@ def _eligible_quotes(row: dict[str, str], venues: list[str], as_of: datetime) ->
         "eligible_bid": _price_text(best[3]) if best else "",
         "eligible_ask": _price_text(best[4]) if best else "",
         "eligible_bid_venue": best[1] if best else "", "eligible_ask_venue": best[2] if best else "",
+        "eligible_routes": _json([{"buy": pair[2], "sell": pair[1]} for pair in pairs]) if eligible else "[]",
         "cross_condition": ("conditional" if row.get("contingency_status") != "aligned" else "aligned") if crossed else "",
     }
     result.update(_net_quotes(row, pairs if eligible else []))
@@ -302,7 +308,8 @@ def build_wide_rows(accepted: list[Any], review: list[Any], coverage_complete: d
         row_coverage = (sport_coverage or {}).get(key[0], coverage_complete)
         comparison = _comparison(record["sources"], record["mapping_status"], record["reasons"], fixture, strict_settlement)
         row = {
-            "sport": key[0], "canonical_fixture_id": fixture.canonical_fixture_id,
+            "sport": key[0], "domain": "esports" if key[0] in {"cs2", "lol", "dota2", "valorant", "esports"} else "sports",
+            "canonical_fixture_id": fixture.canonical_fixture_id,
             "fixture_date": fixture.key.date, "start_time_utc": fixture.start_time,
             "competition": fixture.competition, "gender": fixture.key.gender, "format": fixture.key.fmt,
             "team_a": fixture.team_a, "team_b": fixture.team_b,
@@ -361,9 +368,14 @@ def _venue_cell(row: dict[str, str], venue: str) -> str:
         return f'<span class="muted">{html.escape(row.get(f"{venue}_status", "Unavailable"))}</span>'
     def quote(side: str) -> str:
         size = _size(row.get(f"{venue}_{side}_size"))
-        text = _price_text(size) if size is not None else "?"
+        exact = format(size, ",f").rstrip("0").rstrip(".") if size is not None and size % 1 else format(size, ",.0f") if size is not None else "?"
+        text = exact
+        if size is not None and size >= 1_000_000:
+            text = format(size / 1_000_000, ".2f").rstrip("0").rstrip(".") + "m"
+        elif size is not None and size >= 10_000:
+            text = format(size / 1_000, ".1f").rstrip("0").rstrip(".") + "k"
         return (f'<div class="quote-side"><strong class="{side}" data-side="{side}">{_cents(row.get(f"{venue}_{side}", ""))}</strong>'
-                f'<small class="quote-size" title="Top {side} depth in contracts; ? means unavailable">×{html.escape(text)}</small></div>')
+                f'<span class="quote-size" title="Top {side}: {html.escape(exact)} contracts; ? means unavailable">× {html.escape(text)}</span></div>')
     return f'<div class="quotes">{quote("bid")}<span class="quote-divider">/</span>{quote("ask")}</div>'
 
 
@@ -435,7 +447,7 @@ def _json_details(raw: str) -> str:
 
 
 def _net_details(row: dict[str, str]) -> str:
-    title = '<section class="fee-estimate"><h3>Taker edge · 1 contract per leg</h3>'
+    title = '<section class="fee-estimate"><h3>Fee reference · 1 contract per leg</h3>'
     if row.get("net_fee_status") != "estimated":
         return title + f'<p class="detail-note">{html.escape(row.get("net_fee_reason", "Fee schedule unavailable; net edge cannot be estimated."))}</p></section>'
     buy_venue, sell_venue = row.get("net_buy_venue", ""), row.get("net_sell_venue", "")
@@ -462,7 +474,8 @@ def _net_details(row: dict[str, str]) -> str:
             'Selling requires inventory or a supported complementary position.</p></section>')
 
 
-def _details(row: dict[str, str], venues: list[str]) -> str:
+def _details(row: dict[str, str], venues: list[str], *, max_age_seconds: int = QUOTE_MAX_AGE_SECONDS,
+             max_skew_seconds: int = QUOTE_MAX_SKEW_SECONDS) -> str:
     basis = "Full contract" if row.get("comparison_basis") == "full_contract" else "Normal completion"
     sections = [f'<div class="detail-basis">{basis} comparison</div><p class="detail-reason">{html.escape(row.get("comparison_reason", ""))}</p>']
     try:
@@ -473,8 +486,9 @@ def _details(row: dict[str, str], venues: list[str]) -> str:
         sections.append('<details class="caveats"><summary>Contingency caveats <span class="conditional">C</span></summary><ul>' +
                         "".join(f'<li>{html.escape(str(caveat))}</li>' for caveat in caveats) + '</ul></details>')
     sections.append(_net_details(row))
-    sections.append(f'<p class="detail-note">Cross eligibility requires quotes at most {QUOTE_MAX_AGE_SECONDS // 60} minutes old and '
-                    f'{QUOTE_MAX_SKEW_SECONDS} seconds apart. Net edges estimate both taker fees at 1 contract per leg. '
+    age_text = f"{max_age_seconds // 60} minutes" if max_age_seconds >= 60 and max_age_seconds % 60 == 0 else f"{max_age_seconds} seconds"
+    sections.append(f'<p class="detail-note">Cross eligibility requires quotes at most {age_text} old and '
+                    f'{max_skew_seconds} seconds apart. The fee reference uses 1 contract per leg; the order estimate uses the selected actual size. '
                     'Conditional comparisons assume normal completion; cancellation and other contingency terms can differ.</p>')
     for venue in venues:
         if row.get(f"{venue}_status") != "Available":
@@ -531,7 +545,7 @@ const viewKey='market-terminal-view:'+location.protocol+'//'+location.host+locat
 function saveView(){
     try{sessionStorage.setItem(viewKey,JSON.stringify({tab:activeTab,search:search.value,
         reviews:reviewToggle.checked,strict:strictToggle.checked,sort:sortBy.value,
-        direction,pageSize:pageSize.value,page}));}catch(error){}
+        direction,pageSize:pageSize.value,page,...(typeof window.marketTerminalViewState==='function'?{workspace:window.marketTerminalViewState()}:{})}));}catch(error){}
 }
 function restoreView(){
     let saved={};
@@ -539,11 +553,12 @@ function restoreView(){
     if(typeof saved.search==='string')search.value=saved.search;
     if(typeof saved.reviews==='boolean')reviewToggle.checked=saved.reviews;
     if(typeof saved.strict==='boolean')strictToggle.checked=saved.strict;
-    if(['date','name','edge'].includes(saved.sort))sortBy.value=saved.sort;
+    if(['date','name','edge','competition','gross','pnl','liquidity'].includes(saved.sort))sortBy.value=saved.sort;
     if(['25','50','100'].includes(saved.pageSize))pageSize.value=saved.pageSize;
     direction=saved.direction===-1?-1:1;
     document.getElementById('sortDirection').textContent=direction===1?'↑':'↓';
-    selectTab(tabs.find(tab=>tab.dataset.tab===saved.tab)||tabs[0]);
+    if(typeof window.marketTerminalRestoreView==='function')window.marketTerminalRestoreView(saved.workspace);
+    selectTab(tabs.find(tab=>tab.dataset.tab===saved.tab&&!tab.hidden)||tabs[0]);
     if(Number.isSafeInteger(saved.page)&&saved.page>=0){page=saved.page;apply();}
 }
 window.addEventListener('pagehide',saveView);
@@ -557,7 +572,7 @@ window.marketTerminalReportVersion=function(version){
     }
 };
 function checkForNewReport(){
-    if(pendingReportCheck||reloadingReport)return;
+    if(window.marketTerminalRuntime||pendingReportCheck||reloadingReport)return;
     const script=document.createElement('script');
     const url=new URL(encodeURIComponent(reportVersionFile),location.href);
     url.searchParams.set('check',Date.now()+'-'+(++reportCheckNumber));
@@ -581,14 +596,29 @@ def _terminal_service_script() -> str:
     const button=document.getElementById('refreshPrices'),label=document.getElementById('refreshStatus');
     const skipKey='market-terminal-publication-reload:'+location.pathname;
     let canSave=false,skipRefresh=false,detected=false,polling=false,requesting=false,first=true;
+    let runtimeRevision=null,readingRecords=false;
     try{skipRefresh=sessionStorage.getItem(skipKey)==='1';sessionStorage.removeItem(skipKey);
         sessionStorage.setItem(skipKey,'probe');sessionStorage.removeItem(skipKey);canSave=true;}catch(error){}
     window.marketTerminalBeforeReportReload=()=>{try{sessionStorage.setItem(skipKey,'1');}catch(error){}};
     function show(data){
+        if(data.mode==='runtime_rest')window.marketTerminalRuntime=true;
         detected=true;button.hidden=false;label.hidden=false;button.disabled=data.running||requesting;
-        label.textContent=data.running?'Refreshing…':data.state==='error'?'Refresh failed':'HTTP · reload refreshes prices';
+        label.textContent=data.running?'Refreshing…':data.state==='error'?'Refresh failed':window.marketTerminalRuntime?'Continuous REST · cached rows':'HTTP · reload refreshes prices';
         label.title=data.error||'Local quote refresh service';
         if(data.running)saveView();
+    }
+    async function readRecords(){
+        if(readingRecords)return;readingRecords=true;
+        try{
+            const response=await fetch('/api/markets?revision='+encodeURIComponent(runtimeRevision===null?'':runtimeRevision),{cache:'no-store'});
+            if(!response.ok)throw Error('Market cache unavailable ('+response.status+')');
+            const data=await response.json();
+            if(Array.isArray(data.records)&&typeof window.marketTerminalReplaceRecords==='function'){
+                if(data.partial&&typeof window.marketTerminalPatchRecords==='function')window.marketTerminalPatchRecords(data.records,data);
+                else window.marketTerminalReplaceRecords(data.records,data);
+            }
+            runtimeRevision=data.revision;
+        }finally{readingRecords=false;}
     }
     async function refreshPrices(){
         if(requesting)return;requesting=true;button.disabled=true;label.textContent='Refreshing…';saveView();
@@ -606,14 +636,156 @@ def _terminal_service_script() -> str:
             const data=await response.json();
             if(!['idle','running','error'].includes(data.state)||typeof data.revision!=='number')return;
             show(data);
+            if(window.marketTerminalRuntime&&data.revision!==runtimeRevision)await readRecords();
             if(first){first=false;const navigation=performance.getEntriesByType('navigation')[0];
                 if(canSave&&!skipRefresh&&navigation&&navigation.type==='reload')refreshPrices();}
-            if(!data.running)checkForNewReport();
+            if(!data.running&&!window.marketTerminalRuntime)checkForNewReport();
         }catch(error){if(detected){label.textContent='Service offline';label.title=String(error);button.disabled=true;}}
         finally{polling=false;}
     }
     button.addEventListener('click',refreshPrices);poll();setInterval(()=>{if(detected)poll();},1000);
 })();
+'''
+
+
+SPORT_LABELS = {"cricket": "Cricket", "soccer": "Football", "basketball": "Basketball",
+                "football": "Am. football", "hockey": "Hockey", "baseball": "Baseball",
+                "tennis": "Tennis", "mma": "MMA", "cs2": "Counter-Strike 2", "lol": "League of Legends"}
+
+
+def _sizing_estimates(row: dict[str, str]) -> dict[str, dict]:
+    """Precompute exact Decimal fee rounding outside the browser's render path."""
+    try:
+        routes = json.loads(row.get("eligible_routes", "[]"))
+    except (ValueError, TypeError):
+        routes = []
+    if not routes and row.get("cross_eligible") == "true" and row.get("net_buy_venue") and row.get("net_sell_venue"):
+        routes = [{"buy": row["net_buy_venue"], "sell": row["net_sell_venue"]}]
+    estimates = {}
+    for quantity in ("1", "10", "100", "1000", "top"):
+        options = []
+        for route in routes:
+            buy, sell = route.get("buy", ""), route.get("sell", "")
+            # The interface applies the selected threshold. The backend's scan
+            # policy independently controls which markets receive quote requests.
+            estimate = F.calculate_sized_taker_cross(row, buy, sell, desired_contracts=quantity,
+                                                    min_top_notional_usd="0")
+            options.append({**estimate, "buy_venue": buy, "sell_venue": sell})
+        if options:
+            positive = [item for item in options if item.get("net_total") is not None
+                        and Decimal(str(item["net_total"])) > 0]
+            unresolved_crosses = [item for item in options if item.get("net_total") is None
+                                  and Decimal(str(item.get("gross_gap") or "-1")) > 0]
+            # Keep an unresolved positive spread visible as unknown instead of
+            # replacing it with a fully priced losing reverse route.
+            estimates[quantity] = max(positive or unresolved_crosses or options, key=lambda item: (
+                item.get("net_total") is not None,
+                Decimal(str(item.get("net_total") or "-1000000")),
+                Decimal(str(item.get("gross_gap") or "-1"))))
+    return estimates
+
+
+def build_terminal_records(rows: list[dict[str, str]], venues: list[str], *, replay: bool = False,
+                           include_details: bool = True,
+                           max_age_seconds: int = QUOTE_MAX_AGE_SECONDS) -> list[dict]:
+    """Shared report/API view model; transport never changes fee or rule checks."""
+    records = []
+    for index, row in enumerate(rows):
+        sport = row.get("sport", "cricket")
+        domain = row.get("domain") or ("esports" if sport in {"cs2", "lol", "dota2", "valorant", "esports"} else "sports")
+        fixture_name = f'{row["team_a"]} vs {row["team_b"]}'
+        name = f'{fixture_name} {row["canonical_outcome"]}'
+        date = f'{row["fixture_date"]} {row["start_time_utc"]}'
+        quoted_cells = "".join(f'<td class="venue-cell" data-venue="{html.escape(venue, quote=True)}" '
+                               f'data-market-id="{html.escape(row.get(f"{venue}_market_id", ""), quote=True)}">'
+                               f'{_venue_cell(row, venue)}</td>' for venue in venues)
+        quote_venues = {route.get(side) for route in json.loads(row.get("eligible_routes", "[]")) for side in ("buy", "sell")}
+        quote_venues.update({row.get("eligible_bid_venue", ""), row.get("eligible_ask_venue", ""),
+                             row.get("net_buy_venue", ""), row.get("net_sell_venue", "")})
+        quote_venues.discard("")
+        quote_venues.discard(None)
+        pair_times = [_timestamp(row.get(f"{venue}_quote_time", "")) for venue in quote_venues]
+        expiry = int((min(pair_times).timestamp() + max_age_seconds) * 1000) if pair_times and all(pair_times) and not replay else 0
+        reviewed = row.get("comparison_status") != "compatible"
+        row_html = (f'<tr data-id="{index}" data-sport="{html.escape(sport, quote=True)}" data-domain="{html.escape(domain, quote=True)}" data-crossed="{row.get("crossed", "false")}" data-net-crossed="{row.get("net_crossed", "false")}" data-review="{str(reviewed).lower()}" data-cross-expiry="{expiry}">'
+                    '<td class="watch-cell"><button class="watch-button" data-watch="' + str(index) + '" aria-label="Add market to watchlist" aria-pressed="false">☆</button></td>'
+                    f'<td class="league-cell">{html.escape(SPORT_LABELS.get(sport, sport.replace("_", " ").title()))}</td>'
+                    f'<td class="competition-cell" title="{html.escape(row.get("competition", ""), quote=True)}">{html.escape(row.get("competition", "") or "—")}</td>'
+                    f'<td class="fixture-cell" title="{html.escape(fixture_name, quote=True)}"><button class="fixture-button" data-details="{index}">{html.escape(fixture_name)}</button></td>'
+                    f'<td class="date-cell" title="{html.escape(date + " UTC", quote=True)}">{html.escape(row["fixture_date"][5:])} {html.escape(row["start_time_utc"] or "—")}</td>'
+                    f'<td class="outcome-cell" title="{html.escape(row["canonical_outcome"], quote=True)}">{html.escape(row["canonical_outcome"])}</td>'
+                    f'{quoted_cells}<td class="gross-cell" data-cell="gross">—</td><td class="fees-cell" data-cell="fees">—</td>'
+                    f'<td class="edge-cell" data-cell="net">{_net_edge_cell(row, index)}</td>'
+                    '<td class="pnl-cell" data-cell="pnl">—</td><td class="liquidity-cell" data-cell="liquidity">—</td>'
+                    f'<td class="rules-cell">{_rules_cell(row)}</td>'
+                    f'<td class="detail-cell"><button class="details-button" data-details="{index}" aria-haspopup="dialog" aria-label="Details for {html.escape(name, quote=True)}">↗</button></td></tr>')
+        searchable = " ".join([sport, row.get("competition", ""), name, date] + [row.get(f"{venue}_market_id", "") for venue in venues]).lower()
+        records.append({"id": index, "key": _json([domain, sport, row.get("canonical_fixture_id"), row.get("canonical_market_type"), row["canonical_outcome"]]),
+                        "domain": domain, "sport": sport, "competition": row.get("competition", ""), "name": name.lower(), "date": date, "search": searchable,
+                        "crossed": row.get("crossed") == "true", "netCrossed": row.get("net_crossed") == "true", "review": reviewed,
+                        "strict": row.get("strict_comparison_status") == "compatible" and not reviewed,
+                        "conditional": row.get("contingency_status") != "aligned",
+                        "edge": row.get("net_gap") or "", "expiry": expiry, "stale": False,
+                        "estimates": _sizing_estimates(row), "feeReason": row.get("net_fee_reason", ""),
+                        "html": row_html})
+        if include_details:
+            records[-1]["details"] = terminal_record_details(row, venues)
+    return records
+
+
+def terminal_record_details(row: dict[str, str], venues: list[str], *,
+                            max_age_seconds: int = QUOTE_MAX_AGE_SECONDS,
+                            max_skew_seconds: int = QUOTE_MAX_SKEW_SECONDS) -> str:
+    fixture_name = f'{row["team_a"]} vs {row["team_b"]}'
+    date = f'{row["fixture_date"]} {row["start_time_utc"]}'
+    return (f'<h2>{html.escape(fixture_name)}</h2><p class="detail-subtitle">{html.escape(row["canonical_outcome"])} · {html.escape(date)} UTC</p>'
+            f'<section id="sizingDetail" class="fee-estimate"></section>'
+            + _details(row, venues, max_age_seconds=max_age_seconds, max_skew_seconds=max_skew_seconds))
+
+
+def _terminal_interaction_script(freshness_time: datetime, age_label: str) -> str:
+    return "let generatedAt=new Date(" + json.dumps(freshness_time.isoformat()) + ");const ageLabel=" + json.dumps(age_label) + ";\n" + r'''
+const records=JSON.parse(document.getElementById('marketData').textContent),tbody=document.getElementById('rows'),search=document.getElementById('search'),reviewToggle=document.getElementById('showReviews'),strictToggle=document.getElementById('strictRules'),sortBy=document.getElementById('sortBy'),pageSize=document.getElementById('pageSize'),tabs=[...document.querySelectorAll('[data-tab]')],categories=[...document.querySelectorAll('[data-category]')],leagueFilter=document.getElementById('leagueFilter'),minLiquidity=document.getElementById('minLiquidity'),unknownDepth=document.getElementById('showUnknownDepth'),orderSize=document.getElementById('orderSize'),extraColumns=document.getElementById('extraColumns');
+let activeTab='all',activeCategory='sports',page=0,direction=1,filtered=[],settingsTimer=null,settingsPublished=false;
+const watchKey='market-terminal-watch:'+location.protocol+'//'+location.host+location.pathname;
+let watched=new Set();try{const saved=JSON.parse(sessionStorage.getItem(watchKey)||'[]');if(Array.isArray(saved))watched=new Set(saved.filter(v=>typeof v==='string'));}catch(error){}
+function numeric(value){if(value===null||value===undefined||value==='')return null;const n=Number(value);return Number.isFinite(n)?n:null;}
+function sizing(r){return (r.estimates||{})[orderSize.value]||{};}
+function liquidity(r){return numeric(sizing(r).paired_top_notional_usd);}
+function positiveNet(r){const e=sizing(r);return !r.stale&&e.minimum_order_status!=='below_minimum'&&numeric(e.net_gap)!==null&&Number(e.net_gap)>0;}
+function cents(value){const n=numeric(value);return n===null?'—':(n*100).toLocaleString('en-US',{maximumFractionDigits:3})+'¢';}
+function dollars(value,signed=false){const n=numeric(value);return n===null?'—':(signed&&n>0?'+':'')+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function metric(r,key){const e=sizing(r);return key==='edge'?(r.stale?null:numeric(e.net_gap)):key==='gross'?numeric(e.gross_gap):key==='pnl'?(r.stale?null:numeric(e.net_total)):key==='liquidity'?liquidity(r):r[key]||'';}
+function matchesView(r){const q=search.value.trim().toLowerCase();return (r.domain||'sports')===activeCategory&&(activeTab==='all'||(activeTab==='net'?positiveNet(r):activeTab==='crosses'?r.crossed:activeTab==='watch'?watched.has(r.key):r.sport===activeTab))&&(reviewToggle.checked||!r.review)&&(!strictToggle.checked||r.strict)&&(!leagueFilter.value||r.competition===leagueFilter.value)&&(!q||r.search.includes(q));}
+function passesLiquidity(r){const amount=liquidity(r),threshold=Math.max(0,numeric(minLiquidity.value)||0);return amount===null?unknownDepth.checked:amount>=threshold;}
+function matchingRecords(){return records.filter(r=>matchesView(r)&&passesLiquidity(r)).sort((a,b)=>{const av=metric(a,sortBy.value),bv=metric(b,sortBy.value);let result=0;if(['edge','gross','pnl','liquidity'].includes(sortBy.value)){if(av===null||bv===null)return av===bv?a.id-b.id:av===null?1:-1;result=av===bv?0:av>bv?-1:1;}else result=String(av).localeCompare(String(bv));return direction*result||a.id-b.id;});}
+function counts(){const domain=records.filter(r=>(r.domain||'sports')===activeCategory);const gross=domain.filter(r=>passesLiquidity(r)&&r.crossed).length,net=domain.filter(r=>passesLiquidity(r)&&positiveNet(r)).length;['crossSummary','crossCount'].forEach(id=>document.getElementById(id).textContent=gross);['netCrossSummary','netCrossCount'].forEach(id=>document.getElementById(id).textContent=net);['sports','esports'].forEach(category=>{document.getElementById(category+'Count').textContent=records.filter(r=>(r.domain||'sports')===category).length;});}
+function updateLeagueOptions(){const selected=leagueFilter.value;leagueFilter.replaceChildren(new Option('All leagues',''));[...new Set(records.filter(r=>(r.domain||'sports')===activeCategory).map(r=>r.competition).filter(Boolean))].sort().forEach(name=>leagueFilter.add(new Option(name,name)));if([...leagueFilter.options].some(o=>o.value===selected))leagueFilter.value=selected;}
+function updateSortHeadings(){document.querySelectorAll('[data-sort]').forEach(button=>{button.parentElement.setAttribute('aria-sort',button.dataset.sort===sortBy.value?(direction===1?(['edge','gross','pnl','liquidity'].includes(sortBy.value)?'descending':'ascending'):(['edge','gross','pnl','liquidity'].includes(sortBy.value)?'ascending':'descending')):'none');});}
+function renderCells(r,tr){const e=sizing(r),q=numeric(e.sized_quantity),fees=numeric(e.fees_per_contract??e.break_even_gap);const gross=tr.querySelector('[data-cell="gross"]'),fee=tr.querySelector('[data-cell="fees"]'),net=tr.querySelector('[data-cell="net"]'),pnl=tr.querySelector('[data-cell="pnl"]'),liq=tr.querySelector('[data-cell="liquidity"]');gross.textContent=cents(e.gross_gap);fee.textContent=fees===null?(r.review?'—':'Unknown'):cents(fees);fee.title=fees===null?(r.feeReason||'Fee schedule unavailable; no net profit estimate'):'Both taker fees at actual size, divided by paired contracts';net.replaceChildren();pnl.replaceChildren();tr.dataset.netCrossed=String(positiveNet(r));tr.dataset.crossed=String(r.crossed);net.classList.toggle('size-positive',positiveNet(r));net.classList.toggle('size-negative',!r.stale&&numeric(e.net_gap)!==null&&Number(e.net_gap)<0);if(r.stale){net.textContent='Stale';pnl.textContent='Stale';}else if(numeric(e.net_gap)!==null){net.textContent=cents(e.net_gap);pnl.textContent=dollars(e.net_total,true);pnl.classList.toggle('size-positive',Number(e.net_total)>0&&e.minimum_order_status!=='below_minimum');pnl.classList.toggle('size-negative',Number(e.net_total)<0);pnl.classList.toggle('blocked-order',e.minimum_order_status==='below_minimum');if(q!==null){const qty=document.createElement('small');qty.textContent=q.toLocaleString('en-US',{maximumFractionDigits:3})+' ct'+(e.quantity_capped?' ↓':'');pnl.append(qty);}pnl.title=(e.minimum_order_status==='below_minimum'?'Below venue minimum order size. ':'')+(e.quantity_capped?'Quantity capped to available paired depth. ':'')+'Buy '+(e.buy_venue||'')+' / sell '+(e.sell_venue||'')+'. Includes both taker fees; execution not validated.';if(r.conditional&&Number(e.net_gap)>0){const mark=document.createElement('span');mark.className='conditional';mark.textContent='C';mark.title='Conditional on normal completion; contingency terms require review';net.append(' ',mark);}if(e.minimum_order_status==='below_minimum'){const blocked=document.createElement('span');blocked.className='conditional';blocked.textContent='MIN';blocked.title=e.minimum_order_reason||'This size is below a known venue order minimum';net.append(' ',blocked);}}else{net.textContent=r.review?'Review':q===null&&numeric(e.paired_top_quantity)===null?'Depth ?':'Fee ?';net.title=r.feeReason||e.reason||'Net PnL requires known depth and fees';pnl.textContent='—';}const amount=liquidity(r);liq.textContent=amount===null?'Unknown':dollars(amount);liq.title=amount===null?'Top depth unavailable; never treated as zero':'Smaller paired top notional across both legs; not total market volume';const pin=tr.querySelector('[data-watch]');pin.textContent=watched.has(r.key)?'★':'☆';pin.setAttribute('aria-pressed',String(watched.has(r.key)));pin.setAttribute('aria-label',watched.has(r.key)?'Remove market from watchlist':'Add market to watchlist');}
+function apply(reset=false){if(reset)page=0;filtered=matchingRecords();const size=Number(pageSize.value),pages=Math.max(1,Math.ceil(filtered.length/size));page=Math.min(page,pages-1);const start=page*size,visible=filtered.slice(start,start+size);tbody.innerHTML=visible.map(r=>r.html).join('');visible.forEach(r=>{const tr=tbody.querySelector('[data-id="'+r.id+'"]');if(tr)renderCells(r,tr);});document.getElementById('empty').hidden=filtered.length!==0;document.getElementById('emptyHeading').textContent=activeTab==='net'?'No positive estimates after fees':activeTab==='watch'?'No watched markets meet these filters':activeTab==='crosses'?'No eligible gross crosses':'No matching markets';document.getElementById('emptyMessage').textContent=activeCategory==='esports'&&!records.some(r=>r.domain==='esports')?'No esports contracts in this discovery snapshot. Enable esports in the discovery command.':'Lower the liquidity bound, include unknown depth, or change the league, view and review filters.';document.getElementById('resultCount').textContent=filtered.length?`${start+1}–${Math.min(start+size,filtered.length)} of ${filtered.length} outcomes`:'0 outcomes';const base=records.filter(matchesView),thin=base.filter(r=>liquidity(r)!==null&&!passesLiquidity(r)).length,unknown=base.filter(r=>liquidity(r)===null).length;document.getElementById('liquiditySummary').textContent=`${thin} below bound · ${unknown} depth unknown${unknownDepth.checked?' (included)':' (hidden)'}`;document.getElementById('pageStatus').textContent=`${page+1} / ${pages}`;document.getElementById('firstPage').disabled=document.getElementById('prevPage').disabled=page===0;document.getElementById('nextPage').disabled=document.getElementById('lastPage').disabled=page>=pages-1;if(reset)document.getElementById('tableScroll').scrollTop=0;counts();updateSortHeadings();}
+function publishSettings(){if(!window.marketTerminalRuntime||!['http:','https:'].includes(location.protocol))return;clearTimeout(settingsTimer);settingsTimer=setTimeout(async()=>{try{const response=await fetch('/api/settings',{method:'POST',headers:{'Content-Type':'application/json','X-Terminal-Request':'refresh'},body:JSON.stringify({min_liquidity_usd:String(Math.max(0,numeric(minLiquidity.value)||0)),watch_only:activeTab==='watch',watchlist:[...watched]}),cache:'no-store'});if(!response.ok)throw Error('Monitor settings rejected ('+response.status+')');settingsPublished=true;document.getElementById('categoryNote').textContent='Monitoring policy saved · '+(activeTab==='watch'?'watchlist only':'all qualifying markets');}catch(error){document.getElementById('categoryNote').textContent='Display filter applied · monitor settings not saved';}},250);}
+function selectTab(tab){activeTab=tab.dataset.tab;tabs.forEach(t=>{const selected=t===tab;t.classList.toggle('active',selected);t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1;});document.getElementById('marketPanel').setAttribute('aria-labelledby',tab.id);apply(true);publishSettings();}
+function selectCategory(category){activeCategory=category;categories.forEach(button=>{const selected=button.dataset.category===category;button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected));});tabs.forEach(tab=>{tab.hidden=tab.dataset.domain!=='all'&&tab.dataset.domain!==category;});updateLeagueOptions();selectTab(tabs.find(t=>t.dataset.tab==='all'));}
+categories.forEach(button=>button.addEventListener('click',()=>selectCategory(button.dataset.category)));
+tabs.forEach(tab=>{tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();const shown=tabs.filter(t=>!t.hidden),index=shown.indexOf(tab),next=e.key==='Home'?0:e.key==='End'?shown.length-1:(index+(e.key==='ArrowRight'?1:-1)+shown.length)%shown.length;selectTab(shown[next]);shown[next].focus();}});});
+search.addEventListener('input',()=>apply(true));reviewToggle.addEventListener('change',()=>apply(true));strictToggle.addEventListener('change',()=>apply(true));pageSize.addEventListener('change',()=>apply(true));leagueFilter.addEventListener('change',()=>apply(true));unknownDepth.addEventListener('change',()=>apply(true));minLiquidity.addEventListener('input',()=>{apply(true);publishSettings();});orderSize.addEventListener('change',()=>{apply(true);if(openRecord)renderSizingDetails(openRecord);});extraColumns.addEventListener('change',()=>document.body.classList.toggle('compact',!extraColumns.checked));
+function changeSort(key){if(sortBy.value===key)direction*=-1;else{sortBy.value=key;direction=1;}document.getElementById('sortDirection').textContent=direction===1?'↑':'↓';apply(true);}
+sortBy.addEventListener('change',()=>{direction=1;document.getElementById('sortDirection').textContent='↑';apply(true);});document.querySelectorAll('[data-sort]').forEach(button=>button.addEventListener('click',()=>changeSort(button.dataset.sort)));document.getElementById('sortDirection').addEventListener('click',()=>{direction*=-1;document.getElementById('sortDirection').textContent=direction===1?'↑':'↓';apply(true);});document.getElementById('firstPage').addEventListener('click',()=>{page=0;apply(true);});document.getElementById('prevPage').addEventListener('click',()=>{page=Math.max(0,page-1);apply();document.getElementById('tableScroll').scrollTop=0;});document.getElementById('nextPage').addEventListener('click',()=>{page++;apply();document.getElementById('tableScroll').scrollTop=0;});document.getElementById('lastPage').addEventListener('click',()=>{page=Math.max(0,Math.ceil(filtered.length/Number(pageSize.value))-1);apply();document.getElementById('tableScroll').scrollTop=0;});
+const dialog=document.getElementById('detailsDialog'),content=document.getElementById('detailContent');let openRecord=null,detailRequest=0;
+function renderSizingDetails(r){const section=document.getElementById('sizingDetail');if(!section)return;const e=sizing(r),q=numeric(e.sized_quantity),fees=numeric(e.total_fees);section.replaceChildren();const title=document.createElement('h3');title.textContent='Order estimate · '+(q===null?'size unavailable':q.toLocaleString()+' paired contracts')+(e.quantity_capped?' · depth capped':'');section.append(title);const formula=document.createElement('p');formula.className='sizing-formula';formula.textContent=r.stale?'Quotes expired · refresh before estimating':numeric(e.net_total)===null?'Net PnL unavailable: '+(q===null?'top depth missing':'fee schedule missing'):'$'+dollars(e.gross_total)+' gross − $'+dollars(fees)+' taker fees = $'+dollars(e.net_total,true)+' estimated net';section.append(formula);const dl=document.createElement('dl');const values=[['Requested size',orderSize.value==='top'?'Top paired depth':orderSize.value+' contracts'],['Buy / sell',(e.buy_venue||'—')+' / '+(e.sell_venue||'—')],['Buy taker fee','$'+dollars(e.buy_fee)],['Sell taker fee','$'+dollars(e.sell_fee)],['Fee break-even',cents(e.fees_per_contract??e.break_even_gap)+' gross / contract'],['Paired top notional','$'+dollars(e.paired_top_notional_usd)],['Estimated capital','$'+dollars(e.capital_required)],['Order minimums',e.minimum_order_status||'Unknown']];values.forEach(([name,value])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=name;dd.textContent=value;dl.append(dt,dd);});section.append(dl);const note=document.createElement('p');note.className='detail-note';note.textContent='Fees are recalculated on the whole actual order; multiplying a rounded one-contract fee overstates some larger orders. Capital assumes fully collateralized paired positions. Displayed top depth, inventory, venue minimums, and simultaneous fills still require execution validation. No trades are submitted.';section.append(note);}
+async function loadRecordDetails(r,preserve=false){const token=++detailRequest;if(!preserve)content.textContent='Loading market…';if(r.details){content.innerHTML=r.details;renderSizingDetails(r);return;}try{const response=await fetch('/api/market/'+encodeURIComponent(r.id),{cache:'no-store'});if(!response.ok)throw Error('Market details unavailable');const data=await response.json();if(token!==detailRequest||!dialog.open)return;content.innerHTML=data.details;renderSizingDetails(records.find(record=>record.key===r.key)||r);}catch(error){if(token===detailRequest&&!preserve)content.textContent=String(error);}}
+tbody.addEventListener('click',e=>{const pin=e.target.closest('[data-watch]');if(pin){const r=records.find(r=>r.id===Number(pin.dataset.watch));if(!r)return;if(watched.has(r.key))watched.delete(r.key);else watched.add(r.key);try{sessionStorage.setItem(watchKey,JSON.stringify([...watched]));}catch(error){}apply();publishSettings();return;}const button=e.target.closest('[data-details]');if(!button)return;const r=records.find(r=>r.id===Number(button.dataset.details));if(!r)return;openRecord=r;dialog.showModal();loadRecordDetails(r);});
+dialog.addEventListener('close',()=>{openRecord=null;detailRequest++;});
+document.getElementById('closeDetails').addEventListener('click',()=>{dialog.close();openRecord=null;detailRequest++;});dialog.addEventListener('click',e=>{if(e.target===dialog&&e.clientX<dialog.getBoundingClientRect().left){dialog.close();openRecord=null;detailRequest++;}});
+document.addEventListener('keydown',e=>{const editing=['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName);if(e.key==='/'&&!editing&&!dialog.open){e.preventDefault();search.focus();}else if(e.key==='Escape'&&document.activeElement===search){search.value='';apply(true);search.blur();}else if(!editing&&!dialog.open&&['e','d','n'].includes(e.key.toLowerCase())){sortBy.value={e:'edge',d:'date',n:'name'}[e.key.toLowerCase()];direction=1;apply(true);}});
+function updateAge(){const minutes=Math.max(0,Math.floor((Date.now()-generatedAt.getTime())/60000));document.getElementById('reportAge').textContent=minutes<2?ageLabel+' just now':minutes<60?`${ageLabel} ${minutes}m ago`:`${ageLabel} ${Math.floor(minutes/60)}h ago`;}
+function expireCrosses(){let changed=false;records.forEach(r=>{if(r.expiry&&!r.stale&&Date.now()>r.expiry){r.crossed=false;r.netCrossed=false;r.edge='';r.stale=true;changed=true;}});if(changed){apply();if(openRecord)renderSizingDetails(openRecord);}}
+window.marketTerminalReplaceRecords=(next,meta={})=>{if(!Array.isArray(next))return;records.splice(0,records.length,...next);if(meta.mode==='runtime_rest'){document.getElementById('runMode').textContent='CONTINUOUS REST';document.getElementById('sourceNote').textContent='Continuous REST monitor · Net = gross − both taker fees at actual size · PnL capped to paired top depth · C: contingency caveat · check venue settlement rules · No orders submitted.';}updateLeagueOptions();if(meta.as_of){const stamp=new Date(meta.as_of);if(Number.isFinite(stamp.getTime()))generatedAt=stamp;}if(openRecord){openRecord=records.find(r=>r.key===openRecord.key)||null;if(openRecord){renderSizingDetails(openRecord);if(dialog.open)loadRecordDetails(openRecord,true);}}expireCrosses();apply();updateAge();if(!settingsPublished)publishSettings();};
+window.marketTerminalPatchRecords=(updates,meta={})=>{if(!Array.isArray(updates))return;const changes=new Map(updates.map(r=>[r.id,r])),heartbeats=new Map((meta.heartbeats||[]).map(r=>[r.id,r]));const merged=records.map(r=>{if(changes.has(r.id)){const update=changes.get(r.id),next={...r,...update,stale:false};changes.delete(r.id);if(!Object.prototype.hasOwnProperty.call(update,'details'))delete next.details;return next;}if(heartbeats.has(r.id))return {...r,...heartbeats.get(r.id),stale:false};return r;});window.marketTerminalReplaceRecords([...merged,...changes.values()],meta);};
+window.marketTerminalViewState=()=>({category:activeCategory,league:leagueFilter.value,minLiquidity:minLiquidity.value,unknownDepth:unknownDepth.checked,size:orderSize.value,extraColumns:extraColumns.checked});
+window.marketTerminalRestoreView=saved=>{if(!saved||typeof saved!=='object')return;if(['sports','esports'].includes(saved.category))selectCategory(saved.category);if(typeof saved.league==='string'&&[...leagueFilter.options].some(o=>o.value===saved.league))leagueFilter.value=saved.league;if(numeric(saved.minLiquidity)!==null&&Number(saved.minLiquidity)>=0)minLiquidity.value=saved.minLiquidity;if(typeof saved.unknownDepth==='boolean')unknownDepth.checked=saved.unknownDepth;if(['1','10','100','1000','top'].includes(saved.size))orderSize.value=saved.size;if(typeof saved.extraColumns==='boolean')extraColumns.checked=saved.extraColumns;document.body.classList.toggle('compact',!extraColumns.checked);};
+selectCategory('sports');updateAge();expireCrosses();setInterval(()=>{updateAge();expireCrosses();},1000);
 '''
 
 
@@ -636,59 +808,30 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str], covera
         freshness_time = checked_at
     source_note = ("Venue availability reflects the saved collection. Replay generation does not refresh source quotes."
                    if replay else "Point-in-time observations · run python3 run.py to refresh")
-    sport_labels = {"cricket": "Cricket", "soccer": "Football", "basketball": "Basketball",
-                    "football": "Am. football", "hockey": "Hockey", "baseball": "Baseball",
-                    "tennis": "Tennis", "mma": "MMA"}
     configured = quality.get("Sports", "")
-    configured = {value.strip() for value in configured.split(",")} if isinstance(configured, str) and configured else set(sport_labels)
+    configured = {value.strip() for value in configured.split(",")} if isinstance(configured, str) and configured else set(SPORT_LABELS) - {"cs2", "lol"}
     present = {row.get("sport", "cricket") for row in rows}
-    sports = [sport for sport in sport_labels if sport in configured or sport in present]
+    sports = [sport for sport in SPORT_LABELS if sport in configured or sport in present]
     sports += sorted(present - set(sports))
-    labels = {sport: sport_labels.get(sport, sport.replace("_", " ").title()) for sport in sports}
-    records = []
-    for index, row in enumerate(rows):
-        sport = row.get("sport", "cricket")
-        fixture_name = f'{row["team_a"]} vs {row["team_b"]}'
-        name = f'{fixture_name} {row["canonical_outcome"]}'
-        date = f'{row["fixture_date"]} {row["start_time_utc"]}'
-        quoted_cells = "".join(f'<td class="venue-cell" data-venue="{html.escape(venue, quote=True)}" '
-                               f'data-market-id="{html.escape(row.get(f"{venue}_market_id", ""), quote=True)}">'
-                               f'{_venue_cell(row, venue)}</td>' for venue in venues)
-        quote_venues = {row.get("eligible_bid_venue", ""), row.get("eligible_ask_venue", ""),
-                        row.get("net_buy_venue", ""), row.get("net_sell_venue", "")} - {""}
-        pair_times = [_timestamp(row.get(f"{venue}_quote_time", "")) for venue in quote_venues]
-        expiry = int((min(pair_times).timestamp() + QUOTE_MAX_AGE_SECONDS) * 1000) if pair_times and all(pair_times) and not replay else 0
-        reviewed = row.get("comparison_status") != "compatible"
-        row_html = (f'<tr data-id="{index}" data-sport="{html.escape(sport, quote=True)}" data-crossed="{row.get("crossed", "false")}" data-net-crossed="{row.get("net_crossed", "false")}" data-review="{str(reviewed).lower()}" data-cross-expiry="{expiry}">'
-                    f'<td class="league-cell">{html.escape(labels.get(sport, sport))}</td>'
-                    f'<td class="competition-cell" title="{html.escape(row.get("competition", ""), quote=True)}">{html.escape(row.get("competition", "") or "—")}</td>'
-                    f'<td class="fixture-cell" title="{html.escape(fixture_name, quote=True)}">{html.escape(fixture_name)}</td>'
-                    f'<td class="date-cell" title="{html.escape(date + " UTC", quote=True)}">{html.escape(row["fixture_date"][5:])} {html.escape(row["start_time_utc"] or "—")}</td>'
-                    f'<td class="outcome-cell" title="{html.escape(row["canonical_outcome"], quote=True)}">{html.escape(row["canonical_outcome"])}</td>'
-                    f'{quoted_cells}<td class="edge-cell">{_net_edge_cell(row, index)}</td><td class="rules-cell">{_rules_cell(row)}</td>'
-                    f'<td class="detail-cell"><button class="details-button" data-details="{index}" aria-haspopup="dialog" aria-label="Details for {html.escape(name, quote=True)}">↗</button></td></tr>')
-        searchable = " ".join([sport, row.get("competition", ""), name, date] + [row.get(f"{venue}_market_id", "") for venue in venues]).lower()
-        records.append({"id": index, "sport": sport, "name": name.lower(), "date": date, "search": searchable,
-                        "crossed": row.get("crossed") == "true", "netCrossed": row.get("net_crossed") == "true", "review": reviewed,
-                        "strict": row.get("strict_comparison_status") == "compatible" and not reviewed,
-                        "edge": row.get("net_gap") or "", "expiry": expiry, "stale": False,
-                        "html": row_html, "details": f'<h2>{html.escape(fixture_name)}</h2><p class="detail-subtitle">{html.escape(row["canonical_outcome"])} · {html.escape(date)} UTC</p>{_details(row, venues)}'})
+    labels = {sport: SPORT_LABELS.get(sport, sport.replace("_", " ").title()) for sport in sports}
+    records = build_terminal_records(rows, venues, replay=replay)
     crosses = sum(record["crossed"] for record in records)
     net_crosses = sum(record["netCrossed"] for record in records)
     matched = sum(row.get("mapping_status", "accepted") == "accepted" for row in rows)
     reviews = sum(record["review"] for record in records)
-    tabs = [('all', 'All'), ('net', 'Net +'), ('crosses', 'Gross crosses'), *[(sport, labels[sport]) for sport in sports]]
-    tabs_html = "".join(f'<button class="tab{" active" if key == "all" else ""}" id="tab-{html.escape(key, quote=True)}" role="tab" aria-selected="{str(key == "all").lower()}" aria-controls="marketPanel" data-tab="{html.escape(key, quote=True)}">{html.escape(label)}'
+    tabs = [('all', 'All markets'), ('net', 'After fees +'), ('crosses', 'Gross crosses'), ('watch', 'Watchlist'), *[(sport, labels[sport]) for sport in sports]]
+    tabs_html = "".join(f'<button class="tab{" active" if key == "all" else ""}" id="tab-{html.escape(key, quote=True)}" role="tab" aria-selected="{str(key == "all").lower()}" aria-controls="marketPanel" data-tab="{html.escape(key, quote=True)}" data-domain="{"esports" if key in {"cs2", "lol", "dota2", "valorant", "esports"} else "sports" if key in sports else "all"}">{html.escape(label)}'
                         + (f'<span id="crossCount">{crosses}</span>' if key == "crosses" else f'<span id="netCrossCount">{net_crosses}</span>' if key == "net" else '') + '</button>' for key, label in tabs)
     coverage = " · ".join(f'{VENUE_LABELS[venue]} {"complete" if coverage_complete.get(venue) else "incomplete"}' for venue in venues)
-    headers = "".join(f'<th scope="col" class="price-heading">{html.escape(VENUE_LABELS[venue])}<span>bid / ask ×ct</span></th>' for venue in venues)
+    headers = "".join(f'<th scope="col" class="price-heading">{html.escape(VENUE_LABELS[venue])}<span>bid × qty / ask × qty</span></th>' for venue in venues)
     payload = json.dumps(records, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c").replace("&", "\\u0026")
     initial = "".join(record["html"] for record in records[:100])
     version = uuid4().hex
     version_path = path.with_suffix(".version.js")
     refresh_script = _report_refresh_script(version, version_path.name)
     service_script = _terminal_service_script()
-    table_min_width = max(1100, 1020 + 142 * len(venues))
+    interaction_script = _terminal_interaction_script(freshness_time, age_label)
+    table_min_width = 1110 + 228 * len(venues)
     doc = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}</title>
 <style>
@@ -696,28 +839,20 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str], covera
 *{{box-sizing:border-box}}[hidden]{{display:none!important}}html,body{{height:100%;margin:0;overflow:hidden}}body{{display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font:11px/1.35 "SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-variant-numeric:tabular-nums}}button,input,select{{font:inherit}}button{{cursor:pointer}}button:disabled{{opacity:.35;cursor:default}}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{{outline:2px solid var(--amber);outline-offset:1px}}button,input,select{{border:1px solid #454545;border-radius:0;background:#111;color:var(--ink)}}button{{padding:3px 6px}}a{{color:var(--blue)}}
 .topbar{{height:33px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 10px;border-bottom:1px solid #6e4a00;background:#14120d}}h1{{font-size:12px;letter-spacing:.5px;display:inline;margin:0;font-weight:700;text-transform:uppercase;color:var(--amber)}}.brand-mark{{color:var(--amber);font-size:17px;margin-right:7px}}.mode{{font-size:8px;letter-spacing:.4px;color:var(--amber);margin-left:10px;border-left:1px solid #655125;padding-left:10px}}.source-age{{color:var(--muted);font-size:9px;white-space:nowrap}}.source-age strong{{font-weight:400}}.summary{{display:flex;gap:14px;font-size:10px;color:var(--muted)}}.summary b{{color:var(--amber);font-weight:700}}#crossSummary{{color:var(--green)}}
 main{{flex:1;min-height:0;display:flex;flex-direction:column;padding:0 8px}}.navline{{flex:none;height:32px;display:flex;justify-content:space-between;align-items:stretch;gap:12px;border-bottom:1px solid var(--line)}}.tabs{{display:flex;gap:2px;align-items:stretch;overflow-x:auto;scrollbar-width:none}}.tab{{border:0;border-bottom:2px solid transparent;background:transparent;color:#b8b8b8;padding:0 8px;font-size:10px;white-space:nowrap;text-transform:uppercase}}.tab.active{{color:#070707;border-color:var(--amber);background:var(--amber);font-weight:700}}.tab span{{font-size:9px;color:var(--green);margin-left:5px}}.tab.active span{{color:#153d18}}.controls{{display:flex;align-items:center;gap:6px;flex:none}}.search{{width:240px;padding:3px 6px;font-size:10px;background:#030303;color:var(--amber)}}.search::placeholder{{color:#999}}.toolline{{height:28px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--muted);font-size:9px}}.toggles{{display:flex;gap:14px;align-items:center}}.toggle{{display:flex;align-items:center;gap:4px;white-space:nowrap}}.toggle input{{margin:0;accent-color:var(--amber);width:11px;height:11px}}.sort-control{{display:flex;gap:5px;align-items:center}}select{{padding:2px 4px;font-size:9px}}.sort-direction{{font-size:10px;padding:1px 6px}}.legend{{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}.conditional{{display:inline-block;color:var(--amber);font-size:8px;border:1px solid #735000;padding:0 3px;line-height:11px;vertical-align:middle}}
-#marketPanel{{display:flex;flex-direction:column;flex:1;min-height:0}}.table-shell{{flex:1;min-height:0;overflow:auto;border:1px solid var(--line);background:var(--surface);position:relative}}table{{border-collapse:separate;border-spacing:0;width:100%;min-width:{table_min_width}px;table-layout:fixed}}th{{position:sticky;top:0;z-index:2;height:27px;background:#242016;border-bottom:1px solid #735000;color:var(--amber);font-size:9px;font-weight:600;text-transform:uppercase;text-align:left;padding:0 6px;white-space:nowrap}}th span{{font-size:8px;color:#b7a57d;margin-left:5px;text-transform:none}}td{{height:25px;padding:0 6px;border-bottom:1px solid #222;border-right:1px solid #191919;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:10px}}tbody tr:last-child td{{border-bottom:0}}tbody tr:nth-child(even){{background:#101010}}tbody tr:hover{{background:var(--hover)}}tr[data-net-crossed="true"] .edge-cell{{background:#12351f}}.league-cell{{color:#a0a0a0;font-size:9px}}.league-head{{width:86px}}.competition-head{{width:112px}}.competition-cell{{color:#b8a170;font-size:9px}}.fixture-head{{width:auto}}.date-head{{width:102px}}.outcome-head{{width:156px}}.price-heading{{width:142px}}.edge-head{{width:83px}}.rules-head{{width:100px}}.detail-head{{width:27px}}.fixture-cell{{color:#f0c373}}.outcome-cell{{text-transform:capitalize;color:#dedede}}.date-cell{{font-size:9px;color:var(--muted)}}.quotes{{display:flex;align-items:center;justify-content:flex-end;gap:5px;font-size:11px}}.quotes strong{{font-weight:500;min-width:35px;text-align:right}}.quote-side{{display:flex;flex-direction:column;align-items:flex-end;line-height:1.1}}.quote-size{{font-size:8px;color:#aaa;max-width:68px;overflow:hidden;text-overflow:ellipsis}}.net-estimate{{display:flex;flex-direction:column;line-height:1.15}}.gross-edge{{font-size:8px;color:#aaa}}.edge-negative{{font-size:11px;color:var(--red)}}#refreshStatus{{font-size:8px;color:var(--amber);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}#refreshPrices{{font-size:9px;color:var(--amber);height:23px;white-space:nowrap}}.bid{{color:var(--green)}}.ask{{color:var(--blue)}}.quote-divider{{color:#777;font-size:9px}}.edge-positive{{color:var(--green);font-size:11px;font-weight:700}}.expired-label,.muted{{color:var(--muted);font-size:9px}}.rule-ok{{font-size:9px;color:#9dbba6}}.rule-review{{font-size:9px;color:var(--amber)}}.details-button{{border:0;background:transparent;color:var(--amber);font-size:13px;padding:1px 2px}}.details-button:hover{{background:var(--amber);color:#000}}.empty{{position:sticky;left:0;padding:40px 16px;text-align:center;color:var(--muted);font-size:11px}}.empty strong{{display:block;color:var(--amber);margin-bottom:7px}}.pager{{height:29px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:9px}}.page-buttons{{display:flex;gap:3px;align-items:center}}.page-buttons button{{height:21px;min-width:23px;font-size:10px;padding:1px 5px}}#pageStatus{{min-width:70px;text-align:center;font-size:9px}}.page-size{{display:flex;gap:6px;align-items:center}}footer{{height:23px;flex:none;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 10px;color:#929292;font-size:8px;white-space:nowrap;overflow:hidden}}footer span{{overflow:hidden;text-overflow:ellipsis}}.coverage{{text-align:right}}
+#marketPanel{{display:flex;flex-direction:column;flex:1;min-height:0}}.table-shell{{flex:1;min-height:0;overflow:auto;border:1px solid var(--line);background:var(--surface);position:relative}}table{{border-collapse:separate;border-spacing:0;width:{table_min_width}px;min-width:0;table-layout:fixed}}th{{position:sticky;top:0;z-index:2;height:27px;background:#242016;border-bottom:1px solid #735000;color:var(--amber);font-size:9px;font-weight:600;text-transform:uppercase;text-align:left;padding:0 6px;white-space:nowrap}}th span{{font-size:8px;color:#b7a57d;margin-left:5px;text-transform:none}}td{{height:25px;padding:0 6px;border-bottom:1px solid #222;border-right:1px solid #191919;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:10px}}tbody tr:last-child td{{border-bottom:0}}tbody tr:nth-child(even){{background:#101010}}tbody tr:hover{{background:var(--hover)}}tr[data-net-crossed="true"] .edge-cell{{background:#12351f}}.league-cell{{color:#a0a0a0;font-size:9px}}.league-head{{width:86px}}.competition-head{{width:112px}}.competition-cell{{color:#b8a170;font-size:9px}}.fixture-head{{width:185px}}.date-head{{width:102px}}.outcome-head{{width:116px}}.price-heading{{width:228px}}.edge-head,.gross-head,.fees-head{{width:64px}}.pnl-head{{width:98px}}.liquidity-head{{width:85px}}.watch-head{{width:25px}}.rules-head{{width:100px}}.detail-head{{width:27px}}.fixture-cell{{color:#f0c373}}.outcome-cell{{text-transform:capitalize;color:#dedede}}.date-cell{{font-size:9px;color:var(--muted)}}.quotes{{display:flex;align-items:center;justify-content:flex-end;gap:5px;font-size:11px}}.quotes strong{{font-weight:500;min-width:35px;text-align:right}}.quote-side{{display:flex;flex-direction:row;align-items:baseline;gap:4px;line-height:1.3;white-space:nowrap}}.quote-size{{font-size:10px;color:#c7c7c7;max-width:70px;overflow:hidden;text-overflow:ellipsis}}.net-estimate{{display:flex;flex-direction:column;line-height:1.15}}.gross-edge{{font-size:8px;color:#aaa}}.edge-negative{{font-size:11px;color:var(--red)}}#refreshStatus{{font-size:8px;color:var(--amber);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}#refreshPrices{{font-size:9px;color:var(--amber);height:23px;white-space:nowrap}}.bid{{color:var(--green)}}.ask{{color:var(--blue)}}.quote-divider{{color:#777;font-size:9px}}.edge-positive{{color:var(--green);font-size:11px;font-weight:700}}.expired-label,.muted{{color:var(--muted);font-size:9px}}.rule-ok{{font-size:9px;color:#9dbba6}}.rule-review{{font-size:9px;color:var(--amber)}}.details-button{{border:0;background:transparent;color:var(--amber);font-size:13px;padding:1px 2px}}.details-button:hover{{background:var(--amber);color:#000}}.empty{{position:sticky;left:0;padding:40px 16px;text-align:center;color:var(--muted);font-size:11px}}.empty strong{{display:block;color:var(--amber);margin-bottom:7px}}.pager{{height:29px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted);font-size:9px}}.page-buttons{{display:flex;gap:3px;align-items:center}}.page-buttons button{{height:21px;min-width:23px;font-size:10px;padding:1px 5px}}#pageStatus{{min-width:70px;text-align:center;font-size:9px}}.page-size{{display:flex;gap:6px;align-items:center}}footer{{height:23px;flex:none;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 10px;color:#929292;font-size:8px;white-space:nowrap;overflow:hidden}}footer span{{overflow:hidden;text-overflow:ellipsis}}.coverage{{text-align:right}}
 .dialog{{position:fixed;inset:0 0 0 auto;width:min(540px,100%);height:100dvh;max-height:100dvh;max-width:100%;margin:0;border:0;border-left:1px solid #805400;padding:16px;background:#0b0b0b;color:var(--ink);box-shadow:-12px 0 50px #0009;overflow:auto}}.dialog::backdrop{{background:#0009}}.close-dialog{{position:sticky;top:0;float:right;width:24px;height:24px;font-size:17px;padding:0;background:#252014;color:var(--amber)}}.dialog h2{{font-size:14px;line-height:1.4;margin:9px 28px 3px 0;font-weight:600;color:var(--amber)}}.detail-subtitle{{color:var(--muted);font-size:10px;margin-bottom:17px}}.detail-basis{{font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--amber)}}.detail-reason{{font-size:11px;line-height:1.6;color:#d0d0d0}}.detail-note{{font-size:9px;line-height:1.6;color:var(--muted)}}.detail-venue{{border-top:1px solid #5e451a;margin-top:17px;padding-top:12px}}.detail-venue h3{{font-size:12px;font-weight:600;display:inline;margin-right:16px;color:var(--amber)}}.detail-venue>a{{font-size:9px;text-decoration:none}}.detail-venue p{{font-size:10px;color:#b6b6b6}}.detail-quotes{{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:#111;padding:9px 10px;margin:10px 0}}.detail-quotes>div{{display:flex;align-items:center;gap:7px;flex-wrap:wrap}}.detail-depth{{font-size:9px;color:#aaa}}.fee-estimate{{border:1px solid #66501e;background:#14120d;padding:9px 10px;margin-top:12px}}.fee-estimate h3{{margin:0 0 9px;color:var(--amber);font-size:11px;font-weight:500}}.fee-breakdown{{grid-template-columns:105px minmax(0,1fr)}}.detail-quotes>div>span{{text-transform:uppercase;font-size:9px;color:#b8b8b8}}.detail-quotes strong{{font-size:18px;font-weight:500}}.quote-status{{margin-left:auto;font-size:8px;text-transform:uppercase;color:var(--muted)}}dl{{display:grid;grid-template-columns:68px minmax(0,1fr);gap:5px;font-size:9px}}dt{{color:var(--muted)}}dd{{margin:0;overflow-wrap:anywhere}}summary{{cursor:pointer;color:#c6a66e;font-size:10px;margin-top:12px}}.caveats li{{font-size:10px;color:var(--muted);margin:7px 0}}pre{{font:9px/1.6 "SFMono-Regular",Consolas,Menlo,monospace;background:#050505;border:1px solid var(--line);padding:8px;white-space:pre-wrap;overflow-wrap:anywhere;color:#b5b5b5}}.payout-table{{min-width:0;table-layout:auto;width:100%;margin-top:10px}}.payout-table caption{{text-align:left;font-size:9px;color:var(--muted);padding-bottom:7px}}.payout-table th{{position:static;height:23px;font-size:9px;background:#151515;color:#999;border-bottom:1px solid var(--line)}}.payout-table td{{height:23px;font-size:10px;color:#bbb}}.payout-table td:last-child,.payout-table th:last-child{{text-align:right}}
-@media(max-width:1050px){{.summary{{gap:9px}}.source-age strong{{display:none}}.legend{{display:none}}.search{{width:190px}}.tab{{padding:0 7px}}.fixture-head{{width:250px}}}}@media(max-width:620px){{.topbar{{padding:0 7px;height:32px}}h1{{font-size:11px}}.summary{{font-size:8px;gap:8px}}.summary .review-summary{{display:none}}.mode{{display:none}}.source-age{{font-size:8px}}main{{padding:0 4px}}.navline{{height:auto;min-height:59px;flex-wrap:wrap;gap:0;padding-bottom:5px}}.tabs{{width:100%;height:30px}}.controls{{width:100%}}.search{{width:100%}}.toolline{{height:29px}}.toggles{{gap:9px;font-size:8px}}.sort-control label{{display:none}}footer{{height:22px;padding:0 6px;font-size:7px}}footer .coverage{{display:none}}.page-size{{gap:3px}}.pager{{gap:6px}}.dialog{{padding:13px}}.detail-quotes{{gap:16px}}}}
-</style></head><body>
-<header class="topbar"><div><span class="brand-mark" aria-hidden="true">≋</span><h1>Market Terminal</h1><span class="mode">{badge}</span></div><div class="summary"><span><b>{matched}</b> comparable</span><span><b id="netCrossSummary">{net_crosses}</b> net +</span><span><b id="crossSummary">{crosses}</b> gross</span><span class="review-summary"><b>{reviews}</b> reviews</span></div><div class="source-age" title="{html.escape(collection_note, quote=True)}"><span id="reportAge">Source age…</span> <strong>· {timestamp_label} {html.escape(timestamp_value)}</strong></div></header>
-<main><div class="navline"><nav class="tabs" role="tablist" aria-label="Sports and crosses">{tabs_html}</nav><div class="controls"><span id="refreshStatus" role="status" hidden></span><button id="refreshPrices" hidden>Refresh prices</button><input class="search" id="search" type="search" aria-label="Search fixtures and outcomes" placeholder="Search fixture, team, outcome  /" autocomplete="off"></div></div>
-<div class="toolline"><div class="toggles"><label class="toggle"><input id="showReviews" type="checkbox" checked>Reviews</label><label class="toggle"><input id="strictRules" type="checkbox">Full contract only</label><span class="legend"><span class="conditional">C</span> contingency caveat · core payouts must agree</span></div><div class="sort-control"><label for="sortBy">Sort</label><select id="sortBy" aria-label="Sort markets"><option value="date">Date</option><option value="edge">Net edge</option><option value="name">Name</option></select><button class="sort-direction" id="sortDirection" aria-label="Reverse sort direction" title="Reverse sort">↑</button></div></div>
-<section id="marketPanel" role="tabpanel" aria-labelledby="tab-all"><div class="table-shell" id="tableScroll"><table><thead><tr><th scope="col" class="league-head">Sport</th><th scope="col" class="competition-head">League</th><th scope="col" class="fixture-head">Fixture</th><th scope="col" class="date-head">Date / UTC</th><th scope="col" class="outcome-head">Outcome</th>{headers}<th scope="col" class="edge-head">Net / gross<span>1 ct</span></th><th scope="col" class="rules-head">Rules</th><th scope="col" class="detail-head"><span class="muted">↗</span></th></tr></thead><tbody id="rows">{initial}</tbody></table><div id="empty" class="empty" hidden><strong id="emptyHeading">No matching markets</strong><span id="emptyMessage">Change sport, search, or settlement filter.</span></div></div>
+@media(max-width:1050px){{.summary{{gap:9px}}.source-age strong{{display:none}}.legend{{display:none}}.search{{width:190px}}.tab{{padding:0 7px}}.fixture-head{{width:185px}}}}@media(max-width:620px){{.topbar{{padding:0 7px;height:32px}}h1{{font-size:11px}}.summary{{font-size:8px;gap:8px}}.summary .review-summary{{display:none}}.mode{{display:none}}.source-age{{font-size:8px}}main{{padding:0 4px}}.navline{{height:auto;min-height:59px;flex-wrap:wrap;gap:0;padding-bottom:5px}}.tabs{{width:100%;height:30px}}.controls{{width:100%}}.search{{width:100%}}.toolline{{height:29px}}.toggles{{gap:9px;font-size:8px}}.sort-control label{{display:none}}footer{{height:22px;padding:0 6px;font-size:7px}}footer .coverage{{display:none}}.page-size{{gap:3px}}.pager{{gap:6px}}.dialog{{padding:13px}}.detail-quotes{{gap:16px}}}}
+.categoryline{{height:32px;flex:none;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #56411c}}.categories{{height:100%;display:flex;gap:3px}}.category{{border:0;border-bottom:2px solid transparent;background:transparent;font-size:11px;padding:0 13px;text-transform:uppercase;color:#b9b9b9}}.category.active{{color:var(--amber);border-color:var(--amber);background:#221b0d}}.category small{{font-size:8px;color:#888;margin-left:3px}}.category span{{font-size:9px;color:#8a8a8a}}.category-note{{color:#999;font-size:9px}}.filterline{{min-height:32px;flex:none;display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-bottom:1px solid #242424;color:#a9a9a9;font-size:10px;padding:3px 0}}.filterline label{{display:flex;align-items:center;gap:5px;white-space:nowrap}}.filterline input[type=number]{{width:68px;padding:2px 4px;font-size:10px}}.filterline select{{font-size:10px;max-width:190px}}#liquiditySummary{{color:var(--amber);font-size:9px;margin-left:auto}}.fixture-button{{font-size:10px;color:#f0c373;padding:0;border:0;background:none;text-align:left;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;max-width:173px;display:block;width:100%}}.fixture-button:hover{{text-decoration:underline}}.watch-button{{border:0;padding:0;background:none;font-size:15px;color:#777}}.watch-button[aria-pressed=true]{{color:var(--amber)}}th button{{border:0;background:none;color:inherit;font:inherit;text-transform:inherit;padding:0;text-align:left;width:100%;height:100%}}th[aria-sort=ascending] button::after{{content:' ↑';color:#fff}}th[aria-sort=descending] button::after{{content:' ↓';color:#fff}}.gross-cell,.fees-cell,.edge-cell,.pnl-cell,.liquidity-cell{{text-align:right;font-size:10px}}.fees-cell{{color:#f2b578}}.gross-cell{{color:#b5b5b5}}.pnl-cell small{{font-size:9px;margin-left:5px;color:#aaa}}.sizing-stale{{color:var(--muted)}}body.compact .league-head,body.compact .league-cell,body.compact .date-head,body.compact .date-cell,body.compact .rules-head,body.compact .rules-cell{{display:none}}body.compact #marketTable{{width:{table_min_width - 288}px}}.sizing-formula{{font-size:12px;color:var(--amber);margin:8px 0}}.size-positive{{color:var(--green)}}.size-negative{{color:var(--red)}}.blocked-order{{color:var(--amber)}}@media(max-width:900px){{.category-note{{display:none}}.filterline{{gap:8px}}.filterline label{{font-size:9px}}.filterline select{{max-width:140px}}#liquiditySummary{{margin-left:0}}}}@media(max-width:620px){{.category{{padding:0 9px;font-size:10px}}.toolline{{height:32px}}.toggles{{gap:7px}}.toggles .legend{{display:none}}.filterline{{min-height:59px}}.filterline select{{max-width:125px}}}}
+</style></head><body class="compact">
+<header class="topbar"><div><span class="brand-mark" aria-hidden="true">≋</span><h1>Market Terminal</h1><span class="mode" id="runMode">{badge}</span></div><div class="summary"><span><b>{matched}</b> comparable</span><span><b id="netCrossSummary">{net_crosses}</b> net +</span><span><b id="crossSummary">{crosses}</b> gross</span><span class="review-summary"><b>{reviews}</b> reviews</span></div><div class="source-age" title="{html.escape(collection_note, quote=True)}"><span id="reportAge">Source age…</span> <strong>· {timestamp_label} {html.escape(timestamp_value)}</strong></div></header>
+<main><div class="categoryline"><nav class="categories" aria-label="Market category"><button class="category active" data-category="sports" aria-pressed="true">Sports <span id="sportsCount"></span></button><button class="category" data-category="esports" aria-pressed="false">Esports <span id="esportsCount"></span></button><button class="category" disabled title="Finance discovery and settlement matching are not connected yet">Finance <small>later</small></button><button class="category" disabled title="Technology discovery and settlement matching are not connected yet">Tech <small>later</small></button></nav><span class="category-note" id="categoryNote">Matched contracts · two taker legs</span></div><div class="navline"><nav class="tabs" role="tablist" aria-label="Market views and sports">{tabs_html}</nav><div class="controls"><span id="refreshStatus" role="status" hidden></span><button id="refreshPrices" hidden>Refresh prices</button><input class="search" id="search" type="search" aria-label="Search fixtures and outcomes" placeholder="Search fixture, team, outcome  /" autocomplete="off"></div></div>
+<div class="filterline"><label>League <select id="leagueFilter" aria-label="Filter league"><option value="">All leagues</option></select></label><label title="Minimum paired top-of-book notional on each leg; market volume is not executable depth">Min top liquidity $ <input id="minLiquidity" type="number" min="0" step="10" value="100" aria-label="Minimum top liquidity dollars"></label><label class="toggle" title="Include markets whose top-of-book quantity is unavailable"><input id="showUnknownDepth" type="checkbox">Unknown depth</label><label title="Both taker fees are recalculated at this order size, capped to available paired depth">Size <select id="orderSize" aria-label="Requested paired contracts"><option value="1">1 ct</option><option value="10">10 ct</option><option value="100" selected>100 ct</option><option value="1000">1,000 ct</option><option value="top">Top depth</option></select></label><span id="liquiditySummary" role="status"></span></div><div class="toolline"><div class="toggles"><label class="toggle"><input id="showReviews" type="checkbox" checked>Reviews</label><label class="toggle"><input id="strictRules" type="checkbox">Full contract only</label><label class="toggle"><input id="extraColumns" type="checkbox">Extra columns</label><span class="legend"><span class="conditional">C</span> contingency caveat · fees at selected size</span></div><div class="sort-control"><label for="sortBy">Sort</label><select id="sortBy" aria-label="Sort markets"><option value="date">Date</option><option value="edge">Net edge</option><option value="name">Name</option><option value="competition">League</option><option value="gross">Gross edge</option><option value="pnl">Estimated PnL</option><option value="liquidity">Top liquidity</option></select><button class="sort-direction" id="sortDirection" aria-label="Reverse sort direction" title="Reverse sort">↑</button></div></div>
+<section id="marketPanel" role="tabpanel" aria-labelledby="tab-all"><div class="table-shell" id="tableScroll"><table id="marketTable"><thead><tr><th scope="col" class="watch-head" title="Watchlist">★</th><th scope="col" class="league-head">Sport</th><th scope="col" class="competition-head" aria-sort="none"><button data-sort="competition">League</button></th><th scope="col" class="fixture-head" aria-sort="none"><button data-sort="name">Match / event</button></th><th scope="col" class="date-head" aria-sort="none"><button data-sort="date">Date / UTC</button></th><th scope="col" class="outcome-head">Outcome</th>{headers}<th scope="col" class="gross-head" aria-sort="none" title="Sell bid minus buy ask, before fees, cents per contract"><button data-sort="gross">Gross ¢</button></th><th scope="col" class="fees-head" title="Buy and sell taker fees, cents per contract, rounded at actual size">Fees ¢</th><th scope="col" class="edge-head" aria-sort="none" title="Gross edge minus both taker fees, cents per contract"><button data-sort="edge">Net ¢</button></th><th scope="col" class="pnl-head" aria-sort="none" title="Estimated net dollars at displayed actual quantity, capped to paired top depth"><button data-sort="pnl">Est. PnL $</button></th><th scope="col" class="liquidity-head" aria-sort="none" title="Smaller paired top-of-book notional across the two legs"><button data-sort="liquidity">Top liq $</button></th><th scope="col" class="rules-head">Rules</th><th scope="col" class="detail-head"><span class="muted">↗</span></th></tr></thead><tbody id="rows">{initial}</tbody></table><div id="empty" class="empty" hidden><strong id="emptyHeading">No matching markets</strong><span id="emptyMessage">Change sport, search, or settlement filter.</span></div></div>
 <div class="pager"><span id="resultCount" aria-live="polite">{len(rows)} outcomes</span><div class="page-buttons"><button id="firstPage" aria-label="First page">«</button><button id="prevPage" aria-label="Previous page">‹</button><span id="pageStatus">1 / 1</span><button id="nextPage" aria-label="Next page">›</button><button id="lastPage" aria-label="Last page">»</button></div><label class="page-size" for="pageSize">Rows<select id="pageSize" aria-label="Rows per page"><option value="25">25</option><option value="50">50</option><option value="100" selected>100</option></select></label></div></section></main>
-<footer><span title="{html.escape(source_note, quote=True)}">{source_note} · Net: both taker fees, 1 ct/leg estimate; ×ct: top depth; check venue settlement rules. A cross is not a guarantee of profit.</span><span class="coverage">{html.escape(coverage)}</span></footer>
+<footer><span id="sourceNote" title="{html.escape(source_note, quote=True)}">{source_note} · Net = gross − both taker fees at selected size; estimated PnL is depth-capped; × qty is top depth; check venue settlement rules. A cross is not a guarantee of profit.</span><span class="coverage">{html.escape(coverage)}</span></footer>
 <dialog id="detailsDialog" class="dialog" aria-label="Market comparison details"><button id="closeDetails" class="close-dialog" aria-label="Close details">×</button><div id="detailContent"></div></dialog>
 <script type="application/json" id="marketData">{payload}</script><script>
-const records=JSON.parse(document.getElementById('marketData').textContent),tbody=document.getElementById('rows'),search=document.getElementById('search'),reviewToggle=document.getElementById('showReviews'),strictToggle=document.getElementById('strictRules'),sortBy=document.getElementById('sortBy'),pageSize=document.getElementById('pageSize'),tabs=[...document.querySelectorAll('[data-tab]')];let activeTab='all',page=0,direction=1,filtered=[];
-function matchingRecords(){{const q=search.value.trim().toLowerCase();return records.filter(r=>(activeTab==='all'||(activeTab==='net'?r.netCrossed:activeTab==='crosses'?r.crossed:r.sport===activeTab))&&(reviewToggle.checked||!r.review)&&(!strictToggle.checked||r.strict)&&(!q||r.search.includes(q))).sort((a,b)=>{{let result=0;if(sortBy.value==='edge'){{const av=a.edge===''?-Infinity:Number(a.edge),bv=b.edge===''?-Infinity:Number(b.edge);result=av===bv?0:av>bv?-1:1}}else{{result=String(a[sortBy.value]||'').localeCompare(String(b[sortBy.value]||''))}}return direction*result||a.id-b.id}})}}
-function apply(reset=false){{if(reset)page=0;filtered=matchingRecords();const size=Number(pageSize.value),pages=Math.max(1,Math.ceil(filtered.length/size));page=Math.min(page,pages-1);const start=page*size,visible=filtered.slice(start,start+size);tbody.innerHTML=visible.map(r=>r.html).join('');visible.forEach(r=>{{if(r.stale){{const tr=tbody.querySelector(`[data-id="${{r.id}}"]`);tr.dataset.crossed='false';tr.dataset.netCrossed='false';const edge=tr.querySelector('.net-estimate')||tr.querySelector('.edge-positive'),label=tr.querySelector('.expired-label');if(edge)edge.hidden=true;if(label)label.hidden=false}}}});document.getElementById('empty').hidden=filtered.length!==0;document.getElementById('emptyHeading').textContent=activeTab==='net'?'No positive net estimates':activeTab==='crosses'?'No eligible gross crosses':'No matching markets';document.getElementById('emptyMessage').textContent=['net','crosses'].includes(activeTab)?'Try All or a sport tab to inspect prices, fees and comparisons.':'Change sport, search, or settlement filter.';document.getElementById('resultCount').textContent=filtered.length?`${{start+1}}–${{Math.min(start+size,filtered.length)}} of ${{filtered.length}} outcomes`:'0 outcomes';document.getElementById('pageStatus').textContent=`${{page+1}} / ${{pages}}`;document.getElementById('firstPage').disabled=document.getElementById('prevPage').disabled=page===0;document.getElementById('nextPage').disabled=document.getElementById('lastPage').disabled=page>=pages-1;if(reset)document.getElementById('tableScroll').scrollTop=0;}}
-function selectTab(tab){{activeTab=tab.dataset.tab;tabs.forEach(t=>{{const selected=t===tab;t.classList.toggle('active',selected);t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1}});document.getElementById('marketPanel').setAttribute('aria-labelledby',tab.id);apply(true)}}
-tabs.forEach((tab,index)=>{{tab.addEventListener('click',()=>selectTab(tab));tab.addEventListener('keydown',e=>{{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){{e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(index+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;selectTab(tabs[next]);tabs[next].focus()}}}})}});
-search.addEventListener('input',()=>apply(true));reviewToggle.addEventListener('change',()=>apply(true));strictToggle.addEventListener('change',()=>apply(true));pageSize.addEventListener('change',()=>apply(true));sortBy.addEventListener('change',()=>{{direction=1;document.getElementById('sortDirection').textContent='↑';apply(true)}});document.getElementById('sortDirection').addEventListener('click',()=>{{direction*=-1;document.getElementById('sortDirection').textContent=direction===1?'↑':'↓';apply(true)}});document.getElementById('firstPage').addEventListener('click',()=>{{page=0;apply(true)}});document.getElementById('prevPage').addEventListener('click',()=>{{page=Math.max(0,page-1);apply();document.getElementById('tableScroll').scrollTop=0}});document.getElementById('nextPage').addEventListener('click',()=>{{page++;apply();document.getElementById('tableScroll').scrollTop=0}});document.getElementById('lastPage').addEventListener('click',()=>{{page=Math.max(0,Math.ceil(filtered.length/Number(pageSize.value))-1);apply();document.getElementById('tableScroll').scrollTop=0}});
-const dialog=document.getElementById('detailsDialog'),content=document.getElementById('detailContent');tbody.addEventListener('click',e=>{{const button=e.target.closest('[data-details]');if(!button)return;content.innerHTML=records[Number(button.dataset.details)].details;dialog.showModal()}});document.getElementById('closeDetails').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{{if(e.target===dialog&&e.clientX<dialog.getBoundingClientRect().left)dialog.close()}});
-document.addEventListener('keydown',e=>{{const editing=['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName);if(e.key==='/'&&!editing&&!dialog.open){{e.preventDefault();search.focus()}}else if(e.key==='Escape'&&document.activeElement===search){{search.value='';apply(true);search.blur()}}else if(!editing&&!dialog.open&&['e','d','n'].includes(e.key.toLowerCase())){{sortBy.value={{e:'edge',d:'date',n:'name'}}[e.key.toLowerCase()];direction=1;apply(true)}}}});
-const generatedAt=new Date('{freshness_time.isoformat()}');const ageLabel='{age_label}';function updateAge(){{const minutes=Math.max(0,Math.floor((Date.now()-generatedAt.getTime())/60000));document.getElementById('reportAge').textContent=minutes<2?ageLabel+' just now':minutes<60?`${{ageLabel}} ${{minutes}}m ago`:`${{ageLabel}} ${{Math.floor(minutes/60)}}h ago`}}
-function expireCrosses(){{let changed=false;records.forEach(r=>{{if(r.expiry&&!r.stale&&Date.now()>r.expiry){{r.crossed=false;r.netCrossed=false;r.edge='';r.stale=true;changed=true}}}});if(changed){{const n=records.filter(r=>r.crossed).length;document.getElementById('crossSummary').textContent=n;document.getElementById('crossCount').textContent=n;const net=records.filter(r=>r.netCrossed).length;document.getElementById('netCrossSummary').textContent=net;document.getElementById('netCrossCount').textContent=net;apply()}}}}updateAge();expireCrosses();setInterval(()=>{{updateAge();expireCrosses()}},10000);
+{interaction_script}
 </script><script id="reportRefresh">{refresh_script}</script><script id="terminalService">{service_script}</script></body></html>'''
     html_temp = path.with_name(f".{path.name}.{version}.tmp")
     version_temp = version_path.with_name(f".{version_path.name}.{version}.tmp")

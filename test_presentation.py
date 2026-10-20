@@ -153,7 +153,7 @@ class ReportModeTests(unittest.TestCase):
         document = self.render({"Run type": "LIVE"})
         self.assertIn("LIVE API REPORT", document)
         self.assertIn("Live collection completed", document)
-        self.assertIn(f"new Date('{self.source_time.isoformat()}')", document)
+        self.assertIn(f'new Date({json.dumps(self.source_time.isoformat())})', document)
 
     def test_replay_keeps_source_timestamp_separate_from_generation_age(self):
         document = self.render({"Run type": "REPLAY"})
@@ -161,8 +161,8 @@ class ReportModeTests(unittest.TestCase):
         self.assertIn("Market Terminal · Snapshot Replay", document)
         self.assertIn("Snapshot collected", document)
         self.assertIn("18 Oct 2026, 05:00:00 UTC", document)
-        self.assertIn(f"new Date('{self.replay_time.isoformat()}')", document)
-        self.assertIn("const ageLabel='Replay generated'", document)
+        self.assertIn(f'new Date({json.dumps(self.replay_time.isoformat())})', document)
+        self.assertIn('const ageLabel="Replay generated"', document)
         self.assertIn("Venue availability reflects the saved collection.", document)
         self.assertNotIn("LIVE API REPORT", document)
         self.assertNotIn("Live collection completed", document)
@@ -174,18 +174,18 @@ class ReportModeTests(unittest.TestCase):
         })
         self.assertIn("Source collection time unavailable", document)
         self.assertNotIn("18 Oct 2026, 05:00:00 UTC", document)
-        self.assertIn(f"new Date('{self.replay_time.isoformat()}')", document)
+        self.assertIn(f'new Date({json.dumps(self.replay_time.isoformat())})', document)
 
     def test_refreshed_live_report_ages_quotes_without_relabeling_discovery(self):
         document = self.render({"Run type": "LIVE", "Quotes checked at": self.replay_time.isoformat()})
         self.assertIn("Quotes checked 19 Oct 2026, 08:00:00 UTC", document)
-        self.assertIn(f"new Date('{self.replay_time.isoformat()}')", document)
+        self.assertIn(f'new Date({json.dumps(self.replay_time.isoformat())})', document)
         self.assertIn('title="Source discovery completed 18 Oct 2026, 05:00:00 UTC"', document)
 
     def test_replay_ignores_live_quote_age_metadata(self):
         document = self.render({"Run type": "REPLAY", "Quotes checked at": self.replay_time.isoformat()})
         self.assertIn("Snapshot collected 18 Oct 2026, 05:00:00 UTC", document)
-        self.assertIn("const ageLabel='Replay generated'", document)
+        self.assertIn('const ageLabel="Replay generated"', document)
         self.assertNotIn("Quotes checked", document)
 
     def test_invalid_quote_check_time_preserves_collection_age(self):
@@ -193,7 +193,7 @@ class ReportModeTests(unittest.TestCase):
             with self.subTest(stamp=stamp):
                 document = self.render({"Run type": "LIVE", "Quotes checked at": stamp})
                 self.assertIn("Live collection completed", document)
-                self.assertIn(f"new Date('{self.source_time.isoformat()}')", document)
+                self.assertIn(f'new Date({json.dumps(self.source_time.isoformat())})', document)
 
 
 class ReportRefreshTests(unittest.TestCase):
@@ -410,12 +410,12 @@ class QuotePresentationTests(unittest.TestCase):
         self.assertEqual(row["kalshi_bid_size"], "12.5")
         self.assertEqual(row["polymarket_intl_ask_size"], "8.7")
         details = P._details(row, VENUES)
-        self.assertIn("Taker edge · 1 contract per leg", details)
+        self.assertIn("Fee reference · 1 contract per leg", details)
         self.assertIn("Sell taker fee</dt><dd>2¢", details)
         self.assertIn("Net / contract</dt><dd>1¢", details)
         self.assertIn("×12.5 ct", details)
         self.assertIn("below venue minimum order sizes", details)
-        self.assertIn("×12.5", P._venue_cell(row, "kalshi"))
+        self.assertIn("× 12.5", P._venue_cell(row, "kalshi"))
 
     def test_gross_cross_can_be_negative_after_fees(self):
         self.known_fees()
@@ -649,7 +649,7 @@ class QuotePresentationTests(unittest.TestCase):
             self.assertIn(f'data-side="ask">{ask}</strong>', record["html"])
         self.assertIn('data-market-id="market&quot;&lt;unsafe&gt;"', record["html"])
         self.assertIn('class="competition-cell" title="Example cup">Example cup</td>', record["html"])
-        self.assertIn('class="competition-head">League</th>', document)
+        self.assertIn('data-sort="competition">League</button></th>', document)
 
     def crossing_quotes(self):
         self.left.bid, self.left.ask = "0.65", "0.70"
@@ -782,6 +782,159 @@ class QuotePresentationTests(unittest.TestCase):
         self.assertEqual(rows[0]["kalshi_ask"], "")
         self.assertEqual(rows[0]["crossed"], "false")
         self.assertIn("another-kalshi-market", rows[0]["kalshi_alternatives"])
+
+
+class TerminalWorkspaceTests(unittest.TestCase):
+    def setUp(self):
+        self.case = QuotePresentationTests()
+        self.case.setUp()
+        self.case.known_fees()
+        self.case.crossing_quotes()
+        self.case.left.extra.update(quote_bid_size="300", quote_ask_size="2000")
+        self.case.right.extra.update(quote_bid_size="1400", quote_ask_size="400")
+
+    def test_sizes_recalculate_fees_and_cap_pnl_to_paired_depth(self):
+        row = self.case.row()
+        record = P.build_terminal_records([row], VENUES)[0]
+        unit, hundred, thousand = (record["estimates"][key] for key in ("1", "100", "1000"))
+        self.assertEqual(unit["total_fees"], "0.020000")
+        self.assertEqual(hundred["total_fees"], "1.600000")
+        self.assertEqual(hundred["net_total"], "1.400000")
+        self.assertEqual(hundred["paired_top_notional_usd"], "186.00")
+        self.assertEqual(thousand["sized_quantity"], "300")
+        self.assertTrue(thousand["quantity_capped"])
+        self.assertEqual(thousand["net_total"], "4.220000")
+        self.assertEqual(record["estimates"]["top"]["sized_quantity"], "300")
+
+    def test_unknown_depth_preserves_positive_gross_without_inventing_pnl(self):
+        self.case.left.extra["quote_bid_size"] = ""
+        record = P.build_terminal_records([self.case.row()], VENUES)[0]
+        estimate = record["estimates"]["100"]
+        self.assertEqual(estimate["gross_gap"], "0.03")
+        self.assertIsNone(estimate["paired_top_notional_usd"])
+        self.assertIsNone(estimate["net_total"])
+        self.assertIsNone(estimate["sized_quantity"])
+        self.assertEqual(estimate["buy_venue"], "polymarket_intl")
+
+    def test_unknown_fees_preserve_gross_instead_of_a_known_losing_reverse_route(self):
+        self.case.left.extra.pop("fee_type")
+        estimate = P.build_terminal_records([self.case.row()], VENUES)[0]["estimates"]["100"]
+        self.assertEqual(estimate["gross_gap"], "0.03")
+        self.assertIsNone(estimate["net_total"])
+        self.assertIsNone(estimate["total_fees"])
+
+    def test_review_and_invalid_quotes_never_get_sized_profit_estimates(self):
+        self.case.left.bid = "0.9"
+        row = self.case.row()
+        self.assertEqual(json.loads(row["eligible_routes"]), [])
+        self.assertEqual(P.build_terminal_records([row], VENUES)[0]["estimates"], {})
+        self.case.left.bid = "0.65"
+        self.case.left.extra["settlement"] = known_profile(draw="0.5")
+        self.assertEqual(P.build_terminal_records([self.case.row()], VENUES)[0]["estimates"], {})
+
+    def test_api_records_omit_details_and_watch_keys_survive_reordering(self):
+        row = self.case.row()
+        second = {**row, "canonical_fixture_id": "other", "canonical_outcome": "b"}
+        initial = P.build_terminal_records([row, second], VENUES)
+        runtime = P.build_terminal_records([second, row], VENUES, include_details=False, max_age_seconds=30)
+        self.assertEqual(runtime[1]["key"], initial[0]["key"])
+        self.assertNotIn("details", runtime[0])
+        self.assertIn("details", initial[0])
+        self.assertEqual(initial[0]["expiry"] - runtime[1]["expiry"], 270_000)
+        details = P.terminal_record_details(row, VENUES, max_age_seconds=30, max_skew_seconds=5)
+        self.assertIn("30 seconds old and 5 seconds apart", details)
+
+    def test_esports_category_and_unconnected_categories_are_truthful(self):
+        self.case.match.fixture.key.sport = "cs2"
+        row = self.case.row()
+        self.assertEqual(row["domain"], "esports")
+        record = P.build_terminal_records([row], VENUES)[0]
+        self.assertEqual(record["domain"], "esports")
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "terminal.html"
+            P.write_html(path, [row], VENUES, self.case.coverage, self.case.as_of, {"Sports": "cs2"})
+            document = path.read_text()
+        self.assertIn('data-category="esports"', document)
+        self.assertIn('data-tab="cs2" data-domain="esports"', document)
+        self.assertRegex(document, r'<button class="category" disabled[^>]*>Finance <small>later</small>')
+        self.assertRegex(document, r'<button class="category" disabled[^>]*>Tech <small>later</small>')
+        self.assertIn('data-sort="pnl">Est. PnL $', document)
+        self.assertIn('id="minLiquidity" type="number" min="0" step="10" value="100"', document)
+
+    def test_large_depth_is_legible_with_the_exact_quantity_available(self):
+        self.case.left.extra.update(quote_bid_size="47235.99", quote_ask_size="2182963.36")
+        cell = P._venue_cell(self.case.row(), "kalshi")
+        self.assertIn("× 47.2k", cell)
+        self.assertIn("× 2.18m", cell)
+        self.assertIn("47,235.99 contracts", cell)
+        self.assertIn("2,182,963.36 contracts", cell)
+
+    def test_umbrella_esports_scope_is_filtered_under_the_esports_category(self):
+        row = {**self.case.row(), "sport": "esports", "domain": "esports"}
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "terminal.html"
+            P.write_html(path, [row], VENUES, self.case.coverage, self.case.as_of, {"Sports": "esports"})
+            document = path.read_text()
+        self.assertIn('data-tab="esports" data-domain="esports"', document)
+
+    def test_runtime_freshness_limits_do_not_inherit_snapshot_tolerance(self):
+        row = self.case.row()
+        stale = P._eligible_quotes(row, VENUES, self.case.as_of + timedelta(seconds=31),
+                                   max_age_seconds=30, max_skew_seconds=5)
+        self.assertEqual(stale["quote_check"], "stale")
+        self.assertEqual(stale["net_crossed"], "false")
+        row["kalshi_quote_time"] = (self.case.as_of - timedelta(seconds=6)).isoformat()
+        skewed = P._eligible_quotes(row, VENUES, self.case.as_of, max_age_seconds=30, max_skew_seconds=5)
+        self.assertEqual(skewed["quote_check"], "skewed")
+
+    def test_minimum_order_metadata_reaches_sizing(self):
+        self.case.left.extra["minimum_order_size"] = "500"
+        self.case.right.extra["minimum_order_notional_usd"] = "100"
+        row = self.case.row()
+        self.assertEqual(row["kalshi_minimum_order_size"], "500")
+        estimate = P.build_terminal_records([row], VENUES)[0]["estimates"]["100"]
+        self.assertEqual(estimate["minimum_order_status"], "below_minimum")
+
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required to exercise market filters")
+    def test_browser_filters_unknown_depth_categories_watchlist_and_sort(self):
+        script = P._terminal_interaction_script(self.case.as_of, "Quotes checked").split("function counts()", 1)[0]
+        harness = r'''
+const assert=require('node:assert/strict'),vm=require('node:vm');
+function record(id,domain,liquidity,net){return {id,key:'key'+id,domain,sport:domain==='esports'?'cs2':'soccer',competition:'A',date:String(id),name:'Market '+id,search:'market '+id,review:false,strict:true,crossed:true,estimates:{'100':{paired_top_notional_usd:liquidity,net_gap:net,net_total:net===null?null:String(Number(net)*100),gross_gap:'0.03'}}};}
+const data=[record(0,'sports','186','0.014'),record(1,'sports','10','0.01'),record(2,'sports',null,null),record(3,'esports','200','0.02'),record(4,'sports','150','-0.01')];
+const nodes={marketData:{textContent:JSON.stringify(data)},search:{value:''},showReviews:{checked:true},strictRules:{checked:false},sortBy:{value:'date'},pageSize:{value:'100'},leagueFilter:{value:''},minLiquidity:{value:'100'},showUnknownDepth:{checked:false},orderSize:{value:'100'}};
+const context=vm.createContext({document:{getElementById:id=>nodes[id]||{},querySelectorAll:()=>[]},location:{protocol:'file:',host:'',pathname:'/terminal.html'},sessionStorage:{getItem:()=>null},Date,Set});
+vm.runInContext(SCRIPT,context);
+const evaluate=code=>vm.runInContext(code,context),ids=()=>JSON.parse(JSON.stringify(evaluate('matchingRecords().map(r=>r.id)')));
+assert.deepEqual(ids(),[0,4]);assert.equal(evaluate('numeric(null)'),null);assert.equal(evaluate("numeric('')"),null);assert.equal(evaluate("numeric('NaN')"),null);
+evaluate("minLiquidity.value='0';unknownDepth.checked=true");assert.deepEqual(ids(),[0,1,2,4]);
+evaluate("activeTab='net'");assert.deepEqual(ids(),[0,1]);
+evaluate("activeTab='all';activeCategory='esports'");assert.deepEqual(ids(),[3]);
+evaluate("activeCategory='sports';activeTab='watch';watched.add('key4')");assert.deepEqual(ids(),[4]);
+evaluate("activeTab='all';sortBy.value='pnl';direction=1");assert.deepEqual(ids(),[0,1,4,2]);
+evaluate('direction=-1');assert.deepEqual(ids(),[4,1,0,2]);
+evaluate("activeTab='net';records[0].stale=true");assert.deepEqual(ids(),[1]);
+evaluate("records[1].estimates['100'].minimum_order_status='below_minimum'");assert.deepEqual(ids(),[]);
+'''
+        result = subprocess.run([shutil.which("node"), "-e", "const SCRIPT=" + json.dumps(script) + ";\n" + harness],
+                                capture_output=True, text=True, timeout=10)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required to exercise live patches")
+    def test_live_patch_updates_changed_records_and_unchanged_quote_heartbeats(self):
+        script = P._terminal_interaction_script(self.case.as_of, "Quotes checked")
+        patch_script = next(line for line in script.splitlines() if line.startswith("window.marketTerminalPatchRecords="))
+        harness = r'''
+const assert=require('node:assert/strict'),vm=require('node:vm');let output;
+const context=vm.createContext({records:[{id:0,key:'a',html:'old',details:'old popup',expiry:10,stale:true},{id:1,key:'b',html:'unchanged',expiry:10,stale:true}],window:{marketTerminalReplaceRecords:(records,meta)=>{output={records,meta};}},Map});
+vm.runInContext(SCRIPT,context);context.window.marketTerminalPatchRecords([{id:0,html:'new',expiry:40}],{heartbeats:[{id:1,expiry:40,crossed:true}],as_of:'fresh'});
+const records=JSON.parse(JSON.stringify(output.records));
+assert.deepEqual(records,[{id:0,key:'a',html:'new',expiry:40,stale:false},{id:1,key:'b',html:'unchanged',expiry:40,stale:false,crossed:true}]);
+assert.equal(output.meta.as_of,'fresh');assert.equal(Object.hasOwn(records[0],'details'),false);
+'''
+        result = subprocess.run([shutil.which("node"), "-e", "const SCRIPT=" + json.dumps(patch_script) + ";\n" + harness],
+                                capture_output=True, text=True, timeout=10)
+        self.assertEqual(result.returncode, 0, result.stderr)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,285 @@
+[
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "8bc1724c-901f-4b39-9680-eceb469ccd03",
+      "game": "League of Legends",
+      "home_competitor_id": "f9c754a9-662f-4646-a3ec-a91a9f6bd6bd",
+      "league": "League of Legends",
+      "main_game_event_ticker": "KXLOLGAME-26OCT231800T1LOS",
+      "season_type": "Worlds",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "Worlds 2026"
+    },
+    "id": "0a497216-2657-4940-8cd4-990eb3e29f28",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXLOLGAME-26OCT231800T1LOS"
+    ],
+    "related_event_tickers": [
+      "KXLOLGAME-26OCT231800T1LOS"
+    ],
+    "source_ids": {
+      "source_2_id": "20261023CB38D8E8"
+    },
+    "start_date": "2026-10-23T23:00:00Z",
+    "title": "T1 vs LOS",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "0b7fbb5f-c337-43da-b30f-25bb1c23daf6",
+      "game": "League of Legends",
+      "home_competitor_id": "00a3ee31-1406-4c49-abc3-01857a90a18e",
+      "league": "League of Legends",
+      "main_game_event_ticker": "KXLOLGAME-26OCT231900LYTSW",
+      "season_type": "Worlds",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "Worlds 2026"
+    },
+    "id": "3b6f2182-c300-4f23-985f-e0366e070041",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXLOLGAME-26OCT231900LYTSW"
+    ],
+    "related_event_tickers": [
+      "KXLOLGAME-26OCT231900LYTSW"
+    ],
+    "source_ids": {
+      "source_2_id": "20261023F0253767"
+    },
+    "start_date": "2026-10-24T00:00:00Z",
+    "title": "LYON vs Team Secret Whales",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "1942e522-e098-4311-8f09-c53003d75ab5",
+      "game": "League of Legends",
+      "home_competitor_id": "e37b5a80-ee93-4468-b264-1a11c49156b4",
+      "league": "League of Legends",
+      "main_game_event_ticker": "KXLOLGAME-26OCT232000MKOIBLG",
+      "season_type": "Worlds",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "Worlds 2026"
+    },
+    "id": "7fa0a573-9a59-4974-ae13-9805d9625a20",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXLOLGAME-26OCT232000MKOIBLG"
+    ],
+    "related_event_tickers": [
+      "KXLOLGAME-26OCT232000MKOIBLG"
+    ],
+    "source_ids": {
+      "source_2_id": "202610248BD09F09"
+    },
+    "start_date": "2026-10-23T19:00:00Z",
+    "title": "Movistar KOI vs Bilibili Gaming",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "58434037-e07e-47aa-b5b2-030c7222826a",
+      "game": "League of Legends",
+      "home_competitor_id": "fab1d50e-5462-4d84-a6f6-90d094b04df3",
+      "league": "League of Legends",
+      "main_game_event_ticker": "KXLOLGAME-26OCT220800SLYGAL",
+      "season_type": "EMEA Masters",
+      "season_week": "playoffs",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "EMEA Masters 2026"
+    },
+    "id": "d6ad2f18-e6de-427e-bf51-4be0d197f996",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXLOLGAME-26OCT220800SLYGAL"
+    ],
+    "related_event_tickers": [
+      "KXLOLGAME-26OCT220800SLYGAL",
+      "KXLOLTOTALMAPS-26OCT220800SLYGAL",
+      "KXLOLMAP-26OCT220800SLYGAL-1",
+      "KXLOLMAP-26OCT220800SLYGAL-2",
+      "KXLOLMAP-26OCT220800SLYGAL-3"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102290D71452"
+    },
+    "start_date": "2026-10-22T12:00:00Z",
+    "title": "Solary vs Galions",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "d56bec2a-948a-4477-909f-87a762e221b5",
+      "game": "League of Legends",
+      "home_competitor_id": "ada5ab4c-e382-41fe-b4f3-3b4252f03da4",
+      "league": "League of Legends",
+      "main_game_event_ticker": "KXLOLGAME-26OCT231300IGGEN",
+      "season_type": "Worlds",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "Worlds 2026"
+    },
+    "id": "ebeff058-04f4-4b70-9e0f-8ee74cda17b0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXLOLGAME-26OCT231300IGGEN"
+    ],
+    "related_event_tickers": [
+      "KXLOLGAME-26OCT231300IGGEN"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102383D18F03"
+    },
+    "start_date": "2026-10-23T17:00:00Z",
+    "title": "Invictus Gaming vs Gen.G",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "6a8efcb3-2652-48fa-9bb0-da6f54107ccd",
+      "game": "League of Legends",
+      "home_competitor_id": "92733626-573b-474e-88a0-3b0de65cd243",
+      "league": "League of Legends",
+      "main_game_event_ticker": "KXLOLGAME-26OCT231500KCAL",
+      "season_type": "Worlds",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "Worlds 2026"
+    },
+    "id": "acfb60f5-05ed-4278-a5ae-293d44f3669f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXLOLGAME-26OCT231500KCAL"
+    ],
+    "related_event_tickers": [
+      "KXLOLGAME-26OCT231500KCAL"
+    ],
+    "source_ids": {
+      "source_2_id": "202610232554878D"
+    },
+    "start_date": "2026-10-23T20:00:00Z",
+    "title": "Karmine Corp vs Anyone's Legend",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "1827373d-b5ac-4fdb-8eee-3d9a4869affb",
+      "game": "League of Legends",
+      "home_competitor_id": "68565e53-c04d-4574-9691-3883665090e6",
+      "league": "League of Legends",
+      "main_game_event_ticker": "KXLOLGAME-26OCT231400CFOTL",
+      "season_type": "Worlds",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "Worlds 2026"
+    },
+    "id": "9bcf48ff-ca4c-49ef-a161-12ac0e090bf4",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXLOLGAME-26OCT231400CFOTL"
+    ],
+    "related_event_tickers": [
+      "KXLOLGAME-26OCT231400CFOTL"
+    ],
+    "source_ids": {
+      "source_2_id": "202610238B10A11E"
+    },
+    "start_date": "2026-10-23T22:00:00Z",
+    "title": "CTBC Flying Oyster vs Team Liquid",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "340859c8-e7ea-41f5-bc5a-dff41597737c",
+      "game": "League of Legends",
+      "home_competitor_id": "9cb8bec6-df70-4f88-8b0f-572c03f29640",
+      "league": "League of Legends",
+      "main_game_event_ticker": "KXLOLGAME-26OCT231600DKG2",
+      "season_type": "Worlds",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "Worlds 2026"
+    },
+    "id": "0a00f5c9-22c7-4ca0-8397-2545d6da17c9",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXLOLGAME-26OCT231600DKG2"
+    ],
+    "related_event_tickers": [
+      "KXLOLGAME-26OCT231600DKG2"
+    ],
+    "source_ids": {
+      "source_2_id": "20261023044B1A48"
+    },
+    "start_date": "2026-10-23T21:00:00Z",
+    "title": "Dplus KIA vs G2 Esports",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "c2d6a6e0-1887-4b24-99fa-4ef159cef967",
+      "game": "League of Legends",
+      "home_competitor_id": "5edd805d-a9b6-414c-8d70-2f50c34860fc",
+      "league": "League of Legends",
+      "main_game_event_ticker": "KXLOLGAME-26OCT231700TESHLE",
+      "season_type": "Worlds",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "Worlds 2026"
+    },
+    "id": "6e1625b1-5287-4e5f-95be-710f0ead4b43",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXLOLGAME-26OCT231700TESHLE"
+    ],
+    "related_event_tickers": [
+      "KXLOLGAME-26OCT231700TESHLE"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102338029A6B"
+    },
+    "start_date": "2026-10-23T18:00:00Z",
+    "title": "Top Esports vs Hanwha Life Esports",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  }
+]

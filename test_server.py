@@ -8,6 +8,8 @@ import unittest
 from pathlib import Path
 
 import server as S
+from runtime import MarketRuntime
+from test_runtime import write_runtime_snapshot
 
 
 class RefreshControllerTests(unittest.TestCase):
@@ -263,6 +265,134 @@ class TerminalHTTPTests(unittest.TestCase):
         status, _, body = self.request("HEAD", "/api/status")
         self.assertEqual((status, body), (200, b""))
         self.assertEqual(self.calls, [])
+
+
+class RuntimeHTTPTests(unittest.TestCase):
+    request = TerminalHTTPTests.request
+    refresh_headers = TerminalHTTPTests.refresh_headers
+
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory()
+        self.root = Path(self.directory.name).resolve()
+        write_runtime_snapshot(self.root)
+        self.calls = []
+        def collector(markets, raw, **kwargs):
+            self.calls.append([market.market_id for market in markets])
+            return [], []
+        self.runtime = MarketRuntime(self.root, collector=collector)
+        self.refresh = S.QuoteRefresh(self.root, runtime=self.runtime)
+        self.server = S.TerminalServer(0, root=self.root, refresh=self.refresh, runtime=self.runtime)
+        self.worker = threading.Thread(target=self.server.serve_forever,
+                                       kwargs={"poll_interval": 0.01}, daemon=True)
+        self.worker.start()
+        self.origin = f"http://127.0.0.1:{self.server.server_port}"
+
+    def tearDown(self):
+        self.refresh.wait(3)
+        self.server.shutdown()
+        self.server.server_close()
+        self.worker.join(2)
+        self.directory.cleanup()
+
+    def test_runtime_reads_are_uncached_and_same_revision_query_is_a_heartbeat(self):
+        status, headers, body = self.request(path="/api/markets")
+        self.assertEqual(status, 200)
+        self.assertEqual(headers["Cache-Control"], "no-store")
+        first = json.loads(body)
+        self.assertEqual(first["mode"], "runtime_rest")
+        self.assertEqual(len(first["records"]), 2)
+        self.assertFalse(first["partial"])
+        _, _, body = self.request(path="/api/markets?revision=" + str(first["revision"]))
+        self.assertIsNone(json.loads(body)["records"])
+        self.assertEqual(self.calls, [])
+        status, _, body = self.request("HEAD", "/api/markets")
+        self.assertEqual((status, body), (200, b""))
+
+    def test_invalid_or_future_revision_requests_get_a_complete_resynchronization(self):
+        for revision in ("broken", "-5", "999999", "", "1.5"):
+            with self.subTest(revision=revision):
+                status, _, body = self.request(path="/api/markets?revision=" + revision)
+                self.assertEqual(status, 200)
+                result = json.loads(body)
+                self.assertFalse(result["partial"])
+                self.assertEqual(len(result["records"]), 2)
+
+    def test_consecutive_revision_sends_delta_over_the_http_api(self):
+        previous = self.runtime.revision
+        self.runtime.refresh()
+        status, _, body = self.request(path="/api/markets?revision=" + str(previous))
+        self.assertEqual(status, 200)
+        update = json.loads(body)
+        self.assertTrue(update["partial"])
+        self.assertEqual(update["records"], [])
+        self.assertEqual(len(update["heartbeats"]), 2)
+        self.assertEqual(update["revision"], previous + 1)
+
+    def test_detail_route_reads_cached_current_row_and_validates_the_index(self):
+        status, _, body = self.request(path="/api/market/0?revision=ignored")
+        self.assertEqual(status, 200)
+        detail = json.loads(body)
+        self.assertEqual(detail["revision"], self.runtime.revision)
+        self.assertIn("Alpha Academy vs Beta Academy", detail["details"])
+        self.assertEqual(self.calls, [])
+        for index in ("-1", "not-a-number", "100", ""):
+            self.assertEqual(self.request(path="/api/market/" + index)[0], 404)
+
+    def test_settings_update_scanner_and_run_a_runtime_refresh(self):
+        watched = self.runtime.snapshot()["records"][0]["key"]
+        body = json.dumps({"min_liquidity_usd": "250", "watch_only": True,
+                           "watchlist": [watched, "unknown"]})
+        status, _, response = self.request("POST", "/api/settings", body, self.refresh_headers())
+        self.assertEqual(status, 202)
+        settings = json.loads(response)["settings"]
+        self.assertEqual(settings, {"min_liquidity_usd": "250", "watch_only": True, "watchlist": [watched]})
+        self.refresh.wait(2)
+        self.assertEqual(len(self.calls), 1)
+        self.assertEqual(len(self.calls[0]), 2)
+        status, _, body = self.request(path="/api/status")
+        state = json.loads(body)
+        self.assertEqual(status, 200)
+        self.assertEqual((state["mode"], state["state"], state["revision"]),
+                         ("runtime_rest", "idle", self.runtime.revision))
+
+    def test_invalid_settings_or_cross_origin_requests_cannot_mutate_runtime(self):
+        before = self.runtime.settings()
+        invalid = ({"command": "anything"}, {"min_liquidity_usd": "NaN"},
+                   {"watch_only": 1}, {"watchlist": [False]}, [], None)
+        for value in invalid:
+            with self.subTest(value=value):
+                status, _, _ = self.request("POST", "/api/settings", json.dumps(value), self.refresh_headers())
+                self.assertEqual(status, 400)
+        self.assertEqual(self.request("POST", "/api/settings", '{"watch_only":true}',
+                                     self.refresh_headers(Origin="https://example.com"))[0], 403)
+        self.assertEqual(self.runtime.settings(), before)
+        self.assertEqual(self.calls, [])
+
+    def test_runtime_refresh_endpoint_updates_cache_without_requiring_an_html_publication(self):
+        previous = self.runtime.revision
+        status, _, _ = self.request("POST", "/api/refresh", "{}", self.refresh_headers())
+        self.assertEqual(status, 202)
+        self.refresh.wait(2)
+        self.assertEqual(self.runtime.revision, previous + 1)
+        self.assertFalse((self.root / "output" / S.REPORT_NAME).exists())
+        self.assertEqual(self.refresh.status()["state"], "idle")
+
+    def test_runtime_failure_preserves_last_visible_frame_and_can_recover(self):
+        previous = self.runtime.snapshot()
+        def fail(markets, *_args, **_kwargs):
+            markets[0].bid = "0.99"
+            raise OSError("mock network failure")
+        original = self.runtime.collector
+        self.runtime.collector = fail
+        self.request("POST", "/api/refresh", "{}", self.refresh_headers())
+        self.refresh.wait(2)
+        self.assertEqual(self.refresh.status()["state"], "error")
+        self.assertEqual(self.runtime.snapshot(), previous)
+        self.runtime.collector = original
+        self.request("POST", "/api/refresh", "{}", self.refresh_headers())
+        self.refresh.wait(2)
+        self.assertEqual(self.refresh.status()["state"], "idle")
+        self.assertGreater(self.runtime.revision, previous["revision"])
 
 
 if __name__ == "__main__":

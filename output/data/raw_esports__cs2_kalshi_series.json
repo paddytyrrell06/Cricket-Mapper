@@ -1,0 +1,52 @@
+[
+  {
+    "additional_prohibitions": [
+      "Current players, coaches, and staff of the league, association, or organization(s) governing the event. For college leagues/associations specifically, or where otherwise appropriate (as identified by the Exchange), this applies to current players/coaches/staff of the specific sport in <event> rather than the league/association as a whole (e.g., if the Division I Gonzaga Men\u2019s Basketball Team is playing in <event>, this prohibition will restrict trades by current players/coaches/staff on NCAA Basketball, rather than all current players/coaches/staff in any NCAA sport).",
+      "Paid employees of the league and league participants",
+      "Owners of teams and the league",
+      "and household members and immediate family of all above",
+      "Persons who are employed by any of the Source Agencies are not permitted to trade on the Contract.",
+      "Persons who hold any material, non-public information on the Underlying are not permitted to trade on the Contract."
+    ],
+    "categories": [
+      "Sports"
+    ],
+    "category": "Sports",
+    "contract_terms_url": "https://assets.kalshi.com/contract_terms/ESPORTSWIN.pdf",
+    "contract_url": "https://assets.kalshi.com/regulatory/product-certifications/ESPORTSWIN.pdf",
+    "exchange_index": 0,
+    "fee_multiplier": 1,
+    "fee_type": "quadratic",
+    "frequency": "custom",
+    "last_updated_ts": "2026-10-15T01:15:08.810775Z",
+    "product_metadata": {
+      "important_info": {
+        "id": "KXCS2GAME-2026-07-13",
+        "markdown": "**Important information:** If a match is forfeited, cancelled, or otherwise not played before gameplay begins, the market will resolve to Fair Market Price. If gameplay has begun and the match is later awarded by forfeit, disqualification, or a similar ruling, the market will resolve based on the official result declared by the tournament organizer.",
+        "message": "",
+        "title": ""
+      },
+      "scope": "Game"
+    },
+    "settlement_sources": [
+      {
+        "name": "B03",
+        "url": "https://bo3.gg/matches/finished"
+      },
+      {
+        "name": "HLTV",
+        "url": "https://www.hltv.org/results"
+      },
+      {
+        "name": "Gamers World",
+        "url": "https://egamersworld.com/"
+      }
+    ],
+    "tags": [
+      "Esports"
+    ],
+    "ticker": "KXCS2GAME",
+    "title": "Counter-Strike 2 Game",
+    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+  }
+]

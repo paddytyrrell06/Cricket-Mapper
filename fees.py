@@ -14,6 +14,8 @@ from dataclasses import dataclass
 from decimal import Decimal, InvalidOperation, ROUND_CEILING, ROUND_FLOOR, ROUND_HALF_UP
 from typing import Any, Optional
 
+import liquidity as L
+
 ZERO = Decimal("0")
 ONE = Decimal("1")
 CENT = Decimal("0.01")
@@ -275,3 +277,205 @@ def calculate_taker_cross(row: Mapping, buy_venue: str, sell_venue: str,
         buy_venue, row.get(f"{buy_venue}_ask"),
         row.get(f"{buy_venue}_fee_schedule") or row.get(f"{buy_venue}_fee_metadata"), quantity,
         sell_size=row.get(f"{sell_venue}_bid_size"), buy_size=row.get(f"{buy_venue}_ask_size"))
+
+
+@dataclass(frozen=True)
+class SizedTakerEdge:
+    """Screening estimate at a requested size, bounded by observed BBO depth.
+
+    Capital is an explicitly labeled fully collateralized paired-position
+    estimate: buy cost + (1 - sell bid) collateral + both taker fees. It does not
+    assume that selling inventory is free capital, nor validate shorting or a
+    complementary NO order. Inventory and venue minimums remain separate checks.
+    """
+    edge: TakerEdge
+    liquidity: L.RouteLiquidity
+    desired_quantity: Optional[Decimal] = None
+    sized_quantity: Optional[Decimal] = None
+    quantity_capped: bool = False
+    cap_reasons: tuple[str, ...] = ()
+    buy_cost: Optional[Decimal] = None
+    sell_proceeds: Optional[Decimal] = None
+    collateral_estimate: Optional[Decimal] = None
+    capital_required: Optional[Decimal] = None
+    minimum_order_status: str = "unknown"
+    minimum_order_reason: str = "minimum_order_metadata_not_provided"
+
+    @property
+    def actionable_estimate(self) -> bool:
+        return (self.sized_quantity is not None and self.sized_quantity > ZERO
+                and self.edge.net_positive and self.liquidity.sufficient
+                and self.minimum_order_status != "below_minimum")
+
+    def to_dict(self) -> dict:
+        edge = self.edge.to_dict()
+        q = self.sized_quantity
+        gross = q * self.edge.gross_gap if q is not None and self.edge.gross_gap is not None else None
+        break_even = self.edge.total_fees / q if q and self.edge.total_fees is not None else None
+        roi = (self.edge.net_total / self.capital_required
+               if self.capital_required and self.edge.net_total is not None else None)
+        return {**edge,
+                **{name: _text(getattr(self, name)) for name in (
+                    "desired_quantity", "sized_quantity", "buy_cost", "sell_proceeds",
+                    "collateral_estimate", "capital_required")},
+                "quantity_capped": self.quantity_capped, "cap_reasons": list(self.cap_reasons),
+                "gross_total": _text(gross), "break_even_gap": _text(break_even),
+                "fees_per_contract": _text(break_even),
+                "net_per_contract_cents": _text(self.edge.net_gap * 100) if self.edge.net_gap is not None else None,
+                "return_on_capital": _text(roi), "return_on_capital_percent": _text(roi * 100) if roi is not None else None,
+                "capital_basis": "fully_collateralized_pair_estimate",
+                "liquidity_status": self.liquidity.status, "liquidity_reason": self.liquidity.reason,
+                "paired_top_quantity": _text(self.liquidity.paired_quantity),
+                "paired_top_notional_usd": _text(self.liquidity.limiting_notional_usd),
+                "sell_top_notional_usd": _text(self.liquidity.sell_notional_usd),
+                "buy_top_notional_usd": _text(self.liquidity.buy_notional_usd),
+                "min_top_notional_usd": _text(self.liquidity.min_top_notional_usd),
+                "minimum_order_status": self.minimum_order_status,
+                "minimum_order_reason": self.minimum_order_reason,
+                "actionable_estimate": self.actionable_estimate,
+                "execution_validated": False}
+
+
+def sized_taker_edge(sell_schedule: FeeSchedule, sell_price: Any,
+                     buy_schedule: FeeSchedule, buy_price: Any, *,
+                     desired_contracts: Any = None, sell_size: Any = None, buy_size: Any = None,
+                     policy: Optional[L.LiquidityPolicy] = None, max_capital_usd: Any = None,
+                     sell_min_order_size: Any = None, buy_min_order_size: Any = None,
+                     sell_min_order_notional_usd: Any = None,
+                     buy_min_order_notional_usd: Any = None) -> SizedTakerEdge:
+    """Calculate order-level fees after whole-contract depth and budget sizing.
+
+    ``desired_contracts='top'`` uses confirmed paired top capacity. Unknown depth
+    leaves size and size-dependent PnL unknown. Known venue minimums gate the
+    estimate; missing constraints are reported as unknown and never invented.
+    Compile ``policy`` and fee schedules once for an incremental update engine.
+    """
+    policy = policy if policy is not None else L.LiquidityPolicy()
+    route = policy.assess_route(sell_price, buy_price, sell_size, buy_size)
+    bid, ask = L.number(sell_price, price=True), L.number(buy_price, price=True)
+    requested = policy.desired_contracts if desired_contracts is None else desired_contracts
+    use_top = requested == "top"
+    desired = route.paired_quantity if use_top else L.number(requested)
+    gap = bid - ask if bid is not None and ask is not None else None
+
+    def unavailable(reason: str, *, sized: Optional[Decimal] = None,
+                    capped: bool = False, caps: tuple[str, ...] = ()) -> SizedTakerEdge:
+        return SizedTakerEdge(TakerEdge("unavailable", reason, quantity=sized or desired or ONE,
+                                      gross_gap=gap, top_size=route.paired_quantity,
+                                      top_quantity=route.paired_quantity), route,
+                              desired_quantity=desired, sized_quantity=sized,
+                              quantity_capped=capped, cap_reasons=caps)
+
+    if bid is None or ask is None:
+        return unavailable("invalid_price_or_quantity")
+    if desired is None and not use_top or desired is not None and desired <= ZERO:
+        return unavailable("invalid_desired_quantity")
+    if route.paired_quantity is None:
+        return unavailable("unconfirmed_top_depth")
+    if route.paired_quantity <= ZERO:
+        return unavailable("insufficient_whole_contract_depth", sized=ZERO)
+    q = min(desired, route.paired_quantity).to_integral_value(rounding=ROUND_FLOOR)
+    caps = []
+    if q < desired:
+        caps.append("top_depth" if route.paired_quantity < desired else "whole_contracts")
+    if q <= ZERO:
+        return unavailable("insufficient_whole_contract_quantity", sized=ZERO, capped=True,
+                           caps=tuple(caps))
+    budget_raw = policy.max_capital_usd if max_capital_usd is None else max_capital_usd
+    budget = None if budget_raw is None else L.number(budget_raw)
+    if budget_raw is not None and (budget is None or budget <= ZERO):
+        return unavailable("invalid_capital_budget")
+
+    def at_size(quantity: Decimal) -> tuple[TakerEdge, Optional[Decimal]]:
+        estimate = taker_edge(sell_schedule, bid, buy_schedule, ask, quantity)
+        capital = (quantity * (ask + ONE - bid) + estimate.total_fees
+                   if estimate.total_fees is not None else None)
+        return estimate, capital
+
+    if budget is not None:
+        _, needed = at_size(q)
+        if needed is None:
+            return unavailable("unknown_fees_for_budget")
+        if needed > budget:
+            # Whole-contract cash requirements are monotone, including account
+            # rounding. Binary search keeps budget sizing logarithmic in depth.
+            lower, upper = 0, int(q)
+            while lower < upper:
+                midpoint = (lower + upper + 1) // 2
+                _, needed = at_size(Decimal(midpoint))
+                if needed <= budget:
+                    lower = midpoint
+                else:
+                    upper = midpoint - 1
+            q = Decimal(lower)
+            caps.append("capital_budget")
+            if q <= ZERO:
+                return unavailable("budget_below_one_contract", sized=ZERO, capped=True,
+                                   caps=tuple(caps))
+    edge = taker_edge(sell_schedule, bid, buy_schedule, ask, q,
+                      sell_size=sell_size, buy_size=buy_size)
+    buy_cost, proceeds, collateral = q * ask, q * bid, q * (ONE - bid)
+    capital = buy_cost + collateral + edge.total_fees if edge.total_fees is not None else None
+    constraints = (("sell", "size", sell_min_order_size, q),
+                   ("buy", "size", buy_min_order_size, q),
+                   ("sell", "notional", sell_min_order_notional_usd, proceeds),
+                   ("buy", "notional", buy_min_order_notional_usd, buy_cost))
+    known = []
+    invalid = []
+    below = []
+    for side, kind, raw, actual in constraints:
+        if raw is None or raw == "":
+            continue
+        value = L.number(raw)
+        if value is None:
+            invalid.append(f"{side}_{kind}")
+        else:
+            known.append((side, kind))
+            if actual < value:
+                below.append(f"{side}_{kind}")
+    minimum_status = "below_minimum" if below else "unknown" if not known or invalid else "known_minimums_met"
+    minimum_reason = ("below:" + ",".join(below) if below else
+                      "invalid_metadata:" + ",".join(invalid) if invalid else
+                      "minimum_order_metadata_not_provided" if not known else
+                      "provided_minimums_met_other_constraints_unverified")
+    return SizedTakerEdge(edge, route, desired, q, bool(caps), tuple(caps), buy_cost,
+                          proceeds, collateral, capital, minimum_status, minimum_reason)
+
+
+def estimate_sized_cross(sell_venue: str, sell_price: Any, sell_extra: Any,
+                         buy_venue: str, buy_price: Any, buy_extra: Any, *,
+                         desired_contracts: Any = None, sell_size: Any = None, buy_size: Any = None,
+                         policy: Optional[L.LiquidityPolicy] = None,
+                         min_top_notional_usd: Any = "100", max_capital_usd: Any = None,
+                         sell_min_order_size: Any = None, buy_min_order_size: Any = None,
+                         sell_min_order_notional_usd: Any = None,
+                         buy_min_order_notional_usd: Any = None) -> dict:
+    """Serialization wrapper for report and API callers, away from quote ingestion."""
+    policy = policy if policy is not None else L.LiquidityPolicy(min_top_notional_usd=min_top_notional_usd)
+    return sized_taker_edge(
+        compile_schedule(sell_venue, sell_extra), sell_price,
+        compile_schedule(buy_venue, buy_extra), buy_price, desired_contracts=desired_contracts,
+        sell_size=sell_size, buy_size=buy_size, policy=policy, max_capital_usd=max_capital_usd,
+        sell_min_order_size=sell_min_order_size, buy_min_order_size=buy_min_order_size,
+        sell_min_order_notional_usd=sell_min_order_notional_usd,
+        buy_min_order_notional_usd=buy_min_order_notional_usd).to_dict()
+
+
+def calculate_sized_taker_cross(row: Mapping, buy_venue: str, sell_venue: str, *,
+                                desired_contracts: Any = None,
+                                min_top_notional_usd: Any = "100",
+                                max_capital_usd: Any = None,
+                                policy: Optional[L.LiquidityPolicy] = None) -> dict:
+    """Read report/CSV fields with exact Decimal sizing and separate fee totals."""
+    return estimate_sized_cross(
+        sell_venue, row.get(f"{sell_venue}_bid"),
+        row.get(f"{sell_venue}_fee_schedule") or row.get(f"{sell_venue}_fee_metadata"),
+        buy_venue, row.get(f"{buy_venue}_ask"),
+        row.get(f"{buy_venue}_fee_schedule") or row.get(f"{buy_venue}_fee_metadata"),
+        desired_contracts=desired_contracts, min_top_notional_usd=min_top_notional_usd,
+        max_capital_usd=max_capital_usd, policy=policy,
+        sell_size=row.get(f"{sell_venue}_bid_size"), buy_size=row.get(f"{buy_venue}_ask_size"),
+        sell_min_order_size=row.get(f"{sell_venue}_minimum_order_size"),
+        buy_min_order_size=row.get(f"{buy_venue}_minimum_order_size"),
+        sell_min_order_notional_usd=row.get(f"{sell_venue}_minimum_order_notional_usd"),
+        buy_min_order_notional_usd=row.get(f"{buy_venue}_minimum_order_notional_usd"))

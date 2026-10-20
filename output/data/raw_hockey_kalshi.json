@@ -20,11 +20,11 @@
     "no_sub_title": "New York I",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "1620.00",
+    "open_interest_fp": "18723.06",
     "open_time": "2026-10-14T01:06:00Z",
     "previous_price_dollars": "0.5900",
-    "previous_yes_ask_dollars": "0.5800",
-    "previous_yes_bid_dollars": "0.5400",
+    "previous_yes_ask_dollars": "0.5900",
+    "previous_yes_bid_dollars": "0.5700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -43,12 +43,12 @@
     "ticker": "KXNHLGAME-26OCT20ANANYI-NYI",
     "title": "New York I wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "1337.07",
-    "volume_fp": "1620.00",
+    "volume_24h_fp": "18781.10",
+    "volume_fp": "19291.54",
     "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "9888.66",
+    "yes_ask_size_fp": "51174.54",
     "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "2903.18",
+    "yes_bid_size_fp": "21898.17",
     "yes_sub_title": "New York I",
     "_event_title": "Anaheim vs New York I",
     "_event_ticker": "KXNHLGAME-26OCT20ANANYI",
@@ -94,7 +94,12 @@
         "KXNHL3P-26OCT20ANANYI",
         "KXNHL3PSPREAD-26OCT20ANANYI",
         "KXNHL3PTOTAL-26OCT20ANANYI",
-        "KXNHLOT-26OCT20ANANYI"
+        "KXNHLOT-26OCT20ANANYI",
+        "KXNHLGOAL-26OCT20ANANYI",
+        "KXNHLAST-26OCT20ANANYI",
+        "KXNHLPTS-26OCT20ANANYI",
+        "KXNHLFIRSTGOAL-26OCT20ANANYI",
+        "KXNHLSAVE-26OCT20ANANYI"
       ],
       "details": {
         "league": "nhl",
@@ -121,7 +126,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -144,11 +149,11 @@
     "no_sub_title": "Anaheim",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "2023.52",
+    "open_interest_fp": "23565.94",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.4300",
-    "previous_yes_ask_dollars": "0.4600",
-    "previous_yes_bid_dollars": "0.4200",
+    "previous_price_dollars": "0.4200",
+    "previous_yes_ask_dollars": "0.4200",
+    "previous_yes_bid_dollars": "0.4000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -167,12 +172,12 @@
     "ticker": "KXNHLGAME-26OCT20ANANYI-ANA",
     "title": "Anaheim wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "1733.69",
-    "volume_fp": "2172.22",
+    "volume_24h_fp": "23392.93",
+    "volume_fp": "24369.42",
     "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "862.99",
+    "yes_ask_size_fp": "107111.94",
     "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "13104.74",
+    "yes_bid_size_fp": "42421.20",
     "yes_sub_title": "Anaheim",
     "_event_title": "Anaheim vs New York I",
     "_event_ticker": "KXNHLGAME-26OCT20ANANYI",
@@ -218,7 +223,12 @@
         "KXNHL3P-26OCT20ANANYI",
         "KXNHL3PSPREAD-26OCT20ANANYI",
         "KXNHL3PTOTAL-26OCT20ANANYI",
-        "KXNHLOT-26OCT20ANANYI"
+        "KXNHLOT-26OCT20ANANYI",
+        "KXNHLGOAL-26OCT20ANANYI",
+        "KXNHLAST-26OCT20ANANYI",
+        "KXNHLPTS-26OCT20ANANYI",
+        "KXNHLFIRSTGOAL-26OCT20ANANYI",
+        "KXNHLSAVE-26OCT20ANANYI"
       ],
       "details": {
         "league": "nhl",
@@ -245,7 +255,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -260,19 +270,19 @@
     "expected_expiration_time": "2026-10-21T02:00:00Z",
     "expiration_time": "2026-10-22T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5000",
+    "last_price_dollars": "0.5300",
     "latest_expiration_time": "2026-10-22T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5100",
-    "no_bid_dollars": "0.5000",
+    "no_ask_dollars": "0.4800",
+    "no_bid_dollars": "0.4700",
     "no_sub_title": "New Jersey",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "1513.45",
+    "open_interest_fp": "69138.94",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.4800",
+    "previous_price_dollars": "0.4900",
     "previous_yes_ask_dollars": "0.4900",
-    "previous_yes_bid_dollars": "0.4700",
+    "previous_yes_bid_dollars": "0.4800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -291,12 +301,12 @@
     "ticker": "KXNHLGAME-26OCT20COLNJ-NJ",
     "title": "New Jersey wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "897.96",
-    "volume_fp": "1677.06",
-    "yes_ask_dollars": "0.5000",
-    "yes_ask_size_fp": "54121.55",
-    "yes_bid_dollars": "0.4900",
-    "yes_bid_size_fp": "3095.33",
+    "volume_24h_fp": "71334.18",
+    "volume_fp": "72491.96",
+    "yes_ask_dollars": "0.5300",
+    "yes_ask_size_fp": "249122.08",
+    "yes_bid_dollars": "0.5200",
+    "yes_bid_size_fp": "5427.80",
     "yes_sub_title": "New Jersey",
     "_event_title": "Colorado vs New Jersey",
     "_event_ticker": "KXNHLGAME-26OCT20COLNJ",
@@ -342,7 +352,12 @@
         "KXNHL3P-26OCT20COLNJ",
         "KXNHL3PSPREAD-26OCT20COLNJ",
         "KXNHL3PTOTAL-26OCT20COLNJ",
-        "KXNHLOT-26OCT20COLNJ"
+        "KXNHLOT-26OCT20COLNJ",
+        "KXNHLGOAL-26OCT20COLNJ",
+        "KXNHLAST-26OCT20COLNJ",
+        "KXNHLPTS-26OCT20COLNJ",
+        "KXNHLFIRSTGOAL-26OCT20COLNJ",
+        "KXNHLSAVE-26OCT20COLNJ"
       ],
       "details": {
         "league": "nhl",
@@ -369,7 +384,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -384,19 +399,19 @@
     "expected_expiration_time": "2026-10-21T02:00:00Z",
     "expiration_time": "2026-10-22T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5000",
+    "last_price_dollars": "0.4800",
     "latest_expiration_time": "2026-10-22T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5000",
-    "no_bid_dollars": "0.4900",
+    "no_ask_dollars": "0.5300",
+    "no_bid_dollars": "0.5200",
     "no_sub_title": "Colorado",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "13791.19",
+    "open_interest_fp": "109220.75",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.5400",
-    "previous_yes_ask_dollars": "0.5500",
-    "previous_yes_bid_dollars": "0.5300",
+    "previous_price_dollars": "0.5200",
+    "previous_yes_ask_dollars": "0.5200",
+    "previous_yes_bid_dollars": "0.5100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -415,12 +430,12 @@
     "ticker": "KXNHLGAME-26OCT20COLNJ-COL",
     "title": "Colorado wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "13459.77",
-    "volume_fp": "14240.89",
-    "yes_ask_dollars": "0.5100",
-    "yes_ask_size_fp": "9193.97",
-    "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "5265.41",
+    "volume_24h_fp": "102118.45",
+    "volume_fp": "115159.23",
+    "yes_ask_dollars": "0.4800",
+    "yes_ask_size_fp": "14559.34",
+    "yes_bid_dollars": "0.4700",
+    "yes_bid_size_fp": "42900.94",
     "yes_sub_title": "Colorado",
     "_event_title": "Colorado vs New Jersey",
     "_event_ticker": "KXNHLGAME-26OCT20COLNJ",
@@ -466,7 +481,12 @@
         "KXNHL3P-26OCT20COLNJ",
         "KXNHL3PSPREAD-26OCT20COLNJ",
         "KXNHL3PTOTAL-26OCT20COLNJ",
-        "KXNHLOT-26OCT20COLNJ"
+        "KXNHLOT-26OCT20COLNJ",
+        "KXNHLGOAL-26OCT20COLNJ",
+        "KXNHLAST-26OCT20COLNJ",
+        "KXNHLPTS-26OCT20COLNJ",
+        "KXNHLFIRSTGOAL-26OCT20COLNJ",
+        "KXNHLSAVE-26OCT20COLNJ"
       ],
       "details": {
         "league": "nhl",
@@ -493,7 +513,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -516,11 +536,11 @@
     "no_sub_title": "Washington",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "9510.90",
+    "open_interest_fp": "129314.81",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.5800",
-    "previous_yes_ask_dollars": "0.5800",
-    "previous_yes_bid_dollars": "0.5600",
+    "previous_price_dollars": "0.6000",
+    "previous_yes_ask_dollars": "0.6000",
+    "previous_yes_bid_dollars": "0.5900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -539,12 +559,12 @@
     "ticker": "KXNHLGAME-26OCT20LAWSH-WSH",
     "title": "Washington wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "9068.64",
-    "volume_fp": "9592.96",
+    "volume_24h_fp": "127870.21",
+    "volume_fp": "132698.29",
     "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "154746.08",
+    "yes_ask_size_fp": "267123.93",
     "yes_bid_dollars": "0.5900",
-    "yes_bid_size_fp": "84.44",
+    "yes_bid_size_fp": "89110.45",
     "yes_sub_title": "Washington",
     "_event_title": "Los Angeles vs Washington",
     "_event_ticker": "KXNHLGAME-26OCT20LAWSH",
@@ -590,7 +610,12 @@
         "KXNHL3P-26OCT20LAWSH",
         "KXNHL3PSPREAD-26OCT20LAWSH",
         "KXNHL3PTOTAL-26OCT20LAWSH",
-        "KXNHLOT-26OCT20LAWSH"
+        "KXNHLOT-26OCT20LAWSH",
+        "KXNHLGOAL-26OCT20LAWSH",
+        "KXNHLAST-26OCT20LAWSH",
+        "KXNHLPTS-26OCT20LAWSH",
+        "KXNHLFIRSTGOAL-26OCT20LAWSH",
+        "KXNHLSAVE-26OCT20LAWSH"
       ],
       "details": {
         "league": "nhl",
@@ -617,7 +642,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -640,11 +665,11 @@
     "no_sub_title": "Los Angeles",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "6805.91",
+    "open_interest_fp": "23975.00",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.4600",
-    "previous_yes_ask_dollars": "0.4500",
-    "previous_yes_bid_dollars": "0.4300",
+    "previous_price_dollars": "0.4200",
+    "previous_yes_ask_dollars": "0.4100",
+    "previous_yes_bid_dollars": "0.4000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -663,12 +688,12 @@
     "ticker": "KXNHLGAME-26OCT20LAWSH-LA",
     "title": "Los Angeles wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "6272.92",
-    "volume_fp": "6954.27",
+    "volume_24h_fp": "23211.95",
+    "volume_fp": "24148.57",
     "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "11290.48",
+    "yes_ask_size_fp": "335072.24",
     "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "21757.95",
+    "yes_bid_size_fp": "24989.38",
     "yes_sub_title": "Los Angeles",
     "_event_title": "Los Angeles vs Washington",
     "_event_ticker": "KXNHLGAME-26OCT20LAWSH",
@@ -714,7 +739,12 @@
         "KXNHL3P-26OCT20LAWSH",
         "KXNHL3PSPREAD-26OCT20LAWSH",
         "KXNHL3PTOTAL-26OCT20LAWSH",
-        "KXNHLOT-26OCT20LAWSH"
+        "KXNHLOT-26OCT20LAWSH",
+        "KXNHLGOAL-26OCT20LAWSH",
+        "KXNHLAST-26OCT20LAWSH",
+        "KXNHLPTS-26OCT20LAWSH",
+        "KXNHLFIRSTGOAL-26OCT20LAWSH",
+        "KXNHLSAVE-26OCT20LAWSH"
       ],
       "details": {
         "league": "nhl",
@@ -741,7 +771,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -756,19 +786,19 @@
     "expected_expiration_time": "2026-10-21T02:00:00Z",
     "expiration_time": "2026-10-22T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6600",
+    "last_price_dollars": "0.6700",
     "latest_expiration_time": "2026-10-22T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.3500",
-    "no_bid_dollars": "0.3400",
+    "no_ask_dollars": "0.3400",
+    "no_bid_dollars": "0.3300",
     "no_sub_title": "Montreal",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "1194.77",
+    "open_interest_fp": "14333.68",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.6700",
-    "previous_yes_ask_dollars": "0.6700",
-    "previous_yes_bid_dollars": "0.6600",
+    "previous_price_dollars": "0.6600",
+    "previous_yes_ask_dollars": "0.6600",
+    "previous_yes_bid_dollars": "0.6400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -787,12 +817,12 @@
     "ticker": "KXNHLGAME-26OCT20SJMTL-MTL",
     "title": "Montreal wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "856.68",
-    "volume_fp": "1300.95",
-    "yes_ask_dollars": "0.6600",
-    "yes_ask_size_fp": "75332.52",
-    "yes_bid_dollars": "0.6500",
-    "yes_bid_size_fp": "33.60",
+    "volume_24h_fp": "13671.96",
+    "volume_fp": "14665.01",
+    "yes_ask_dollars": "0.6700",
+    "yes_ask_size_fp": "52217.01",
+    "yes_bid_dollars": "0.6600",
+    "yes_bid_size_fp": "71776.95",
     "yes_sub_title": "Montreal",
     "_event_title": "San Jose vs Montreal",
     "_event_ticker": "KXNHLGAME-26OCT20SJMTL",
@@ -838,7 +868,12 @@
         "KXNHL3P-26OCT20SJMTL",
         "KXNHL3PSPREAD-26OCT20SJMTL",
         "KXNHL3PTOTAL-26OCT20SJMTL",
-        "KXNHLOT-26OCT20SJMTL"
+        "KXNHLOT-26OCT20SJMTL",
+        "KXNHLGOAL-26OCT20SJMTL",
+        "KXNHLAST-26OCT20SJMTL",
+        "KXNHLPTS-26OCT20SJMTL",
+        "KXNHLFIRSTGOAL-26OCT20SJMTL",
+        "KXNHLSAVE-26OCT20SJMTL"
       ],
       "details": {
         "league": "nhl",
@@ -865,7 +900,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -880,19 +915,19 @@
     "expected_expiration_time": "2026-10-21T02:00:00Z",
     "expiration_time": "2026-10-22T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.3600",
+    "last_price_dollars": "0.3400",
     "latest_expiration_time": "2026-10-22T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6500",
-    "no_bid_dollars": "0.6400",
+    "no_ask_dollars": "0.6700",
+    "no_bid_dollars": "0.6600",
     "no_sub_title": "San Jose",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "3696.50",
+    "open_interest_fp": "21922.26",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.3500",
-    "previous_yes_ask_dollars": "0.3500",
-    "previous_yes_bid_dollars": "0.3200",
+    "previous_price_dollars": "0.3600",
+    "previous_yes_ask_dollars": "0.3600",
+    "previous_yes_bid_dollars": "0.3400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -911,12 +946,12 @@
     "ticker": "KXNHLGAME-26OCT20SJMTL-SJ",
     "title": "San Jose wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "4032.43",
-    "volume_fp": "5059.00",
-    "yes_ask_dollars": "0.3600",
-    "yes_ask_size_fp": "39270.16",
-    "yes_bid_dollars": "0.3500",
-    "yes_bid_size_fp": "848.00",
+    "volume_24h_fp": "21834.62",
+    "volume_fp": "23484.02",
+    "yes_ask_dollars": "0.3400",
+    "yes_ask_size_fp": "462535.38",
+    "yes_bid_dollars": "0.3300",
+    "yes_bid_size_fp": "3095.38",
     "yes_sub_title": "San Jose",
     "_event_title": "San Jose vs Montreal",
     "_event_ticker": "KXNHLGAME-26OCT20SJMTL",
@@ -962,7 +997,12 @@
         "KXNHL3P-26OCT20SJMTL",
         "KXNHL3PSPREAD-26OCT20SJMTL",
         "KXNHL3PTOTAL-26OCT20SJMTL",
-        "KXNHLOT-26OCT20SJMTL"
+        "KXNHLOT-26OCT20SJMTL",
+        "KXNHLGOAL-26OCT20SJMTL",
+        "KXNHLAST-26OCT20SJMTL",
+        "KXNHLPTS-26OCT20SJMTL",
+        "KXNHLFIRSTGOAL-26OCT20SJMTL",
+        "KXNHLSAVE-26OCT20SJMTL"
       ],
       "details": {
         "league": "nhl",
@@ -989,7 +1029,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -1004,19 +1044,19 @@
     "expected_expiration_time": "2026-10-21T02:00:00Z",
     "expiration_time": "2026-10-22T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6000",
+    "last_price_dollars": "0.6100",
     "latest_expiration_time": "2026-10-22T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4100",
-    "no_bid_dollars": "0.4000",
+    "no_ask_dollars": "0.4000",
+    "no_bid_dollars": "0.3900",
     "no_sub_title": "Columbus",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "281.13",
+    "open_interest_fp": "9706.07",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.6100",
+    "previous_price_dollars": "0.5900",
     "previous_yes_ask_dollars": "0.6100",
-    "previous_yes_bid_dollars": "0.5700",
+    "previous_yes_bid_dollars": "0.6000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1035,12 +1075,12 @@
     "ticker": "KXNHLGAME-26OCT20TORCBJ-CBJ",
     "title": "Columbus wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "238.20",
-    "volume_fp": "302.78",
-    "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "54688.86",
-    "yes_bid_dollars": "0.5900",
-    "yes_bid_size_fp": "670.35",
+    "volume_24h_fp": "10013.01",
+    "volume_fp": "10120.04",
+    "yes_ask_dollars": "0.6100",
+    "yes_ask_size_fp": "263371.08",
+    "yes_bid_dollars": "0.6000",
+    "yes_bid_size_fp": "25813.13",
     "yes_sub_title": "Columbus",
     "_event_title": "Toronto vs Columbus",
     "_event_ticker": "KXNHLGAME-26OCT20TORCBJ",
@@ -1086,7 +1126,12 @@
         "KXNHL3P-26OCT20TORCBJ",
         "KXNHL3PSPREAD-26OCT20TORCBJ",
         "KXNHL3PTOTAL-26OCT20TORCBJ",
-        "KXNHLOT-26OCT20TORCBJ"
+        "KXNHLOT-26OCT20TORCBJ",
+        "KXNHLGOAL-26OCT20TORCBJ",
+        "KXNHLAST-26OCT20TORCBJ",
+        "KXNHLPTS-26OCT20TORCBJ",
+        "KXNHLFIRSTGOAL-26OCT20TORCBJ",
+        "KXNHLSAVE-26OCT20TORCBJ"
       ],
       "details": {
         "league": "nhl",
@@ -1113,7 +1158,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -1128,19 +1173,19 @@
     "expected_expiration_time": "2026-10-21T02:00:00Z",
     "expiration_time": "2026-10-22T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4200",
+    "last_price_dollars": "0.4000",
     "latest_expiration_time": "2026-10-22T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5900",
-    "no_bid_dollars": "0.5800",
+    "no_ask_dollars": "0.6100",
+    "no_bid_dollars": "0.6000",
     "no_sub_title": "Toronto",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "1572.42",
+    "open_interest_fp": "12895.18",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.4200",
-    "previous_yes_ask_dollars": "0.4200",
-    "previous_yes_bid_dollars": "0.3900",
+    "previous_price_dollars": "0.4100",
+    "previous_yes_ask_dollars": "0.4100",
+    "previous_yes_bid_dollars": "0.4000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1159,12 +1204,12 @@
     "ticker": "KXNHLGAME-26OCT20TORCBJ-TOR",
     "title": "Toronto wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "1483.96",
-    "volume_fp": "1701.08",
-    "yes_ask_dollars": "0.4200",
-    "yes_ask_size_fp": "42427.60",
-    "yes_bid_dollars": "0.4100",
-    "yes_bid_size_fp": "245.60",
+    "volume_24h_fp": "12767.20",
+    "volume_fp": "13858.68",
+    "yes_ask_dollars": "0.4000",
+    "yes_ask_size_fp": "243773.91",
+    "yes_bid_dollars": "0.3900",
+    "yes_bid_size_fp": "34673.94",
     "yes_sub_title": "Toronto",
     "_event_title": "Toronto vs Columbus",
     "_event_ticker": "KXNHLGAME-26OCT20TORCBJ",
@@ -1210,7 +1255,12 @@
         "KXNHL3P-26OCT20TORCBJ",
         "KXNHL3PSPREAD-26OCT20TORCBJ",
         "KXNHL3PTOTAL-26OCT20TORCBJ",
-        "KXNHLOT-26OCT20TORCBJ"
+        "KXNHLOT-26OCT20TORCBJ",
+        "KXNHLGOAL-26OCT20TORCBJ",
+        "KXNHLAST-26OCT20TORCBJ",
+        "KXNHLPTS-26OCT20TORCBJ",
+        "KXNHLFIRSTGOAL-26OCT20TORCBJ",
+        "KXNHLSAVE-26OCT20TORCBJ"
       ],
       "details": {
         "league": "nhl",
@@ -1237,7 +1287,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -1252,19 +1302,19 @@
     "expected_expiration_time": "2026-10-21T03:00:00Z",
     "expiration_time": "2026-10-23T00:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6100",
+    "last_price_dollars": "0.6000",
     "latest_expiration_time": "2026-10-23T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4000",
-    "no_bid_dollars": "0.3900",
+    "no_ask_dollars": "0.4100",
+    "no_bid_dollars": "0.4000",
     "no_sub_title": "Dallas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T03:00:00Z",
-    "open_interest_fp": "2830.26",
+    "open_interest_fp": "43385.33",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.6300",
-    "previous_yes_ask_dollars": "0.6300",
-    "previous_yes_bid_dollars": "0.6100",
+    "previous_price_dollars": "0.6100",
+    "previous_yes_ask_dollars": "0.6100",
+    "previous_yes_bid_dollars": "0.6000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1283,12 +1333,12 @@
     "ticker": "KXNHLGAME-26OCT20BOSDAL-DAL",
     "title": "Dallas wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "2229.33",
-    "volume_fp": "2887.21",
-    "yes_ask_dollars": "0.6100",
-    "yes_ask_size_fp": "3590.42",
-    "yes_bid_dollars": "0.6000",
-    "yes_bid_size_fp": "11856.26",
+    "volume_24h_fp": "39456.45",
+    "volume_fp": "43928.39",
+    "yes_ask_dollars": "0.6000",
+    "yes_ask_size_fp": "159566.26",
+    "yes_bid_dollars": "0.5900",
+    "yes_bid_size_fp": "21434.02",
     "yes_sub_title": "Dallas",
     "_event_title": "Boston vs Dallas",
     "_event_ticker": "KXNHLGAME-26OCT20BOSDAL",
@@ -1334,7 +1384,12 @@
         "KXNHL3P-26OCT20BOSDAL",
         "KXNHL3PSPREAD-26OCT20BOSDAL",
         "KXNHL3PTOTAL-26OCT20BOSDAL",
-        "KXNHLOT-26OCT20BOSDAL"
+        "KXNHLOT-26OCT20BOSDAL",
+        "KXNHLGOAL-26OCT20BOSDAL",
+        "KXNHLAST-26OCT20BOSDAL",
+        "KXNHLPTS-26OCT20BOSDAL",
+        "KXNHLFIRSTGOAL-26OCT20BOSDAL",
+        "KXNHLSAVE-26OCT20BOSDAL"
       ],
       "details": {
         "league": "nhl",
@@ -1361,7 +1416,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -1384,10 +1439,10 @@
     "no_sub_title": "Boston",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T03:00:00Z",
-    "open_interest_fp": "12678.30",
+    "open_interest_fp": "45943.53",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.4100",
-    "previous_yes_ask_dollars": "0.4100",
+    "previous_price_dollars": "0.4000",
+    "previous_yes_ask_dollars": "0.4000",
     "previous_yes_bid_dollars": "0.3800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -1407,12 +1462,12 @@
     "ticker": "KXNHLGAME-26OCT20BOSDAL-BOS",
     "title": "Boston wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "13334.49",
-    "volume_fp": "15940.28",
+    "volume_24h_fp": "38621.17",
+    "volume_fp": "51249.19",
     "yes_ask_dollars": "0.4000",
-    "yes_ask_size_fp": "115781.27",
+    "yes_ask_size_fp": "77168.75",
     "yes_bid_dollars": "0.3900",
-    "yes_bid_size_fp": "179.00",
+    "yes_bid_size_fp": "112005.27",
     "yes_sub_title": "Boston",
     "_event_title": "Boston vs Dallas",
     "_event_ticker": "KXNHLGAME-26OCT20BOSDAL",
@@ -1458,7 +1513,12 @@
         "KXNHL3P-26OCT20BOSDAL",
         "KXNHL3PSPREAD-26OCT20BOSDAL",
         "KXNHL3PTOTAL-26OCT20BOSDAL",
-        "KXNHLOT-26OCT20BOSDAL"
+        "KXNHLOT-26OCT20BOSDAL",
+        "KXNHLGOAL-26OCT20BOSDAL",
+        "KXNHLAST-26OCT20BOSDAL",
+        "KXNHLPTS-26OCT20BOSDAL",
+        "KXNHLFIRSTGOAL-26OCT20BOSDAL",
+        "KXNHLSAVE-26OCT20BOSDAL"
       ],
       "details": {
         "league": "nhl",
@@ -1485,7 +1545,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -1500,19 +1560,19 @@
     "expected_expiration_time": "2026-10-21T03:00:00Z",
     "expiration_time": "2026-10-23T00:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5800",
+    "last_price_dollars": "0.5600",
     "latest_expiration_time": "2026-10-23T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4300",
-    "no_bid_dollars": "0.4200",
+    "no_ask_dollars": "0.4500",
+    "no_bid_dollars": "0.4400",
     "no_sub_title": "St. Louis",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T03:00:00Z",
-    "open_interest_fp": "418.02",
+    "open_interest_fp": "6465.65",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.6000",
-    "previous_yes_ask_dollars": "0.5900",
-    "previous_yes_bid_dollars": "0.5500",
+    "previous_price_dollars": "0.5700",
+    "previous_yes_ask_dollars": "0.5700",
+    "previous_yes_bid_dollars": "0.5600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1531,12 +1591,12 @@
     "ticker": "KXNHLGAME-26OCT20WPGSTL-STL",
     "title": "St. Louis wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "553.41",
-    "volume_fp": "618.15",
-    "yes_ask_dollars": "0.5800",
-    "yes_ask_size_fp": "57999.52",
-    "yes_bid_dollars": "0.5700",
-    "yes_bid_size_fp": "2.00",
+    "volume_24h_fp": "6681.94",
+    "volume_fp": "6761.85",
+    "yes_ask_dollars": "0.5600",
+    "yes_ask_size_fp": "262489.84",
+    "yes_bid_dollars": "0.5500",
+    "yes_bid_size_fp": "62336.06",
     "yes_sub_title": "St. Louis",
     "_event_title": "Winnipeg vs St. Louis",
     "_event_ticker": "KXNHLGAME-26OCT20WPGSTL",
@@ -1582,7 +1642,12 @@
         "KXNHL3P-26OCT20WPGSTL",
         "KXNHL3PSPREAD-26OCT20WPGSTL",
         "KXNHL3PTOTAL-26OCT20WPGSTL",
-        "KXNHLOT-26OCT20WPGSTL"
+        "KXNHLOT-26OCT20WPGSTL",
+        "KXNHLGOAL-26OCT20WPGSTL",
+        "KXNHLAST-26OCT20WPGSTL",
+        "KXNHLPTS-26OCT20WPGSTL",
+        "KXNHLFIRSTGOAL-26OCT20WPGSTL",
+        "KXNHLSAVE-26OCT20WPGSTL"
       ],
       "details": {
         "league": "nhl",
@@ -1609,7 +1674,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -1632,10 +1697,10 @@
     "no_sub_title": "Winnipeg",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T03:00:00Z",
-    "open_interest_fp": "1242.74",
+    "open_interest_fp": "12408.15",
     "open_time": "2026-10-14T01:06:00Z",
     "previous_price_dollars": "0.4400",
-    "previous_yes_ask_dollars": "0.4500",
+    "previous_yes_ask_dollars": "0.4400",
     "previous_yes_bid_dollars": "0.4200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -1655,12 +1720,12 @@
     "ticker": "KXNHLGAME-26OCT20WPGSTL-WPG",
     "title": "Winnipeg wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "794.98",
-    "volume_fp": "1243.27",
+    "volume_24h_fp": "11756.46",
+    "volume_fp": "12428.22",
     "yes_ask_dollars": "0.4400",
-    "yes_ask_size_fp": "84027.42",
+    "yes_ask_size_fp": "40259.95",
     "yes_bid_dollars": "0.4300",
-    "yes_bid_size_fp": "44.60",
+    "yes_bid_size_fp": "118097.51",
     "yes_sub_title": "Winnipeg",
     "_event_title": "Winnipeg vs St. Louis",
     "_event_ticker": "KXNHLGAME-26OCT20WPGSTL",
@@ -1706,7 +1771,12 @@
         "KXNHL3P-26OCT20WPGSTL",
         "KXNHL3PSPREAD-26OCT20WPGSTL",
         "KXNHL3PTOTAL-26OCT20WPGSTL",
-        "KXNHLOT-26OCT20WPGSTL"
+        "KXNHLOT-26OCT20WPGSTL",
+        "KXNHLGOAL-26OCT20WPGSTL",
+        "KXNHLAST-26OCT20WPGSTL",
+        "KXNHLPTS-26OCT20WPGSTL",
+        "KXNHLFIRSTGOAL-26OCT20WPGSTL",
+        "KXNHLSAVE-26OCT20WPGSTL"
       ],
       "details": {
         "league": "nhl",
@@ -1733,7 +1803,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -1748,19 +1818,19 @@
     "expected_expiration_time": "2026-10-21T04:00:00Z",
     "expiration_time": "2026-10-23T01:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5600",
+    "last_price_dollars": "0.5500",
     "latest_expiration_time": "2026-10-23T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4500",
-    "no_bid_dollars": "0.4400",
+    "no_ask_dollars": "0.4600",
+    "no_bid_dollars": "0.4500",
     "no_sub_title": "Edmonton",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T04:00:00Z",
-    "open_interest_fp": "2548.86",
+    "open_interest_fp": "21481.66",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.5300",
+    "previous_price_dollars": "0.5400",
     "previous_yes_ask_dollars": "0.5400",
-    "previous_yes_bid_dollars": "0.5000",
+    "previous_yes_bid_dollars": "0.5300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1779,12 +1849,12 @@
     "ticker": "KXNHLGAME-26OCT20MINEDM-EDM",
     "title": "Edmonton wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "2535.77",
-    "volume_fp": "2707.18",
-    "yes_ask_dollars": "0.5600",
-    "yes_ask_size_fp": "5740.25",
-    "yes_bid_dollars": "0.5500",
-    "yes_bid_size_fp": "9464.24",
+    "volume_24h_fp": "18745.13",
+    "volume_fp": "21723.73",
+    "yes_ask_dollars": "0.5500",
+    "yes_ask_size_fp": "297580.08",
+    "yes_bid_dollars": "0.5400",
+    "yes_bid_size_fp": "72523.22",
     "yes_sub_title": "Edmonton",
     "_event_title": "Minnesota vs Edmonton",
     "_event_ticker": "KXNHLGAME-26OCT20MINEDM",
@@ -1830,7 +1900,12 @@
         "KXNHL3P-26OCT20MINEDM",
         "KXNHL3PSPREAD-26OCT20MINEDM",
         "KXNHL3PTOTAL-26OCT20MINEDM",
-        "KXNHLOT-26OCT20MINEDM"
+        "KXNHLOT-26OCT20MINEDM",
+        "KXNHLGOAL-26OCT20MINEDM",
+        "KXNHLAST-26OCT20MINEDM",
+        "KXNHLPTS-26OCT20MINEDM",
+        "KXNHLFIRSTGOAL-26OCT20MINEDM",
+        "KXNHLSAVE-26OCT20MINEDM"
       ],
       "details": {
         "league": "nhl",
@@ -1857,7 +1932,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -1880,10 +1955,10 @@
     "no_sub_title": "Minnesota",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T04:00:00Z",
-    "open_interest_fp": "5021.74",
+    "open_interest_fp": "21200.28",
     "open_time": "2026-10-14T01:06:00Z",
-    "previous_price_dollars": "0.5000",
-    "previous_yes_ask_dollars": "0.5000",
+    "previous_price_dollars": "0.4700",
+    "previous_yes_ask_dollars": "0.4700",
     "previous_yes_bid_dollars": "0.4600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -1903,12 +1978,12 @@
     "ticker": "KXNHLGAME-26OCT20MINEDM-MIN",
     "title": "Minnesota wins",
     "updated_time": "2026-10-14T01:06:00.841501Z",
-    "volume_24h_fp": "5172.20",
-    "volume_fp": "6279.76",
+    "volume_24h_fp": "20957.39",
+    "volume_fp": "23079.71",
     "yes_ask_dollars": "0.4600",
-    "yes_ask_size_fp": "222552.91",
+    "yes_ask_size_fp": "282703.53",
     "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "17.00",
+    "yes_bid_size_fp": "53405.78",
     "yes_sub_title": "Minnesota",
     "_event_title": "Minnesota vs Edmonton",
     "_event_ticker": "KXNHLGAME-26OCT20MINEDM",
@@ -1954,7 +2029,12 @@
         "KXNHL3P-26OCT20MINEDM",
         "KXNHL3PSPREAD-26OCT20MINEDM",
         "KXNHL3PTOTAL-26OCT20MINEDM",
-        "KXNHLOT-26OCT20MINEDM"
+        "KXNHLOT-26OCT20MINEDM",
+        "KXNHLGOAL-26OCT20MINEDM",
+        "KXNHLAST-26OCT20MINEDM",
+        "KXNHLPTS-26OCT20MINEDM",
+        "KXNHLFIRSTGOAL-26OCT20MINEDM",
+        "KXNHLSAVE-26OCT20MINEDM"
       ],
       "details": {
         "league": "nhl",
@@ -1981,7 +2061,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -1996,19 +2076,19 @@
     "expected_expiration_time": "2026-10-21T04:40:00Z",
     "expiration_time": "2026-10-23T01:40:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5200",
+    "last_price_dollars": "0.4800",
     "latest_expiration_time": "2026-10-23T01:40:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4900",
-    "no_bid_dollars": "0.4800",
+    "no_ask_dollars": "0.5300",
+    "no_bid_dollars": "0.5200",
     "no_sub_title": "Seattle",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T04:40:00Z",
-    "open_interest_fp": "4173.96",
+    "open_interest_fp": "22792.30",
     "open_time": "2026-10-14T04:06:00Z",
-    "previous_price_dollars": "0.5300",
-    "previous_yes_ask_dollars": "0.5300",
-    "previous_yes_bid_dollars": "0.4900",
+    "previous_price_dollars": "0.5200",
+    "previous_yes_ask_dollars": "0.5200",
+    "previous_yes_bid_dollars": "0.5100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2027,12 +2107,12 @@
     "ticker": "KXNHLGAME-26OCT20DETSEA-SEA",
     "title": "Seattle wins",
     "updated_time": "2026-10-14T04:06:00.39758Z",
-    "volume_24h_fp": "3981.63",
-    "volume_fp": "4221.47",
-    "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "56513.09",
-    "yes_bid_dollars": "0.5100",
-    "yes_bid_size_fp": "669.89",
+    "volume_24h_fp": "23858.77",
+    "volume_fp": "24166.06",
+    "yes_ask_dollars": "0.4800",
+    "yes_ask_size_fp": "21469.59",
+    "yes_bid_dollars": "0.4700",
+    "yes_bid_size_fp": "23879.34",
     "yes_sub_title": "Seattle",
     "_event_title": "Detroit vs Seattle",
     "_event_ticker": "KXNHLGAME-26OCT20DETSEA",
@@ -2078,7 +2158,12 @@
         "KXNHL3P-26OCT20DETSEA",
         "KXNHL3PSPREAD-26OCT20DETSEA",
         "KXNHL3PTOTAL-26OCT20DETSEA",
-        "KXNHLOT-26OCT20DETSEA"
+        "KXNHLOT-26OCT20DETSEA",
+        "KXNHLGOAL-26OCT20DETSEA",
+        "KXNHLAST-26OCT20DETSEA",
+        "KXNHLPTS-26OCT20DETSEA",
+        "KXNHLFIRSTGOAL-26OCT20DETSEA",
+        "KXNHLSAVE-26OCT20DETSEA"
       ],
       "details": {
         "league": "nhl",
@@ -2105,7 +2190,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -2120,18 +2205,18 @@
     "expected_expiration_time": "2026-10-21T04:40:00Z",
     "expiration_time": "2026-10-23T01:40:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4900",
+    "last_price_dollars": "0.5300",
     "latest_expiration_time": "2026-10-23T01:40:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5200",
-    "no_bid_dollars": "0.5100",
+    "no_ask_dollars": "0.4800",
+    "no_bid_dollars": "0.4700",
     "no_sub_title": "Detroit",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T04:40:00Z",
-    "open_interest_fp": "771.35",
+    "open_interest_fp": "57371.21",
     "open_time": "2026-10-14T04:06:00Z",
-    "previous_price_dollars": "0.5100",
-    "previous_yes_ask_dollars": "0.5200",
+    "previous_price_dollars": "0.4900",
+    "previous_yes_ask_dollars": "0.5000",
     "previous_yes_bid_dollars": "0.4900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -2151,12 +2236,12 @@
     "ticker": "KXNHLGAME-26OCT20DETSEA-DET",
     "title": "Detroit wins",
     "updated_time": "2026-10-14T04:06:00.39758Z",
-    "volume_24h_fp": "555.79",
-    "volume_fp": "789.72",
-    "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "4.58",
-    "yes_bid_dollars": "0.4800",
-    "yes_bid_size_fp": "11026.85",
+    "volume_24h_fp": "56049.71",
+    "volume_fp": "57453.71",
+    "yes_ask_dollars": "0.5300",
+    "yes_ask_size_fp": "208316.04",
+    "yes_bid_dollars": "0.5200",
+    "yes_bid_size_fp": "475.08",
     "yes_sub_title": "Detroit",
     "_event_title": "Detroit vs Seattle",
     "_event_ticker": "KXNHLGAME-26OCT20DETSEA",
@@ -2202,7 +2287,12 @@
         "KXNHL3P-26OCT20DETSEA",
         "KXNHL3PSPREAD-26OCT20DETSEA",
         "KXNHL3PTOTAL-26OCT20DETSEA",
-        "KXNHLOT-26OCT20DETSEA"
+        "KXNHLOT-26OCT20DETSEA",
+        "KXNHLGOAL-26OCT20DETSEA",
+        "KXNHLAST-26OCT20DETSEA",
+        "KXNHLPTS-26OCT20DETSEA",
+        "KXNHLFIRSTGOAL-26OCT20DETSEA",
+        "KXNHLSAVE-26OCT20DETSEA"
       ],
       "details": {
         "league": "nhl",
@@ -2229,7 +2319,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -2244,19 +2334,19 @@
     "expected_expiration_time": "2026-10-21T05:00:00Z",
     "expiration_time": "2026-10-23T02:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.2800",
+    "last_price_dollars": "0.2600",
     "latest_expiration_time": "2026-10-23T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7300",
-    "no_bid_dollars": "0.7200",
+    "no_ask_dollars": "0.7400",
+    "no_bid_dollars": "0.7300",
     "no_sub_title": "Vancouver",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T05:00:00Z",
-    "open_interest_fp": "2623.82",
+    "open_interest_fp": "4362.56",
     "open_time": "2026-10-14T04:06:00Z",
     "previous_price_dollars": "0.2800",
     "previous_yes_ask_dollars": "0.2800",
-    "previous_yes_bid_dollars": "0.2500",
+    "previous_yes_bid_dollars": "0.2700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2275,12 +2365,12 @@
     "ticker": "KXNHLGAME-26OCT20CARVAN-VAN",
     "title": "Vancouver wins",
     "updated_time": "2026-10-14T04:06:00.39758Z",
-    "volume_24h_fp": "491.78",
-    "volume_fp": "2627.24",
-    "yes_ask_dollars": "0.2800",
-    "yes_ask_size_fp": "73004.58",
-    "yes_bid_dollars": "0.2700",
-    "yes_bid_size_fp": "385.04",
+    "volume_24h_fp": "2103.82",
+    "volume_fp": "4443.50",
+    "yes_ask_dollars": "0.2700",
+    "yes_ask_size_fp": "65.04",
+    "yes_bid_dollars": "0.2600",
+    "yes_bid_size_fp": "137404.26",
     "yes_sub_title": "Vancouver",
     "_event_title": "Carolina vs Vancouver",
     "_event_ticker": "KXNHLGAME-26OCT20CARVAN",
@@ -2326,7 +2416,12 @@
         "KXNHL3P-26OCT20CARVAN",
         "KXNHL3PSPREAD-26OCT20CARVAN",
         "KXNHL3PTOTAL-26OCT20CARVAN",
-        "KXNHLOT-26OCT20CARVAN"
+        "KXNHLOT-26OCT20CARVAN",
+        "KXNHLGOAL-26OCT20CARVAN",
+        "KXNHLAST-26OCT20CARVAN",
+        "KXNHLPTS-26OCT20CARVAN",
+        "KXNHLFIRSTGOAL-26OCT20CARVAN",
+        "KXNHLSAVE-26OCT20CARVAN"
       ],
       "details": {
         "league": "nhl",
@@ -2353,7 +2448,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -2368,19 +2463,19 @@
     "expected_expiration_time": "2026-10-21T05:00:00Z",
     "expiration_time": "2026-10-23T02:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.7300",
+    "last_price_dollars": "0.7400",
     "latest_expiration_time": "2026-10-23T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.2800",
-    "no_bid_dollars": "0.2700",
+    "no_ask_dollars": "0.2700",
+    "no_bid_dollars": "0.2600",
     "no_sub_title": "Carolina",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T05:00:00Z",
-    "open_interest_fp": "2990.09",
+    "open_interest_fp": "24215.10",
     "open_time": "2026-10-14T04:06:00Z",
-    "previous_price_dollars": "0.7600",
-    "previous_yes_ask_dollars": "0.7600",
-    "previous_yes_bid_dollars": "0.7300",
+    "previous_price_dollars": "0.7300",
+    "previous_yes_ask_dollars": "0.7300",
+    "previous_yes_bid_dollars": "0.7200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2399,12 +2494,12 @@
     "ticker": "KXNHLGAME-26OCT20CARVAN-CAR",
     "title": "Carolina wins",
     "updated_time": "2026-10-14T04:06:00.39758Z",
-    "volume_24h_fp": "2398.95",
-    "volume_fp": "3249.01",
-    "yes_ask_dollars": "0.7300",
-    "yes_ask_size_fp": "17620.52",
-    "yes_bid_dollars": "0.7200",
-    "yes_bid_size_fp": "35476.31",
+    "volume_24h_fp": "24609.60",
+    "volume_fp": "26194.86",
+    "yes_ask_dollars": "0.7400",
+    "yes_ask_size_fp": "403513.80",
+    "yes_bid_dollars": "0.7300",
+    "yes_bid_size_fp": "11011.59",
     "yes_sub_title": "Carolina",
     "_event_title": "Carolina vs Vancouver",
     "_event_ticker": "KXNHLGAME-26OCT20CARVAN",
@@ -2450,7 +2545,12 @@
         "KXNHL3P-26OCT20CARVAN",
         "KXNHL3PSPREAD-26OCT20CARVAN",
         "KXNHL3PTOTAL-26OCT20CARVAN",
-        "KXNHLOT-26OCT20CARVAN"
+        "KXNHLOT-26OCT20CARVAN",
+        "KXNHLGOAL-26OCT20CARVAN",
+        "KXNHLAST-26OCT20CARVAN",
+        "KXNHLPTS-26OCT20CARVAN",
+        "KXNHLFIRSTGOAL-26OCT20CARVAN",
+        "KXNHLSAVE-26OCT20CARVAN"
       ],
       "details": {
         "league": "nhl",
@@ -2477,7 +2577,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -2492,19 +2592,19 @@
     "expected_expiration_time": "2026-10-21T05:30:00Z",
     "expiration_time": "2026-10-23T02:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5200",
+    "last_price_dollars": "0.5000",
     "latest_expiration_time": "2026-10-23T02:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4900",
-    "no_bid_dollars": "0.4800",
+    "no_ask_dollars": "0.5100",
+    "no_bid_dollars": "0.5000",
     "no_sub_title": "Vegas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T05:30:00Z",
-    "open_interest_fp": "3141.51",
+    "open_interest_fp": "35854.19",
     "open_time": "2026-10-14T04:06:00Z",
-    "previous_price_dollars": "0.5500",
-    "previous_yes_ask_dollars": "0.5500",
-    "previous_yes_bid_dollars": "0.5200",
+    "previous_price_dollars": "0.5200",
+    "previous_yes_ask_dollars": "0.5200",
+    "previous_yes_bid_dollars": "0.5100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2523,12 +2623,12 @@
     "ticker": "KXNHLGAME-26OCT20TBVGK-VGK",
     "title": "Vegas wins",
     "updated_time": "2026-10-14T04:06:00.39758Z",
-    "volume_24h_fp": "1256.86",
-    "volume_fp": "3175.19",
-    "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "93321.06",
-    "yes_bid_dollars": "0.5100",
-    "yes_bid_size_fp": "38.76",
+    "volume_24h_fp": "34027.35",
+    "volume_fp": "36371.75",
+    "yes_ask_dollars": "0.5000",
+    "yes_ask_size_fp": "149703.03",
+    "yes_bid_dollars": "0.4900",
+    "yes_bid_size_fp": "30017.88",
     "yes_sub_title": "Vegas",
     "_event_title": "Tampa Bay vs Vegas",
     "_event_ticker": "KXNHLGAME-26OCT20TBVGK",
@@ -2574,7 +2674,12 @@
         "KXNHL3P-26OCT20TBVGK",
         "KXNHL3PSPREAD-26OCT20TBVGK",
         "KXNHL3PTOTAL-26OCT20TBVGK",
-        "KXNHLOT-26OCT20TBVGK"
+        "KXNHLOT-26OCT20TBVGK",
+        "KXNHLGOAL-26OCT20TBVGK",
+        "KXNHLAST-26OCT20TBVGK",
+        "KXNHLPTS-26OCT20TBVGK",
+        "KXNHLFIRSTGOAL-26OCT20TBVGK",
+        "KXNHLSAVE-26OCT20TBVGK"
       ],
       "details": {
         "league": "nhl",
@@ -2601,7 +2706,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -2616,19 +2721,19 @@
     "expected_expiration_time": "2026-10-21T05:30:00Z",
     "expiration_time": "2026-10-23T02:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4900",
+    "last_price_dollars": "0.5000",
     "latest_expiration_time": "2026-10-23T02:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5200",
-    "no_bid_dollars": "0.5100",
+    "no_ask_dollars": "0.5100",
+    "no_bid_dollars": "0.5000",
     "no_sub_title": "Tampa Bay",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T05:30:00Z",
-    "open_interest_fp": "720.47",
+    "open_interest_fp": "14452.03",
     "open_time": "2026-10-14T04:06:00Z",
     "previous_price_dollars": "0.4900",
     "previous_yes_ask_dollars": "0.4900",
-    "previous_yes_bid_dollars": "0.4600",
+    "previous_yes_bid_dollars": "0.4800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2647,12 +2752,12 @@
     "ticker": "KXNHLGAME-26OCT20TBVGK-TB",
     "title": "Tampa Bay wins",
     "updated_time": "2026-10-14T04:06:00.39758Z",
-    "volume_24h_fp": "668.57",
-    "volume_fp": "1019.92",
-    "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "24564.18",
-    "yes_bid_dollars": "0.4800",
-    "yes_bid_size_fp": "12720.25",
+    "volume_24h_fp": "13649.79",
+    "volume_fp": "14958.37",
+    "yes_ask_dollars": "0.5000",
+    "yes_ask_size_fp": "19199.81",
+    "yes_bid_dollars": "0.4900",
+    "yes_bid_size_fp": "32704.58",
     "yes_sub_title": "Tampa Bay",
     "_event_title": "Tampa Bay vs Vegas",
     "_event_ticker": "KXNHLGAME-26OCT20TBVGK",
@@ -2698,7 +2803,12 @@
         "KXNHL3P-26OCT20TBVGK",
         "KXNHL3PSPREAD-26OCT20TBVGK",
         "KXNHL3PTOTAL-26OCT20TBVGK",
-        "KXNHLOT-26OCT20TBVGK"
+        "KXNHLOT-26OCT20TBVGK",
+        "KXNHLGOAL-26OCT20TBVGK",
+        "KXNHLAST-26OCT20TBVGK",
+        "KXNHLPTS-26OCT20TBVGK",
+        "KXNHLFIRSTGOAL-26OCT20TBVGK",
+        "KXNHLSAVE-26OCT20TBVGK"
       ],
       "details": {
         "league": "nhl",
@@ -2725,7 +2835,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -2744,15 +2854,15 @@
     "latest_expiration_time": "2026-10-23T23:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5000",
-    "no_bid_dollars": "0.4800",
+    "no_bid_dollars": "0.4900",
     "no_sub_title": "Ottawa",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T02:30:00Z",
-    "open_interest_fp": "355.92",
+    "open_interest_fp": "547.05",
     "open_time": "2026-10-15T01:06:00Z",
     "previous_price_dollars": "0.4600",
-    "previous_yes_ask_dollars": "0.4900",
-    "previous_yes_bid_dollars": "0.4600",
+    "previous_yes_ask_dollars": "0.5200",
+    "previous_yes_bid_dollars": "0.4900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2771,12 +2881,12 @@
     "ticker": "KXNHLGAME-26OCT21FLAOTT-OTT",
     "title": "Ottawa wins",
     "updated_time": "2026-10-15T01:06:00.525465Z",
-    "volume_24h_fp": "1.89",
-    "volume_fp": "443.96",
-    "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "9337.51",
+    "volume_24h_fp": "211.96",
+    "volume_fp": "654.03",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "10239.70",
     "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "98.23",
+    "yes_bid_size_fp": "113.76",
     "yes_sub_title": "Ottawa",
     "_event_title": "Florida vs Ottawa",
     "_event_ticker": "KXNHLGAME-26OCT21FLAOTT",
@@ -2849,7 +2959,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -2864,19 +2974,19 @@
     "expected_expiration_time": "2026-10-22T02:30:00Z",
     "expiration_time": "2026-10-23T23:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5000",
+    "last_price_dollars": "0.5100",
     "latest_expiration_time": "2026-10-23T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5200",
-    "no_bid_dollars": "0.5100",
+    "no_ask_dollars": "0.5000",
+    "no_bid_dollars": "0.4900",
     "no_sub_title": "Florida",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T02:30:00Z",
-    "open_interest_fp": "3872.83",
+    "open_interest_fp": "4401.55",
     "open_time": "2026-10-15T01:06:00Z",
-    "previous_price_dollars": "0.5400",
-    "previous_yes_ask_dollars": "0.5600",
-    "previous_yes_bid_dollars": "0.5400",
+    "previous_price_dollars": "0.5100",
+    "previous_yes_ask_dollars": "0.4800",
+    "previous_yes_bid_dollars": "0.4700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2895,12 +3005,12 @@
     "ticker": "KXNHLGAME-26OCT21FLAOTT-FLA",
     "title": "Florida wins",
     "updated_time": "2026-10-15T01:06:00.525465Z",
-    "volume_24h_fp": "307.53",
-    "volume_fp": "3874.84",
-    "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "1883.00",
-    "yes_bid_dollars": "0.4800",
-    "yes_bid_size_fp": "7883.67",
+    "volume_24h_fp": "669.85",
+    "volume_fp": "4403.56",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "5765.57",
+    "yes_bid_dollars": "0.5000",
+    "yes_bid_size_fp": "422.00",
     "yes_sub_title": "Florida",
     "_event_title": "Florida vs Ottawa",
     "_event_ticker": "KXNHLGAME-26OCT21FLAOTT",
@@ -2973,7 +3083,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -2988,17 +3098,17 @@
     "expected_expiration_time": "2026-10-22T02:30:00Z",
     "expiration_time": "2026-10-23T23:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6500",
+    "last_price_dollars": "0.6300",
     "latest_expiration_time": "2026-10-23T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.3600",
-    "no_bid_dollars": "0.3500",
+    "no_ask_dollars": "0.3700",
+    "no_bid_dollars": "0.3600",
     "no_sub_title": "Buffalo",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T02:30:00Z",
-    "open_interest_fp": "400.12",
+    "open_interest_fp": "892.47",
     "open_time": "2026-10-15T01:06:00Z",
-    "previous_price_dollars": "0.6200",
+    "previous_price_dollars": "0.6500",
     "previous_yes_ask_dollars": "0.6500",
     "previous_yes_bid_dollars": "0.6200",
     "price_level_structure": "linear_cent",
@@ -3019,12 +3129,12 @@
     "ticker": "KXNHLGAME-26OCT21PHIBUF-BUF",
     "title": "Buffalo wins",
     "updated_time": "2026-10-15T01:06:00.525465Z",
-    "volume_24h_fp": "171.38",
-    "volume_fp": "416.04",
-    "yes_ask_dollars": "0.6500",
-    "yes_ask_size_fp": "111.03",
-    "yes_bid_dollars": "0.6400",
-    "yes_bid_size_fp": "12.00",
+    "volume_24h_fp": "600.80",
+    "volume_fp": "911.39",
+    "yes_ask_dollars": "0.6400",
+    "yes_ask_size_fp": "6452.87",
+    "yes_bid_dollars": "0.6300",
+    "yes_bid_size_fp": "79.43",
     "yes_sub_title": "Buffalo",
     "_event_title": "Philadelphia vs Buffalo",
     "_event_ticker": "KXNHLGAME-26OCT21PHIBUF",
@@ -3097,7 +3207,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -3116,14 +3226,14 @@
     "latest_expiration_time": "2026-10-23T23:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6400",
-    "no_bid_dollars": "0.6200",
+    "no_bid_dollars": "0.6300",
     "no_sub_title": "Philadelphia",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T02:30:00Z",
-    "open_interest_fp": "377.08",
+    "open_interest_fp": "454.65",
     "open_time": "2026-10-15T01:06:00Z",
-    "previous_price_dollars": "0.3600",
-    "previous_yes_ask_dollars": "0.3900",
+    "previous_price_dollars": "0.3700",
+    "previous_yes_ask_dollars": "0.3700",
     "previous_yes_bid_dollars": "0.3600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -3143,12 +3253,12 @@
     "ticker": "KXNHLGAME-26OCT21PHIBUF-PHI",
     "title": "Philadelphia wins",
     "updated_time": "2026-10-15T01:06:00.525465Z",
-    "volume_24h_fp": "266.80",
-    "volume_fp": "379.08",
-    "yes_ask_dollars": "0.3800",
-    "yes_ask_size_fp": "96.41",
+    "volume_24h_fp": "105.37",
+    "volume_fp": "456.65",
+    "yes_ask_dollars": "0.3700",
+    "yes_ask_size_fp": "134.40",
     "yes_bid_dollars": "0.3600",
-    "yes_bid_size_fp": "261.00",
+    "yes_bid_size_fp": "1632.57",
     "yes_sub_title": "Philadelphia",
     "_event_title": "Philadelphia vs Buffalo",
     "_event_ticker": "KXNHLGAME-26OCT21PHIBUF",
@@ -3221,7 +3331,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -3236,18 +3346,18 @@
     "expected_expiration_time": "2026-10-23T02:00:00Z",
     "expiration_time": "2026-10-24T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6000",
+    "last_price_dollars": "0.6200",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4500",
-    "no_bid_dollars": "0.4100",
+    "no_ask_dollars": "0.4100",
+    "no_bid_dollars": "0.3800",
     "no_sub_title": "New Jersey",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
-    "open_interest_fp": "17.62",
+    "open_interest_fp": "33.33",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.5900",
-    "previous_yes_ask_dollars": "0.6200",
+    "previous_yes_ask_dollars": "0.6100",
     "previous_yes_bid_dollars": "0.5600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -3267,12 +3377,12 @@
     "ticker": "KXNHLGAME-26OCT22ANANJ-NJ",
     "title": "New Jersey wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "0.48",
-    "volume_fp": "17.62",
-    "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "43.00",
-    "yes_bid_dollars": "0.5500",
-    "yes_bid_size_fp": "100.00",
+    "volume_24h_fp": "16.19",
+    "volume_fp": "33.33",
+    "yes_ask_dollars": "0.6200",
+    "yes_ask_size_fp": "3.29",
+    "yes_bid_dollars": "0.5900",
+    "yes_bid_size_fp": "1327.00",
     "yes_sub_title": "New Jersey",
     "_event_title": "Anaheim vs New Jersey",
     "_event_ticker": "KXNHLGAME-26OCT22ANANJ",
@@ -3321,7 +3431,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -3339,8 +3449,8 @@
     "last_price_dollars": "0.4300",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5900",
-    "no_bid_dollars": "0.5700",
+    "no_ask_dollars": "0.6400",
+    "no_bid_dollars": "0.6100",
     "no_sub_title": "Anaheim",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
@@ -3348,7 +3458,7 @@
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.4500",
     "previous_yes_ask_dollars": "0.4200",
-    "previous_yes_bid_dollars": "0.3800",
+    "previous_yes_bid_dollars": "0.3900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -3369,10 +3479,10 @@
     "updated_time": "2026-10-16T01:06:01.035467Z",
     "volume_24h_fp": "22.56",
     "volume_fp": "51.61",
-    "yes_ask_dollars": "0.4300",
-    "yes_ask_size_fp": "1.00",
-    "yes_bid_dollars": "0.4100",
-    "yes_bid_size_fp": "39.00",
+    "yes_ask_dollars": "0.3900",
+    "yes_ask_size_fp": "5.00",
+    "yes_bid_dollars": "0.3600",
+    "yes_bid_size_fp": "207.00",
     "yes_sub_title": "Anaheim",
     "_event_title": "Anaheim vs New Jersey",
     "_event_ticker": "KXNHLGAME-26OCT22ANANJ",
@@ -3421,7 +3531,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -3436,19 +3546,19 @@
     "expected_expiration_time": "2026-10-23T02:00:00Z",
     "expiration_time": "2026-10-24T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5100",
+    "last_price_dollars": "0.5200",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5500",
-    "no_bid_dollars": "0.5100",
+    "no_ask_dollars": "0.5100",
+    "no_bid_dollars": "0.4900",
     "no_sub_title": "Pittsburgh",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
-    "open_interest_fp": "76.22",
+    "open_interest_fp": "222.27",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.5200",
     "previous_yes_ask_dollars": "0.5300",
-    "previous_yes_bid_dollars": "0.4300",
+    "previous_yes_bid_dollars": "0.4700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -3467,12 +3577,12 @@
     "ticker": "KXNHLGAME-26OCT22FLAPIT-PIT",
     "title": "Pittsburgh wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "47.20",
-    "volume_fp": "76.22",
-    "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "50.00",
-    "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "55.00",
+    "volume_24h_fp": "193.25",
+    "volume_fp": "222.27",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "51.00",
+    "yes_bid_dollars": "0.4900",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Pittsburgh",
     "_event_title": "Florida vs Pittsburgh",
     "_event_ticker": "KXNHLGAME-26OCT22FLAPIT",
@@ -3521,7 +3631,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -3536,18 +3646,18 @@
     "expected_expiration_time": "2026-10-23T02:00:00Z",
     "expiration_time": "2026-10-24T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5200",
+    "last_price_dollars": "0.5100",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5400",
-    "no_bid_dollars": "0.4700",
+    "no_ask_dollars": "0.5200",
+    "no_bid_dollars": "0.4900",
     "no_sub_title": "Florida",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
-    "open_interest_fp": "640.57",
+    "open_interest_fp": "666.54",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.5100",
-    "previous_yes_ask_dollars": "0.5300",
+    "previous_yes_ask_dollars": "0.5000",
     "previous_yes_bid_dollars": "0.4500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -3567,12 +3677,12 @@
     "ticker": "KXNHLGAME-26OCT22FLAPIT-FLA",
     "title": "Florida wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "3.72",
-    "volume_fp": "640.57",
-    "yes_ask_dollars": "0.5300",
-    "yes_ask_size_fp": "2068.82",
-    "yes_bid_dollars": "0.4600",
-    "yes_bid_size_fp": "140.00",
+    "volume_24h_fp": "29.69",
+    "volume_fp": "666.54",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "4265.64",
+    "yes_bid_dollars": "0.4800",
+    "yes_bid_size_fp": "231.00",
     "yes_sub_title": "Florida",
     "_event_title": "Florida vs Pittsburgh",
     "_event_ticker": "KXNHLGAME-26OCT22FLAPIT",
@@ -3621,7 +3731,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -3636,15 +3746,15 @@
     "expected_expiration_time": "2026-10-23T02:00:00Z",
     "expiration_time": "2026-10-24T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6000",
+    "last_price_dollars": "0.6200",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4200",
-    "no_bid_dollars": "0.4000",
+    "no_ask_dollars": "0.4000",
+    "no_bid_dollars": "0.3800",
     "no_sub_title": "Boston",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
-    "open_interest_fp": "145.30",
+    "open_interest_fp": "223.84",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.6000",
     "previous_yes_ask_dollars": "0.6000",
@@ -3667,12 +3777,12 @@
     "ticker": "KXNHLGAME-26OCT22NSHBOS-BOS",
     "title": "Boston wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "28.02",
-    "volume_fp": "145.30",
-    "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "1980.91",
-    "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "13.00",
+    "volume_24h_fp": "106.56",
+    "volume_fp": "223.84",
+    "yes_ask_dollars": "0.6200",
+    "yes_ask_size_fp": "25046.46",
+    "yes_bid_dollars": "0.6000",
+    "yes_bid_size_fp": "9.00",
     "yes_sub_title": "Boston",
     "_event_title": "Nashville vs Boston",
     "_event_ticker": "KXNHLGAME-26OCT22NSHBOS",
@@ -3721,7 +3831,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -3736,19 +3846,19 @@
     "expected_expiration_time": "2026-10-23T02:00:00Z",
     "expiration_time": "2026-10-24T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4700",
+    "last_price_dollars": "0.4200",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6100",
-    "no_bid_dollars": "0.5700",
+    "no_ask_dollars": "0.6300",
+    "no_bid_dollars": "0.5900",
     "no_sub_title": "Nashville",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
-    "open_interest_fp": "30.00",
+    "open_interest_fp": "62.88",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.4700",
     "previous_yes_ask_dollars": "0.4300",
-    "previous_yes_bid_dollars": "0.3800",
+    "previous_yes_bid_dollars": "0.3900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -3767,12 +3877,12 @@
     "ticker": "KXNHLGAME-26OCT22NSHBOS-NSH",
     "title": "Nashville wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "0.00",
-    "volume_fp": "30.00",
-    "yes_ask_dollars": "0.4300",
-    "yes_ask_size_fp": "44.93",
-    "yes_bid_dollars": "0.3900",
-    "yes_bid_size_fp": "89.00",
+    "volume_24h_fp": "32.88",
+    "volume_fp": "62.88",
+    "yes_ask_dollars": "0.4100",
+    "yes_ask_size_fp": "25058.77",
+    "yes_bid_dollars": "0.3700",
+    "yes_bid_size_fp": "911.00",
     "yes_sub_title": "Nashville",
     "_event_title": "Nashville vs Boston",
     "_event_ticker": "KXNHLGAME-26OCT22NSHBOS",
@@ -3821,7 +3931,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -3836,15 +3946,15 @@
     "expected_expiration_time": "2026-10-23T02:00:00Z",
     "expiration_time": "2026-10-24T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4900",
+    "last_price_dollars": "0.5200",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5600",
-    "no_bid_dollars": "0.5100",
+    "no_ask_dollars": "0.5200",
+    "no_bid_dollars": "0.5000",
     "no_sub_title": "Toronto",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
-    "open_interest_fp": "1.95",
+    "open_interest_fp": "21.15",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.4900",
@@ -3867,12 +3977,12 @@
     "ticker": "KXNHLGAME-26OCT22NYRTOR-TOR",
     "title": "Toronto wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "1.95",
-    "volume_fp": "1.95",
-    "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "28.00",
-    "yes_bid_dollars": "0.4400",
-    "yes_bid_size_fp": "50.00",
+    "volume_24h_fp": "21.15",
+    "volume_fp": "21.15",
+    "yes_ask_dollars": "0.5000",
+    "yes_ask_size_fp": "10.00",
+    "yes_bid_dollars": "0.4800",
+    "yes_bid_size_fp": "100.00",
     "yes_sub_title": "Toronto",
     "_event_title": "New York R vs Toronto",
     "_event_ticker": "KXNHLGAME-26OCT22NYRTOR",
@@ -3921,7 +4031,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -3936,7 +4046,7 @@
     "expected_expiration_time": "2026-10-23T02:00:00Z",
     "expiration_time": "2026-10-24T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5300",
+    "last_price_dollars": "0.5200",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5000",
@@ -3944,11 +4054,11 @@
     "no_sub_title": "New York R",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
-    "open_interest_fp": "144.64",
+    "open_interest_fp": "233.31",
     "open_time": "2026-10-16T01:06:00Z",
-    "previous_price_dollars": "0.5300",
+    "previous_price_dollars": "0.5100",
     "previous_yes_ask_dollars": "0.5300",
-    "previous_yes_bid_dollars": "0.5100",
+    "previous_yes_bid_dollars": "0.5000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -3967,12 +4077,12 @@
     "ticker": "KXNHLGAME-26OCT22NYRTOR-NYR",
     "title": "New York R wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "130.04",
-    "volume_fp": "152.64",
+    "volume_24h_fp": "227.54",
+    "volume_fp": "258.14",
     "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "38.00",
+    "yes_ask_size_fp": "91.50",
     "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "71.00",
+    "yes_bid_size_fp": "28.00",
     "yes_sub_title": "New York R",
     "_event_title": "New York R vs Toronto",
     "_event_ticker": "KXNHLGAME-26OCT22NYRTOR",
@@ -4021,7 +4131,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4036,19 +4146,19 @@
     "expected_expiration_time": "2026-10-23T02:00:00Z",
     "expiration_time": "2026-10-24T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5600",
+    "last_price_dollars": "0.5700",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4800",
-    "no_bid_dollars": "0.4400",
+    "no_ask_dollars": "0.4400",
+    "no_bid_dollars": "0.4100",
     "no_sub_title": "Ottawa",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
-    "open_interest_fp": "33.21",
+    "open_interest_fp": "64.18",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.5900",
-    "previous_yes_ask_dollars": "0.5700",
-    "previous_yes_bid_dollars": "0.5400",
+    "previous_yes_ask_dollars": "0.5600",
+    "previous_yes_bid_dollars": "0.5200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -4068,11 +4178,11 @@
     "title": "Ottawa wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
     "volume_24h_fp": "19.05",
-    "volume_fp": "33.21",
-    "yes_ask_dollars": "0.5600",
-    "yes_ask_size_fp": "34.34",
-    "yes_bid_dollars": "0.5200",
-    "yes_bid_size_fp": "40.00",
+    "volume_fp": "64.18",
+    "yes_ask_dollars": "0.5900",
+    "yes_ask_size_fp": "77.91",
+    "yes_bid_dollars": "0.5600",
+    "yes_bid_size_fp": "25.88",
     "yes_sub_title": "Ottawa",
     "_event_title": "San Jose vs Ottawa",
     "_event_ticker": "KXNHLGAME-26OCT22SJOTT",
@@ -4121,7 +4231,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4139,15 +4249,15 @@
     "last_price_dollars": "0.4600",
     "latest_expiration_time": "2026-10-24T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5700",
-    "no_bid_dollars": "0.5300",
+    "no_ask_dollars": "0.5900",
+    "no_bid_dollars": "0.5800",
     "no_sub_title": "San Jose",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:00:00Z",
     "open_interest_fp": "145.17",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.4600",
-    "previous_yes_ask_dollars": "0.4600",
+    "previous_yes_ask_dollars": "0.4500",
     "previous_yes_bid_dollars": "0.4200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -4169,10 +4279,10 @@
     "updated_time": "2026-10-16T01:06:01.035467Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "145.17",
-    "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "1811.00",
-    "yes_bid_dollars": "0.4300",
-    "yes_bid_size_fp": "50.00",
+    "yes_ask_dollars": "0.4200",
+    "yes_ask_size_fp": "2078.00",
+    "yes_bid_dollars": "0.4100",
+    "yes_bid_size_fp": "130.00",
     "yes_sub_title": "San Jose",
     "_event_title": "San Jose vs Ottawa",
     "_event_ticker": "KXNHLGAME-26OCT22SJOTT",
@@ -4221,7 +4331,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4239,7 +4349,7 @@
     "last_price_dollars": "0.5400",
     "latest_expiration_time": "2026-10-24T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5000",
+    "no_ask_dollars": "0.5100",
     "no_bid_dollars": "0.4700",
     "no_sub_title": "New York I",
     "notional_value_dollars": "1.0000",
@@ -4267,12 +4377,12 @@
     "ticker": "KXNHLGAME-26OCT22LANYI-NYI",
     "title": "New York I wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "17.55",
+    "volume_24h_fp": "5.00",
     "volume_fp": "64.91",
     "yes_ask_dollars": "0.5300",
-    "yes_ask_size_fp": "52.31",
-    "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "55.00",
+    "yes_ask_size_fp": "22.00",
+    "yes_bid_dollars": "0.4900",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "New York I",
     "_event_title": "Los Angeles vs New York I",
     "_event_ticker": "KXNHLGAME-26OCT22LANYI",
@@ -4321,7 +4431,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4339,16 +4449,16 @@
     "last_price_dollars": "0.4900",
     "latest_expiration_time": "2026-10-24T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5500",
-    "no_bid_dollars": "0.5100",
+    "no_ask_dollars": "0.5400",
+    "no_bid_dollars": "0.5000",
     "no_sub_title": "Los Angeles",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T02:30:00Z",
     "open_interest_fp": "19.70",
     "open_time": "2026-10-16T01:06:00Z",
-    "previous_price_dollars": "0.0000",
+    "previous_price_dollars": "0.4900",
     "previous_yes_ask_dollars": "0.4900",
-    "previous_yes_bid_dollars": "0.4400",
+    "previous_yes_bid_dollars": "0.4500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -4367,12 +4477,12 @@
     "ticker": "KXNHLGAME-26OCT22LANYI-LA",
     "title": "Los Angeles wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "19.70",
+    "volume_24h_fp": "0.00",
     "volume_fp": "19.70",
-    "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "50.00",
-    "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "34.00",
+    "yes_ask_dollars": "0.5000",
+    "yes_ask_size_fp": "1968.30",
+    "yes_bid_dollars": "0.4600",
+    "yes_bid_size_fp": "123.00",
     "yes_sub_title": "Los Angeles",
     "_event_title": "Los Angeles vs New York I",
     "_event_ticker": "KXNHLGAME-26OCT22LANYI",
@@ -4421,7 +4531,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4436,19 +4546,19 @@
     "expected_expiration_time": "2026-10-23T03:00:00Z",
     "expiration_time": "2026-10-25T00:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4500",
+    "last_price_dollars": "0.4600",
     "latest_expiration_time": "2026-10-25T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6000",
-    "no_bid_dollars": "0.5500",
+    "no_ask_dollars": "0.5700",
+    "no_bid_dollars": "0.5400",
     "no_sub_title": "St. Louis",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T03:00:00Z",
-    "open_interest_fp": "36.10",
+    "open_interest_fp": "42.38",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.4500",
     "previous_yes_ask_dollars": "0.4500",
-    "previous_yes_bid_dollars": "0.4000",
+    "previous_yes_bid_dollars": "0.4200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -4467,12 +4577,12 @@
     "ticker": "KXNHLGAME-26OCT22VGKSTL-STL",
     "title": "St. Louis wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "0.00",
-    "volume_fp": "36.10",
-    "yes_ask_dollars": "0.4500",
-    "yes_ask_size_fp": "44.00",
-    "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "50.00",
+    "volume_24h_fp": "6.28",
+    "volume_fp": "42.38",
+    "yes_ask_dollars": "0.4600",
+    "yes_ask_size_fp": "25054.72",
+    "yes_bid_dollars": "0.4300",
+    "yes_bid_size_fp": "27.00",
     "yes_sub_title": "St. Louis",
     "_event_title": "Vegas vs St. Louis",
     "_event_ticker": "KXNHLGAME-26OCT22VGKSTL",
@@ -4521,7 +4631,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4536,19 +4646,19 @@
     "expected_expiration_time": "2026-10-23T03:00:00Z",
     "expiration_time": "2026-10-25T00:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5800",
+    "last_price_dollars": "0.5500",
     "latest_expiration_time": "2026-10-25T00:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4600",
-    "no_bid_dollars": "0.4200",
+    "no_bid_dollars": "0.4500",
     "no_sub_title": "Vegas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T03:00:00Z",
-    "open_interest_fp": "113.48",
+    "open_interest_fp": "153.91",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.5800",
-    "previous_yes_ask_dollars": "0.5800",
-    "previous_yes_bid_dollars": "0.5300",
+    "previous_yes_ask_dollars": "0.5600",
+    "previous_yes_bid_dollars": "0.5400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -4567,12 +4677,12 @@
     "ticker": "KXNHLGAME-26OCT22VGKSTL-VGK",
     "title": "Vegas wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "0.00",
-    "volume_fp": "113.48",
-    "yes_ask_dollars": "0.5800",
-    "yes_ask_size_fp": "26.00",
+    "volume_24h_fp": "40.43",
+    "volume_fp": "153.91",
+    "yes_ask_dollars": "0.5500",
+    "yes_ask_size_fp": "234.57",
     "yes_bid_dollars": "0.5400",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_size_fp": "78.00",
     "yes_sub_title": "Vegas",
     "_event_title": "Vegas vs St. Louis",
     "_event_ticker": "KXNHLGAME-26OCT22VGKSTL",
@@ -4621,7 +4731,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4648,7 +4758,7 @@
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.6600",
     "previous_yes_ask_dollars": "0.6500",
-    "previous_yes_bid_dollars": "0.6300",
+    "previous_yes_bid_dollars": "0.6200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -4670,9 +4780,9 @@
     "volume_24h_fp": "0.37",
     "volume_fp": "122.02",
     "yes_ask_dollars": "0.6600",
-    "yes_ask_size_fp": "152.04",
+    "yes_ask_size_fp": "676.04",
     "yes_bid_dollars": "0.6500",
-    "yes_bid_size_fp": "51.00",
+    "yes_bid_size_fp": "11.00",
     "yes_sub_title": "Dallas",
     "_event_title": "Winnipeg vs Dallas",
     "_event_ticker": "KXNHLGAME-26OCT22WPGDAL",
@@ -4721,7 +4831,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4740,7 +4850,7 @@
     "latest_expiration_time": "2026-10-25T00:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6700",
-    "no_bid_dollars": "0.6400",
+    "no_bid_dollars": "0.6500",
     "no_sub_title": "Winnipeg",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T03:00:00Z",
@@ -4769,10 +4879,10 @@
     "updated_time": "2026-10-16T01:06:01.035467Z",
     "volume_24h_fp": "26.58",
     "volume_fp": "169.77",
-    "yes_ask_dollars": "0.3600",
-    "yes_ask_size_fp": "54.42",
+    "yes_ask_dollars": "0.3500",
+    "yes_ask_size_fp": "1879.00",
     "yes_bid_dollars": "0.3300",
-    "yes_bid_size_fp": "101.61",
+    "yes_bid_size_fp": "127.61",
     "yes_sub_title": "Winnipeg",
     "_event_title": "Winnipeg vs Dallas",
     "_event_ticker": "KXNHLGAME-26OCT22WPGDAL",
@@ -4821,7 +4931,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4839,8 +4949,8 @@
     "last_price_dollars": "0.4800",
     "latest_expiration_time": "2026-10-25T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5600",
-    "no_bid_dollars": "0.5200",
+    "no_ask_dollars": "0.5500",
+    "no_bid_dollars": "0.5400",
     "no_sub_title": "Edmonton",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T04:00:00Z",
@@ -4869,10 +4979,10 @@
     "updated_time": "2026-10-16T01:06:01.035467Z",
     "volume_24h_fp": "41.56",
     "volume_fp": "45.50",
-    "yes_ask_dollars": "0.4800",
-    "yes_ask_size_fp": "74.71",
-    "yes_bid_dollars": "0.4400",
-    "yes_bid_size_fp": "100.00",
+    "yes_ask_dollars": "0.4600",
+    "yes_ask_size_fp": "1896.81",
+    "yes_bid_dollars": "0.4500",
+    "yes_bid_size_fp": "492.00",
     "yes_sub_title": "Edmonton",
     "_event_title": "Carolina vs Edmonton",
     "_event_ticker": "KXNHLGAME-26OCT22CAREDM",
@@ -4921,7 +5031,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -4936,19 +5046,19 @@
     "expected_expiration_time": "2026-10-23T04:00:00Z",
     "expiration_time": "2026-10-25T01:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5300",
+    "last_price_dollars": "0.5400",
     "latest_expiration_time": "2026-10-25T01:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4800",
-    "no_bid_dollars": "0.4600",
+    "no_bid_dollars": "0.4700",
     "no_sub_title": "Carolina",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T04:00:00Z",
-    "open_interest_fp": "44.30",
+    "open_interest_fp": "62.24",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.5600",
-    "previous_yes_ask_dollars": "0.5700",
-    "previous_yes_bid_dollars": "0.5400",
+    "previous_yes_ask_dollars": "0.5600",
+    "previous_yes_bid_dollars": "0.5300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -4967,12 +5077,12 @@
     "ticker": "KXNHLGAME-26OCT22CAREDM-CAR",
     "title": "Carolina wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "12.07",
-    "volume_fp": "44.30",
-    "yes_ask_dollars": "0.5400",
+    "volume_24h_fp": "30.01",
+    "volume_fp": "62.24",
+    "yes_ask_dollars": "0.5300",
     "yes_ask_size_fp": "1.00",
     "yes_bid_dollars": "0.5200",
-    "yes_bid_size_fp": "38.00",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Carolina",
     "_event_title": "Carolina vs Edmonton",
     "_event_ticker": "KXNHLGAME-26OCT22CAREDM",
@@ -5021,7 +5131,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5036,19 +5146,19 @@
     "expected_expiration_time": "2026-10-23T04:00:00Z",
     "expiration_time": "2026-10-25T01:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.3700",
+    "last_price_dollars": "0.3300",
     "latest_expiration_time": "2026-10-25T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6800",
-    "no_bid_dollars": "0.6400",
+    "no_ask_dollars": "0.6600",
+    "no_bid_dollars": "0.6500",
     "no_sub_title": "Calgary",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T04:00:00Z",
     "open_interest_fp": "104.41",
     "open_time": "2026-10-16T01:06:00Z",
     "previous_price_dollars": "0.3700",
-    "previous_yes_ask_dollars": "0.3700",
-    "previous_yes_bid_dollars": "0.3300",
+    "previous_yes_ask_dollars": "0.3800",
+    "previous_yes_bid_dollars": "0.3400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5067,12 +5177,12 @@
     "ticker": "KXNHLGAME-26OCT22MINCGY-CGY",
     "title": "Calgary wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "0.00",
-    "volume_fp": "104.41",
-    "yes_ask_dollars": "0.3600",
-    "yes_ask_size_fp": "17.00",
-    "yes_bid_dollars": "0.3200",
-    "yes_bid_size_fp": "124.00",
+    "volume_24h_fp": "0.14",
+    "volume_fp": "104.55",
+    "yes_ask_dollars": "0.3500",
+    "yes_ask_size_fp": "7.00",
+    "yes_bid_dollars": "0.3400",
+    "yes_bid_size_fp": "832.00",
     "yes_sub_title": "Calgary",
     "_event_title": "Minnesota vs Calgary",
     "_event_ticker": "KXNHLGAME-26OCT22MINCGY",
@@ -5121,7 +5231,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5136,18 +5246,18 @@
     "expected_expiration_time": "2026-10-23T04:00:00Z",
     "expiration_time": "2026-10-25T01:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6600",
+    "last_price_dollars": "0.6300",
     "latest_expiration_time": "2026-10-25T01:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.3800",
-    "no_bid_dollars": "0.3400",
+    "no_bid_dollars": "0.3700",
     "no_sub_title": "Minnesota",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T04:00:00Z",
-    "open_interest_fp": "288.94",
+    "open_interest_fp": "418.33",
     "open_time": "2026-10-16T01:06:00Z",
-    "previous_price_dollars": "0.6500",
-    "previous_yes_ask_dollars": "0.6500",
+    "previous_price_dollars": "0.6400",
+    "previous_yes_ask_dollars": "0.6400",
     "previous_yes_bid_dollars": "0.6200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -5167,12 +5277,12 @@
     "ticker": "KXNHLGAME-26OCT22MINCGY-MIN",
     "title": "Minnesota wins",
     "updated_time": "2026-10-16T01:06:01.035467Z",
-    "volume_24h_fp": "52.40",
-    "volume_fp": "494.95",
-    "yes_ask_dollars": "0.6600",
-    "yes_ask_size_fp": "31.00",
+    "volume_24h_fp": "177.22",
+    "volume_fp": "624.34",
+    "yes_ask_dollars": "0.6300",
+    "yes_ask_size_fp": "24921.62",
     "yes_bid_dollars": "0.6200",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_size_fp": "53.00",
     "yes_sub_title": "Minnesota",
     "_event_title": "Minnesota vs Calgary",
     "_event_ticker": "KXNHLGAME-26OCT22MINCGY",
@@ -5221,7 +5331,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5240,14 +5350,14 @@
     "latest_expiration_time": "2026-10-25T02:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6300",
-    "no_bid_dollars": "0.5800",
+    "no_bid_dollars": "0.6000",
     "no_sub_title": "Vancouver",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T05:00:00Z",
     "open_interest_fp": "0.00",
     "open_time": "2026-10-16T04:06:00Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.4200",
+    "previous_yes_ask_dollars": "0.4300",
     "previous_yes_bid_dollars": "0.3600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -5269,10 +5379,10 @@
     "updated_time": "2026-10-16T04:06:00.435861Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.4200",
-    "yes_ask_size_fp": "20.00",
+    "yes_ask_dollars": "0.4000",
+    "yes_ask_size_fp": "1.95",
     "yes_bid_dollars": "0.3700",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_size_fp": "532.00",
     "yes_sub_title": "Vancouver",
     "_event_title": "Detroit vs Vancouver",
     "_event_ticker": "KXNHLGAME-26OCT22DETVAN",
@@ -5321,7 +5431,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5336,7 +5446,7 @@
     "expected_expiration_time": "2026-10-23T05:00:00Z",
     "expiration_time": "2026-10-25T02:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6200",
+    "last_price_dollars": "0.6000",
     "latest_expiration_time": "2026-10-25T02:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4100",
@@ -5344,7 +5454,7 @@
     "no_sub_title": "Detroit",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T05:00:00Z",
-    "open_interest_fp": "17.12",
+    "open_interest_fp": "18.12",
     "open_time": "2026-10-16T04:06:00Z",
     "previous_price_dollars": "0.6200",
     "previous_yes_ask_dollars": "0.6200",
@@ -5367,12 +5477,12 @@
     "ticker": "KXNHLGAME-26OCT22DETVAN-DET",
     "title": "Detroit wins",
     "updated_time": "2026-10-16T04:06:00.435861Z",
-    "volume_24h_fp": "8.27",
-    "volume_fp": "17.12",
+    "volume_24h_fp": "1.47",
+    "volume_fp": "18.12",
     "yes_ask_dollars": "0.6200",
-    "yes_ask_size_fp": "97.02",
+    "yes_ask_size_fp": "30.00",
     "yes_bid_dollars": "0.5900",
-    "yes_bid_size_fp": "3.18",
+    "yes_bid_size_fp": "20.00",
     "yes_sub_title": "Detroit",
     "_event_title": "Detroit vs Vancouver",
     "_event_ticker": "KXNHLGAME-26OCT22DETVAN",
@@ -5421,7 +5531,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5439,16 +5549,16 @@
     "last_price_dollars": "0.4200",
     "latest_expiration_time": "2026-10-25T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6300",
+    "no_ask_dollars": "0.6200",
     "no_bid_dollars": "0.5900",
     "no_sub_title": "Seattle",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T05:00:00Z",
     "open_interest_fp": "59.19",
     "open_time": "2026-10-16T04:06:00Z",
-    "previous_price_dollars": "0.4300",
-    "previous_yes_ask_dollars": "0.4100",
-    "previous_yes_bid_dollars": "0.3200",
+    "previous_price_dollars": "0.4200",
+    "previous_yes_ask_dollars": "0.4200",
+    "previous_yes_bid_dollars": "0.3700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5467,12 +5577,12 @@
     "ticker": "KXNHLGAME-26OCT22UTASEA-SEA",
     "title": "Seattle wins",
     "updated_time": "2026-10-16T04:06:00.435861Z",
-    "volume_24h_fp": "55.96",
+    "volume_24h_fp": "0.00",
     "volume_fp": "59.19",
     "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "49.00",
-    "yes_bid_dollars": "0.3700",
-    "yes_bid_size_fp": "50.00",
+    "yes_ask_size_fp": "72.56",
+    "yes_bid_dollars": "0.3800",
+    "yes_bid_size_fp": "141.00",
     "yes_sub_title": "Seattle",
     "_event_title": "Utah vs Seattle",
     "_event_ticker": "KXNHLGAME-26OCT22UTASEA",
@@ -5521,7 +5631,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5536,19 +5646,19 @@
     "expected_expiration_time": "2026-10-23T05:00:00Z",
     "expiration_time": "2026-10-25T02:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6200",
+    "last_price_dollars": "0.6100",
     "latest_expiration_time": "2026-10-25T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4300",
-    "no_bid_dollars": "0.3800",
+    "no_ask_dollars": "0.4200",
+    "no_bid_dollars": "0.3900",
     "no_sub_title": "Utah",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T05:00:00Z",
-    "open_interest_fp": "111.51",
+    "open_interest_fp": "175.67",
     "open_time": "2026-10-16T04:06:00Z",
     "previous_price_dollars": "0.6100",
-    "previous_yes_ask_dollars": "0.6200",
-    "previous_yes_bid_dollars": "0.5700",
+    "previous_yes_ask_dollars": "0.6000",
+    "previous_yes_bid_dollars": "0.5500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5567,12 +5677,12 @@
     "ticker": "KXNHLGAME-26OCT22UTASEA-UTA",
     "title": "Utah wins",
     "updated_time": "2026-10-16T04:06:00.435861Z",
-    "volume_24h_fp": "95.32",
-    "volume_fp": "113.51",
-    "yes_ask_dollars": "0.6200",
-    "yes_ask_size_fp": "46.10",
-    "yes_bid_dollars": "0.5700",
-    "yes_bid_size_fp": "43.00",
+    "volume_24h_fp": "159.48",
+    "volume_fp": "177.67",
+    "yes_ask_dollars": "0.6100",
+    "yes_ask_size_fp": "392.84",
+    "yes_bid_dollars": "0.5800",
+    "yes_bid_size_fp": "78.00",
     "yes_sub_title": "Utah",
     "_event_title": "Utah vs Seattle",
     "_event_ticker": "KXNHLGAME-26OCT22UTASEA",
@@ -5621,7 +5731,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5639,12 +5749,12 @@
     "last_price_dollars": "0.4000",
     "latest_expiration_time": "2026-10-26T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6400",
-    "no_bid_dollars": "0.6000",
+    "no_ask_dollars": "0.6500",
+    "no_bid_dollars": "0.6100",
     "no_sub_title": "Chicago",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T03:00:00Z",
-    "open_interest_fp": "245.95",
+    "open_interest_fp": "289.12",
     "open_time": "2026-10-17T01:07:00Z",
     "previous_price_dollars": "0.4000",
     "previous_yes_ask_dollars": "0.4000",
@@ -5667,12 +5777,12 @@
     "ticker": "KXNHLGAME-26OCT23MTLCHI-CHI",
     "title": "Chicago wins",
     "updated_time": "2026-10-17T01:07:00.234886Z",
-    "volume_24h_fp": "162.40",
-    "volume_fp": "245.95",
-    "yes_ask_dollars": "0.4000",
-    "yes_ask_size_fp": "2067.60",
-    "yes_bid_dollars": "0.3600",
-    "yes_bid_size_fp": "50.00",
+    "volume_24h_fp": "145.69",
+    "volume_fp": "289.12",
+    "yes_ask_dollars": "0.3900",
+    "yes_ask_size_fp": "59.00",
+    "yes_bid_dollars": "0.3500",
+    "yes_bid_size_fp": "150.00",
     "yes_sub_title": "Chicago",
     "_event_title": "Montreal vs Chicago",
     "_event_ticker": "KXNHLGAME-26OCT23MTLCHI",
@@ -5717,7 +5827,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5732,19 +5842,19 @@
     "expected_expiration_time": "2026-10-24T03:00:00Z",
     "expiration_time": "2026-10-26T00:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6400",
+    "last_price_dollars": "0.6300",
     "latest_expiration_time": "2026-10-26T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4200",
-    "no_bid_dollars": "0.3800",
+    "no_ask_dollars": "0.4000",
+    "no_bid_dollars": "0.3700",
     "no_sub_title": "Montreal",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T03:00:00Z",
-    "open_interest_fp": "102.97",
+    "open_interest_fp": "117.77",
     "open_time": "2026-10-17T01:07:00Z",
-    "previous_price_dollars": "0.4900",
-    "previous_yes_ask_dollars": "0.6000",
-    "previous_yes_bid_dollars": "0.5700",
+    "previous_price_dollars": "0.6100",
+    "previous_yes_ask_dollars": "0.6300",
+    "previous_yes_bid_dollars": "0.5900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5763,12 +5873,12 @@
     "ticker": "KXNHLGAME-26OCT23MTLCHI-MTL",
     "title": "Montreal wins",
     "updated_time": "2026-10-17T01:07:00.234886Z",
-    "volume_24h_fp": "94.43",
-    "volume_fp": "103.97",
-    "yes_ask_dollars": "0.6200",
-    "yes_ask_size_fp": "5.00",
-    "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "50.00",
+    "volume_24h_fp": "93.21",
+    "volume_fp": "118.77",
+    "yes_ask_dollars": "0.6300",
+    "yes_ask_size_fp": "32.00",
+    "yes_bid_dollars": "0.6000",
+    "yes_bid_size_fp": "45.00",
     "yes_sub_title": "Montreal",
     "_event_title": "Montreal vs Chicago",
     "_event_ticker": "KXNHLGAME-26OCT23MTLCHI",
@@ -5813,7 +5923,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5831,8 +5941,8 @@
     "last_price_dollars": "0.5900",
     "latest_expiration_time": "2026-10-26T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5500",
-    "no_bid_dollars": "0.4100",
+    "no_ask_dollars": "0.4900",
+    "no_bid_dollars": "0.4300",
     "no_sub_title": "Colorado",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T04:00:00Z",
@@ -5859,12 +5969,12 @@
     "ticker": "KXNHLGAME-26OCT23TBCOL-COL",
     "title": "Colorado wins",
     "updated_time": "2026-10-17T01:07:00.234886Z",
-    "volume_24h_fp": "81.78",
+    "volume_24h_fp": "53.78",
     "volume_fp": "87.54",
-    "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "2000.86",
-    "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "87.00",
+    "yes_ask_dollars": "0.5700",
+    "yes_ask_size_fp": "46.00",
+    "yes_bid_dollars": "0.5100",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Colorado",
     "_event_title": "Tampa Bay vs Colorado",
     "_event_ticker": "KXNHLGAME-26OCT23TBCOL",
@@ -5909,7 +6019,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -5927,7 +6037,7 @@
     "last_price_dollars": "0.4400",
     "latest_expiration_time": "2026-10-26T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6000",
+    "no_ask_dollars": "0.5700",
     "no_bid_dollars": "0.5300",
     "no_sub_title": "Tampa Bay",
     "notional_value_dollars": "1.0000",
@@ -5936,7 +6046,7 @@
     "open_time": "2026-10-17T01:07:00Z",
     "previous_price_dollars": "0.4500",
     "previous_yes_ask_dollars": "0.4500",
-    "previous_yes_bid_dollars": "0.3800",
+    "previous_yes_bid_dollars": "0.4000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5958,9 +6068,9 @@
     "volume_24h_fp": "21.97",
     "volume_fp": "63.00",
     "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "61.00",
-    "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "50.00",
+    "yes_ask_size_fp": "5.00",
+    "yes_bid_dollars": "0.4300",
+    "yes_bid_size_fp": "41.00",
     "yes_sub_title": "Tampa Bay",
     "_event_title": "Tampa Bay vs Colorado",
     "_event_ticker": "KXNHLGAME-26OCT23TBCOL",
@@ -6005,7 +6115,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6020,15 +6130,15 @@
     "expected_expiration_time": "2026-10-24T20:00:00Z",
     "expiration_time": "2026-10-26T17:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.0000",
+    "last_price_dollars": "0.5100",
     "latest_expiration_time": "2026-10-26T17:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5600",
+    "no_ask_dollars": "0.5300",
     "no_bid_dollars": "0.4900",
     "no_sub_title": "Philadelphia",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T20:00:00Z",
-    "open_interest_fp": "0.00",
+    "open_interest_fp": "48.09",
     "open_time": "2026-10-17T19:06:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.5100",
@@ -6051,12 +6161,12 @@
     "ticker": "KXNHLGAME-26OCT24ANAPHI-PHI",
     "title": "Philadelphia wins",
     "updated_time": "2026-10-17T19:06:01.611559Z",
-    "volume_24h_fp": "0.00",
-    "volume_fp": "0.00",
+    "volume_24h_fp": "48.09",
+    "volume_fp": "48.09",
     "yes_ask_dollars": "0.5100",
-    "yes_ask_size_fp": "37.00",
-    "yes_bid_dollars": "0.4400",
-    "yes_bid_size_fp": "50.00",
+    "yes_ask_size_fp": "38.00",
+    "yes_bid_dollars": "0.4700",
+    "yes_bid_size_fp": "36.00",
     "yes_sub_title": "Philadelphia",
     "_event_title": "Anaheim vs Philadelphia",
     "_event_ticker": "KXNHLGAME-26OCT24ANAPHI",
@@ -6101,7 +6211,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6120,7 +6230,7 @@
     "latest_expiration_time": "2026-10-26T17:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5300",
-    "no_bid_dollars": "0.4600",
+    "no_bid_dollars": "0.4700",
     "no_sub_title": "Anaheim",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T20:00:00Z",
@@ -6149,8 +6259,8 @@
     "updated_time": "2026-10-17T19:06:01.611559Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "2.82",
-    "yes_ask_dollars": "0.5400",
-    "yes_ask_size_fp": "2136.00",
+    "yes_ask_dollars": "0.5300",
+    "yes_ask_size_fp": "81.00",
     "yes_bid_dollars": "0.4700",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Anaheim",
@@ -6197,7 +6307,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6215,8 +6325,8 @@
     "last_price_dollars": "0.6000",
     "latest_expiration_time": "2026-10-26T19:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4700",
-    "no_bid_dollars": "0.4200",
+    "no_ask_dollars": "0.4600",
+    "no_bid_dollars": "0.4100",
     "no_sub_title": "New Jersey",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T22:30:00Z",
@@ -6245,9 +6355,9 @@
     "updated_time": "2026-10-17T22:06:00.415487Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "83.68",
-    "yes_ask_dollars": "0.5800",
-    "yes_ask_size_fp": "23.00",
-    "yes_bid_dollars": "0.5300",
+    "yes_ask_dollars": "0.5900",
+    "yes_ask_size_fp": "48.00",
+    "yes_bid_dollars": "0.5400",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "New Jersey",
     "_event_title": "Los Angeles vs New Jersey",
@@ -6293,7 +6403,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6311,8 +6421,8 @@
     "last_price_dollars": "0.4600",
     "latest_expiration_time": "2026-10-26T19:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6000",
-    "no_bid_dollars": "0.5500",
+    "no_ask_dollars": "0.6100",
+    "no_bid_dollars": "0.5600",
     "no_sub_title": "Los Angeles",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T22:30:00Z",
@@ -6341,9 +6451,9 @@
     "updated_time": "2026-10-17T22:06:00.415487Z",
     "volume_24h_fp": "20.94",
     "volume_fp": "20.94",
-    "yes_ask_dollars": "0.4500",
-    "yes_ask_size_fp": "50.00",
-    "yes_bid_dollars": "0.4000",
+    "yes_ask_dollars": "0.4400",
+    "yes_ask_size_fp": "27.00",
+    "yes_bid_dollars": "0.3900",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Los Angeles",
     "_event_title": "Los Angeles vs New Jersey",
@@ -6389,7 +6499,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6415,7 +6525,7 @@
     "open_interest_fp": "2.64",
     "open_time": "2026-10-18T01:18:00Z",
     "previous_price_dollars": "0.5900",
-    "previous_yes_ask_dollars": "0.5800",
+    "previous_yes_ask_dollars": "0.5700",
     "previous_yes_bid_dollars": "0.5300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -6485,7 +6595,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6511,8 +6621,8 @@
     "open_interest_fp": "70.51",
     "open_time": "2026-10-18T01:18:00Z",
     "previous_price_dollars": "0.4700",
-    "previous_yes_ask_dollars": "0.4500",
-    "previous_yes_bid_dollars": "0.4000",
+    "previous_yes_ask_dollars": "0.4600",
+    "previous_yes_bid_dollars": "0.4100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -6581,7 +6691,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6599,7 +6709,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6300",
+    "no_ask_dollars": "0.6000",
     "no_bid_dollars": "0.5600",
     "no_sub_title": "St. Louis",
     "notional_value_dollars": "1.0000",
@@ -6607,7 +6717,7 @@
     "open_interest_fp": "0.00",
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.4400",
+    "previous_yes_ask_dollars": "0.4300",
     "previous_yes_bid_dollars": "0.3800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -6631,8 +6741,8 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.4400",
     "yes_ask_size_fp": "38.00",
-    "yes_bid_dollars": "0.3700",
-    "yes_bid_size_fp": "56.00",
+    "yes_bid_dollars": "0.4000",
+    "yes_bid_size_fp": "30.00",
     "yes_sub_title": "St. Louis",
     "_event_title": "Carolina vs St. Louis",
     "_event_ticker": "KXNHLGAME-26OCT24CARSTL",
@@ -6677,7 +6787,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6703,8 +6813,8 @@
     "open_interest_fp": "24.43",
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.6100",
-    "previous_yes_ask_dollars": "0.6200",
-    "previous_yes_bid_dollars": "0.5600",
+    "previous_yes_ask_dollars": "0.6000",
+    "previous_yes_bid_dollars": "0.5800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -6723,10 +6833,10 @@
     "ticker": "KXNHLGAME-26OCT24CARSTL-CAR",
     "title": "Carolina wins",
     "updated_time": "2026-10-18T01:19:00.183774Z",
-    "volume_24h_fp": "16.43",
+    "volume_24h_fp": "0.48",
     "volume_fp": "24.43",
     "yes_ask_dollars": "0.6100",
-    "yes_ask_size_fp": "50.00",
+    "yes_ask_size_fp": "1929.00",
     "yes_bid_dollars": "0.5700",
     "yes_bid_size_fp": "22.19",
     "yes_sub_title": "Carolina",
@@ -6773,7 +6883,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6791,7 +6901,7 @@
     "last_price_dollars": "0.5900",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5200",
+    "no_ask_dollars": "0.5000",
     "no_bid_dollars": "0.4100",
     "no_sub_title": "Pittsburgh",
     "notional_value_dollars": "1.0000",
@@ -6799,8 +6909,8 @@
     "open_interest_fp": "17.47",
     "open_time": "2026-10-18T01:18:00Z",
     "previous_price_dollars": "0.5900",
-    "previous_yes_ask_dollars": "0.5800",
-    "previous_yes_bid_dollars": "0.4800",
+    "previous_yes_ask_dollars": "0.5900",
+    "previous_yes_bid_dollars": "0.5300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -6823,8 +6933,8 @@
     "volume_fp": "17.47",
     "yes_ask_dollars": "0.5900",
     "yes_ask_size_fp": "1920.53",
-    "yes_bid_dollars": "0.4800",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_dollars": "0.5000",
+    "yes_bid_size_fp": "178.00",
     "yes_sub_title": "Pittsburgh",
     "_event_title": "Nashville vs Pittsburgh",
     "_event_ticker": "KXNHLGAME-26OCT24NSHPIT",
@@ -6869,7 +6979,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6884,19 +6994,19 @@
     "expected_expiration_time": "2026-10-25T02:00:00Z",
     "expiration_time": "2026-10-26T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4700",
+    "last_price_dollars": "0.4500",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6300",
-    "no_bid_dollars": "0.5300",
+    "no_ask_dollars": "0.5900",
+    "no_bid_dollars": "0.5400",
     "no_sub_title": "Nashville",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T02:00:00Z",
-    "open_interest_fp": "116.73",
+    "open_interest_fp": "117.13",
     "open_time": "2026-10-18T01:18:00Z",
     "previous_price_dollars": "0.4600",
-    "previous_yes_ask_dollars": "0.4600",
-    "previous_yes_bid_dollars": "0.4000",
+    "previous_yes_ask_dollars": "0.4500",
+    "previous_yes_bid_dollars": "0.3900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -6915,12 +7025,12 @@
     "ticker": "KXNHLGAME-26OCT24NSHPIT-NSH",
     "title": "Nashville wins",
     "updated_time": "2026-10-18T01:18:00.367322Z",
-    "volume_24h_fp": "1.00",
-    "volume_fp": "116.73",
-    "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "50.00",
-    "yes_bid_dollars": "0.3700",
-    "yes_bid_size_fp": "87.00",
+    "volume_24h_fp": "1.40",
+    "volume_fp": "117.13",
+    "yes_ask_dollars": "0.4600",
+    "yes_ask_size_fp": "49.60",
+    "yes_bid_dollars": "0.4100",
+    "yes_bid_size_fp": "85.00",
     "yes_sub_title": "Nashville",
     "_event_title": "Nashville vs Pittsburgh",
     "_event_ticker": "KXNHLGAME-26OCT24NSHPIT",
@@ -6965,7 +7075,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -6991,7 +7101,7 @@
     "open_interest_fp": "0.00",
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.5600",
+    "previous_yes_ask_dollars": "0.5700",
     "previous_yes_bid_dollars": "0.5200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -7014,7 +7124,7 @@
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.5700",
-    "yes_ask_size_fp": "37.00",
+    "yes_ask_size_fp": "2067.64",
     "yes_bid_dollars": "0.5000",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Ottawa",
@@ -7061,7 +7171,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7079,8 +7189,8 @@
     "last_price_dollars": "0.5000",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5600",
-    "no_bid_dollars": "0.5200",
+    "no_ask_dollars": "0.5700",
+    "no_bid_dollars": "0.5100",
     "no_sub_title": "New York R",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T02:00:00Z",
@@ -7088,7 +7198,7 @@
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.5000",
     "previous_yes_ask_dollars": "0.4800",
-    "previous_yes_bid_dollars": "0.4200",
+    "previous_yes_bid_dollars": "0.4400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -7109,10 +7219,10 @@
     "updated_time": "2026-10-18T01:19:00.183774Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "1.00",
-    "yes_ask_dollars": "0.4800",
-    "yes_ask_size_fp": "50.00",
-    "yes_bid_dollars": "0.4400",
-    "yes_bid_size_fp": "3.46",
+    "yes_ask_dollars": "0.4900",
+    "yes_ask_size_fp": "63.00",
+    "yes_bid_dollars": "0.4300",
+    "yes_bid_size_fp": "37.00",
     "yes_sub_title": "New York R",
     "_event_title": "New York R vs Ottawa",
     "_event_ticker": "KXNHLGAME-26OCT24NYROTT",
@@ -7157,7 +7267,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7175,7 +7285,7 @@
     "last_price_dollars": "0.6200",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4300",
+    "no_ask_dollars": "0.4200",
     "no_bid_dollars": "0.3800",
     "no_sub_title": "Boston",
     "notional_value_dollars": "1.0000",
@@ -7203,11 +7313,11 @@
     "ticker": "KXNHLGAME-26OCT24SJBOS-BOS",
     "title": "Boston wins",
     "updated_time": "2026-10-18T01:19:00.183774Z",
-    "volume_24h_fp": "11.89",
+    "volume_24h_fp": "10.32",
     "volume_fp": "12.91",
     "yes_ask_dollars": "0.6200",
     "yes_ask_size_fp": "2131.56",
-    "yes_bid_dollars": "0.5700",
+    "yes_bid_dollars": "0.5800",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Boston",
     "_event_title": "San Jose vs Boston",
@@ -7253,7 +7363,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7271,7 +7381,7 @@
     "last_price_dollars": "0.4300",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6400",
+    "no_ask_dollars": "0.6200",
     "no_bid_dollars": "0.5700",
     "no_sub_title": "San Jose",
     "notional_value_dollars": "1.0000",
@@ -7302,9 +7412,9 @@
     "volume_24h_fp": "4.38",
     "volume_fp": "4.88",
     "yes_ask_dollars": "0.4300",
-    "yes_ask_size_fp": "45.62",
-    "yes_bid_dollars": "0.3600",
-    "yes_bid_size_fp": "50.00",
+    "yes_ask_size_fp": "49.62",
+    "yes_bid_dollars": "0.3800",
+    "yes_bid_size_fp": "2.00",
     "yes_sub_title": "San Jose",
     "_event_title": "San Jose vs Boston",
     "_event_ticker": "KXNHLGAME-26OCT24SJBOS",
@@ -7349,7 +7459,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7367,7 +7477,7 @@
     "last_price_dollars": "0.6300",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4700",
+    "no_ask_dollars": "0.4400",
     "no_bid_dollars": "0.3800",
     "no_sub_title": "Edmonton",
     "notional_value_dollars": "1.0000",
@@ -7398,8 +7508,8 @@
     "volume_24h_fp": "0.46",
     "volume_fp": "1.46",
     "yes_ask_dollars": "0.6200",
-    "yes_ask_size_fp": "17.00",
-    "yes_bid_dollars": "0.5300",
+    "yes_ask_size_fp": "4.00",
+    "yes_bid_dollars": "0.5600",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Edmonton",
     "_event_title": "Toronto vs Edmonton",
@@ -7445,7 +7555,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7541,7 +7651,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7556,19 +7666,19 @@
     "expected_expiration_time": "2026-10-25T02:00:00Z",
     "expiration_time": "2026-10-26T23:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.0000",
+    "last_price_dollars": "0.4000",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6100",
-    "no_bid_dollars": "0.5600",
+    "no_bid_dollars": "0.5500",
     "no_sub_title": "Columbus",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T02:00:00Z",
-    "open_interest_fp": "0.00",
+    "open_interest_fp": "13.30",
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.4500",
-    "previous_yes_bid_dollars": "0.4000",
+    "previous_yes_ask_dollars": "0.4400",
+    "previous_yes_bid_dollars": "0.3900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -7587,12 +7697,12 @@
     "ticker": "KXNHLGAME-26OCT24VGKCBJ-CBJ",
     "title": "Columbus wins",
     "updated_time": "2026-10-18T01:19:00.183774Z",
-    "volume_24h_fp": "0.00",
-    "volume_fp": "0.00",
-    "yes_ask_dollars": "0.4400",
-    "yes_ask_size_fp": "77.25",
+    "volume_24h_fp": "88.60",
+    "volume_fp": "88.60",
+    "yes_ask_dollars": "0.4500",
+    "yes_ask_size_fp": "50.00",
     "yes_bid_dollars": "0.3900",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_size_fp": "41.00",
     "yes_sub_title": "Columbus",
     "_event_title": "Vegas vs Columbus",
     "_event_ticker": "KXNHLGAME-26OCT24VGKCBJ",
@@ -7637,7 +7747,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7655,16 +7765,16 @@
     "last_price_dollars": "0.6000",
     "latest_expiration_time": "2026-10-26T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4500",
-    "no_bid_dollars": "0.4100",
+    "no_ask_dollars": "0.4400",
+    "no_bid_dollars": "0.4000",
     "no_sub_title": "Vegas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T02:00:00Z",
-    "open_interest_fp": "2.62",
+    "open_interest_fp": "41.74",
     "open_time": "2026-10-18T01:19:00Z",
     "previous_price_dollars": "0.5800",
-    "previous_yes_ask_dollars": "0.5800",
-    "previous_yes_bid_dollars": "0.5100",
+    "previous_yes_ask_dollars": "0.5900",
+    "previous_yes_bid_dollars": "0.5500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -7683,12 +7793,12 @@
     "ticker": "KXNHLGAME-26OCT24VGKCBJ-VGK",
     "title": "Vegas wins",
     "updated_time": "2026-10-18T01:19:00.183774Z",
-    "volume_24h_fp": "1.62",
-    "volume_fp": "2.62",
-    "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "19.00",
-    "yes_bid_dollars": "0.5500",
-    "yes_bid_size_fp": "51.00",
+    "volume_24h_fp": "40.74",
+    "volume_fp": "41.74",
+    "yes_ask_dollars": "0.6000",
+    "yes_ask_size_fp": "1852.26",
+    "yes_bid_dollars": "0.5600",
+    "yes_bid_size_fp": "49.00",
     "yes_sub_title": "Vegas",
     "_event_title": "Vegas vs Columbus",
     "_event_ticker": "KXNHLGAME-26OCT24VGKCBJ",
@@ -7733,7 +7843,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7751,7 +7861,7 @@
     "last_price_dollars": "0.5700",
     "latest_expiration_time": "2026-10-27T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5100",
+    "no_ask_dollars": "0.4900",
     "no_bid_dollars": "0.4400",
     "no_sub_title": "Utah",
     "notional_value_dollars": "1.0000",
@@ -7759,7 +7869,7 @@
     "open_interest_fp": "102.78",
     "open_time": "2026-10-18T01:20:00Z",
     "previous_price_dollars": "0.5700",
-    "previous_yes_ask_dollars": "0.5600",
+    "previous_yes_ask_dollars": "0.5500",
     "previous_yes_bid_dollars": "0.5000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -7783,7 +7893,7 @@
     "volume_fp": "102.78",
     "yes_ask_dollars": "0.5600",
     "yes_ask_size_fp": "19.00",
-    "yes_bid_dollars": "0.4900",
+    "yes_bid_dollars": "0.5100",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Utah",
     "_event_title": "Tampa Bay vs Utah",
@@ -7829,7 +7939,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7847,8 +7957,8 @@
     "last_price_dollars": "0.5000",
     "latest_expiration_time": "2026-10-27T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6100",
-    "no_bid_dollars": "0.5400",
+    "no_ask_dollars": "0.5500",
+    "no_bid_dollars": "0.5300",
     "no_sub_title": "Tampa Bay",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T04:00:00Z",
@@ -7856,7 +7966,7 @@
     "open_time": "2026-10-18T01:20:00Z",
     "previous_price_dollars": "0.5000",
     "previous_yes_ask_dollars": "0.4800",
-    "previous_yes_bid_dollars": "0.4200",
+    "previous_yes_bid_dollars": "0.4300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -7877,10 +7987,10 @@
     "updated_time": "2026-10-18T01:20:00.433269Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "1.00",
-    "yes_ask_dollars": "0.4600",
-    "yes_ask_size_fp": "31.00",
-    "yes_bid_dollars": "0.3900",
-    "yes_bid_size_fp": "50.00",
+    "yes_ask_dollars": "0.4700",
+    "yes_ask_size_fp": "114.86",
+    "yes_bid_dollars": "0.4500",
+    "yes_bid_size_fp": "76.00",
     "yes_sub_title": "Tampa Bay",
     "_event_title": "Tampa Bay vs Utah",
     "_event_ticker": "KXNHLGAME-26OCT24TBUTA",
@@ -7925,7 +8035,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -7940,18 +8050,18 @@
     "expected_expiration_time": "2026-10-25T05:00:00Z",
     "expiration_time": "2026-10-27T02:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.0000",
+    "last_price_dollars": "0.4500",
     "latest_expiration_time": "2026-10-27T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6000",
+    "no_ask_dollars": "0.5900",
     "no_bid_dollars": "0.5300",
     "no_sub_title": "Calgary",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T05:00:00Z",
-    "open_interest_fp": "0.00",
+    "open_interest_fp": "32.08",
     "open_time": "2026-10-18T04:06:00Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.4600",
+    "previous_yes_ask_dollars": "0.4700",
     "previous_yes_bid_dollars": "0.4000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -7971,11 +8081,11 @@
     "ticker": "KXNHLGAME-26OCT24DETCGY-CGY",
     "title": "Calgary wins",
     "updated_time": "2026-10-18T04:06:00.55991Z",
-    "volume_24h_fp": "0.00",
-    "volume_fp": "0.00",
+    "volume_24h_fp": "32.08",
+    "volume_fp": "32.08",
     "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "51.00",
-    "yes_bid_dollars": "0.4000",
+    "yes_ask_size_fp": "49.92",
+    "yes_bid_dollars": "0.4100",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Calgary",
     "_event_title": "Detroit vs Calgary",
@@ -8021,7 +8131,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8039,8 +8149,8 @@
     "last_price_dollars": "0.6000",
     "latest_expiration_time": "2026-10-27T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5100",
-    "no_bid_dollars": "0.4200",
+    "no_ask_dollars": "0.4900",
+    "no_bid_dollars": "0.4300",
     "no_sub_title": "Detroit",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T05:00:00Z",
@@ -8048,7 +8158,7 @@
     "open_time": "2026-10-18T04:06:00Z",
     "previous_price_dollars": "0.6000",
     "previous_yes_ask_dollars": "0.5800",
-    "previous_yes_bid_dollars": "0.5200",
+    "previous_yes_bid_dollars": "0.5100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -8069,10 +8179,10 @@
     "updated_time": "2026-10-18T04:06:00.55991Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "1.00",
-    "yes_ask_dollars": "0.5800",
-    "yes_ask_size_fp": "37.00",
-    "yes_bid_dollars": "0.4900",
-    "yes_bid_size_fp": "87.00",
+    "yes_ask_dollars": "0.5700",
+    "yes_ask_size_fp": "28.00",
+    "yes_bid_dollars": "0.5100",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Detroit",
     "_event_title": "Detroit vs Calgary",
     "_event_ticker": "KXNHLGAME-26OCT24DETCGY",
@@ -8117,7 +8227,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8143,7 +8253,7 @@
     "open_interest_fp": "17.00",
     "open_time": "2026-10-18T04:06:00Z",
     "previous_price_dollars": "0.4300",
-    "previous_yes_ask_dollars": "0.4300",
+    "previous_yes_ask_dollars": "0.4200",
     "previous_yes_bid_dollars": "0.3600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -8168,7 +8278,7 @@
     "yes_ask_dollars": "0.4200",
     "yes_ask_size_fp": "38.00",
     "yes_bid_dollars": "0.3500",
-    "yes_bid_size_fp": "87.00",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Seattle",
     "_event_title": "Minnesota vs Seattle",
     "_event_ticker": "KXNHLGAME-26OCT24MINSEA",
@@ -8213,7 +8323,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8231,16 +8341,16 @@
     "last_price_dollars": "0.6300",
     "latest_expiration_time": "2026-10-27T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4100",
+    "no_ask_dollars": "0.4200",
     "no_bid_dollars": "0.3700",
     "no_sub_title": "Minnesota",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T05:00:00Z",
     "open_interest_fp": "16.02",
     "open_time": "2026-10-18T04:06:00Z",
-    "previous_price_dollars": "0.6300",
+    "previous_price_dollars": "0.6200",
     "previous_yes_ask_dollars": "0.6200",
-    "previous_yes_bid_dollars": "0.5600",
+    "previous_yes_bid_dollars": "0.5700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -8259,12 +8369,12 @@
     "ticker": "KXNHLGAME-26OCT24MINSEA-MIN",
     "title": "Minnesota wins",
     "updated_time": "2026-10-18T04:06:00.55991Z",
-    "volume_24h_fp": "8.15",
+    "volume_24h_fp": "0.30",
     "volume_fp": "21.02",
     "yes_ask_dollars": "0.6300",
-    "yes_ask_size_fp": "49.70",
-    "yes_bid_dollars": "0.5900",
-    "yes_bid_size_fp": "1.00",
+    "yes_ask_size_fp": "50.00",
+    "yes_bid_dollars": "0.5800",
+    "yes_bid_size_fp": "38.00",
     "yes_sub_title": "Minnesota",
     "_event_title": "Minnesota vs Seattle",
     "_event_ticker": "KXNHLGAME-26OCT24MINSEA",
@@ -8309,7 +8419,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8405,7 +8515,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8430,9 +8540,9 @@
     "occurrence_datetime": "2026-10-25T22:00:00Z",
     "open_interest_fp": "16.22",
     "open_time": "2026-10-18T19:06:00Z",
-    "previous_price_dollars": "0.6700",
-    "previous_yes_ask_dollars": "0.6600",
-    "previous_yes_bid_dollars": "0.6000",
+    "previous_price_dollars": "0.6500",
+    "previous_yes_ask_dollars": "0.6500",
+    "previous_yes_bid_dollars": "0.6200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -8451,7 +8561,7 @@
     "ticker": "KXNHLGAME-26OCT25FLACHI-FLA",
     "title": "Florida wins",
     "updated_time": "2026-10-18T19:06:01.549423Z",
-    "volume_24h_fp": "15.01",
+    "volume_24h_fp": "0.00",
     "volume_fp": "16.22",
     "yes_ask_dollars": "0.6500",
     "yes_ask_size_fp": "50.00",
@@ -8501,7 +8611,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8520,15 +8630,15 @@
     "latest_expiration_time": "2026-10-27T22:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.3900",
-    "no_bid_dollars": "0.3500",
+    "no_bid_dollars": "0.3600",
     "no_sub_title": "Dallas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T01:00:00Z",
-    "open_interest_fp": "31.24",
+    "open_interest_fp": "32.74",
     "open_time": "2026-10-18T22:06:00Z",
-    "previous_price_dollars": "0.6400",
+    "previous_price_dollars": "0.6500",
     "previous_yes_ask_dollars": "0.6500",
-    "previous_yes_bid_dollars": "0.6100",
+    "previous_yes_bid_dollars": "0.6200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -8547,12 +8657,12 @@
     "ticker": "KXNHLGAME-26OCT25NYIDAL-DAL",
     "title": "Dallas wins",
     "updated_time": "2026-10-18T22:06:00.40356Z",
-    "volume_24h_fp": "15.01",
-    "volume_fp": "31.24",
-    "yes_ask_dollars": "0.6500",
-    "yes_ask_size_fp": "234.99",
+    "volume_24h_fp": "1.50",
+    "volume_fp": "32.74",
+    "yes_ask_dollars": "0.6400",
+    "yes_ask_size_fp": "2.56",
     "yes_bid_dollars": "0.6100",
-    "yes_bid_size_fp": "28.00",
+    "yes_bid_size_fp": "53.00",
     "yes_sub_title": "Dallas",
     "_event_title": "New York I vs Dallas",
     "_event_ticker": "KXNHLGAME-26OCT25NYIDAL",
@@ -8597,7 +8707,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8612,19 +8722,19 @@
     "expected_expiration_time": "2026-10-26T01:00:00Z",
     "expiration_time": "2026-10-27T22:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.0000",
+    "last_price_dollars": "0.3800",
     "latest_expiration_time": "2026-10-27T22:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6500",
+    "no_ask_dollars": "0.6600",
     "no_bid_dollars": "0.6200",
     "no_sub_title": "New York I",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T01:00:00Z",
-    "open_interest_fp": "0.00",
+    "open_interest_fp": "13.00",
     "open_time": "2026-10-18T22:06:00Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.3900",
-    "previous_yes_bid_dollars": "0.3300",
+    "previous_yes_ask_dollars": "0.3800",
+    "previous_yes_bid_dollars": "0.3400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -8643,12 +8753,12 @@
     "ticker": "KXNHLGAME-26OCT25NYIDAL-NYI",
     "title": "New York I wins",
     "updated_time": "2026-10-18T22:06:00.474746Z",
-    "volume_24h_fp": "0.00",
-    "volume_fp": "0.00",
+    "volume_24h_fp": "13.00",
+    "volume_fp": "13.00",
     "yes_ask_dollars": "0.3800",
-    "yes_ask_size_fp": "2060.00",
-    "yes_bid_dollars": "0.3500",
-    "yes_bid_size_fp": "52.88",
+    "yes_ask_size_fp": "2086.00",
+    "yes_bid_dollars": "0.3400",
+    "yes_bid_size_fp": "39.00",
     "yes_sub_title": "New York I",
     "_event_title": "New York I vs Dallas",
     "_event_ticker": "KXNHLGAME-26OCT25NYIDAL",
@@ -8693,7 +8803,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8711,7 +8821,7 @@
     "last_price_dollars": "0.4700",
     "latest_expiration_time": "2026-10-27T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6000",
+    "no_ask_dollars": "0.5700",
     "no_bid_dollars": "0.5300",
     "no_sub_title": "Winnipeg",
     "notional_value_dollars": "1.0000",
@@ -8719,7 +8829,7 @@
     "open_interest_fp": "1.00",
     "open_time": "2026-10-19T01:27:00Z",
     "previous_price_dollars": "0.4700",
-    "previous_yes_ask_dollars": "0.4600",
+    "previous_yes_ask_dollars": "0.4800",
     "previous_yes_bid_dollars": "0.4000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -8743,7 +8853,7 @@
     "volume_fp": "1.00",
     "yes_ask_dollars": "0.4700",
     "yes_ask_size_fp": "29.00",
-    "yes_bid_dollars": "0.4000",
+    "yes_bid_dollars": "0.4300",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Winnipeg",
     "_event_title": "Montreal vs Winnipeg",
@@ -8789,7 +8899,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8816,7 +8926,7 @@
     "open_time": "2026-10-19T01:27:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.5800",
-    "previous_yes_bid_dollars": "0.5200",
+    "previous_yes_bid_dollars": "0.5000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -8885,7 +8995,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8903,7 +9013,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-28T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7100",
+    "no_ask_dollars": "0.6600",
     "no_bid_dollars": "0.6500",
     "no_sub_title": "Nashville",
     "notional_value_dollars": "1.0000",
@@ -8935,8 +9045,8 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.3500",
     "yes_ask_size_fp": "1963.00",
-    "yes_bid_dollars": "0.2900",
-    "yes_bid_size_fp": "50.00",
+    "yes_bid_dollars": "0.3400",
+    "yes_bid_size_fp": "102.00",
     "yes_sub_title": "Nashville",
     "_event_title": "Colorado vs Nashville",
     "_event_ticker": "KXNHLGAME-26OCT25COLNSH",
@@ -8981,7 +9091,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -8999,8 +9109,8 @@
     "last_price_dollars": "0.7200",
     "latest_expiration_time": "2026-10-28T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.3800",
-    "no_bid_dollars": "0.3000",
+    "no_ask_dollars": "0.3700",
+    "no_bid_dollars": "0.3100",
     "no_sub_title": "Colorado",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T03:00:00Z",
@@ -9029,10 +9139,10 @@
     "updated_time": "2026-10-19T01:27:00.237258Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "16.04",
-    "yes_ask_dollars": "0.7000",
-    "yes_ask_size_fp": "50.00",
-    "yes_bid_dollars": "0.6200",
-    "yes_bid_size_fp": "72.00",
+    "yes_ask_dollars": "0.6900",
+    "yes_ask_size_fp": "142.00",
+    "yes_bid_dollars": "0.6300",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Colorado",
     "_event_title": "Colorado vs Nashville",
     "_event_ticker": "KXNHLGAME-26OCT25COLNSH",
@@ -9077,7 +9187,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -9103,7 +9213,7 @@
     "open_interest_fp": "0.00",
     "open_time": "2026-10-19T04:11:00Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.3800",
+    "previous_yes_ask_dollars": "0.3600",
     "previous_yes_bid_dollars": "0.3100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -9173,7 +9283,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -9269,7 +9379,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -9287,7 +9397,7 @@
     "last_price_dollars": "0.5800",
     "latest_expiration_time": "2026-10-28T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6000",
+    "no_ask_dollars": "0.4700",
     "no_bid_dollars": "0.4300",
     "no_sub_title": "New York R",
     "notional_value_dollars": "1.0000",
@@ -9319,7 +9429,7 @@
     "volume_fp": "1.00",
     "yes_ask_dollars": "0.5700",
     "yes_ask_size_fp": "5.00",
-    "yes_bid_dollars": "0.4000",
+    "yes_bid_dollars": "0.5300",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "New York R",
     "_event_title": "Los Angeles vs New York R",
@@ -9365,7 +9475,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -9383,7 +9493,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-28T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6800",
+    "no_ask_dollars": "0.5900",
     "no_bid_dollars": "0.5300",
     "no_sub_title": "Los Angeles",
     "notional_value_dollars": "1.0000",
@@ -9414,9 +9524,9 @@
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "50.00",
-    "yes_bid_dollars": "0.3200",
-    "yes_bid_size_fp": "87.00",
+    "yes_ask_size_fp": "55.00",
+    "yes_bid_dollars": "0.4100",
+    "yes_bid_size_fp": "38.00",
     "yes_sub_title": "Los Angeles",
     "_event_title": "Los Angeles vs New York R",
     "_event_ticker": "KXNHLGAME-26OCT26LANYR",
@@ -9461,7 +9571,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -9510,9 +9620,9 @@
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.4600",
-    "yes_ask_size_fp": "2112.00",
+    "yes_ask_size_fp": "2150.00",
     "yes_bid_dollars": "0.3800",
-    "yes_bid_size_fp": "38.00",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Calgary",
     "_event_title": "Toronto vs Calgary",
     "_event_ticker": "KXNHLGAME-26OCT26TORCGY",
@@ -9557,7 +9667,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -9606,7 +9716,7 @@
     "volume_24h_fp": "1.00",
     "volume_fp": "1.00",
     "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "30.00",
+    "yes_ask_size_fp": "40.00",
     "yes_bid_dollars": "0.5200",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Toronto",
@@ -9653,7 +9763,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -9671,7 +9781,7 @@
     "last_price_dollars": "0.6500",
     "latest_expiration_time": "2026-10-29T01:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4300",
+    "no_ask_dollars": "0.4200",
     "no_bid_dollars": "0.3500",
     "no_sub_title": "Edmonton",
     "notional_value_dollars": "1.0000",
@@ -9703,7 +9813,7 @@
     "volume_fp": "1.00",
     "yes_ask_dollars": "0.6500",
     "yes_ask_size_fp": "2375.00",
-    "yes_bid_dollars": "0.5700",
+    "yes_bid_dollars": "0.5800",
     "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Edmonton",
     "_event_title": "Detroit vs Edmonton",
@@ -9749,7 +9859,7 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   },
   {
     "can_close_early": true,
@@ -9768,7 +9878,7 @@
     "latest_expiration_time": "2026-10-29T01:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6600",
-    "no_bid_dollars": "0.5900",
+    "no_bid_dollars": "0.6000",
     "no_sub_title": "Detroit",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T04:30:00Z",
@@ -9797,8 +9907,8 @@
     "updated_time": "2026-10-20T04:06:00.5311Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "2172.00",
+    "yes_ask_dollars": "0.4000",
+    "yes_ask_size_fp": "39.00",
     "yes_bid_dollars": "0.3400",
     "yes_bid_size_fp": "39.00",
     "yes_sub_title": "Detroit",
@@ -9845,6 +9955,6 @@
       }
     ],
     "_native_competition": "nhl",
-    "_collected_at_utc": "2026-10-20T07:48:11.493+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:06.259+00:00"
   }
 ]

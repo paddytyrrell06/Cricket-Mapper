@@ -2,14 +2,14 @@
   "mode": "rest_snapshot",
   "discovery_reused": true,
   "timings": {
-    "discovery_ms": 350.499,
-    "parse_and_match_ms": 3710.62,
-    "quote_refresh_ms": 10973.121,
-    "audit_and_render_ms": 1022.691,
-    "before_archive_total_ms": 16056.953
+    "discovery_ms": 397.138,
+    "parse_and_match_ms": 4037.961,
+    "quote_refresh_ms": 12071.713,
+    "audit_and_render_ms": 1446.475,
+    "before_archive_total_ms": 17953.304
   },
   "discovery_workers": 3,
   "quote_workers_per_venue": 4,
-  "instruments": 2042,
-  "comparison_pairs": 1028
+  "instruments": 2240,
+  "comparison_pairs": 1129
 }

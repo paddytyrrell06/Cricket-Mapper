@@ -1,1 +1,1 @@
-window.marketTerminalReportVersion("d8678ad2515c45eea2a4044d4c92f8dd");
+window.marketTerminalReportVersion("6fbd5a6aca8840b49b7dce85e345a99d");

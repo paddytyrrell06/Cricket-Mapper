@@ -377,7 +377,7 @@ class ReplayRunTests(unittest.TestCase):
 
         adapter = R.S.SportAdapter("football", "NFL", tuple(R.VENUES),
                                   lambda: self.fail("replay collected live data"), parse_league)
-        with patch.dict(R.S.ADAPTERS, {"football": adapter}), patch.object(
+        with patch.dict(R.ADAPTERS, {"football": adapter}), patch.object(
                 R, "ENABLED_SPORTS", ("cricket", "football")), patch.object(
                 R.Q, "_request_json", side_effect=AssertionError("replay requested quotes")):
             self.assertEqual(R.main(), 0)
@@ -509,7 +509,7 @@ class DiscoveryConcurrencyTests(unittest.TestCase):
                     for sport in sports}
         with tempfile.TemporaryDirectory() as directory, patch.object(
                 R, "DATA_DIR", Path(directory)), patch.object(R, "ENABLED_SPORTS", sports), patch.object(
-                R, "SNAPSHOT_DIR", None), patch.dict(R.S.ADAPTERS, adapters, clear=True), patch.object(R, "say"):
+                R, "SNAPSHOT_DIR", None), patch.dict(R.ADAPTERS, adapters, clear=True), patch.object(R, "say"):
             raw, _, warnings, coverage = R.collect()
         self.assertTrue(coverage["sports"]["basketball"]["kalshi"]["complete"])
         self.assertTrue(coverage["sports"]["baseball"]["polymarket_intl"]["complete"])

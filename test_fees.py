@@ -3,6 +3,7 @@ import unittest
 from decimal import Decimal
 
 import fees as F
+from liquidity import LiquidityPolicy
 
 
 def kalshi(multiplier="1", precision="0.01"):
@@ -144,6 +145,109 @@ class FeeTests(unittest.TestCase):
         self.assertEqual(Decimal(edge["top_quantity"]), Decimal("7"))
         self.assertTrue(edge["net_positive"])
         json.dumps(edge, allow_nan=False)
+
+
+class SizedFeeTests(unittest.TestCase):
+    def size(self, **kwargs):
+        return F.sized_taker_edge(kalshi(), ".6", polymarket(), ".5",
+                                  sell_size="1000", buy_size="1000", **kwargs)
+
+    def test_requested_quantity_fees_gross_net_and_capital_are_separate(self):
+        estimate = self.size(desired_contracts=100)
+        result = estimate.to_dict()
+        self.assertEqual(result["sized_quantity"], "100")
+        self.assertEqual(Decimal(result["gross_total"]), Decimal("10"))
+        self.assertEqual(Decimal(result["sell_fee"]), Decimal("1.68"))
+        self.assertEqual(Decimal(result["buy_fee"]), Decimal("1.25"))
+        self.assertEqual(Decimal(result["net_total"]), Decimal("7.07"))
+        self.assertEqual(Decimal(result["break_even_gap"]), Decimal(".0293"))
+        self.assertEqual(Decimal(result["capital_required"]), Decimal("92.93"))
+        self.assertEqual(result["capital_basis"], "fully_collateralized_pair_estimate")
+        self.assertTrue(result["actionable_estimate"])
+        self.assertFalse(result["execution_validated"])
+        self.assertAlmostEqual(float(result["return_on_capital_percent"]), 7.6078769)
+
+    def test_two_and_three_cent_crosses_can_be_consumed_by_both_taker_fees(self):
+        for bid, gross, net in ((".52", "2", "-1"), (".53", "3", "0")):
+            result = F.sized_taker_edge(kalshi(), bid, polymarket(), ".50",
+                desired_contracts=100, sell_size=1000, buy_size=1000).to_dict()
+            self.assertEqual(Decimal(result["gross_total"]), Decimal(gross))
+            self.assertEqual(Decimal(result["total_fees"]), Decimal("3"))
+            self.assertEqual(Decimal(result["net_total"]), Decimal(net))
+            self.assertFalse(result["actionable_estimate"])
+        # Near a price extreme the exact same 2c gross gap survives lower fees.
+        result = F.sized_taker_edge(kalshi(), ".12", polymarket(), ".10",
+            desired_contracts=100, sell_size=1000, buy_size=1000).to_dict()
+        self.assertEqual(Decimal(result["net_total"]), Decimal(".81"))
+        self.assertTrue(result["actionable_estimate"])
+
+    def test_size_caps_to_confirmed_whole_paired_depth_and_reprices_fees(self):
+        result = F.sized_taker_edge(kalshi(), ".6", polymarket(), ".5",
+            desired_contracts=100, sell_size="12.7", buy_size="8.4",
+            policy=LiquidityPolicy(min_top_notional_usd=0)).to_dict()
+        self.assertEqual(result["desired_quantity"], "100")
+        self.assertEqual(result["sized_quantity"], "8")
+        self.assertEqual(result["cap_reasons"], ["top_depth"])
+        self.assertEqual(Decimal(result["net_total"]), Decimal(".56"))
+        self.assertNotEqual(Decimal(result["net_total"]), Decimal(".0675") * 8)
+        self.assertTrue(result["within_depth"])
+
+    def test_budget_caps_using_both_fees_and_collateral_without_orderbook_walk(self):
+        result = self.size(desired_contracts=100, max_capital_usd="9.29").to_dict()
+        self.assertEqual(result["sized_quantity"], "9")
+        self.assertEqual(result["cap_reasons"], ["capital_budget"])
+        self.assertLessEqual(Decimal(result["capital_required"]), Decimal("9.29"))
+        next_size = self.size(desired_contracts=10).to_dict()
+        self.assertGreater(Decimal(next_size["capital_required"]), Decimal("9.29"))
+        tiny = self.size(max_capital_usd=".01").to_dict()
+        self.assertEqual(tiny["sized_quantity"], "0")
+        self.assertIsNone(tiny["net_total"])
+        self.assertFalse(tiny["actionable_estimate"])
+
+    def test_unknown_depth_or_fees_does_not_become_zero_cost_actionable_pnl(self):
+        unknown_depth = F.sized_taker_edge(kalshi(), ".6", polymarket(), ".5", buy_size=1000).to_dict()
+        self.assertEqual(Decimal(unknown_depth["gross_gap"]), Decimal(".1"))
+        self.assertIsNone(unknown_depth["sized_quantity"])
+        self.assertIsNone(unknown_depth["net_total"])
+        self.assertEqual(unknown_depth["liquidity_status"], "unknown")
+        unknown_fees = F.sized_taker_edge(kalshi(), ".6", F.FeeSchedule(), ".5",
+            buy_size=1000, sell_size=1000).to_dict()
+        self.assertIsNone(unknown_fees["net_total"])
+        self.assertIsNone(unknown_fees["capital_required"])
+        self.assertFalse(unknown_fees["actionable_estimate"])
+        budget_unknown = F.sized_taker_edge(kalshi(), ".6", F.FeeSchedule(), ".5",
+            buy_size=1000, sell_size=1000, max_capital_usd=10).to_dict()
+        self.assertEqual(budget_unknown["reason"], "unknown_fees_for_budget")
+        self.assertIsNone(budget_unknown["sized_quantity"])
+
+    def test_thin_liquidity_remains_a_diagnostic_but_is_screened_out(self):
+        result = F.sized_taker_edge(kalshi(), ".6", polymarket(), ".5",
+            sell_size=20, buy_size=20).to_dict()
+        self.assertEqual(Decimal(result["paired_top_notional_usd"]), Decimal("10"))
+        self.assertGreater(Decimal(result["net_total"]), 0)
+        self.assertEqual(result["liquidity_status"], "insufficient")
+        self.assertFalse(result["actionable_estimate"])
+
+    def test_known_minimum_order_size_and_notional_are_checked_after_budget(self):
+        result = self.size(desired_contracts=100, max_capital_usd="9.29", buy_min_order_size="10").to_dict()
+        self.assertEqual(result["minimum_order_status"], "below_minimum")
+        self.assertFalse(result["actionable_estimate"])
+        result = self.size(desired_contracts=10, buy_min_order_notional_usd="5.01").to_dict()
+        self.assertEqual(result["minimum_order_reason"], "below:buy_notional")
+        result = self.size(desired_contracts=10, buy_min_order_size="10", buy_min_order_notional_usd="5").to_dict()
+        self.assertEqual(result["minimum_order_status"], "known_minimums_met")
+
+    def test_top_preset_and_row_wrapper_are_json_safe(self):
+        row = {"kalshi_bid": ".6", "kalshi_bid_size": "8.7", "polymarket_intl_ask": ".5",
+               "polymarket_intl_ask_size": "12", "kalshi_fee_schedule": json.dumps(kalshi().to_dict()),
+               "polymarket_intl_fee_schedule": json.dumps(polymarket().to_dict()),
+               "polymarket_intl_minimum_order_size": "10"}
+        result = F.calculate_sized_taker_cross(row, "polymarket_intl", "kalshi", desired_contracts="top",
+                                              min_top_notional_usd=0)
+        self.assertEqual(result["sized_quantity"], "8")
+        self.assertEqual(result["minimum_order_status"], "below_minimum")
+        self.assertFalse(result["actionable_estimate"])
+        json.dumps(result, allow_nan=False)
 
 
 if __name__ == "__main__":

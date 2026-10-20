@@ -34,18 +34,21 @@ BASEBALL_STATES = NBA_STATES + ("tie",)
 SOCCER_STATES = NBA_STATES + ("draw",)
 TENNIS_STATES = NBA_STATES + ("walkover_win", "walkover_loss", "retirement_win", "retirement_loss")
 MMA_STATES = NBA_STATES + ("draw", "no_contest")
-SPORTS = {"cricket", "basketball", "football", "hockey", "baseball", "soccer", "tennis", "mma"}
+ESPORTS_STATES = NBA_STATES + ("tie",)
+SPORTS = {"cricket", "basketball", "football", "hockey", "baseball", "soccer", "tennis", "mma", "esports"}
 CORE_STATES = {"cricket": ("win", "loss", "draw", "tie_without_tiebreak"),
                "basketball": ("win", "loss"), "football": ("win", "loss", "tie"),
                              "hockey": ("win", "loss"), "baseball": ("win", "loss"),
                              "soccer": ("win", "loss", "draw"),
-                             "tennis": ("win", "loss"), "mma": ("win", "loss", "draw", "no_contest")}
+                             "tennis": ("win", "loss"), "mma": ("win", "loss", "draw", "no_contest"),
+                             "esports": ("win", "loss", "tie")}
 CORE_POLICIES = {"cricket": ("period", "tiebreakers", "dls"),
                  "basketball": ("period", "overtime"),
                  "football": ("period", "overtime"),
                  "hockey": ("period", "overtime", "shootout"),
                                  "baseball": ("period", "extra_innings"),
-                                 "soccer": ("period",), "tennis": ("period",), "mma": ("period",)}
+                                 "soccer": ("period",), "tennis": ("period",), "mma": ("period",),
+                                 "esports": ("period",)}
 POLICY_VALUES = {"period": {"full_match", "regulation", "regulation_time"}, "overtime": {"included", "excluded"},
                  "shootout": {"included", "excluded"}, "extra_innings": {"included", "excluded"},
                  "tiebreakers": {"included_if_played", "excluded", "not_applicable"},
@@ -66,7 +69,7 @@ def _states(sport: str) -> tuple:
     return {"basketball": NBA_STATES, "football": FOOTBALL_STATES,
             "hockey": HOCKEY_STATES, "baseball": BASEBALL_STATES,
             "soccer": SOCCER_STATES, "tennis": TENNIS_STATES,
-            "mma": MMA_STATES}.get(sport, CRICKET_STATES)
+            "mma": MMA_STATES, "esports": ESPORTS_STATES}.get(sport, CRICKET_STATES)
 
 
 def _policies(sport: str) -> tuple:
@@ -75,7 +78,8 @@ def _policies(sport: str) -> tuple:
             "baseball": ("period", "extra_innings", "postponement"),
             "soccer": ("period", "postponement"),
             "tennis": ("period", "postponement", "retirement", "walkover"),
-            "mma": ("period", "postponement")}.get(sport, CRICKET_POLICIES)
+            "mma": ("period", "postponement"),
+            "esports": ("period", "postponement", "overtime")}.get(sport, CRICKET_POLICIES)
 
 
 def _fixed_payout(value: Any) -> Any:
@@ -147,6 +151,54 @@ def profile_market(venue: str, raw: dict, *, sport: str = "cricket", outcome: st
     if winner_stated:
         payouts.update(win="0" if target == "draw" else "1", loss="0")
         policies["period"] = "full_match"
+
+    if sport == "esports":
+        # A winner can refer to a map, round, game, or a complete series. Only
+        # explicit full-match language establishes the shared result period.
+        full_match = ("refers to the full match" in text if venue == "kalshi"
+                      else "win the match against" in text)
+        policies["period"] = "full_match" if winner_stated and full_match else None
+        if venue == "kalshi":
+            formula_document = any(
+                doc.get("url") == "https://assets.kalshi.com/contract_terms/ESPORTSWIN.pdf"
+                and "number of tied participants" in str(doc.get("text") or "")
+                and "no “Tie” strike listed" in str(doc.get("text") or "")
+                for doc in evidence["documents"])
+            if raw.get("_esports_two_participant_contract") is True and formula_document:
+                payouts["tie"] = "0.5"
+            if "not started within 48 hours" in text and "fair market price" in text:
+                policies["postponement"] = "fair_market_price_if_not_started_within_48_hours"
+            if "cancelled before play begins" in text and "fair market price" in text:
+                payouts["cancelled_before_start"] = "fair_market_price"
+            if "forfeited before any play occurs" in text and "fair market price" in text:
+                payouts.update(forfeit_before_start_win="fair_market_price",
+                               forfeit_before_start_loss="fair_market_price")
+            if "begins and is subsequently forfeited" in text and "official result" in text:
+                payouts.update(forfeit_after_start_win="1", forfeit_after_start_loss="0")
+        elif venue == "polymarket_intl":
+            if re.search(r"ends in a tie[^.]{0,100}resolve to 50[- ]50", text):
+                payouts["tie"] = "0.5"
+            if re.search(r"match is canceled \(not played at all\)[^.]{0,250}resolve to 50[- ]50", text):
+                payouts["cancelled_before_start"] = "0.5"
+            if "delayed beyond 7 days" in text and "50-50" in text:
+                policies["postponement"] = "half_if_no_winner_within_7_days"
+            elif "14 calendar days after the originally scheduled start" in text and "rescheduled start time" in text:
+                policies["postponement"] = "half_if_rescheduled_start_after_published_14_day_deadline"
+            if "team withdraws before the start and the other wins automatically" in text and re.search(
+                    r"team withdraws before the start[^.]{0,180}resolve to 50[- ]50", text):
+                payouts.update(forfeit_before_start_win="0.5", forfeit_before_start_loss="0.5")
+            if ("match begins but is not completed" in text and "opponent's forfeiture" in text
+                    and "resolve to the team who wins" in text):
+                payouts.update(forfeit_after_start_win="1", forfeit_after_start_loss="0")
+        # Native full-match descriptions identify the official winner but do
+        # not separately state overtime treatment. Keep that contingency open.
+        if re.search(r"overtime (?:is |periods are )?included", text):
+            policies["overtime"] = "included"
+        elif re.search(r"(?:excluding|not including) overtime", text):
+            policies["overtime"] = "excluded"
+        return make_profile(sport=sport, target_kind=target, payouts=payouts,
+                            policies=policies, evidence=citations,
+                            label="Full series winner; cancellation and forfeit terms differ")
 
     if sport == "soccer":
         scope_terms = re.sub(r"\s+", " ", text)

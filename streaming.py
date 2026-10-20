@@ -26,6 +26,7 @@ from typing import Any, Callable, Iterable, Mapping, Optional
 
 import canonical as C
 import fees as F
+import liquidity as L
 import settlement as S
 
 InstrumentKey = tuple[str, str, str]
@@ -138,6 +139,7 @@ class CrossState:
     contingency_status: str = "unknown"
     caveats: tuple[str, ...] = ()
     taker_fees: Optional[F.TakerEdge] = None
+    sized_taker_fees: Optional[F.SizedTakerEdge] = None
 
     def to_dict(self) -> dict:
         return {"comparison_id": self.comparison_id, "eligible": self.eligible,
@@ -150,6 +152,13 @@ class CrossState:
                 "net_gap": _text(self.taker_fees.net_gap) if self.taker_fees else None,
                 "net_positive": self.taker_fees.net_positive if self.taker_fees else False,
                 "taker_fees": self.taker_fees.to_dict() if self.taker_fees else None,
+                "sized_taker_fees": self.sized_taker_fees.to_dict() if self.sized_taker_fees else None,
+                "liquidity_status": self.sized_taker_fees.liquidity.status if self.sized_taker_fees else "unknown",
+                "monitor_eligible": self.eligible and self.sized_taker_fees is not None
+                                    and self.sized_taker_fees.liquidity.sufficient,
+                "actionable_estimate": self.eligible and self.sized_taker_fees is not None
+                                       and self.sized_taker_fees.actionable_estimate,
+                "sized_net_total": _text(self.sized_taker_fees.edge.net_total) if self.sized_taker_fees else None,
                 "comparison_basis": self.comparison_basis,
                 "contingency_status": self.contingency_status, "caveats": list(self.caveats)}
 
@@ -234,7 +243,8 @@ class LiveQuoteEngine:
     def __init__(self, comparisons: Iterable[Comparison], *, max_age_seconds: float = 5,
                  max_skew_seconds: float = 1, clock_ns: Callable[[], int] = time.monotonic_ns,
                  wall_clock: Optional[Callable[[], datetime]] = None,
-                 fee_schedules: Optional[Mapping[InstrumentKey, F.FeeSchedule]] = None):
+                 fee_schedules: Optional[Mapping[InstrumentKey, F.FeeSchedule]] = None,
+                 liquidity_policy: Optional[L.LiquidityPolicy] = None):
         if (not math.isfinite(max_age_seconds) or max_age_seconds <= 0 or
                 not math.isfinite(max_skew_seconds) or max_skew_seconds < 0):
             raise ValueError("age must be positive and skew nonnegative")
@@ -253,6 +263,9 @@ class LiveQuoteEngine:
         self._crosses: dict[str, CrossState] = {}
         self._fee_schedules: dict[InstrumentKey, F.FeeSchedule] = dict(fee_schedules or {})
         self._unknown_fee = F.FeeSchedule()
+        if liquidity_policy is not None and not isinstance(liquidity_policy, L.LiquidityPolicy):
+            raise TypeError("compile liquidity policy before constructing the cache")
+        self._liquidity_policy = liquidity_policy if liquidity_policy is not None else L.LiquidityPolicy()
         self._deadlines = _Deadlines()
         for comparison in comparisons:
             if comparison.comparison_id in self._comparisons:
@@ -343,13 +356,17 @@ class LiveQuoteEngine:
             else:
                 gap, sell, buy = max(candidates, key=lambda item: item[0])
                 sized = sell.bid_size is not None and buy.ask_size is not None
+                sell_fee = self._fee_schedules.get(sell.key, self._unknown_fee)
+                buy_fee = self._fee_schedules.get(buy.key, self._unknown_fee)
                 state = CrossState(eligible=True, crossed=gap > 0, reason="fresh",
                                    bid_key=sell.key, ask_key=buy.key, bid=sell.bid, ask=buy.ask, gap=gap,
                                    depth_confirmed=sized,
                                    available_size=min(sell.bid_size, buy.ask_size) if sized else None,
                                    taker_fees=F.taker_edge(
-                                       self._fee_schedules.get(sell.key, self._unknown_fee), sell.bid,
-                                       self._fee_schedules.get(buy.key, self._unknown_fee), buy.ask,
+                                       sell_fee, sell.bid, buy_fee, buy.ask,
+                                       sell_size=sell.bid_size, buy_size=buy.ask_size),
+                                   sized_taker_fees=F.sized_taker_edge(
+                                       sell_fee, sell.bid, buy_fee, buy.ask, policy=self._liquidity_policy,
                                        sell_size=sell.bid_size, buy_size=buy.ask_size), **common)
             self._crosses[identifier] = state
             result.append(state)
@@ -371,6 +388,19 @@ class LiveQuoteEngine:
             self._fee_schedules[key] = schedule
             affected.update(self._index[key])
             return UpdateResult(True, "fee_schedule_updated", self._refresh(affected))
+
+    def update_liquidity_policy(self, policy: L.LiquidityPolicy) -> UpdateResult:
+        """Re-screen cached comparisons after an explicit configuration change.
+
+        This deliberate full re-evaluation is outside ingestion. Individual BBO
+        updates continue to visit only their indexed comparisons.
+        """
+        if not isinstance(policy, L.LiquidityPolicy):
+            raise TypeError("compile liquidity policy before updating the cache")
+        with self._lock:
+            self._liquidity_policy = policy
+            self._expire(self._clock_ns())
+            return UpdateResult(True, "liquidity_policy_updated", self._refresh(set(self._comparisons)))
 
     def _expire(self, now_ns: int) -> set[str]:
         affected = set()
@@ -555,6 +585,7 @@ class LiveQuoteEngine:
         # Immutable states let a publisher sort/format without blocking ingestion.
         return {"as_of": as_of, "transport": "not_connected",
                 "max_age_seconds": self.max_age_seconds, "max_skew_seconds": self.max_skew_seconds,
+                "liquidity_policy": self._liquidity_policy.to_dict(),
                 "instrument_count": len(quotes), "comparison_count": len(crosses),
                 "quotes": [quote.to_dict() for quote in sorted(quotes, key=lambda q: q.key)],
                 "comparisons": [cross.to_dict() for cross in sorted(crosses, key=lambda c: c.comparison_id)]}

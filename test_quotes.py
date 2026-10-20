@@ -328,6 +328,28 @@ class LiveQuotesTests(unittest.TestCase):
         self.assertEqual(request.call_args.args[2], [{"token_id": "202"}])
         self.assertEqual(m.quote_status, "empty")
 
+    def test_book_share_minimum_is_preserved_separately_from_gamma_notional_and_replay(self):
+        m = market("polymarket_intl")
+        raw = intl_record(orderMinSize="1", feesEnabled=False)
+        book = {"asset_id": "101", "min_order_size": "5", "bids": [], "asks": []}
+        with patch.object(Q, "_request_json", return_value=(200, [book], COLLECTED)):
+            entries, warnings = Q.enrich_quotes([m], {"polymarket_intl": [raw]}, live=True)
+        self.assertEqual(warnings, [])
+        self.assertEqual(m.extra["minimum_order_size"], "5")
+        self.assertEqual(m.extra["minimum_order_notional_usd"], "1")
+        replay = market("polymarket_intl")
+        with patch.object(Q, "_request_json", side_effect=AssertionError("offline replay")):
+            Q.enrich_quotes([replay], {}, live=False, saved_quotes=entries)
+        self.assertEqual(replay.extra["minimum_order_size"], "5")
+        self.assertEqual(replay.extra["minimum_order_notional_usd"], "1")
+
+    def test_missing_book_minimum_does_not_reuse_previous_live_constraint(self):
+        m = market("polymarket_intl", extra={"minimum_order_size": "100"})
+        book = {"asset_id": "101", "bids": [], "asks": []}
+        with patch.object(Q, "_request_json", return_value=(200, [book], COLLECTED)):
+            Q.enrich_quotes([m], {"polymarket_intl": [intl_record()]}, live=True)
+        self.assertNotIn("minimum_order_size", m.extra)
+
     def test_v2_uses_position_ids_instead_of_legacy_tokens(self):
         m = market("polymarket_intl")
         raw = intl_record(version="v2", positionIds=["303", "404"])

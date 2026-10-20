@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, parse_qs
 
 
 ROOT = Path(__file__).resolve().parent
@@ -55,9 +55,10 @@ def refresh_command(root: Path) -> list[str]:
 class QuoteRefresh:
     """Coalesce browser requests into one background, audited publication."""
 
-    def __init__(self, root: Path = ROOT, *, runner=None):
+    def __init__(self, root: Path = ROOT, *, runner=None, runtime=None):
         self.root = Path(root).resolve()
         self._runner = runner or subprocess.run
+        self.runtime = runtime
         self._lock = threading.Lock()
         self._worker: threading.Thread | None = None
         self._state = {
@@ -68,7 +69,10 @@ class QuoteRefresh:
 
     def status(self) -> dict:
         with self._lock:
-            return dict(self._state)
+            result = dict(self._state)
+        if self.runtime is not None:
+            result.update(mode="runtime_rest", revision=self.runtime.revision)
+        return result
 
     def request(self) -> dict:
         with self._lock:
@@ -91,6 +95,10 @@ class QuoteRefresh:
     def _refresh(self) -> None:
         error = None
         try:
+            if self.runtime is not None:
+                self.runtime.refresh()
+                self._finish(None)
+                return
             if not (self.root / "output" / "data").is_dir():
                 raise ValueError("No saved discovery: run python3 run.py once first")
             result = self._runner(
@@ -109,6 +117,9 @@ class QuoteRefresh:
             error = str(exc)
         except Exception:
             error = "Quote refresh failed; previous report retained"
+        self._finish(error)
+
+    def _finish(self, error):
         with self._lock:
             completed_at = utc_now()
             self._state.update(running=False, completed_at=completed_at,
@@ -123,9 +134,16 @@ class TerminalServer(ThreadingHTTPServer):
     daemon_threads = True
     allow_reuse_address = True
 
-    def __init__(self, port: int = 8765, *, root: Path = ROOT, refresh=None):
+    def __init__(self, port: int = 8765, *, root: Path = ROOT, refresh=None, runtime=None):
         self.root = Path(root).resolve()
-        self.refresh = refresh or QuoteRefresh(self.root)
+        self.runtime = runtime
+        if refresh is None and runtime is None:
+            try:
+                from runtime import MarketRuntime
+                self.runtime = MarketRuntime(self.root)
+            except (OSError, ValueError, KeyError):
+                self.runtime = None
+        self.refresh = refresh or QuoteRefresh(self.root, runtime=self.runtime)
         self._assets: dict[str, bytes] = {}
         self._asset_lock = threading.Lock()
         # Bind only to IPv4 loopback; exposing this control endpoint is unsupported.
@@ -181,9 +199,25 @@ class TerminalHandler(BaseHTTPRequestHandler):
         if not self._host_valid():
             self._json(HTTPStatus.FORBIDDEN, {"error": "Invalid local host"}, head=head)
             return
-        path = urlsplit(self.path).path
+        parsed_url = urlsplit(self.path)
+        path = parsed_url.path
         if path == "/api/status":
             self._json(HTTPStatus.OK, self.server.refresh.status(), head=head)
+            return
+        if self.server.runtime is not None and path == "/api/markets":
+            revision = parse_qs(parsed_url.query).get("revision", [None])[0]
+            self._json(HTTPStatus.OK, self.server.runtime.snapshot(revision), head=head)
+            return
+        if self.server.runtime is not None and path.startswith("/api/market/"):
+            try:
+                index = int(path.rsplit("/", 1)[1])
+                if index < 0:
+                    raise ValueError
+                detail = self.server.runtime.detail(index)
+            except (IndexError, ValueError):
+                self._json(HTTPStatus.NOT_FOUND, {"error": "Unknown market"}, head=head)
+                return
+            self._json(HTTPStatus.OK, detail, head=head)
             return
         assets = {"/": REPORT_NAME, "/" + REPORT_NAME: REPORT_NAME,
                   "/" + VERSION_NAME: VERSION_NAME}
@@ -204,7 +238,7 @@ class TerminalHandler(BaseHTTPRequestHandler):
         if not self._host_valid():
             self._json(HTTPStatus.FORBIDDEN, {"error": "Invalid local host"})
             return
-        if self.path != "/api/refresh":
+        if self.path not in {"/api/refresh", "/api/settings"}:
             self._json(HTTPStatus.NOT_FOUND, {"error": "Not found"})
             return
         expected_origin = "http://" + self.headers["Host"]
@@ -224,14 +258,25 @@ class TerminalHandler(BaseHTTPRequestHandler):
             if len(lengths) != 1:
                 raise ValueError
             length = int(lengths[0])
-            if length < 0 or length > 1024:
+            if length < 0 or length > (1024 if self.path == "/api/refresh" else 1024 * 1024):
                 raise ValueError
             self.connection.settimeout(5)
             body = json.loads(self.rfile.read(length)) if length else {}
-            if body != {}:
+            if self.path == "/api/refresh" and body != {}:
                 raise ValueError
         except (ValueError, OSError):
             self._json(HTTPStatus.BAD_REQUEST, {"error": "Refresh body must be {}"})
+            return
+        if self.path == "/api/settings":
+            if self.server.runtime is None:
+                self._json(HTTPStatus.CONFLICT, {"error": "Runtime cache unavailable"})
+                return
+            try:
+                settings = self.server.runtime.configure(body)
+            except (ValueError, TypeError):
+                self._json(HTTPStatus.BAD_REQUEST, {"error": "Invalid scanner settings"})
+                return
+            self._json(HTTPStatus.ACCEPTED, {"settings": settings, **self.server.refresh.request()})
             return
         self._json(HTTPStatus.ACCEPTED, self.server.refresh.request())
 
@@ -245,27 +290,40 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--no-open", action="store_true", help="Do not open a browser tab")
+    parser.add_argument("--interval", type=float, default=15,
+                        help="Continuous REST refresh seconds; 0 disables automatic refresh")
     args = parser.parse_args(argv)
     if not 1 <= args.port <= 65535:
         parser.error("port must be between 1 and 65535")
+    if args.interval != 0 and not 5 <= args.interval <= 3600:
+        parser.error("interval must be 0 or between 5 and 3600 seconds")
     try:
         server = TerminalServer(args.port)
     except OSError as exc:
         print(f"Cannot start local terminal on port {args.port}: {exc}", file=sys.stderr)
         return 1
     url = f"http://127.0.0.1:{server.server_port}/{REPORT_NAME}"
-    print(f"Market Terminal: {url}\nReload the browser or click Refresh prices to fetch live quotes.\n"
+    print(f"Market Terminal: {url}\nRefresh prices or reload to request quotes; REST interval {args.interval:g}s.\n"
           "Keep this process running; Ctrl+C stops the local service.", flush=True)
     if not args.no_open:
         try:
             webbrowser.open(url)
         except webbrowser.Error:
             print("Open the terminal URL above in your browser.", flush=True)
+    stopped = threading.Event()
+    def scan_loop():
+        while not stopped.wait(args.interval):
+            server.refresh.request()
+    if server.runtime is not None:
+        server.refresh.request()
+        if args.interval:
+            threading.Thread(target=scan_loop, name="terminal-rest-scheduler", daemon=True).start()
     try:
         server.serve_forever(poll_interval=0.2)
     except KeyboardInterrupt:
         pass
     finally:
+        stopped.set()
         server.server_close()
     return 0
 

@@ -1,6 +1,6 @@
 # Platform taker fees and edge estimates
 
-Primary sources checked **20 October 2026**. Metadata for each market takes
+Primary sources checked **21 October 2026**. Metadata for each market takes
 precedence over category examples. This module estimates the exchange's platform
 taker fees on both legs; it does not send orders.
 
@@ -45,19 +45,98 @@ Sources: [Trading Fees](https://docs.polymarket.com/trading/fees),
 
 ## Calculation and integration
 
-`net_total = quantity × (sell_bid - buy_ask) - sell_fee - buy_fee`.
-`net_gap` is that total divided by quantity, in dollars per paired contract.
-Gross cross flags remain independent of net positivity. Unknown fees on either
-leg make net edge unavailable, while preserving the gross quote difference.
+Let `q` be the actual paired order quantity, `b` the selected sell bid and `a`
+the distinct venue's buy ask:
 
-The default is an indicative one-contract estimate. The top-size estimate uses
-the smaller displayed sell-bid / buy-ask quantity, floors to whole paired
-contracts, and recalculates fees for that order size. It does not multiply a
-rounded one-contract fee by size. Missing depth stays unknown. These quantities
-do not validate venue minimum orders, inventory, shorting capability, fees from
-a broker or builder, slippage, financing, transfer costs, settlement alignment,
-or the feasibility of filling both venues together. The terminal separately
-checks mapping, settlement and quote freshness.
+```text
+gross_gap = b - a                       dollars per paired contract
+gross_total = q × gross_gap             dollars for the whole pair of orders
+total_fees = sell_fee(q, b) + buy_fee(q, a)
+net_total = gross_total - total_fees     estimated total dollars after taker fees
+net_gap = net_total / q                 dollars per paired contract
+break_even_gap = total_fees / q         gross spread required to cover these fees
+```
+
+The table displays `gross_gap`, `total_fees / q` and `net_gap` in **cents per
+contract**, and `net_total` in **total dollars**. A 2¢ net edge on 100 filled
+paired contracts corresponds to $2 estimated net, rather than 2¢ total profit.
+Gross cross flags remain independent of net positivity. Missing fees on either
+leg make net PnL unavailable while retaining the gross quote difference.
+
+The UI and liquidity policy default to **100 requested contracts**. The UI also
+offers 1, 10, 1,000 and Top depth. Actual quantity is capped to the smaller
+displayed sell-bid/buy-ask quantity and floored to whole contracts. Both order
+fees are recalculated at that actual size. Multiplying a rounded one-contract
+fee by 100 can overstate the larger order's cost. Unknown depth leaves actual
+quantity and sized PnL unavailable; it never becomes zero-cost capacity.
+
+Illustrations using 100 contracts, Kalshi's general multiplier 1 with cent
+balance precision, and Polymarket's sports rate 0.05 / exponent 1:
+
+| Sell Kalshi bid / buy Polymarket ask | Gross | Kalshi fee | Polymarket fee | Estimated net |
+| --- | ---: | ---: | ---: | ---: |
+| 52¢ / 50¢ | $2.00 | $1.75 | $1.25 | **−$1.00** |
+| 53¢ / 50¢ | $3.00 | $1.75 | $1.25 | **$0.00** |
+| 12¢ / 10¢ | $2.00 | $0.74 | $0.45 | **+$0.81** |
+
+These are fee-model examples, not current opportunities or a universal spread
+rule. In the final row, at least 1,000 displayed paired contracts at those
+prices are needed to clear the terminal's default $100 top-notional bound on
+the 10¢ leg, even if the desired trade itself is 100 contracts. All examples
+assume sufficient depth, matching payouts and the order/account assumptions
+above. Market-specific fees can change the result.
+
+## Liquidity, order bounds and capital
+
+The default shared policy requires **$100 of paired top-of-book notional on each
+selected leg**. It first computes `top_q = floor(min(sell_bid_size,
+buy_ask_size))`, then tests both `top_q × sell_bid` and `top_q × buy_ask` against
+the bound. `paired_top_notional_usd` is their minimum. This tests available top
+capacity, separately from the requested trade size. Volume, open interest and
+total market liquidity cannot substitute for paired depth.
+
+Fresh explicit low CLOB aggregate liquidity or a book whose two current sides
+are both below the bound may avoid unnecessary quote requests. Both sides must
+be small before screening out an instrument: one large side can still take
+part in a cross. Aggregate and book timestamps are validated independently;
+missing, stale, future or invalid measurements get a probe. The runtime
+reprobes thin markets after 60 seconds so liquidity changes can restore them.
+Unknown depth is hidden by the UI's default liquidity filter and can be shown
+explicitly. It cannot create sized profit or an actionable estimate.
+
+The capital estimate is explicitly **fully collateralized paired positions**:
+
+```text
+buy_cost = q × buy_ask
+collateral_estimate = q × (1 - sell_bid)
+capital_required = buy_cost + collateral_estimate + total_fees
+return_on_capital = net_total / capital_required
+```
+
+This does not assume free existing inventory, prove a short is available, or
+validate an executable complementary NO order. It is a labeled economic
+capital estimate. Optional budget sizing uses this basis, includes both fees,
+and finds the largest whole quantity within the budget and displayed depth.
+Known minimum order quantity/notional constraints are checked **after** sizing;
+missing constraints remain unknown. `actionable_estimate` is a screening flag,
+and `execution_validated` remains false.
+
+Polymarket order books supply `min_order_size` in shares; it is retained as
+`minimum_order_size`. Gamma market details document `orderMinSize` as a USDC
+minimum, retained separately as `minimum_order_notional_usd`. These distinct
+constraints are not silently interchanged. The UI marks a known violation
+**MIN** and excludes it from After fees +, while details retains the diagnostic
+profit calculation. Sources: [Place Orders](https://docs.polymarket.com/trading/place-orders),
+[Market Details](https://docs.polymarket.com/market-data/market-details).
+
+These estimates exclude broker/builder charges, rebates not explicitly modeled,
+slippage beyond the best level, financing and transfer costs. Inventory,
+shorting, account collateral, venue order constraints and simultaneous fills
+still require validation before execution. The terminal separately checks
+mapping, settlement and quote freshness; conditional contingency differences
+remain visible. No orders are sent.
+
+## Developer integration
 
 `compile_schedule(venue, extra)` validates metadata once. Normalized metadata is
 stored in `Market.extra["taker_fee"]`, with `source` and `checked_at` retained:
@@ -69,8 +148,18 @@ stored in `Market.extra["taker_fee"]`, with `source` and `checked_at` retained:
 {"model": "unknown", "reason": "refresh_failed"}
 ```
 
-`taker_edge` consumes immutable compiled schedules and Decimal prices/quantities.
-The streaming engine caches schedules per instrument and recalculates only
-affected comparisons. `update_fee_schedule` applies separately refreshed
-metadata; pass an unknown schedule when refresh fails. Fee discovery, network
-requests, JSON encoding, and report generation stay outside quote updates.
+`taker_edge` retains its one-contract default for diagnostic compatibility.
+`sized_taker_edge` consumes compiled schedules and a compiled `LiquidityPolicy`
+for actual sizing; `calculate_sized_taker_cross` reads report/CSV fields and
+serializes the result. `desired_contracts="top"` selects available whole paired
+top depth. `max_capital_usd` optionally caps the capital estimate. The browser
+uses exact Python-computed preset estimates, keeping fee-model rounding out of
+JavaScript rendering.
+
+The streaming engine caches schedules and policy outside quote ingestion, then
+recalculates only affected comparisons. Gross and fee-adjusted diagnostics stay
+visible for thin markets, while `monitor_eligible` / `actionable_estimate` gate
+screened signals. `update_fee_schedule` applies separately refreshed metadata;
+pass an unknown schedule when refresh fails. `update_liquidity_policy` performs
+an explicit configuration re-evaluation outside ingestion. Fee discovery,
+network requests, JSON encoding and report generation stay outside updates.

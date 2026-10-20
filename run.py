@@ -1,6 +1,6 @@
 # Collect Kalshi and Polymarket match winners, audit contract compatibility, and publish the sports terminal.
 ##update: python3 run.py --snapshot-dir=output/data --refresh-quotes
-# Browser terminal with reload-to-refresh: python3 server.py
+##  Browser terminal with reload-to-refresh: python3 server.py
 from __future__ import annotations
 
 import csv
@@ -20,12 +20,13 @@ import matching as M
 import presentation as P
 import quotes as Q
 import sports as S
+from adapters import ADAPTERS, domain_for_scope
 
 VENUES = ["kalshi", "polymarket_intl"]
 DISCOVERY_WORKERS = 3
 ENABLED_SPORTS = tuple(filter(None, next(
     (arg.split("=", 1)[1] for arg in sys.argv[1:] if arg.startswith("--sports=")),
-    ",".join(S.ADAPTERS)).split(",")))
+    ",".join(ADAPTERS)).split(",")))
 SOCCER_LEAGUES = next((tuple(filter(None, arg.split("=", 1)[1].split(",")))
                       for arg in sys.argv[1:] if arg.startswith("--soccer-leagues=")), None)
 OUTPUT_DIR = Path("output")
@@ -256,7 +257,7 @@ def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
     def collect_sport(sport: str):
         result = (S._collect_soccer(competitions=SOCCER_LEAGUES)
                   if sport == "soccer" and SOCCER_LEAGUES is not None else
-                  S.ADAPTERS[sport].collect())
+                  ADAPTERS[sport].collect())
         observed_at = datetime.now(timezone.utc).isoformat(timespec="milliseconds")
         for items in result[0].values():
             for record in items:
@@ -307,7 +308,7 @@ def collect(snapshot: tuple[dict, dict, list[str], dict] | None = None
     for sport in ENABLED_SPORTS:
         if sport == "cricket":
             continue
-        adapter = S.ADAPTERS[sport]
+        adapter = ADAPTERS[sport]
         say(f"  {adapter.label} ...")
         try:
             sport_raw, sport_meta, sport_warnings = sport_jobs[sport].result()
@@ -399,8 +400,8 @@ def review_mapping_rows(market_review: list[M.MarketMatch],
 
 
 def _main() -> int:
-    if not ENABLED_SPORTS or set(ENABLED_SPORTS) - set(S.ADAPTERS):
-        say("Choose --sports=" + ",".join(S.ADAPTERS) + " (any subset).")
+    if not ENABLED_SPORTS or set(ENABLED_SPORTS) - set(ADAPTERS):
+        say("Choose --sports=" + ",".join(ADAPTERS) + " (any subset).")
         return 2
     if SOCCER_LEAGUES is not None and (not SOCCER_LEAGUES or
                                        set(SOCCER_LEAGUES) - set(S.SOCCER_COMPETITIONS)):
@@ -478,7 +479,7 @@ def _main() -> int:
         if sport == "cricket":
             continue
         try:
-            sport_fixtures, sport_markets, sport_warnings = S.ADAPTERS[sport].parse(scope_raw(raw, sport))
+            sport_fixtures, sport_markets, sport_warnings = ADAPTERS[sport].parse(scope_raw(raw, sport))
         except Exception as exc:
             sport_fixtures, sport_markets = [], []
             sport_warnings = [f"COVERAGE_INCOMPLETE {sport}: parse failed {exc!r}"]
@@ -571,6 +572,7 @@ def _main() -> int:
         "quotes_checked_at_utc": quotes_checked_at.isoformat(timespec="seconds"),
         "quote_mode": "live_rest" if live_quotes else "saved_replay",
         "sports": list(ENABLED_SPORTS), "venues": VENUES,
+        "domains": {scope: domain_for_scope(scope) for scope in ENABLED_SPORTS},
     }, indent=2), encoding="utf-8")
     two_sided_quotes = sum(market.bid is not None and market.ask is not None
                            for market in quote_markets)
@@ -822,7 +824,6 @@ def _main() -> int:
 
 
 def main() -> int:
-    # Browser refreshes and a separate CLI run must never share a mutable build.
     from build_lock import BuildBusy, BuildLock
     try:
         with BuildLock(BUILD_DIR.parent / ".market_terminal.lock"):

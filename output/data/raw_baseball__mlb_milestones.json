@@ -4,221 +4,6 @@
     "details": {
       "away_last_games": [
         {
-          "date": "2026-10-16T00:00:00Z",
-          "opponent_points": 4,
-          "opponent_structured_id": "5ee3dc32-f192-4b80-ac4a-fd285f36dc1a",
-          "points": 6,
-          "structured_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
-          "winner": true
-        },
-        {
-          "date": "2026-10-15T00:00:00Z",
-          "opponent_points": 2,
-          "opponent_structured_id": "5ee3dc32-f192-4b80-ac4a-fd285f36dc1a",
-          "points": 6,
-          "structured_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
-          "winner": true
-        },
-        {
-          "date": "2026-10-12T21:00:00Z",
-          "opponent_points": 4,
-          "opponent_structured_id": "5ee3dc32-f192-4b80-ac4a-fd285f36dc1a",
-          "points": 7,
-          "structured_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
-          "winner": true
-        },
-        {
-          "date": "2026-10-12T00:00:00Z",
-          "opponent_points": 1,
-          "opponent_structured_id": "5ee3dc32-f192-4b80-ac4a-fd285f36dc1a",
-          "points": 2,
-          "structured_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
-          "winner": true
-        }
-      ],
-      "away_team_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
-      "f5_tie_id": "b8c3e2a1-7f4d-4e9b-a6d0-3c5f8e1b2a49",
-      "game_injuries": {
-        "087f0ae7-c231-4dcd-b7e5-f026c1769e40": [
-          {
-            "comment": "The Milwaukee Brewers transferred RHP Brandon Woodruff from the 15-day injured list to the 60-day injured list with right shoulder inflammation.",
-            "date_updated": "2026-07-12",
-            "description": "Shoulder",
-            "name": "Brandon Woodruff",
-            "start_date": "2026-07-04",
-            "status": "D60",
-            "structured_id": "6a85be9f-797a-4392-a988-a75ee6fc7700"
-          },
-          {
-            "comment": "The Milwaukee Brewers transferred LHP Brian Fitzpatrick to the 60-day injured list due to left elbow injury.",
-            "date_updated": "2026-06-09",
-            "description": "Elbow",
-            "name": "Brian Fitzpatrick",
-            "start_date": "2026-06-05",
-            "status": "D60",
-            "structured_id": "10994620-0739-49c7-a0dc-5de652e5adf9"
-          },
-          {
-            "comment": "The Milwaukee Brewers said on Thursday (Jun. 18) that Priester will undergo thoracic outlet compression surgery and is expected to be sidelined 8-to-10 months, per Curt Hogg of the Milwaukee Journal Sentinel.",
-            "date_updated": "2026-06-18",
-            "description": "Wrist",
-            "name": "Quinn Priester",
-            "start_date": "2026-03-22",
-            "status": "D60",
-            "structured_id": "5a2bc28a-63ec-4ffc-9f7f-6a30e30b05f2"
-          },
-          {
-            "comment": "The Milwaukee Brewers transferred LHP Angel Zerpa to the 60-day injured list with left forearm tightness.",
-            "date_updated": "2026-05-31",
-            "description": "Forearm",
-            "name": "Angel Zerpa",
-            "start_date": "2026-04-26",
-            "status": "D60",
-            "structured_id": "295dd437-7da4-421b-a2a8-c2b0c589a7b5"
-          },
-          {
-            "comment": "The Milwaukee Brewers placed Grant Anderson (RP) on the 15-day injured list with right biceps inflammation.",
-            "date_updated": "2026-09-07",
-            "description": "Biceps",
-            "name": "Grant Anderson",
-            "start_date": "2026-09-07",
-            "status": "D15",
-            "structured_id": "bd8fdb06-f105-445d-a324-cb0c7b6c3e5f"
-          }
-        ],
-        "942f3f85-869a-4f7a-8e5a-336365c5294b": [
-          {
-            "comment": "The Tampa Bay Rays transferred RHP Edwin Uceta to the 60-day injured list with right shoulder impingement.",
-            "date_updated": "2026-04-24",
-            "description": "Shoulder",
-            "name": "Edwin Uceta",
-            "start_date": "2026-03-25",
-            "status": "D60",
-            "structured_id": "440f107e-aeff-4863-b46a-628cae2a6ea4"
-          },
-          {
-            "comment": "The Tampa Bay Rays placed SP Shane McClanahan on the 15-day injured list with left forearm tightness.",
-            "date_updated": "2026-09-04",
-            "description": "Forearm",
-            "name": "Shane McClanahan",
-            "start_date": "2026-09-04",
-            "status": "D15",
-            "structured_id": "c9568a98-d319-49bb-9fe3-612a027f0b0d"
-          },
-          {
-            "comment": "The Tampa Bay Rays placed LF Jacob Melton on the 60-day injured list with a right hamstring strain.",
-            "date_updated": "2026-09-15",
-            "description": "Hamstring",
-            "name": "Jacob Melton",
-            "start_date": "2026-09-15",
-            "status": "D60",
-            "structured_id": "1cc0e833-fa93-4f94-b1b2-ec638afc06b0"
-          },
-          {
-            "comment": "The Tampa Bay Rays transferred RHP Jonathan Heasley from the 15-day injured list to the 60-day injured list due to a right elbow stress reaction.",
-            "date_updated": "2026-06-08",
-            "description": "Elbow",
-            "name": "Jonathan Heasley",
-            "start_date": "2026-05-29",
-            "status": "D60",
-            "structured_id": "c0226b25-f5f0-4fde-9edc-16cdd2b929af"
-          },
-          {
-            "comment": "Pepiot will miss the remainder of the season after undergoing hip surgery according to Marc Topkin of the Tampa Bay Times.",
-            "date_updated": "2026-05-01",
-            "description": "Hip",
-            "name": "Ryan Pepiot",
-            "start_date": "2026-03-24",
-            "status": "D60",
-            "structured_id": "f3f79cef-0c64-42d1-af8b-99189cfe2034"
-          },
-          {
-            "comment": "The Tampa Bay Rays transferred OF Gavin Lux from the 10-day injured list to the 60-day injured list with a right shoulder impingement.",
-            "date_updated": "2026-05-27",
-            "description": "Shoulder",
-            "name": "Gavin Lux",
-            "start_date": "2026-03-23",
-            "status": "D60",
-            "structured_id": "647c3194-ab4c-44ea-85fa-b2a64efafd01"
-          }
-        ]
-      },
-      "home_last_games": [
-        {
-          "date": "2026-10-20T00:08:00Z",
-          "opponent_points": 3,
-          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
-          "points": 7,
-          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
-          "winner": true
-        },
-        {
-          "date": "2026-10-18T21:08:00Z",
-          "opponent_points": 1,
-          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
-          "points": 3,
-          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
-          "winner": true
-        },
-        {
-          "date": "2026-10-18T00:08:00Z",
-          "opponent_points": 3,
-          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
-          "points": 7,
-          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
-          "winner": true
-        },
-        {
-          "date": "2026-10-15T17:00:00Z",
-          "opponent_points": 3,
-          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
-          "points": 2,
-          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
-          "winner": false
-        },
-        {
-          "date": "2026-10-14T00:00:00Z",
-          "opponent_points": 1,
-          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
-          "points": 3,
-          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
-          "winner": true
-        }
-      ],
-      "home_team_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
-      "league": "MLB",
-      "main_game_event_ticker": "KXMLBGAME-26OCT272000MILTB",
-      "playoff_game_number": 4,
-      "status": "scheduled"
-    },
-    "id": "ad2f2b6b-27c6-511a-a732-24c90a02bd39",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin!",
-    "primary_event_tickers": [
-      "KXMLBGAME-26OCT272000MILTB",
-      "KXMLBEXTRAS-26OCT272000MILTB"
-    ],
-    "related_event_tickers": [
-      "KXMLBGAME-26OCT272000MILTB",
-      "KXMLBRFI-26OCT272000MILTB",
-      "KXMLBEXTRAS-26OCT272000MILTB"
-    ],
-    "source_id": "695fa80b-f028-40e9-81ed-665d9946ee1d",
-    "source_ids": {
-      "source_1_id": "3015212",
-      "source_2_id": "202610287BABC632",
-      "source_3_id": "695fa80b-f028-40e9-81ed-665d9946ee1d"
-    },
-    "start_date": "2026-10-28T00:00:00Z",
-    "title": "Milwaukee vs Tampa Bay (Game 4)",
-    "type": "baseball_game",
-    "_collected_at_utc": "2026-10-20T07:48:13.611+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_last_games": [
-        {
           "date": "2026-10-20T00:08:00Z",
           "opponent_points": 3,
           "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
@@ -439,7 +224,8 @@
       "KXMLBOUTS-26OCT232000TBMIL",
       "KXMLBWA-26OCT232000TBMIL",
       "KXMLBHA-26OCT232000TBMIL",
-      "KXMLBERA-26OCT232000TBMIL"
+      "KXMLBERA-26OCT232000TBMIL",
+      "KXMLBSB-26OCT232000TBMIL"
     ],
     "source_id": "39c29f89-8ab2-427b-b424-8886499d548d",
     "source_ids": {
@@ -450,7 +236,7 @@
     "start_date": "2026-10-24T00:00:00Z",
     "title": "Tampa Bay vs Milwaukee (Game 1)",
     "type": "baseball_game",
-    "_collected_at_utc": "2026-10-20T07:48:13.611+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:08.937+00:00"
   },
   {
     "category": "Sports",
@@ -665,7 +451,7 @@
     "start_date": "2026-10-25T00:00:00Z",
     "title": "Tampa Bay vs Milwaukee (Game 2)",
     "type": "baseball_game",
-    "_collected_at_utc": "2026-10-20T07:48:13.611+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:08.937+00:00"
   },
   {
     "category": "Sports",
@@ -880,6 +666,221 @@
     "start_date": "2026-10-27T00:00:00Z",
     "title": "Milwaukee vs Tampa Bay (Game 3)",
     "type": "baseball_game",
-    "_collected_at_utc": "2026-10-20T07:48:13.611+00:00"
+    "_collected_at_utc": "2026-10-20T21:57:08.937+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_last_games": [
+        {
+          "date": "2026-10-16T00:00:00Z",
+          "opponent_points": 4,
+          "opponent_structured_id": "5ee3dc32-f192-4b80-ac4a-fd285f36dc1a",
+          "points": 6,
+          "structured_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
+          "winner": true
+        },
+        {
+          "date": "2026-10-15T00:00:00Z",
+          "opponent_points": 2,
+          "opponent_structured_id": "5ee3dc32-f192-4b80-ac4a-fd285f36dc1a",
+          "points": 6,
+          "structured_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
+          "winner": true
+        },
+        {
+          "date": "2026-10-12T21:00:00Z",
+          "opponent_points": 4,
+          "opponent_structured_id": "5ee3dc32-f192-4b80-ac4a-fd285f36dc1a",
+          "points": 7,
+          "structured_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
+          "winner": true
+        },
+        {
+          "date": "2026-10-12T00:00:00Z",
+          "opponent_points": 1,
+          "opponent_structured_id": "5ee3dc32-f192-4b80-ac4a-fd285f36dc1a",
+          "points": 2,
+          "structured_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
+          "winner": true
+        }
+      ],
+      "away_team_id": "087f0ae7-c231-4dcd-b7e5-f026c1769e40",
+      "f5_tie_id": "b8c3e2a1-7f4d-4e9b-a6d0-3c5f8e1b2a49",
+      "game_injuries": {
+        "087f0ae7-c231-4dcd-b7e5-f026c1769e40": [
+          {
+            "comment": "The Milwaukee Brewers transferred RHP Brandon Woodruff from the 15-day injured list to the 60-day injured list with right shoulder inflammation.",
+            "date_updated": "2026-07-12",
+            "description": "Shoulder",
+            "name": "Brandon Woodruff",
+            "start_date": "2026-07-04",
+            "status": "D60",
+            "structured_id": "6a85be9f-797a-4392-a988-a75ee6fc7700"
+          },
+          {
+            "comment": "The Milwaukee Brewers transferred LHP Brian Fitzpatrick to the 60-day injured list due to left elbow injury.",
+            "date_updated": "2026-06-09",
+            "description": "Elbow",
+            "name": "Brian Fitzpatrick",
+            "start_date": "2026-06-05",
+            "status": "D60",
+            "structured_id": "10994620-0739-49c7-a0dc-5de652e5adf9"
+          },
+          {
+            "comment": "The Milwaukee Brewers said on Thursday (Jun. 18) that Priester will undergo thoracic outlet compression surgery and is expected to be sidelined 8-to-10 months, per Curt Hogg of the Milwaukee Journal Sentinel.",
+            "date_updated": "2026-06-18",
+            "description": "Wrist",
+            "name": "Quinn Priester",
+            "start_date": "2026-03-22",
+            "status": "D60",
+            "structured_id": "5a2bc28a-63ec-4ffc-9f7f-6a30e30b05f2"
+          },
+          {
+            "comment": "The Milwaukee Brewers transferred LHP Angel Zerpa to the 60-day injured list with left forearm tightness.",
+            "date_updated": "2026-05-31",
+            "description": "Forearm",
+            "name": "Angel Zerpa",
+            "start_date": "2026-04-26",
+            "status": "D60",
+            "structured_id": "295dd437-7da4-421b-a2a8-c2b0c589a7b5"
+          },
+          {
+            "comment": "The Milwaukee Brewers placed Grant Anderson (RP) on the 15-day injured list with right biceps inflammation.",
+            "date_updated": "2026-09-07",
+            "description": "Biceps",
+            "name": "Grant Anderson",
+            "start_date": "2026-09-07",
+            "status": "D15",
+            "structured_id": "bd8fdb06-f105-445d-a324-cb0c7b6c3e5f"
+          }
+        ],
+        "942f3f85-869a-4f7a-8e5a-336365c5294b": [
+          {
+            "comment": "The Tampa Bay Rays transferred RHP Edwin Uceta to the 60-day injured list with right shoulder impingement.",
+            "date_updated": "2026-04-24",
+            "description": "Shoulder",
+            "name": "Edwin Uceta",
+            "start_date": "2026-03-25",
+            "status": "D60",
+            "structured_id": "440f107e-aeff-4863-b46a-628cae2a6ea4"
+          },
+          {
+            "comment": "The Tampa Bay Rays placed SP Shane McClanahan on the 15-day injured list with left forearm tightness.",
+            "date_updated": "2026-09-04",
+            "description": "Forearm",
+            "name": "Shane McClanahan",
+            "start_date": "2026-09-04",
+            "status": "D15",
+            "structured_id": "c9568a98-d319-49bb-9fe3-612a027f0b0d"
+          },
+          {
+            "comment": "The Tampa Bay Rays placed LF Jacob Melton on the 60-day injured list with a right hamstring strain.",
+            "date_updated": "2026-09-15",
+            "description": "Hamstring",
+            "name": "Jacob Melton",
+            "start_date": "2026-09-15",
+            "status": "D60",
+            "structured_id": "1cc0e833-fa93-4f94-b1b2-ec638afc06b0"
+          },
+          {
+            "comment": "The Tampa Bay Rays transferred RHP Jonathan Heasley from the 15-day injured list to the 60-day injured list due to a right elbow stress reaction.",
+            "date_updated": "2026-06-08",
+            "description": "Elbow",
+            "name": "Jonathan Heasley",
+            "start_date": "2026-05-29",
+            "status": "D60",
+            "structured_id": "c0226b25-f5f0-4fde-9edc-16cdd2b929af"
+          },
+          {
+            "comment": "Pepiot will miss the remainder of the season after undergoing hip surgery according to Marc Topkin of the Tampa Bay Times.",
+            "date_updated": "2026-05-01",
+            "description": "Hip",
+            "name": "Ryan Pepiot",
+            "start_date": "2026-03-24",
+            "status": "D60",
+            "structured_id": "f3f79cef-0c64-42d1-af8b-99189cfe2034"
+          },
+          {
+            "comment": "The Tampa Bay Rays transferred OF Gavin Lux from the 10-day injured list to the 60-day injured list with a right shoulder impingement.",
+            "date_updated": "2026-05-27",
+            "description": "Shoulder",
+            "name": "Gavin Lux",
+            "start_date": "2026-03-23",
+            "status": "D60",
+            "structured_id": "647c3194-ab4c-44ea-85fa-b2a64efafd01"
+          }
+        ]
+      },
+      "home_last_games": [
+        {
+          "date": "2026-10-20T00:08:00Z",
+          "opponent_points": 3,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 7,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": true
+        },
+        {
+          "date": "2026-10-18T21:08:00Z",
+          "opponent_points": 1,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 3,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": true
+        },
+        {
+          "date": "2026-10-18T00:08:00Z",
+          "opponent_points": 3,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 7,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": true
+        },
+        {
+          "date": "2026-10-15T17:00:00Z",
+          "opponent_points": 3,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 2,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": false
+        },
+        {
+          "date": "2026-10-14T00:00:00Z",
+          "opponent_points": 1,
+          "opponent_structured_id": "60097777-bab8-4215-8d29-b92466b5bb65",
+          "points": 3,
+          "structured_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+          "winner": true
+        }
+      ],
+      "home_team_id": "942f3f85-869a-4f7a-8e5a-336365c5294b",
+      "league": "MLB",
+      "main_game_event_ticker": "KXMLBGAME-26OCT272000MILTB",
+      "playoff_game_number": 4,
+      "status": "scheduled"
+    },
+    "id": "ad2f2b6b-27c6-511a-a732-24c90a02bd39",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin!",
+    "primary_event_tickers": [
+      "KXMLBGAME-26OCT272000MILTB",
+      "KXMLBEXTRAS-26OCT272000MILTB"
+    ],
+    "related_event_tickers": [
+      "KXMLBGAME-26OCT272000MILTB",
+      "KXMLBRFI-26OCT272000MILTB",
+      "KXMLBEXTRAS-26OCT272000MILTB"
+    ],
+    "source_id": "695fa80b-f028-40e9-81ed-665d9946ee1d",
+    "source_ids": {
+      "source_1_id": "3015212",
+      "source_2_id": "202610287BABC632",
+      "source_3_id": "695fa80b-f028-40e9-81ed-665d9946ee1d"
+    },
+    "start_date": "2026-10-28T00:00:00Z",
+    "title": "Milwaukee vs Tampa Bay (Game 4)",
+    "type": "baseball_game",
+    "_collected_at_utc": "2026-10-20T21:57:08.937+00:00"
   }
 ]
