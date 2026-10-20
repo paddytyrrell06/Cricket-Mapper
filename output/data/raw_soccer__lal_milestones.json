@@ -2,396 +2,6 @@
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "70be5c42-f4eb-4f08-b9a3-fc2339d1b23d",
-      "coverage": {},
-      "home_team_id": "55086684-5ead-4dea-ace6-4a82500856f2",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT23ALAMCF",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "d6e2672d-d5e6-53aa-9cf4-de65d508e3d7",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT23ALAMCF",
-      "KXLALIGASPREAD-26OCT23ALAMCF",
-      "KXLALIGATOTAL-26OCT23ALAMCF",
-      "KXLALIGABTTS-26OCT23ALAMCF"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT23ALAMCF",
-      "KXLALIGASPREAD-26OCT23ALAMCF",
-      "KXLALIGATOTAL-26OCT23ALAMCF",
-      "KXLALIGABTTS-26OCT23ALAMCF"
-    ],
-    "source_ids": {
-      "source_2_id": "202610237AFD40C0"
-    },
-    "start_date": "2026-10-23T19:00:00Z",
-    "title": "Alaves vs Malaga",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "0353a2d0-c82f-45b1-a8e5-c0299bdb9922",
-      "coverage": {},
-      "home_team_id": "f52bf332-d290-4b44-9a13-4217f88f7c00",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT24RVCELC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "e78445b5-6274-57cd-b5c1-471bb83f8c08",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT24RVCELC",
-      "KXLALIGASPREAD-26OCT24RVCELC",
-      "KXLALIGATOTAL-26OCT24RVCELC",
-      "KXLALIGABTTS-26OCT24RVCELC"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT24RVCELC",
-      "KXLALIGASPREAD-26OCT24RVCELC",
-      "KXLALIGATOTAL-26OCT24RVCELC",
-      "KXLALIGABTTS-26OCT24RVCELC"
-    ],
-    "source_ids": {
-      "source_2_id": "20261024C86C54F4"
-    },
-    "start_date": "2026-10-24T12:00:00Z",
-    "title": "Vallecano vs Elche",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "89015507-cd78-404d-a89c-edc2bc270e29",
-      "coverage": {},
-      "home_team_id": "2f51845c-cdac-431c-9f0f-1ee7c8878331",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT24ATMDEP",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "d4fde85d-67a7-5b83-8815-430415c32775",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT24ATMDEP",
-      "KXLALIGASPREAD-26OCT24ATMDEP",
-      "KXLALIGATOTAL-26OCT24ATMDEP",
-      "KXLALIGABTTS-26OCT24ATMDEP"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT24ATMDEP",
-      "KXLALIGASPREAD-26OCT24ATMDEP",
-      "KXLALIGATOTAL-26OCT24ATMDEP",
-      "KXLALIGABTTS-26OCT24ATMDEP"
-    ],
-    "source_ids": {
-      "source_2_id": "202610245FB1834A"
-    },
-    "start_date": "2026-10-24T19:00:00Z",
-    "title": "Atletico vs Deportivo De La Coruna",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "55086684-5ead-4dea-ace6-4a82500856f2",
-      "coverage": {},
-      "home_team_id": "b8ae51bb-71ca-4ed3-9e9f-8904ee444d17",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT31BARALA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "56b7eaaa-8dfa-53e1-888b-ffea10d09e7b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT31BARALA"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT31BARALA"
-    ],
-    "source_ids": {
-      "source_2_id": "2026103196D70FD8"
-    },
-    "start_date": "2026-10-31T20:00:00Z",
-    "title": "Barcelona vs Alaves",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a3b795c3-bc80-427e-93a1-03f2883600a8",
-      "coverage": {},
-      "home_team_id": "4f47af29-e06e-4759-8f0d-1501be7a41c3",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT24SANESP",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "b771e8ee-4ddd-595f-a5c6-0f46fff5884b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT24SANESP",
-      "KXLALIGASPREAD-26OCT24SANESP",
-      "KXLALIGATOTAL-26OCT24SANESP",
-      "KXLALIGABTTS-26OCT24SANESP"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT24SANESP",
-      "KXLALIGASPREAD-26OCT24SANESP",
-      "KXLALIGATOTAL-26OCT24SANESP",
-      "KXLALIGABTTS-26OCT24SANESP"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102416243CBA"
-    },
-    "start_date": "2026-10-24T14:15:00Z",
-    "title": "Santander vs Espanyol",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "cc146246-6569-4093-89e7-205fd21d7d17",
-      "coverage": {},
-      "home_team_id": "baa76ca7-2ea3-407a-a699-cb6bc1a3835f",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT25RCCRBB",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f6c8f03f-c81b-5a8e-8c35-4eb59843e8c5",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT25RCCRBB",
-      "KXLALIGASPREAD-26OCT25RCCRBB",
-      "KXLALIGATOTAL-26OCT25RCCRBB",
-      "KXLALIGABTTS-26OCT25RCCRBB"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT25RCCRBB",
-      "KXLALIGASPREAD-26OCT25RCCRBB",
-      "KXLALIGATOTAL-26OCT25RCCRBB",
-      "KXLALIGABTTS-26OCT25RCCRBB"
-    ],
-    "source_ids": {
-      "source_2_id": "20261025C7E3F82B"
-    },
-    "start_date": "2026-10-25T15:15:00Z",
-    "title": "Celta Vigo vs Real Betis",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "baa76ca7-2ea3-407a-a699-cb6bc1a3835f",
-      "coverage": {},
-      "home_team_id": "f52bf332-d290-4b44-9a13-4217f88f7c00",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT31RVCRCC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f6713405-0373-5aa6-bbdf-139bbc9cbae5",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT31RVCRCC"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT31RVCRCC"
-    ],
-    "source_ids": {
-      "source_2_id": "202610311DFB48E0"
-    },
-    "start_date": "2026-10-31T15:15:00Z",
-    "title": "Vallecano vs Celta Vigo",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "e26ffd15-b6c7-440b-859c-0693ac1d0a5c",
-      "coverage": {},
-      "home_team_id": "d8edf5f1-fafb-4875-8587-d8b5f5829e57",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26NOV01GETSEV",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "8f2219ee-c47d-5cf0-8ec8-cddaa5ab1cdd",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26NOV01GETSEV"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26NOV01GETSEV"
-    ],
-    "source_ids": {
-      "source_2_id": "20261101AADE15BC"
-    },
-    "start_date": "2026-11-01T13:00:00Z",
-    "title": "Getafe vs Sevilla",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "1858f693-87a8-4102-86c0-aa65c04f56ad",
-      "coverage": {},
-      "home_team_id": "4f47af29-e06e-4759-8f0d-1501be7a41c3",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26NOV01SANRMA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "20a5b939-6689-5ca2-a70c-9b8df8d5b473",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26NOV01SANRMA"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26NOV01SANRMA"
-    ],
-    "source_ids": {
-      "source_2_id": "20261101026C33B7"
-    },
-    "start_date": "2026-11-01T15:15:00Z",
-    "title": "Santander vs Real Madrid",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "70be5c42-f4eb-4f08-b9a3-fc2339d1b23d",
-      "coverage": {},
-      "home_team_id": "cc146246-6569-4093-89e7-205fd21d7d17",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT31RBBMCF",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ad493156-9aec-5280-a65b-99772dcf38f8",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT31RBBMCF"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT31RBBMCF"
-    ],
-    "source_ids": {
-      "source_2_id": "202610311BDFCE7E"
-    },
-    "start_date": "2026-10-31T17:30:00Z",
-    "title": "Real Betis vs Malaga",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "e16880b0-2ac2-476a-8b82-6ef29655175c",
-      "coverage": {},
-      "home_team_id": "98d32524-388a-4862-96ea-6da9b8328d6c",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT24VCFVIL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "7cee812d-0f19-53a8-a662-cf2168889c25",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT24VCFVIL",
-      "KXLALIGASPREAD-26OCT24VCFVIL",
-      "KXLALIGATOTAL-26OCT24VCFVIL",
-      "KXLALIGABTTS-26OCT24VCFVIL"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT24VCFVIL",
-      "KXLALIGASPREAD-26OCT24VCFVIL",
-      "KXLALIGATOTAL-26OCT24VCFVIL",
-      "KXLALIGABTTS-26OCT24VCFVIL"
-    ],
-    "source_ids": {
-      "source_2_id": "20261024C18354C9"
-    },
-    "start_date": "2026-10-24T16:30:00Z",
-    "title": "Valencia vs Villarreal",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "d8edf5f1-fafb-4875-8587-d8b5f5829e57",
-      "coverage": {},
-      "home_team_id": "8a82e30a-849f-4499-84bc-4efe695d28f1",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT25ATHGET",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ff632a61-829d-54c2-bb27-cb8624f46664",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT25ATHGET",
-      "KXLALIGASPREAD-26OCT25ATHGET",
-      "KXLALIGATOTAL-26OCT25ATHGET",
-      "KXLALIGABTTS-26OCT25ATHGET"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT25ATHGET",
-      "KXLALIGASPREAD-26OCT25ATHGET",
-      "KXLALIGATOTAL-26OCT25ATHGET",
-      "KXLALIGABTTS-26OCT25ATHGET"
-    ],
-    "source_ids": {
-      "source_2_id": "202610252EA8791C"
-    },
-    "start_date": "2026-10-25T13:00:00Z",
-    "title": "Bilbao vs Getafe",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
       "away_team_id": "2c274499-d0e5-4b6c-83df-c1f0e424c899",
       "coverage": {},
       "home_team_id": "34675e44-3b3c-4368-bb4d-03acabb2082a",
@@ -422,129 +32,7 @@
     "start_date": "2026-10-25T17:30:00Z",
     "title": "Real Sociedad vs Levante",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "c1b98a36-8093-4915-98b4-c40ab0dbcaaa",
-      "coverage": {},
-      "home_team_id": "e26ffd15-b6c7-440b-859c-0693ac1d0a5c",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT26SEVOSA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "7aad32e4-a87c-56e5-8b07-05167844d919",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT26SEVOSA",
-      "KXLALIGASPREAD-26OCT26SEVOSA",
-      "KXLALIGATOTAL-26OCT26SEVOSA",
-      "KXLALIGABTTS-26OCT26SEVOSA"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT26SEVOSA",
-      "KXLALIGASPREAD-26OCT26SEVOSA",
-      "KXLALIGATOTAL-26OCT26SEVOSA",
-      "KXLALIGABTTS-26OCT26SEVOSA"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102622303CDA"
-    },
-    "start_date": "2026-10-26T20:00:00Z",
-    "title": "Sevilla vs Osasuna",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a3b795c3-bc80-427e-93a1-03f2883600a8",
-      "coverage": {},
-      "home_team_id": "e16880b0-2ac2-476a-8b82-6ef29655175c",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26OCT30VILESP",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "0edd59d3-f012-5707-a7d8-85e660e9784b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26OCT30VILESP"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26OCT30VILESP"
-    ],
-    "source_ids": {
-      "source_2_id": "20261030764EDA87"
-    },
-    "start_date": "2026-10-30T20:00:00Z",
-    "title": "Villarreal vs Espanyol",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "34675e44-3b3c-4368-bb4d-03acabb2082a",
-      "coverage": {},
-      "home_team_id": "8a82e30a-849f-4499-84bc-4efe695d28f1",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26NOV01ATHRSO",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f4321728-8d8f-52e0-8bb5-984df08eb779",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26NOV01ATHRSO"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26NOV01ATHRSO"
-    ],
-    "source_ids": {
-      "source_2_id": "202611010C33BB90"
-    },
-    "start_date": "2026-11-01T20:00:00Z",
-    "title": "Bilbao vs Real Sociedad",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "c1b98a36-8093-4915-98b4-c40ab0dbcaaa",
-      "coverage": {},
-      "home_team_id": "89015507-cd78-404d-a89c-edc2bc270e29",
-      "is_ko": false,
-      "league": "La Liga",
-      "main_game_event_ticker": "KXLALIGAGAME-26NOV02DEPOSA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "aa5be2ae-6ff7-5aa3-9e80-77af2f18b968",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLALIGAGAME-26NOV02DEPOSA"
-    ],
-    "related_event_tickers": [
-      "KXLALIGAGAME-26NOV02DEPOSA"
-    ],
-    "source_ids": {
-      "source_2_id": "202611023EB0E802"
-    },
-    "start_date": "2026-11-02T20:00:00Z",
-    "title": "Deportivo De La Coruna vs Osasuna",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -579,7 +67,228 @@
     "start_date": "2026-10-25T20:00:00Z",
     "title": "Barcelona vs Real Madrid",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c1b98a36-8093-4915-98b4-c40ab0dbcaaa",
+      "coverage": {},
+      "home_team_id": "e26ffd15-b6c7-440b-859c-0693ac1d0a5c",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT26SEVOSA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7aad32e4-a87c-56e5-8b07-05167844d919",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT26SEVOSA",
+      "KXLALIGASPREAD-26OCT26SEVOSA",
+      "KXLALIGATOTAL-26OCT26SEVOSA",
+      "KXLALIGABTTS-26OCT26SEVOSA"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT26SEVOSA",
+      "KXLALIGASPREAD-26OCT26SEVOSA",
+      "KXLALIGATOTAL-26OCT26SEVOSA",
+      "KXLALIGABTTS-26OCT26SEVOSA"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102622303CDA"
+    },
+    "start_date": "2026-10-26T20:00:00Z",
+    "title": "Sevilla vs Osasuna",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "baa76ca7-2ea3-407a-a699-cb6bc1a3835f",
+      "coverage": {},
+      "home_team_id": "f52bf332-d290-4b44-9a13-4217f88f7c00",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT31RVCRCC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f6713405-0373-5aa6-bbdf-139bbc9cbae5",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT31RVCRCC"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT31RVCRCC"
+    ],
+    "source_ids": {
+      "source_2_id": "202610311DFB48E0"
+    },
+    "start_date": "2026-10-31T15:15:00Z",
+    "title": "Vallecano vs Celta Vigo",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "70be5c42-f4eb-4f08-b9a3-fc2339d1b23d",
+      "coverage": {},
+      "home_team_id": "cc146246-6569-4093-89e7-205fd21d7d17",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT31RBBMCF",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ad493156-9aec-5280-a65b-99772dcf38f8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT31RBBMCF"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT31RBBMCF"
+    ],
+    "source_ids": {
+      "source_2_id": "202610311BDFCE7E"
+    },
+    "start_date": "2026-10-31T17:30:00Z",
+    "title": "Real Betis vs Malaga",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "e26ffd15-b6c7-440b-859c-0693ac1d0a5c",
+      "coverage": {},
+      "home_team_id": "d8edf5f1-fafb-4875-8587-d8b5f5829e57",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26NOV01GETSEV",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "8f2219ee-c47d-5cf0-8ec8-cddaa5ab1cdd",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26NOV01GETSEV"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26NOV01GETSEV"
+    ],
+    "source_ids": {
+      "source_2_id": "20261101AADE15BC"
+    },
+    "start_date": "2026-11-01T13:00:00Z",
+    "title": "Getafe vs Sevilla",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "70be5c42-f4eb-4f08-b9a3-fc2339d1b23d",
+      "coverage": {},
+      "home_team_id": "55086684-5ead-4dea-ace6-4a82500856f2",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT23ALAMCF",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "d6e2672d-d5e6-53aa-9cf4-de65d508e3d7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT23ALAMCF",
+      "KXLALIGASPREAD-26OCT23ALAMCF",
+      "KXLALIGATOTAL-26OCT23ALAMCF",
+      "KXLALIGABTTS-26OCT23ALAMCF"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT23ALAMCF",
+      "KXLALIGASPREAD-26OCT23ALAMCF",
+      "KXLALIGATOTAL-26OCT23ALAMCF",
+      "KXLALIGABTTS-26OCT23ALAMCF"
+    ],
+    "source_ids": {
+      "source_2_id": "202610237AFD40C0"
+    },
+    "start_date": "2026-10-23T19:00:00Z",
+    "title": "Alaves vs Malaga",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a3b795c3-bc80-427e-93a1-03f2883600a8",
+      "coverage": {},
+      "home_team_id": "4f47af29-e06e-4759-8f0d-1501be7a41c3",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT24SANESP",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "b771e8ee-4ddd-595f-a5c6-0f46fff5884b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT24SANESP",
+      "KXLALIGASPREAD-26OCT24SANESP",
+      "KXLALIGATOTAL-26OCT24SANESP",
+      "KXLALIGABTTS-26OCT24SANESP"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT24SANESP",
+      "KXLALIGASPREAD-26OCT24SANESP",
+      "KXLALIGATOTAL-26OCT24SANESP",
+      "KXLALIGABTTS-26OCT24SANESP"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102416243CBA"
+    },
+    "start_date": "2026-10-24T14:15:00Z",
+    "title": "Santander vs Espanyol",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a3b795c3-bc80-427e-93a1-03f2883600a8",
+      "coverage": {},
+      "home_team_id": "e16880b0-2ac2-476a-8b82-6ef29655175c",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT30VILESP",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "0edd59d3-f012-5707-a7d8-85e660e9784b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT30VILESP"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT30VILESP"
+    ],
+    "source_ids": {
+      "source_2_id": "20261030764EDA87"
+    },
+    "start_date": "2026-10-30T20:00:00Z",
+    "title": "Villarreal vs Espanyol",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -608,7 +317,129 @@
     "start_date": "2026-10-31T13:00:00Z",
     "title": "Levante vs Atletico",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "55086684-5ead-4dea-ace6-4a82500856f2",
+      "coverage": {},
+      "home_team_id": "b8ae51bb-71ca-4ed3-9e9f-8904ee444d17",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT31BARALA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "56b7eaaa-8dfa-53e1-888b-ffea10d09e7b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT31BARALA"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT31BARALA"
+    ],
+    "source_ids": {
+      "source_2_id": "2026103196D70FD8"
+    },
+    "start_date": "2026-10-31T20:00:00Z",
+    "title": "Barcelona vs Alaves",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "34675e44-3b3c-4368-bb4d-03acabb2082a",
+      "coverage": {},
+      "home_team_id": "8a82e30a-849f-4499-84bc-4efe695d28f1",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26NOV01ATHRSO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f4321728-8d8f-52e0-8bb5-984df08eb779",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26NOV01ATHRSO"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26NOV01ATHRSO"
+    ],
+    "source_ids": {
+      "source_2_id": "202611010C33BB90"
+    },
+    "start_date": "2026-11-01T20:00:00Z",
+    "title": "Bilbao vs Real Sociedad",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c1b98a36-8093-4915-98b4-c40ab0dbcaaa",
+      "coverage": {},
+      "home_team_id": "89015507-cd78-404d-a89c-edc2bc270e29",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26NOV02DEPOSA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "aa5be2ae-6ff7-5aa3-9e80-77af2f18b968",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26NOV02DEPOSA"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26NOV02DEPOSA"
+    ],
+    "source_ids": {
+      "source_2_id": "202611023EB0E802"
+    },
+    "start_date": "2026-11-02T20:00:00Z",
+    "title": "Deportivo De La Coruna vs Osasuna",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "0353a2d0-c82f-45b1-a8e5-c0299bdb9922",
+      "coverage": {},
+      "home_team_id": "f52bf332-d290-4b44-9a13-4217f88f7c00",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT24RVCELC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "e78445b5-6274-57cd-b5c1-471bb83f8c08",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT24RVCELC",
+      "KXLALIGASPREAD-26OCT24RVCELC",
+      "KXLALIGATOTAL-26OCT24RVCELC",
+      "KXLALIGABTTS-26OCT24RVCELC"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT24RVCELC",
+      "KXLALIGASPREAD-26OCT24RVCELC",
+      "KXLALIGATOTAL-26OCT24RVCELC",
+      "KXLALIGABTTS-26OCT24RVCELC"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024C86C54F4"
+    },
+    "start_date": "2026-10-24T12:00:00Z",
+    "title": "Vallecano vs Elche",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -637,6 +468,175 @@
     "start_date": "2026-11-01T17:30:00Z",
     "title": "Elche vs Valencia",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "e16880b0-2ac2-476a-8b82-6ef29655175c",
+      "coverage": {},
+      "home_team_id": "98d32524-388a-4862-96ea-6da9b8328d6c",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT24VCFVIL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7cee812d-0f19-53a8-a662-cf2168889c25",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT24VCFVIL",
+      "KXLALIGASPREAD-26OCT24VCFVIL",
+      "KXLALIGATOTAL-26OCT24VCFVIL",
+      "KXLALIGABTTS-26OCT24VCFVIL"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT24VCFVIL",
+      "KXLALIGASPREAD-26OCT24VCFVIL",
+      "KXLALIGATOTAL-26OCT24VCFVIL",
+      "KXLALIGABTTS-26OCT24VCFVIL"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024C18354C9"
+    },
+    "start_date": "2026-10-24T16:30:00Z",
+    "title": "Valencia vs Villarreal",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "d8edf5f1-fafb-4875-8587-d8b5f5829e57",
+      "coverage": {},
+      "home_team_id": "8a82e30a-849f-4499-84bc-4efe695d28f1",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT25ATHGET",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ff632a61-829d-54c2-bb27-cb8624f46664",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT25ATHGET",
+      "KXLALIGASPREAD-26OCT25ATHGET",
+      "KXLALIGATOTAL-26OCT25ATHGET",
+      "KXLALIGABTTS-26OCT25ATHGET"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT25ATHGET",
+      "KXLALIGASPREAD-26OCT25ATHGET",
+      "KXLALIGATOTAL-26OCT25ATHGET",
+      "KXLALIGABTTS-26OCT25ATHGET"
+    ],
+    "source_ids": {
+      "source_2_id": "202610252EA8791C"
+    },
+    "start_date": "2026-10-25T13:00:00Z",
+    "title": "Bilbao vs Getafe",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "1858f693-87a8-4102-86c0-aa65c04f56ad",
+      "coverage": {},
+      "home_team_id": "4f47af29-e06e-4759-8f0d-1501be7a41c3",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26NOV01SANRMA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "20a5b939-6689-5ca2-a70c-9b8df8d5b473",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26NOV01SANRMA"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26NOV01SANRMA"
+    ],
+    "source_ids": {
+      "source_2_id": "20261101026C33B7"
+    },
+    "start_date": "2026-11-01T15:15:00Z",
+    "title": "Santander vs Real Madrid",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "89015507-cd78-404d-a89c-edc2bc270e29",
+      "coverage": {},
+      "home_team_id": "2f51845c-cdac-431c-9f0f-1ee7c8878331",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT24ATMDEP",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "d4fde85d-67a7-5b83-8815-430415c32775",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT24ATMDEP",
+      "KXLALIGASPREAD-26OCT24ATMDEP",
+      "KXLALIGATOTAL-26OCT24ATMDEP",
+      "KXLALIGABTTS-26OCT24ATMDEP"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT24ATMDEP",
+      "KXLALIGASPREAD-26OCT24ATMDEP",
+      "KXLALIGATOTAL-26OCT24ATMDEP",
+      "KXLALIGABTTS-26OCT24ATMDEP"
+    ],
+    "source_ids": {
+      "source_2_id": "202610245FB1834A"
+    },
+    "start_date": "2026-10-24T19:00:00Z",
+    "title": "Atletico vs Deportivo De La Coruna",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "cc146246-6569-4093-89e7-205fd21d7d17",
+      "coverage": {},
+      "home_team_id": "baa76ca7-2ea3-407a-a699-cb6bc1a3835f",
+      "is_ko": false,
+      "league": "La Liga",
+      "main_game_event_ticker": "KXLALIGAGAME-26OCT25RCCRBB",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f6c8f03f-c81b-5a8e-8c35-4eb59843e8c5",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLALIGAGAME-26OCT25RCCRBB",
+      "KXLALIGASPREAD-26OCT25RCCRBB",
+      "KXLALIGATOTAL-26OCT25RCCRBB",
+      "KXLALIGABTTS-26OCT25RCCRBB"
+    ],
+    "related_event_tickers": [
+      "KXLALIGAGAME-26OCT25RCCRBB",
+      "KXLALIGASPREAD-26OCT25RCCRBB",
+      "KXLALIGATOTAL-26OCT25RCCRBB",
+      "KXLALIGABTTS-26OCT25RCCRBB"
+    ],
+    "source_ids": {
+      "source_2_id": "20261025C7E3F82B"
+    },
+    "start_date": "2026-10-25T15:15:00Z",
+    "title": "Celta Vigo vs Real Betis",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   }
 ]

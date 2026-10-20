@@ -20,6 +20,8 @@ Quote observation time is recorded independently of the exchange book timestamp 
 
 For a REST-only refresh during development, run `python3 run.py --snapshot-dir=output/data --refresh-quotes --no-open`. It reloads and rechecks saved discovery, then fetches matched quotes concurrently from both venues. Discovery keeps its original timestamp; new games/rule changes still require a periodic full scan. Plain `--snapshot-dir` remains offline. This command rebuilds an audited HTML snapshot and archives evidence, so it is not the future per-tick service loop.
 
+The open HTML checks its sibling `CricketMatchingReport.version.js` every two seconds. It reloads only when an audited publication changes that version, preserving view settings in browser session storage. A small script request works with a directly opened `file://` report; it avoids browser restrictions on fetching local JSON. Failed builds do not publish a new marker. `--no-open` controls whether the Python process requests a browser window; an already open updated report continues following publications. The displayed quote-check time is separate from discovery time. Continuous quote ingestion still belongs to the future feed service.
+
 ## Incremental quote path
 
 The report build writes three additional files under `output/data`:

@@ -135,7 +135,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5523020",
@@ -273,7 +273,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5523078",
@@ -411,7 +411,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5523120",
@@ -550,7 +550,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5523162",
@@ -689,7 +689,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5523204",
@@ -827,7 +827,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5523246",
@@ -959,7 +959,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5523288",
@@ -1097,7 +1097,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5523330",
@@ -1118,7 +1118,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-10T22:00:38.409215Z",
-    "updatedAt": "2026-10-20T07:36:47.048289Z",
+    "updatedAt": "2026-10-20T07:44:46.80797Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -1236,7 +1236,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5523376",
@@ -1245,7 +1245,7 @@
     "slug": "ufc-col12-asacho-2026-10-24",
     "resolutionSource": "https://www.ufc.com/events",
     "endDate": "2026-10-25T03:59:59.999Z",
-    "liquidity": "16859.3711",
+    "liquidity": "16770.7311",
     "startDate": "2026-10-10T22:01:33Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ufc-logo-37bbbd28e6.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ufc-logo-37bbbd28e6.png",
@@ -1257,7 +1257,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-10T22:00:42.97919Z",
-    "updatedAt": "2026-10-20T07:36:47.048289Z",
+    "updatedAt": "2026-10-20T07:44:46.80797Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -1271,7 +1271,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 283.211246,
-    "liquidityNum": 16859.3711,
+    "liquidityNum": 16770.7311,
     "endDateIso": "2026-10-25",
     "startDateIso": "2026-10-10",
     "hasReviewedDates": true,
@@ -1294,7 +1294,7 @@
     "volume1moClob": 283.211246,
     "volume1yrClob": 283.211246,
     "volumeClob": 283.211246,
-    "liquidityClob": 16859.3711,
+    "liquidityClob": 16770.7311,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1373,7 +1373,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5763098",
@@ -1394,7 +1394,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-15T22:00:04.175356Z",
-    "updatedAt": "2026-10-20T07:36:47.048289Z",
+    "updatedAt": "2026-10-20T07:44:46.80797Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -1511,7 +1511,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839588",
@@ -1520,7 +1520,7 @@
     "slug": "ufc-ren-tom14-2026-10-31",
     "resolutionSource": "https://www.ufc.com/events",
     "endDate": "2026-11-01T03:59:59.999Z",
-    "liquidity": "772.5048",
+    "liquidity": "771.7448",
     "startDate": "2026-10-17T22:00:15Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ufc-logo-37bbbd28e6.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ufc-logo-37bbbd28e6.png",
@@ -1532,7 +1532,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-17T22:00:02.491828Z",
-    "updatedAt": "2026-10-20T07:38:46.300982Z",
+    "updatedAt": "2026-10-20T07:42:47.794901Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -1546,7 +1546,7 @@
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
     "volumeNum": 3.1142339999999997,
-    "liquidityNum": 772.5048,
+    "liquidityNum": 771.7448,
     "endDateIso": "2026-11-01",
     "startDateIso": "2026-10-17",
     "hasReviewedDates": true,
@@ -1561,7 +1561,7 @@
     "umaBond": "250",
     "umaReward": "0.8",
     "volumeClob": 3.1142339999999997,
-    "liquidityClob": 772.5048,
+    "liquidityClob": 771.7448,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -1641,7 +1641,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839621",
@@ -1767,7 +1767,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839641",
@@ -1904,7 +1904,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839660",
@@ -2030,7 +2030,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839679",
@@ -2168,7 +2168,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839698",
@@ -2294,7 +2294,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839717",
@@ -2303,7 +2303,7 @@
     "slug": "ufc-tbergg-rod10-2026-10-31",
     "resolutionSource": "https://www.ufc.com/events",
     "endDate": "2026-11-01T03:59:59.999Z",
-    "liquidity": "1145.4003",
+    "liquidity": "1151.0229",
     "startDate": "2026-10-17T22:00:36Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ufc-logo-37bbbd28e6.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ufc-logo-37bbbd28e6.png",
@@ -2314,7 +2314,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-17T22:00:27.174685Z",
-    "updatedAt": "2026-10-20T07:38:46.300982Z",
+    "updatedAt": "2026-10-20T07:42:47.794901Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -2327,7 +2327,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 1145.4003,
+    "liquidityNum": 1151.0229,
     "endDateIso": "2026-11-01",
     "startDateIso": "2026-10-17",
     "hasReviewedDates": true,
@@ -2341,7 +2341,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 1145.4003,
+    "liquidityClob": 1151.0229,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -2420,7 +2420,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839736",
@@ -2545,7 +2545,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839755",
@@ -2668,7 +2668,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839774",
@@ -2793,7 +2793,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5839793",
@@ -2802,7 +2802,7 @@
     "slug": "ufc-tai2-lucsza-2026-10-31",
     "resolutionSource": "https://www.ufc.com/events",
     "endDate": "2026-11-01T03:59:59.999Z",
-    "liquidity": "1207.7723",
+    "liquidity": "1209.0423",
     "startDate": "2026-10-17T22:00:53Z",
     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ufc-logo-37bbbd28e6.png",
     "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ufc-logo-37bbbd28e6.png",
@@ -2813,7 +2813,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-17T22:00:41.721432Z",
-    "updatedAt": "2026-10-20T07:36:47.048289Z",
+    "updatedAt": "2026-10-20T07:44:46.80797Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -2826,7 +2826,7 @@
     "enableOrderBook": true,
     "orderPriceMinTickSize": 0.01,
     "orderMinSize": 5,
-    "liquidityNum": 1207.7723,
+    "liquidityNum": 1209.0423,
     "endDateIso": "2026-11-01",
     "startDateIso": "2026-10-17",
     "hasReviewedDates": true,
@@ -2840,7 +2840,7 @@
     "comboStatus": "enabled",
     "umaBond": "250",
     "umaReward": "0.8",
-    "liquidityClob": 1207.7723,
+    "liquidityClob": 1209.0423,
     "makerBaseFee": 1000,
     "takerBaseFee": 1000,
     "customLiveness": 900,
@@ -2917,7 +2917,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5940725",
@@ -3042,7 +3042,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5940749",
@@ -3063,7 +3063,7 @@
     "closed": false,
     "marketMakerAddress": "",
     "createdAt": "2026-10-19T22:00:09.354491Z",
-    "updatedAt": "2026-10-20T07:34:46.765032Z",
+    "updatedAt": "2026-10-20T07:44:46.80797Z",
     "new": false,
     "featured": false,
     "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
@@ -3179,7 +3179,7 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "id": "5940770",
@@ -3304,6 +3304,6 @@
     ],
     "_native_league": "ufc",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   }
 ]

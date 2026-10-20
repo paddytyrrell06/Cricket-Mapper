@@ -99,7 +99,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -201,7 +201,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -216,15 +216,15 @@
     "expected_expiration_time": "2026-10-24T19:00:00Z",
     "expiration_time": "2026-10-26T14:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.1700",
+    "last_price_dollars": "0.1800",
     "latest_expiration_time": "2026-10-26T14:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8400",
-    "no_bid_dollars": "0.8300",
+    "no_ask_dollars": "0.8300",
+    "no_bid_dollars": "0.8200",
     "no_sub_title": "Colby Thicknesse",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:00:00Z",
-    "open_interest_fp": "9762.10",
+    "open_interest_fp": "9817.19",
     "open_time": "2026-10-14T20:45:00Z",
     "previous_price_dollars": "0.1900",
     "previous_yes_ask_dollars": "0.1900",
@@ -248,11 +248,11 @@
     "title": "Colby Thicknesse wins",
     "updated_time": "2026-10-19T16:01:05.534367Z",
     "volume_24h_fp": "5690.91",
-    "volume_fp": "13353.79",
-    "yes_ask_dollars": "0.1700",
-    "yes_ask_size_fp": "46.91",
-    "yes_bid_dollars": "0.1600",
-    "yes_bid_size_fp": "7512.05",
+    "volume_fp": "13408.89",
+    "yes_ask_dollars": "0.1800",
+    "yes_ask_size_fp": "1828.47",
+    "yes_bid_dollars": "0.1700",
+    "yes_bid_size_fp": "180.20",
     "yes_sub_title": "Colby Thicknesse",
     "_event_title": "333: Colby Thicknesse vs Asaf Chopurov",
     "_event_ticker": "KXUFCFIGHT-26OCT24THICHO",
@@ -303,7 +303,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -354,7 +354,7 @@
     "yes_ask_dollars": "0.8300",
     "yes_ask_size_fp": "1608.00",
     "yes_bid_dollars": "0.8100",
-    "yes_bid_size_fp": "3170.92",
+    "yes_bid_size_fp": "3542.10",
     "yes_sub_title": "Asaf Chopurov",
     "_event_title": "333: Colby Thicknesse vs Asaf Chopurov",
     "_event_ticker": "KXUFCFIGHT-26OCT24THICHO",
@@ -405,7 +405,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -507,7 +507,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -609,7 +609,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -632,7 +632,7 @@
     "no_sub_title": "Abubakar Vagaev",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:20:00Z",
-    "open_interest_fp": "6011.14",
+    "open_interest_fp": "6058.20",
     "open_time": "2026-10-15T04:45:00Z",
     "previous_price_dollars": "0.6300",
     "previous_yes_ask_dollars": "0.6300",
@@ -656,11 +656,11 @@
     "title": "Abubakar Vagaev wins",
     "updated_time": "2026-10-19T16:01:06.26555Z",
     "volume_24h_fp": "4253.91",
-    "volume_fp": "7300.94",
+    "volume_fp": "7350.94",
     "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "4391.68",
+    "yes_ask_size_fp": "4344.68",
     "yes_bid_dollars": "0.5900",
-    "yes_bid_size_fp": "1223.58",
+    "yes_bid_size_fp": "1271.17",
     "yes_sub_title": "Abubakar Vagaev",
     "_event_title": "333: Abubakar Vagaev vs Jacob Malkoun",
     "_event_ticker": "KXUFCFIGHT-26OCT24VAGMAL",
@@ -711,7 +711,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -760,7 +760,7 @@
     "volume_24h_fp": "5075.06",
     "volume_fp": "24009.94",
     "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "5112.00",
+    "yes_ask_size_fp": "5120.00",
     "yes_bid_dollars": "0.4000",
     "yes_bid_size_fp": "2518.48",
     "yes_sub_title": "Jacob Malkoun",
@@ -813,7 +813,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -862,9 +862,9 @@
     "volume_24h_fp": "3966.70",
     "volume_fp": "3966.70",
     "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "1142.00",
+    "yes_ask_size_fp": "1141.00",
     "yes_bid_dollars": "0.4600",
-    "yes_bid_size_fp": "100.00",
+    "yes_bid_size_fp": "99.00",
     "yes_sub_title": "Bolaji Oki",
     "_event_title": "333: Bolaji Oki vs Daniel Gustavo Santos",
     "_event_ticker": "KXUFCFIGHT-26OCT24OKISAN",
@@ -915,7 +915,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1017,7 +1017,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1119,7 +1119,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1168,9 +1168,9 @@
     "volume_24h_fp": "1266.36",
     "volume_fp": "3447.16",
     "yes_ask_dollars": "0.4800",
-    "yes_ask_size_fp": "1715.35",
+    "yes_ask_size_fp": "1694.35",
     "yes_bid_dollars": "0.4700",
-    "yes_bid_size_fp": "22.07",
+    "yes_bid_size_fp": "19.64",
     "yes_sub_title": "Losene Keita",
     "_event_title": "333: Aaron Pico vs Losene Keita",
     "_event_ticker": "KXUFCFIGHT-26OCT24PICKEI",
@@ -1221,7 +1221,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1323,7 +1323,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1425,7 +1425,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1527,7 +1527,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1629,7 +1629,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1652,7 +1652,7 @@
     "no_sub_title": "Nikita Krylov",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T22:00:00Z",
-    "open_interest_fp": "8742.39",
+    "open_interest_fp": "8752.39",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.2000",
     "previous_yes_ask_dollars": "0.2000",
@@ -1676,9 +1676,9 @@
     "title": "Nikita Krylov wins",
     "updated_time": "2026-10-15T23:30:40.211999Z",
     "volume_24h_fp": "2965.14",
-    "volume_fp": "9694.48",
+    "volume_fp": "9704.48",
     "yes_ask_dollars": "0.1800",
-    "yes_ask_size_fp": "807.81",
+    "yes_ask_size_fp": "797.81",
     "yes_bid_dollars": "0.1700",
     "yes_bid_size_fp": "13000.76",
     "yes_sub_title": "Nikita Krylov",
@@ -1731,7 +1731,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1833,7 +1833,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1884,7 +1884,7 @@
     "yes_ask_dollars": "0.6700",
     "yes_ask_size_fp": "396.42",
     "yes_bid_dollars": "0.6600",
-    "yes_bid_size_fp": "83.00",
+    "yes_bid_size_fp": "89.00",
     "yes_sub_title": "Azamat Murzakanov",
     "_event_title": "333: Azamat Murzakanov vs Dominick Reyes",
     "_event_ticker": "KXUFCFIGHT-26OCT24MURREY",
@@ -1935,7 +1935,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -1958,7 +1958,7 @@
     "no_sub_title": "Dominick Reyes",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T22:20:00Z",
-    "open_interest_fp": "4892.65",
+    "open_interest_fp": "4933.64",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.3600",
     "previous_yes_ask_dollars": "0.3600",
@@ -1982,9 +1982,9 @@
     "title": "Dominick Reyes wins",
     "updated_time": "2026-10-15T23:30:41.537406Z",
     "volume_24h_fp": "855.05",
-    "volume_fp": "5432.41",
+    "volume_fp": "5473.40",
     "yes_ask_dollars": "0.3500",
-    "yes_ask_size_fp": "25705.05",
+    "yes_ask_size_fp": "25664.06",
     "yes_bid_dollars": "0.3400",
     "yes_bid_size_fp": "58.45",
     "yes_sub_title": "Dominick Reyes",
@@ -2037,7 +2037,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -2139,7 +2139,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -2241,7 +2241,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -2287,12 +2287,12 @@
     "ticker": "KXUFCFIGHT-26OCT24KAVTEM-KAV",
     "title": "Loneer Kavanagh wins",
     "updated_time": "2026-10-15T23:30:43.952528Z",
-    "volume_24h_fp": "1603.32",
+    "volume_24h_fp": "1618.77",
     "volume_fp": "13172.61",
     "yes_ask_dollars": "0.5000",
     "yes_ask_size_fp": "10378.86",
     "yes_bid_dollars": "0.4900",
-    "yes_bid_size_fp": "127.02",
+    "yes_bid_size_fp": "149.95",
     "yes_sub_title": "Loneer Kavanagh",
     "_event_title": "333: Loneer Kavanagh vs Ramazonbek Temirov",
     "_event_ticker": "KXUFCFIGHT-26OCT24KAVTEM",
@@ -2343,7 +2343,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -2445,7 +2445,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -2491,7 +2491,7 @@
     "ticker": "KXUFCFIGHT-26OCT24YANDVA-YAN",
     "title": "Petr Yan wins",
     "updated_time": "2026-10-15T23:30:45.309384Z",
-    "volume_24h_fp": "7223.13",
+    "volume_24h_fp": "7230.13",
     "volume_fp": "20074.16",
     "yes_ask_dollars": "0.6100",
     "yes_ask_size_fp": "912664.63",
@@ -2547,7 +2547,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -2593,7 +2593,7 @@
     "ticker": "KXUFCFIGHT-26OCT24YANDVA-DVA",
     "title": "Merab Dvalishvili wins",
     "updated_time": "2026-10-15T23:30:45.309384Z",
-    "volume_24h_fp": "18177.32",
+    "volume_24h_fp": "18221.82",
     "volume_fp": "48774.97",
     "yes_ask_dollars": "0.4100",
     "yes_ask_size_fp": "536044.03",
@@ -2649,7 +2649,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -2672,7 +2672,7 @@
     "no_sub_title": "Alex Volkanovski",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T00:10:00Z",
-    "open_interest_fp": "150445.99",
+    "open_interest_fp": "150446.03",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.5100",
     "previous_yes_ask_dollars": "0.5100",
@@ -2695,10 +2695,10 @@
     "ticker": "KXUFCFIGHT-26OCT24VOLEVL-VOL",
     "title": "Alex Volkanovski wins",
     "updated_time": "2026-10-15T23:30:46.368279Z",
-    "volume_24h_fp": "47933.02",
-    "volume_fp": "165351.02",
+    "volume_24h_fp": "48017.90",
+    "volume_fp": "165351.06",
     "yes_ask_dollars": "0.5100",
-    "yes_ask_size_fp": "816546.88",
+    "yes_ask_size_fp": "816546.84",
     "yes_bid_dollars": "0.5000",
     "yes_bid_size_fp": "11436.27",
     "yes_sub_title": "Alex Volkanovski",
@@ -2751,7 +2751,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   },
   {
     "can_close_early": true,
@@ -2853,6 +2853,6 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-20T07:41:44.219+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:18.107+00:00"
   }
 ]

@@ -2,6 +2,9 @@ import tempfile
 import unittest
 import csv
 import json
+import re
+import shutil
+import subprocess
 from datetime import datetime, timezone, timedelta
 from copy import deepcopy
 from pathlib import Path
@@ -172,6 +175,136 @@ class ReportModeTests(unittest.TestCase):
         self.assertIn("Source collection time unavailable", document)
         self.assertNotIn("18 Oct 2026, 05:00:00 UTC", document)
         self.assertIn(f"new Date('{self.replay_time.isoformat()}')", document)
+
+    def test_refreshed_live_report_ages_quotes_without_relabeling_discovery(self):
+        document = self.render({"Run type": "LIVE", "Quotes checked at": self.replay_time.isoformat()})
+        self.assertIn("Quotes checked 19 Oct 2026, 08:00:00 UTC", document)
+        self.assertIn(f"new Date('{self.replay_time.isoformat()}')", document)
+        self.assertIn('title="Source discovery completed 18 Oct 2026, 05:00:00 UTC"', document)
+
+    def test_replay_ignores_live_quote_age_metadata(self):
+        document = self.render({"Run type": "REPLAY", "Quotes checked at": self.replay_time.isoformat()})
+        self.assertIn("Snapshot collected 18 Oct 2026, 05:00:00 UTC", document)
+        self.assertIn("const ageLabel='Replay generated'", document)
+        self.assertNotIn("Quotes checked", document)
+
+    def test_invalid_quote_check_time_preserves_collection_age(self):
+        for stamp in ("not-a-date", "2026-10-19T08:00:00"):
+            with self.subTest(stamp=stamp):
+                document = self.render({"Run type": "LIVE", "Quotes checked at": stamp})
+                self.assertIn("Live collection completed", document)
+                self.assertIn(f"new Date('{self.source_time.isoformat()}')", document)
+
+
+class ReportRefreshTests(unittest.TestCase):
+    source_time = datetime(2026, 10, 18, 5, 0, tzinfo=timezone.utc)
+
+    def render(self, path):
+        P.write_html(path, [], VENUES, dict.fromkeys(VENUES, True), self.source_time)
+        return path.read_text(encoding="utf-8"), path.with_suffix(".version.js").read_text(encoding="utf-8")
+
+    def test_every_publication_has_a_matching_fresh_version_even_with_same_timestamp(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "report.html"
+            previous = None
+            for _ in range(2):
+                document, marker = self.render(path)
+                version = re.search(r'const reportVersion="([0-9a-f]{32})"', document).group(1)
+                self.assertEqual(marker, f'window.marketTerminalReportVersion("{version}");\n')
+                self.assertNotEqual(version, previous)
+                previous = version
+            self.assertEqual({entry.name for entry in Path(directory).iterdir()}, {"report.html", "report.version.js"})
+
+    def test_failed_html_publication_leaves_previous_report_and_marker_intact(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "report.html"
+            previous_document, previous_marker = self.render(path)
+            replace = Path.replace
+
+            def fail_html_replace(source, destination):
+                if destination == path:
+                    raise OSError("Synthetic publication failure")
+                return replace(source, destination)
+
+            with patch.object(Path, "replace", fail_html_replace):
+                with self.assertRaisesRegex(OSError, "publication failure"):
+                    self.render(path)
+            self.assertEqual(path.read_text(encoding="utf-8"), previous_document)
+            self.assertEqual(path.with_suffix(".version.js").read_text(encoding="utf-8"), previous_marker)
+            self.assertEqual(len(list(Path(directory).iterdir())), 2)
+
+    def test_version_filename_cannot_inject_html_into_the_refresh_script(self):
+        with tempfile.TemporaryDirectory() as directory:
+            document, _ = self.render(Path(directory) / 'report<script>#?.html')
+            refresh = re.search(r'<script id="reportRefresh">(.*?)</script>', document, re.S).group(1)
+            self.assertIn(r'report\u003cscript>#?.version.js', refresh)
+            self.assertNotIn("<script>", refresh)
+            self.assertIn("encodeURIComponent(reportVersionFile)", refresh)
+
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required to exercise browser JavaScript")
+    def test_browser_refresh_preserves_view_and_recovers_from_publication_gap(self):
+        with tempfile.TemporaryDirectory() as directory:
+            document, marker = self.render(Path(directory) / 'report<svg>#?.html')
+        refresh = re.search(r'<script id="reportRefresh">(.*?)</script>', document, re.S).group(1)
+        harness = r'''
+const assert=require('node:assert/strict'),vm=require('node:vm');
+function browser(saved,storageBlocked=false){
+    const storage=new Map(),timers=[],timeouts=new Map(),scripts=[],events={},sortDirection={};
+    const key='market-terminal-view:file:///tmp/Market%20Terminal/report.html';
+    if(saved!==undefined)storage.set(key,typeof saved==='string'?saved:JSON.stringify(saved));
+    let reloads=0,removed=0,timeoutId=0;
+    const context=vm.createContext({
+        URL,location:{protocol:'file:',host:'',pathname:'/tmp/Market%20Terminal/report.html',
+            href:'file:///tmp/Market%20Terminal/report.html',reload(){reloads++;}},
+        window:{addEventListener(name,fn){events[name]=fn;}},
+        sessionStorage:{getItem(k){if(storageBlocked)throw Error('Storage blocked');return storage.get(k)||null;},
+            setItem(k,v){if(storageBlocked)throw Error('Storage blocked');storage.set(k,v);}},
+        activeTab:'all',page:0,direction:1,search:{value:''},reviewToggle:{checked:true},strictToggle:{checked:false},
+        sortBy:{value:'date'},pageSize:{value:'100'},tabs:[{dataset:{tab:'all'}},{dataset:{tab:'soccer'}}],
+        document:{getElementById(){return sortDirection;},createElement(){return {remove(){removed++;}};},
+            head:{appendChild(script){scripts.push(script);}}},
+        selectTab(tab){context.activeTab=tab.dataset.tab;context.page=0;},
+        apply(){context.page=Math.min(context.page,4);},
+        setInterval(fn,ms){timers.push({fn,ms});return timers.length;},
+        setTimeout(fn,ms){timeouts.set(++timeoutId,{fn,ms});return timeoutId;},
+        clearTimeout(id){timeouts.delete(id);},
+    });
+    vm.runInContext(REFRESH,context);
+    return {context,scripts,events,storage,timeouts,sortDirection,poll:timers.find(t=>t.ms===2000).fn,
+        state:()=>JSON.parse(storage.get(key)),reloads:()=>reloads,removed:()=>removed};
+}
+const view={tab:'soccer',search:'Arsenal',reviews:false,strict:true,sort:'edge',direction:-1,pageSize:'25',page:3};
+const b=browser(view),c=b.context;
+assert.equal(c.activeTab,'soccer');assert.equal(c.search.value,'Arsenal');assert.equal(c.page,3);
+assert.equal(c.reviewToggle.checked,false);assert.equal(c.strictToggle.checked,true);
+assert.equal(c.sortBy.value,'edge');assert.equal(c.direction,-1);assert.equal(c.pageSize.value,'25');
+assert.equal(b.sortDirection.textContent,'↓');
+b.poll();assert.equal(b.scripts.length,1);
+assert.equal(new URL(b.scripts[0].src).pathname,'/tmp/Market%20Terminal/report%3Csvg%3E%23%3F.version.js');
+assert.ok(new URL(b.scripts[0].src).searchParams.has('check'));
+b.poll();assert.equal(b.scripts.length,1); // Only one version check can be in flight.
+vm.runInContext(MARKER,c);assert.equal(b.reloads(),0); // Same published report.
+b.scripts[0].onload();assert.equal(b.removed(),1);assert.equal(b.timeouts.size,0);
+b.poll();assert.equal(b.scripts.length,2);assert.notEqual(b.scripts[0].src,b.scripts[1].src);
+b.scripts[1].onerror();assert.equal(b.reloads(),0);assert.equal(c.search.value,'Arsenal');
+b.poll();assert.equal(b.scripts.length,3);
+[...b.timeouts.values()][0].fn();assert.equal(b.timeouts.size,0); // Stalled loads also recover.
+b.poll();assert.equal(b.scripts.length,4);
+c.search.value='Liverpool';c.page=2;
+c.window.marketTerminalReportVersion('next-publication');assert.equal(b.reloads(),1);
+assert.deepEqual(b.state(),{...view,search:'Liverpool',page:2});
+assert.equal(Object.hasOwn(b.state(),'records'),false);
+c.window.marketTerminalReportVersion('next-publication');b.poll();assert.equal(b.reloads(),1);assert.equal(b.scripts.length,4);
+const restored=browser(b.state());assert.equal(restored.context.search.value,'Liverpool');assert.equal(restored.context.page,2);
+const removedTab=browser({...view,tab:'removed',page:999});assert.equal(removedTab.context.activeTab,'all');assert.equal(removedTab.context.page,4);
+const malformed=browser('invalid-json');assert.equal(malformed.context.activeTab,'all');assert.equal(malformed.context.search.value,'');
+const blocked=browser(undefined,true);blocked.poll();blocked.context.window.marketTerminalReportVersion('new');assert.equal(blocked.reloads(),1);
+'''
+        result = subprocess.run(
+            [shutil.which("node"), "-e", "const REFRESH=" + json.dumps(refresh) + ";const MARKER=" + json.dumps(marker) + ";\n" + harness],
+            capture_output=True, text=True, timeout=10,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
 
 
 class QuotePresentationTests(unittest.TestCase):

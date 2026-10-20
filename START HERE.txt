@@ -5,6 +5,12 @@ SPORTS MARKET TERMINAL
 3. The latest report should open automatically.
 4. Otherwise open: output/CricketMatchingReport.html
 
+To refresh prices and open the browser:
+python3 run.py --snapshot-dir=output/data --refresh-quotes
+Keep the updated report open; it reloads after future successful runs. Add
+--no-open on later runs to skip requesting another browser window. Reload any
+older browser tab once to enable this behavior.
+
 Each run fetches current Kalshi and Polymarket International match winners for
 cricket, soccer, basketball, American football, hockey, baseball, tennis and MMA.
 Basketball and American football include women's/college leagues where available.

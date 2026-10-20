@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any, Optional
+from uuid import uuid4
 
 import settlement as S
 
@@ -414,6 +415,56 @@ def _details(row: dict[str, str], venues: list[str]) -> str:
     return "".join(sections)
 
 
+def _report_refresh_script(version: str, version_filename: str) -> str:
+    # Classic script loads work for file:// reports, unlike fetch() of local files.
+    # Keep the marker separate from quote data: only a completed report publication
+    # should reload the snapshot. run.py publishes the complete directory together.
+    filename = json.dumps(version_filename, ensure_ascii=True).replace("<", "\\u003c").replace("&", "\\u0026")
+    return f"const reportVersion={json.dumps(version)},reportVersionFile={filename};\n" + r'''
+const viewKey='market-terminal-view:'+location.protocol+'//'+location.host+location.pathname;
+function saveView(){
+    try{sessionStorage.setItem(viewKey,JSON.stringify({tab:activeTab,search:search.value,
+        reviews:reviewToggle.checked,strict:strictToggle.checked,sort:sortBy.value,
+        direction,pageSize:pageSize.value,page}));}catch(error){}
+}
+function restoreView(){
+    let saved={};
+    try{const value=JSON.parse(sessionStorage.getItem(viewKey));if(value&&typeof value==='object')saved=value;}catch(error){}
+    if(typeof saved.search==='string')search.value=saved.search;
+    if(typeof saved.reviews==='boolean')reviewToggle.checked=saved.reviews;
+    if(typeof saved.strict==='boolean')strictToggle.checked=saved.strict;
+    if(['date','name','edge'].includes(saved.sort))sortBy.value=saved.sort;
+    if(['25','50','100'].includes(saved.pageSize))pageSize.value=saved.pageSize;
+    direction=saved.direction===-1?-1:1;
+    document.getElementById('sortDirection').textContent=direction===1?'↑':'↓';
+    selectTab(tabs.find(tab=>tab.dataset.tab===saved.tab)||tabs[0]);
+    if(Number.isSafeInteger(saved.page)&&saved.page>=0){page=saved.page;apply();}
+}
+window.addEventListener('pagehide',saveView);
+restoreView();
+let pendingReportCheck=null,reloadingReport=false,reportCheckNumber=0;
+window.marketTerminalReportVersion=function(version){
+    if(typeof version==='string'&&version!==reportVersion&&!reloadingReport){
+        reloadingReport=true;saveView();location.reload();
+    }
+};
+function checkForNewReport(){
+    if(pendingReportCheck||reloadingReport)return;
+    const script=document.createElement('script');
+    const url=new URL(encodeURIComponent(reportVersionFile),location.href);
+    url.searchParams.set('check',Date.now()+'-'+(++reportCheckNumber));
+    script.src=url.href;script.async=true;pendingReportCheck=script;
+    const cleanup=()=>{clearTimeout(timeout);script.remove();if(pendingReportCheck===script)pendingReportCheck=null;};
+    const timeout=setTimeout(cleanup,5000);
+    script.onload=script.onerror=cleanup;
+    document.head.appendChild(script);
+}
+// A missing marker during the directory swap leaves this snapshot visible and
+// is retried. No venue prices are polled by the HTML report.
+setInterval(checkForNewReport,2000);
+'''
+
+
 def write_html(path: Path, rows: list[dict[str, str]], venues: list[str], coverage_complete: dict[str, bool],
                generated_at: datetime, quality: Optional[dict[str, str]] = None) -> None:
     quality = quality or {}
@@ -425,6 +476,12 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str], covera
     timestamp_value = "" if unknown else generated_at.strftime("%d %b %Y, %H:%M:%S UTC")
     freshness_time = datetime.now(timezone.utc) if replay else generated_at
     age_label = "Replay generated" if replay else "Generated"
+    collection_note = "" if unknown else "Source discovery completed " + generated_at.strftime("%d %b %Y, %H:%M:%S UTC")
+    checked_at = None if replay else _timestamp(quality.get("Quotes checked at", ""))
+    if checked_at is not None:
+        timestamp_label, age_label = "Quotes checked", "Quotes checked"
+        timestamp_value = checked_at.strftime("%d %b %Y, %H:%M:%S UTC")
+        freshness_time = checked_at
     source_note = ("Venue availability reflects the saved collection. Replay generation does not refresh source quotes."
                    if replay else "Point-in-time observations · run python3 run.py to refresh")
     sport_labels = {"cricket": "Cricket", "soccer": "Football", "basketball": "Basketball",
@@ -472,6 +529,9 @@ def write_html(path: Path, rows: list[dict[str, str]], venues: list[str], covera
     headers = "".join(f'<th scope="col" class="price-heading">{html.escape(VENUE_LABELS[venue])}<span>bid / ask</span></th>' for venue in venues)
     payload = json.dumps(records, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c").replace("&", "\\u0026")
     initial = "".join(record["html"] for record in records[:100])
+    version = uuid4().hex
+    version_path = path.with_suffix(".version.js")
+    refresh_script = _report_refresh_script(version, version_path.name)
     doc = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}</title>
 <style>
@@ -483,7 +543,7 @@ main{{flex:1;min-height:0;display:flex;flex-direction:column;padding:0 8px}}.nav
 .dialog{{position:fixed;inset:0 0 0 auto;width:min(540px,100%);height:100dvh;max-height:100dvh;max-width:100%;margin:0;border:0;border-left:1px solid #805400;padding:16px;background:#0b0b0b;color:var(--ink);box-shadow:-12px 0 50px #0009;overflow:auto}}.dialog::backdrop{{background:#0009}}.close-dialog{{position:sticky;top:0;float:right;width:24px;height:24px;font-size:17px;padding:0;background:#252014;color:var(--amber)}}.dialog h2{{font-size:14px;line-height:1.4;margin:9px 28px 3px 0;font-weight:600;color:var(--amber)}}.detail-subtitle{{color:var(--muted);font-size:10px;margin-bottom:17px}}.detail-basis{{font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--amber)}}.detail-reason{{font-size:11px;line-height:1.6;color:#d0d0d0}}.detail-note{{font-size:9px;line-height:1.6;color:var(--muted)}}.detail-venue{{border-top:1px solid #5e451a;margin-top:17px;padding-top:12px}}.detail-venue h3{{font-size:12px;font-weight:600;display:inline;margin-right:16px;color:var(--amber)}}.detail-venue>a{{font-size:9px;text-decoration:none}}.detail-venue p{{font-size:10px;color:#b6b6b6}}.detail-quotes{{display:flex;align-items:center;gap:24px;border:1px solid var(--line);background:#111;padding:9px 10px;margin:10px 0}}.detail-quotes>div{{display:flex;align-items:center;gap:12px}}.detail-quotes>div>span{{text-transform:uppercase;font-size:9px;color:#b8b8b8}}.detail-quotes strong{{font-size:18px;font-weight:500}}.quote-status{{margin-left:auto;font-size:8px;text-transform:uppercase;color:var(--muted)}}dl{{display:grid;grid-template-columns:68px minmax(0,1fr);gap:5px;font-size:9px}}dt{{color:var(--muted)}}dd{{margin:0;overflow-wrap:anywhere}}summary{{cursor:pointer;color:#c6a66e;font-size:10px;margin-top:12px}}.caveats li{{font-size:10px;color:var(--muted);margin:7px 0}}pre{{font:9px/1.6 "SFMono-Regular",Consolas,Menlo,monospace;background:#050505;border:1px solid var(--line);padding:8px;white-space:pre-wrap;overflow-wrap:anywhere;color:#b5b5b5}}.payout-table{{min-width:0;table-layout:auto;width:100%;margin-top:10px}}.payout-table caption{{text-align:left;font-size:9px;color:var(--muted);padding-bottom:7px}}.payout-table th{{position:static;height:23px;font-size:9px;background:#151515;color:#999;border-bottom:1px solid var(--line)}}.payout-table td{{height:23px;font-size:10px;color:#bbb}}.payout-table td:last-child,.payout-table th:last-child{{text-align:right}}
 @media(max-width:1050px){{.summary{{gap:9px}}.source-age strong{{display:none}}.legend{{display:none}}.search{{width:190px}}.tab{{padding:0 7px}}.fixture-head{{width:250px}}}}@media(max-width:620px){{.topbar{{padding:0 7px;height:32px}}h1{{font-size:11px}}.summary{{font-size:8px;gap:8px}}.summary .review-summary{{display:none}}.mode{{display:none}}.source-age{{font-size:8px}}main{{padding:0 4px}}.navline{{height:auto;min-height:59px;flex-wrap:wrap;gap:0;padding-bottom:5px}}.tabs{{width:100%;height:30px}}.controls{{width:100%}}.search{{width:100%}}.toolline{{height:29px}}.toggles{{gap:9px;font-size:8px}}.sort-control label{{display:none}}footer{{height:22px;padding:0 6px;font-size:7px}}footer .coverage{{display:none}}.page-size{{gap:3px}}.pager{{gap:6px}}.dialog{{padding:13px}}.detail-quotes{{gap:16px}}}}
 </style></head><body>
-<header class="topbar"><div><span class="brand-mark" aria-hidden="true">≋</span><h1>Market Terminal</h1><span class="mode">{badge}</span></div><div class="summary"><span><b>{matched}</b> comparable</span><span><b id="crossSummary">{crosses}</b> crosses</span><span class="review-summary"><b>{reviews}</b> reviews</span></div><div class="source-age"><span id="reportAge">Source age…</span> <strong>· {timestamp_label} {html.escape(timestamp_value)}</strong></div></header>
+<header class="topbar"><div><span class="brand-mark" aria-hidden="true">≋</span><h1>Market Terminal</h1><span class="mode">{badge}</span></div><div class="summary"><span><b>{matched}</b> comparable</span><span><b id="crossSummary">{crosses}</b> crosses</span><span class="review-summary"><b>{reviews}</b> reviews</span></div><div class="source-age" title="{html.escape(collection_note, quote=True)}"><span id="reportAge">Source age…</span> <strong>· {timestamp_label} {html.escape(timestamp_value)}</strong></div></header>
 <main><div class="navline"><nav class="tabs" role="tablist" aria-label="Sports and crosses">{tabs_html}</nav><div class="controls"><input class="search" id="search" type="search" aria-label="Search fixtures and outcomes" placeholder="Search fixture, team, outcome  /" autocomplete="off"></div></div>
 <div class="toolline"><div class="toggles"><label class="toggle"><input id="showReviews" type="checkbox" checked>Reviews</label><label class="toggle"><input id="strictRules" type="checkbox">Full contract only</label><span class="legend"><span class="conditional">C</span> contingency caveat · core payouts must agree</span></div><div class="sort-control"><label for="sortBy">Sort</label><select id="sortBy" aria-label="Sort markets"><option value="date">Date</option><option value="edge">Edge</option><option value="name">Name</option></select><button class="sort-direction" id="sortDirection" aria-label="Reverse sort direction" title="Reverse sort">↑</button></div></div>
 <section id="marketPanel" role="tabpanel" aria-labelledby="tab-all"><div class="table-shell" id="tableScroll"><table><thead><tr><th scope="col" class="league-head">Sport</th><th scope="col" class="competition-head">League</th><th scope="col" class="fixture-head">Fixture</th><th scope="col" class="date-head">Date / UTC</th><th scope="col" class="outcome-head">Outcome</th>{headers}<th scope="col" class="edge-head">Edge</th><th scope="col" class="rules-head">Rules</th><th scope="col" class="detail-head"><span class="muted">↗</span></th></tr></thead><tbody id="rows">{initial}</tbody></table><div id="empty" class="empty" hidden><strong id="emptyHeading">No matching markets</strong><span id="emptyMessage">Change sport, search, or settlement filter.</span></div></div>
@@ -500,9 +560,18 @@ search.addEventListener('input',()=>apply(true));reviewToggle.addEventListener('
 const dialog=document.getElementById('detailsDialog'),content=document.getElementById('detailContent');tbody.addEventListener('click',e=>{{const button=e.target.closest('[data-details]');if(!button)return;content.innerHTML=records[Number(button.dataset.details)].details;dialog.showModal()}});document.getElementById('closeDetails').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{{if(e.target===dialog&&e.clientX<dialog.getBoundingClientRect().left)dialog.close()}});
 document.addEventListener('keydown',e=>{{const editing=['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName);if(e.key==='/'&&!editing&&!dialog.open){{e.preventDefault();search.focus()}}else if(e.key==='Escape'&&document.activeElement===search){{search.value='';apply(true);search.blur()}}else if(!editing&&!dialog.open&&['e','d','n'].includes(e.key.toLowerCase())){{sortBy.value={{e:'edge',d:'date',n:'name'}}[e.key.toLowerCase()];direction=1;apply(true)}}}});
 const generatedAt=new Date('{freshness_time.isoformat()}');const ageLabel='{age_label}';function updateAge(){{const minutes=Math.max(0,Math.floor((Date.now()-generatedAt.getTime())/60000));document.getElementById('reportAge').textContent=minutes<2?ageLabel+' just now':minutes<60?`${{ageLabel}} ${{minutes}}m ago`:`${{ageLabel}} ${{Math.floor(minutes/60)}}h ago`}}
-function expireCrosses(){{let changed=false;records.forEach(r=>{{if(r.crossed&&r.expiry&&Date.now()>r.expiry){{r.crossed=false;r.edge='';r.stale=true;changed=true}}}});if(changed){{const n=records.filter(r=>r.crossed).length;document.getElementById('crossSummary').textContent=n;document.getElementById('crossCount').textContent=n;apply()}}}}updateAge();expireCrosses();selectTab(tabs[0]);setInterval(()=>{{updateAge();expireCrosses()}},10000);
-</script></body></html>'''
-    path.write_text(doc, encoding="utf-8")
+function expireCrosses(){{let changed=false;records.forEach(r=>{{if(r.crossed&&r.expiry&&Date.now()>r.expiry){{r.crossed=false;r.edge='';r.stale=true;changed=true}}}});if(changed){{const n=records.filter(r=>r.crossed).length;document.getElementById('crossSummary').textContent=n;document.getElementById('crossCount').textContent=n;apply()}}}}updateAge();expireCrosses();setInterval(()=>{{updateAge();expireCrosses()}},10000);
+</script><script id="reportRefresh">{refresh_script}</script></body></html>'''
+    html_temp = path.with_name(f".{path.name}.{version}.tmp")
+    version_temp = version_path.with_name(f".{version_path.name}.{version}.tmp")
+    try:
+        html_temp.write_text(doc, encoding="utf-8")
+        version_temp.write_text(f"window.marketTerminalReportVersion({json.dumps(version)});\n", encoding="utf-8")
+        html_temp.replace(path)
+        version_temp.replace(version_path)
+    finally:
+        html_temp.unlink(missing_ok=True)
+        version_temp.unlink(missing_ok=True)
 
 
 def write_outputs(outdir: Path, accepted: list[Any], review: list[Any], coverage_complete: dict[str, bool],

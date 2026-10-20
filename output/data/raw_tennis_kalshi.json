@@ -12,15 +12,15 @@
     "expected_expiration_time": "2026-10-18T09:00:00Z",
     "expiration_time": "2026-11-01T06:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.7800",
+    "last_price_dollars": "0.9200",
     "latest_expiration_time": "2026-11-01T06:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.2400",
-    "no_bid_dollars": "0.2000",
+    "no_ask_dollars": "0.0900",
+    "no_bid_dollars": "0.0800",
     "no_sub_title": "Terence Atmane",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-18T09:00:00Z",
-    "open_interest_fp": "145153.46",
+    "open_interest_fp": "172594.46",
     "open_time": "2026-10-17T09:26:00Z",
     "previous_price_dollars": "0.4800",
     "previous_yes_ask_dollars": "0.4800",
@@ -43,12 +43,12 @@
     "ticker": "KXATPMATCH-26OCT18ATMHIJ-ATM",
     "title": "Terence Atmane wins",
     "updated_time": "2026-10-18T10:55:33.439339Z",
-    "volume_24h_fp": "229021.69",
-    "volume_fp": "274281.27",
-    "yes_ask_dollars": "0.8000",
-    "yes_ask_size_fp": "287.57",
-    "yes_bid_dollars": "0.7600",
-    "yes_bid_size_fp": "6.05",
+    "volume_24h_fp": "272235.80",
+    "volume_fp": "363655.94",
+    "yes_ask_dollars": "0.9200",
+    "yes_ask_size_fp": "64536.29",
+    "yes_bid_dollars": "0.9100",
+    "yes_bid_size_fp": "27599.25",
     "yes_sub_title": "Terence Atmane",
     "_event_title": "Atmane vs Hijikata",
     "_event_ticker": "KXATPMATCH-26OCT18ATMHIJ",
@@ -69,7 +69,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -84,15 +84,15 @@
     "expected_expiration_time": "2026-10-18T09:00:00Z",
     "expiration_time": "2026-11-01T06:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.2300",
+    "last_price_dollars": "0.0900",
     "latest_expiration_time": "2026-11-01T06:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8100",
-    "no_bid_dollars": "0.7700",
+    "no_ask_dollars": "0.9200",
+    "no_bid_dollars": "0.9100",
     "no_sub_title": "Rinky Hijikata",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-18T09:00:00Z",
-    "open_interest_fp": "304838.00",
+    "open_interest_fp": "346954.69",
     "open_time": "2026-10-17T09:26:00Z",
     "previous_price_dollars": "0.5400",
     "previous_yes_ask_dollars": "0.5400",
@@ -115,12 +115,12 @@
     "ticker": "KXATPMATCH-26OCT18ATMHIJ-HIJ",
     "title": "Rinky Hijikata wins",
     "updated_time": "2026-10-18T10:55:33.439339Z",
-    "volume_24h_fp": "382022.53",
-    "volume_fp": "576552.98",
-    "yes_ask_dollars": "0.2300",
-    "yes_ask_size_fp": "15.59",
-    "yes_bid_dollars": "0.1900",
-    "yes_bid_size_fp": "33.00",
+    "volume_24h_fp": "567320.42",
+    "volume_fp": "659975.10",
+    "yes_ask_dollars": "0.0900",
+    "yes_ask_size_fp": "45055.89",
+    "yes_bid_dollars": "0.0800",
+    "yes_bid_size_fp": "34744.68",
     "yes_sub_title": "Rinky Hijikata",
     "_event_title": "Atmane vs Hijikata",
     "_event_ticker": "KXATPMATCH-26OCT18ATMHIJ",
@@ -141,7 +141,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -156,7 +156,7 @@
     "expected_expiration_time": "2026-10-18T09:00:00Z",
     "expiration_time": "2026-11-01T06:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5300",
+    "last_price_dollars": "0.5100",
     "latest_expiration_time": "2026-11-01T06:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4900",
@@ -164,7 +164,7 @@
     "no_sub_title": "Mattia Bellucci",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-18T09:00:00Z",
-    "open_interest_fp": "42863.70",
+    "open_interest_fp": "42854.23",
     "open_time": "2026-10-17T09:26:00Z",
     "previous_price_dollars": "0.5200",
     "previous_yes_ask_dollars": "0.5100",
@@ -188,11 +188,11 @@
     "title": "Mattia Bellucci wins",
     "updated_time": "2026-10-19T08:50:45.738623Z",
     "volume_24h_fp": "2222.12",
-    "volume_fp": "44264.70",
+    "volume_fp": "44274.17",
     "yes_ask_dollars": "0.5300",
     "yes_ask_size_fp": "33277.17",
     "yes_bid_dollars": "0.5100",
-    "yes_bid_size_fp": "9452.06",
+    "yes_bid_size_fp": "7204.09",
     "yes_sub_title": "Mattia Bellucci",
     "_event_title": "Bellucci vs Etcheverry",
     "_event_ticker": "KXATPMATCH-26OCT18BELETC",
@@ -213,7 +213,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -262,7 +262,7 @@
     "volume_24h_fp": "216.36",
     "volume_fp": "5128.63",
     "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "25627.67",
+    "yes_ask_size_fp": "21150.67",
     "yes_bid_dollars": "0.4800",
     "yes_bid_size_fp": "565.04",
     "yes_sub_title": "Tomas Martin Etcheverry",
@@ -285,7 +285,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -308,7 +308,7 @@
     "no_sub_title": "Fabian Marozsan",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-18T09:00:00Z",
-    "open_interest_fp": "1248.55",
+    "open_interest_fp": "1275.55",
     "open_time": "2026-10-17T09:26:00Z",
     "previous_price_dollars": "0.7600",
     "previous_yes_ask_dollars": "0.7600",
@@ -330,11 +330,11 @@
     "strike_type": "structured",
     "ticker": "KXATPMATCH-26OCT18MARSKA-MAR",
     "title": "Fabian Marozsan wins",
-    "updated_time": "2026-10-20T07:35:20.9646Z",
+    "updated_time": "2026-10-20T07:45:23.025323Z",
     "volume_24h_fp": "569.87",
-    "volume_fp": "1395.16",
+    "volume_fp": "1422.16",
     "yes_ask_dollars": "0.7500",
-    "yes_ask_size_fp": "1230.75",
+    "yes_ask_size_fp": "1203.75",
     "yes_bid_dollars": "0.7400",
     "yes_bid_size_fp": "17178.00",
     "yes_sub_title": "Fabian Marozsan",
@@ -357,7 +357,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -402,13 +402,13 @@
     "strike_type": "structured",
     "ticker": "KXATPMATCH-26OCT18MARSKA-SKA",
     "title": "Timofey Skatov wins",
-    "updated_time": "2026-10-20T07:35:20.9646Z",
+    "updated_time": "2026-10-20T07:45:23.025323Z",
     "volume_24h_fp": "3883.96",
     "volume_fp": "14082.10",
     "yes_ask_dollars": "0.2600",
-    "yes_ask_size_fp": "47784.01",
+    "yes_ask_size_fp": "48284.01",
     "yes_bid_dollars": "0.2400",
-    "yes_bid_size_fp": "19268.36",
+    "yes_bid_size_fp": "15060.36",
     "yes_sub_title": "Timofey Skatov",
     "_event_title": "Marozsan vs Skatov",
     "_event_ticker": "KXATPMATCH-26OCT18MARSKA",
@@ -429,7 +429,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -501,7 +501,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -573,7 +573,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -592,11 +592,11 @@
     "latest_expiration_time": "2026-11-01T06:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.2300",
-    "no_bid_dollars": "0.2100",
+    "no_bid_dollars": "0.2200",
     "no_sub_title": "Stefanos Tsitsipas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-18T09:00:00Z",
-    "open_interest_fp": "5988.21",
+    "open_interest_fp": "6026.08",
     "open_time": "2026-10-17T09:25:00Z",
     "previous_price_dollars": "0.8100",
     "previous_yes_ask_dollars": "0.8100",
@@ -618,13 +618,13 @@
     "strike_type": "structured",
     "ticker": "KXATPMATCH-26OCT18TSIKOV-TSI",
     "title": "Stefanos Tsitsipas wins",
-    "updated_time": "2026-10-20T07:35:22.158573Z",
-    "volume_24h_fp": "4282.29",
-    "volume_fp": "6125.01",
-    "yes_ask_dollars": "0.7900",
-    "yes_ask_size_fp": "64369.14",
+    "updated_time": "2026-10-20T07:45:24.318403Z",
+    "volume_24h_fp": "5367.49",
+    "volume_fp": "6162.88",
+    "yes_ask_dollars": "0.7800",
+    "yes_ask_size_fp": "20213.17",
     "yes_bid_dollars": "0.7700",
-    "yes_bid_size_fp": "18892.81",
+    "yes_bid_size_fp": "8690.81",
     "yes_sub_title": "Stefanos Tsitsipas",
     "_event_title": "Tsitsipas vs Kovacevic",
     "_event_ticker": "KXATPMATCH-26OCT18TSIKOV",
@@ -645,7 +645,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -660,15 +660,15 @@
     "expected_expiration_time": "2026-10-18T09:00:00Z",
     "expiration_time": "2026-11-01T06:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.2100",
+    "last_price_dollars": "0.2300",
     "latest_expiration_time": "2026-11-01T06:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7900",
+    "no_ask_dollars": "0.7800",
     "no_bid_dollars": "0.7700",
     "no_sub_title": "Aleksandar Kovacevic",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-18T09:00:00Z",
-    "open_interest_fp": "6434.46",
+    "open_interest_fp": "6562.34",
     "open_time": "2026-10-17T09:25:00Z",
     "previous_price_dollars": "0.2100",
     "previous_yes_ask_dollars": "0.2100",
@@ -690,13 +690,13 @@
     "strike_type": "structured",
     "ticker": "KXATPMATCH-26OCT18TSIKOV-KOV",
     "title": "Aleksandar Kovacevic wins",
-    "updated_time": "2026-10-20T07:35:22.158573Z",
-    "volume_24h_fp": "5380.56",
-    "volume_fp": "6452.73",
+    "updated_time": "2026-10-20T07:45:24.318403Z",
+    "volume_24h_fp": "6176.67",
+    "volume_fp": "6581.93",
     "yes_ask_dollars": "0.2300",
-    "yes_ask_size_fp": "42421.48",
-    "yes_bid_dollars": "0.2100",
-    "yes_bid_size_fp": "16937.23",
+    "yes_ask_size_fp": "16695.84",
+    "yes_bid_dollars": "0.2200",
+    "yes_bid_size_fp": "6328.14",
     "yes_sub_title": "Aleksandar Kovacevic",
     "_event_title": "Tsitsipas vs Kovacevic",
     "_event_ticker": "KXATPMATCH-26OCT18TSIKOV",
@@ -717,7 +717,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -768,7 +768,7 @@
     "yes_ask_dollars": "0.3500",
     "yes_ask_size_fp": "47717.89",
     "yes_bid_dollars": "0.3300",
-    "yes_bid_size_fp": "14061.03",
+    "yes_bid_size_fp": "15215.03",
     "yes_sub_title": "Daniel Altmaier",
     "_event_title": "Altmaier vs Droguet",
     "_event_ticker": "KXATPMATCH-26OCT18ALTDRO",
@@ -789,7 +789,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -838,7 +838,7 @@
     "volume_24h_fp": "2250.83",
     "volume_fp": "2598.76",
     "yes_ask_dollars": "0.6700",
-    "yes_ask_size_fp": "52951.78",
+    "yes_ask_size_fp": "54111.78",
     "yes_bid_dollars": "0.6600",
     "yes_bid_size_fp": "363.00",
     "yes_sub_title": "Titouan Droguet",
@@ -861,7 +861,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -910,7 +910,7 @@
     "volume_24h_fp": "4411.68",
     "volume_fp": "29776.94",
     "yes_ask_dollars": "0.4800",
-    "yes_ask_size_fp": "17071.43",
+    "yes_ask_size_fp": "16971.43",
     "yes_bid_dollars": "0.4700",
     "yes_bid_size_fp": "3413.00",
     "yes_sub_title": "Benjamin Bonzi",
@@ -933,7 +933,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1005,7 +1005,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1054,7 +1054,7 @@
     "volume_24h_fp": "1682.92",
     "volume_fp": "2196.06",
     "yes_ask_dollars": "0.7300",
-    "yes_ask_size_fp": "12197.48",
+    "yes_ask_size_fp": "4771.89",
     "yes_bid_dollars": "0.7200",
     "yes_bid_size_fp": "3835.00",
     "yes_sub_title": "Ugo Humbert",
@@ -1077,7 +1077,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1102,7 +1102,7 @@
     "occurrence_datetime": "2026-10-18T11:00:00Z",
     "open_interest_fp": "332.92",
     "open_time": "2026-10-17T17:56:00Z",
-    "previous_price_dollars": "0.3000",
+    "previous_price_dollars": "0.2900",
     "previous_yes_ask_dollars": "0.2900",
     "previous_yes_bid_dollars": "0.2700",
     "price_level_structure": "linear_cent",
@@ -1123,10 +1123,10 @@
     "ticker": "KXATPMATCH-26OCT18HUMMOU-MOU",
     "title": "Corentin Moutet wins",
     "updated_time": "2026-10-19T13:35:36.582673Z",
-    "volume_24h_fp": "321.68",
+    "volume_24h_fp": "319.68",
     "volume_fp": "332.92",
     "yes_ask_dollars": "0.2800",
-    "yes_ask_size_fp": "5788.00",
+    "yes_ask_size_fp": "5804.00",
     "yes_bid_dollars": "0.2700",
     "yes_bid_size_fp": "2752.00",
     "yes_sub_title": "Corentin Moutet",
@@ -1149,7 +1149,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1221,7 +1221,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1267,7 +1267,7 @@
     "ticker": "KXATPMATCH-26OCT18MEDNAK-NAK",
     "title": "Brandon Nakashima wins",
     "updated_time": "2026-10-19T13:35:37.183897Z",
-    "volume_24h_fp": "514.39",
+    "volume_24h_fp": "560.39",
     "volume_fp": "1025.14",
     "yes_ask_dollars": "0.7200",
     "yes_ask_size_fp": "44004.02",
@@ -1293,7 +1293,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1365,7 +1365,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1437,7 +1437,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1486,7 +1486,7 @@
     "volume_24h_fp": "1973.85",
     "volume_fp": "2829.26",
     "yes_ask_dollars": "0.6100",
-    "yes_ask_size_fp": "47385.57",
+    "yes_ask_size_fp": "48302.57",
     "yes_bid_dollars": "0.5900",
     "yes_bid_size_fp": "6268.58",
     "yes_sub_title": "Jacob Fearnley",
@@ -1509,7 +1509,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1581,7 +1581,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1630,7 +1630,7 @@
     "volume_24h_fp": "1529.34",
     "volume_fp": "4313.08",
     "yes_ask_dollars": "0.7900",
-    "yes_ask_size_fp": "48320.17",
+    "yes_ask_size_fp": "48419.74",
     "yes_bid_dollars": "0.7800",
     "yes_bid_size_fp": "2871.00",
     "yes_sub_title": "Tallon Griekspoor",
@@ -1653,7 +1653,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1699,12 +1699,12 @@
     "ticker": "KXATPMATCH-26OCT18GRISCH-SCH",
     "title": "Max Schoenhaus wins",
     "updated_time": "2026-10-19T11:55:42.933876Z",
-    "volume_24h_fp": "3527.39",
+    "volume_24h_fp": "3548.94",
     "volume_fp": "23743.16",
     "yes_ask_dollars": "0.2200",
-    "yes_ask_size_fp": "3783.08",
+    "yes_ask_size_fp": "3683.08",
     "yes_bid_dollars": "0.2100",
-    "yes_bid_size_fp": "6738.03",
+    "yes_bid_size_fp": "6688.03",
     "yes_sub_title": "Max Schoenhaus",
     "_event_title": "Griekspoor vs Schoenhaus",
     "_event_ticker": "KXATPMATCH-26OCT18GRISCH",
@@ -1725,7 +1725,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1774,9 +1774,9 @@
     "volume_24h_fp": "2301.25",
     "volume_fp": "2486.10",
     "yes_ask_dollars": "0.6100",
-    "yes_ask_size_fp": "4774.12",
+    "yes_ask_size_fp": "4724.12",
     "yes_bid_dollars": "0.6000",
-    "yes_bid_size_fp": "7449.97",
+    "yes_bid_size_fp": "8720.77",
     "yes_sub_title": "Mariano Navone",
     "_event_title": "Navone vs Cerundolo",
     "_event_ticker": "KXATPMATCH-26OCT18NAVCER",
@@ -1797,7 +1797,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1846,9 +1846,9 @@
     "volume_24h_fp": "2307.57",
     "volume_fp": "2491.32",
     "yes_ask_dollars": "0.4000",
-    "yes_ask_size_fp": "22935.64",
+    "yes_ask_size_fp": "31355.44",
     "yes_bid_dollars": "0.3900",
-    "yes_bid_size_fp": "3664.00",
+    "yes_bid_size_fp": "3614.00",
     "yes_sub_title": "Juan Manuel Cerundolo",
     "_event_title": "Navone vs Cerundolo",
     "_event_ticker": "KXATPMATCH-26OCT18NAVCER",
@@ -1869,7 +1869,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -1941,7 +1941,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2013,7 +2013,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2062,9 +2062,9 @@
     "volume_24h_fp": "701.61",
     "volume_fp": "11242.76",
     "yes_ask_dollars": "0.3200",
-    "yes_ask_size_fp": "28037.75",
+    "yes_ask_size_fp": "28024.37",
     "yes_bid_dollars": "0.3100",
-    "yes_bid_size_fp": "3394.00",
+    "yes_bid_size_fp": "3287.00",
     "yes_sub_title": "Toby Samuel",
     "_event_title": "Samuel vs Bergs",
     "_event_ticker": "KXATPMATCH-26OCT18SAMBER",
@@ -2085,7 +2085,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2108,7 +2108,7 @@
     "no_sub_title": "Zizou Bergs",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-18T13:30:00Z",
-    "open_interest_fp": "23515.45",
+    "open_interest_fp": "23521.78",
     "open_time": "2026-10-17T10:36:00Z",
     "previous_price_dollars": "0.6800",
     "previous_yes_ask_dollars": "0.6900",
@@ -2132,9 +2132,9 @@
     "title": "Zizou Bergs wins",
     "updated_time": "2026-10-19T11:55:44.984938Z",
     "volume_24h_fp": "851.34",
-    "volume_fp": "23669.54",
+    "volume_fp": "23675.87",
     "yes_ask_dollars": "0.6900",
-    "yes_ask_size_fp": "6219.46",
+    "yes_ask_size_fp": "6007.13",
     "yes_bid_dollars": "0.6800",
     "yes_bid_size_fp": "10183.85",
     "yes_sub_title": "Zizou Bergs",
@@ -2157,7 +2157,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2180,7 +2180,7 @@
     "no_sub_title": "Jan-Lennard Struff",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-18T13:30:00Z",
-    "open_interest_fp": "6566.47",
+    "open_interest_fp": "6606.99",
     "open_time": "2026-10-17T10:36:00Z",
     "previous_price_dollars": "0.6100",
     "previous_yes_ask_dollars": "0.6000",
@@ -2204,9 +2204,9 @@
     "title": "Jan-Lennard Struff wins",
     "updated_time": "2026-10-19T11:55:45.581401Z",
     "volume_24h_fp": "1635.45",
-    "volume_fp": "6856.40",
+    "volume_fp": "6896.92",
     "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "1163.01",
+    "yes_ask_size_fp": "1122.49",
     "yes_bid_dollars": "0.5900",
     "yes_bid_size_fp": "9540.51",
     "yes_sub_title": "Jan-Lennard Struff",
@@ -2229,7 +2229,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2301,7 +2301,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2320,7 +2320,7 @@
     "latest_expiration_time": "2026-11-03T06:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5400",
-    "no_bid_dollars": "0.5300",
+    "no_bid_dollars": "0.5200",
     "no_sub_title": "James Duckworth",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T09:30:00Z",
@@ -2347,12 +2347,12 @@
     "ticker": "KXATPMATCH-26OCT20DUCDAR-DUC",
     "title": "James Duckworth wins",
     "updated_time": "2026-10-19T08:51:02.770086Z",
-    "volume_24h_fp": "5595.28",
-    "volume_fp": "5595.41",
-    "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "363.00",
+    "volume_24h_fp": "5595.41",
+    "volume_fp": "5595.48",
+    "yes_ask_dollars": "0.4800",
+    "yes_ask_size_fp": "763.00",
     "yes_bid_dollars": "0.4600",
-    "yes_bid_size_fp": "2408.28",
+    "yes_bid_size_fp": "5897.97",
     "yes_sub_title": "James Duckworth",
     "_event_title": "Duckworth vs Darderi",
     "_event_ticker": "KXATPMATCH-26OCT20DUCDAR",
@@ -2373,7 +2373,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2392,7 +2392,7 @@
     "latest_expiration_time": "2026-11-03T06:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4800",
-    "no_bid_dollars": "0.4600",
+    "no_bid_dollars": "0.4700",
     "no_sub_title": "Luciano Darderi",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T09:30:00Z",
@@ -2419,12 +2419,12 @@
     "ticker": "KXATPMATCH-26OCT20DUCDAR-DAR",
     "title": "Luciano Darderi wins",
     "updated_time": "2026-10-19T08:51:02.770086Z",
-    "volume_24h_fp": "1690.80",
+    "volume_24h_fp": "1694.80",
     "volume_fp": "1694.80",
-    "yes_ask_dollars": "0.5400",
-    "yes_ask_size_fp": "16744.23",
+    "yes_ask_dollars": "0.5300",
+    "yes_ask_size_fp": "363.00",
     "yes_bid_dollars": "0.5200",
-    "yes_bid_size_fp": "5835.00",
+    "yes_bid_size_fp": "10.00",
     "yes_sub_title": "Luciano Darderi",
     "_event_title": "Duckworth vs Darderi",
     "_event_ticker": "KXATPMATCH-26OCT20DUCDAR",
@@ -2445,7 +2445,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2491,7 +2491,7 @@
     "ticker": "KXATPMATCH-26OCT20SAKKHA-SAK",
     "title": "Rei Sakamoto wins",
     "updated_time": "2026-10-19T08:51:03.436465Z",
-    "volume_24h_fp": "840.43",
+    "volume_24h_fp": "847.43",
     "volume_fp": "908.43",
     "yes_ask_dollars": "0.3100",
     "yes_ask_size_fp": "4936.06",
@@ -2517,7 +2517,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2563,7 +2563,7 @@
     "ticker": "KXATPMATCH-26OCT20SAKKHA-KHA",
     "title": "Karen Khachanov wins",
     "updated_time": "2026-10-19T08:51:03.436465Z",
-    "volume_24h_fp": "1909.16",
+    "volume_24h_fp": "1945.94",
     "volume_fp": "1945.94",
     "yes_ask_dollars": "0.7000",
     "yes_ask_size_fp": "2082.84",
@@ -2589,7 +2589,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2604,15 +2604,15 @@
     "expected_expiration_time": "2026-10-20T09:30:00Z",
     "expiration_time": "2026-11-03T06:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.0800",
+    "last_price_dollars": "0.2100",
     "latest_expiration_time": "2026-11-03T06:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.9300",
-    "no_bid_dollars": "0.9200",
+    "no_ask_dollars": "0.8000",
+    "no_bid_dollars": "0.7900",
     "no_sub_title": "Sho Shimabukuro",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T09:30:00Z",
-    "open_interest_fp": "61341.22",
+    "open_interest_fp": "68105.70",
     "open_time": "2026-10-19T06:36:00Z",
     "previous_price_dollars": "0.1800",
     "previous_yes_ask_dollars": "0.1800",
@@ -2635,12 +2635,12 @@
     "ticker": "KXATPMATCH-26OCT20SHISAF-SHI",
     "title": "Sho Shimabukuro wins",
     "updated_time": "2026-10-19T06:36:00.149361Z",
-    "volume_24h_fp": "56304.63",
-    "volume_fp": "96436.85",
-    "yes_ask_dollars": "0.0800",
-    "yes_ask_size_fp": "53386.64",
-    "yes_bid_dollars": "0.0700",
-    "yes_bid_size_fp": "33854.01",
+    "volume_24h_fp": "96196.98",
+    "volume_fp": "112311.80",
+    "yes_ask_dollars": "0.2100",
+    "yes_ask_size_fp": "49000.03",
+    "yes_bid_dollars": "0.2000",
+    "yes_bid_size_fp": "16714.30",
     "yes_sub_title": "Sho Shimabukuro",
     "_event_title": "Shimabukuro vs Safiullin",
     "_event_ticker": "KXATPMATCH-26OCT20SHISAF",
@@ -2661,7 +2661,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2676,15 +2676,15 @@
     "expected_expiration_time": "2026-10-20T09:30:00Z",
     "expiration_time": "2026-11-03T06:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.9300",
+    "last_price_dollars": "0.8000",
     "latest_expiration_time": "2026-11-03T06:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.0800",
-    "no_bid_dollars": "0.0700",
+    "no_ask_dollars": "0.2100",
+    "no_bid_dollars": "0.2000",
     "no_sub_title": "Roman Safiullin",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T09:30:00Z",
-    "open_interest_fp": "18883.51",
+    "open_interest_fp": "27528.90",
     "open_time": "2026-10-19T06:36:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.8400",
@@ -2707,12 +2707,12 @@
     "ticker": "KXATPMATCH-26OCT20SHISAF-SAF",
     "title": "Roman Safiullin wins",
     "updated_time": "2026-10-19T06:36:00.149361Z",
-    "volume_24h_fp": "17837.45",
-    "volume_fp": "34420.45",
-    "yes_ask_dollars": "0.9300",
-    "yes_ask_size_fp": "51254.04",
-    "yes_bid_dollars": "0.9200",
-    "yes_bid_size_fp": "33754.03",
+    "volume_24h_fp": "34206.45",
+    "volume_fp": "45085.67",
+    "yes_ask_dollars": "0.8000",
+    "yes_ask_size_fp": "33348.61",
+    "yes_bid_dollars": "0.7900",
+    "yes_bid_size_fp": "30492.87",
     "yes_sub_title": "Roman Safiullin",
     "_event_title": "Shimabukuro vs Safiullin",
     "_event_ticker": "KXATPMATCH-26OCT20SHISAF",
@@ -2733,7 +2733,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2782,7 +2782,7 @@
     "volume_24h_fp": "2922.77",
     "volume_fp": "2922.77",
     "yes_ask_dollars": "0.5700",
-    "yes_ask_size_fp": "117502.13",
+    "yes_ask_size_fp": "117102.13",
     "yes_bid_dollars": "0.5600",
     "yes_bid_size_fp": "4.26",
     "yes_sub_title": "Nishesh Basavareddy",
@@ -2805,7 +2805,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2854,7 +2854,7 @@
     "volume_24h_fp": "1337.85",
     "volume_fp": "1337.85",
     "yes_ask_dollars": "0.4400",
-    "yes_ask_size_fp": "6353.31",
+    "yes_ask_size_fp": "353.31",
     "yes_bid_dollars": "0.4300",
     "yes_bid_size_fp": "20365.50",
     "yes_sub_title": "Raphael Collignon",
@@ -2877,7 +2877,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2949,7 +2949,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -2998,7 +2998,7 @@
     "volume_24h_fp": "1379.24",
     "volume_fp": "1379.24",
     "yes_ask_dollars": "0.4500",
-    "yes_ask_size_fp": "28086.51",
+    "yes_ask_size_fp": "26175.51",
     "yes_bid_dollars": "0.4400",
     "yes_bid_size_fp": "910.00",
     "yes_sub_title": "Kyrian Jacquet",
@@ -3021,7 +3021,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3044,7 +3044,7 @@
     "no_sub_title": "Arthur Fery",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T13:00:00Z",
-    "open_interest_fp": "4466.00",
+    "open_interest_fp": "4486.00",
     "open_time": "2026-10-19T14:16:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.0000",
@@ -3067,12 +3067,12 @@
     "ticker": "KXATPMATCH-26OCT20FERGOJ-FER",
     "title": "Arthur Fery wins",
     "updated_time": "2026-10-19T14:20:44.16188Z",
-    "volume_24h_fp": "4507.12",
-    "volume_fp": "4530.98",
+    "volume_24h_fp": "4530.98",
+    "volume_fp": "4550.98",
     "yes_ask_dollars": "0.6400",
-    "yes_ask_size_fp": "49104.87",
+    "yes_ask_size_fp": "49180.87",
     "yes_bid_dollars": "0.6300",
-    "yes_bid_size_fp": "1137.00",
+    "yes_bid_size_fp": "1124.00",
     "yes_sub_title": "Arthur Fery",
     "_event_title": "Fery vs Gojo",
     "_event_ticker": "KXATPMATCH-26OCT20FERGOJ",
@@ -3093,7 +3093,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3142,7 +3142,7 @@
     "volume_24h_fp": "24064.10",
     "volume_fp": "24064.10",
     "yes_ask_dollars": "0.3700",
-    "yes_ask_size_fp": "6093.42",
+    "yes_ask_size_fp": "5793.42",
     "yes_bid_dollars": "0.3600",
     "yes_bid_size_fp": "8098.77",
     "yes_sub_title": "Borna Gojo",
@@ -3165,7 +3165,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3237,7 +3237,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3309,7 +3309,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3355,12 +3355,12 @@
     "ticker": "KXATPMATCH-26OCT20HERBAE-HER",
     "title": "Pierre-Hugues Herbert wins",
     "updated_time": "2026-10-19T14:16:00.211435Z",
-    "volume_24h_fp": "13132.60",
+    "volume_24h_fp": "21143.60",
     "volume_fp": "21143.60",
     "yes_ask_dollars": "0.6100",
-    "yes_ask_size_fp": "33825.61",
+    "yes_ask_size_fp": "20860.52",
     "yes_bid_dollars": "0.6000",
-    "yes_bid_size_fp": "3287.19",
+    "yes_bid_size_fp": "4777.19",
     "yes_sub_title": "Pierre-Hugues Herbert",
     "_event_title": "Herbert vs Baez",
     "_event_ticker": "KXATPMATCH-26OCT20HERBAE",
@@ -3381,7 +3381,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3430,7 +3430,7 @@
     "volume_24h_fp": "18172.74",
     "volume_fp": "18172.74",
     "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "62533.62",
+    "yes_ask_size_fp": "53595.17",
     "yes_bid_dollars": "0.4000",
     "yes_bid_size_fp": "7.50",
     "yes_sub_title": "Sebastian Baez",
@@ -3453,7 +3453,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3499,12 +3499,12 @@
     "ticker": "KXATPMATCH-26OCT20VANCHI-VAN",
     "title": "Botic Van de Zandschulp wins",
     "updated_time": "2026-10-19T11:55:51.459943Z",
-    "volume_24h_fp": "18072.17",
+    "volume_24h_fp": "18076.67",
     "volume_fp": "18076.67",
     "yes_ask_dollars": "0.5700",
-    "yes_ask_size_fp": "36369.24",
+    "yes_ask_size_fp": "88786.87",
     "yes_bid_dollars": "0.5600",
-    "yes_bid_size_fp": "20638.26",
+    "yes_bid_size_fp": "8468.26",
     "yes_sub_title": "Botic Van de Zandschulp",
     "_event_title": "Van de Zandschulp vs Chidekh",
     "_event_ticker": "KXATPMATCH-26OCT20VANCHI",
@@ -3525,7 +3525,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3548,7 +3548,7 @@
     "no_sub_title": "Clement Chidekh",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T13:00:00Z",
-    "open_interest_fp": "28950.34",
+    "open_interest_fp": "28966.57",
     "open_time": "2026-10-19T10:06:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.0000",
@@ -3571,12 +3571,12 @@
     "ticker": "KXATPMATCH-26OCT20VANCHI-CHI",
     "title": "Clement Chidekh wins",
     "updated_time": "2026-10-19T11:55:51.459943Z",
-    "volume_24h_fp": "29184.10",
-    "volume_fp": "29238.64",
+    "volume_24h_fp": "29238.64",
+    "volume_fp": "29254.87",
     "yes_ask_dollars": "0.4300",
-    "yes_ask_size_fp": "49884.94",
+    "yes_ask_size_fp": "47368.71",
     "yes_bid_dollars": "0.4200",
-    "yes_bid_size_fp": "36429.47",
+    "yes_bid_size_fp": "42917.47",
     "yes_sub_title": "Clement Chidekh",
     "_event_title": "Van de Zandschulp vs Chidekh",
     "_event_ticker": "KXATPMATCH-26OCT20VANCHI",
@@ -3597,7 +3597,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3669,7 +3669,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3684,7 +3684,7 @@
     "expected_expiration_time": "2026-10-20T13:00:00Z",
     "expiration_time": "2026-11-03T10:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.3800",
+    "last_price_dollars": "0.3900",
     "latest_expiration_time": "2026-11-03T10:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6200",
@@ -3692,7 +3692,7 @@
     "no_sub_title": "Clement Tabur",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T13:00:00Z",
-    "open_interest_fp": "581.00",
+    "open_interest_fp": "593.29",
     "open_time": "2026-10-19T14:16:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.0000",
@@ -3716,11 +3716,11 @@
     "title": "Clement Tabur wins",
     "updated_time": "2026-10-19T14:20:47.505201Z",
     "volume_24h_fp": "592.88",
-    "volume_fp": "592.88",
+    "volume_fp": "605.17",
     "yes_ask_dollars": "0.3900",
-    "yes_ask_size_fp": "2375.44",
+    "yes_ask_size_fp": "2000.15",
     "yes_bid_dollars": "0.3800",
-    "yes_bid_size_fp": "2675.00",
+    "yes_bid_size_fp": "3038.00",
     "yes_sub_title": "Clement Tabur",
     "_event_title": "Van Assche vs Tabur",
     "_event_ticker": "KXATPMATCH-26OCT20VANTAB",
@@ -3741,7 +3741,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3813,7 +3813,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3885,7 +3885,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -3957,7 +3957,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4029,7 +4029,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "atp",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4044,15 +4044,15 @@
     "expected_expiration_time": "2026-10-19T04:00:00Z",
     "expiration_time": "2026-11-02T01:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5800",
+    "last_price_dollars": "0.7300",
     "latest_expiration_time": "2026-11-02T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4300",
-    "no_bid_dollars": "0.4200",
+    "no_ask_dollars": "0.2800",
+    "no_bid_dollars": "0.2600",
     "no_sub_title": "Maya Joint",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-19T04:00:00Z",
-    "open_interest_fp": "129047.48",
+    "open_interest_fp": "146479.56",
     "open_time": "2026-10-18T08:26:00Z",
     "previous_price_dollars": "0.4800",
     "previous_yes_ask_dollars": "0.4800",
@@ -4075,12 +4075,12 @@
     "ticker": "KXWTAMATCH-26OCT18JOISON-JOI",
     "title": "Maya Joint wins",
     "updated_time": "2026-10-20T06:10:44.005723Z",
-    "volume_24h_fp": "147610.70",
-    "volume_fp": "200908.15",
-    "yes_ask_dollars": "0.5800",
-    "yes_ask_size_fp": "36019.14",
-    "yes_bid_dollars": "0.5700",
-    "yes_bid_size_fp": "28906.34",
+    "volume_24h_fp": "198945.66",
+    "volume_fp": "244006.25",
+    "yes_ask_dollars": "0.7400",
+    "yes_ask_size_fp": "0.02",
+    "yes_bid_dollars": "0.7200",
+    "yes_bid_size_fp": "88.35",
     "yes_sub_title": "Maya Joint",
     "_event_title": "Joint vs Sonmez",
     "_event_ticker": "KXWTAMATCH-26OCT18JOISON",
@@ -4101,7 +4101,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4116,15 +4116,15 @@
     "expected_expiration_time": "2026-10-19T04:00:00Z",
     "expiration_time": "2026-11-02T01:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4300",
+    "last_price_dollars": "0.2800",
     "latest_expiration_time": "2026-11-02T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5800",
-    "no_bid_dollars": "0.5700",
+    "no_ask_dollars": "0.7300",
+    "no_bid_dollars": "0.7200",
     "no_sub_title": "Zeynep Sonmez",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-19T04:00:00Z",
-    "open_interest_fp": "181684.64",
+    "open_interest_fp": "199479.11",
     "open_time": "2026-10-18T08:26:00Z",
     "previous_price_dollars": "0.5400",
     "previous_yes_ask_dollars": "0.5300",
@@ -4147,12 +4147,12 @@
     "ticker": "KXWTAMATCH-26OCT18JOISON-SON",
     "title": "Zeynep Sonmez wins",
     "updated_time": "2026-10-20T06:10:44.005723Z",
-    "volume_24h_fp": "265179.75",
-    "volume_fp": "349710.26",
-    "yes_ask_dollars": "0.4300",
-    "yes_ask_size_fp": "41798.20",
-    "yes_bid_dollars": "0.4200",
-    "yes_bid_size_fp": "29405.62",
+    "volume_24h_fp": "348946.59",
+    "volume_fp": "417764.87",
+    "yes_ask_dollars": "0.2800",
+    "yes_ask_size_fp": "85.86",
+    "yes_bid_dollars": "0.2700",
+    "yes_bid_size_fp": "169.24",
     "yes_sub_title": "Zeynep Sonmez",
     "_event_title": "Joint vs Sonmez",
     "_event_ticker": "KXWTAMATCH-26OCT18JOISON",
@@ -4173,7 +4173,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4188,7 +4188,7 @@
     "expected_expiration_time": "2026-10-19T05:30:00Z",
     "expiration_time": "2026-11-02T02:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5600",
+    "last_price_dollars": "0.5700",
     "latest_expiration_time": "2026-11-02T02:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4400",
@@ -4196,7 +4196,7 @@
     "no_sub_title": "Katerina Siniakova",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-19T05:30:00Z",
-    "open_interest_fp": "22168.30",
+    "open_interest_fp": "22258.90",
     "open_time": "2026-10-18T02:35:00Z",
     "previous_price_dollars": "0.5700",
     "previous_yes_ask_dollars": "0.5600",
@@ -4218,13 +4218,13 @@
     "strike_type": "structured",
     "ticker": "KXWTAMATCH-26OCT18SINSTE-SIN",
     "title": "Katerina Siniakova wins",
-    "updated_time": "2026-10-20T07:16:05.39138Z",
-    "volume_24h_fp": "27563.09",
-    "volume_fp": "28301.15",
+    "updated_time": "2026-10-20T07:45:38.071731Z",
+    "volume_24h_fp": "27819.09",
+    "volume_fp": "28391.75",
     "yes_ask_dollars": "0.5700",
-    "yes_ask_size_fp": "16256.96",
+    "yes_ask_size_fp": "12234.36",
     "yes_bid_dollars": "0.5600",
-    "yes_bid_size_fp": "5638.18",
+    "yes_bid_size_fp": "11673.20",
     "yes_sub_title": "Katerina Siniakova",
     "_event_title": "Siniakova vs Stearns",
     "_event_ticker": "KXWTAMATCH-26OCT18SINSTE",
@@ -4245,7 +4245,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4264,11 +4264,11 @@
     "latest_expiration_time": "2026-11-02T02:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5700",
-    "no_bid_dollars": "0.5500",
+    "no_bid_dollars": "0.5600",
     "no_sub_title": "Peyton Stearns",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-19T05:30:00Z",
-    "open_interest_fp": "20611.15",
+    "open_interest_fp": "21503.90",
     "open_time": "2026-10-18T02:35:00Z",
     "previous_price_dollars": "0.4500",
     "previous_yes_ask_dollars": "0.4500",
@@ -4290,13 +4290,13 @@
     "strike_type": "structured",
     "ticker": "KXWTAMATCH-26OCT18SINSTE-STE",
     "title": "Peyton Stearns wins",
-    "updated_time": "2026-10-20T07:16:05.39138Z",
-    "volume_24h_fp": "23387.76",
-    "volume_fp": "24028.92",
-    "yes_ask_dollars": "0.4500",
-    "yes_ask_size_fp": "18773.95",
+    "updated_time": "2026-10-20T07:45:38.071731Z",
+    "volume_24h_fp": "23624.43",
+    "volume_fp": "24921.67",
+    "yes_ask_dollars": "0.4400",
+    "yes_ask_size_fp": "7825.97",
     "yes_bid_dollars": "0.4300",
-    "yes_bid_size_fp": "8634.88",
+    "yes_bid_size_fp": "10368.51",
     "yes_sub_title": "Peyton Stearns",
     "_event_title": "Siniakova vs Stearns",
     "_event_ticker": "KXWTAMATCH-26OCT18SINSTE",
@@ -4317,7 +4317,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4332,15 +4332,15 @@
     "expected_expiration_time": "2026-10-19T05:30:00Z",
     "expiration_time": "2026-11-02T02:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5600",
+    "last_price_dollars": "0.7400",
     "latest_expiration_time": "2026-11-02T02:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4500",
-    "no_bid_dollars": "0.4400",
+    "no_ask_dollars": "0.2800",
+    "no_bid_dollars": "0.2600",
     "no_sub_title": "Moyuka Uchijima",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-19T05:30:00Z",
-    "open_interest_fp": "309291.27",
+    "open_interest_fp": "301262.33",
     "open_time": "2026-10-18T02:36:00Z",
     "previous_price_dollars": "0.6100",
     "previous_yes_ask_dollars": "0.6100",
@@ -4363,12 +4363,12 @@
     "ticker": "KXWTAMATCH-26OCT18UCHSHI-UCH",
     "title": "Moyuka Uchijima wins",
     "updated_time": "2026-10-20T04:01:41.510951Z",
-    "volume_24h_fp": "919186.55",
-    "volume_fp": "1010902.76",
-    "yes_ask_dollars": "0.5600",
-    "yes_ask_size_fp": "33309.89",
-    "yes_bid_dollars": "0.5500",
-    "yes_bid_size_fp": "5227.32",
+    "volume_24h_fp": "1002655.40",
+    "volume_fp": "1086099.88",
+    "yes_ask_dollars": "0.7400",
+    "yes_ask_size_fp": "911.46",
+    "yes_bid_dollars": "0.7200",
+    "yes_bid_size_fp": "26222.71",
     "yes_sub_title": "Moyuka Uchijima",
     "_event_title": "Uchijima vs Shibahara",
     "_event_ticker": "KXWTAMATCH-26OCT18UCHSHI",
@@ -4389,7 +4389,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4404,15 +4404,15 @@
     "expected_expiration_time": "2026-10-19T05:30:00Z",
     "expiration_time": "2026-11-02T02:30:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4500",
+    "last_price_dollars": "0.2600",
     "latest_expiration_time": "2026-11-02T02:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5600",
-    "no_bid_dollars": "0.5500",
+    "no_ask_dollars": "0.7400",
+    "no_bid_dollars": "0.7300",
     "no_sub_title": "Ena Shibahara",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-19T05:30:00Z",
-    "open_interest_fp": "259007.53",
+    "open_interest_fp": "271698.72",
     "open_time": "2026-10-18T02:36:00Z",
     "previous_price_dollars": "0.4200",
     "previous_yes_ask_dollars": "0.4200",
@@ -4435,12 +4435,12 @@
     "ticker": "KXWTAMATCH-26OCT18UCHSHI-SHI",
     "title": "Ena Shibahara wins",
     "updated_time": "2026-10-20T04:01:41.510951Z",
-    "volume_24h_fp": "889096.57",
-    "volume_fp": "966947.83",
-    "yes_ask_dollars": "0.4500",
-    "yes_ask_size_fp": "17598.81",
-    "yes_bid_dollars": "0.4400",
-    "yes_bid_size_fp": "36199.37",
+    "volume_24h_fp": "966039.57",
+    "volume_fp": "1010357.12",
+    "yes_ask_dollars": "0.2700",
+    "yes_ask_size_fp": "25.01",
+    "yes_bid_dollars": "0.2600",
+    "yes_bid_size_fp": "3006.34",
     "yes_sub_title": "Ena Shibahara",
     "_event_title": "Uchijima vs Shibahara",
     "_event_ticker": "KXWTAMATCH-26OCT18UCHSHI",
@@ -4461,7 +4461,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4476,7 +4476,7 @@
     "expected_expiration_time": "2026-10-19T07:00:00Z",
     "expiration_time": "2026-11-02T04:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.2200",
+    "last_price_dollars": "0.2100",
     "latest_expiration_time": "2026-11-02T04:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.7900",
@@ -4484,7 +4484,7 @@
     "no_sub_title": "Hanyu Guo",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-19T07:00:00Z",
-    "open_interest_fp": "33522.89",
+    "open_interest_fp": "33521.52",
     "open_time": "2026-10-18T04:06:00Z",
     "previous_price_dollars": "0.2300",
     "previous_yes_ask_dollars": "0.2300",
@@ -4507,12 +4507,12 @@
     "ticker": "KXWTAMATCH-26OCT19GUOALE-GUO",
     "title": "Hanyu Guo wins",
     "updated_time": "2026-10-19T10:01:41.354957Z",
-    "volume_24h_fp": "31762.28",
-    "volume_fp": "35298.33",
+    "volume_24h_fp": "32137.29",
+    "volume_fp": "35299.70",
     "yes_ask_dollars": "0.2200",
-    "yes_ask_size_fp": "31769.30",
+    "yes_ask_size_fp": "32132.30",
     "yes_bid_dollars": "0.2100",
-    "yes_bid_size_fp": "1834.00",
+    "yes_bid_size_fp": "1469.63",
     "yes_sub_title": "Hanyu Guo",
     "_event_title": "Guo vs Alexandrova",
     "_event_ticker": "KXWTAMATCH-26OCT19GUOALE",
@@ -4533,7 +4533,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4579,7 +4579,7 @@
     "ticker": "KXWTAMATCH-26OCT19GUOALE-ALE",
     "title": "Ekaterina Alexandrova wins",
     "updated_time": "2026-10-19T10:01:41.354957Z",
-    "volume_24h_fp": "2788.77",
+    "volume_24h_fp": "2825.77",
     "volume_fp": "4995.26",
     "yes_ask_dollars": "0.7900",
     "yes_ask_size_fp": "2792.49",
@@ -4605,7 +4605,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4620,15 +4620,15 @@
     "expected_expiration_time": "2026-10-19T07:00:00Z",
     "expiration_time": "2026-11-02T04:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4300",
+    "last_price_dollars": "0.4200",
     "latest_expiration_time": "2026-11-02T04:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5900",
-    "no_bid_dollars": "0.5700",
+    "no_bid_dollars": "0.5800",
     "no_sub_title": "Jelena Ostapenko",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-19T07:00:00Z",
-    "open_interest_fp": "22940.91",
+    "open_interest_fp": "23599.24",
     "open_time": "2026-10-18T04:06:00Z",
     "previous_price_dollars": "0.4600",
     "previous_yes_ask_dollars": "0.4600",
@@ -4651,12 +4651,12 @@
     "ticker": "KXWTAMATCH-26OCT19OSTBEN-OST",
     "title": "Jelena Ostapenko wins",
     "updated_time": "2026-10-20T07:41:33.264193Z",
-    "volume_24h_fp": "16037.29",
-    "volume_fp": "24781.66",
-    "yes_ask_dollars": "0.4300",
-    "yes_ask_size_fp": "33242.01",
+    "volume_24h_fp": "17492.04",
+    "volume_fp": "25439.99",
+    "yes_ask_dollars": "0.4200",
+    "yes_ask_size_fp": "8919.09",
     "yes_bid_dollars": "0.4100",
-    "yes_bid_size_fp": "14664.15",
+    "yes_bid_size_fp": "12111.60",
     "yes_sub_title": "Jelena Ostapenko",
     "_event_title": "Ostapenko vs Bencic",
     "_event_ticker": "KXWTAMATCH-26OCT19OSTBEN",
@@ -4677,7 +4677,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4695,12 +4695,12 @@
     "last_price_dollars": "0.5900",
     "latest_expiration_time": "2026-11-02T04:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4300",
+    "no_ask_dollars": "0.4200",
     "no_bid_dollars": "0.4100",
     "no_sub_title": "Belinda Bencic",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-19T07:00:00Z",
-    "open_interest_fp": "34478.96",
+    "open_interest_fp": "34523.96",
     "open_time": "2026-10-18T04:06:00Z",
     "previous_price_dollars": "0.5600",
     "previous_yes_ask_dollars": "0.5500",
@@ -4723,12 +4723,12 @@
     "ticker": "KXWTAMATCH-26OCT19OSTBEN-BEN",
     "title": "Belinda Bencic wins",
     "updated_time": "2026-10-20T07:41:33.264193Z",
-    "volume_24h_fp": "35142.85",
-    "volume_fp": "37731.35",
+    "volume_24h_fp": "35828.80",
+    "volume_fp": "37776.35",
     "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "54143.31",
-    "yes_bid_dollars": "0.5700",
-    "yes_bid_size_fp": "12191.32",
+    "yes_ask_size_fp": "38134.69",
+    "yes_bid_dollars": "0.5800",
+    "yes_bid_size_fp": "3259.00",
     "yes_sub_title": "Belinda Bencic",
     "_event_title": "Ostapenko vs Bencic",
     "_event_ticker": "KXWTAMATCH-26OCT19OSTBEN",
@@ -4749,7 +4749,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4764,15 +4764,15 @@
     "expected_expiration_time": "2026-10-20T05:00:00Z",
     "expiration_time": "2026-11-03T02:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5100",
+    "last_price_dollars": "0.5000",
     "latest_expiration_time": "2026-11-03T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4900",
-    "no_bid_dollars": "0.4800",
+    "no_ask_dollars": "0.5100",
+    "no_bid_dollars": "0.5000",
     "no_sub_title": "Cristina Bucsa",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T05:00:00Z",
-    "open_interest_fp": "16151.24",
+    "open_interest_fp": "16382.24",
     "open_time": "2026-10-19T02:06:00Z",
     "previous_price_dollars": "0.5200",
     "previous_yes_ask_dollars": "0.5100",
@@ -4795,12 +4795,12 @@
     "ticker": "KXWTAMATCH-26OCT19BUCKUD-BUC",
     "title": "Cristina Bucsa wins",
     "updated_time": "2026-10-20T07:25:43.296231Z",
-    "volume_24h_fp": "16583.74",
-    "volume_fp": "17360.51",
-    "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "13095.85",
-    "yes_bid_dollars": "0.5100",
-    "yes_bid_size_fp": "4990.00",
+    "volume_24h_fp": "17267.87",
+    "volume_fp": "17602.81",
+    "yes_ask_dollars": "0.5000",
+    "yes_ask_size_fp": "48.43",
+    "yes_bid_dollars": "0.4900",
+    "yes_bid_size_fp": "150.00",
     "yes_sub_title": "Cristina Bucsa",
     "_event_title": "Bucsa vs Kudermetova",
     "_event_ticker": "KXWTAMATCH-26OCT19BUCKUD",
@@ -4821,7 +4821,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4836,15 +4836,15 @@
     "expected_expiration_time": "2026-10-20T05:00:00Z",
     "expiration_time": "2026-11-03T02:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4900",
+    "last_price_dollars": "0.5100",
     "latest_expiration_time": "2026-11-03T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5200",
-    "no_bid_dollars": "0.5100",
+    "no_ask_dollars": "0.5100",
+    "no_bid_dollars": "0.4700",
     "no_sub_title": "Polina Kudermetova",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T05:00:00Z",
-    "open_interest_fp": "46242.84",
+    "open_interest_fp": "46583.62",
     "open_time": "2026-10-19T02:06:00Z",
     "previous_price_dollars": "0.5000",
     "previous_yes_ask_dollars": "0.5000",
@@ -4867,12 +4867,12 @@
     "ticker": "KXWTAMATCH-26OCT19BUCKUD-KUD",
     "title": "Polina Kudermetova wins",
     "updated_time": "2026-10-20T07:25:43.296231Z",
-    "volume_24h_fp": "58138.65",
-    "volume_fp": "58653.23",
-    "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "7387.63",
-    "yes_bid_dollars": "0.4800",
-    "yes_bid_size_fp": "14354.50",
+    "volume_24h_fp": "58535.62",
+    "volume_fp": "58994.01",
+    "yes_ask_dollars": "0.5300",
+    "yes_ask_size_fp": "58.05",
+    "yes_bid_dollars": "0.4900",
+    "yes_bid_size_fp": "35.00",
     "yes_sub_title": "Polina Kudermetova",
     "_event_title": "Bucsa vs Kudermetova",
     "_event_ticker": "KXWTAMATCH-26OCT19BUCKUD",
@@ -4893,7 +4893,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -4939,12 +4939,12 @@
     "ticker": "KXWTAMATCH-26OCT19KAWSNI-KAW",
     "title": "Katarzyna Kawa wins",
     "updated_time": "2026-10-20T07:31:01.783923Z",
-    "volume_24h_fp": "13217.24",
+    "volume_24h_fp": "13234.85",
     "volume_fp": "13234.85",
     "yes_ask_dollars": "0.2700",
     "yes_ask_size_fp": "471.80",
     "yes_bid_dollars": "0.2600",
-    "yes_bid_size_fp": "9217.52",
+    "yes_bid_size_fp": "7900.52",
     "yes_sub_title": "Katarzyna Kawa",
     "_event_title": "Kawa vs Snigur",
     "_event_ticker": "KXWTAMATCH-26OCT19KAWSNI",
@@ -4965,7 +4965,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5012,11 +5012,11 @@
     "title": "Daria Snigur wins",
     "updated_time": "2026-10-20T07:31:01.783923Z",
     "volume_24h_fp": "3025.55",
-    "volume_fp": "3025.55",
+    "volume_fp": "3048.55",
     "yes_ask_dollars": "0.7400",
-    "yes_ask_size_fp": "53941.86",
+    "yes_ask_size_fp": "40967.05",
     "yes_bid_dollars": "0.7300",
-    "yes_bid_size_fp": "620.00",
+    "yes_bid_size_fp": "570.00",
     "yes_sub_title": "Daria Snigur",
     "_event_title": "Kawa vs Snigur",
     "_event_ticker": "KXWTAMATCH-26OCT19KAWSNI",
@@ -5037,7 +5037,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5060,7 +5060,7 @@
     "no_sub_title": "Jasmine Paolini",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T05:00:00Z",
-    "open_interest_fp": "21625.90",
+    "open_interest_fp": "22348.11",
     "open_time": "2026-10-19T02:06:00Z",
     "previous_price_dollars": "0.6600",
     "previous_yes_ask_dollars": "0.6700",
@@ -5083,12 +5083,12 @@
     "ticker": "KXWTAMATCH-26OCT19PAOKAL-PAO",
     "title": "Jasmine Paolini wins",
     "updated_time": "2026-10-20T07:41:34.519725Z",
-    "volume_24h_fp": "18262.86",
-    "volume_fp": "21907.58",
+    "volume_24h_fp": "21894.62",
+    "volume_fp": "22629.79",
     "yes_ask_dollars": "0.6900",
-    "yes_ask_size_fp": "43499.97",
+    "yes_ask_size_fp": "42851.15",
     "yes_bid_dollars": "0.6800",
-    "yes_bid_size_fp": "14114.83",
+    "yes_bid_size_fp": "1705.81",
     "yes_sub_title": "Jasmine Paolini",
     "_event_title": "Paolini vs Kalinina",
     "_event_ticker": "KXWTAMATCH-26OCT19PAOKAL",
@@ -5109,7 +5109,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5132,7 +5132,7 @@
     "no_sub_title": "Anhelina Kalinina",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T05:00:00Z",
-    "open_interest_fp": "1950.11",
+    "open_interest_fp": "1965.02",
     "open_time": "2026-10-19T02:06:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.3500",
@@ -5155,12 +5155,12 @@
     "ticker": "KXWTAMATCH-26OCT19PAOKAL-KAL",
     "title": "Anhelina Kalinina wins",
     "updated_time": "2026-10-20T07:41:34.519725Z",
-    "volume_24h_fp": "2159.02",
-    "volume_fp": "2454.02",
+    "volume_24h_fp": "2454.02",
+    "volume_fp": "2468.93",
     "yes_ask_dollars": "0.3200",
-    "yes_ask_size_fp": "14617.23",
+    "yes_ask_size_fp": "2481.00",
     "yes_bid_dollars": "0.3100",
-    "yes_bid_size_fp": "11814.58",
+    "yes_bid_size_fp": "15478.58",
     "yes_sub_title": "Anhelina Kalinina",
     "_event_title": "Paolini vs Kalinina",
     "_event_ticker": "KXWTAMATCH-26OCT19PAOKAL",
@@ -5181,7 +5181,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5196,15 +5196,15 @@
     "expected_expiration_time": "2026-10-20T08:40:00Z",
     "expiration_time": "2026-11-03T05:40:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.7100",
+    "last_price_dollars": "0.6800",
     "latest_expiration_time": "2026-11-03T05:40:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.2900",
-    "no_bid_dollars": "0.2800",
+    "no_ask_dollars": "0.3100",
+    "no_bid_dollars": "0.3000",
     "no_sub_title": "Kayla Day",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T08:40:00Z",
-    "open_interest_fp": "72884.13",
+    "open_interest_fp": "76371.63",
     "open_time": "2026-10-20T04:26:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.0000",
@@ -5227,12 +5227,12 @@
     "ticker": "KXWTAMATCH-26OCT20DAYKEN-DAY",
     "title": "Kayla Day wins",
     "updated_time": "2026-10-20T07:21:12.837172Z",
-    "volume_24h_fp": "6496.56",
-    "volume_fp": "73536.49",
-    "yes_ask_dollars": "0.7200",
-    "yes_ask_size_fp": "15504.21",
-    "yes_bid_dollars": "0.7100",
-    "yes_bid_size_fp": "9034.13",
+    "volume_24h_fp": "73451.40",
+    "volume_fp": "77225.73",
+    "yes_ask_dollars": "0.7000",
+    "yes_ask_size_fp": "11989.00",
+    "yes_bid_dollars": "0.6900",
+    "yes_bid_size_fp": "19843.64",
     "yes_sub_title": "Kayla Day",
     "_event_title": "Day vs Kenin",
     "_event_ticker": "KXWTAMATCH-26OCT20DAYKEN",
@@ -5253,7 +5253,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5268,15 +5268,15 @@
     "expected_expiration_time": "2026-10-20T08:40:00Z",
     "expiration_time": "2026-11-03T05:40:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.2900",
+    "last_price_dollars": "0.3100",
     "latest_expiration_time": "2026-11-03T05:40:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7200",
-    "no_bid_dollars": "0.7100",
+    "no_ask_dollars": "0.7000",
+    "no_bid_dollars": "0.6900",
     "no_sub_title": "Sofia Kenin",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T08:40:00Z",
-    "open_interest_fp": "5929.25",
+    "open_interest_fp": "7764.96",
     "open_time": "2026-10-20T04:26:00Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.0000",
@@ -5299,12 +5299,12 @@
     "ticker": "KXWTAMATCH-26OCT20DAYKEN-KEN",
     "title": "Sofia Kenin wins",
     "updated_time": "2026-10-20T07:21:12.837172Z",
-    "volume_24h_fp": "1094.33",
-    "volume_fp": "6639.80",
-    "yes_ask_dollars": "0.2900",
-    "yes_ask_size_fp": "10748.80",
-    "yes_bid_dollars": "0.2800",
-    "yes_bid_size_fp": "11330.17",
+    "volume_24h_fp": "6623.38",
+    "volume_fp": "9117.65",
+    "yes_ask_dollars": "0.3100",
+    "yes_ask_size_fp": "20374.84",
+    "yes_bid_dollars": "0.3000",
+    "yes_bid_size_fp": "9775.00",
     "yes_sub_title": "Sofia Kenin",
     "_event_title": "Day vs Kenin",
     "_event_ticker": "KXWTAMATCH-26OCT20DAYKEN",
@@ -5325,7 +5325,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5397,7 +5397,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5469,7 +5469,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5541,7 +5541,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5587,12 +5587,12 @@
     "ticker": "KXWTAMATCH-26OCT20GIBKRA-KRA",
     "title": "Sinja Kraus wins",
     "updated_time": "2026-10-20T02:36:00.189536Z",
-    "volume_24h_fp": "23.10",
+    "volume_24h_fp": "138.10",
     "volume_fp": "138.10",
     "yes_ask_dollars": "0.4300",
     "yes_ask_size_fp": "7864.67",
     "yes_bid_dollars": "0.3900",
-    "yes_bid_size_fp": "3296.00",
+    "yes_bid_size_fp": "3241.00",
     "yes_sub_title": "Sinja Kraus",
     "_event_title": "Gibson vs Kraus",
     "_event_ticker": "KXWTAMATCH-26OCT20GIBKRA",
@@ -5613,7 +5613,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5685,7 +5685,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5757,7 +5757,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5829,7 +5829,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5901,7 +5901,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5973,7 +5973,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -5991,8 +5991,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-11-04T05:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8700",
-    "no_bid_dollars": "0.3900",
+    "no_ask_dollars": "0.8500",
+    "no_bid_dollars": "0.7400",
     "no_sub_title": "Anastasia Zakharova",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T08:00:00Z",
@@ -6021,10 +6021,10 @@
     "updated_time": "2026-10-20T05:26:00.272292Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.6100",
-    "yes_ask_size_fp": "15.00",
-    "yes_bid_dollars": "0.1300",
-    "yes_bid_size_fp": "6.00",
+    "yes_ask_dollars": "0.2600",
+    "yes_ask_size_fp": "5.00",
+    "yes_bid_dollars": "0.1500",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Anastasia Zakharova",
     "_event_title": "Bouzkova vs Zakharova",
     "_event_ticker": "KXWTAMATCH-26OCT21BOUZAK",
@@ -6045,7 +6045,295 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-11-04T05:00:00Z",
+    "created_time": "2026-10-20T07:41:17.075434Z",
+    "custom_strike": {
+      "tennis_competitor": "d3eb0e9d-4691-4077-ae7a-083d098920c5"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXWTAMATCH-26OCT21CIRBEJ",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-21T08:00:00Z",
+    "expiration_time": "2026-11-04T05:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.0000",
+    "latest_expiration_time": "2026-11-04T05:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.9200",
+    "no_bid_dollars": "0.0700",
+    "no_sub_title": "Sorana Cirstea",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-21T08:00:00Z",
+    "open_interest_fp": "0.00",
+    "open_time": "2026-10-20T07:45:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Sorana Cirstea wins the Cirstea vs Bejlek professional tennis match in the 2026 WTA Ningbo Round Of 16 after a ball has been played, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Cirstea vs Bejlek professional tennis match in the 2026 WTA Ningbo Round Of 16 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 60,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXWTAMATCH-26OCT21CIRBEJ-CIR",
+    "title": "Sorana Cirstea wins",
+    "updated_time": "2026-10-20T07:45:00.139621Z",
+    "volume_24h_fp": "0.00",
+    "volume_fp": "0.00",
+    "yes_ask_dollars": "0.9300",
+    "yes_ask_size_fp": "200.00",
+    "yes_bid_dollars": "0.0800",
+    "yes_bid_size_fp": "200.00",
+    "yes_sub_title": "Sorana Cirstea",
+    "_event_title": "Cirstea vs Bejlek",
+    "_event_ticker": "KXWTAMATCH-26OCT21CIRBEJ",
+    "_event_id": "KXWTAMATCH-26OCT21CIRBEJ",
+    "_event_metadata": {
+      "competition": "WTA Ningbo",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-21T08:00:00Z",
+    "_event_milestone": {},
+    "_series_title": "WTA Tennis Match",
+    "_native_league": "wta",
+    "_settlement_sources": [
+      {
+        "name": "WTA",
+        "url": "https://www.wtatennis.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
+    "_native_competition": "wta",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-11-04T05:00:00Z",
+    "created_time": "2026-10-20T07:41:17.075434Z",
+    "custom_strike": {
+      "tennis_competitor": "67be391a-6c01-4124-a511-8f447228ec9d"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXWTAMATCH-26OCT21CIRBEJ",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-21T08:00:00Z",
+    "expiration_time": "2026-11-04T05:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.0000",
+    "latest_expiration_time": "2026-11-04T05:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.9200",
+    "no_bid_dollars": "0.0700",
+    "no_sub_title": "Sara Bejlek",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-21T08:00:00Z",
+    "open_interest_fp": "0.00",
+    "open_time": "2026-10-20T07:45:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Sara Bejlek wins the Cirstea vs Bejlek professional tennis match in the 2026 WTA Ningbo Round Of 16 after a ball has been played, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Cirstea vs Bejlek professional tennis match in the 2026 WTA Ningbo Round Of 16 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 60,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXWTAMATCH-26OCT21CIRBEJ-BEJ",
+    "title": "Sara Bejlek wins",
+    "updated_time": "2026-10-20T07:45:00.139621Z",
+    "volume_24h_fp": "0.00",
+    "volume_fp": "0.00",
+    "yes_ask_dollars": "0.9300",
+    "yes_ask_size_fp": "200.00",
+    "yes_bid_dollars": "0.0800",
+    "yes_bid_size_fp": "200.00",
+    "yes_sub_title": "Sara Bejlek",
+    "_event_title": "Cirstea vs Bejlek",
+    "_event_ticker": "KXWTAMATCH-26OCT21CIRBEJ",
+    "_event_id": "KXWTAMATCH-26OCT21CIRBEJ",
+    "_event_metadata": {
+      "competition": "WTA Ningbo",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-21T08:00:00Z",
+    "_event_milestone": {},
+    "_series_title": "WTA Tennis Match",
+    "_native_league": "wta",
+    "_settlement_sources": [
+      {
+        "name": "WTA",
+        "url": "https://www.wtatennis.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
+    "_native_competition": "wta",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-11-04T05:00:00Z",
+    "created_time": "2026-10-20T07:41:17.605313Z",
+    "custom_strike": {
+      "tennis_competitor": "b6d7e0eb-1cd2-4b04-8c23-f1faaccbe631"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXWTAMATCH-26OCT21EALSHN",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-21T08:00:00Z",
+    "expiration_time": "2026-11-04T05:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.0000",
+    "latest_expiration_time": "2026-11-04T05:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.9200",
+    "no_bid_dollars": "0.0700",
+    "no_sub_title": "Alexandra Eala",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-21T08:00:00Z",
+    "open_interest_fp": "0.00",
+    "open_time": "2026-10-20T07:46:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Alexandra Eala wins the Eala vs Shnaider professional tennis match in the 2026 WTA Ningbo Round Of 16 after a ball has been played, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Eala vs Shnaider professional tennis match in the 2026 WTA Ningbo Round Of 16 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 60,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXWTAMATCH-26OCT21EALSHN-EAL",
+    "title": "Alexandra Eala wins",
+    "updated_time": "2026-10-20T07:46:00.140625Z",
+    "volume_24h_fp": "0.00",
+    "volume_fp": "0.00",
+    "yes_ask_dollars": "0.9300",
+    "yes_ask_size_fp": "200.00",
+    "yes_bid_dollars": "0.0800",
+    "yes_bid_size_fp": "200.00",
+    "yes_sub_title": "Alexandra Eala",
+    "_event_title": "Eala vs Shnaider",
+    "_event_ticker": "KXWTAMATCH-26OCT21EALSHN",
+    "_event_id": "KXWTAMATCH-26OCT21EALSHN",
+    "_event_metadata": {
+      "competition": "WTA Ningbo",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-21T08:00:00Z",
+    "_event_milestone": {},
+    "_series_title": "WTA Tennis Match",
+    "_native_league": "wta",
+    "_settlement_sources": [
+      {
+        "name": "WTA",
+        "url": "https://www.wtatennis.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
+    "_native_competition": "wta",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "can_close_early": true,
+    "close_time": "2026-11-04T05:00:00Z",
+    "created_time": "2026-10-20T07:41:17.605313Z",
+    "custom_strike": {
+      "tennis_competitor": "af6bf52a-0c5a-48c9-9deb-61699321b95a"
+    },
+    "early_close_condition": "This market will close and expire after a winner is declared.",
+    "event_ticker": "KXWTAMATCH-26OCT21EALSHN",
+    "exchange_index": 3,
+    "expected_expiration_time": "2026-10-21T08:00:00Z",
+    "expiration_time": "2026-11-04T05:00:00Z",
+    "expiration_value": "",
+    "last_price_dollars": "0.0000",
+    "latest_expiration_time": "2026-11-04T05:00:00Z",
+    "market_type": "binary",
+    "no_ask_dollars": "0.9200",
+    "no_bid_dollars": "0.0700",
+    "no_sub_title": "Diana Shnaider",
+    "notional_value_dollars": "1.0000",
+    "occurrence_datetime": "2026-10-21T08:00:00Z",
+    "open_interest_fp": "0.00",
+    "open_time": "2026-10-20T07:46:00Z",
+    "previous_price_dollars": "0.0000",
+    "previous_yes_ask_dollars": "0.0000",
+    "previous_yes_bid_dollars": "0.0000",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "result": "",
+    "rules_primary": "If Diana Shnaider wins the Eala vs Shnaider professional tennis match in the 2026 WTA Ningbo Round Of 16 after a ball has been played, then the market resolves to Yes.",
+    "rules_secondary": "The following market refers to the Eala vs Shnaider professional tennis match in the 2026 WTA Ningbo Round Of 16 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
+    "settlement_bounds_type": "default",
+    "settlement_timer_seconds": 60,
+    "status": "active",
+    "strike_type": "structured",
+    "ticker": "KXWTAMATCH-26OCT21EALSHN-SHN",
+    "title": "Diana Shnaider wins",
+    "updated_time": "2026-10-20T07:46:00.140625Z",
+    "volume_24h_fp": "0.00",
+    "volume_fp": "0.00",
+    "yes_ask_dollars": "0.9300",
+    "yes_ask_size_fp": "200.00",
+    "yes_bid_dollars": "0.0800",
+    "yes_bid_size_fp": "200.00",
+    "yes_sub_title": "Diana Shnaider",
+    "_event_title": "Eala vs Shnaider",
+    "_event_ticker": "KXWTAMATCH-26OCT21EALSHN",
+    "_event_id": "KXWTAMATCH-26OCT21EALSHN",
+    "_event_metadata": {
+      "competition": "WTA Ningbo",
+      "competition_scope": "Game"
+    },
+    "_event_start_time": "2026-10-21T08:00:00Z",
+    "_event_milestone": {},
+    "_series_title": "WTA Tennis Match",
+    "_native_league": "wta",
+    "_settlement_sources": [
+      {
+        "name": "WTA",
+        "url": "https://www.wtatennis.com/"
+      }
+    ],
+    "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
+    "_native_competition": "wta",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -6091,10 +6379,10 @@
     "ticker": "KXWTAMATCH-26OCT21FERSAS-FER",
     "title": "Leylah Fernandez wins",
     "updated_time": "2026-10-20T05:06:00.28601Z",
-    "volume_24h_fp": "0.00",
+    "volume_24h_fp": "14.00",
     "volume_fp": "14.00",
     "yes_ask_dollars": "0.6600",
-    "yes_ask_size_fp": "68.73",
+    "yes_ask_size_fp": "38.73",
     "yes_bid_dollars": "0.6500",
     "yes_bid_size_fp": "15.00",
     "yes_sub_title": "Leylah Fernandez",
@@ -6117,7 +6405,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "can_close_early": true,
@@ -6189,6 +6477,6 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
     "_native_competition": "wta",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   }
 ]

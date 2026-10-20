@@ -1,5 +1,5 @@
 # Collect Kalshi and Polymarket match winners, audit contract compatibility, and publish the sports terminal.
-
+##update: python3 run.py --snapshot-dir=output/data --refresh-quotes
 from __future__ import annotations
 
 import csv
@@ -754,6 +754,7 @@ def main() -> int:
     review_count = len(fixture_review) + len(market_review)
     quality = {
         "Run type": "LIVE" if live_quotes else "REPLAY",
+        "Quotes checked at": quotes_checked_at.isoformat(timespec="seconds"),
         "Venue coverage": f"{complete_count}/{len(VENUES)} complete",
         "Critical safety audit": "PASS",
         "Review queue": f"{review_count} item" + ("" if review_count == 1 else "s"),
@@ -806,7 +807,9 @@ def main() -> int:
         say(f"  {len(advisories)} advisory finding(s); see output/data/audit_report.txt")
     say(f"  Open: {report_path.resolve()}")
     say(f"  Auditable snapshot: {snapshot_path.resolve()}")
-    if not NO_OPEN:
+    if NO_OPEN:
+        say("  Browser opening skipped (--no-open). An open updated report follows new publications automatically.")
+    else:
         try:
             opened = webbrowser.open(report_path.resolve().as_uri())
             say("  Opened in your default browser." if opened

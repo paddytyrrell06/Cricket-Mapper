@@ -20,7 +20,7 @@
     "no_sub_title": "Boston",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T22:00:00Z",
-    "open_interest_fp": "113576.14",
+    "open_interest_fp": "114138.82",
     "open_time": "2026-08-20T15:28:00Z",
     "previous_price_dollars": "0.5200",
     "previous_yes_ask_dollars": "0.5200",
@@ -43,10 +43,10 @@
     "ticker": "KXNBAGAME-26OCT20BOSDET-BOS",
     "title": "Boston wins",
     "updated_time": "2026-09-25T16:51:11.406686Z",
-    "volume_24h_fp": "86729.20",
-    "volume_fp": "143518.73",
+    "volume_24h_fp": "89692.08",
+    "volume_fp": "144081.41",
     "yes_ask_dollars": "0.5300",
-    "yes_ask_size_fp": "449051.07",
+    "yes_ask_size_fp": "448488.39",
     "yes_bid_dollars": "0.5200",
     "yes_bid_size_fp": "26267.06",
     "yes_sub_title": "Boston",
@@ -163,7 +163,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -186,7 +186,7 @@
     "no_sub_title": "Detroit",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-20T22:00:00Z",
-    "open_interest_fp": "134666.17",
+    "open_interest_fp": "135132.57",
     "open_time": "2026-08-20T15:28:00Z",
     "previous_price_dollars": "0.4900",
     "previous_yes_ask_dollars": "0.4900",
@@ -209,12 +209,12 @@
     "ticker": "KXNBAGAME-26OCT20BOSDET-DET",
     "title": "Detroit wins",
     "updated_time": "2026-09-25T16:51:11.41443Z",
-    "volume_24h_fp": "156623.10",
-    "volume_fp": "196554.42",
+    "volume_24h_fp": "157025.71",
+    "volume_fp": "197020.82",
     "yes_ask_dollars": "0.4800",
-    "yes_ask_size_fp": "440498.22",
+    "yes_ask_size_fp": "440031.82",
     "yes_bid_dollars": "0.4700",
-    "yes_bid_size_fp": "32399.71",
+    "yes_bid_size_fp": "32389.45",
     "yes_sub_title": "Detroit",
     "_event_title": "Boston vs Detroit",
     "_event_ticker": "KXNBAGAME-26OCT20BOSDET",
@@ -329,7 +329,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -352,9 +352,9 @@
     "no_sub_title": "Philadelphia",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "271181.92",
+    "open_interest_fp": "271428.02",
     "open_time": "2026-08-20T15:28:00Z",
-    "previous_price_dollars": "0.3800",
+    "previous_price_dollars": "0.3900",
     "previous_yes_ask_dollars": "0.3900",
     "previous_yes_bid_dollars": "0.3800",
     "price_level_structure": "linear_cent",
@@ -375,12 +375,12 @@
     "ticker": "KXNBAGAME-26OCT20PHINYK-PHI",
     "title": "Philadelphia wins",
     "updated_time": "2026-09-25T16:51:26.336061Z",
-    "volume_24h_fp": "157694.30",
-    "volume_fp": "318169.05",
+    "volume_24h_fp": "158101.11",
+    "volume_fp": "318415.54",
     "yes_ask_dollars": "0.3900",
-    "yes_ask_size_fp": "248681.33",
+    "yes_ask_size_fp": "248614.36",
     "yes_bid_dollars": "0.3800",
-    "yes_bid_size_fp": "30537.49",
+    "yes_bid_size_fp": "30537.10",
     "yes_sub_title": "Philadelphia",
     "_event_title": "Philadelphia vs New York",
     "_event_ticker": "KXNBAGAME-26OCT20PHINYK",
@@ -493,7 +493,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -516,7 +516,7 @@
     "no_sub_title": "New York",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T02:00:00Z",
-    "open_interest_fp": "122976.45",
+    "open_interest_fp": "123007.87",
     "open_time": "2026-08-20T15:28:00Z",
     "previous_price_dollars": "0.6100",
     "previous_yes_ask_dollars": "0.6200",
@@ -539,12 +539,12 @@
     "ticker": "KXNBAGAME-26OCT20PHINYK-NYK",
     "title": "New York wins",
     "updated_time": "2026-09-25T16:51:26.340848Z",
-    "volume_24h_fp": "109125.54",
-    "volume_fp": "161176.16",
+    "volume_24h_fp": "109281.94",
+    "volume_fp": "161207.58",
     "yes_ask_dollars": "0.6200",
-    "yes_ask_size_fp": "132112.51",
+    "yes_ask_size_fp": "132081.09",
     "yes_bid_dollars": "0.6100",
-    "yes_bid_size_fp": "40106.23",
+    "yes_bid_size_fp": "40643.78",
     "yes_sub_title": "New York",
     "_event_title": "Philadelphia vs New York",
     "_event_ticker": "KXNBAGAME-26OCT20PHINYK",
@@ -657,7 +657,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -680,7 +680,7 @@
     "no_sub_title": "Oklahoma City",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T04:30:00Z",
-    "open_interest_fp": "37436.53",
+    "open_interest_fp": "37740.86",
     "open_time": "2026-08-20T15:28:00Z",
     "previous_price_dollars": "0.4500",
     "previous_yes_ask_dollars": "0.4500",
@@ -703,10 +703,10 @@
     "ticker": "KXNBAGAME-26OCT20OKCSAS-OKC",
     "title": "Oklahoma City wins",
     "updated_time": "2026-09-25T16:52:23.404685Z",
-    "volume_24h_fp": "22535.78",
-    "volume_fp": "50067.70",
+    "volume_24h_fp": "22588.97",
+    "volume_fp": "50372.03",
     "yes_ask_dollars": "0.5000",
-    "yes_ask_size_fp": "79227.05",
+    "yes_ask_size_fp": "82085.72",
     "yes_bid_dollars": "0.4900",
     "yes_bid_size_fp": "28166.60",
     "yes_sub_title": "Oklahoma City",
@@ -821,7 +821,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -844,7 +844,7 @@
     "no_sub_title": "San Antonio",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-21T04:30:00Z",
-    "open_interest_fp": "85463.26",
+    "open_interest_fp": "85561.73",
     "open_time": "2026-08-20T15:28:00Z",
     "previous_price_dollars": "0.5600",
     "previous_yes_ask_dollars": "0.5600",
@@ -867,12 +867,12 @@
     "ticker": "KXNBAGAME-26OCT20OKCSAS-SAS",
     "title": "San Antonio wins",
     "updated_time": "2026-09-25T16:52:23.412277Z",
-    "volume_24h_fp": "68913.19",
-    "volume_fp": "100358.77",
+    "volume_24h_fp": "69186.95",
+    "volume_fp": "100457.24",
     "yes_ask_dollars": "0.5100",
-    "yes_ask_size_fp": "308082.20",
+    "yes_ask_size_fp": "308263.72",
     "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "15988.16",
+    "yes_bid_size_fp": "19151.16",
     "yes_sub_title": "San Antonio",
     "_event_title": "Oklahoma City vs San Antonio",
     "_event_ticker": "KXNBAGAME-26OCT20OKCSAS",
@@ -985,7 +985,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -1105,7 +1105,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -1151,7 +1151,7 @@
     "ticker": "KXNBAGAME-26OCT21ATLORL-ORL",
     "title": "Orlando wins",
     "updated_time": "2026-10-14T23:06:02.454125Z",
-    "volume_24h_fp": "611.87",
+    "volume_24h_fp": "616.18",
     "volume_fp": "1749.25",
     "yes_ask_dollars": "0.5600",
     "yes_ask_size_fp": "29902.73",
@@ -1225,7 +1225,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -1345,7 +1345,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -1465,7 +1465,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -1511,7 +1511,7 @@
     "ticker": "KXNBAGAME-26OCT21CHABKN-CHA",
     "title": "Charlotte wins",
     "updated_time": "2026-10-14T23:36:12.438187Z",
-    "volume_24h_fp": "817.44",
+    "volume_24h_fp": "848.21",
     "volume_fp": "2112.08",
     "yes_ask_dollars": "0.4700",
     "yes_ask_size_fp": "27445.11",
@@ -1585,7 +1585,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -1705,7 +1705,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -1754,7 +1754,7 @@
     "volume_24h_fp": "3177.63",
     "volume_fp": "43848.47",
     "yes_ask_dollars": "0.2300",
-    "yes_ask_size_fp": "28951.93",
+    "yes_ask_size_fp": "29218.93",
     "yes_bid_dollars": "0.2200",
     "yes_bid_size_fp": "9064.09",
     "yes_sub_title": "Chicago",
@@ -1825,7 +1825,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -1848,7 +1848,7 @@
     "no_sub_title": "Toronto",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T02:30:00Z",
-    "open_interest_fp": "1461.23",
+    "open_interest_fp": "1466.23",
     "open_time": "2026-10-14T23:36:12.717449Z",
     "previous_price_dollars": "0.7700",
     "previous_yes_ask_dollars": "0.7700",
@@ -1872,9 +1872,9 @@
     "title": "Toronto wins",
     "updated_time": "2026-10-14T23:36:13.440734Z",
     "volume_24h_fp": "831.81",
-    "volume_fp": "1787.76",
+    "volume_fp": "1792.76",
     "yes_ask_dollars": "0.7800",
-    "yes_ask_size_fp": "22274.21",
+    "yes_ask_size_fp": "22269.21",
     "yes_bid_dollars": "0.7700",
     "yes_bid_size_fp": "17718.31",
     "yes_sub_title": "Toronto",
@@ -1945,7 +1945,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -1968,7 +1968,7 @@
     "no_sub_title": "Minnesota",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T02:30:00Z",
-    "open_interest_fp": "23964.46",
+    "open_interest_fp": "24186.67",
     "open_time": "2026-10-14T23:36:11.419382Z",
     "previous_price_dollars": "0.4900",
     "previous_yes_ask_dollars": "0.4900",
@@ -1992,9 +1992,9 @@
     "title": "Minnesota wins",
     "updated_time": "2026-10-14T23:36:12.438187Z",
     "volume_24h_fp": "16351.46",
-    "volume_fp": "24850.49",
+    "volume_fp": "25072.70",
     "yes_ask_dollars": "0.5000",
-    "yes_ask_size_fp": "37331.54",
+    "yes_ask_size_fp": "37109.33",
     "yes_bid_dollars": "0.4900",
     "yes_bid_size_fp": "778.28",
     "yes_sub_title": "Minnesota",
@@ -2085,7 +2085,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -2225,7 +2225,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -2363,7 +2363,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -2501,7 +2501,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -2547,12 +2547,12 @@
     "ticker": "KXNBAGAME-26OCT21UTAMEM-UTA",
     "title": "Utah wins",
     "updated_time": "2026-10-15T00:06:22.450941Z",
-    "volume_24h_fp": "2974.95",
+    "volume_24h_fp": "2994.65",
     "volume_fp": "7431.64",
     "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "57686.08",
+    "yes_ask_size_fp": "57638.83",
     "yes_bid_dollars": "0.4800",
-    "yes_bid_size_fp": "27797.61",
+    "yes_bid_size_fp": "28216.72",
     "yes_sub_title": "Utah",
     "_event_title": "Utah vs Memphis",
     "_event_ticker": "KXNBAGAME-26OCT21UTAMEM",
@@ -2621,7 +2621,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -2672,7 +2672,7 @@
     "yes_ask_dollars": "0.5100",
     "yes_ask_size_fp": "5169.81",
     "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "31974.89",
+    "yes_bid_size_fp": "33338.51",
     "yes_sub_title": "Memphis",
     "_event_title": "Utah vs Memphis",
     "_event_ticker": "KXNBAGAME-26OCT21UTAMEM",
@@ -2741,7 +2741,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -2787,7 +2787,7 @@
     "ticker": "KXNBAGAME-26OCT21DALHOU-DAL",
     "title": "Dallas wins",
     "updated_time": "2026-10-15T00:36:23.384441Z",
-    "volume_24h_fp": "6300.83",
+    "volume_24h_fp": "6148.82",
     "volume_fp": "11466.67",
     "yes_ask_dollars": "0.2500",
     "yes_ask_size_fp": "33318.51",
@@ -2879,7 +2879,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3017,7 +3017,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3040,7 +3040,7 @@
     "no_sub_title": "Golden State",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T05:00:00Z",
-    "open_interest_fp": "116351.22",
+    "open_interest_fp": "116398.27",
     "open_time": "2026-10-15T02:06:01.28307Z",
     "previous_price_dollars": "0.2800",
     "previous_yes_ask_dollars": "0.2800",
@@ -3063,12 +3063,12 @@
     "ticker": "KXNBAGAME-26OCT21GSWLAL-GSW",
     "title": "Golden State wins",
     "updated_time": "2026-10-15T02:06:01.464379Z",
-    "volume_24h_fp": "105075.76",
-    "volume_fp": "132519.19",
+    "volume_24h_fp": "104725.76",
+    "volume_fp": "132566.24",
     "yes_ask_dollars": "0.3600",
-    "yes_ask_size_fp": "52281.31",
+    "yes_ask_size_fp": "52234.26",
     "yes_bid_dollars": "0.3500",
-    "yes_bid_size_fp": "25852.67",
+    "yes_bid_size_fp": "25851.94",
     "yes_sub_title": "Golden State",
     "_event_title": "Golden State vs Los Angeles L",
     "_event_ticker": "KXNBAGAME-26OCT21GSWLAL",
@@ -3137,7 +3137,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3160,7 +3160,7 @@
     "no_sub_title": "Los Angeles L",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-22T05:00:00Z",
-    "open_interest_fp": "26325.72",
+    "open_interest_fp": "26327.19",
     "open_time": "2026-10-15T02:06:01.28307Z",
     "previous_price_dollars": "0.7300",
     "previous_yes_ask_dollars": "0.7300",
@@ -3184,9 +3184,9 @@
     "title": "Los Angeles L wins",
     "updated_time": "2026-10-15T02:06:01.464379Z",
     "volume_24h_fp": "5381.48",
-    "volume_fp": "36832.72",
+    "volume_fp": "36834.19",
     "yes_ask_dollars": "0.6600",
-    "yes_ask_size_fp": "87487.99",
+    "yes_ask_size_fp": "87486.52",
     "yes_bid_dollars": "0.6500",
     "yes_bid_size_fp": "4018.53",
     "yes_sub_title": "Los Angeles L",
@@ -3257,7 +3257,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3308,7 +3308,7 @@
     "yes_ask_dollars": "0.4000",
     "yes_ask_size_fp": "2067.70",
     "yes_bid_dollars": "0.3900",
-    "yes_bid_size_fp": "22488.44",
+    "yes_bid_size_fp": "23929.44",
     "yes_sub_title": "Phoenix",
     "_event_title": "Phoenix vs Portland",
     "_event_ticker": "KXNBAGAME-26OCT21PHXPOR",
@@ -3377,7 +3377,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3426,7 +3426,7 @@
     "volume_24h_fp": "133.88",
     "volume_fp": "1895.07",
     "yes_ask_dollars": "0.6100",
-    "yes_ask_size_fp": "42699.19",
+    "yes_ask_size_fp": "44549.19",
     "yes_bid_dollars": "0.6000",
     "yes_bid_size_fp": "820.80",
     "yes_sub_title": "Portland",
@@ -3497,7 +3497,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3617,7 +3617,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3737,7 +3737,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3786,9 +3786,9 @@
     "volume_24h_fp": "89.57",
     "volume_fp": "278.46",
     "yes_ask_dollars": "0.4600",
-    "yes_ask_size_fp": "17845.14",
+    "yes_ask_size_fp": "23095.14",
     "yes_bid_dollars": "0.4400",
-    "yes_bid_size_fp": "681.00",
+    "yes_bid_size_fp": "363.00",
     "yes_sub_title": "Cleveland",
     "_event_title": "Cleveland vs Philadelphia",
     "_event_ticker": "KXNBAGAME-26OCT22CLEPHI",
@@ -3837,7 +3837,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3886,7 +3886,7 @@
     "volume_24h_fp": "121.48",
     "volume_fp": "193.50",
     "yes_ask_dollars": "0.5600",
-    "yes_ask_size_fp": "1782.19",
+    "yes_ask_size_fp": "1282.19",
     "yes_bid_dollars": "0.5500",
     "yes_bid_size_fp": "563.00",
     "yes_sub_title": "Philadelphia",
@@ -3937,7 +3937,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -3962,7 +3962,7 @@
     "occurrence_datetime": "2026-10-23T04:30:00Z",
     "open_interest_fp": "6177.66",
     "open_time": "2026-10-16T01:36:02.589763Z",
-    "previous_price_dollars": "0.3100",
+    "previous_price_dollars": "0.3000",
     "previous_yes_ask_dollars": "0.3000",
     "previous_yes_bid_dollars": "0.2800",
     "price_level_structure": "linear_cent",
@@ -3983,7 +3983,7 @@
     "ticker": "KXNBAGAME-26OCT22DENOKC-DEN",
     "title": "Denver wins",
     "updated_time": "2026-10-16T01:36:03.31706Z",
-    "volume_24h_fp": "1039.37",
+    "volume_24h_fp": "1023.49",
     "volume_fp": "7970.41",
     "yes_ask_dollars": "0.2800",
     "yes_ask_size_fp": "2431.00",
@@ -4037,7 +4037,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4137,7 +4137,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4155,8 +4155,8 @@
     "last_price_dollars": "0.4200",
     "latest_expiration_time": "2026-10-25T20:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6100",
-    "no_bid_dollars": "0.5300",
+    "no_ask_dollars": "0.6000",
+    "no_bid_dollars": "0.5200",
     "no_sub_title": "Chicago",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T23:00:00Z",
@@ -4185,9 +4185,9 @@
     "updated_time": "2026-10-16T20:06:06.188533Z",
     "volume_24h_fp": "104.91",
     "volume_fp": "348.21",
-    "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "102.00",
-    "yes_bid_dollars": "0.3900",
+    "yes_ask_dollars": "0.4800",
+    "yes_ask_size_fp": "250.00",
+    "yes_bid_dollars": "0.4000",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Chicago",
     "_event_title": "Chicago vs Milwaukee",
@@ -4233,7 +4233,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4252,7 +4252,7 @@
     "latest_expiration_time": "2026-10-25T20:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4800",
-    "no_bid_dollars": "0.3700",
+    "no_bid_dollars": "0.3800",
     "no_sub_title": "Milwaukee",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T23:00:00Z",
@@ -4281,8 +4281,8 @@
     "updated_time": "2026-10-16T20:06:06.188533Z",
     "volume_24h_fp": "16.68",
     "volume_fp": "123.59",
-    "yes_ask_dollars": "0.6300",
-    "yes_ask_size_fp": "324.00",
+    "yes_ask_dollars": "0.6200",
+    "yes_ask_size_fp": "250.00",
     "yes_bid_dollars": "0.5200",
     "yes_bid_size_fp": "251.45",
     "yes_sub_title": "Milwaukee",
@@ -4329,7 +4329,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4355,7 +4355,7 @@
     "open_interest_fp": "299.49",
     "open_time": "2026-10-16T23:06:19.560299Z",
     "previous_price_dollars": "0.5000",
-    "previous_yes_ask_dollars": "0.5000",
+    "previous_yes_ask_dollars": "0.5300",
     "previous_yes_bid_dollars": "0.2900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -4425,7 +4425,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4452,7 +4452,7 @@
     "open_time": "2026-10-16T23:06:19.560299Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.7200",
-    "previous_yes_bid_dollars": "0.5000",
+    "previous_yes_bid_dollars": "0.4900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -4521,7 +4521,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4617,7 +4617,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4713,7 +4713,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4739,8 +4739,8 @@
     "open_interest_fp": "2318.40",
     "open_time": "2026-10-16T23:06:22.079146Z",
     "previous_price_dollars": "0.7500",
-    "previous_yes_ask_dollars": "0.7100",
-    "previous_yes_bid_dollars": "0.4900",
+    "previous_yes_ask_dollars": "0.7000",
+    "previous_yes_bid_dollars": "0.6800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -4809,7 +4809,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4835,7 +4835,7 @@
     "open_interest_fp": "365.43",
     "open_time": "2026-10-16T23:06:22.079146Z",
     "previous_price_dollars": "0.5700",
-    "previous_yes_ask_dollars": "0.5200",
+    "previous_yes_ask_dollars": "0.3400",
     "previous_yes_bid_dollars": "0.2900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -4905,7 +4905,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -4956,7 +4956,7 @@
     "yes_ask_dollars": "0.4700",
     "yes_ask_size_fp": "412.00",
     "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "370.00",
+    "yes_bid_size_fp": "310.00",
     "yes_sub_title": "New York",
     "_event_title": "New York vs Boston",
     "_event_ticker": "KXNBAGAME-26OCT23NYKBOS",
@@ -5005,7 +5005,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5105,7 +5105,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5132,7 +5132,7 @@
     "open_time": "2026-10-16T23:06:21.248581Z",
     "previous_price_dollars": "0.8300",
     "previous_yes_ask_dollars": "0.7400",
-    "previous_yes_bid_dollars": "0.6000",
+    "previous_yes_bid_dollars": "0.5900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5154,7 +5154,7 @@
     "volume_24h_fp": "5.34",
     "volume_fp": "17.24",
     "yes_ask_dollars": "0.6900",
-    "yes_ask_size_fp": "287.00",
+    "yes_ask_size_fp": "293.00",
     "yes_bid_dollars": "0.6000",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Toronto",
@@ -5201,7 +5201,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5227,7 +5227,7 @@
     "open_interest_fp": "369.34",
     "open_time": "2026-10-16T23:06:21.248581Z",
     "previous_price_dollars": "0.3900",
-    "previous_yes_ask_dollars": "0.4000",
+    "previous_yes_ask_dollars": "0.4300",
     "previous_yes_bid_dollars": "0.2600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -5297,7 +5297,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5316,7 +5316,7 @@
     "latest_expiration_time": "2026-10-26T00:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.4800",
-    "no_bid_dollars": "0.3900",
+    "no_bid_dollars": "0.4000",
     "no_sub_title": "Detroit",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T03:00:00Z",
@@ -5345,7 +5345,7 @@
     "updated_time": "2026-10-17T00:06:24.302875Z",
     "volume_24h_fp": "11.47",
     "volume_fp": "11.47",
-    "yes_ask_dollars": "0.6100",
+    "yes_ask_dollars": "0.6000",
     "yes_ask_size_fp": "250.00",
     "yes_bid_dollars": "0.5200",
     "yes_bid_size_fp": "251.70",
@@ -5393,7 +5393,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5411,7 +5411,7 @@
     "last_price_dollars": "0.5100",
     "latest_expiration_time": "2026-10-26T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6100",
+    "no_ask_dollars": "0.5800",
     "no_bid_dollars": "0.5300",
     "no_sub_title": "Miami",
     "notional_value_dollars": "1.0000",
@@ -5419,8 +5419,8 @@
     "open_interest_fp": "154.99",
     "open_time": "2026-10-17T00:06:23.500794Z",
     "previous_price_dollars": "0.5900",
-    "previous_yes_ask_dollars": "0.5300",
-    "previous_yes_bid_dollars": "0.3600",
+    "previous_yes_ask_dollars": "0.5500",
+    "previous_yes_bid_dollars": "0.3400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5443,8 +5443,8 @@
     "volume_fp": "155.01",
     "yes_ask_dollars": "0.4700",
     "yes_ask_size_fp": "127.00",
-    "yes_bid_dollars": "0.3900",
-    "yes_bid_size_fp": "250.00",
+    "yes_bid_dollars": "0.4200",
+    "yes_bid_size_fp": "214.00",
     "yes_sub_title": "Miami",
     "_event_title": "Detroit vs Miami",
     "_event_ticker": "KXNBAGAME-26OCT23DETMIA",
@@ -5489,7 +5489,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5540,7 +5540,7 @@
     "yes_ask_dollars": "0.3200",
     "yes_ask_size_fp": "292.00",
     "yes_bid_dollars": "0.2900",
-    "yes_bid_size_fp": "639.00",
+    "yes_bid_size_fp": "614.00",
     "yes_sub_title": "Houston",
     "_event_title": "Houston vs San Antonio",
     "_event_ticker": "KXNBAGAME-26OCT23HOUSAS",
@@ -5589,7 +5589,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5638,7 +5638,7 @@
     "volume_24h_fp": "7.81",
     "volume_fp": "228.37",
     "yes_ask_dollars": "0.7100",
-    "yes_ask_size_fp": "1233.19",
+    "yes_ask_size_fp": "1208.19",
     "yes_bid_dollars": "0.6800",
     "yes_bid_size_fp": "400.00",
     "yes_sub_title": "San Antonio",
@@ -5689,7 +5689,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5716,7 +5716,7 @@
     "open_time": "2026-10-17T01:36:07.566785Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.6500",
-    "previous_yes_bid_dollars": "0.4300",
+    "previous_yes_bid_dollars": "0.4700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5738,7 +5738,7 @@
     "volume_24h_fp": "256.97",
     "volume_fp": "256.97",
     "yes_ask_dollars": "0.4900",
-    "yes_ask_size_fp": "250.00",
+    "yes_ask_size_fp": "278.00",
     "yes_bid_dollars": "0.4300",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "New Orleans",
@@ -5785,7 +5785,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5803,7 +5803,7 @@
     "last_price_dollars": "0.5600",
     "latest_expiration_time": "2026-10-26T01:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4800",
+    "no_ask_dollars": "0.4600",
     "no_bid_dollars": "0.4400",
     "no_sub_title": "Utah",
     "notional_value_dollars": "1.0000",
@@ -5811,7 +5811,7 @@
     "open_interest_fp": "482.99",
     "open_time": "2026-10-17T01:36:07.566785Z",
     "previous_price_dollars": "0.5400",
-    "previous_yes_ask_dollars": "0.5500",
+    "previous_yes_ask_dollars": "0.5300",
     "previous_yes_bid_dollars": "0.3700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -5835,8 +5835,8 @@
     "volume_fp": "482.99",
     "yes_ask_dollars": "0.5600",
     "yes_ask_size_fp": "28.00",
-    "yes_bid_dollars": "0.5200",
-    "yes_bid_size_fp": "29.00",
+    "yes_bid_dollars": "0.5400",
+    "yes_bid_size_fp": "10.00",
     "yes_sub_title": "Utah",
     "_event_title": "New Orleans vs Utah",
     "_event_ticker": "KXNBAGAME-26OCT23NOPUTA",
@@ -5881,7 +5881,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -5907,8 +5907,8 @@
     "open_interest_fp": "683.55",
     "open_time": "2026-10-17T02:06:01.146441Z",
     "previous_price_dollars": "0.2900",
-    "previous_yes_ask_dollars": "0.2800",
-    "previous_yes_bid_dollars": "0.2400",
+    "previous_yes_ask_dollars": "0.2900",
+    "previous_yes_bid_dollars": "0.2600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -5977,7 +5977,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6003,7 +6003,7 @@
     "open_interest_fp": "245.58",
     "open_time": "2026-10-17T02:06:01.146441Z",
     "previous_price_dollars": "0.7900",
-    "previous_yes_ask_dollars": "0.7800",
+    "previous_yes_ask_dollars": "0.7700",
     "previous_yes_bid_dollars": "0.7100",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -6023,7 +6023,7 @@
     "ticker": "KXNBAGAME-26OCT23LACLAL-LAL",
     "title": "Los Angeles L wins",
     "updated_time": "2026-10-17T02:06:01.412634Z",
-    "volume_24h_fp": "210.19",
+    "volume_24h_fp": "336.45",
     "volume_fp": "375.57",
     "yes_ask_dollars": "0.7600",
     "yes_ask_size_fp": "250.00",
@@ -6073,7 +6073,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6092,7 +6092,7 @@
     "latest_expiration_time": "2026-10-26T02:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.7200",
-    "no_bid_dollars": "0.5700",
+    "no_bid_dollars": "0.5800",
     "no_sub_title": "Memphis",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T05:00:00Z",
@@ -6121,7 +6121,7 @@
     "updated_time": "2026-10-17T02:06:33.321422Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.4300",
+    "yes_ask_dollars": "0.4200",
     "yes_ask_size_fp": "250.00",
     "yes_bid_dollars": "0.2800",
     "yes_bid_size_fp": "250.00",
@@ -6169,7 +6169,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6187,7 +6187,7 @@
     "last_price_dollars": "0.7200",
     "latest_expiration_time": "2026-10-26T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4200",
+    "no_ask_dollars": "0.4400",
     "no_bid_dollars": "0.2800",
     "no_sub_title": "Golden State",
     "notional_value_dollars": "1.0000",
@@ -6219,8 +6219,8 @@
     "volume_fp": "70.05",
     "yes_ask_dollars": "0.7200",
     "yes_ask_size_fp": "276.84",
-    "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "250.00",
+    "yes_bid_dollars": "0.5600",
+    "yes_bid_size_fp": "437.00",
     "yes_sub_title": "Golden State",
     "_event_title": "Memphis vs Golden State",
     "_event_ticker": "KXNBAGAME-26OCT23MEMGSW",
@@ -6265,7 +6265,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6314,7 +6314,7 @@
     "volume_24h_fp": "35.10",
     "volume_fp": "44.81",
     "yes_ask_dollars": "0.7400",
-    "yes_ask_size_fp": "249.73",
+    "yes_ask_size_fp": "250.00",
     "yes_bid_dollars": "0.5400",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Portland",
@@ -6361,7 +6361,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6457,7 +6457,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6475,16 +6475,16 @@
     "last_price_dollars": "0.4900",
     "latest_expiration_time": "2026-10-26T22:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5700",
-    "no_bid_dollars": "0.4800",
+    "no_ask_dollars": "0.5400",
+    "no_bid_dollars": "0.5000",
     "no_sub_title": "Miami",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T01:00:00Z",
     "open_interest_fp": "1043.62",
     "open_time": "2026-10-17T22:06:22.067849Z",
     "previous_price_dollars": "0.4400",
-    "previous_yes_ask_dollars": "0.5100",
-    "previous_yes_bid_dollars": "0.3400",
+    "previous_yes_ask_dollars": "0.4500",
+    "previous_yes_bid_dollars": "0.3500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -6505,10 +6505,10 @@
     "updated_time": "2026-10-17T22:06:22.340432Z",
     "volume_24h_fp": "265.24",
     "volume_fp": "1111.00",
-    "yes_ask_dollars": "0.5200",
-    "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.4300",
-    "yes_bid_size_fp": "250.00",
+    "yes_ask_dollars": "0.5000",
+    "yes_ask_size_fp": "18.00",
+    "yes_bid_dollars": "0.4600",
+    "yes_bid_size_fp": "287.00",
     "yes_sub_title": "Miami",
     "_event_title": "Miami vs Charlotte",
     "_event_ticker": "KXNBAGAME-26OCT24MIACHA",
@@ -6553,7 +6553,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6572,7 +6572,7 @@
     "latest_expiration_time": "2026-10-26T22:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5200",
-    "no_bid_dollars": "0.4100",
+    "no_bid_dollars": "0.4400",
     "no_sub_title": "Charlotte",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T01:00:00Z",
@@ -6580,7 +6580,7 @@
     "open_time": "2026-10-17T22:06:22.067849Z",
     "previous_price_dollars": "0.0000",
     "previous_yes_ask_dollars": "0.6800",
-    "previous_yes_bid_dollars": "0.4900",
+    "previous_yes_bid_dollars": "0.5000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -6601,7 +6601,7 @@
     "updated_time": "2026-10-17T22:06:22.340432Z",
     "volume_24h_fp": "2.86",
     "volume_fp": "2.86",
-    "yes_ask_dollars": "0.5900",
+    "yes_ask_dollars": "0.5600",
     "yes_ask_size_fp": "250.00",
     "yes_bid_dollars": "0.4800",
     "yes_bid_size_fp": "250.00",
@@ -6649,7 +6649,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6667,7 +6667,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-26T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8500",
+    "no_ask_dollars": "0.8100",
     "no_bid_dollars": "0.6400",
     "no_sub_title": "Brooklyn",
     "notional_value_dollars": "1.0000",
@@ -6675,7 +6675,7 @@
     "open_interest_fp": "0.00",
     "open_time": "2026-10-17T23:36:08.912959Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.3100",
+    "previous_yes_ask_dollars": "0.3500",
     "previous_yes_bid_dollars": "0.1400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -6699,7 +6699,7 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.3600",
     "yes_ask_size_fp": "437.00",
-    "yes_bid_dollars": "0.1500",
+    "yes_bid_dollars": "0.1900",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Brooklyn",
     "_event_title": "Brooklyn vs Cleveland",
@@ -6745,7 +6745,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6763,8 +6763,8 @@
     "last_price_dollars": "0.8400",
     "latest_expiration_time": "2026-10-26T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.3400",
-    "no_bid_dollars": "0.1600",
+    "no_ask_dollars": "0.3600",
+    "no_bid_dollars": "0.2000",
     "no_sub_title": "Cleveland",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T02:30:00Z",
@@ -6793,10 +6793,10 @@
     "updated_time": "2026-10-17T23:36:09.272763Z",
     "volume_24h_fp": "28.15",
     "volume_fp": "28.15",
-    "yes_ask_dollars": "0.8400",
+    "yes_ask_dollars": "0.8000",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.6600",
-    "yes_bid_size_fp": "250.00",
+    "yes_bid_dollars": "0.6400",
+    "yes_bid_size_fp": "437.00",
     "yes_sub_title": "Cleveland",
     "_event_title": "Brooklyn vs Cleveland",
     "_event_ticker": "KXNBAGAME-26OCT24BKNCLE",
@@ -6841,7 +6841,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -6868,7 +6868,7 @@
     "open_time": "2026-10-17T23:36:09.765771Z",
     "previous_price_dollars": "0.2700",
     "previous_yes_ask_dollars": "0.2600",
-    "previous_yes_bid_dollars": "0.1900",
+    "previous_yes_bid_dollars": "0.2200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -6937,7 +6937,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7033,7 +7033,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7129,7 +7129,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7225,7 +7225,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7321,7 +7321,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7417,7 +7417,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7513,7 +7513,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7609,7 +7609,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7635,8 +7635,8 @@
     "open_interest_fp": "0.00",
     "open_time": "2026-10-18T01:06:13.080557Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.4000",
-    "previous_yes_bid_dollars": "0.1400",
+    "previous_yes_ask_dollars": "0.4100",
+    "previous_yes_bid_dollars": "0.1500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -7705,7 +7705,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7731,8 +7731,8 @@
     "open_interest_fp": "22.00",
     "open_time": "2026-10-18T01:06:13.080557Z",
     "previous_price_dollars": "0.0000",
-    "previous_yes_ask_dollars": "0.8600",
-    "previous_yes_bid_dollars": "0.6000",
+    "previous_yes_ask_dollars": "0.8500",
+    "previous_yes_bid_dollars": "0.5900",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -7801,7 +7801,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7819,8 +7819,8 @@
     "last_price_dollars": "0.4200",
     "latest_expiration_time": "2026-10-27T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7600",
-    "no_bid_dollars": "0.5200",
+    "no_ask_dollars": "0.7400",
+    "no_bid_dollars": "0.5000",
     "no_sub_title": "Golden State",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T05:00:00Z",
@@ -7849,9 +7849,9 @@
     "updated_time": "2026-10-18T02:06:00.310881Z",
     "volume_24h_fp": "15.28",
     "volume_fp": "15.28",
-    "yes_ask_dollars": "0.4800",
+    "yes_ask_dollars": "0.5000",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.2400",
+    "yes_bid_dollars": "0.2600",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Golden State",
     "_event_title": "Golden State vs Phoenix",
@@ -7897,7 +7897,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -7915,8 +7915,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-27T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5000",
-    "no_bid_dollars": "0.2300",
+    "no_ask_dollars": "0.5200",
+    "no_bid_dollars": "0.2500",
     "no_sub_title": "Phoenix",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T05:00:00Z",
@@ -7945,10 +7945,10 @@
     "updated_time": "2026-10-18T02:06:00.310881Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.7700",
+    "yes_ask_dollars": "0.7500",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "250.00",
+    "yes_bid_dollars": "0.4800",
+    "yes_bid_size_fp": "437.00",
     "yes_sub_title": "Phoenix",
     "_event_title": "Golden State vs Phoenix",
     "_event_ticker": "KXNBAGAME-26OCT24GSWPHX",
@@ -7993,7 +7993,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8089,7 +8089,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8185,7 +8185,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8281,7 +8281,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8300,7 +8300,7 @@
     "latest_expiration_time": "2026-10-27T22:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.8600",
-    "no_bid_dollars": "0.4200",
+    "no_bid_dollars": "0.4100",
     "no_sub_title": "Brooklyn",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T01:00:00Z",
@@ -8329,8 +8329,8 @@
     "updated_time": "2026-10-18T22:06:22.348977Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.5800",
-    "yes_ask_size_fp": "250.00",
+    "yes_ask_dollars": "0.5900",
+    "yes_ask_size_fp": "350.00",
     "yes_bid_dollars": "0.1400",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Brooklyn",
@@ -8377,7 +8377,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8473,7 +8473,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8569,7 +8569,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8665,7 +8665,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8761,7 +8761,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8780,7 +8780,7 @@
     "latest_expiration_time": "2026-10-27T23:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.7400",
-    "no_bid_dollars": "0.3400",
+    "no_bid_dollars": "0.3500",
     "no_sub_title": "Toronto",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T02:00:00Z",
@@ -8809,7 +8809,7 @@
     "updated_time": "2026-10-18T23:06:18.313665Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.6600",
+    "yes_ask_dollars": "0.6500",
     "yes_ask_size_fp": "250.00",
     "yes_bid_dollars": "0.2600",
     "yes_bid_size_fp": "250.00",
@@ -8857,7 +8857,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8875,7 +8875,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-27T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6700",
+    "no_ask_dollars": "0.6600",
     "no_bid_dollars": "0.2500",
     "no_sub_title": "Minnesota",
     "notional_value_dollars": "1.0000",
@@ -8907,7 +8907,7 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.7500",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.3300",
+    "yes_bid_dollars": "0.3400",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Minnesota",
     "_event_title": "Toronto vs Minnesota",
@@ -8953,7 +8953,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -8972,7 +8972,7 @@
     "latest_expiration_time": "2026-10-27T23:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6000",
-    "no_bid_dollars": "0.3000",
+    "no_bid_dollars": "0.3200",
     "no_sub_title": "Detroit",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T02:30:00Z",
@@ -9001,7 +9001,7 @@
     "updated_time": "2026-10-18T23:36:15.534776Z",
     "volume_24h_fp": "1.39",
     "volume_fp": "1.39",
-    "yes_ask_dollars": "0.7000",
+    "yes_ask_dollars": "0.6800",
     "yes_ask_size_fp": "250.00",
     "yes_bid_dollars": "0.4000",
     "yes_bid_size_fp": "31.39",
@@ -9049,7 +9049,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9067,7 +9067,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-27T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7100",
+    "no_ask_dollars": "0.6900",
     "no_bid_dollars": "0.3800",
     "no_sub_title": "Philadelphia",
     "notional_value_dollars": "1.0000",
@@ -9099,7 +9099,7 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.6200",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.2900",
+    "yes_bid_dollars": "0.3100",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Philadelphia",
     "_event_title": "Detroit vs Philadelphia",
@@ -9145,7 +9145,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9241,7 +9241,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9260,7 +9260,7 @@
     "latest_expiration_time": "2026-10-28T01:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5000",
-    "no_bid_dollars": "0.2900",
+    "no_bid_dollars": "0.2700",
     "no_sub_title": "Sacramento",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-26T04:00:00Z",
@@ -9289,7 +9289,7 @@
     "updated_time": "2026-10-19T01:06:25.361655Z",
     "volume_24h_fp": "0.01",
     "volume_fp": "0.01",
-    "yes_ask_dollars": "0.7100",
+    "yes_ask_dollars": "0.7300",
     "yes_ask_size_fp": "250.00",
     "yes_bid_dollars": "0.5000",
     "yes_bid_size_fp": "18.00",
@@ -9337,7 +9337,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9355,8 +9355,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-28T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8700",
-    "no_bid_dollars": "0.2000",
+    "no_ask_dollars": "0.7200",
+    "no_bid_dollars": "0.3300",
     "no_sub_title": "Minnesota",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T02:00:00Z",
@@ -9385,10 +9385,10 @@
     "updated_time": "2026-10-19T23:06:47.292634Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.8000",
+    "yes_ask_dollars": "0.6700",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.1300",
-    "yes_bid_size_fp": "750.00",
+    "yes_bid_dollars": "0.2800",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Minnesota",
     "_event_title": "Minnesota vs Cleveland",
     "_event_ticker": "KXNBAGAME-26OCT26MINCLE",
@@ -9433,7 +9433,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9451,8 +9451,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-28T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8000",
-    "no_bid_dollars": "0.1300",
+    "no_ask_dollars": "0.6700",
+    "no_bid_dollars": "0.2800",
     "no_sub_title": "Cleveland",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T02:00:00Z",
@@ -9481,9 +9481,9 @@
     "updated_time": "2026-10-19T23:06:47.292634Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.8700",
-    "yes_ask_size_fp": "750.00",
-    "yes_bid_dollars": "0.2000",
+    "yes_ask_dollars": "0.7200",
+    "yes_ask_size_fp": "1.00",
+    "yes_bid_dollars": "0.3300",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Cleveland",
     "_event_title": "Minnesota vs Cleveland",
@@ -9529,7 +9529,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9547,7 +9547,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-28T23:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8700",
+    "no_ask_dollars": "0.8200",
     "no_bid_dollars": "0.3700",
     "no_sub_title": "Washington",
     "notional_value_dollars": "1.0000",
@@ -9579,8 +9579,8 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.6300",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.1300",
-    "yes_bid_size_fp": "500.00",
+    "yes_bid_dollars": "0.1800",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Washington",
     "_event_title": "Washington vs Charlotte",
     "_event_ticker": "KXNBAGAME-26OCT26WASCHA",
@@ -9625,7 +9625,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9644,7 +9644,7 @@
     "latest_expiration_time": "2026-10-28T23:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6200",
-    "no_bid_dollars": "0.1300",
+    "no_bid_dollars": "0.1800",
     "no_sub_title": "Charlotte",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T02:00:00Z",
@@ -9673,8 +9673,8 @@
     "updated_time": "2026-10-19T23:06:46.551037Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.8700",
-    "yes_ask_size_fp": "500.00",
+    "yes_ask_dollars": "0.8200",
+    "yes_ask_size_fp": "1.00",
     "yes_bid_dollars": "0.3800",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Charlotte",
@@ -9721,7 +9721,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9739,7 +9739,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-28T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8700",
+    "no_ask_dollars": "0.8600",
     "no_bid_dollars": "0.5900",
     "no_sub_title": "Chicago",
     "notional_value_dollars": "1.0000",
@@ -9771,8 +9771,8 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.4100",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.1300",
-    "yes_bid_size_fp": "750.00",
+    "yes_bid_dollars": "0.1400",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Chicago",
     "_event_title": "Chicago vs Boston",
     "_event_ticker": "KXNBAGAME-26OCT26CHIBOS",
@@ -9817,7 +9817,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9866,7 +9866,7 @@
     "volume_24h_fp": "25.00",
     "volume_fp": "25.00",
     "yes_ask_dollars": "0.8600",
-    "yes_ask_size_fp": "85.00",
+    "yes_ask_size_fp": "86.00",
     "yes_bid_dollars": "0.6100",
     "yes_bid_size_fp": "285.00",
     "yes_sub_title": "Boston",
@@ -9913,7 +9913,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -9931,8 +9931,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-28T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8700",
-    "no_bid_dollars": "0.2700",
+    "no_ask_dollars": "0.8500",
+    "no_bid_dollars": "0.4300",
     "no_sub_title": "Dallas",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T02:30:00Z",
@@ -9961,10 +9961,10 @@
     "updated_time": "2026-10-19T23:36:05.44387Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.7300",
+    "yes_ask_dollars": "0.5700",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.1300",
-    "yes_bid_size_fp": "500.00",
+    "yes_bid_dollars": "0.1500",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Dallas",
     "_event_title": "Dallas vs Miami",
     "_event_ticker": "KXNBAGAME-26OCT26DALMIA",
@@ -10009,7 +10009,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10027,8 +10027,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-28T23:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7300",
-    "no_bid_dollars": "0.1300",
+    "no_ask_dollars": "0.5700",
+    "no_bid_dollars": "0.1500",
     "no_sub_title": "Miami",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T02:30:00Z",
@@ -10057,9 +10057,9 @@
     "updated_time": "2026-10-19T23:36:05.44387Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.8700",
-    "yes_ask_size_fp": "500.00",
-    "yes_bid_dollars": "0.2700",
+    "yes_ask_dollars": "0.8500",
+    "yes_ask_size_fp": "1.00",
+    "yes_bid_dollars": "0.4300",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Miami",
     "_event_title": "Dallas vs Miami",
@@ -10105,7 +10105,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10123,8 +10123,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-29T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8600",
-    "no_bid_dollars": "0.1700",
+    "no_ask_dollars": "0.7300",
+    "no_bid_dollars": "0.2100",
     "no_sub_title": "Indiana",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T03:00:00Z",
@@ -10153,10 +10153,10 @@
     "updated_time": "2026-10-20T00:06:09.059529Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.8300",
+    "yes_ask_dollars": "0.7900",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.1400",
-    "yes_bid_size_fp": "437.00",
+    "yes_bid_dollars": "0.2700",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Indiana",
     "_event_title": "Indiana vs Milwaukee",
     "_event_ticker": "KXNBAGAME-26OCT26INDMIL",
@@ -10201,7 +10201,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10219,8 +10219,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-29T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8400",
-    "no_bid_dollars": "0.1400",
+    "no_ask_dollars": "0.7900",
+    "no_bid_dollars": "0.2700",
     "no_sub_title": "Milwaukee",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T03:00:00Z",
@@ -10249,9 +10249,9 @@
     "updated_time": "2026-10-20T00:06:09.059529Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.8600",
-    "yes_ask_size_fp": "437.00",
-    "yes_bid_dollars": "0.1600",
+    "yes_ask_dollars": "0.7300",
+    "yes_ask_size_fp": "1.00",
+    "yes_bid_dollars": "0.2100",
     "yes_bid_size_fp": "250.00",
     "yes_sub_title": "Milwaukee",
     "_event_title": "Indiana vs Milwaukee",
@@ -10297,7 +10297,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10315,7 +10315,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-29T00:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8700",
+    "no_ask_dollars": "0.8400",
     "no_bid_dollars": "0.4800",
     "no_sub_title": "Phoenix",
     "notional_value_dollars": "1.0000",
@@ -10347,8 +10347,8 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.5200",
     "yes_ask_size_fp": "250.00",
-    "yes_bid_dollars": "0.1300",
-    "yes_bid_size_fp": "500.00",
+    "yes_bid_dollars": "0.1600",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Phoenix",
     "_event_title": "Phoenix vs Oklahoma City",
     "_event_ticker": "KXNBAGAME-26OCT26PHXOKC",
@@ -10393,7 +10393,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10412,7 +10412,7 @@
     "latest_expiration_time": "2026-10-29T00:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5000",
-    "no_bid_dollars": "0.1400",
+    "no_bid_dollars": "0.1700",
     "no_sub_title": "Oklahoma City",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T03:00:00Z",
@@ -10441,8 +10441,8 @@
     "updated_time": "2026-10-20T00:06:09.640408Z",
     "volume_24h_fp": "25.00",
     "volume_fp": "25.00",
-    "yes_ask_dollars": "0.8600",
-    "yes_ask_size_fp": "85.00",
+    "yes_ask_dollars": "0.8300",
+    "yes_ask_size_fp": "1.00",
     "yes_bid_dollars": "0.5000",
     "yes_bid_size_fp": "40.00",
     "yes_sub_title": "Oklahoma City",
@@ -10489,7 +10489,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10508,7 +10508,7 @@
     "latest_expiration_time": "2026-10-29T00:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.7800",
-    "no_bid_dollars": "0.2600",
+    "no_bid_dollars": "0.4100",
     "no_sub_title": "Atlanta",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T03:30:00Z",
@@ -10537,8 +10537,8 @@
     "updated_time": "2026-10-20T00:36:05.339648Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.7400",
-    "yes_ask_size_fp": "250.00",
+    "yes_ask_dollars": "0.5900",
+    "yes_ask_size_fp": "1.00",
     "yes_bid_dollars": "0.2200",
     "yes_bid_size_fp": "30.00",
     "yes_sub_title": "Atlanta",
@@ -10585,7 +10585,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10603,7 +10603,7 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-29T00:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7400",
+    "no_ask_dollars": "0.5900",
     "no_bid_dollars": "0.2500",
     "no_sub_title": "Houston",
     "notional_value_dollars": "1.0000",
@@ -10635,8 +10635,8 @@
     "volume_fp": "0.00",
     "yes_ask_dollars": "0.7500",
     "yes_ask_size_fp": "30.00",
-    "yes_bid_dollars": "0.2600",
-    "yes_bid_size_fp": "437.00",
+    "yes_bid_dollars": "0.4100",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Houston",
     "_event_title": "Atlanta vs Houston",
     "_event_ticker": "KXNBAGAME-26OCT26ATLHOU",
@@ -10681,7 +10681,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10699,8 +10699,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-29T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8700",
-    "no_bid_dollars": "0.1300",
+    "no_ask_dollars": "0.7300",
+    "no_bid_dollars": "0.3100",
     "no_sub_title": "Memphis",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T04:00:00Z",
@@ -10729,10 +10729,10 @@
     "updated_time": "2026-10-20T01:06:31.436565Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.8700",
-    "yes_ask_size_fp": "500.00",
-    "yes_bid_dollars": "0.1300",
-    "yes_bid_size_fp": "500.00",
+    "yes_ask_dollars": "0.6900",
+    "yes_ask_size_fp": "1.00",
+    "yes_bid_dollars": "0.2700",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Memphis",
     "_event_title": "Memphis vs Utah",
     "_event_ticker": "KXNBAGAME-26OCT26MEMUTA",
@@ -10777,7 +10777,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10795,8 +10795,8 @@
     "last_price_dollars": "0.0000",
     "latest_expiration_time": "2026-10-29T01:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8700",
-    "no_bid_dollars": "0.1300",
+    "no_ask_dollars": "0.6900",
+    "no_bid_dollars": "0.2700",
     "no_sub_title": "Utah",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T04:00:00Z",
@@ -10825,10 +10825,10 @@
     "updated_time": "2026-10-20T01:06:31.436565Z",
     "volume_24h_fp": "0.00",
     "volume_fp": "0.00",
-    "yes_ask_dollars": "0.8700",
-    "yes_ask_size_fp": "500.00",
-    "yes_bid_dollars": "0.1300",
-    "yes_bid_size_fp": "500.00",
+    "yes_ask_dollars": "0.7300",
+    "yes_ask_size_fp": "1.00",
+    "yes_bid_dollars": "0.3100",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Utah",
     "_event_title": "Memphis vs Utah",
     "_event_ticker": "KXNBAGAME-26OCT26MEMUTA",
@@ -10873,7 +10873,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10891,8 +10891,8 @@
     "last_price_dollars": "0.1300",
     "latest_expiration_time": "2026-10-29T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8700",
-    "no_bid_dollars": "0.2500",
+    "no_ask_dollars": "0.8100",
+    "no_bid_dollars": "0.3100",
     "no_sub_title": "Golden State",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T05:00:00Z",
@@ -10921,10 +10921,10 @@
     "updated_time": "2026-10-20T02:06:26.538598Z",
     "volume_24h_fp": "23.23",
     "volume_fp": "23.23",
-    "yes_ask_dollars": "0.7500",
-    "yes_ask_size_fp": "30.00",
-    "yes_bid_dollars": "0.1300",
-    "yes_bid_size_fp": "659.77",
+    "yes_ask_dollars": "0.6900",
+    "yes_ask_size_fp": "1.00",
+    "yes_bid_dollars": "0.1900",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Golden State",
     "_event_title": "Golden State vs Denver",
     "_event_ticker": "KXNBAGAME-26OCT26GSWDEN",
@@ -10969,7 +10969,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -10987,8 +10987,8 @@
     "last_price_dollars": "0.4200",
     "latest_expiration_time": "2026-10-29T02:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.7700",
-    "no_bid_dollars": "0.1400",
+    "no_ask_dollars": "0.6800",
+    "no_bid_dollars": "0.2000",
     "no_sub_title": "Denver",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-27T05:00:00Z",
@@ -11017,10 +11017,10 @@
     "updated_time": "2026-10-20T02:06:26.538598Z",
     "volume_24h_fp": "23.23",
     "volume_fp": "23.23",
-    "yes_ask_dollars": "0.8600",
-    "yes_ask_size_fp": "170.00",
-    "yes_bid_dollars": "0.2300",
-    "yes_bid_size_fp": "82.00",
+    "yes_ask_dollars": "0.8000",
+    "yes_ask_size_fp": "60.00",
+    "yes_bid_dollars": "0.3200",
+    "yes_bid_size_fp": "1.00",
     "yes_sub_title": "Denver",
     "_event_title": "Golden State vs Denver",
     "_event_ticker": "KXNBAGAME-26OCT26GSWDEN",
@@ -11065,7 +11065,7 @@
       }
     ],
     "_native_competition": "nba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -11116,7 +11116,7 @@
     "yes_ask_dollars": "0.5900",
     "yes_ask_size_fp": "12681.35",
     "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "6866.50",
+    "yes_bid_size_fp": "7034.50",
     "yes_sub_title": "Atlanta",
     "_event_title": "Game 3: Golden State vs Atlanta",
     "_event_ticker": "KXWNBAGAME-26OCT22GSATL",
@@ -11173,7 +11173,7 @@
       }
     ],
     "_native_competition": "wnba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -11196,7 +11196,7 @@
     "no_sub_title": "Golden State",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-23T03:00:00Z",
-    "open_interest_fp": "19628.88",
+    "open_interest_fp": "19858.94",
     "open_time": "2026-10-10T15:10:00Z",
     "previous_price_dollars": "0.4400",
     "previous_yes_ask_dollars": "0.4500",
@@ -11220,9 +11220,9 @@
     "title": "Golden State wins",
     "updated_time": "2026-10-13T22:20:50.759554Z",
     "volume_24h_fp": "30640.23",
-    "volume_fp": "35026.35",
+    "volume_fp": "35256.41",
     "yes_ask_dollars": "0.4200",
-    "yes_ask_size_fp": "14086.90",
+    "yes_ask_size_fp": "16615.84",
     "yes_bid_dollars": "0.4100",
     "yes_bid_size_fp": "2262.46",
     "yes_sub_title": "Golden State",
@@ -11281,7 +11281,7 @@
       }
     ],
     "_native_competition": "wnba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -11307,7 +11307,7 @@
     "open_interest_fp": "692.54",
     "open_time": "2026-10-10T15:10:00Z",
     "previous_price_dollars": "0.5200",
-    "previous_yes_ask_dollars": "0.5500",
+    "previous_yes_ask_dollars": "0.5400",
     "previous_yes_bid_dollars": "0.5000",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -11381,7 +11381,7 @@
       }
     ],
     "_native_competition": "wnba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -11408,7 +11408,7 @@
     "open_time": "2026-10-10T15:10:00Z",
     "previous_price_dollars": "0.4900",
     "previous_yes_ask_dollars": "0.4900",
-    "previous_yes_bid_dollars": "0.4600",
+    "previous_yes_bid_dollars": "0.4500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -11432,7 +11432,7 @@
     "yes_ask_dollars": "0.4700",
     "yes_ask_size_fp": "11.00",
     "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "30.00",
+    "yes_bid_size_fp": "31.00",
     "yes_sub_title": "Golden State",
     "_event_title": "Game 4: Golden State vs Atlanta",
     "_event_ticker": "KXWNBAGAME-26OCT24GSATL",
@@ -11481,7 +11481,7 @@
       }
     ],
     "_native_competition": "wnba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -11581,7 +11581,7 @@
       }
     ],
     "_native_competition": "wnba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -11681,7 +11681,7 @@
       }
     ],
     "_native_competition": "wnba",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -11699,7 +11699,7 @@
     "last_price_dollars": "0.7900",
     "latest_expiration_time": "2026-11-03T14:30:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.3400",
+    "no_ask_dollars": "0.3200",
     "no_bid_dollars": "0.2200",
     "no_sub_title": "Villanova",
     "notional_value_dollars": "1.0000",
@@ -11730,9 +11730,9 @@
     "volume_24h_fp": "36.51",
     "volume_fp": "108.81",
     "yes_ask_dollars": "0.7800",
-    "yes_ask_size_fp": "53.00",
-    "yes_bid_dollars": "0.6600",
-    "yes_bid_size_fp": "100.00",
+    "yes_ask_size_fp": "54.00",
+    "yes_bid_dollars": "0.6800",
+    "yes_bid_size_fp": "84.00",
     "yes_sub_title": "Villanova",
     "_event_title": "Notre Dame vs Villanova",
     "_event_ticker": "KXNCAAMBGAME-26NOV01NDVILL",
@@ -11763,7 +11763,7 @@
       }
     ],
     "_native_competition": "cbb",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -11845,7 +11845,7 @@
       }
     ],
     "_native_competition": "cbb",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -11927,7 +11927,7 @@
       }
     ],
     "_native_competition": "cbb",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -12009,7 +12009,7 @@
       }
     ],
     "_native_competition": "cbb",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -12091,7 +12091,7 @@
       }
     ],
     "_native_competition": "cwbb",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   },
   {
     "can_close_early": true,
@@ -12109,8 +12109,8 @@
     "last_price_dollars": "0.5400",
     "latest_expiration_time": "2026-11-03T17:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.9100",
-    "no_bid_dollars": "0.3600",
+    "no_ask_dollars": "0.8900",
+    "no_bid_dollars": "0.3400",
     "no_sub_title": "Villanova",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-11-01T20:00:00Z",
@@ -12139,10 +12139,10 @@
     "updated_time": "2026-10-14T20:04:00.463289Z",
     "volume_24h_fp": "1.44",
     "volume_fp": "14.49",
-    "yes_ask_dollars": "0.6400",
-    "yes_ask_size_fp": "50.00",
-    "yes_bid_dollars": "0.0900",
-    "yes_bid_size_fp": "49.00",
+    "yes_ask_dollars": "0.6600",
+    "yes_ask_size_fp": "87.00",
+    "yes_bid_dollars": "0.1100",
+    "yes_bid_size_fp": "50.00",
     "yes_sub_title": "Villanova",
     "_event_title": "Villanova vs Notre Dame",
     "_event_ticker": "KXNCAAWBGAME-26NOV01VILLND",
@@ -12173,6 +12173,6 @@
       }
     ],
     "_native_competition": "cwbb",
-    "_collected_at_utc": "2026-10-20T07:41:10.664+00:00"
+    "_collected_at_utc": "2026-10-20T07:47:49.427+00:00"
   }
 ]

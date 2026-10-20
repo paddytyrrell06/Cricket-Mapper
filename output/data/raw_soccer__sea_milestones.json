@@ -4,819 +4,6 @@
     "details": {
       "away_team_id": "3d8adaa2-763d-4f62-9aa4-7d7a2725ca12",
       "coverage": {},
-      "home_team_id": "b2bb7d8f-38bb-490a-82f4-7d1e9faa2db7",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26NOV02SASFIO",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "104d957a-4148-5312-8b7d-1e3b25de1f1e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26NOV02SASFIO"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26NOV02SASFIO"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-02T17:30:00Z",
-    "title": "Sassuolo vs Fiorentina",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "58215c67-3aad-42de-a00d-c2596704384f",
-      "coverage": {},
-      "home_team_id": "139b1e61-312d-4fb6-8e98-2dd6017e8660",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT25ATAFRO",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "00bcf859-f292-5d0f-97f3-f651455cbb76",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT25ATAFRO",
-      "KXSERIEASPREAD-26OCT25ATAFRO",
-      "KXSERIEATOTAL-26OCT25ATAFRO",
-      "KXSERIEABTTS-26OCT25ATAFRO"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT25ATAFRO",
-      "KXSERIEASPREAD-26OCT25ATAFRO",
-      "KXSERIEATOTAL-26OCT25ATAFRO",
-      "KXSERIEABTTS-26OCT25ATAFRO"
-    ],
-    "source_ids": {
-      "source_2_id": "202610255C4940C5"
-    },
-    "start_date": "2026-10-25T14:00:00Z",
-    "title": "Atalanta vs Frosinone",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "1333d5e7-e2e6-464d-943c-db9b79e9596c",
-      "coverage": {},
-      "home_team_id": "94863c56-7c99-41c0-b88b-30b89f2fe821",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT25GENVEN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "5223d1af-10dc-519a-b1d4-d0ccdd309fe9",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT25GENVEN",
-      "KXSERIEASPREAD-26OCT25GENVEN",
-      "KXSERIEATOTAL-26OCT25GENVEN",
-      "KXSERIEABTTS-26OCT25GENVEN"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT25GENVEN",
-      "KXSERIEASPREAD-26OCT25GENVEN",
-      "KXSERIEATOTAL-26OCT25GENVEN",
-      "KXSERIEABTTS-26OCT25GENVEN"
-    ],
-    "source_ids": {
-      "source_2_id": "20261025C6683554"
-    },
-    "start_date": "2026-10-25T14:00:00Z",
-    "title": "Genoa vs Venezia",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "8c7d0d19-56bc-4fd2-86ac-df5eaca951b2",
-      "coverage": {},
-      "home_team_id": "1333d5e7-e2e6-464d-943c-db9b79e9596c",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT28VENINT",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "92798c1e-e2d3-5ef3-8448-63a89c8f01cd",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT28VENINT"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT28VENINT"
-    ],
-    "source_ids": {
-      "source_2_id": "20261028F0350FC3"
-    },
-    "start_date": "2026-10-28T17:30:00Z",
-    "title": "Venezia vs Inter",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "721bf91f-9827-4be2-8429-86360529a258",
-      "coverage": {},
-      "home_team_id": "da2081c3-6922-47a2-b05e-5474c4705815",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT28MONNAP",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "d127bca3-a200-5a87-add5-3e506230ec5b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT28MONNAP"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT28MONNAP"
-    ],
-    "source_ids": {
-      "source_2_id": "20261028C1C0835D"
-    },
-    "start_date": "2026-10-28T19:45:00Z",
-    "title": "Monza vs Napoli",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7c892e5b-17ba-4437-871a-14b25c249e86",
-      "coverage": {},
-      "home_team_id": "6d5d7d4b-da73-49d7-9597-f0233f233710",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26NOV01LAZCAG",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "fb8bb8b0-480d-51e9-9cb1-312691b07364",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26NOV01LAZCAG"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26NOV01LAZCAG"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T14:00:00Z",
-    "title": "Lazio vs Cagliari",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "70476de9-4ac1-43e9-a1e6-1bf33f073f61",
-      "coverage": {},
-      "home_team_id": "139b1e61-312d-4fb6-8e98-2dd6017e8660",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26NOV02ATAPAR",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "aa0d6055-eb8d-5e56-bdeb-8de15e66e0eb",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26NOV02ATAPAR"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26NOV02ATAPAR"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-02T19:45:00Z",
-    "title": "Atalanta vs Parma Calcio",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "8c7d0d19-56bc-4fd2-86ac-df5eaca951b2",
-      "coverage": {},
-      "home_team_id": "281c09d3-8d95-4ce9-b2ef-3b003f8a8959",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT31ACMINT",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "427ed206-7a46-5b5c-a07b-bfd425174d68",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT31ACMINT"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT31ACMINT"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T19:45:00Z",
-    "title": "Milan vs Inter",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "94863c56-7c99-41c0-b88b-30b89f2fe821",
-      "coverage": {},
-      "home_team_id": "775a95db-4d08-47f5-a069-6f124db0ac30",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26NOV01LECGEN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c6660dca-7e16-5004-88ec-3821cf06f651",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26NOV01LECGEN"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26NOV01LECGEN"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T17:00:00Z",
-    "title": "Lecce vs Genoa",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7c892e5b-17ba-4437-871a-14b25c249e86",
-      "coverage": {},
-      "home_team_id": "c9b2a47f-17a6-4db9-83a6-3c65b5d8cbb1",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT27ROMCAG",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "3d80c8e3-e83d-5aaf-8ba8-4e0793daea2d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT27ROMCAG"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT27ROMCAG"
-    ],
-    "source_ids": {
-      "source_2_id": "20261027A108ED4D"
-    },
-    "start_date": "2026-10-27T19:45:00Z",
-    "title": "Roma vs Cagliari",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "55e84dfe-7254-477d-b442-e6a12afab353",
-      "coverage": {},
-      "home_team_id": "281c09d3-8d95-4ce9-b2ef-3b003f8a8959",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT28ACMBFC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "66e1b9dd-5708-5a4b-861a-bfdc5380db76",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT28ACMBFC"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT28ACMBFC"
-    ],
-    "source_ids": {
-      "source_2_id": "202610281EAA6A7C"
-    },
-    "start_date": "2026-10-28T17:30:00Z",
-    "title": "Milan vs Bologna",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "725973ad-cad9-4446-aad3-446461b374f0",
-      "coverage": {},
-      "home_team_id": "94863c56-7c99-41c0-b88b-30b89f2fe821",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT28GENJUV",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "7b9dd2e6-8f3c-58bc-b266-ef687e7253f8",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT28GENJUV"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT28GENJUV"
-    ],
-    "source_ids": {
-      "source_2_id": "20261028CA3AB141"
-    },
-    "start_date": "2026-10-28T19:45:00Z",
-    "title": "Genoa vs Juventus",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "70476de9-4ac1-43e9-a1e6-1bf33f073f61",
-      "coverage": {},
-      "home_team_id": "6d5d7d4b-da73-49d7-9597-f0233f233710",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT24LAZPAR",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "9a75ace6-d446-5702-b2d1-49dce7674a5b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT24LAZPAR",
-      "KXSERIEASPREAD-26OCT24LAZPAR",
-      "KXSERIEATOTAL-26OCT24LAZPAR",
-      "KXSERIEABTTS-26OCT24LAZPAR"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT24LAZPAR",
-      "KXSERIEASPREAD-26OCT24LAZPAR",
-      "KXSERIEATOTAL-26OCT24LAZPAR",
-      "KXSERIEABTTS-26OCT24LAZPAR"
-    ],
-    "source_ids": {
-      "source_2_id": "20261024F91FAEB6"
-    },
-    "start_date": "2026-10-24T18:45:00Z",
-    "title": "Lazio vs Parma Calcio",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "281c09d3-8d95-4ce9-b2ef-3b003f8a8959",
-      "coverage": {},
-      "home_team_id": "695c1113-de03-4b68-a3b7-660c4f60b0c7",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT25UDIACM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "8a845bbc-3ed7-5b1b-8bb9-7b8f45f16dc0",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT25UDIACM",
-      "KXSERIEASPREAD-26OCT25UDIACM",
-      "KXSERIEATOTAL-26OCT25UDIACM",
-      "KXSERIEABTTS-26OCT25UDIACM"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT25UDIACM",
-      "KXSERIEASPREAD-26OCT25UDIACM",
-      "KXSERIEATOTAL-26OCT25UDIACM",
-      "KXSERIEABTTS-26OCT25UDIACM"
-    ],
-    "source_ids": {
-      "source_2_id": "20261025FCE84AE3"
-    },
-    "start_date": "2026-10-25T19:45:00Z",
-    "title": "Udinese vs Milan",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "6d5d7d4b-da73-49d7-9597-f0233f233710",
-      "coverage": {},
-      "home_team_id": "b2bb7d8f-38bb-490a-82f4-7d1e9faa2db7",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT27SASLAZ",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "01b8f5df-e2ba-544b-874d-12510ad4ce93",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT27SASLAZ"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT27SASLAZ"
-    ],
-    "source_ids": {
-      "source_2_id": "202610276F163FF4"
-    },
-    "start_date": "2026-10-27T17:30:00Z",
-    "title": "Sassuolo vs Lazio",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "c9b2a47f-17a6-4db9-83a6-3c65b5d8cbb1",
-      "coverage": {},
-      "home_team_id": "721bf91f-9827-4be2-8429-86360529a258",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT24NAPROM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "0507870b-85df-590b-8148-b09e641ce564",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT24NAPROM",
-      "KXSERIEASPREAD-26OCT24NAPROM",
-      "KXSERIEATOTAL-26OCT24NAPROM",
-      "KXSERIEABTTS-26OCT24NAPROM"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT24NAPROM",
-      "KXSERIEASPREAD-26OCT24NAPROM",
-      "KXSERIEATOTAL-26OCT24NAPROM",
-      "KXSERIEABTTS-26OCT24NAPROM"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102416B52CC3"
-    },
-    "start_date": "2026-10-24T16:00:00Z",
-    "title": "Napoli vs Roma",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "695c1113-de03-4b68-a3b7-660c4f60b0c7",
-      "coverage": {},
-      "home_team_id": "70476de9-4ac1-43e9-a1e6-1bf33f073f61",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT28PARUDI",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "cfdc4076-3bba-514f-ba0b-91ba185943ce",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT28PARUDI"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT28PARUDI"
-    ],
-    "source_ids": {
-      "source_2_id": "20261028929A0B9A"
-    },
-    "start_date": "2026-10-28T17:30:00Z",
-    "title": "Parma Calcio vs Udinese",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "c9b2a47f-17a6-4db9-83a6-3c65b5d8cbb1",
-      "coverage": {},
-      "home_team_id": "695c1113-de03-4b68-a3b7-660c4f60b0c7",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT31UDIROM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "29e180ae-c173-5bc0-8094-a00f190ede12",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT31UDIROM"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT31UDIROM"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T17:00:00Z",
-    "title": "Udinese vs Roma",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "39fb9d43-9820-4c04-9cc1-2b52f0563936",
-      "coverage": {},
-      "home_team_id": "58215c67-3aad-42de-a00d-c2596704384f",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26NOV01FROTOR",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "cb55bb40-612b-5ac2-a5a4-84b159491ad1",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26NOV01FROTOR"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26NOV01FROTOR"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T14:00:00Z",
-    "title": "Frosinone vs Torino",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "da2081c3-6922-47a2-b05e-5474c4705815",
-      "coverage": {},
-      "home_team_id": "55e84dfe-7254-477d-b442-e6a12afab353",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT31BFCMON",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "0a999bab-3fcb-5a28-aa12-d2046ed1b03d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT31BFCMON"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT31BFCMON"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T14:00:00Z",
-    "title": "Bologna vs Monza",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "1333d5e7-e2e6-464d-943c-db9b79e9596c",
-      "coverage": {},
-      "home_team_id": "5cdc7d5f-0a5e-4579-9488-f95b23250c46",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26NOV01COMVEN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "db2ac124-a236-5148-b16e-9a990d49d718",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26NOV01COMVEN"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26NOV01COMVEN"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T11:30:00Z",
-    "title": "Como vs Venezia",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "5cdc7d5f-0a5e-4579-9488-f95b23250c46",
-      "coverage": {},
-      "home_team_id": "39fb9d43-9820-4c04-9cc1-2b52f0563936",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT27TORCOM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "4f0a8024-ed9d-506f-b0ac-443493d7e972",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT27TORCOM"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT27TORCOM"
-    ],
-    "source_ids": {
-      "source_2_id": "20261027852234CF"
-    },
-    "start_date": "2026-10-27T19:45:00Z",
-    "title": "Torino vs Como",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "da2081c3-6922-47a2-b05e-5474c4705815",
-      "coverage": {},
-      "home_team_id": "39fb9d43-9820-4c04-9cc1-2b52f0563936",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT23TORMON",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ae585bfc-92b5-5e2e-8462-e9ad954827c1",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT23TORMON",
-      "KXSERIEASPREAD-26OCT23TORMON",
-      "KXSERIEATOTAL-26OCT23TORMON",
-      "KXSERIEABTTS-26OCT23TORMON"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT23TORMON",
-      "KXSERIEASPREAD-26OCT23TORMON",
-      "KXSERIEATOTAL-26OCT23TORMON",
-      "KXSERIEABTTS-26OCT23TORMON"
-    ],
-    "source_ids": {
-      "source_2_id": "20261023FF1833DD"
-    },
-    "start_date": "2026-10-23T18:45:00Z",
-    "title": "Torino vs Monza",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "55e84dfe-7254-477d-b442-e6a12afab353",
-      "coverage": {},
-      "home_team_id": "7c892e5b-17ba-4437-871a-14b25c249e86",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT24CAGBFC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f9564b07-bff5-54f1-8b76-e38fd5691f38",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT24CAGBFC",
-      "KXSERIEASPREAD-26OCT24CAGBFC",
-      "KXSERIEATOTAL-26OCT24CAGBFC",
-      "KXSERIEABTTS-26OCT24CAGBFC"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT24CAGBFC",
-      "KXSERIEASPREAD-26OCT24CAGBFC",
-      "KXSERIEATOTAL-26OCT24CAGBFC",
-      "KXSERIEABTTS-26OCT24CAGBFC"
-    ],
-    "source_ids": {
-      "source_2_id": "202610249638EE5A"
-    },
-    "start_date": "2026-10-24T13:00:00Z",
-    "title": "Cagliari vs Bologna",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "b2bb7d8f-38bb-490a-82f4-7d1e9faa2db7",
-      "coverage": {},
-      "home_team_id": "5cdc7d5f-0a5e-4579-9488-f95b23250c46",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT24COMSAS",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "af2d8ac9-98ed-5b11-9728-34b915c0373f",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT24COMSAS",
-      "KXSERIEASPREAD-26OCT24COMSAS",
-      "KXSERIEATOTAL-26OCT24COMSAS",
-      "KXSERIEABTTS-26OCT24COMSAS"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT24COMSAS",
-      "KXSERIEASPREAD-26OCT24COMSAS",
-      "KXSERIEATOTAL-26OCT24COMSAS",
-      "KXSERIEABTTS-26OCT24COMSAS"
-    ],
-    "source_ids": {
-      "source_2_id": "202610244C8BF1C0"
-    },
-    "start_date": "2026-10-24T13:00:00Z",
-    "title": "Como vs Sassuolo",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "775a95db-4d08-47f5-a069-6f124db0ac30",
-      "coverage": {},
-      "home_team_id": "58215c67-3aad-42de-a00d-c2596704384f",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT29FROLEC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f35af894-f73f-5665-9998-780c3f01cab1",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT29FROLEC"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT29FROLEC"
-    ],
-    "source_ids": {
-      "source_2_id": "20261029E57E3972"
-    },
-    "start_date": "2026-10-29T17:30:00Z",
-    "title": "Frosinone vs Lecce",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "139b1e61-312d-4fb6-8e98-2dd6017e8660",
-      "coverage": {},
-      "home_team_id": "3d8adaa2-763d-4f62-9aa4-7d7a2725ca12",
-      "is_ko": false,
-      "league": "Serie A",
-      "main_game_event_ticker": "KXSERIEAGAME-26OCT29FIOATA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ee80aa1e-40c7-556a-bdcd-8d5d404f579c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXSERIEAGAME-26OCT29FIOATA"
-    ],
-    "related_event_tickers": [
-      "KXSERIEAGAME-26OCT29FIOATA"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102981437737"
-    },
-    "start_date": "2026-10-29T19:45:00Z",
-    "title": "Fiorentina vs Atalanta",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "3d8adaa2-763d-4f62-9aa4-7d7a2725ca12",
-      "coverage": {},
       "home_team_id": "8c7d0d19-56bc-4fd2-86ac-df5eaca951b2",
       "is_ko": false,
       "league": "Serie A",
@@ -845,7 +32,7 @@
     "start_date": "2026-10-25T11:30:00Z",
     "title": "Inter vs Fiorentina",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -880,7 +67,413 @@
     "start_date": "2026-10-25T17:00:00Z",
     "title": "Lecce vs Juventus",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "6d5d7d4b-da73-49d7-9597-f0233f233710",
+      "coverage": {},
+      "home_team_id": "b2bb7d8f-38bb-490a-82f4-7d1e9faa2db7",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT27SASLAZ",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "01b8f5df-e2ba-544b-874d-12510ad4ce93",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT27SASLAZ"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT27SASLAZ"
+    ],
+    "source_ids": {
+      "source_2_id": "202610276F163FF4"
+    },
+    "start_date": "2026-10-27T17:30:00Z",
+    "title": "Sassuolo vs Lazio",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "5cdc7d5f-0a5e-4579-9488-f95b23250c46",
+      "coverage": {},
+      "home_team_id": "39fb9d43-9820-4c04-9cc1-2b52f0563936",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT27TORCOM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "4f0a8024-ed9d-506f-b0ac-443493d7e972",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT27TORCOM"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT27TORCOM"
+    ],
+    "source_ids": {
+      "source_2_id": "20261027852234CF"
+    },
+    "start_date": "2026-10-27T19:45:00Z",
+    "title": "Torino vs Como",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "1333d5e7-e2e6-464d-943c-db9b79e9596c",
+      "coverage": {},
+      "home_team_id": "5cdc7d5f-0a5e-4579-9488-f95b23250c46",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26NOV01COMVEN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "db2ac124-a236-5148-b16e-9a990d49d718",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26NOV01COMVEN"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26NOV01COMVEN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T11:30:00Z",
+    "title": "Como vs Venezia",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "94863c56-7c99-41c0-b88b-30b89f2fe821",
+      "coverage": {},
+      "home_team_id": "775a95db-4d08-47f5-a069-6f124db0ac30",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26NOV01LECGEN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c6660dca-7e16-5004-88ec-3821cf06f651",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26NOV01LECGEN"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26NOV01LECGEN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T17:00:00Z",
+    "title": "Lecce vs Genoa",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "3d8adaa2-763d-4f62-9aa4-7d7a2725ca12",
+      "coverage": {},
+      "home_team_id": "b2bb7d8f-38bb-490a-82f4-7d1e9faa2db7",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26NOV02SASFIO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "104d957a-4148-5312-8b7d-1e3b25de1f1e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26NOV02SASFIO"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26NOV02SASFIO"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-02T17:30:00Z",
+    "title": "Sassuolo vs Fiorentina",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8c7d0d19-56bc-4fd2-86ac-df5eaca951b2",
+      "coverage": {},
+      "home_team_id": "1333d5e7-e2e6-464d-943c-db9b79e9596c",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT28VENINT",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "92798c1e-e2d3-5ef3-8448-63a89c8f01cd",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT28VENINT"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT28VENINT"
+    ],
+    "source_ids": {
+      "source_2_id": "20261028F0350FC3"
+    },
+    "start_date": "2026-10-28T17:30:00Z",
+    "title": "Venezia vs Inter",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "721bf91f-9827-4be2-8429-86360529a258",
+      "coverage": {},
+      "home_team_id": "da2081c3-6922-47a2-b05e-5474c4705815",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT28MONNAP",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "d127bca3-a200-5a87-add5-3e506230ec5b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT28MONNAP"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT28MONNAP"
+    ],
+    "source_ids": {
+      "source_2_id": "20261028C1C0835D"
+    },
+    "start_date": "2026-10-28T19:45:00Z",
+    "title": "Monza vs Napoli",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "139b1e61-312d-4fb6-8e98-2dd6017e8660",
+      "coverage": {},
+      "home_team_id": "3d8adaa2-763d-4f62-9aa4-7d7a2725ca12",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT29FIOATA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ee80aa1e-40c7-556a-bdcd-8d5d404f579c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT29FIOATA"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT29FIOATA"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102981437737"
+    },
+    "start_date": "2026-10-29T19:45:00Z",
+    "title": "Fiorentina vs Atalanta",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "da2081c3-6922-47a2-b05e-5474c4705815",
+      "coverage": {},
+      "home_team_id": "55e84dfe-7254-477d-b442-e6a12afab353",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT31BFCMON",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "0a999bab-3fcb-5a28-aa12-d2046ed1b03d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT31BFCMON"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT31BFCMON"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T14:00:00Z",
+    "title": "Bologna vs Monza",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "58215c67-3aad-42de-a00d-c2596704384f",
+      "coverage": {},
+      "home_team_id": "139b1e61-312d-4fb6-8e98-2dd6017e8660",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT25ATAFRO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "00bcf859-f292-5d0f-97f3-f651455cbb76",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT25ATAFRO",
+      "KXSERIEASPREAD-26OCT25ATAFRO",
+      "KXSERIEATOTAL-26OCT25ATAFRO",
+      "KXSERIEABTTS-26OCT25ATAFRO"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT25ATAFRO",
+      "KXSERIEASPREAD-26OCT25ATAFRO",
+      "KXSERIEATOTAL-26OCT25ATAFRO",
+      "KXSERIEABTTS-26OCT25ATAFRO"
+    ],
+    "source_ids": {
+      "source_2_id": "202610255C4940C5"
+    },
+    "start_date": "2026-10-25T14:00:00Z",
+    "title": "Atalanta vs Frosinone",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "281c09d3-8d95-4ce9-b2ef-3b003f8a8959",
+      "coverage": {},
+      "home_team_id": "695c1113-de03-4b68-a3b7-660c4f60b0c7",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT25UDIACM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "8a845bbc-3ed7-5b1b-8bb9-7b8f45f16dc0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT25UDIACM",
+      "KXSERIEASPREAD-26OCT25UDIACM",
+      "KXSERIEATOTAL-26OCT25UDIACM",
+      "KXSERIEABTTS-26OCT25UDIACM"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT25UDIACM",
+      "KXSERIEASPREAD-26OCT25UDIACM",
+      "KXSERIEATOTAL-26OCT25UDIACM",
+      "KXSERIEABTTS-26OCT25UDIACM"
+    ],
+    "source_ids": {
+      "source_2_id": "20261025FCE84AE3"
+    },
+    "start_date": "2026-10-25T19:45:00Z",
+    "title": "Udinese vs Milan",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "695c1113-de03-4b68-a3b7-660c4f60b0c7",
+      "coverage": {},
+      "home_team_id": "70476de9-4ac1-43e9-a1e6-1bf33f073f61",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT28PARUDI",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "cfdc4076-3bba-514f-ba0b-91ba185943ce",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT28PARUDI"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT28PARUDI"
+    ],
+    "source_ids": {
+      "source_2_id": "20261028929A0B9A"
+    },
+    "start_date": "2026-10-28T17:30:00Z",
+    "title": "Parma Calcio vs Udinese",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8c7d0d19-56bc-4fd2-86ac-df5eaca951b2",
+      "coverage": {},
+      "home_team_id": "281c09d3-8d95-4ce9-b2ef-3b003f8a8959",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT31ACMINT",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "427ed206-7a46-5b5c-a07b-bfd425174d68",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT31ACMINT"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT31ACMINT"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T19:45:00Z",
+    "title": "Milan vs Inter",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "39fb9d43-9820-4c04-9cc1-2b52f0563936",
+      "coverage": {},
+      "home_team_id": "58215c67-3aad-42de-a00d-c2596704384f",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26NOV01FROTOR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "cb55bb40-612b-5ac2-a5a4-84b159491ad1",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26NOV01FROTOR"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26NOV01FROTOR"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T14:00:00Z",
+    "title": "Frosinone vs Torino",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -907,6 +500,413 @@
     "start_date": "2026-11-01T19:45:00Z",
     "title": "Juventus vs Napoli",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "55e84dfe-7254-477d-b442-e6a12afab353",
+      "coverage": {},
+      "home_team_id": "7c892e5b-17ba-4437-871a-14b25c249e86",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT24CAGBFC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f9564b07-bff5-54f1-8b76-e38fd5691f38",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT24CAGBFC",
+      "KXSERIEASPREAD-26OCT24CAGBFC",
+      "KXSERIEATOTAL-26OCT24CAGBFC",
+      "KXSERIEABTTS-26OCT24CAGBFC"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT24CAGBFC",
+      "KXSERIEASPREAD-26OCT24CAGBFC",
+      "KXSERIEATOTAL-26OCT24CAGBFC",
+      "KXSERIEABTTS-26OCT24CAGBFC"
+    ],
+    "source_ids": {
+      "source_2_id": "202610249638EE5A"
+    },
+    "start_date": "2026-10-24T13:00:00Z",
+    "title": "Cagliari vs Bologna",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "b2bb7d8f-38bb-490a-82f4-7d1e9faa2db7",
+      "coverage": {},
+      "home_team_id": "5cdc7d5f-0a5e-4579-9488-f95b23250c46",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT24COMSAS",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "af2d8ac9-98ed-5b11-9728-34b915c0373f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT24COMSAS",
+      "KXSERIEASPREAD-26OCT24COMSAS",
+      "KXSERIEATOTAL-26OCT24COMSAS",
+      "KXSERIEABTTS-26OCT24COMSAS"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT24COMSAS",
+      "KXSERIEASPREAD-26OCT24COMSAS",
+      "KXSERIEATOTAL-26OCT24COMSAS",
+      "KXSERIEABTTS-26OCT24COMSAS"
+    ],
+    "source_ids": {
+      "source_2_id": "202610244C8BF1C0"
+    },
+    "start_date": "2026-10-24T13:00:00Z",
+    "title": "Como vs Sassuolo",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "70476de9-4ac1-43e9-a1e6-1bf33f073f61",
+      "coverage": {},
+      "home_team_id": "6d5d7d4b-da73-49d7-9597-f0233f233710",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT24LAZPAR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "9a75ace6-d446-5702-b2d1-49dce7674a5b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT24LAZPAR",
+      "KXSERIEASPREAD-26OCT24LAZPAR",
+      "KXSERIEATOTAL-26OCT24LAZPAR",
+      "KXSERIEABTTS-26OCT24LAZPAR"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT24LAZPAR",
+      "KXSERIEASPREAD-26OCT24LAZPAR",
+      "KXSERIEATOTAL-26OCT24LAZPAR",
+      "KXSERIEABTTS-26OCT24LAZPAR"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024F91FAEB6"
+    },
+    "start_date": "2026-10-24T18:45:00Z",
+    "title": "Lazio vs Parma Calcio",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "725973ad-cad9-4446-aad3-446461b374f0",
+      "coverage": {},
+      "home_team_id": "94863c56-7c99-41c0-b88b-30b89f2fe821",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT28GENJUV",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7b9dd2e6-8f3c-58bc-b266-ef687e7253f8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT28GENJUV"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT28GENJUV"
+    ],
+    "source_ids": {
+      "source_2_id": "20261028CA3AB141"
+    },
+    "start_date": "2026-10-28T19:45:00Z",
+    "title": "Genoa vs Juventus",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "da2081c3-6922-47a2-b05e-5474c4705815",
+      "coverage": {},
+      "home_team_id": "39fb9d43-9820-4c04-9cc1-2b52f0563936",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT23TORMON",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ae585bfc-92b5-5e2e-8462-e9ad954827c1",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT23TORMON",
+      "KXSERIEASPREAD-26OCT23TORMON",
+      "KXSERIEATOTAL-26OCT23TORMON",
+      "KXSERIEABTTS-26OCT23TORMON"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT23TORMON",
+      "KXSERIEASPREAD-26OCT23TORMON",
+      "KXSERIEATOTAL-26OCT23TORMON",
+      "KXSERIEABTTS-26OCT23TORMON"
+    ],
+    "source_ids": {
+      "source_2_id": "20261023FF1833DD"
+    },
+    "start_date": "2026-10-23T18:45:00Z",
+    "title": "Torino vs Monza",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "1333d5e7-e2e6-464d-943c-db9b79e9596c",
+      "coverage": {},
+      "home_team_id": "94863c56-7c99-41c0-b88b-30b89f2fe821",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT25GENVEN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "5223d1af-10dc-519a-b1d4-d0ccdd309fe9",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT25GENVEN",
+      "KXSERIEASPREAD-26OCT25GENVEN",
+      "KXSERIEATOTAL-26OCT25GENVEN",
+      "KXSERIEABTTS-26OCT25GENVEN"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT25GENVEN",
+      "KXSERIEASPREAD-26OCT25GENVEN",
+      "KXSERIEATOTAL-26OCT25GENVEN",
+      "KXSERIEABTTS-26OCT25GENVEN"
+    ],
+    "source_ids": {
+      "source_2_id": "20261025C6683554"
+    },
+    "start_date": "2026-10-25T14:00:00Z",
+    "title": "Genoa vs Venezia",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c9b2a47f-17a6-4db9-83a6-3c65b5d8cbb1",
+      "coverage": {},
+      "home_team_id": "695c1113-de03-4b68-a3b7-660c4f60b0c7",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT31UDIROM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "29e180ae-c173-5bc0-8094-a00f190ede12",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT31UDIROM"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT31UDIROM"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T17:00:00Z",
+    "title": "Udinese vs Roma",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c9b2a47f-17a6-4db9-83a6-3c65b5d8cbb1",
+      "coverage": {},
+      "home_team_id": "721bf91f-9827-4be2-8429-86360529a258",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT24NAPROM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "0507870b-85df-590b-8148-b09e641ce564",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT24NAPROM",
+      "KXSERIEASPREAD-26OCT24NAPROM",
+      "KXSERIEATOTAL-26OCT24NAPROM",
+      "KXSERIEABTTS-26OCT24NAPROM"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT24NAPROM",
+      "KXSERIEASPREAD-26OCT24NAPROM",
+      "KXSERIEATOTAL-26OCT24NAPROM",
+      "KXSERIEABTTS-26OCT24NAPROM"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102416B52CC3"
+    },
+    "start_date": "2026-10-24T16:00:00Z",
+    "title": "Napoli vs Roma",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7c892e5b-17ba-4437-871a-14b25c249e86",
+      "coverage": {},
+      "home_team_id": "c9b2a47f-17a6-4db9-83a6-3c65b5d8cbb1",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT27ROMCAG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "3d80c8e3-e83d-5aaf-8ba8-4e0793daea2d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT27ROMCAG"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT27ROMCAG"
+    ],
+    "source_ids": {
+      "source_2_id": "20261027A108ED4D"
+    },
+    "start_date": "2026-10-27T19:45:00Z",
+    "title": "Roma vs Cagliari",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "55e84dfe-7254-477d-b442-e6a12afab353",
+      "coverage": {},
+      "home_team_id": "281c09d3-8d95-4ce9-b2ef-3b003f8a8959",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT28ACMBFC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "66e1b9dd-5708-5a4b-861a-bfdc5380db76",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT28ACMBFC"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT28ACMBFC"
+    ],
+    "source_ids": {
+      "source_2_id": "202610281EAA6A7C"
+    },
+    "start_date": "2026-10-28T17:30:00Z",
+    "title": "Milan vs Bologna",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "775a95db-4d08-47f5-a069-6f124db0ac30",
+      "coverage": {},
+      "home_team_id": "58215c67-3aad-42de-a00d-c2596704384f",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26OCT29FROLEC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f35af894-f73f-5665-9998-780c3f01cab1",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26OCT29FROLEC"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26OCT29FROLEC"
+    ],
+    "source_ids": {
+      "source_2_id": "20261029E57E3972"
+    },
+    "start_date": "2026-10-29T17:30:00Z",
+    "title": "Frosinone vs Lecce",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7c892e5b-17ba-4437-871a-14b25c249e86",
+      "coverage": {},
+      "home_team_id": "6d5d7d4b-da73-49d7-9597-f0233f233710",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26NOV01LAZCAG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "fb8bb8b0-480d-51e9-9cb1-312691b07364",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26NOV01LAZCAG"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26NOV01LAZCAG"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T14:00:00Z",
+    "title": "Lazio vs Cagliari",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "70476de9-4ac1-43e9-a1e6-1bf33f073f61",
+      "coverage": {},
+      "home_team_id": "139b1e61-312d-4fb6-8e98-2dd6017e8660",
+      "is_ko": false,
+      "league": "Serie A",
+      "main_game_event_ticker": "KXSERIEAGAME-26NOV02ATAPAR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "aa0d6055-eb8d-5e56-bdeb-8de15e66e0eb",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXSERIEAGAME-26NOV02ATAPAR"
+    ],
+    "related_event_tickers": [
+      "KXSERIEAGAME-26NOV02ATAPAR"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-02T19:45:00Z",
+    "title": "Atalanta vs Parma Calcio",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   }
 ]

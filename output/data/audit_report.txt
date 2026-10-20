@@ -5,9 +5,9 @@ Sports market terminal safety audit
 [ADVISORY] all venue coverage complete
        kalshi, polymarket_intl
 [ADVISORY] no unresolved fixture links
-       300 review links
+       301 review links
 [ADVISORY] no unresolved market links
-       690 review links
+       691 review links
 [PASS] fixture links are unique
        163 links / 163 unique
 [PASS] market links are unique
@@ -17,7 +17,7 @@ Sports market terminal safety audit
 [PASS] accepted market pairs agree exactly
        all pairs agree
 [PASS] wide rows are unique
-       1019 rows / 1019 unique
+       1020 rows / 1020 unique
 [PASS] wide table statuses, identifiers and links are valid
        all rows valid
 [PASS] quote prices, statuses and sources are valid
@@ -27,7 +27,7 @@ Sports market terminal safety audit
 [ADVISORY] no crossed quotes observed
        9 crossed outcome rows
 [ADVISORY] all mapped outcomes have bid and ask
-       2017/2038 mapped venue outcomes have two-sided quotes
+       2014/2040 mapped venue outcomes have two-sided quotes
 [PASS] match-winner fixtures contain both teams and no unknown outcomes
        all winner fixtures complete
 [PASS] no plausible counterpart remains unmatched
@@ -39,5 +39,5 @@ Sports market terminal safety audit
 
 Objects: 1576 fixtures, 3647 markets
 Accepted: 163 fixture-pair links, 337 market-pair links
-Unmatched: 662 fixtures, 1607 markets
+Unmatched: 660 fixtures, 1605 markets
 OVERALL PASS

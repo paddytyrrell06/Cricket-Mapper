@@ -1,0 +1,1 @@
+window.marketTerminalReportVersion("7a33f147cbc54266a355e50ffaaa6db3");

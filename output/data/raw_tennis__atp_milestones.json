@@ -3,826 +3,6 @@
     "category": "Sports",
     "details": {
       "best_of": "3",
-      "first_competitor_id": "1636f929-4288-428c-84c5-7f35f0dcee54",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT21DIABAS",
-      "round": "Round Of 16",
-      "second_competitor_id": "9a60a9bb-4553-4766-854d-f7b17b339f78",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Almaty"
-    },
-    "id": "bf8d7fef-1432-4053-90c8-763c899de460",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT21DIABAS",
-      "KXATPSETWINNER-26OCT21DIABAS-1",
-      "KXATPSETWINNER-26OCT21DIABAS-2",
-      "KXATPEXACTMATCH-26OCT21DIABAS"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT21DIABAS",
-      "KXATPSETWINNER-26OCT21DIABAS-1",
-      "KXATPSETWINNER-26OCT21DIABAS-2",
-      "KXATPEXACTMATCH-26OCT21DIABAS",
-      "KXATPGSPREAD-26OCT21DIABAS",
-      "KXATPGTOTAL-26OCT21DIABAS"
-    ],
-    "source_id": "sr:sport_event:75620026",
-    "source_ids": {
-      "source_1_id": "5437579",
-      "source_2_id": "20261021F83DBBCC",
-      "source_3_id": "sr:sport_event:75620026"
-    },
-    "start_date": "2026-10-21T06:30:00Z",
-    "title": "Diaz Acosta vs Basilashvili",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "10bcf011-d185-4ecc-b456-0c5e5a590681",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT21MANRUB",
-      "round": "Round Of 16",
-      "second_competitor_id": "30432ea0-e6c5-40f1-ab38-8676892a0349",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Almaty"
-    },
-    "id": "4079bdd8-51b4-458a-88a5-cb5b9038f724",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT21MANRUB",
-      "KXATPSETWINNER-26OCT21MANRUB-1",
-      "KXATPSETWINNER-26OCT21MANRUB-2",
-      "KXATPEXACTMATCH-26OCT21MANRUB"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT21MANRUB",
-      "KXATPSETWINNER-26OCT21MANRUB-1",
-      "KXATPSETWINNER-26OCT21MANRUB-2",
-      "KXATPEXACTMATCH-26OCT21MANRUB",
-      "KXATPGSPREAD-26OCT21MANRUB",
-      "KXATPGTOTAL-26OCT21MANRUB"
-    ],
-    "source_id": "sr:sport_event:75620042",
-    "source_ids": {
-      "source_1_id": "5437580",
-      "source_2_id": "20261021BFB702BB",
-      "source_3_id": "sr:sport_event:75620042"
-    },
-    "start_date": "2026-10-21T06:30:00Z",
-    "title": "Mannarino vs Rublev",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "607f6749-4a07-4cbd-8a69-206a0e4a5368",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18NURMAC",
-      "round": "Round Of 32",
-      "second_competitor_id": "f1e36a60-3c2b-491f-86f2-0dcdad4a41a1",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Almaty"
-    },
-    "id": "5c810f55-f6a2-4102-9245-85ea6306a640",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18NURMAC",
-      "KXATPSETWINNER-26OCT18NURMAC-1",
-      "KXATPSETWINNER-26OCT18NURMAC-2",
-      "KXATPEXACTMATCH-26OCT18NURMAC"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18NURMAC",
-      "KXATPSETWINNER-26OCT18NURMAC-1",
-      "KXATPSETWINNER-26OCT18NURMAC-2",
-      "KXATPEXACTMATCH-26OCT18NURMAC",
-      "KXATPGSPREAD-26OCT18NURMAC",
-      "KXATPGTOTAL-26OCT18NURMAC"
-    ],
-    "source_id": "sr:sport_event:75716392",
-    "source_ids": {
-      "source_1_id": "5437565",
-      "source_2_id": "2026101921439C20",
-      "source_3_id": "sr:sport_event:75716392"
-    },
-    "start_date": "2026-10-21T06:30:00Z",
-    "title": "Nurlanuly vs Machac",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "b61b8f3c-35ff-4de5-b1a7-2f0cd506781f",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18HUMMOU",
-      "round": "Round Of 32",
-      "second_competitor_id": "ee434c7b-7edc-44df-9994-9c6d8a0a62c7",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Lyon"
-    },
-    "id": "da063c43-0a91-45fa-9877-f16fb5f9df6f",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18HUMMOU",
-      "KXATPSETWINNER-26OCT18HUMMOU-1",
-      "KXATPSETWINNER-26OCT18HUMMOU-2",
-      "KXATPEXACTMATCH-26OCT18HUMMOU"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18HUMMOU",
-      "KXATPSETWINNER-26OCT18HUMMOU-1",
-      "KXATPSETWINNER-26OCT18HUMMOU-2",
-      "KXATPEXACTMATCH-26OCT18HUMMOU",
-      "KXATPGSPREAD-26OCT18HUMMOU",
-      "KXATPGTOTAL-26OCT18HUMMOU"
-    ],
-    "source_id": "sr:sport_event:75722442",
-    "source_ids": {
-      "source_1_id": "5437659",
-      "source_2_id": "202610182FF80ED6",
-      "source_3_id": "sr:sport_event:75722442"
-    },
-    "start_date": "2026-10-20T12:00:00Z",
-    "title": "Humbert vs Moutet",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "8f0b3c91-7bb9-4b37-8e5d-455a5084948e",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18MEDNAK",
-      "round": "Round Of 32",
-      "second_competitor_id": "2c057a19-6deb-4844-803e-529a00562e16",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Lyon"
-    },
-    "id": "48a7f360-1480-4ac4-9d88-5a0ac50a8519",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18MEDNAK",
-      "KXATPSETWINNER-26OCT18MEDNAK-1",
-      "KXATPSETWINNER-26OCT18MEDNAK-2",
-      "KXATPEXACTMATCH-26OCT18MEDNAK"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18MEDNAK",
-      "KXATPSETWINNER-26OCT18MEDNAK-1",
-      "KXATPSETWINNER-26OCT18MEDNAK-2",
-      "KXATPEXACTMATCH-26OCT18MEDNAK",
-      "KXATPGSPREAD-26OCT18MEDNAK",
-      "KXATPGTOTAL-26OCT18MEDNAK"
-    ],
-    "source_id": "sr:sport_event:75722448",
-    "source_ids": {
-      "source_1_id": "5437654",
-      "source_2_id": "20261018221315A7",
-      "source_3_id": "sr:sport_event:75722448"
-    },
-    "start_date": "2026-10-20T18:10:00Z",
-    "title": "Medjedovic vs Nakashima",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "29bb45d2-7673-4939-a55c-4832a13992dd",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18WAWLAN",
-      "round": "Round Of 32",
-      "second_competitor_id": "1eaced97-cf86-4f2d-81ec-c7e44fd45eb3",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Lyon"
-    },
-    "id": "daa1150b-3591-4dee-bbb5-69fe0c925276",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18WAWLAN",
-      "KXATPSETWINNER-26OCT18WAWLAN-1",
-      "KXATPSETWINNER-26OCT18WAWLAN-2",
-      "KXATPEXACTMATCH-26OCT18WAWLAN"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18WAWLAN",
-      "KXATPSETWINNER-26OCT18WAWLAN-1",
-      "KXATPSETWINNER-26OCT18WAWLAN-2",
-      "KXATPEXACTMATCH-26OCT18WAWLAN",
-      "KXATPGSPREAD-26OCT18WAWLAN",
-      "KXATPGTOTAL-26OCT18WAWLAN"
-    ],
-    "source_id": "sr:sport_event:75722450",
-    "source_ids": {
-      "source_1_id": "5437652",
-      "source_2_id": "2026101822DABE9D",
-      "source_3_id": "sr:sport_event:75722450"
-    },
-    "start_date": "2026-10-21T10:00:00Z",
-    "title": "Wawrinka vs Landaluce",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "e998527e-dc46-4ead-ac6c-1b814658ae27",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18FEAGAS",
-      "round": "Round Of 32",
-      "second_competitor_id": "fb32ccf3-bdca-4b19-9a1b-22979509bee9",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Brussels"
-    },
-    "id": "b4d739b6-a928-462a-8bd8-e7a87f7f84a6",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18FEAGAS",
-      "KXATPSETWINNER-26OCT18FEAGAS-1",
-      "KXATPSETWINNER-26OCT18FEAGAS-2",
-      "KXATPEXACTMATCH-26OCT18FEAGAS"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18FEAGAS",
-      "KXATPSETWINNER-26OCT18FEAGAS-1",
-      "KXATPSETWINNER-26OCT18FEAGAS-2",
-      "KXATPEXACTMATCH-26OCT18FEAGAS",
-      "KXATPGSPREAD-26OCT18FEAGAS",
-      "KXATPGTOTAL-26OCT18FEAGAS"
-    ],
-    "source_id": "sr:sport_event:75698088",
-    "source_ids": {
-      "source_1_id": "5437614",
-      "source_2_id": "202610184FB22469",
-      "source_3_id": "sr:sport_event:75698088"
-    },
-    "start_date": "2026-10-20T14:00:00Z",
-    "title": "Fearnley vs Gaston",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "58df3a69-c402-4e09-af82-c706ef7c8749",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18NAVCER",
-      "round": "Round Of 32",
-      "second_competitor_id": "c714748c-d454-43c6-ab6f-6a17f123779b",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Brussels"
-    },
-    "id": "531ad994-7349-4f06-83ac-301c5f28c1d0",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18NAVCER",
-      "KXATPSETWINNER-26OCT18NAVCER-1",
-      "KXATPSETWINNER-26OCT18NAVCER-2",
-      "KXATPEXACTMATCH-26OCT18NAVCER"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18NAVCER",
-      "KXATPSETWINNER-26OCT18NAVCER-1",
-      "KXATPSETWINNER-26OCT18NAVCER-2",
-      "KXATPEXACTMATCH-26OCT18NAVCER",
-      "KXATPGSPREAD-26OCT18NAVCER",
-      "KXATPGTOTAL-26OCT18NAVCER"
-    ],
-    "source_id": "sr:sport_event:75698086",
-    "source_ids": {
-      "source_1_id": "5437617",
-      "source_2_id": "202610189F0A4768",
-      "source_3_id": "sr:sport_event:75698086"
-    },
-    "start_date": "2026-10-20T09:30:00Z",
-    "title": "Navone vs Cerundolo",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "f9eed766-f2d1-4472-a150-4679fdbb1f97",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT20FERGOJ",
-      "round": "Round Of 32",
-      "second_competitor_id": "bc0f6ec4-3a8f-4f26-b5a3-391da3d69c49",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Lyon"
-    },
-    "id": "cbb85245-44cc-4fef-bc0d-af54cb832b74",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT20FERGOJ",
-      "KXATPSETWINNER-26OCT20FERGOJ-1",
-      "KXATPSETWINNER-26OCT20FERGOJ-2",
-      "KXATPEXACTMATCH-26OCT20FERGOJ"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT20FERGOJ",
-      "KXATPSETWINNER-26OCT20FERGOJ-1",
-      "KXATPSETWINNER-26OCT20FERGOJ-2",
-      "KXATPEXACTMATCH-26OCT20FERGOJ",
-      "KXATPGSPREAD-26OCT20FERGOJ",
-      "KXATPGTOTAL-26OCT20FERGOJ"
-    ],
-    "source_id": "sr:sport_event:75800016",
-    "source_ids": {
-      "source_1_id": "5437663",
-      "source_2_id": "20261020F37B73B1",
-      "source_3_id": "sr:sport_event:75800016"
-    },
-    "start_date": "2026-10-20T11:10:00Z",
-    "title": "Fery vs Gojo",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "83ca6052-fdaa-4641-bcf3-2c09a5ae7f80",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT20GOFBER",
-      "round": "Round Of 32",
-      "second_competitor_id": "7a894d8b-f368-4627-9abe-1654dce59f88",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Brussels"
-    },
-    "id": "4878e0a3-b4ba-4a15-a02f-84ce8c29118d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT20GOFBER",
-      "KXATPSETWINNER-26OCT20GOFBER-1",
-      "KXATPSETWINNER-26OCT20GOFBER-2",
-      "KXATPEXACTMATCH-26OCT20GOFBER"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT20GOFBER",
-      "KXATPSETWINNER-26OCT20GOFBER-1",
-      "KXATPSETWINNER-26OCT20GOFBER-2",
-      "KXATPEXACTMATCH-26OCT20GOFBER",
-      "KXATPGSPREAD-26OCT20GOFBER",
-      "KXATPGTOTAL-26OCT20GOFBER"
-    ],
-    "source_id": "sr:sport_event:75763154",
-    "source_ids": {
-      "source_1_id": "5437607",
-      "source_2_id": "20261020D866CDF7",
-      "source_3_id": "sr:sport_event:75763154"
-    },
-    "start_date": "2026-10-21T09:30:00Z",
-    "title": "Goffin vs Bertola",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "a2b4dfed-fdfc-498f-96b6-120e0463a068",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18ATMHIJ",
-      "round": "Round Of 32",
-      "second_competitor_id": "577b14ee-1816-46a0-be87-8fac11de61c5",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Almaty"
-    },
-    "id": "e36637a5-e232-4617-8b5b-10ada81d78de",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18ATMHIJ",
-      "KXATPSETWINNER-26OCT18ATMHIJ-1",
-      "KXATPSETWINNER-26OCT18ATMHIJ-2",
-      "KXATPEXACTMATCH-26OCT18ATMHIJ"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18ATMHIJ",
-      "KXATPSETWINNER-26OCT18ATMHIJ-1",
-      "KXATPSETWINNER-26OCT18ATMHIJ-2",
-      "KXATPEXACTMATCH-26OCT18ATMHIJ",
-      "KXATPGSPREAD-26OCT18ATMHIJ",
-      "KXATPGTOTAL-26OCT18ATMHIJ"
-    ],
-    "source_id": "sr:sport_event:75716398",
-    "source_ids": {
-      "source_1_id": "5437561",
-      "source_2_id": "202610195014AC86",
-      "source_3_id": "sr:sport_event:75716398"
-    },
-    "start_date": "2026-10-20T06:30:00Z",
-    "title": "Atmane vs Hijikata",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "f6999a0e-5142-4d76-be2c-e264da83b220",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18MARSKA",
-      "round": "Round Of 32",
-      "second_competitor_id": "352eceab-2d57-4e2e-b5f8-534521f52492",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Almaty"
-    },
-    "id": "bad291a1-fcf4-46f6-8556-059a8c63c7d2",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18MARSKA",
-      "KXATPSETWINNER-26OCT18MARSKA-1",
-      "KXATPSETWINNER-26OCT18MARSKA-2",
-      "KXATPEXACTMATCH-26OCT18MARSKA"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18MARSKA",
-      "KXATPSETWINNER-26OCT18MARSKA-1",
-      "KXATPSETWINNER-26OCT18MARSKA-2",
-      "KXATPEXACTMATCH-26OCT18MARSKA",
-      "KXATPGSPREAD-26OCT18MARSKA",
-      "KXATPGTOTAL-26OCT18MARSKA"
-    ],
-    "source_id": "sr:sport_event:75716394",
-    "source_ids": {
-      "source_1_id": "5437564",
-      "source_2_id": "202610191C40D2CF",
-      "source_3_id": "sr:sport_event:75716394"
-    },
-    "start_date": "2026-10-20T09:00:00Z",
-    "title": "Marozsan vs Skatov",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "8c4709e2-3b9a-497b-bfdd-a4c8e9ed29ac",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18BONNOR",
-      "round": "Round Of 32",
-      "second_competitor_id": "b524322e-690c-4f3d-b71e-d7b7b4eb3e36",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Lyon"
-    },
-    "id": "045d5bbb-1b21-4020-890e-930ca3e55acb",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18BONNOR",
-      "KXATPEXACTMATCH-26OCT18BONNOR",
-      "KXATPSETWINNER-26OCT18BONNOR-1",
-      "KXATPSETWINNER-26OCT18BONNOR-2"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18BONNOR",
-      "KXATPEXACTMATCH-26OCT18BONNOR",
-      "KXATPSETWINNER-26OCT18BONNOR-1",
-      "KXATPSETWINNER-26OCT18BONNOR-2",
-      "KXATPGSPREAD-26OCT18BONNOR",
-      "KXATPGTOTAL-26OCT18BONNOR"
-    ],
-    "source_id": "sr:sport_event:75722438",
-    "source_ids": {
-      "source_1_id": "5437661",
-      "source_2_id": "202610189F7F700A",
-      "source_3_id": "sr:sport_event:75722438"
-    },
-    "start_date": "2026-10-20T13:10:00Z",
-    "title": "Bonzi vs Norrie",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "48fcffae-3109-4a66-80d5-3b2577cd8970",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18PRIDZU",
-      "round": "Round Of 32",
-      "second_competitor_id": "67b1c952-c61c-46f4-98bb-0c6605c05888",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Brussels"
-    },
-    "id": "d7e9bf96-c836-4e5c-968f-8c1cdc41e9b6",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18PRIDZU",
-      "KXATPSETWINNER-26OCT18PRIDZU-1",
-      "KXATPSETWINNER-26OCT18PRIDZU-2",
-      "KXATPEXACTMATCH-26OCT18PRIDZU"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18PRIDZU",
-      "KXATPSETWINNER-26OCT18PRIDZU-1",
-      "KXATPSETWINNER-26OCT18PRIDZU-2",
-      "KXATPEXACTMATCH-26OCT18PRIDZU",
-      "KXATPGSPREAD-26OCT18PRIDZU",
-      "KXATPGTOTAL-26OCT18PRIDZU"
-    ],
-    "source_id": "sr:sport_event:75698094",
-    "source_ids": {
-      "source_1_id": "5437611",
-      "source_2_id": "202610182211CD67",
-      "source_3_id": "sr:sport_event:75698094"
-    },
-    "start_date": "2026-10-21T09:30:00Z",
-    "title": "Prizmic vs Dzumhur",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "f8b03f9d-7641-4f08-b889-e0ae01675887",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18STRGIR",
-      "round": "Round Of 32",
-      "second_competitor_id": "32f6b00d-234a-4869-80a7-bb577c364393",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Brussels"
-    },
-    "id": "68e4cd07-343e-4529-b42d-3f211d3590a0",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18STRGIR",
-      "KXATPSETWINNER-26OCT18STRGIR-1",
-      "KXATPSETWINNER-26OCT18STRGIR-2",
-      "KXATPEXACTMATCH-26OCT18STRGIR"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18STRGIR",
-      "KXATPSETWINNER-26OCT18STRGIR-1",
-      "KXATPSETWINNER-26OCT18STRGIR-2",
-      "KXATPEXACTMATCH-26OCT18STRGIR",
-      "KXATPGSPREAD-26OCT18STRGIR",
-      "KXATPGTOTAL-26OCT18STRGIR"
-    ],
-    "source_id": "sr:sport_event:75698096",
-    "source_ids": {
-      "source_1_id": "5437610",
-      "source_2_id": "20261018D3F36AD0",
-      "source_3_id": "sr:sport_event:75698096"
-    },
-    "start_date": "2026-10-20T10:40:00Z",
-    "title": "Struff vs Giron",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "71bb07dc-1e38-4234-a594-6224d9b1a196",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT20SAKKHA",
-      "round": "Round Of 32",
-      "second_competitor_id": "33e39b42-3ba3-4982-b7b3-b0648d03c95f",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Almaty"
-    },
-    "id": "8f080814-fc44-4691-bcec-0b4f9e1834de",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT20SAKKHA",
-      "KXATPSETWINNER-26OCT20SAKKHA-1",
-      "KXATPSETWINNER-26OCT20SAKKHA-2",
-      "KXATPEXACTMATCH-26OCT20SAKKHA"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT20SAKKHA",
-      "KXATPSETWINNER-26OCT20SAKKHA-1",
-      "KXATPSETWINNER-26OCT20SAKKHA-2",
-      "KXATPEXACTMATCH-26OCT20SAKKHA",
-      "KXATPGSPREAD-26OCT20SAKKHA",
-      "KXATPGTOTAL-26OCT20SAKKHA"
-    ],
-    "source_id": "sr:sport_event:75754904",
-    "source_ids": {
-      "source_1_id": "5437566",
-      "source_2_id": "202610208C23787B",
-      "source_3_id": "sr:sport_event:75754904"
-    },
-    "start_date": "2026-10-20T14:30:00Z",
-    "title": "Sakamoto vs Khachanov",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "788901c4-a8c9-4a28-927d-60511fbeccf3",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18BELETC",
-      "round": "Round Of 32",
-      "second_competitor_id": "1a6577a3-f592-47fd-a84e-eb7e97ff61b8",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Almaty"
-    },
-    "id": "159e89fc-3ca8-46ab-adf1-17006d84bd6e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18BELETC",
-      "KXATPSETWINNER-26OCT18BELETC-1",
-      "KXATPSETWINNER-26OCT18BELETC-2",
-      "KXATPEXACTMATCH-26OCT18BELETC"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18BELETC",
-      "KXATPSETWINNER-26OCT18BELETC-1",
-      "KXATPSETWINNER-26OCT18BELETC-2",
-      "KXATPEXACTMATCH-26OCT18BELETC",
-      "KXATPGSPREAD-26OCT18BELETC",
-      "KXATPGTOTAL-26OCT18BELETC"
-    ],
-    "source_id": "sr:sport_event:75716396",
-    "source_ids": {
-      "source_1_id": "5437562",
-      "source_2_id": "20261019AA1B9A16",
-      "source_3_id": "sr:sport_event:75716396"
-    },
-    "start_date": "2026-10-21T06:30:00Z",
-    "title": "Bellucci vs Etcheverry",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "01b4fd12-0978-4ae6-9fc9-64493f64962e",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18TSIKOV",
-      "round": "Round Of 32",
-      "second_competitor_id": "dae019bd-4698-457d-95dd-a34d1c229274",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Almaty"
-    },
-    "id": "cf8b6238-d9a1-4f30-a9a9-17deb218733d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18TSIKOV",
-      "KXATPSETWINNER-26OCT18TSIKOV-1",
-      "KXATPSETWINNER-26OCT18TSIKOV-2",
-      "KXATPEXACTMATCH-26OCT18TSIKOV"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18TSIKOV",
-      "KXATPSETWINNER-26OCT18TSIKOV-1",
-      "KXATPSETWINNER-26OCT18TSIKOV-2",
-      "KXATPEXACTMATCH-26OCT18TSIKOV",
-      "KXATPGSPREAD-26OCT18TSIKOV",
-      "KXATPGTOTAL-26OCT18TSIKOV"
-    ],
-    "source_id": "sr:sport_event:75716386",
-    "source_ids": {
-      "source_1_id": "5437571",
-      "source_2_id": "2026101933B793F7",
-      "source_3_id": "sr:sport_event:75716386"
-    },
-    "start_date": "2026-10-20T07:50:00Z",
-    "title": "Tsitsipas vs Kovacevic",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "f2eeb69d-b39e-45da-8d30-137eb4e00e34",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18ALTDRO",
-      "round": "Round Of 32",
-      "second_competitor_id": "5b1119a9-65d9-4af3-9f05-f90425f926ae",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Lyon"
-    },
-    "id": "530ccaa2-d7a0-4f5c-b6eb-3813080e2c4d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18ALTDRO",
-      "KXATPEXACTMATCH-26OCT18ALTDRO",
-      "KXATPSETWINNER-26OCT18ALTDRO-1",
-      "KXATPSETWINNER-26OCT18ALTDRO-2"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18ALTDRO",
-      "KXATPEXACTMATCH-26OCT18ALTDRO",
-      "KXATPSETWINNER-26OCT18ALTDRO-1",
-      "KXATPSETWINNER-26OCT18ALTDRO-2",
-      "KXATPGSPREAD-26OCT18ALTDRO",
-      "KXATPGTOTAL-26OCT18ALTDRO"
-    ],
-    "source_id": "sr:sport_event:75722436",
-    "source_ids": {
-      "source_1_id": "5437664",
-      "source_2_id": "20261018B1631634",
-      "source_3_id": "sr:sport_event:75722436"
-    },
-    "start_date": "2026-10-20T12:20:00Z",
-    "title": "Altmaier vs Droguet",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "0b22a8f9-2c5e-4b75-91aa-427a477e2c6c",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18GRISCH",
-      "round": "Round Of 32",
-      "second_competitor_id": "9c8dee2d-8e57-49c3-892c-a679f4e95909",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Brussels"
-    },
-    "id": "1abe1cc6-a8c8-4e24-a994-99fe093671f8",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18GRISCH",
-      "KXATPSETWINNER-26OCT18GRISCH-1",
-      "KXATPSETWINNER-26OCT18GRISCH-2",
-      "KXATPEXACTMATCH-26OCT18GRISCH"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18GRISCH",
-      "KXATPSETWINNER-26OCT18GRISCH-1",
-      "KXATPSETWINNER-26OCT18GRISCH-2",
-      "KXATPEXACTMATCH-26OCT18GRISCH",
-      "KXATPGSPREAD-26OCT18GRISCH",
-      "KXATPGTOTAL-26OCT18GRISCH"
-    ],
-    "source_id": "sr:sport_event:75698084",
-    "source_ids": {
-      "source_1_id": "5437618",
-      "source_2_id": "20261018CD70E792",
-      "source_3_id": "sr:sport_event:75698084"
-    },
-    "start_date": "2026-10-20T09:30:00Z",
-    "title": "Griekspoor vs Schoenhaus",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
       "first_competitor_id": "e67e67f5-3a6b-483f-b971-795978f82df9",
       "gender": "men",
       "main_game_event_ticker": "KXATPMATCH-26OCT20SHISAF",
@@ -858,7 +38,7 @@
     "start_date": "2026-10-20T06:30:00Z",
     "title": "Shimabukuro vs Safiullin",
     "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "category": "Sports",
@@ -899,171 +79,7 @@
     "start_date": "2026-10-20T17:10:00Z",
     "title": "Basavareddy vs Collignon",
     "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "c2d9e167-2fd6-484f-938e-0f8ba768fa88",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT20BERJAC",
-      "round": "Round Of 32",
-      "second_competitor_id": "833d29a1-435b-4c82-bb5b-cdb3396090ad",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Lyon"
-    },
-    "id": "05641fdb-cfbd-4aff-94dc-82001fa1d5c7",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT20BERJAC",
-      "KXATPSETWINNER-26OCT20BERJAC-1",
-      "KXATPSETWINNER-26OCT20BERJAC-2",
-      "KXATPEXACTMATCH-26OCT20BERJAC"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT20BERJAC",
-      "KXATPSETWINNER-26OCT20BERJAC-1",
-      "KXATPSETWINNER-26OCT20BERJAC-2",
-      "KXATPEXACTMATCH-26OCT20BERJAC",
-      "KXATPGSPREAD-26OCT20BERJAC",
-      "KXATPGTOTAL-26OCT20BERJAC"
-    ],
-    "source_id": "sr:sport_event:75800008",
-    "source_ids": {
-      "source_1_id": "5437653",
-      "source_2_id": "20261020B950D448",
-      "source_3_id": "sr:sport_event:75800008"
-    },
-    "start_date": "2026-10-20T17:00:00Z",
-    "title": "Berrettini vs Jacquet",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "d80691bc-d375-4abb-96e2-8c109ae44ffc",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT20HERBAE",
-      "round": "Round Of 32",
-      "second_competitor_id": "90199027-7ffc-4597-8a59-a16d2e77f3e3",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Lyon"
-    },
-    "id": "a2b22628-e306-4f48-9db5-4b1081d78d1f",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT20HERBAE",
-      "KXATPSETWINNER-26OCT20HERBAE-1",
-      "KXATPSETWINNER-26OCT20HERBAE-2",
-      "KXATPEXACTMATCH-26OCT20HERBAE"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT20HERBAE",
-      "KXATPSETWINNER-26OCT20HERBAE-1",
-      "KXATPSETWINNER-26OCT20HERBAE-2",
-      "KXATPEXACTMATCH-26OCT20HERBAE",
-      "KXATPGSPREAD-26OCT20HERBAE",
-      "KXATPGTOTAL-26OCT20HERBAE"
-    ],
-    "source_id": "sr:sport_event:75800034",
-    "source_ids": {
-      "source_1_id": "5437665",
-      "source_2_id": "202610203C536E06",
-      "source_3_id": "sr:sport_event:75800034"
-    },
-    "start_date": "2026-10-20T10:00:00Z",
-    "title": "Herbert vs Baez",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "02998403-0a53-42c4-83d0-383f77aa5a25",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT18SAMBER",
-      "round": "Round Of 32",
-      "second_competitor_id": "6d821426-6b61-4bf8-aae9-d2e92ef1e6b4",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Brussels"
-    },
-    "id": "c01914f8-ddc5-4446-acb8-2e33beaeb250",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT18SAMBER",
-      "KXATPSETWINNER-26OCT18SAMBER-1",
-      "KXATPSETWINNER-26OCT18SAMBER-2",
-      "KXATPEXACTMATCH-26OCT18SAMBER"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT18SAMBER",
-      "KXATPSETWINNER-26OCT18SAMBER-1",
-      "KXATPSETWINNER-26OCT18SAMBER-2",
-      "KXATPEXACTMATCH-26OCT18SAMBER",
-      "KXATPGSPREAD-26OCT18SAMBER",
-      "KXATPGTOTAL-26OCT18SAMBER"
-    ],
-    "source_id": "sr:sport_event:75698092",
-    "source_ids": {
-      "source_1_id": "5437612",
-      "source_2_id": "202610180A0BF870",
-      "source_3_id": "sr:sport_event:75698092"
-    },
-    "start_date": "2026-10-20T16:00:00Z",
-    "title": "Samuel vs Bergs",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "2dd4a596-5348-41bc-bc29-f46cbc01bff6",
-      "gender": "men",
-      "main_game_event_ticker": "KXATPMATCH-26OCT20DUCDAR",
-      "round": "Round Of 16",
-      "second_competitor_id": "664c9334-4c82-4a23-9693-6d4bf94c99cd",
-      "status": "not_started",
-      "tour": "ATP",
-      "tournament_name": "ATP Almaty"
-    },
-    "id": "a999f513-9ede-4106-bcee-fea8c52de85a",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXATPMATCH-26OCT20DUCDAR",
-      "KXATPSETWINNER-26OCT20DUCDAR-1",
-      "KXATPSETWINNER-26OCT20DUCDAR-2",
-      "KXATPEXACTMATCH-26OCT20DUCDAR"
-    ],
-    "related_event_tickers": [
-      "KXATPMATCH-26OCT20DUCDAR",
-      "KXATPSETWINNER-26OCT20DUCDAR-1",
-      "KXATPSETWINNER-26OCT20DUCDAR-2",
-      "KXATPEXACTMATCH-26OCT20DUCDAR",
-      "KXATPGSPREAD-26OCT20DUCDAR",
-      "KXATPGTOTAL-26OCT20DUCDAR"
-    ],
-    "source_id": "sr:sport_event:75620046",
-    "source_ids": {
-      "source_1_id": "5437582",
-      "source_2_id": "202610203DA7267F",
-      "source_3_id": "sr:sport_event:75620046"
-    },
-    "start_date": "2026-10-21T06:30:00Z",
-    "title": "Duckworth vs Darderi",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "category": "Sports",
@@ -1104,7 +120,786 @@
     "start_date": "2026-10-20T10:40:00Z",
     "title": "Van de Zandschulp vs Chidekh",
     "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "01b4fd12-0978-4ae6-9fc9-64493f64962e",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18TSIKOV",
+      "round": "Round Of 32",
+      "second_competitor_id": "dae019bd-4698-457d-95dd-a34d1c229274",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Almaty"
+    },
+    "id": "cf8b6238-d9a1-4f30-a9a9-17deb218733d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18TSIKOV",
+      "KXATPSETWINNER-26OCT18TSIKOV-1",
+      "KXATPSETWINNER-26OCT18TSIKOV-2",
+      "KXATPEXACTMATCH-26OCT18TSIKOV"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18TSIKOV",
+      "KXATPSETWINNER-26OCT18TSIKOV-1",
+      "KXATPSETWINNER-26OCT18TSIKOV-2",
+      "KXATPEXACTMATCH-26OCT18TSIKOV",
+      "KXATPGSPREAD-26OCT18TSIKOV",
+      "KXATPGTOTAL-26OCT18TSIKOV"
+    ],
+    "source_id": "sr:sport_event:75716386",
+    "source_ids": {
+      "source_1_id": "5437571",
+      "source_2_id": "2026101933B793F7",
+      "source_3_id": "sr:sport_event:75716386"
+    },
+    "start_date": "2026-10-20T08:00:00Z",
+    "title": "Tsitsipas vs Kovacevic",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "b61b8f3c-35ff-4de5-b1a7-2f0cd506781f",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18HUMMOU",
+      "round": "Round Of 32",
+      "second_competitor_id": "ee434c7b-7edc-44df-9994-9c6d8a0a62c7",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Lyon"
+    },
+    "id": "da063c43-0a91-45fa-9877-f16fb5f9df6f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18HUMMOU",
+      "KXATPSETWINNER-26OCT18HUMMOU-1",
+      "KXATPSETWINNER-26OCT18HUMMOU-2",
+      "KXATPEXACTMATCH-26OCT18HUMMOU"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18HUMMOU",
+      "KXATPSETWINNER-26OCT18HUMMOU-1",
+      "KXATPSETWINNER-26OCT18HUMMOU-2",
+      "KXATPEXACTMATCH-26OCT18HUMMOU",
+      "KXATPGSPREAD-26OCT18HUMMOU",
+      "KXATPGTOTAL-26OCT18HUMMOU"
+    ],
+    "source_id": "sr:sport_event:75722442",
+    "source_ids": {
+      "source_1_id": "5437659",
+      "source_2_id": "202610182FF80ED6",
+      "source_3_id": "sr:sport_event:75722442"
+    },
+    "start_date": "2026-10-20T12:00:00Z",
+    "title": "Humbert vs Moutet",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "29bb45d2-7673-4939-a55c-4832a13992dd",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18WAWLAN",
+      "round": "Round Of 32",
+      "second_competitor_id": "1eaced97-cf86-4f2d-81ec-c7e44fd45eb3",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Lyon"
+    },
+    "id": "daa1150b-3591-4dee-bbb5-69fe0c925276",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18WAWLAN",
+      "KXATPSETWINNER-26OCT18WAWLAN-1",
+      "KXATPSETWINNER-26OCT18WAWLAN-2",
+      "KXATPEXACTMATCH-26OCT18WAWLAN"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18WAWLAN",
+      "KXATPSETWINNER-26OCT18WAWLAN-1",
+      "KXATPSETWINNER-26OCT18WAWLAN-2",
+      "KXATPEXACTMATCH-26OCT18WAWLAN",
+      "KXATPGSPREAD-26OCT18WAWLAN",
+      "KXATPGTOTAL-26OCT18WAWLAN"
+    ],
+    "source_id": "sr:sport_event:75722450",
+    "source_ids": {
+      "source_1_id": "5437652",
+      "source_2_id": "2026101822DABE9D",
+      "source_3_id": "sr:sport_event:75722450"
+    },
+    "start_date": "2026-10-21T10:00:00Z",
+    "title": "Wawrinka vs Landaluce",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "58df3a69-c402-4e09-af82-c706ef7c8749",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18NAVCER",
+      "round": "Round Of 32",
+      "second_competitor_id": "c714748c-d454-43c6-ab6f-6a17f123779b",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Brussels"
+    },
+    "id": "531ad994-7349-4f06-83ac-301c5f28c1d0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18NAVCER",
+      "KXATPSETWINNER-26OCT18NAVCER-1",
+      "KXATPSETWINNER-26OCT18NAVCER-2",
+      "KXATPEXACTMATCH-26OCT18NAVCER"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18NAVCER",
+      "KXATPSETWINNER-26OCT18NAVCER-1",
+      "KXATPSETWINNER-26OCT18NAVCER-2",
+      "KXATPEXACTMATCH-26OCT18NAVCER",
+      "KXATPGSPREAD-26OCT18NAVCER",
+      "KXATPGTOTAL-26OCT18NAVCER"
+    ],
+    "source_id": "sr:sport_event:75698086",
+    "source_ids": {
+      "source_1_id": "5437617",
+      "source_2_id": "202610189F0A4768",
+      "source_3_id": "sr:sport_event:75698086"
+    },
+    "start_date": "2026-10-20T09:30:00Z",
+    "title": "Navone vs Cerundolo",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "83ca6052-fdaa-4641-bcf3-2c09a5ae7f80",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT20GOFBER",
+      "round": "Round Of 32",
+      "second_competitor_id": "7a894d8b-f368-4627-9abe-1654dce59f88",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Brussels"
+    },
+    "id": "4878e0a3-b4ba-4a15-a02f-84ce8c29118d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT20GOFBER",
+      "KXATPSETWINNER-26OCT20GOFBER-1",
+      "KXATPSETWINNER-26OCT20GOFBER-2",
+      "KXATPEXACTMATCH-26OCT20GOFBER"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT20GOFBER",
+      "KXATPSETWINNER-26OCT20GOFBER-1",
+      "KXATPSETWINNER-26OCT20GOFBER-2",
+      "KXATPEXACTMATCH-26OCT20GOFBER",
+      "KXATPGSPREAD-26OCT20GOFBER",
+      "KXATPGTOTAL-26OCT20GOFBER"
+    ],
+    "source_id": "sr:sport_event:75763154",
+    "source_ids": {
+      "source_1_id": "5437607",
+      "source_2_id": "20261020D866CDF7",
+      "source_3_id": "sr:sport_event:75763154"
+    },
+    "start_date": "2026-10-21T09:30:00Z",
+    "title": "Goffin vs Bertola",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "1636f929-4288-428c-84c5-7f35f0dcee54",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT21DIABAS",
+      "round": "Round Of 16",
+      "second_competitor_id": "9a60a9bb-4553-4766-854d-f7b17b339f78",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Almaty"
+    },
+    "id": "bf8d7fef-1432-4053-90c8-763c899de460",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT21DIABAS",
+      "KXATPSETWINNER-26OCT21DIABAS-1",
+      "KXATPSETWINNER-26OCT21DIABAS-2",
+      "KXATPEXACTMATCH-26OCT21DIABAS"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT21DIABAS",
+      "KXATPSETWINNER-26OCT21DIABAS-1",
+      "KXATPSETWINNER-26OCT21DIABAS-2",
+      "KXATPEXACTMATCH-26OCT21DIABAS",
+      "KXATPGSPREAD-26OCT21DIABAS",
+      "KXATPGTOTAL-26OCT21DIABAS"
+    ],
+    "source_id": "sr:sport_event:75620026",
+    "source_ids": {
+      "source_1_id": "5437579",
+      "source_2_id": "20261021F83DBBCC",
+      "source_3_id": "sr:sport_event:75620026"
+    },
+    "start_date": "2026-10-21T06:30:00Z",
+    "title": "Diaz Acosta vs Basilashvili",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "10bcf011-d185-4ecc-b456-0c5e5a590681",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT21MANRUB",
+      "round": "Round Of 16",
+      "second_competitor_id": "30432ea0-e6c5-40f1-ab38-8676892a0349",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Almaty"
+    },
+    "id": "4079bdd8-51b4-458a-88a5-cb5b9038f724",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT21MANRUB",
+      "KXATPSETWINNER-26OCT21MANRUB-1",
+      "KXATPSETWINNER-26OCT21MANRUB-2",
+      "KXATPEXACTMATCH-26OCT21MANRUB"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT21MANRUB",
+      "KXATPSETWINNER-26OCT21MANRUB-1",
+      "KXATPSETWINNER-26OCT21MANRUB-2",
+      "KXATPEXACTMATCH-26OCT21MANRUB",
+      "KXATPGSPREAD-26OCT21MANRUB",
+      "KXATPGTOTAL-26OCT21MANRUB"
+    ],
+    "source_id": "sr:sport_event:75620042",
+    "source_ids": {
+      "source_1_id": "5437580",
+      "source_2_id": "20261021BFB702BB",
+      "source_3_id": "sr:sport_event:75620042"
+    },
+    "start_date": "2026-10-21T06:30:00Z",
+    "title": "Mannarino vs Rublev",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "788901c4-a8c9-4a28-927d-60511fbeccf3",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18BELETC",
+      "round": "Round Of 32",
+      "second_competitor_id": "1a6577a3-f592-47fd-a84e-eb7e97ff61b8",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Almaty"
+    },
+    "id": "159e89fc-3ca8-46ab-adf1-17006d84bd6e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18BELETC",
+      "KXATPSETWINNER-26OCT18BELETC-1",
+      "KXATPSETWINNER-26OCT18BELETC-2",
+      "KXATPEXACTMATCH-26OCT18BELETC"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18BELETC",
+      "KXATPSETWINNER-26OCT18BELETC-1",
+      "KXATPSETWINNER-26OCT18BELETC-2",
+      "KXATPEXACTMATCH-26OCT18BELETC",
+      "KXATPGSPREAD-26OCT18BELETC",
+      "KXATPGTOTAL-26OCT18BELETC"
+    ],
+    "source_id": "sr:sport_event:75716396",
+    "source_ids": {
+      "source_1_id": "5437562",
+      "source_2_id": "20261019AA1B9A16",
+      "source_3_id": "sr:sport_event:75716396"
+    },
+    "start_date": "2026-10-21T06:30:00Z",
+    "title": "Bellucci vs Etcheverry",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "8c4709e2-3b9a-497b-bfdd-a4c8e9ed29ac",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18BONNOR",
+      "round": "Round Of 32",
+      "second_competitor_id": "b524322e-690c-4f3d-b71e-d7b7b4eb3e36",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Lyon"
+    },
+    "id": "045d5bbb-1b21-4020-890e-930ca3e55acb",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18BONNOR",
+      "KXATPEXACTMATCH-26OCT18BONNOR",
+      "KXATPSETWINNER-26OCT18BONNOR-1",
+      "KXATPSETWINNER-26OCT18BONNOR-2"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18BONNOR",
+      "KXATPEXACTMATCH-26OCT18BONNOR",
+      "KXATPSETWINNER-26OCT18BONNOR-1",
+      "KXATPSETWINNER-26OCT18BONNOR-2",
+      "KXATPGSPREAD-26OCT18BONNOR",
+      "KXATPGTOTAL-26OCT18BONNOR"
+    ],
+    "source_id": "sr:sport_event:75722438",
+    "source_ids": {
+      "source_1_id": "5437661",
+      "source_2_id": "202610189F7F700A",
+      "source_3_id": "sr:sport_event:75722438"
+    },
+    "start_date": "2026-10-20T13:10:00Z",
+    "title": "Bonzi vs Norrie",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "e998527e-dc46-4ead-ac6c-1b814658ae27",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18FEAGAS",
+      "round": "Round Of 32",
+      "second_competitor_id": "fb32ccf3-bdca-4b19-9a1b-22979509bee9",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Brussels"
+    },
+    "id": "b4d739b6-a928-462a-8bd8-e7a87f7f84a6",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18FEAGAS",
+      "KXATPSETWINNER-26OCT18FEAGAS-1",
+      "KXATPSETWINNER-26OCT18FEAGAS-2",
+      "KXATPEXACTMATCH-26OCT18FEAGAS"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18FEAGAS",
+      "KXATPSETWINNER-26OCT18FEAGAS-1",
+      "KXATPSETWINNER-26OCT18FEAGAS-2",
+      "KXATPEXACTMATCH-26OCT18FEAGAS",
+      "KXATPGSPREAD-26OCT18FEAGAS",
+      "KXATPGTOTAL-26OCT18FEAGAS"
+    ],
+    "source_id": "sr:sport_event:75698088",
+    "source_ids": {
+      "source_1_id": "5437614",
+      "source_2_id": "202610184FB22469",
+      "source_3_id": "sr:sport_event:75698088"
+    },
+    "start_date": "2026-10-20T14:00:00Z",
+    "title": "Fearnley vs Gaston",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "0b22a8f9-2c5e-4b75-91aa-427a477e2c6c",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18GRISCH",
+      "round": "Round Of 32",
+      "second_competitor_id": "9c8dee2d-8e57-49c3-892c-a679f4e95909",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Brussels"
+    },
+    "id": "1abe1cc6-a8c8-4e24-a994-99fe093671f8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18GRISCH",
+      "KXATPSETWINNER-26OCT18GRISCH-1",
+      "KXATPSETWINNER-26OCT18GRISCH-2",
+      "KXATPEXACTMATCH-26OCT18GRISCH"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18GRISCH",
+      "KXATPSETWINNER-26OCT18GRISCH-1",
+      "KXATPSETWINNER-26OCT18GRISCH-2",
+      "KXATPEXACTMATCH-26OCT18GRISCH",
+      "KXATPGSPREAD-26OCT18GRISCH",
+      "KXATPGTOTAL-26OCT18GRISCH"
+    ],
+    "source_id": "sr:sport_event:75698084",
+    "source_ids": {
+      "source_1_id": "5437618",
+      "source_2_id": "20261018CD70E792",
+      "source_3_id": "sr:sport_event:75698084"
+    },
+    "start_date": "2026-10-20T09:30:00Z",
+    "title": "Griekspoor vs Schoenhaus",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "48fcffae-3109-4a66-80d5-3b2577cd8970",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18PRIDZU",
+      "round": "Round Of 32",
+      "second_competitor_id": "67b1c952-c61c-46f4-98bb-0c6605c05888",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Brussels"
+    },
+    "id": "d7e9bf96-c836-4e5c-968f-8c1cdc41e9b6",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18PRIDZU",
+      "KXATPSETWINNER-26OCT18PRIDZU-1",
+      "KXATPSETWINNER-26OCT18PRIDZU-2",
+      "KXATPEXACTMATCH-26OCT18PRIDZU"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18PRIDZU",
+      "KXATPSETWINNER-26OCT18PRIDZU-1",
+      "KXATPSETWINNER-26OCT18PRIDZU-2",
+      "KXATPEXACTMATCH-26OCT18PRIDZU",
+      "KXATPGSPREAD-26OCT18PRIDZU",
+      "KXATPGTOTAL-26OCT18PRIDZU"
+    ],
+    "source_id": "sr:sport_event:75698094",
+    "source_ids": {
+      "source_1_id": "5437611",
+      "source_2_id": "202610182211CD67",
+      "source_3_id": "sr:sport_event:75698094"
+    },
+    "start_date": "2026-10-21T09:30:00Z",
+    "title": "Prizmic vs Dzumhur",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "f8b03f9d-7641-4f08-b889-e0ae01675887",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18STRGIR",
+      "round": "Round Of 32",
+      "second_competitor_id": "32f6b00d-234a-4869-80a7-bb577c364393",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Brussels"
+    },
+    "id": "68e4cd07-343e-4529-b42d-3f211d3590a0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18STRGIR",
+      "KXATPSETWINNER-26OCT18STRGIR-1",
+      "KXATPSETWINNER-26OCT18STRGIR-2",
+      "KXATPEXACTMATCH-26OCT18STRGIR"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18STRGIR",
+      "KXATPSETWINNER-26OCT18STRGIR-1",
+      "KXATPSETWINNER-26OCT18STRGIR-2",
+      "KXATPEXACTMATCH-26OCT18STRGIR",
+      "KXATPGSPREAD-26OCT18STRGIR",
+      "KXATPGTOTAL-26OCT18STRGIR"
+    ],
+    "source_id": "sr:sport_event:75698096",
+    "source_ids": {
+      "source_1_id": "5437610",
+      "source_2_id": "20261018D3F36AD0",
+      "source_3_id": "sr:sport_event:75698096"
+    },
+    "start_date": "2026-10-20T10:40:00Z",
+    "title": "Struff vs Giron",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "c2d9e167-2fd6-484f-938e-0f8ba768fa88",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT20BERJAC",
+      "round": "Round Of 32",
+      "second_competitor_id": "833d29a1-435b-4c82-bb5b-cdb3396090ad",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Lyon"
+    },
+    "id": "05641fdb-cfbd-4aff-94dc-82001fa1d5c7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT20BERJAC",
+      "KXATPSETWINNER-26OCT20BERJAC-1",
+      "KXATPSETWINNER-26OCT20BERJAC-2",
+      "KXATPEXACTMATCH-26OCT20BERJAC"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT20BERJAC",
+      "KXATPSETWINNER-26OCT20BERJAC-1",
+      "KXATPSETWINNER-26OCT20BERJAC-2",
+      "KXATPEXACTMATCH-26OCT20BERJAC",
+      "KXATPGSPREAD-26OCT20BERJAC",
+      "KXATPGTOTAL-26OCT20BERJAC"
+    ],
+    "source_id": "sr:sport_event:75800008",
+    "source_ids": {
+      "source_1_id": "5437653",
+      "source_2_id": "20261020B950D448",
+      "source_3_id": "sr:sport_event:75800008"
+    },
+    "start_date": "2026-10-20T17:00:00Z",
+    "title": "Berrettini vs Jacquet",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "f9eed766-f2d1-4472-a150-4679fdbb1f97",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT20FERGOJ",
+      "round": "Round Of 32",
+      "second_competitor_id": "bc0f6ec4-3a8f-4f26-b5a3-391da3d69c49",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Lyon"
+    },
+    "id": "cbb85245-44cc-4fef-bc0d-af54cb832b74",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT20FERGOJ",
+      "KXATPSETWINNER-26OCT20FERGOJ-1",
+      "KXATPSETWINNER-26OCT20FERGOJ-2",
+      "KXATPEXACTMATCH-26OCT20FERGOJ"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT20FERGOJ",
+      "KXATPSETWINNER-26OCT20FERGOJ-1",
+      "KXATPSETWINNER-26OCT20FERGOJ-2",
+      "KXATPEXACTMATCH-26OCT20FERGOJ",
+      "KXATPGSPREAD-26OCT20FERGOJ",
+      "KXATPGTOTAL-26OCT20FERGOJ"
+    ],
+    "source_id": "sr:sport_event:75800016",
+    "source_ids": {
+      "source_1_id": "5437663",
+      "source_2_id": "20261020F37B73B1",
+      "source_3_id": "sr:sport_event:75800016"
+    },
+    "start_date": "2026-10-20T11:10:00Z",
+    "title": "Fery vs Gojo",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "607f6749-4a07-4cbd-8a69-206a0e4a5368",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18NURMAC",
+      "round": "Round Of 32",
+      "second_competitor_id": "f1e36a60-3c2b-491f-86f2-0dcdad4a41a1",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Almaty"
+    },
+    "id": "5c810f55-f6a2-4102-9245-85ea6306a640",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18NURMAC",
+      "KXATPSETWINNER-26OCT18NURMAC-1",
+      "KXATPSETWINNER-26OCT18NURMAC-2",
+      "KXATPEXACTMATCH-26OCT18NURMAC"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18NURMAC",
+      "KXATPSETWINNER-26OCT18NURMAC-1",
+      "KXATPSETWINNER-26OCT18NURMAC-2",
+      "KXATPEXACTMATCH-26OCT18NURMAC",
+      "KXATPGSPREAD-26OCT18NURMAC",
+      "KXATPGTOTAL-26OCT18NURMAC"
+    ],
+    "source_id": "sr:sport_event:75716392",
+    "source_ids": {
+      "source_1_id": "5437565",
+      "source_2_id": "2026101921439C20",
+      "source_3_id": "sr:sport_event:75716392"
+    },
+    "start_date": "2026-10-21T06:30:00Z",
+    "title": "Nurlanuly vs Machac",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "02998403-0a53-42c4-83d0-383f77aa5a25",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18SAMBER",
+      "round": "Round Of 32",
+      "second_competitor_id": "6d821426-6b61-4bf8-aae9-d2e92ef1e6b4",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Brussels"
+    },
+    "id": "c01914f8-ddc5-4446-acb8-2e33beaeb250",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18SAMBER",
+      "KXATPSETWINNER-26OCT18SAMBER-1",
+      "KXATPSETWINNER-26OCT18SAMBER-2",
+      "KXATPEXACTMATCH-26OCT18SAMBER"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18SAMBER",
+      "KXATPSETWINNER-26OCT18SAMBER-1",
+      "KXATPSETWINNER-26OCT18SAMBER-2",
+      "KXATPEXACTMATCH-26OCT18SAMBER",
+      "KXATPGSPREAD-26OCT18SAMBER",
+      "KXATPGTOTAL-26OCT18SAMBER"
+    ],
+    "source_id": "sr:sport_event:75698092",
+    "source_ids": {
+      "source_1_id": "5437612",
+      "source_2_id": "202610180A0BF870",
+      "source_3_id": "sr:sport_event:75698092"
+    },
+    "start_date": "2026-10-20T16:00:00Z",
+    "title": "Samuel vs Bergs",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "2dd4a596-5348-41bc-bc29-f46cbc01bff6",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT20DUCDAR",
+      "round": "Round Of 16",
+      "second_competitor_id": "664c9334-4c82-4a23-9693-6d4bf94c99cd",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Almaty"
+    },
+    "id": "a999f513-9ede-4106-bcee-fea8c52de85a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT20DUCDAR",
+      "KXATPSETWINNER-26OCT20DUCDAR-1",
+      "KXATPSETWINNER-26OCT20DUCDAR-2",
+      "KXATPEXACTMATCH-26OCT20DUCDAR"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT20DUCDAR",
+      "KXATPSETWINNER-26OCT20DUCDAR-1",
+      "KXATPSETWINNER-26OCT20DUCDAR-2",
+      "KXATPEXACTMATCH-26OCT20DUCDAR",
+      "KXATPGSPREAD-26OCT20DUCDAR",
+      "KXATPGTOTAL-26OCT20DUCDAR"
+    ],
+    "source_id": "sr:sport_event:75620046",
+    "source_ids": {
+      "source_1_id": "5437582",
+      "source_2_id": "202610203DA7267F",
+      "source_3_id": "sr:sport_event:75620046"
+    },
+    "start_date": "2026-10-21T06:30:00Z",
+    "title": "Duckworth vs Darderi",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "d80691bc-d375-4abb-96e2-8c109ae44ffc",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT20HERBAE",
+      "round": "Round Of 32",
+      "second_competitor_id": "90199027-7ffc-4597-8a59-a16d2e77f3e3",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Lyon"
+    },
+    "id": "a2b22628-e306-4f48-9db5-4b1081d78d1f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT20HERBAE",
+      "KXATPSETWINNER-26OCT20HERBAE-1",
+      "KXATPSETWINNER-26OCT20HERBAE-2",
+      "KXATPEXACTMATCH-26OCT20HERBAE"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT20HERBAE",
+      "KXATPSETWINNER-26OCT20HERBAE-1",
+      "KXATPSETWINNER-26OCT20HERBAE-2",
+      "KXATPEXACTMATCH-26OCT20HERBAE",
+      "KXATPGSPREAD-26OCT20HERBAE",
+      "KXATPGTOTAL-26OCT20HERBAE"
+    ],
+    "source_id": "sr:sport_event:75800034",
+    "source_ids": {
+      "source_1_id": "5437665",
+      "source_2_id": "202610203C536E06",
+      "source_3_id": "sr:sport_event:75800034"
+    },
+    "start_date": "2026-10-20T10:00:00Z",
+    "title": "Herbert vs Baez",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   },
   {
     "category": "Sports",
@@ -1145,6 +940,211 @@
     "start_date": "2026-10-20T13:30:00Z",
     "title": "Van Assche vs Tabur",
     "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T07:41:41.501+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "a2b4dfed-fdfc-498f-96b6-120e0463a068",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18ATMHIJ",
+      "round": "Round Of 32",
+      "second_competitor_id": "577b14ee-1816-46a0-be87-8fac11de61c5",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Almaty"
+    },
+    "id": "e36637a5-e232-4617-8b5b-10ada81d78de",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18ATMHIJ",
+      "KXATPSETWINNER-26OCT18ATMHIJ-1",
+      "KXATPSETWINNER-26OCT18ATMHIJ-2",
+      "KXATPEXACTMATCH-26OCT18ATMHIJ"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18ATMHIJ",
+      "KXATPSETWINNER-26OCT18ATMHIJ-1",
+      "KXATPSETWINNER-26OCT18ATMHIJ-2",
+      "KXATPEXACTMATCH-26OCT18ATMHIJ",
+      "KXATPGSPREAD-26OCT18ATMHIJ",
+      "KXATPGTOTAL-26OCT18ATMHIJ"
+    ],
+    "source_id": "sr:sport_event:75716398",
+    "source_ids": {
+      "source_1_id": "5437561",
+      "source_2_id": "202610195014AC86",
+      "source_3_id": "sr:sport_event:75716398"
+    },
+    "start_date": "2026-10-20T06:30:00Z",
+    "title": "Atmane vs Hijikata",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "f6999a0e-5142-4d76-be2c-e264da83b220",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18MARSKA",
+      "round": "Round Of 32",
+      "second_competitor_id": "352eceab-2d57-4e2e-b5f8-534521f52492",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Almaty"
+    },
+    "id": "bad291a1-fcf4-46f6-8556-059a8c63c7d2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18MARSKA",
+      "KXATPSETWINNER-26OCT18MARSKA-1",
+      "KXATPSETWINNER-26OCT18MARSKA-2",
+      "KXATPEXACTMATCH-26OCT18MARSKA"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18MARSKA",
+      "KXATPSETWINNER-26OCT18MARSKA-1",
+      "KXATPSETWINNER-26OCT18MARSKA-2",
+      "KXATPEXACTMATCH-26OCT18MARSKA",
+      "KXATPGSPREAD-26OCT18MARSKA",
+      "KXATPGTOTAL-26OCT18MARSKA"
+    ],
+    "source_id": "sr:sport_event:75716394",
+    "source_ids": {
+      "source_1_id": "5437564",
+      "source_2_id": "202610191C40D2CF",
+      "source_3_id": "sr:sport_event:75716394"
+    },
+    "start_date": "2026-10-20T09:10:00Z",
+    "title": "Marozsan vs Skatov",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "f2eeb69d-b39e-45da-8d30-137eb4e00e34",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18ALTDRO",
+      "round": "Round Of 32",
+      "second_competitor_id": "5b1119a9-65d9-4af3-9f05-f90425f926ae",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Lyon"
+    },
+    "id": "530ccaa2-d7a0-4f5c-b6eb-3813080e2c4d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18ALTDRO",
+      "KXATPEXACTMATCH-26OCT18ALTDRO",
+      "KXATPSETWINNER-26OCT18ALTDRO-1",
+      "KXATPSETWINNER-26OCT18ALTDRO-2"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18ALTDRO",
+      "KXATPEXACTMATCH-26OCT18ALTDRO",
+      "KXATPSETWINNER-26OCT18ALTDRO-1",
+      "KXATPSETWINNER-26OCT18ALTDRO-2",
+      "KXATPGSPREAD-26OCT18ALTDRO",
+      "KXATPGTOTAL-26OCT18ALTDRO"
+    ],
+    "source_id": "sr:sport_event:75722436",
+    "source_ids": {
+      "source_1_id": "5437664",
+      "source_2_id": "20261018B1631634",
+      "source_3_id": "sr:sport_event:75722436"
+    },
+    "start_date": "2026-10-20T12:20:00Z",
+    "title": "Altmaier vs Droguet",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "8f0b3c91-7bb9-4b37-8e5d-455a5084948e",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT18MEDNAK",
+      "round": "Round Of 32",
+      "second_competitor_id": "2c057a19-6deb-4844-803e-529a00562e16",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Lyon"
+    },
+    "id": "48a7f360-1480-4ac4-9d88-5a0ac50a8519",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT18MEDNAK",
+      "KXATPSETWINNER-26OCT18MEDNAK-1",
+      "KXATPSETWINNER-26OCT18MEDNAK-2",
+      "KXATPEXACTMATCH-26OCT18MEDNAK"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT18MEDNAK",
+      "KXATPSETWINNER-26OCT18MEDNAK-1",
+      "KXATPSETWINNER-26OCT18MEDNAK-2",
+      "KXATPEXACTMATCH-26OCT18MEDNAK",
+      "KXATPGSPREAD-26OCT18MEDNAK",
+      "KXATPGTOTAL-26OCT18MEDNAK"
+    ],
+    "source_id": "sr:sport_event:75722448",
+    "source_ids": {
+      "source_1_id": "5437654",
+      "source_2_id": "20261018221315A7",
+      "source_3_id": "sr:sport_event:75722448"
+    },
+    "start_date": "2026-10-20T18:10:00Z",
+    "title": "Medjedovic vs Nakashima",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "71bb07dc-1e38-4234-a594-6224d9b1a196",
+      "gender": "men",
+      "main_game_event_ticker": "KXATPMATCH-26OCT20SAKKHA",
+      "round": "Round Of 32",
+      "second_competitor_id": "33e39b42-3ba3-4982-b7b3-b0648d03c95f",
+      "status": "not_started",
+      "tour": "ATP",
+      "tournament_name": "ATP Almaty"
+    },
+    "id": "8f080814-fc44-4691-bcec-0b4f9e1834de",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXATPMATCH-26OCT20SAKKHA",
+      "KXATPSETWINNER-26OCT20SAKKHA-1",
+      "KXATPSETWINNER-26OCT20SAKKHA-2",
+      "KXATPEXACTMATCH-26OCT20SAKKHA"
+    ],
+    "related_event_tickers": [
+      "KXATPMATCH-26OCT20SAKKHA",
+      "KXATPSETWINNER-26OCT20SAKKHA-1",
+      "KXATPSETWINNER-26OCT20SAKKHA-2",
+      "KXATPEXACTMATCH-26OCT20SAKKHA",
+      "KXATPGSPREAD-26OCT20SAKKHA",
+      "KXATPGTOTAL-26OCT20SAKKHA"
+    ],
+    "source_id": "sr:sport_event:75754904",
+    "source_ids": {
+      "source_1_id": "5437566",
+      "source_2_id": "202610208C23787B",
+      "source_3_id": "sr:sport_event:75754904"
+    },
+    "start_date": "2026-10-20T14:30:00Z",
+    "title": "Sakamoto vs Khachanov",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-20T07:48:15.910+00:00"
   }
 ]

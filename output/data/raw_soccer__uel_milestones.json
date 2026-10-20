@@ -30,40 +30,7 @@
     "start_date": "2026-10-22T16:45:00Z",
     "title": "Juventus vs Stade Rennais",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "f0a69f43-b3c4-4049-bf6d-4717809000a1",
-      "coverage": {},
-      "home_team_id": "6c0b7fce-8c67-4cf3-91d4-65fa1ccb16b4",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22LPOSUN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "51628daf-3a5e-53f4-824b-554fc9e931cb",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22LPOSUN",
-      "KXUELSPREAD-26OCT22LPOSUN",
-      "KXUELTOTAL-26OCT22LPOSUN",
-      "KXUELBTTS-26OCT22LPOSUN"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22LPOSUN",
-      "KXUELSPREAD-26OCT22LPOSUN",
-      "KXUELTOTAL-26OCT22LPOSUN",
-      "KXUELBTTS-26OCT22LPOSUN"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T16:45:00Z",
-    "title": "Lech Poznan vs Sunderland",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -96,370 +63,7 @@
     "start_date": "2026-10-22T16:45:00Z",
     "title": "OFI Crete vs Leverkusen",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "baa76ca7-2ea3-407a-a699-cb6bc1a3835f",
-      "coverage": {},
-      "home_team_id": "e4bda32c-b4a5-417b-93dc-64858ae7df1f",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22CELRCC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "3b2afed7-05a2-530d-979b-6e83c055e6ec",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22CELRCC",
-      "KXUELSPREAD-26OCT22CELRCC",
-      "KXUELTOTAL-26OCT22CELRCC",
-      "KXUELBTTS-26OCT22CELRCC"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22CELRCC",
-      "KXUELSPREAD-26OCT22CELRCC",
-      "KXUELTOTAL-26OCT22CELRCC",
-      "KXUELBTTS-26OCT22CELRCC"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T19:00:00Z",
-    "title": "Celtic vs Celta Vigo",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "84109d75-d721-4c13-85eb-7fcde1a60a6d",
-      "coverage": {},
-      "home_team_id": "9379f02f-df2a-4d5c-9436-b7268c4ed3f5",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22OLYSPA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "daffacd5-cf8f-5ee1-a636-aee26bf3bfbc",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22OLYSPA",
-      "KXUELSPREAD-26OCT22OLYSPA",
-      "KXUELTOTAL-26OCT22OLYSPA",
-      "KXUELBTTS-26OCT22OLYSPA"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22OLYSPA",
-      "KXUELSPREAD-26OCT22OLYSPA",
-      "KXUELTOTAL-26OCT22OLYSPA",
-      "KXUELBTTS-26OCT22OLYSPA"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T19:00:00Z",
-    "title": "Olympiacos vs Sparta Prague",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "dca44d67-d382-4a24-b504-2839f6e59cb6",
-      "coverage": {},
-      "home_team_id": "e0542fc2-4fb7-4cb6-be7a-9e571ca3d452",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22OMOBEN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "db562213-a22e-5ece-9cf6-0aa31a237ad4",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22OMOBEN",
-      "KXUELSPREAD-26OCT22OMOBEN",
-      "KXUELTOTAL-26OCT22OMOBEN",
-      "KXUELBTTS-26OCT22OMOBEN"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22OMOBEN",
-      "KXUELSPREAD-26OCT22OMOBEN",
-      "KXUELTOTAL-26OCT22OMOBEN",
-      "KXUELBTTS-26OCT22OMOBEN"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T19:00:00Z",
-    "title": "Omonia Nicosia vs SL Benfica",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7cf2f796-f536-4fc8-b5d0-4e249173a2cc",
-      "coverage": {},
-      "home_team_id": "64b32dac-e0ff-4ab6-a261-cca441357b6c",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22VIKLEV",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "7fa671bf-a639-5bd0-a15c-dd9c12c3e67d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22VIKLEV",
-      "KXUELSPREAD-26OCT22VIKLEV",
-      "KXUELTOTAL-26OCT22VIKLEV",
-      "KXUELBTTS-26OCT22VIKLEV"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22VIKLEV",
-      "KXUELSPREAD-26OCT22VIKLEV",
-      "KXUELTOTAL-26OCT22VIKLEV",
-      "KXUELBTTS-26OCT22VIKLEV"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T19:00:00Z",
-    "title": "Plzen vs Levski Sofia",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "167b048f-0412-4626-9766-ec08603e62cc",
-      "coverage": {},
-      "home_team_id": "194c1beb-cc02-4c8f-8fd3-3cac3ebd9cbf",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22ARAAZA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f156fdc8-2388-5a53-88cc-e4fd376f0d46",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22ARAAZA",
-      "KXUELSPREAD-26OCT22ARAAZA",
-      "KXUELTOTAL-26OCT22ARAAZA",
-      "KXUELBTTS-26OCT22ARAAZA"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22ARAAZA",
-      "KXUELSPREAD-26OCT22ARAAZA",
-      "KXUELTOTAL-26OCT22ARAAZA",
-      "KXUELBTTS-26OCT22ARAAZA"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T16:45:00Z",
-    "title": "Ararat-Armenia vs Alkmaar",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "c6b449b1-6876-440f-b111-978a142f995d",
-      "coverage": {},
-      "home_team_id": "e2b65e21-1313-4e9d-83ad-54087521a934",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22DINNIJ",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "0c49c893-c01d-56eb-9d25-68320d82f426",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22DINNIJ",
-      "KXUELSPREAD-26OCT22DINNIJ",
-      "KXUELTOTAL-26OCT22DINNIJ",
-      "KXUELBTTS-26OCT22DINNIJ"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22DINNIJ",
-      "KXUELSPREAD-26OCT22DINNIJ",
-      "KXUELTOTAL-26OCT22DINNIJ",
-      "KXUELBTTS-26OCT22DINNIJ"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T16:45:00Z",
-    "title": "Dinamo Zagreb vs Nijmegen",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7fd3376e-2256-4010-95a5-5b2a29a73e09",
-      "coverage": {},
-      "home_team_id": "4f6ef7e4-a918-4ef5-ba55-769f5b1a47e4",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22BESCRY",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "d4eabb1e-8764-5818-b8e4-9a1e60bd88af",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22BESCRY",
-      "KXUELSPREAD-26OCT22BESCRY",
-      "KXUELTOTAL-26OCT22BESCRY",
-      "KXUELBTTS-26OCT22BESCRY"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22BESCRY",
-      "KXUELSPREAD-26OCT22BESCRY",
-      "KXUELTOTAL-26OCT22BESCRY",
-      "KXUELBTTS-26OCT22BESCRY"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T19:00:00Z",
-    "title": "Besiktas vs Crystal Palace",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "281c09d3-8d95-4ce9-b2ef-3b003f8a8959",
-      "coverage": {},
-      "home_team_id": "845da653-13fc-4d80-b0e0-a48179c37ffa",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22BOUACM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "26c14fc0-2752-5ff9-bb36-a9daca3d670e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22BOUACM",
-      "KXUELSPREAD-26OCT22BOUACM",
-      "KXUELTOTAL-26OCT22BOUACM",
-      "KXUELBTTS-26OCT22BOUACM"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22BOUACM",
-      "KXUELSPREAD-26OCT22BOUACM",
-      "KXUELTOTAL-26OCT22BOUACM",
-      "KXUELBTTS-26OCT22BOUACM"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T19:00:00Z",
-    "title": "Bournemouth vs Milan",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "d1851a64-3bc3-4546-bbb3-4b0469a4020f",
-      "coverage": {},
-      "home_team_id": "763df283-3665-4d38-8983-0d0ce17464d5",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22JAGRSC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "945b7a3d-3d00-518a-a2ac-160b9a6a7215",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22JAGRSC",
-      "KXUELSPREAD-26OCT22JAGRSC",
-      "KXUELTOTAL-26OCT22JAGRSC",
-      "KXUELBTTS-26OCT22JAGRSC"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22JAGRSC",
-      "KXUELSPREAD-26OCT22JAGRSC",
-      "KXUELTOTAL-26OCT22JAGRSC",
-      "KXUELBTTS-26OCT22JAGRSC"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T19:00:00Z",
-    "title": "Jagiellonia vs Anderlecht",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "eb75f92c-7b8f-4a17-92fb-b9068dfba2d7",
-      "coverage": {},
-      "home_team_id": "163ba3b0-cc73-4949-b3c9-d37d7927d972",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22TSGOL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "76bbf21e-6cc7-595d-b1c1-673854c75a0a",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22TSGOL",
-      "KXUELSPREAD-26OCT22TSGOL",
-      "KXUELTOTAL-26OCT22TSGOL",
-      "KXUELBTTS-26OCT22TSGOL"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22TSGOL",
-      "KXUELSPREAD-26OCT22TSGOL",
-      "KXUELTOTAL-26OCT22TSGOL",
-      "KXUELBTTS-26OCT22TSGOL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T19:00:00Z",
-    "title": "Hoffenheim vs Lyon",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "9c650c85-3eb8-4f4a-9674-7401b3b5f059",
-      "coverage": {},
-      "home_team_id": "d0ffb802-eedb-4b38-a0a7-48f59decd6ba",
-      "is_ko": false,
-      "league": "Europa League",
-      "main_game_event_ticker": "KXUELGAME-26OCT22FTCTOR",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "08d798ca-3e8d-5143-845e-b2edb43f3b06",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUELGAME-26OCT22FTCTOR",
-      "KXUELSPREAD-26OCT22FTCTOR",
-      "KXUELTOTAL-26OCT22FTCTOR",
-      "KXUELBTTS-26OCT22FTCTOR"
-    ],
-    "related_event_tickers": [
-      "KXUELGAME-26OCT22FTCTOR",
-      "KXUELSPREAD-26OCT22FTCTOR",
-      "KXUELTOTAL-26OCT22FTCTOR",
-      "KXUELBTTS-26OCT22FTCTOR"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-22T16:45:00Z",
-    "title": "Ferencvarosi vs Torreense",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -492,7 +96,7 @@
     "start_date": "2026-10-22T16:45:00Z",
     "title": "Union Gilloise vs Be`er Sheva",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -525,7 +129,106 @@
     "start_date": "2026-10-22T19:00:00Z",
     "title": "Lillestroem vs Real Sociedad",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c6b449b1-6876-440f-b111-978a142f995d",
+      "coverage": {},
+      "home_team_id": "e2b65e21-1313-4e9d-83ad-54087521a934",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22DINNIJ",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "0c49c893-c01d-56eb-9d25-68320d82f426",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22DINNIJ",
+      "KXUELSPREAD-26OCT22DINNIJ",
+      "KXUELTOTAL-26OCT22DINNIJ",
+      "KXUELBTTS-26OCT22DINNIJ"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22DINNIJ",
+      "KXUELSPREAD-26OCT22DINNIJ",
+      "KXUELTOTAL-26OCT22DINNIJ",
+      "KXUELBTTS-26OCT22DINNIJ"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Dinamo Zagreb vs Nijmegen",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "9c650c85-3eb8-4f4a-9674-7401b3b5f059",
+      "coverage": {},
+      "home_team_id": "d0ffb802-eedb-4b38-a0a7-48f59decd6ba",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22FTCTOR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "08d798ca-3e8d-5143-845e-b2edb43f3b06",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22FTCTOR",
+      "KXUELSPREAD-26OCT22FTCTOR",
+      "KXUELTOTAL-26OCT22FTCTOR",
+      "KXUELBTTS-26OCT22FTCTOR"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22FTCTOR",
+      "KXUELSPREAD-26OCT22FTCTOR",
+      "KXUELTOTAL-26OCT22FTCTOR",
+      "KXUELBTTS-26OCT22FTCTOR"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Ferencvarosi vs Torreense",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "f0a69f43-b3c4-4049-bf6d-4717809000a1",
+      "coverage": {},
+      "home_team_id": "6c0b7fce-8c67-4cf3-91d4-65fa1ccb16b4",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22LPOSUN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "51628daf-3a5e-53f4-824b-554fc9e931cb",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22LPOSUN",
+      "KXUELSPREAD-26OCT22LPOSUN",
+      "KXUELTOTAL-26OCT22LPOSUN",
+      "KXUELBTTS-26OCT22LPOSUN"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22LPOSUN",
+      "KXUELSPREAD-26OCT22LPOSUN",
+      "KXUELTOTAL-26OCT22LPOSUN",
+      "KXUELBTTS-26OCT22LPOSUN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Lech Poznan vs Sunderland",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -558,7 +261,40 @@
     "start_date": "2026-10-22T16:45:00Z",
     "title": "Sturm Graz vs Marseille",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7fd3376e-2256-4010-95a5-5b2a29a73e09",
+      "coverage": {},
+      "home_team_id": "4f6ef7e4-a918-4ef5-ba55-769f5b1a47e4",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22BESCRY",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "d4eabb1e-8764-5818-b8e4-9a1e60bd88af",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22BESCRY",
+      "KXUELSPREAD-26OCT22BESCRY",
+      "KXUELTOTAL-26OCT22BESCRY",
+      "KXUELBTTS-26OCT22BESCRY"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22BESCRY",
+      "KXUELSPREAD-26OCT22BESCRY",
+      "KXUELTOTAL-26OCT22BESCRY",
+      "KXUELBTTS-26OCT22BESCRY"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Besiktas vs Crystal Palace",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   },
   {
     "category": "Sports",
@@ -591,6 +327,270 @@
     "start_date": "2026-10-22T19:00:00Z",
     "title": "NK Celje vs Salzburg",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T07:41:44.221+00:00"
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "eb75f92c-7b8f-4a17-92fb-b9068dfba2d7",
+      "coverage": {},
+      "home_team_id": "163ba3b0-cc73-4949-b3c9-d37d7927d972",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22TSGOL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "76bbf21e-6cc7-595d-b1c1-673854c75a0a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22TSGOL",
+      "KXUELSPREAD-26OCT22TSGOL",
+      "KXUELTOTAL-26OCT22TSGOL",
+      "KXUELBTTS-26OCT22TSGOL"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22TSGOL",
+      "KXUELSPREAD-26OCT22TSGOL",
+      "KXUELTOTAL-26OCT22TSGOL",
+      "KXUELBTTS-26OCT22TSGOL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Hoffenheim vs Lyon",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "167b048f-0412-4626-9766-ec08603e62cc",
+      "coverage": {},
+      "home_team_id": "194c1beb-cc02-4c8f-8fd3-3cac3ebd9cbf",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22ARAAZA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f156fdc8-2388-5a53-88cc-e4fd376f0d46",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22ARAAZA",
+      "KXUELSPREAD-26OCT22ARAAZA",
+      "KXUELTOTAL-26OCT22ARAAZA",
+      "KXUELBTTS-26OCT22ARAAZA"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22ARAAZA",
+      "KXUELSPREAD-26OCT22ARAAZA",
+      "KXUELTOTAL-26OCT22ARAAZA",
+      "KXUELBTTS-26OCT22ARAAZA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T16:45:00Z",
+    "title": "Ararat-Armenia vs Alkmaar",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "baa76ca7-2ea3-407a-a699-cb6bc1a3835f",
+      "coverage": {},
+      "home_team_id": "e4bda32c-b4a5-417b-93dc-64858ae7df1f",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22CELRCC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "3b2afed7-05a2-530d-979b-6e83c055e6ec",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22CELRCC",
+      "KXUELSPREAD-26OCT22CELRCC",
+      "KXUELTOTAL-26OCT22CELRCC",
+      "KXUELBTTS-26OCT22CELRCC"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22CELRCC",
+      "KXUELSPREAD-26OCT22CELRCC",
+      "KXUELTOTAL-26OCT22CELRCC",
+      "KXUELBTTS-26OCT22CELRCC"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Celtic vs Celta Vigo",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "dca44d67-d382-4a24-b504-2839f6e59cb6",
+      "coverage": {},
+      "home_team_id": "e0542fc2-4fb7-4cb6-be7a-9e571ca3d452",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22OMOBEN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "db562213-a22e-5ece-9cf6-0aa31a237ad4",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22OMOBEN",
+      "KXUELSPREAD-26OCT22OMOBEN",
+      "KXUELTOTAL-26OCT22OMOBEN",
+      "KXUELBTTS-26OCT22OMOBEN"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22OMOBEN",
+      "KXUELSPREAD-26OCT22OMOBEN",
+      "KXUELTOTAL-26OCT22OMOBEN",
+      "KXUELBTTS-26OCT22OMOBEN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Omonia Nicosia vs SL Benfica",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "281c09d3-8d95-4ce9-b2ef-3b003f8a8959",
+      "coverage": {},
+      "home_team_id": "845da653-13fc-4d80-b0e0-a48179c37ffa",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22BOUACM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "26c14fc0-2752-5ff9-bb36-a9daca3d670e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22BOUACM",
+      "KXUELSPREAD-26OCT22BOUACM",
+      "KXUELTOTAL-26OCT22BOUACM",
+      "KXUELBTTS-26OCT22BOUACM"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22BOUACM",
+      "KXUELSPREAD-26OCT22BOUACM",
+      "KXUELTOTAL-26OCT22BOUACM",
+      "KXUELBTTS-26OCT22BOUACM"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Bournemouth vs Milan",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "d1851a64-3bc3-4546-bbb3-4b0469a4020f",
+      "coverage": {},
+      "home_team_id": "763df283-3665-4d38-8983-0d0ce17464d5",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22JAGRSC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "945b7a3d-3d00-518a-a2ac-160b9a6a7215",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22JAGRSC",
+      "KXUELSPREAD-26OCT22JAGRSC",
+      "KXUELTOTAL-26OCT22JAGRSC",
+      "KXUELBTTS-26OCT22JAGRSC"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22JAGRSC",
+      "KXUELSPREAD-26OCT22JAGRSC",
+      "KXUELTOTAL-26OCT22JAGRSC",
+      "KXUELBTTS-26OCT22JAGRSC"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Jagiellonia vs Anderlecht",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "84109d75-d721-4c13-85eb-7fcde1a60a6d",
+      "coverage": {},
+      "home_team_id": "9379f02f-df2a-4d5c-9436-b7268c4ed3f5",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22OLYSPA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "daffacd5-cf8f-5ee1-a636-aee26bf3bfbc",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22OLYSPA",
+      "KXUELSPREAD-26OCT22OLYSPA",
+      "KXUELTOTAL-26OCT22OLYSPA",
+      "KXUELBTTS-26OCT22OLYSPA"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22OLYSPA",
+      "KXUELSPREAD-26OCT22OLYSPA",
+      "KXUELTOTAL-26OCT22OLYSPA",
+      "KXUELBTTS-26OCT22OLYSPA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Olympiacos vs Sparta Prague",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7cf2f796-f536-4fc8-b5d0-4e249173a2cc",
+      "coverage": {},
+      "home_team_id": "64b32dac-e0ff-4ab6-a261-cca441357b6c",
+      "is_ko": false,
+      "league": "Europa League",
+      "main_game_event_ticker": "KXUELGAME-26OCT22VIKLEV",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7fa671bf-a639-5bd0-a15c-dd9c12c3e67d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUELGAME-26OCT22VIKLEV",
+      "KXUELSPREAD-26OCT22VIKLEV",
+      "KXUELTOTAL-26OCT22VIKLEV",
+      "KXUELBTTS-26OCT22VIKLEV"
+    ],
+    "related_event_tickers": [
+      "KXUELGAME-26OCT22VIKLEV",
+      "KXUELSPREAD-26OCT22VIKLEV",
+      "KXUELTOTAL-26OCT22VIKLEV",
+      "KXUELBTTS-26OCT22VIKLEV"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-22T19:00:00Z",
+    "title": "Plzen vs Levski Sofia",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-20T07:48:23.035+00:00"
   }
 ]

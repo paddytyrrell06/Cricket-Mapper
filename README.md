@@ -8,7 +8,7 @@ A comparison terminal and streaming-ready quote infrastructure for **Kalshi and 
 python3 run.py
 ```
 
-Python 3.9+ and the standard library are sufficient. No API keys or package installation are required for the public REST snapshot scanner. Add `--no-open` to leave the browser closed. To select one sport:
+Python 3.9+ and the standard library are sufficient. No API keys or package installation are required for the public REST snapshot scanner. Successful runs open the report in your default browser. `--no-open` skips that browser-opening step. To select one sport:
 
 ```bash
 python3 run.py --sports=cricket --no-open
@@ -40,10 +40,12 @@ Discovery overlaps independent scopes with bounded requests per origin. Both ven
 Refresh prices using saved discovery to skip the slower catalog scan:
 
 ```bash
-python3 run.py --snapshot-dir=output/data --refresh-quotes --no-open
+python3 run.py --snapshot-dir=output/data --refresh-quotes
 ```
 
 This still reparses and audits the saved universe, and fetches current matched quotes. It retains the discovery timestamp and cannot discover games opened since that snapshot; run a full scan periodically. Omit `--refresh-quotes` for a strictly offline replay.
+
+Keep the report open: it checks a tiny local version file every two seconds and reloads when a successful run publishes new data. Your sport tab, search, filters and pagination are preserved. The header shows when quotes were checked, with the discovery timestamp retained separately. Use `--no-open` on subsequent runs to update the existing tab without requesting another browser window. An older tab opened before this feature needs one manual reload to enable it. Prices change when a collection run completes.
 
 `streaming.LiveQuoteEngine` compiles audited matches into an instrument index and recomputes only affected comparisons on a quote update. It supports atomic BBO replacements, freshness expiry, sequence-gap invalidation, reconnect generations and snapshot recovery. Its live defaults are five seconds of quote age and one second of skew. Discovery, settlement parsing, disk writes and HTML rendering stay outside that update path. `output/data/stream_manifest.json` maps exact feed IDs to outcomes; `live_state.json` records the seeded engine; `latency.json` records scanner phase times.
 

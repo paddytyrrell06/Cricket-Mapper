@@ -476,6 +476,21 @@ class ReplayRunTests(unittest.TestCase):
         self.assertTrue(self.data.is_dir())
         self.assertFalse((self.data / "stale.txt").exists())
 
+    def test_successful_run_opens_published_report_when_no_open_is_absent(self):
+        self.write_snapshot()
+        self.browser.return_value = True
+        with patch.object(R, "NO_OPEN", False):
+            self.assertEqual(R.main(), 0)
+        self.browser.assert_called_once_with((self.output / R.REPORT_NAME).resolve().as_uri())
+        self.assertTrue((self.output / R.REPORT_NAME).exists())
+
+    def test_no_open_skips_browser_and_explains_how_existing_report_updates(self):
+        self.write_snapshot()
+        self.assertEqual(R.main(), 0)
+        self.browser.assert_not_called()
+        self.assertTrue(any("Browser opening skipped (--no-open)" in str(call.args[0])
+                            for call in R.say.call_args_list))
+
 
 class DiscoveryConcurrencyTests(unittest.TestCase):
     def test_independent_sports_overlap_and_keep_failure_scoped(self):
