@@ -1,4 +1,5 @@
 import unittest
+import json
 from datetime import datetime, timezone, timedelta
 
 import audit as A
@@ -189,6 +190,50 @@ class QuoteAuditTests(unittest.TestCase):
         self.assertTrue(checks["all mapped outcomes have bid and ask"].passed)
         self.assertTrue(checks["no crossed quotes observed"].passed)
 
+    def test_wrong_net_edge_fee_or_top_capacity_blocks_publication(self):
+        for item in self.markets:
+            item.extra.update(quote_bid_size="12.7", quote_ask_size="8.4")
+            if item.venue == "kalshi":
+                item.bid, item.ask = "0.6", "0.7"
+                item.extra["taker_fee"] = {"model": "kalshi_quadratic", "multiplier": "1"}
+            else:
+                item.bid, item.ask = "0.4", "0.5"
+                item.extra["taker_fee"] = {"model": "polymarket_curve", "rate": ".05", "exponent": 1}
+        passed, report, checks = self.audit_rows(self.rows())
+        self.assertTrue(passed, report)
+        name = "net edges agree with taker fees and top-level depth"
+        for mutation in ({"net_gap": ".1"}, {"net_sell_fee": "0"}, {"net_total_fees": "0"},
+                         {"net_top_quantity": "1000"}, {"net_top_total": "100"},
+                         {"net_sell_venue": "polymarket_intl", "net_buy_venue": "polymarket_intl"}):
+            with self.subTest(mutation=mutation):
+                rows = self.rows()
+                rows[0].update(mutation)
+                passed, _, checks = self.audit_rows(rows)
+                self.assertFalse(passed)
+                self.assertFalse(checks[name].passed)
+        rows = self.rows()
+        schedule = json.loads(rows[0]["polymarket_intl_fee_schedule"])
+        schedule["rate"] = "0"
+        rows[0]["polymarket_intl_fee_schedule"] = json.dumps(schedule)
+        self.assertFalse(self.audit_rows(rows)[2][name].passed)
+
+    def test_unknown_fee_cannot_be_labeled_net_positive(self):
+        rows = self.rows()
+        self.assertEqual(rows[0]["net_crossed"], "false")
+        rows[0].update(net_crossed="true", net_cross_eligible="true", net_gap=".5")
+        passed, _, checks = self.audit_rows(rows)
+        self.assertFalse(passed)
+        self.assertFalse(checks["net edges agree with taker fees and top-level depth"].passed)
+
+    def test_invalid_top_level_depth_blocks_publication(self):
+        for value in ("NaN", "-1", "0", "Infinity", None, True):
+            with self.subTest(value=value):
+                rows = self.rows()
+                rows[0]["kalshi_bid_size"] = value
+                passed, _, checks = self.audit_rows(rows)
+                self.assertFalse(passed)
+                self.assertFalse(checks["quote prices, statuses and sources are valid"].passed)
+
     def test_invalid_probability_or_non_string_price_blocks_publication(self):
         for value in (None, True, 0.5, "NaN", "Infinity", "-0.01", "1.01", "bad"):
             with self.subTest(value=value):
@@ -238,7 +283,7 @@ class QuoteAuditTests(unittest.TestCase):
                 passed, report, checks = self.audit_rows(rows)
                 self.assertTrue(passed, report)
                 self.assertTrue(all(row["observed_cross_kind"] == kind for row in rows))
-                eligible_cross = kind != "within venue"
+                eligible_cross = kind == "across venues"
                 self.assertTrue(all(row["crossed"] == str(eligible_cross).lower() for row in rows))
                 self.assertEqual(checks["no crossed quotes observed"].passed, not eligible_cross)
                 self.assertEqual(checks["no crossed quotes observed"].severity, "advisory")

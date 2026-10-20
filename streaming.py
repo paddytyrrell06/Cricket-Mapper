@@ -8,7 +8,8 @@ validate any channel-wide sequence numbers before projecting them to instruments
 mistaking interleaved Kalshi subscription messages for a gap in one contract.
 
 No WebSocket connections or order execution are implemented here. Unknown depth
-remains unknown, and a quote cross is a pre-fee price signal, not an execution.
+remains unknown. Gross crosses and estimated fee-adjusted edges are separate;
+neither asserts execution, inventory availability, or minimum-order validity.
 """
 
 from __future__ import annotations
@@ -21,9 +22,10 @@ import time
 from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation
-from typing import Any, Callable, Iterable, Optional
+from typing import Any, Callable, Iterable, Mapping, Optional
 
 import canonical as C
+import fees as F
 import settlement as S
 
 InstrumentKey = tuple[str, str, str]
@@ -135,6 +137,7 @@ class CrossState:
     comparison_basis: str = ""
     contingency_status: str = "unknown"
     caveats: tuple[str, ...] = ()
+    taker_fees: Optional[F.TakerEdge] = None
 
     def to_dict(self) -> dict:
         return {"comparison_id": self.comparison_id, "eligible": self.eligible,
@@ -143,6 +146,10 @@ class CrossState:
                 "ask_key": list(self.ask_key) if self.ask_key else None,
                 "bid": _text(self.bid), "ask": _text(self.ask), "gap": _text(self.gap),
                 "depth_confirmed": self.depth_confirmed, "available_size": _text(self.available_size),
+                "fee_status": self.taker_fees.status if self.taker_fees else "unavailable",
+                "net_gap": _text(self.taker_fees.net_gap) if self.taker_fees else None,
+                "net_positive": self.taker_fees.net_positive if self.taker_fees else False,
+                "taker_fees": self.taker_fees.to_dict() if self.taker_fees else None,
                 "comparison_basis": self.comparison_basis,
                 "contingency_status": self.contingency_status, "caveats": list(self.caveats)}
 
@@ -226,7 +233,8 @@ class LiveQuoteEngine:
 
     def __init__(self, comparisons: Iterable[Comparison], *, max_age_seconds: float = 5,
                  max_skew_seconds: float = 1, clock_ns: Callable[[], int] = time.monotonic_ns,
-                 wall_clock: Optional[Callable[[], datetime]] = None):
+                 wall_clock: Optional[Callable[[], datetime]] = None,
+                 fee_schedules: Optional[Mapping[InstrumentKey, F.FeeSchedule]] = None):
         if (not math.isfinite(max_age_seconds) or max_age_seconds <= 0 or
                 not math.isfinite(max_skew_seconds) or max_skew_seconds < 0):
             raise ValueError("age must be positive and skew nonnegative")
@@ -243,6 +251,8 @@ class LiveQuoteEngine:
         self._connected: dict[str, bool] = {}
         self._quotes: dict[InstrumentKey, QuoteState] = {}
         self._crosses: dict[str, CrossState] = {}
+        self._fee_schedules: dict[InstrumentKey, F.FeeSchedule] = dict(fee_schedules or {})
+        self._unknown_fee = F.FeeSchedule()
         self._deadlines = _Deadlines()
         for comparison in comparisons:
             if comparison.comparison_id in self._comparisons:
@@ -264,9 +274,13 @@ class LiveQuoteEngine:
                      **kwargs: Any) -> "LiveQuoteEngine":
         """Compile matching and settlement checks once, away from the hot path."""
         comparisons = []
+        fee_schedules = {}
         seen = set()
         for match in matches:
             left, right = instrument_key(match.m1), instrument_key(match.m2)
+            for key, market in ((left, match.m1), (right, match.m2)):
+                if key not in fee_schedules:
+                    fee_schedules[key] = F.compile_schedule(market.venue, market.extra)
             identity = (match.fixture.canonical_fixture_id, match.market_type,
                         C.norm_team(match.outcome), *sorted((left, right)))
             if identity in seen:
@@ -281,7 +295,7 @@ class LiveQuoteEngine:
             comparisons.append(Comparison(identifier, left, right, compatible,
                                           rules["comparison_basis"], rules["contingency_status"],
                                           tuple(rules["caveats"])))
-        return cls(comparisons, **kwargs)
+        return cls(comparisons, fee_schedules=fee_schedules, **kwargs)
 
     @property
     def keys(self) -> tuple[InstrumentKey, ...]:
@@ -332,10 +346,31 @@ class LiveQuoteEngine:
                 state = CrossState(eligible=True, crossed=gap > 0, reason="fresh",
                                    bid_key=sell.key, ask_key=buy.key, bid=sell.bid, ask=buy.ask, gap=gap,
                                    depth_confirmed=sized,
-                                   available_size=min(sell.bid_size, buy.ask_size) if sized else None, **common)
+                                   available_size=min(sell.bid_size, buy.ask_size) if sized else None,
+                                   taker_fees=F.taker_edge(
+                                       self._fee_schedules.get(sell.key, self._unknown_fee), sell.bid,
+                                       self._fee_schedules.get(buy.key, self._unknown_fee), buy.ask,
+                                       sell_size=sell.bid_size, buy_size=buy.ask_size), **common)
             self._crosses[identifier] = state
             result.append(state)
         return tuple(result)
+
+    def update_fee_schedule(self, key: InstrumentKey, schedule: F.FeeSchedule) -> UpdateResult:
+        """Apply separately fetched fee metadata and recalculate only affected pairs.
+
+        Feed/session code owns metadata refresh and effective-time handling. Pass
+        an unknown schedule to withdraw net signals after a failed refresh. No
+        discovery, network access, or metadata parsing occurs in quote updates.
+        """
+        if not isinstance(schedule, F.FeeSchedule):
+            raise TypeError("compile fee metadata before updating the cache")
+        with self._lock:
+            if key not in self._index:
+                raise KeyError(key)
+            affected = self._expire(self._clock_ns())
+            self._fee_schedules[key] = schedule
+            affected.update(self._index[key])
+            return UpdateResult(True, "fee_schedule_updated", self._refresh(affected))
 
     def _expire(self, now_ns: int) -> set[str]:
         affected = set()

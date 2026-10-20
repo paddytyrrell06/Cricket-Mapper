@@ -24,10 +24,12 @@ Sports market terminal safety audit
        all quote fields valid
 [PASS] quote summaries and crossed flags agree
        all summaries agree
+[PASS] net edges agree with taker fees and top-level depth
+       all net estimates agree
 [ADVISORY] no crossed quotes observed
-       9 crossed outcome rows
+       10 crossed outcome rows
 [ADVISORY] all mapped outcomes have bid and ask
-       2014/2040 mapped venue outcomes have two-sided quotes
+       2015/2040 mapped venue outcomes have two-sided quotes
 [PASS] match-winner fixtures contain both teams and no unknown outcomes
        all winner fixtures complete
 [PASS] no plausible counterpart remains unmatched

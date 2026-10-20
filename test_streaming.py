@@ -7,6 +7,7 @@ from decimal import Decimal
 import canonical as C
 import matching as M
 import settlement as S
+import fees as F
 from streaming import Comparison, LiveQuoteEngine, QuoteUpdate, _Deadlines, instrument_key
 
 
@@ -68,6 +69,46 @@ class LiveQuoteTests(unittest.TestCase):
     def crossed(self):
         self.update(LEFT, bid="0.70", ask="0.80", bid_size="12", ask_size="8", sequence=10)
         return self.update(RIGHT, bid="0.30", ask="0.40", bid_size="9", ask_size="7", sequence=100)
+
+    def test_net_edge_is_distinct_from_gross_cross_and_cached_metadata_can_change(self):
+        self.engine.update_fee_schedule(LEFT, F.compile_schedule("kalshi", {
+            "fee_type": "quadratic", "fee_multiplier": 1}))
+        self.engine.update_fee_schedule(RIGHT, F.compile_schedule("polymarket_intl", {
+            "feesEnabled": True, "feeSchedule": {"rate": ".05", "exponent": 1}}))
+        self.update(LEFT, bid=".51", ask=".60", bid_size="100", ask_size="100")
+        result = self.update(RIGHT, bid=".40", ask=".50", bid_size="100", ask_size="100")
+        cross = result.comparisons[0]
+        self.assertTrue(cross.crossed)
+        self.assertFalse(cross.taker_fees.net_positive)
+        self.assertEqual(cross.taker_fees.net_gap, Decimal("-.02250"))
+        self.assertEqual(cross.to_dict()["fee_status"], "estimated")
+        self.assertEqual(cross.to_dict()["taker_fees"]["top_quantity"], "100")
+        # Failed fee refresh suppresses net evaluation while retaining the price signal.
+        failed = self.engine.update_fee_schedule(RIGHT, F.FeeSchedule(reason="refresh_failed"))
+        self.assertTrue(failed.comparisons[0].crossed)
+        self.assertIsNone(failed.comparisons[0].taker_fees.net_gap)
+        self.assertFalse(failed.comparisons[0].to_dict()["net_positive"])
+        self.assertIn("refresh_failed", failed.comparisons[0].taker_fees.reason)
+        # Quote invalidation also withdraws any previously estimated fee edge.
+        invalid = self.engine.disconnect("kalshi").comparisons[0]
+        self.assertIsNone(invalid.taker_fees)
+        self.assertIsNone(invalid.to_dict()["net_gap"])
+
+    def test_match_compilation_caches_fee_metadata_outside_quote_updates(self):
+        matches, markets = matched()
+        for market in markets:
+            market.extra["taker_fee"] = ({"model": "kalshi_quadratic", "multiplier": ".5"}
+                if market.venue == "kalshi" else {"model": "polymarket_curve", "rate": ".05", "exponent": 1})
+        engine = LiveQuoteEngine.from_matches(matches, clock_ns=self.clock.ns, wall_clock=self.clock.now)
+        # Changing discovery objects after compilation cannot silently change the cache.
+        for market in markets:
+            market.extra["taker_fee"]["model"] = "unknown"
+        engine.apply(QuoteUpdate(LEFT, bid=".6", ask=".7"))
+        result = engine.apply(QuoteUpdate(RIGHT, bid=".4", ask=".5"))
+        edge = result.comparisons[0].taker_fees
+        self.assertEqual(edge.sell_fee, Decimal(".01"))
+        self.assertEqual(edge.buy_fee, Decimal(".01250"))
+        self.assertTrue(edge.net_positive)
 
     def test_atomic_bbo_cross_and_known_depth(self):
         result = self.crossed()

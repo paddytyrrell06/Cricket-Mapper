@@ -1,15 +1,19 @@
 SPORTS MARKET TERMINAL
 
 1. Open this folder in VS Code or Terminal.
-2. Run: python3 run.py
-3. The latest report should open automatically.
-4. Otherwise open: output/CricketMatchingReport.html
+2. Start the browser terminal: python3 server.py
+3. Keep it running and use http://127.0.0.1:8765/CricketMatchingReport.html
+4. Reload the browser or click Refresh prices to fetch new quotes.
+   First-time setup needs one full scan: python3 run.py
 
-To refresh prices and open the browser:
+For a standalone CLI price refresh:
 python3 run.py --snapshot-dir=output/data --refresh-quotes
-Keep the updated report open; it reloads after future successful runs. Add
---no-open on later runs to skip requesting another browser window. Reload any
-older browser tab once to enable this behavior.
+The direct output/CricketMatchingReport.html file is a snapshot export; use the
+HTTP terminal above for browser-triggered refreshes. Ctrl+C stops the service.
+
+The Net + tab and Net / Gross edge column subtract taker fees on both legs.
+Best bid/ask quantities are displayed beside the prices; fee and depth
+assumptions are available in the detail panel and docs/FEES.md.
 
 Each run fetches current Kalshi and Polymarket International match winners for
 cricket, soccer, basketball, American football, hockey, baseball, tennis and MMA.

@@ -12,6 +12,7 @@ Prices are dollar probabilities, never last trades or display probabilities.
 from __future__ import annotations
 
 import json
+import re
 import time
 import urllib.error
 import urllib.parse
@@ -26,6 +27,7 @@ import canonical as C
 CLOB = "https://clob.polymarket.com"
 PMUS = "https://gateway.polymarket.us"
 KALSHI = "https://external-api.kalshi.com/trade-api/v2"
+GAMMA = "https://gamma-api.polymarket.com"
 TIMEOUT = 8
 RETRIES = 2
 WORKERS = 4
@@ -308,8 +310,67 @@ def stream_instruments(markets: list[C.Market], raw: dict[str, list[dict]]) -> l
     return [instruments[key] for key in sorted(instruments)]
 
 
+def _series_id(market: C.Market, record: dict) -> str:
+    explicit = str(record.get("_queried_series") or "")
+    if re.fullmatch(r"KX[A-Z0-9]+", explicit):
+        return explicit
+    match = re.match(r"^(KX[A-Z0-9]+)-", str(market.market_id))
+    return match.group(1) if match else ""
+
+
+def _fee_parameters(venue: str, record: dict, *, source: str, checked_at: str) -> dict:
+    """Retain market-specific parameters, never a category-wide assumed rate."""
+    result = {"model": "unknown", "source": source, "checked_at": checked_at}
+    if venue == "kalshi":
+        if record.get("fee_type") in {"quadratic", "quadratic_with_maker_fees",
+                                       "quadratic_with_combo_maker_fees"}:
+            multiplier = _number(record.get("fee_multiplier"))
+            if multiplier is not None and multiplier >= 0:
+                result.update(model="kalshi_quadratic", multiplier=_text(multiplier),
+                              balance_precision="0.01")
+    elif venue == "polymarket_intl":
+        if record.get("feesEnabled") is False:
+            result["model"] = "zero"
+        elif record.get("feesEnabled") is True and isinstance(record.get("feeSchedule"), dict):
+            schedule = record["feeSchedule"]
+            rate, exponent = _number(schedule.get("rate")), _number(schedule.get("exponent"))
+            if rate is not None and 0 <= rate <= 1 and exponent is not None and 0 <= exponent <= 16:
+                result.update(model="polymarket_curve", rate=_text(rate), exponent=_text(exponent))
+    if result["model"] == "unknown":
+        result["reason"] = "Current market-specific taker fee parameters are unavailable or unsupported"
+    return result
+
+
+def _live_fee_metadata(series: set[str], market_ids: set[str]) -> tuple[dict, list[str]]:
+    """Refresh schedules once per series/market, alongside batched price reads."""
+    jobs = [(("kalshi", (ticker,)), "GET", KALSHI + "/series/" + ticker, None)
+            for ticker in sorted(series)]
+    ordered = sorted(market_ids)
+    for offset in range(0, len(ordered), 100):
+        batch = tuple(ordered[offset:offset + 100])
+        query = urllib.parse.urlencode({"id": batch, "limit": len(batch), "closed": "any"}, doseq=True)
+        jobs.append((("polymarket_intl", batch), "GET", GAMMA + "/markets?" + query, None))
+    result, warnings = {}, []
+    for (venue, batch), status, body, observed in _run_requests(jobs):
+        records = ([body["series"]] if venue == "kalshi" and isinstance(body, dict) and
+                   isinstance(body.get("series"), dict) else body if isinstance(body, list) else [])
+        if status == 200:
+            for record in records:
+                if not isinstance(record, dict):
+                    continue
+                identity = str(record.get("ticker" if venue == "kalshi" else "id") or "")
+                if identity in batch:
+                    result[(venue, identity)] = {**record, "_fee_checked_at": observed}
+        missing = [identity for identity in batch if (venue, identity) not in result]
+        if missing:
+            warnings.append(f"FEES {venue}: current fee metadata unavailable for {len(missing)} "
+                            f"requested instruments (HTTP {status}); net edge remains unknown")
+    return result, warnings
+
+
 def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: bool,
-                  saved_quotes: Optional[list[dict]] = None, collected_at: str = ""
+                  saved_quotes: Optional[list[dict]] = None, collected_at: str = "",
+                  fee_context: Optional[dict[str, list[dict]]] = None, refresh_fees: bool = False
                   ) -> tuple[list[dict], list[str]]:
     """Mutate matched markets and return replayable quote observations plus warnings.
 
@@ -319,6 +380,10 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
     warnings: list[str] = []
     records = {(venue, str(record.get("ticker") if venue == "kalshi" else record.get("id"))): record
                for venue, rows in raw.items() for record in rows if isinstance(record, dict)}
+    series_metadata = {str(record["ticker"]): record
+                       for rows in (fee_context or {}).values() if isinstance(rows, list)
+                       for record in rows if isinstance(record, dict) and record.get("ticker")
+                       and "fee_type" in record}
     saved, duplicate_saved = {}, set()
     for entry in saved_quotes or []:
         if not isinstance(entry, dict):
@@ -333,6 +398,7 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
         _set_quote(market, None, None, "", "")
         for field in ("quote_bid_size", "quote_ask_size", "quote_exchange_time"):
             market.extra.pop(field, None)
+        market.extra.pop("taker_fee", None)
         record = records.get((market.venue, str(market.market_id)), {})
         if live and market.venue == "polymarket_intl":
             assets[_key(market)] = _intl_asset(market, record)
@@ -341,20 +407,40 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
     if live:
         # Refresh both venues at once to reduce wall time and quote-time skew.
         # Each venue retains its bounded batch workers and failure isolation.
-        with ThreadPoolExecutor(max_workers=2) as pool:
+        with ThreadPoolExecutor(max_workers=3) as pool:
             kalshi_job = pool.submit(_live_kalshi, {market.market_id for market in markets
                                                    if market.venue == "kalshi"})
             books_job = pool.submit(_live_books, set(assets.values()) - {""}, us_slugs)
+            fee_job = pool.submit(_live_fee_metadata,
+                                  {series for market in markets if market.venue == "kalshi"
+                                   if (series := _series_id(market, records.get(
+                                       (market.venue, str(market.market_id)), {})))},
+                                  {str(market.market_id) for market in markets
+                                   if market.venue == "polymarket_intl" and str(market.market_id).isdigit()}
+                                  ) if refresh_fees else None
             fresh_kalshi, kalshi_warnings = kalshi_job.result()
             books, us_quotes, network_warnings = books_job.result()
+            fee_records, fee_warnings = fee_job.result() if fee_job else ({}, [])
         warnings.extend(kalshi_warnings)
         warnings.extend(network_warnings)
+        warnings.extend(fee_warnings)
     else:
-        fresh_kalshi, books, us_quotes = {}, {}, {}
+        fresh_kalshi, books, us_quotes, fee_records = {}, {}, {}, {}
     entries = []
     for market in markets:
         key = _key(market)
         record = records.get((market.venue, str(market.market_id)), {})
+        series = _series_id(market, record) if market.venue == "kalshi" else ""
+        identity = series if market.venue == "kalshi" else str(market.market_id)
+        fee_record = (fee_records.get((market.venue, identity), {}) if live and refresh_fees else
+                      series_metadata.get(series, {}) if market.venue == "kalshi" else record)
+        fee_stamp = _iso_time(fee_record.get("_fee_checked_at")) or _raw_quote_time(fee_record, collected_at)
+        fee_source = (KALSHI + "/series/" + series if market.venue == "kalshi" and series else
+                      GAMMA + "/markets/" + str(market.market_id) if market.venue == "polymarket_intl" else "")
+        market.extra["taker_fee"] = _fee_parameters(market.venue, fee_record,
+                                                   source=fee_source, checked_at=fee_stamp)
+        if not live and key in saved and isinstance(saved[key].get("taker_fee"), dict):
+            market.extra["taker_fee"] = dict(saved[key]["taker_fee"])
         if live and market.venue == "kalshi":
             record = fresh_kalshi.get(market.market_id, record)
         stamp = _raw_quote_time(record, collected_at)
@@ -382,7 +468,8 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                 entries.append({"venue": market.venue, "market_id": str(market.market_id),
                                 "outcome": market.outcome, "bid": None, "ask": None,
                                 "quote_time": stamp, "quote_status": "unavailable",
-                                "quote_source": "Kalshi market no longer open"})
+                                "quote_source": "Kalshi market no longer open",
+                                "taker_fee": market.extra["taker_fee"]})
                 market.quote_time, market.quote_source = stamp, "Kalshi market no longer open"
                 continue
             warning_count = len(warnings)
@@ -432,11 +519,16 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                 _book_quote(market, book, observed, asset, warnings)
             elif live:
                 warnings.append(f"QUOTES {key}: outcome order book unavailable")
+            if live and fee_record.get("closed") is True:
+                _set_quote(market, None, None, market.quote_time, "Polymarket market no longer open")
+                market.extra.pop("quote_bid_size", None)
+                market.extra.pop("quote_ask_size", None)
         entries.append({"venue": market.venue, "market_id": str(market.market_id),
                         "outcome": market.outcome, "bid": market.bid, "ask": market.ask,
                         "quote_time": market.quote_time, "quote_status": market.quote_status,
                         "quote_source": market.quote_source,
                         "exchange_time": market.extra.get("quote_exchange_time", ""),
                         "bid_size": market.extra.get("quote_bid_size"),
-                        "ask_size": market.extra.get("quote_ask_size")})
+                        "ask_size": market.extra.get("quote_ask_size"),
+                        "taker_fee": market.extra.get("taker_fee")})
     return entries, list(dict.fromkeys(warnings))

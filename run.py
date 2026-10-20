@@ -1,5 +1,6 @@
 # Collect Kalshi and Polymarket match winners, audit contract compatibility, and publish the sports terminal.
 ##update: python3 run.py --snapshot-dir=output/data --refresh-quotes
+# Browser terminal with reload-to-refresh: python3 server.py
 from __future__ import annotations
 
 import csv
@@ -397,7 +398,7 @@ def review_mapping_rows(market_review: list[M.MarketMatch],
     return rows
 
 
-def main() -> int:
+def _main() -> int:
     if not ENABLED_SPORTS or set(ENABLED_SPORTS) - set(S.ADAPTERS):
         say("Choose --sports=" + ",".join(S.ADAPTERS) + " (any subset).")
         return 2
@@ -556,6 +557,7 @@ def main() -> int:
                  for venue in VENUES}
     quote_entries, quote_warnings = Q.enrich_quotes(
         quote_markets, quote_raw, live=live_quotes, saved_quotes=saved_quotes,
+        fee_context=raw, refresh_fees=live_quotes,
         collected_at=(data_fetched_at.isoformat(timespec="seconds")
                       if source_time_known else ""))
     warnings.extend(quote_warnings)
@@ -817,6 +819,17 @@ def main() -> int:
         except Exception:
             say("  Open the HTML file in your browser.")
     return 0
+
+
+def main() -> int:
+    # Browser refreshes and a separate CLI run must never share a mutable build.
+    from build_lock import BuildBusy, BuildLock
+    try:
+        with BuildLock(BUILD_DIR.parent / ".market_terminal.lock"):
+            return _main()
+    except BuildBusy as exc:
+        say(str(exc))
+        return 2
 
 
 if __name__ == "__main__":

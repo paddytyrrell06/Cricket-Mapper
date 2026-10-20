@@ -16,6 +16,7 @@ from urllib.parse import urlparse
 import canonical as C
 import matching as M
 import settlement as S
+import fees as F
 
 
 @dataclass
@@ -79,6 +80,53 @@ def _market_pair_id(match: M.MarketMatch) -> tuple[str, ...]:
     return (*pair, match.market_type, C.norm_team(match.outcome))
 
 
+def _net_check(row: dict, pairs: list[tuple], eligible: bool, label: str) -> list[str]:
+    """Reprice the selected fee route and verify it wins among fresh routes."""
+    if "net_crossed" not in row:
+        return []
+    errors = []
+    if not eligible:
+        if (row.get("net_crossed") != "false" or row.get("net_cross_eligible") != "false" or
+                row.get("net_fee_status") != "ineligible" or row.get("net_gap")):
+            errors.append(f"{label}: net edge on an ineligible comparison")
+        return errors
+    estimates = [(F.calculate_taker_cross(row, buy, sell), sell, buy)
+                 for _, sell, buy, _, _ in pairs]
+    known = [item for item in estimates if item[0]["status"] == "estimated" and
+             item[0].get("net_gap") is not None]
+    selected = next((item for item in estimates if item[1:] ==
+                     (row.get("net_sell_venue"), row.get("net_buy_venue"))), None)
+    if selected is None:
+        return [f"{label}: net edge uses a missing, stale, or same-venue route"]
+    estimate = selected[0]
+    expected = {"net_cross_eligible": str(bool(known)).lower(),
+                "net_crossed": str(estimate.get("net_positive") is True and bool(known)).lower(),
+                "net_depth_confirmed": str(estimate.get("depth_confirmed") is True).lower(),
+                "net_fee_status": estimate["status"]}
+    if known and (estimate["status"] != "estimated" or
+                  Decimal(estimate["net_gap"]) != max(Decimal(item[0]["net_gap"]) for item in known)):
+        errors.append(f"{label}: selected fee route does not have the best known net edge")
+    for field, value in expected.items():
+        if row.get(field) != value:
+            errors.append(f"{label}: {field} disagrees with current fee parameters")
+    for field, key in (("net_gap", "net_gap"), ("net_total", "net_total"),
+                       ("net_buy_fee", "buy_fee"), ("net_sell_fee", "sell_fee"),
+                       ("net_quantity", "quantity"), ("net_total_fees", "total_fees"),
+                       ("net_top_size", "top_size"), ("net_top_quantity", "top_quantity"),
+                       ("net_top_total", "top_net_total"), ("net_top_gap", "top_net_gap"),
+                       ("net_gross_gap", "gross_gap")):
+        actual, expected_number = row.get(field, ""), estimate.get(key)
+        try:
+            valid = actual == "" if expected_number is None else (
+                isinstance(actual, str) and Decimal(actual).is_finite() and
+                Decimal(actual) == Decimal(expected_number))
+        except (InvalidOperation, ValueError, TypeError):
+            valid = False
+        if not valid:
+            errors.append(f"{label}: {field} disagrees with fee/depth calculation")
+    return errors
+
+
 def _quote_checks(rows: list[dict[str, str]], venues: list[str],
                   as_of: Optional[datetime] = None) -> list[Check]:
     priced_rows = [row for row in rows if any(f"{venue}_bid" in row for venue in venues)]
@@ -89,6 +137,7 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str],
     crossed_count = 0
     quoted_count = 0
     mapped_count = 0
+    fee_inconsistent: list[str] = []
 
     def price(value: Any, label: str) -> Optional[Decimal]:
         if value == "":
@@ -114,6 +163,15 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str],
             prefix = f"{label} {venue}"
             bid = price(row.get(f"{venue}_bid", ""), f"{prefix} bid")
             ask = price(row.get(f"{venue}_ask", ""), f"{prefix} ask")
+            for side, value in (("bid", bid), ("ask", ask)):
+                quantity = row.get(f"{venue}_{side}_size", "")
+                if quantity != "":
+                    try:
+                        depth = Decimal(quantity) if isinstance(quantity, str) else None
+                        if depth is None or not depth.is_finite() or depth < 0 or value is None or depth == 0:
+                            raise ValueError
+                    except (InvalidOperation, ValueError):
+                        invalid.append(f"{prefix}: invalid {side} depth or depth without price")
             if bid is not None:
                 bids.append((venue, bid))
             if ask is not None:
@@ -170,9 +228,16 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str],
             expected["observed_cross_gap"] = expected.pop("cross_gap")
             pairs, problems = [], []
             reference = as_of or datetime.now(timezone.utc)
+            invalid_books = {venue for venue, bid in bids for ask_venue, ask in asks
+                             if venue == ask_venue and bid > ask}
+            if invalid_books:
+                problems.append("invalid_book")
             for bid_venue, bid in bids:
                 for ask_venue, ask in asks:
                     if bid_venue == ask_venue:
+                        continue
+                    if bid_venue in invalid_books or ask_venue in invalid_books:
+                        problems.append("invalid_book")
                         continue
                     stamps = []
                     for venue in (bid_venue, ask_venue):
@@ -193,7 +258,7 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str],
                         problems.append("skewed")
                     else:
                         pairs.append((bid - ask, bid_venue, ask_venue, bid, ask))
-            quote_check = "fresh" if pairs else next((name for name in ("future", "stale", "skewed", "unknown")
+            quote_check = "fresh" if pairs else next((name for name in ("invalid_book", "future", "stale", "skewed", "unknown")
                                                        if name in problems), "unpriced")
             compatible = row.get("comparison_status") == "compatible" and row.get("mapping_status") == "accepted"
             profiles = []
@@ -246,6 +311,7 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str],
                              "eligible_ask_venue": best[2] if best else ""})
             if "cross_condition" in row:
                 expected["cross_condition"] = ("conditional" if row.get("contingency_status") != "aligned" else "aligned") if is_crossed else ""
+            fee_inconsistent.extend(_net_check(row, pairs, eligible, label))
         crossed_count += int(is_crossed)
         for field, value in expected.items():
             if row.get(field, "") != value:
@@ -256,6 +322,8 @@ def _quote_checks(rows: list[dict[str, str]], venues: list[str],
               "; ".join(invalid[:15]) if invalid else "all quote fields valid"),
         Check("quote summaries and crossed flags agree", not inconsistent,
               "; ".join(inconsistent[:15]) if inconsistent else "all summaries agree"),
+        Check("net edges agree with taker fees and top-level depth", not fee_inconsistent,
+              "; ".join(fee_inconsistent[:15]) if fee_inconsistent else "all net estimates agree"),
         Check("no crossed quotes observed", crossed_count == 0,
               f"{crossed_count} crossed outcome rows" if crossed_count else "none", "advisory"),
         Check("all mapped outcomes have bid and ask", quoted_count == mapped_count,

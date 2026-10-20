@@ -115,6 +115,67 @@ class RawAndReplayQuotesTests(unittest.TestCase):
 
 
 class LiveQuotesTests(unittest.TestCase):
+    def test_live_fee_metadata_is_batched_and_identity_checked(self):
+        def response(method, url, payload):
+            self.assertEqual(method, "GET")
+            if "/series/" in url:
+                return 200, {"series": {"ticker": "KXTEST", "fee_type": "quadratic", "fee_multiplier": "0.5"}}, COLLECTED
+            query = parse_qs(urlparse(url).query)
+            self.assertLessEqual(len(query["id"]), 100)
+            self.assertEqual(query["closed"], ["any"])
+            return 200, [{"id": identity, "feesEnabled": True, "feeSchedule": {"rate": "0.05", "exponent": 1}}
+                         for identity in query["id"]] + [{"id": "unrequested", "feesEnabled": False}], COLLECTED
+
+        with patch.object(Q, "_request_json", side_effect=response) as request:
+            metadata, warnings = Q._live_fee_metadata({"KXTEST"}, {str(i) for i in range(205)})
+        self.assertEqual(request.call_count, 4)
+        self.assertEqual(warnings, [])
+        self.assertEqual(len(metadata), 206)
+        self.assertNotIn(("polymarket_intl", "unrequested"), metadata)
+        self.assertEqual(metadata[("kalshi", "KXTEST")]["_fee_checked_at"], COLLECTED)
+
+    def test_refreshed_fees_override_discovery_and_replay_retains_provenance(self):
+        k = market("kalshi", market_id="KXTEST-EVENT-YES")
+        p = market("polymarket_intl")
+        raw = {"kalshi": [{"ticker": k.market_id}], "polymarket_intl": [intl_record(
+            feesEnabled=False)]}
+        fee_data = {
+            ("kalshi", "KXTEST"): {"fee_type": "quadratic", "fee_multiplier": "0.5", "_fee_checked_at": COLLECTED},
+            ("polymarket_intl", "123"): {"feesEnabled": True, "feeSchedule": {"rate": "0.05", "exponent": "1"},
+                                          "_fee_checked_at": COLLECTED},
+        }
+        with patch.object(Q, "_live_kalshi", return_value=({}, [])), patch.object(
+                Q, "_live_books", return_value=({}, {}, [])), patch.object(
+                Q, "_live_fee_metadata", return_value=(fee_data, [])):
+            entries, _ = Q.enrich_quotes([k, p], raw, live=True, refresh_fees=True)
+        self.assertEqual(k.extra["taker_fee"]["multiplier"], "0.5")
+        self.assertEqual(p.extra["taker_fee"]["rate"], "0.05")
+        self.assertEqual(p.extra["taker_fee"]["checked_at"], COLLECTED)
+        restored = market("polymarket_intl")
+        with patch.object(Q, "_request_json", side_effect=AssertionError("offline fees requested network")):
+            Q.enrich_quotes([restored], {}, live=False, saved_quotes=entries)
+        self.assertEqual(restored.extra["taker_fee"], p.extra["taker_fee"])
+
+    def test_failed_live_fee_refresh_cannot_reuse_old_zero_fee_assumption(self):
+        m = market("polymarket_intl")
+        with patch.object(Q, "_live_books", return_value=({}, {}, [])), patch.object(
+                Q, "_live_fee_metadata", return_value=({}, ["metadata unavailable"])):
+            _, warnings = Q.enrich_quotes([m], {"polymarket_intl": [intl_record(feesEnabled=False)]},
+                                          live=True, refresh_fees=True)
+        self.assertEqual(m.extra["taker_fee"]["model"], "unknown")
+        self.assertIn("metadata unavailable", warnings)
+
+    def test_offline_fee_context_and_explicit_zero_are_preserved(self):
+        k = market("kalshi", market_id="KXTEST-EVENT-YES")
+        p = market("polymarket_intl")
+        entries, _ = Q.enrich_quotes([k, p], {"polymarket_intl": [intl_record(feesEnabled=False)]},
+                                    live=False, fee_context={"metadata": [{
+                                        "ticker": "KXTEST", "fee_type": "quadratic", "fee_multiplier": "0",
+                                        "_collected_at_utc": COLLECTED}]})
+        self.assertEqual(k.extra["taker_fee"]["multiplier"], "0")
+        self.assertEqual(k.extra["taker_fee"]["checked_at"], COLLECTED)
+        self.assertEqual(p.extra["taker_fee"]["model"], "zero")
+
     def test_both_venues_refresh_concurrently(self):
         ready = Barrier(2, timeout=2)
 

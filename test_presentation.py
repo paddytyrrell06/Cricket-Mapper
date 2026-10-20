@@ -307,6 +307,52 @@ const blocked=browser(undefined,true);blocked.poll();blocked.context.window.mark
         self.assertEqual(result.returncode, 0, result.stderr)
 
 
+class ServiceRefreshTests(unittest.TestCase):
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required to exercise browser JavaScript")
+    def test_http_reload_refreshes_once_and_publication_reload_does_not_loop(self):
+        harness = r'''
+const assert=require('node:assert/strict'),vm=require('node:vm');
+const settle=()=>new Promise(resolve=>setImmediate(resolve));
+function browser({protocol='http:',navigation='reload',storage=new Map(),blocked=false}={}){
+    const requests=[],timers=[],events={},button={hidden:true,disabled:false,addEventListener(name,fn){events[name]=fn;}},label={hidden:true};
+    let views=0,checks=0;
+    const context=vm.createContext({location:{protocol,pathname:'/report.html'},window:{},
+        document:{getElementById(id){return id==='refreshPrices'?button:label;}},
+        performance:{getEntriesByType(){return [{type:navigation}];}},
+        sessionStorage:{getItem(key){if(blocked)throw Error('Blocked');return storage.get(key)||null;},
+            setItem(key,value){if(blocked)throw Error('Blocked');storage.set(key,value);},
+            removeItem(key){if(blocked)throw Error('Blocked');storage.delete(key);}},
+        saveView(){views++;},checkForNewReport(){checks++;},
+        setInterval(fn,ms){timers.push({fn,ms});},
+        async fetch(url,options={}){requests.push({url,options});return {ok:true,async json(){return {
+            state:url==='/api/refresh'?'running':'idle',running:url==='/api/refresh',revision:0,error:null};}};},
+    });
+    vm.runInContext(SERVICE,context);
+    return {context,requests,timers,events,button,label,storage,views:()=>views,checks:()=>checks,
+        posts:()=>requests.filter(request=>request.url==='/api/refresh')};
+}
+(async()=>{
+    const b=browser();await settle();assert.equal(b.posts().length,1);assert.equal(b.button.hidden,false);
+    assert.equal(b.posts()[0].options.method,'POST');
+    assert.equal(b.posts()[0].options.headers['X-Terminal-Request'],'refresh');
+    assert.equal(b.posts()[0].options.body,'{}');assert.ok(b.views()>0);
+    b.context.window.marketTerminalBeforeReportReload();
+    const publication=browser({storage:b.storage});await settle();assert.equal(publication.posts().length,0);
+    const manual=browser({storage:b.storage});await settle();assert.equal(manual.posts().length,1);
+    const initial=browser({navigation:'navigate'});await settle();assert.equal(initial.posts().length,0);
+    initial.events.click();await settle();assert.equal(initial.posts().length,1);
+    const file=browser({protocol:'file:'});await settle();assert.equal(file.requests.length,0);assert.equal(file.button.hidden,true);
+    const blocked=browser({blocked:true});await settle();assert.equal(blocked.posts().length,0);
+    blocked.events.click();await settle();assert.equal(blocked.posts().length,1);
+})().catch(error=>{console.error(error);process.exitCode=1;});
+'''
+        result = subprocess.run(
+            [shutil.which("node"), "-e", "const SERVICE=" + json.dumps(P._terminal_service_script()) + ";\n" + harness],
+            capture_output=True, text=True, timeout=10,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+
 class QuotePresentationTests(unittest.TestCase):
     as_of = datetime(2026, 10, 19, 10, tzinfo=timezone.utc)
 
@@ -342,6 +388,79 @@ class QuotePresentationTests(unittest.TestCase):
         self.assertEqual(row["crossed"], "true")
         self.assertEqual(row["kalshi_crossed"], "false")
 
+    def known_fees(self):
+        self.left.extra.update(fee_type="quadratic", fee_multiplier="1")
+        self.right.extra.update(feesEnabled=False)
+
+    def test_net_edge_deducts_taker_fees_on_both_legs_and_exports_sizes(self):
+        self.known_fees()
+        self.left.bid, self.left.ask = "0.65", "0.70"
+        self.right.bid, self.right.ask = "0.60", "0.62"
+        self.left.extra.update(quote_bid_size="12.5", quote_ask_size="40")
+        self.right.extra.update(quote_bid_size="19", quote_ask_size="8.7")
+        row = self.row()
+        self.assertEqual(row["cross_gap"], "0.03")
+        self.assertEqual(row["net_gap"], "0.01")
+        self.assertEqual(row["net_sell_fee"], "0.02")
+        self.assertEqual(row["net_buy_fee"], "0")
+        self.assertEqual(row["net_crossed"], "true")
+        self.assertEqual(row["net_quantity"], "1")
+        self.assertEqual(row["net_top_size"], "8.7")
+        self.assertEqual(row["net_top_quantity"], "8")
+        self.assertEqual(row["kalshi_bid_size"], "12.5")
+        self.assertEqual(row["polymarket_intl_ask_size"], "8.7")
+        details = P._details(row, VENUES)
+        self.assertIn("Taker edge · 1 contract per leg", details)
+        self.assertIn("Sell taker fee</dt><dd>2¢", details)
+        self.assertIn("Net / contract</dt><dd>1¢", details)
+        self.assertIn("×12.5 ct", details)
+        self.assertIn("below venue minimum order sizes", details)
+        self.assertIn("×12.5", P._venue_cell(row, "kalshi"))
+
+    def test_gross_cross_can_be_negative_after_fees(self):
+        self.known_fees()
+        self.left.bid, self.right.ask = "0.65", "0.64"
+        row = self.row()
+        self.assertEqual(row["crossed"], "true")
+        self.assertEqual(row["net_cross_eligible"], "true")
+        self.assertEqual(row["net_crossed"], "false")
+        self.assertEqual(row["net_gap"], "-0.01")
+        self.assertIn('class="edge-negative"', P._net_edge_cell(row, 0))
+        self.assertNotIn('class="edge-positive"', P._net_edge_cell(row, 0))
+
+    def test_unknown_fees_keep_gross_diagnostics_without_inventing_net(self):
+        self.left.bid, self.right.ask = "0.65", "0.60"
+        row = self.row()
+        self.assertEqual(row["crossed"], "true")
+        self.assertEqual(row["net_crossed"], "false")
+        self.assertEqual(row["net_cross_eligible"], "false")
+        self.assertEqual(row["net_gap"], "")
+        self.assertEqual(row["net_fee_status"], "unavailable")
+        self.assertIn("Fee ?", P._net_edge_cell(row, 0))
+
+    def test_sizes_require_a_corresponding_price_and_valid_quantity(self):
+        self.left.bid = "0.65"
+        self.left.extra.update(quote_bid_size="0", quote_ask_size="12")
+        row = self.row()
+        self.assertEqual(row["kalshi_bid_size"], "0")
+        self.assertEqual(row["kalshi_ask_size"], "")
+        for invalid in ("NaN", "-1", True, "invalid"):
+            self.left.extra["quote_bid_size"] = invalid
+            self.assertEqual(self.row()["kalshi_bid_size"], "")
+
+    def test_net_estimates_require_the_same_settlement_and_freshness_checks(self):
+        self.known_fees()
+        self.left.bid, self.right.ask = "0.65", "0.60"
+        self.left.quote_time = (self.as_of - timedelta(minutes=6)).isoformat()
+        stale = self.row()
+        self.assertEqual(stale["net_crossed"], "false")
+        self.assertEqual(stale["net_gap"], "")
+        self.left.quote_time = self.as_of.isoformat()
+        self.right.extra["settlement"] = known_profile(draw="0.5")
+        incompatible = self.row()
+        self.assertEqual(incompatible["net_crossed"], "false")
+        self.assertEqual(incompatible["net_gap"], "")
+
     def test_locked_market_is_not_crossed(self):
         self.left.bid, self.left.ask = "0.5", "0.5"
         self.right.bid, self.right.ask = "0.49", "0.51"
@@ -360,8 +479,39 @@ class QuotePresentationTests(unittest.TestCase):
         self.assertEqual(row["polymarket_intl_crossed"], "false")
         self.assertEqual(row["observed_cross_kind"], "within venue and across venues")
         self.assertEqual(row["observed_cross_gap"], "0.05")
-        self.assertEqual(row["cross_kind"], "across venues")
-        self.assertEqual(row["cross_gap"], "0.03")
+        self.assertEqual(row["quote_check"], "invalid_book")
+        self.assertEqual(row["cross_eligible"], "false")
+        self.assertEqual(row["cross_kind"], "")
+        self.assertEqual(row["cross_gap"], "")
+
+    def test_locally_crossed_book_cannot_emit_a_positive_net_signal(self):
+        self.known_fees()
+        self.left.bid, self.left.ask = "0.80", "0.60"
+        self.right.bid, self.right.ask = "0.65", "0.70"
+        row = self.row()
+        self.assertEqual(row["observed_crossed"], "true")
+        self.assertEqual(row["quote_check"], "invalid_book")
+        self.assertEqual(row["crossed"], "false")
+        self.assertEqual(row["net_crossed"], "false")
+        self.assertEqual(row["net_gap"], "")
+        self.assertIn("Invalid book", P._net_edge_cell(row, 0))
+        self.right.quote_time = (self.as_of - timedelta(minutes=6)).isoformat()
+        self.assertEqual(self.row()["quote_check"], "invalid_book")
+
+    def test_invalid_third_book_does_not_block_two_healthy_venues(self):
+        self.known_fees()
+        self.left.bid, self.left.ask = "0.70", "0.75"
+        self.right.bid, self.right.ask = "0.61", "0.62"
+        row = self.row()
+        row.update(polymarket_us_bid="0.80", polymarket_us_ask="0.60",
+                   polymarket_us_quote_time=self.as_of.isoformat())
+        eligibility = P._eligible_quotes(row, VENUES, self.as_of)
+        self.assertEqual(eligibility["quote_check"], "fresh")
+        self.assertEqual(eligibility["crossed"], "true")
+        self.assertEqual(eligibility["eligible_bid_venue"], "kalshi")
+        self.assertEqual(eligibility["eligible_ask_venue"], "polymarket_intl")
+        self.assertEqual(eligibility["cross_gap"], "0.08")
+        self.assertEqual(eligibility["net_gap"], "0.06")
 
     def test_local_cross_without_another_quoted_venue(self):
         self.left.bid, self.left.ask = "0.3", "0.2"
