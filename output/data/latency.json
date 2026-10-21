@@ -1,15 +1,15 @@
 {
   "mode": "rest_snapshot",
-  "discovery_reused": true,
+  "discovery_reused": false,
   "timings": {
-    "discovery_ms": 397.138,
-    "parse_and_match_ms": 4037.961,
-    "quote_refresh_ms": 12071.713,
-    "audit_and_render_ms": 1446.475,
-    "before_archive_total_ms": 17953.304
+    "discovery_ms": 63370.742,
+    "parse_and_match_ms": 2751.253,
+    "quote_refresh_ms": 10832.609,
+    "audit_and_render_ms": 1532.919,
+    "before_archive_total_ms": 78487.548
   },
   "discovery_workers": 3,
   "quote_workers_per_venue": 4,
-  "instruments": 2240,
-  "comparison_pairs": 1129
+  "instruments": 2302,
+  "comparison_pairs": 1162
 }

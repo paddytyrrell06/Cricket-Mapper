@@ -2,6 +2,37 @@
   {
     "category": "Esports",
     "details": {
+      "away_competitor_id": "83101c29-1fae-4528-bbd0-baea2256a1fd",
+      "game": "CS2",
+      "home_competitor_id": "ff251e71-5a67-4ebc-914c-75ef44f3fb49",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT231400HECOLD",
+      "season_type": "ESEA",
+      "season_week": "regular season",
+      "season_year": "Advanced Europe 2026",
+      "status": "unplayed",
+      "tournament_name": "ESEA Advanced Europe 2026"
+    },
+    "id": "1f98da9e-7fbf-4d7c-8b73-c0380f2f7118",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT231400HECOLD"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT231400HECOLD"
+    ],
+    "source_ids": {
+      "source_2_id": "20261020D794E172"
+    },
+    "start_date": "2026-10-23T18:00:00Z",
+    "title": "Hermine Esports Club vs OldBoys",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
       "away_competitor_id": "72cb7aaa-fab6-459a-b237-6525568e62ea",
       "game": "CS2",
       "home_competitor_id": "09b56766-2145-42ae-8744-9df4d1b1fb46",
@@ -10,7 +41,7 @@
       "season_type": "VOID Autumn Cup",
       "season_week": "playoffs",
       "season_year": "2026",
-      "status": "unplayed",
+      "status": "live",
       "tournament_name": "VOID Autumn Cup 2026"
     },
     "id": "c880ebb8-cb69-47d5-81c5-3597f77369f1",
@@ -28,184 +59,10 @@
     "source_ids": {
       "source_2_id": "2026102130F04390"
     },
-    "start_date": "2026-10-21T05:00:00Z",
+    "start_date": "2026-10-21T04:10:00Z",
     "title": "Vitalem Aerem vs Wept Xyloid Melancholy",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "3da2574a-3497-40a8-a61c-ab109694e49d",
-      "game": "CS2",
-      "home_competitor_id": "f756ad6d-a10f-476e-be4d-f070be591faf",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210400KAMESB",
-      "season_type": "Exort Fiesta",
-      "season_week": "group c",
-      "season_year": "Closed Qualifier: Series #3 2026",
-      "status": "unplayed",
-      "tournament_name": "Exort Fiesta Closed Qualifier: Series #3 2026"
-    },
-    "id": "e08c0cd3-2077-4fef-8cf0-7e1835a3f79b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210400KAMESB"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210400KAMESB",
-      "KXCS2MAP-26OCT210400KAMESB-1",
-      "KXCS2MAP-26OCT210400KAMESB-2",
-      "KXCS2TOTALMAPS-26OCT210400KAMESB"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021340F2E83"
-    },
-    "start_date": "2026-10-21T08:00:00Z",
-    "title": "KAMUI vs eSuba",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "385900cf-5da8-42c8-8eb3-7e04b10e08d4",
-      "game": "CS2",
-      "home_competitor_id": "6fee536a-4fa0-4b65-b175-587b556246d4",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210630CTR9INEA",
-      "season_type": "United21",
-      "season_week": "group c",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "United21 2026"
-    },
-    "id": "9be063c4-fa58-4bbb-9004-82ed2c67d00c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210630CTR9INEA"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210630CTR9INEA",
-      "KXCS2TOTALMAPS-26OCT210630CTR9INEA",
-      "KXCS2MAP-26OCT210630CTR9INEA-1",
-      "KXCS2MAP-26OCT210630CTR9INEA-2"
-    ],
-    "source_ids": {
-      "source_2_id": "202610214E42F90C"
-    },
-    "start_date": "2026-10-21T10:30:00Z",
-    "title": "CTRL Esports vs 9INE Academy",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "ccba786a-f498-41e2-97c3-a920cf5142da",
-      "game": "CS2",
-      "home_competitor_id": "7c0199dd-3224-4d1c-9e3e-b9c6d2322c98",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210800MZPG1",
-      "season_type": "Stake Ranked",
-      "season_week": "playoffs",
-      "season_year": "Episode 6: Closed Qualifier 2026",
-      "status": "unplayed",
-      "tournament_name": "Stake Ranked Episode 6: Closed Qualifier 2026"
-    },
-    "id": "3c2cab3f-e25a-46e3-bd7c-10419e803c82",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210800MZPG1",
-      "KXCS2SPREAD-26OCT210800MZPG1"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210800MZPG1",
-      "KXCS2SPREAD-26OCT210800MZPG1",
-      "KXCS2MAP-26OCT210800MZPG1-1",
-      "KXCS2MAP-26OCT210800MZPG1-2",
-      "KXCS2TOTALMAPS-26OCT210800MZPG1"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021F53F6F3F"
-    },
-    "start_date": "2026-10-21T17:30:00Z",
-    "title": "Metizport vs GenOne",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "87a21c54-1448-43d7-95b8-5c6fc6b249e4",
-      "game": "CS2",
-      "home_competitor_id": "15c40f8c-fbe5-4ad9-920a-6ebe266056e3",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT211000GLSFLU",
-      "season_type": "Circuit X",
-      "season_week": "group a",
-      "season_year": "Curitiba 2026",
-      "status": "unplayed",
-      "tournament_name": "Circuit X Curitiba 2026"
-    },
-    "id": "b171cc57-683e-4c0d-9d3b-51234c4fdd50",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT211000GLSFLU",
-      "KXCS2SPREAD-26OCT211000GLSFLU"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT211000GLSFLU",
-      "KXCS2MAP-26OCT211000GLSFLU-1",
-      "KXCS2MAP-26OCT211000GLSFLU-2",
-      "KXCS2TOTALMAPS-26OCT211000GLSFLU",
-      "KXCS2SPREAD-26OCT211000GLSFLU"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021E889F688"
-    },
-    "start_date": "2026-10-21T14:00:00Z",
-    "title": "Galorys vs Fluxo W7M",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "e697457e-95e8-48fc-bc26-95b84195e9da",
-      "game": "CS2",
-      "home_competitor_id": "f0b67cd0-6c0f-4fc3-a3ad-eb5891654038",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT220900THEENCEP",
-      "season_type": "United21",
-      "season_week": "group b",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "United21 2026"
-    },
-    "id": "b886022d-f4c5-4bfd-b43e-78e6e4b41410",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT220900THEENCEP"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT220900THEENCEP",
-      "KXCS2MAP-26OCT220900THEENCEP-1",
-      "KXCS2MAP-26OCT220900THEENCEP-2",
-      "KXCS2TOTALMAPS-26OCT220900THEENCEP"
-    ],
-    "source_ids": {
-      "source_2_id": "20261020F367A49E"
-    },
-    "start_date": "2026-10-22T13:00:00Z",
-    "title": "TheChampionGG vs ENCE Prospects",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
@@ -239,641 +96,109 @@
     "start_date": "2026-10-21T06:00:00Z",
     "title": "XMETA vs Virtus.pro",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "ccf14906-0ac9-4ba1-86e7-d7d983eb31f4",
+      "away_competitor_id": "b2f6d5a2-2bd8-4049-9648-acfa84f461c6",
       "game": "CS2",
-      "home_competitor_id": "7a1bb2e5-571b-4978-8daa-58d46e88ba08",
+      "home_competitor_id": "514c3acb-22ec-4463-9287-6cc9e5989a4f",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210700EFBMB",
-      "season_type": "DraculaN",
-      "season_week": "playoffs",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "DraculaN 2026"
-    },
-    "id": "65185702-e612-4b5e-a558-cda1a90cb0c6",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210700EFBMB",
-      "KXCS2SPREAD-26OCT210700EFBMB"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210700EFBMB",
-      "KXCS2SPREAD-26OCT210700EFBMB",
-      "KXCS2MAP-26OCT210700EFBMB-1",
-      "KXCS2MAP-26OCT210700EFBMB-2",
-      "KXCS2TOTALMAPS-26OCT210700EFBMB"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021B0173D26"
-    },
-    "start_date": "2026-10-21T11:00:00Z",
-    "title": "Eternal Fire vs BASEMENT BOYS",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "df4a6df0-1ef0-417e-add0-96116a674e9e",
-      "game": "CS2",
-      "home_competitor_id": "df3beb4a-3cf2-41ed-aa32-49979f9ea73e",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210700HEROSIN",
-      "season_type": "DraculaN",
-      "season_week": "playoffs",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "DraculaN 2026"
-    },
-    "id": "c79b460e-4694-413f-a9b3-ac855bfb3a3c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210700HEROSIN"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210700HEROSIN",
-      "KXCS2MAP-26OCT210700HEROSIN-1",
-      "KXCS2MAP-26OCT210700HEROSIN-2",
-      "KXCS2TOTALMAPS-26OCT210700HEROSIN"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102143B1B2EB"
-    },
-    "start_date": "2026-10-21T11:00:00Z",
-    "title": "Heroic vs Sinners",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "806c42bc-8033-4c87-a6e3-22e622021ea9",
-      "game": "CS2",
-      "home_competitor_id": "ff9567a1-9363-4029-82af-7c7c200a2a90",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT2109004MMEL",
-      "season_type": "ESL Challenger League",
-      "season_week": "group b",
-      "season_year": "Europe Cup #9 2026",
-      "status": "unplayed",
-      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
-    },
-    "id": "336f1073-bf8c-468b-ab50-045def7efa4c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT2109004MMEL",
-      "KXCS2SPREAD-26OCT2109004MMEL"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT2109004MMEL",
-      "KXCS2MAP-26OCT2109004MMEL-1",
-      "KXCS2MAP-26OCT2109004MMEL-2",
-      "KXCS2TOTALMAPS-26OCT2109004MMEL",
-      "KXCS2SPREAD-26OCT2109004MMEL"
-    ],
-    "source_ids": {
-      "source_2_id": "202610215621B74A"
-    },
-    "start_date": "2026-10-21T13:00:00Z",
-    "title": "Four Magic vs mellren",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "ccba786a-f498-41e2-97c3-a920cf5142da",
-      "game": "CS2",
-      "home_competitor_id": "bd63ca9c-02d2-41d1-afcb-8608f0ae4cb7",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210900DMG1",
-      "season_type": "ESL Challenger League",
-      "season_week": "group a",
-      "season_year": "Europe Cup #9 2026",
-      "status": "unplayed",
-      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
-    },
-    "id": "0602cdc8-3074-4eae-bb05-8d3d940ba960",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210900DMG1",
-      "KXCS2SPREAD-26OCT210900DMG1"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210900DMG1",
-      "KXCS2MAP-26OCT210900DMG1-1",
-      "KXCS2MAP-26OCT210900DMG1-2",
-      "KXCS2TOTALMAPS-26OCT210900DMG1",
-      "KXCS2SPREAD-26OCT210900DMG1"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102125ECFC61"
-    },
-    "start_date": "2026-10-21T13:00:00Z",
-    "title": "Dark Moon vs GenOne",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "1b600fcb-1d50-4293-9078-1bb514aa5c3c",
-      "game": "CS2",
-      "home_competitor_id": "07c78165-8e6d-4fdb-80dc-6346e968e5e2",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210900SPIWBTA",
-      "season_type": "ESL Challenger League",
-      "season_week": "group c",
-      "season_year": "Europe Cup #9 2026",
-      "status": "unplayed",
-      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
-    },
-    "id": "372fa5db-e8f0-4667-b6dc-67a9ebc78272",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210900SPIWBTA",
-      "KXCS2SPREAD-26OCT210900SPIWBTA"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210900SPIWBTA",
-      "KXCS2TOTALMAPS-26OCT210900SPIWBTA",
-      "KXCS2MAP-26OCT210900SPIWBTA-1",
-      "KXCS2MAP-26OCT210900SPIWBTA-2",
-      "KXCS2SPREAD-26OCT210900SPIWBTA"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021EBA7203D"
-    },
-    "start_date": "2026-10-21T13:00:00Z",
-    "title": "Spirit Academy Green vs WBT Academy",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "997a4ade-980a-4a5a-b8b4-77669aa92108",
-      "game": "CS2",
-      "home_competitor_id": "3fae11b4-7c8b-483c-87b0-e0c660585bc9",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210900SSINSMOR",
-      "season_type": "ESL Challenger League",
-      "season_week": "group a",
-      "season_year": "Europe Cup #9 2026",
-      "status": "unplayed",
-      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
-    },
-    "id": "8ad547cb-8219-4fa2-a4a7-3391828e22fd",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210900SSINSMOR",
-      "KXCS2SPREAD-26OCT210900SSINSMOR"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210900SSINSMOR",
-      "KXCS2MAP-26OCT210900SSINSMOR-1",
-      "KXCS2MAP-26OCT210900SSINSMOR-2",
-      "KXCS2TOTALMAPS-26OCT210900SSINSMOR",
-      "KXCS2SPREAD-26OCT210900SSINSMOR"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102152C9AF56"
-    },
-    "start_date": "2026-10-21T13:00:00Z",
-    "title": "Saint Sinners vs MORROW",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "4eddfb1a-f665-4e78-93ab-31199ae3dedb",
-      "game": "CS2",
-      "home_competitor_id": "92c8d579-10fc-4a7c-b40f-99d2c7624d1e",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210945TITNOI",
-      "season_type": "CCT Europe",
-      "season_week": "playoffs",
-      "season_year": "Challengers Series 2026",
-      "status": "unplayed",
-      "tournament_name": "CCT Europe Challengers Series 2026"
-    },
-    "id": "99ee038a-d257-4fa8-96c7-1cceb1cc07fb",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210945TITNOI"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210945TITNOI",
-      "KXCS2TOTALMAPS-26OCT210945TITNOI",
-      "KXCS2MAP-26OCT210945TITNOI-1",
-      "KXCS2MAP-26OCT210945TITNOI-2"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021C2F820F1"
-    },
-    "start_date": "2026-10-21T11:00:00Z",
-    "title": "TitanFlow vs Noir Verse",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "10714089-51fb-46d6-84c4-eeef4d09f1cd",
-      "game": "CS2",
-      "home_competitor_id": "eda59ed7-796e-4bcc-9f6b-35109ddee233",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT191400BLUENT",
-      "season_type": "DACH CS Masters",
-      "season_week": "regular season",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "DACH CS Masters 2026"
-    },
-    "id": "14eaa55e-ce0d-4ffb-b967-dcc77e3a6114",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT191400BLUENT"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT191400BLUENT",
-      "KXCS2TOTALMAPS-26OCT191400BLUENT",
-      "KXCS2MAP-26OCT191400BLUENT-1",
-      "KXCS2MAP-26OCT191400BLUENT-2"
-    ],
-    "source_ids": {
-      "source_2_id": "20261019C546E01C"
-    },
-    "start_date": "2026-10-21T16:00:00Z",
-    "title": "BLUEJAYS.de vs Entropy",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "2ef3b709-2872-4746-bfb5-f70e82c446df",
-      "game": "CS2",
-      "home_competitor_id": "ab17e384-ecd1-4372-942a-1c79f4b8d998",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT201500LNQUIN",
-      "season_type": "CCT South America",
-      "season_week": "group stage",
-      "season_year": "Series 7 2026",
-      "status": "live",
-      "tournament_name": "CCT South America Series 7 2026"
-    },
-    "id": "4242c442-5776-482c-8c4c-c2a41da5b604",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT201500LNQUIN"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT201500LNQUIN",
-      "KXCS2TOTALMAPS-26OCT201500LNQUIN",
-      "KXCS2MAP-26OCT201500LNQUIN-1",
-      "KXCS2MAP-26OCT201500LNQUIN-2"
-    ],
-    "source_ids": {
-      "source_2_id": "20261020E987BFE8"
-    },
-    "start_date": "2026-10-20T19:10:00Z",
-    "title": "Los Ninos vs QUINTESSENCIA",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "7ede8667-d77e-4bf9-b277-01a58fef3538",
-      "game": "CS2",
-      "home_competitor_id": "55b094c1-5bd1-47ac-959a-392ecd03a2ec",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210200EVOEACES",
-      "season_type": "CIS LAN Championship",
-      "season_week": "group b",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "CIS LAN Championship 2026"
-    },
-    "id": "02aa58af-ee02-4d37-82ea-87f4b42dee03",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210200EVOEACES"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210200EVOEACES",
-      "KXCS2TOTALMAPS-26OCT210200EVOEACES",
-      "KXCS2MAP-26OCT210200EVOEACES-1",
-      "KXCS2MAP-26OCT210200EVOEACES-2"
-    ],
-    "source_ids": {
-      "source_2_id": "202610211830AC44"
-    },
-    "start_date": "2026-10-21T06:00:00Z",
-    "title": "EVO Elite vs Team ACES",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "54aede08-0af3-4feb-944f-467430436ff7",
-      "game": "CS2",
-      "home_competitor_id": "abad0f86-ca0a-43f5-9568-312ae29a4cc9",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210700HAVUINN",
-      "season_type": "CCT Europe",
-      "season_week": "group stage",
-      "season_year": "Series #12 2026",
-      "status": "unplayed",
-      "tournament_name": "CCT Europe Series #12 2026"
-    },
-    "id": "d02a17fd-2be9-4f49-aa4f-e781c8a9fdda",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210700HAVUINN",
-      "KXCS2SPREAD-26OCT210700HAVUINN"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210700HAVUINN",
-      "KXCS2MAP-26OCT210700HAVUINN-1",
-      "KXCS2MAP-26OCT210700HAVUINN-2",
-      "KXCS2TOTALMAPS-26OCT210700HAVUINN",
-      "KXCS2SPREAD-26OCT210700HAVUINN"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102183FE34CB"
-    },
-    "start_date": "2026-10-21T11:00:00Z",
-    "title": "HAVU vs Inner Circle Academy",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "5cc1414e-0895-4c54-80c8-ce16597a0791",
-      "game": "CS2",
-      "home_competitor_id": "ef50b2d9-ead3-40a0-9eb3-b6983d508404",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210700NXSBCG",
-      "season_type": "DraculaN",
-      "season_week": "playoffs",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "DraculaN 2026"
-    },
-    "id": "129da2d2-9f98-4efd-ac94-7c771933f33a",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210700NXSBCG",
-      "KXCS2SPREAD-26OCT210700NXSBCG"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210700NXSBCG",
-      "KXCS2TOTALMAPS-26OCT210700NXSBCG",
-      "KXCS2SPREAD-26OCT210700NXSBCG",
-      "KXCS2MAP-26OCT210700NXSBCG-1",
-      "KXCS2MAP-26OCT210700NXSBCG-2"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021C62BA3A4"
-    },
-    "start_date": "2026-10-21T11:00:00Z",
-    "title": "Nexus vs BC.Game Esports",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "049021cf-7c64-4927-8341-6751422dde43",
-      "game": "CS2",
-      "home_competitor_id": "1846d4b2-033d-42f9-86b0-70f44a972c42",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT211000LARGAPAIN",
-      "season_type": "Circuit X",
-      "season_week": "group a",
-      "season_year": "Curitiba 2026",
-      "status": "unplayed",
-      "tournament_name": "Circuit X Curitiba 2026"
-    },
-    "id": "a880c4fe-ea00-413d-ab57-668adb3b58bd",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT211000LARGAPAIN",
-      "KXCS2SPREAD-26OCT211000LARGAPAIN"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT211000LARGAPAIN",
-      "KXCS2MAP-26OCT211000LARGAPAIN-1",
-      "KXCS2MAP-26OCT211000LARGAPAIN-2",
-      "KXCS2TOTALMAPS-26OCT211000LARGAPAIN",
-      "KXCS2SPREAD-26OCT211000LARGAPAIN"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021D7499D7E"
-    },
-    "start_date": "2026-10-21T14:00:00Z",
-    "title": "largadosypelados vs paiN",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "22d1c913-5cd9-4861-999a-8864542bcfdf",
-      "game": "CS2",
-      "home_competitor_id": "937690bb-0a88-4080-a102-e76cbc27e902",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT211100BLICS",
-      "season_type": "CIS LAN Championship",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210400BREGOT",
+      "season_type": "United21",
       "season_week": "group c",
       "season_year": "2026",
       "status": "unplayed",
-      "tournament_name": "CIS LAN Championship 2026"
+      "tournament_name": "United21 2026"
     },
-    "id": "f19aeff0-68fb-403e-94a8-db00ad896985",
+    "id": "d6917ee9-eee1-4be2-959f-18b1d7340a14",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT211100BLICS"
+      "KXCS2GAME-26OCT210400BREGOT"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT211100BLICS",
-      "KXCS2TOTALMAPS-26OCT211100BLICS",
-      "KXCS2MAP-26OCT211100BLICS-1",
-      "KXCS2MAP-26OCT211100BLICS-2"
+      "KXCS2GAME-26OCT210400BREGOT",
+      "KXCS2TOTALMAPS-26OCT210400BREGOT",
+      "KXCS2MAP-26OCT210400BREGOT-1",
+      "KXCS2MAP-26OCT210400BREGOT-2"
     ],
     "source_ids": {
-      "source_2_id": "2026102122839B22"
+      "source_2_id": "20261021BEA5B671"
     },
-    "start_date": "2026-10-21T15:00:00Z",
-    "title": "BlinkDagger vs CYBERSHOKE Esports",
+    "start_date": "2026-10-21T08:00:00Z",
+    "title": "Bread Eaters Esports vs gothboiclique",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "03613b24-b607-44fd-8185-197ff09edd40",
+      "away_competitor_id": "cc67c667-75da-467d-8a88-7e6190ad3768",
       "game": "CS2",
-      "home_competitor_id": "cfcbb8e0-3080-4a9f-83e6-506066f94774",
+      "home_competitor_id": "c2f37718-f478-41cb-85c8-3bbc53385f86",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT211100FOKUNITY",
-      "season_type": "Stake Ranked",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210500MGLZMGC",
+      "season_type": "1win Private Club",
       "season_week": "playoffs",
-      "season_year": "Episode 6: Closed Qualifier 2026",
+      "season_year": "2026",
       "status": "unplayed",
-      "tournament_name": "Stake Ranked Episode 6: Closed Qualifier 2026"
+      "tournament_name": "1win Private Club 2026"
     },
-    "id": "0605045f-1052-4f16-9397-e138c1eeb6ee",
+    "id": "4e8b7c06-1861-4219-919e-1681ae120856",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT211100FOKUNITY",
-      "KXCS2SPREAD-26OCT211100FOKUNITY"
+      "KXCS2GAME-26OCT210500MGLZMGC"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT211100FOKUNITY",
-      "KXCS2MAP-26OCT211100FOKUNITY-1",
-      "KXCS2MAP-26OCT211100FOKUNITY-2",
-      "KXCS2SPREAD-26OCT211100FOKUNITY",
-      "KXCS2TOTALMAPS-26OCT211100FOKUNITY"
+      "KXCS2GAME-26OCT210500MGLZMGC",
+      "KXCS2MAP-26OCT210500MGLZMGC-1",
+      "KXCS2MAP-26OCT210500MGLZMGC-2",
+      "KXCS2TOTALMAPS-26OCT210500MGLZMGC"
     ],
     "source_ids": {
-      "source_2_id": "2026102170F10B99"
+      "source_2_id": "20261021A51EBD1E"
     },
     "start_date": "2026-10-21T09:00:00Z",
-    "title": "FOKUS vs UNiTY esports",
+    "title": "TheMongolz vs magic",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "dddf32fa-c055-4a48-8851-4e581e282b2c",
-      "game": "CS2",
-      "home_competitor_id": "86e33ac8-3666-4c6a-826d-017c869a15a8",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210700FIREJUS",
-      "season_type": "NODWIN Clutch Series",
-      "season_week": "group stage",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "NODWIN Clutch Series 2026"
-    },
-    "id": "de52ee3a-0935-45a7-9219-e7c0db56315a",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210700FIREJUS"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210700FIREJUS",
-      "KXCS2MAP-26OCT210700FIREJUS-1",
-      "KXCS2MAP-26OCT210700FIREJUS-2",
-      "KXCS2TOTALMAPS-26OCT210700FIREJUS"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021DFC335F3"
-    },
-    "start_date": "2026-10-21T11:00:00Z",
-    "title": "Fire Flux Esports vs Just_Players",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "921884a5-e261-41f5-a20b-5e787d38363c",
+      "away_competitor_id": "3da2574a-3497-40a8-a61c-ab109694e49d",
       "game": "CS2",
       "home_competitor_id": "f756ad6d-a10f-476e-be4d-f070be591faf",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210900KAMVEX",
-      "season_type": "ESL Challenger League",
-      "season_week": "group d",
-      "season_year": "Europe Cup #9 2026",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210400KAMESB",
+      "season_type": "Exort Fiesta",
+      "season_week": "group c",
+      "season_year": "Closed Qualifier: Series #3 2026",
       "status": "unplayed",
-      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
+      "tournament_name": "Exort Fiesta Closed Qualifier: Series #3 2026"
     },
-    "id": "197956ad-19df-49e1-bc32-da5b51bce6a7",
+    "id": "e08c0cd3-2077-4fef-8cf0-7e1835a3f79b",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT210900KAMVEX",
-      "KXCS2SPREAD-26OCT210900KAMVEX"
+      "KXCS2GAME-26OCT210400KAMESB"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT210900KAMVEX",
-      "KXCS2TOTALMAPS-26OCT210900KAMVEX",
-      "KXCS2MAP-26OCT210900KAMVEX-1",
-      "KXCS2MAP-26OCT210900KAMVEX-2",
-      "KXCS2SPREAD-26OCT210900KAMVEX"
+      "KXCS2GAME-26OCT210400KAMESB",
+      "KXCS2MAP-26OCT210400KAMESB-1",
+      "KXCS2MAP-26OCT210400KAMESB-2",
+      "KXCS2TOTALMAPS-26OCT210400KAMESB"
     ],
     "source_ids": {
-      "source_2_id": "2026102170B87624"
+      "source_2_id": "20261021340F2E83"
     },
-    "start_date": "2026-10-21T13:00:00Z",
-    "title": "KAMUI vs Vexar",
+    "start_date": "2026-10-21T08:00:00Z",
+    "title": "KAMUI vs eSuba",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "4c391e35-4757-4a35-9726-6d7b4cd372df",
-      "game": "CS2",
-      "home_competitor_id": "2ffdfd0a-52fd-4ddc-a1e5-fd3248144b86",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210900LKSKR",
-      "season_type": "ESL Challenger League",
-      "season_week": "group b",
-      "season_year": "Europe Cup #9 2026",
-      "status": "unplayed",
-      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
-    },
-    "id": "31f93a06-f7a0-4197-bcce-20275cf7256c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210900LKSKR",
-      "KXCS2SPREAD-26OCT210900LKSKR"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210900LKSKR",
-      "KXCS2MAP-26OCT210900LKSKR-1",
-      "KXCS2MAP-26OCT210900LKSKR-2",
-      "KXCS2TOTALMAPS-26OCT210900LKSKR",
-      "KXCS2SPREAD-26OCT210900LKSKR"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021AC7CDB1F"
-    },
-    "start_date": "2026-10-21T13:00:00Z",
-    "title": "los kogutos vs Sokerorg",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
@@ -909,41 +234,43 @@
     "start_date": "2026-10-21T13:00:00Z",
     "title": "maybe vs Noir Verse",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "e2d4d429-77a7-4e67-b85a-7bcca3b73107",
+      "away_competitor_id": "87a21c54-1448-43d7-95b8-5c6fc6b249e4",
       "game": "CS2",
-      "home_competitor_id": "8291c717-d46c-4cea-b7e0-7a7274673fbd",
+      "home_competitor_id": "15c40f8c-fbe5-4ad9-920a-6ebe266056e3",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT211400DUCKSBIGA",
-      "season_type": "DACH CS Masters",
-      "season_week": "regular season",
-      "season_year": "2026",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211000GLSFLU",
+      "season_type": "Circuit X",
+      "season_week": "group a",
+      "season_year": "Curitiba 2026",
       "status": "unplayed",
-      "tournament_name": "DACH CS Masters 2026"
+      "tournament_name": "Circuit X Curitiba 2026"
     },
-    "id": "a14951d3-029f-4ef0-961b-0bd48c604c70",
+    "id": "b171cc57-683e-4c0d-9d3b-51234c4fdd50",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT211400DUCKSBIGA"
+      "KXCS2GAME-26OCT211000GLSFLU",
+      "KXCS2SPREAD-26OCT211000GLSFLU"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT211400DUCKSBIGA",
-      "KXCS2TOTALMAPS-26OCT211400DUCKSBIGA",
-      "KXCS2MAP-26OCT211400DUCKSBIGA-1",
-      "KXCS2MAP-26OCT211400DUCKSBIGA-2"
+      "KXCS2GAME-26OCT211000GLSFLU",
+      "KXCS2MAP-26OCT211000GLSFLU-1",
+      "KXCS2MAP-26OCT211000GLSFLU-2",
+      "KXCS2TOTALMAPS-26OCT211000GLSFLU",
+      "KXCS2SPREAD-26OCT211000GLSFLU"
     ],
     "source_ids": {
-      "source_2_id": "202610216B98C489"
+      "source_2_id": "20261021E889F688"
     },
-    "start_date": "2026-10-21T18:00:00Z",
-    "title": "Playing Ducks vs BIG Academy",
+    "start_date": "2026-10-21T14:00:00Z",
+    "title": "Galorys vs Fluxo W7M",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
@@ -977,179 +304,41 @@
     "start_date": "2026-10-22T08:00:00Z",
     "title": "Passion Academy vs WonderKids",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "8c684fac-6f5c-4ad3-8e45-1fe1ec13d51b",
+      "away_competitor_id": "786d0418-de06-4fb9-9634-c32aa7e2a415",
       "game": "CS2",
-      "home_competitor_id": "2ffdfd0a-52fd-4ddc-a1e5-fd3248144b86",
+      "home_competitor_id": "82c08088-99d1-45f5-bab8-81884c04a463",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT220945LKDON",
-      "season_type": "CCT Europe",
-      "season_week": "playoffs",
-      "season_year": "Challengers Series 2026",
+      "main_game_event_ticker": "KXCS2GAME-26OCT231000DUCRCA",
+      "season_type": "Exort Fiesta",
+      "season_week": "group a",
+      "season_year": "Closed Qualifier: Series #3 2026",
       "status": "unplayed",
-      "tournament_name": "CCT Europe Challengers Series 2026"
+      "tournament_name": "Exort Fiesta Closed Qualifier: Series #3 2026"
     },
-    "id": "ec95be98-8fa2-4d5e-b530-57cb2eb7a83d",
+    "id": "d504e628-7c4c-4cb8-8ab0-f4033d92ee64",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT220945LKDON"
+      "KXCS2GAME-26OCT231000DUCRCA"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT220945LKDON",
-      "KXCS2TOTALMAPS-26OCT220945LKDON",
-      "KXCS2MAP-26OCT220945LKDON-1",
-      "KXCS2MAP-26OCT220945LKDON-2"
+      "KXCS2GAME-26OCT231000DUCRCA",
+      "KXCS2MAP-26OCT231000DUCRCA-1",
+      "KXCS2MAP-26OCT231000DUCRCA-2",
+      "KXCS2TOTALMAPS-26OCT231000DUCRCA"
     ],
     "source_ids": {
-      "source_2_id": "20261022690D56EB"
+      "source_2_id": "202610239F17D769"
     },
-    "start_date": "2026-10-22T13:45:00Z",
-    "title": "los kogutos vs Donstu Esports",
+    "start_date": "2026-10-23T14:00:00Z",
+    "title": "Ducks vs Rcave",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "cc67c667-75da-467d-8a88-7e6190ad3768",
-      "game": "CS2",
-      "home_competitor_id": "c2f37718-f478-41cb-85c8-3bbc53385f86",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210500MGLZMGC",
-      "season_type": "1win Private Club",
-      "season_week": "playoffs",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "1win Private Club 2026"
-    },
-    "id": "4e8b7c06-1861-4219-919e-1681ae120856",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210500MGLZMGC"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210500MGLZMGC",
-      "KXCS2MAP-26OCT210500MGLZMGC-1",
-      "KXCS2MAP-26OCT210500MGLZMGC-2",
-      "KXCS2TOTALMAPS-26OCT210500MGLZMGC"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021A51EBD1E"
-    },
-    "start_date": "2026-10-21T09:00:00Z",
-    "title": "TheMongolz vs magic",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "deb112c4-5a51-4779-a704-ce79ad45a954",
-      "game": "CS2",
-      "home_competitor_id": "b67f360a-d5bc-4ba7-8fbe-b681a15cd9e4",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT201800GREJDT",
-      "season_type": "CCT South America",
-      "season_week": "group stage",
-      "season_year": "Series 7 2026",
-      "status": "unplayed",
-      "tournament_name": "CCT South America Series 7 2026"
-    },
-    "id": "57e83ed2-6436-4ad4-b364-ae40fd9fa065",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT201800GREJDT"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT201800GREJDT",
-      "KXCS2TOTALMAPS-26OCT201800GREJDT",
-      "KXCS2MAP-26OCT201800GREJDT-1",
-      "KXCS2MAP-26OCT201800GREJDT-2"
-    ],
-    "source_ids": {
-      "source_2_id": "202610201BB6A351"
-    },
-    "start_date": "2026-10-20T22:00:00Z",
-    "title": "Gremio Esports vs Joga de terno",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "b2f6d5a2-2bd8-4049-9648-acfa84f461c6",
-      "game": "CS2",
-      "home_competitor_id": "514c3acb-22ec-4463-9287-6cc9e5989a4f",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210400BREGOT",
-      "season_type": "United21",
-      "season_week": "group c",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "United21 2026"
-    },
-    "id": "d6917ee9-eee1-4be2-959f-18b1d7340a14",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210400BREGOT"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210400BREGOT",
-      "KXCS2TOTALMAPS-26OCT210400BREGOT",
-      "KXCS2MAP-26OCT210400BREGOT-1",
-      "KXCS2MAP-26OCT210400BREGOT-2"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021BEA5B671"
-    },
-    "start_date": "2026-10-21T08:00:00Z",
-    "title": "Bread Eaters Esports vs gothboiclique",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "0beb18d7-c396-446e-933f-a62d17cdb5f1",
-      "game": "CS2",
-      "home_competitor_id": "afb63fe5-491b-497a-be6c-3ba9778e7f89",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210500SNGBRUTE",
-      "season_type": "Stake Ranked",
-      "season_week": "playoffs",
-      "season_year": "Episode 6: Closed Qualifier 2026",
-      "status": "unplayed",
-      "tournament_name": "Stake Ranked Episode 6: Closed Qualifier 2026"
-    },
-    "id": "20bc1b5d-0a54-4c25-9b9c-432c09a44bfd",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210500SNGBRUTE",
-      "KXCS2SPREAD-26OCT210500SNGBRUTE"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210500SNGBRUTE",
-      "KXCS2SPREAD-26OCT210500SNGBRUTE",
-      "KXCS2MAP-26OCT210500SNGBRUTE-1",
-      "KXCS2MAP-26OCT210500SNGBRUTE-2",
-      "KXCS2TOTALMAPS-26OCT210500SNGBRUTE"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021C3598851"
-    },
-    "start_date": "2026-10-21T15:00:00Z",
-    "title": "Sangal vs Brute",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
@@ -1185,7 +374,147 @@
     "start_date": "2026-10-21T11:00:00Z",
     "title": "JiJieHao vs FaZe",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "ccba786a-f498-41e2-97c3-a920cf5142da",
+      "game": "CS2",
+      "home_competitor_id": "7c0199dd-3224-4d1c-9e3e-b9c6d2322c98",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210800MZPG1",
+      "season_type": "Stake Ranked",
+      "season_week": "playoffs",
+      "season_year": "Episode 6: Closed Qualifier 2026",
+      "status": "unplayed",
+      "tournament_name": "Stake Ranked Episode 6: Closed Qualifier 2026"
+    },
+    "id": "3c2cab3f-e25a-46e3-bd7c-10419e803c82",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210800MZPG1",
+      "KXCS2SPREAD-26OCT210800MZPG1"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210800MZPG1",
+      "KXCS2SPREAD-26OCT210800MZPG1",
+      "KXCS2MAP-26OCT210800MZPG1-1",
+      "KXCS2MAP-26OCT210800MZPG1-2",
+      "KXCS2TOTALMAPS-26OCT210800MZPG1"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021F53F6F3F"
+    },
+    "start_date": "2026-10-21T17:30:00Z",
+    "title": "Metizport vs GenOne",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "e49d7c26-c41c-4d20-8303-260781a06729",
+      "game": "CS2",
+      "home_competitor_id": "de6b6a03-8f7e-4510-a444-1c30a849beb5",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211100TFUPG",
+      "season_type": "CIS LAN Championship",
+      "season_week": "group c",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "CIS LAN Championship 2026"
+    },
+    "id": "0def4acc-65d9-4068-889f-a32e54685e8f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211100TFUPG"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211100TFUPG",
+      "KXCS2TOTALMAPS-26OCT211100TFUPG",
+      "KXCS2MAP-26OCT211100TFUPG-1",
+      "KXCS2MAP-26OCT211100TFUPG-2"
+    ],
+    "source_ids": {
+      "source_2_id": "202610216E21332D"
+    },
+    "start_date": "2026-10-21T15:00:00Z",
+    "title": "Team flacons vs UPGRADE",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "e697457e-95e8-48fc-bc26-95b84195e9da",
+      "game": "CS2",
+      "home_competitor_id": "f0b67cd0-6c0f-4fc3-a3ad-eb5891654038",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT220900THEENCEP",
+      "season_type": "United21",
+      "season_week": "group b",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "United21 2026"
+    },
+    "id": "b886022d-f4c5-4bfd-b43e-78e6e4b41410",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT220900THEENCEP"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT220900THEENCEP",
+      "KXCS2MAP-26OCT220900THEENCEP-1",
+      "KXCS2MAP-26OCT220900THEENCEP-2",
+      "KXCS2TOTALMAPS-26OCT220900THEENCEP"
+    ],
+    "source_ids": {
+      "source_2_id": "20261020F367A49E"
+    },
+    "start_date": "2026-10-22T13:00:00Z",
+    "title": "TheChampionGG vs ENCE Prospects",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "ccf14906-0ac9-4ba1-86e7-d7d983eb31f4",
+      "game": "CS2",
+      "home_competitor_id": "7a1bb2e5-571b-4978-8daa-58d46e88ba08",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210700EFBMB",
+      "season_type": "DraculaN",
+      "season_week": "playoffs",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "DraculaN 2026"
+    },
+    "id": "65185702-e612-4b5e-a558-cda1a90cb0c6",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210700EFBMB",
+      "KXCS2SPREAD-26OCT210700EFBMB"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210700EFBMB",
+      "KXCS2SPREAD-26OCT210700EFBMB",
+      "KXCS2MAP-26OCT210700EFBMB-1",
+      "KXCS2MAP-26OCT210700EFBMB-2",
+      "KXCS2TOTALMAPS-26OCT210700EFBMB"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021B0173D26"
+    },
+    "start_date": "2026-10-21T11:00:00Z",
+    "title": "Eternal Fire vs BASEMENT BOYS",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
@@ -1219,7 +548,217 @@
     "start_date": "2026-10-21T11:00:00Z",
     "title": "NOCTIS vs eternal premium",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "404fdb58-75be-4f81-8ad7-4e53dd899c86",
+      "game": "CS2",
+      "home_competitor_id": "de4f5dfb-53cb-4aa5-be77-aac99fd286a4",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210800AIMAPOGEE",
+      "season_type": "Stake Ranked",
+      "season_week": "playoffs",
+      "season_year": "Episode 6: Closed Qualifier 2026",
+      "status": "unplayed",
+      "tournament_name": "Stake Ranked Episode 6: Closed Qualifier 2026"
+    },
+    "id": "9dda488d-6c59-4776-a3ed-7613bea71a86",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210800AIMAPOGEE",
+      "KXCS2SPREAD-26OCT210800AIMAPOGEE"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210800AIMAPOGEE",
+      "KXCS2MAP-26OCT210800AIMAPOGEE-1",
+      "KXCS2MAP-26OCT210800AIMAPOGEE-2",
+      "KXCS2SPREAD-26OCT210800AIMAPOGEE",
+      "KXCS2TOTALMAPS-26OCT210800AIMAPOGEE"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021D7DBDCF3"
+    },
+    "start_date": "2026-10-21T12:00:00Z",
+    "title": "aimclub vs Apogee Esports",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "4c391e35-4757-4a35-9726-6d7b4cd372df",
+      "game": "CS2",
+      "home_competitor_id": "2ffdfd0a-52fd-4ddc-a1e5-fd3248144b86",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210900LKSKR",
+      "season_type": "ESL Challenger League",
+      "season_week": "group b",
+      "season_year": "Europe Cup #9 2026",
+      "status": "unplayed",
+      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
+    },
+    "id": "31f93a06-f7a0-4197-bcce-20275cf7256c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210900LKSKR",
+      "KXCS2SPREAD-26OCT210900LKSKR"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210900LKSKR",
+      "KXCS2MAP-26OCT210900LKSKR-1",
+      "KXCS2MAP-26OCT210900LKSKR-2",
+      "KXCS2TOTALMAPS-26OCT210900LKSKR",
+      "KXCS2SPREAD-26OCT210900LKSKR"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021AC7CDB1F"
+    },
+    "start_date": "2026-10-21T13:00:00Z",
+    "title": "los kogutos vs Sokerorg",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "997a4ade-980a-4a5a-b8b4-77669aa92108",
+      "game": "CS2",
+      "home_competitor_id": "1f4b1935-9e9f-4a35-b1fa-306d35d65687",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210945EXMOR",
+      "season_type": "CCT Europe",
+      "season_week": "playoffs",
+      "season_year": "Challengers Series 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT Europe Challengers Series 2026"
+    },
+    "id": "373d8ade-32a8-44db-b4c0-544a50ecd806",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210945EXMOR"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210945EXMOR",
+      "KXCS2TOTALMAPS-26OCT210945EXMOR",
+      "KXCS2MAP-26OCT210945EXMOR-1",
+      "KXCS2MAP-26OCT210945EXMOR-2"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021839C6C36"
+    },
+    "start_date": "2026-10-21T11:00:00Z",
+    "title": "ex-6666 vs MORROW",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "d6613332-e6e2-44ff-a781-838d64d66f1c",
+      "game": "CS2",
+      "home_competitor_id": "07effdab-875e-4e5c-8040-ed6d20699b88",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT220945QUIRYV",
+      "season_type": "CCT Europe",
+      "season_week": "playoffs",
+      "season_year": "Challengers Series 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT Europe Challengers Series 2026"
+    },
+    "id": "2d771912-1fb0-439c-ae5c-d4fba5c1482b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT220945QUIRYV"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT220945QUIRYV",
+      "KXCS2MAP-26OCT220945QUIRYV-1",
+      "KXCS2MAP-26OCT220945QUIRYV-2",
+      "KXCS2TOTALMAPS-26OCT220945QUIRYV"
+    ],
+    "source_ids": {
+      "source_2_id": "20261022F3AED756"
+    },
+    "start_date": "2026-10-22T13:45:00Z",
+    "title": "Quintessence vs Ryvex",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "7ede8667-d77e-4bf9-b277-01a58fef3538",
+      "game": "CS2",
+      "home_competitor_id": "55b094c1-5bd1-47ac-959a-392ecd03a2ec",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210200EVOEACES",
+      "season_type": "CIS LAN Championship",
+      "season_week": "group b",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "CIS LAN Championship 2026"
+    },
+    "id": "02aa58af-ee02-4d37-82ea-87f4b42dee03",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210200EVOEACES"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210200EVOEACES",
+      "KXCS2TOTALMAPS-26OCT210200EVOEACES",
+      "KXCS2MAP-26OCT210200EVOEACES-1",
+      "KXCS2MAP-26OCT210200EVOEACES-2"
+    ],
+    "source_ids": {
+      "source_2_id": "202610211830AC44"
+    },
+    "start_date": "2026-10-21T06:00:00Z",
+    "title": "EVO Elite vs Team ACES",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "049021cf-7c64-4927-8341-6751422dde43",
+      "game": "CS2",
+      "home_competitor_id": "1846d4b2-033d-42f9-86b0-70f44a972c42",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211000LARGAPAIN",
+      "season_type": "Circuit X",
+      "season_week": "group a",
+      "season_year": "Curitiba 2026",
+      "status": "unplayed",
+      "tournament_name": "Circuit X Curitiba 2026"
+    },
+    "id": "a880c4fe-ea00-413d-ab57-668adb3b58bd",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211000LARGAPAIN",
+      "KXCS2SPREAD-26OCT211000LARGAPAIN"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211000LARGAPAIN",
+      "KXCS2MAP-26OCT211000LARGAPAIN-1",
+      "KXCS2MAP-26OCT211000LARGAPAIN-2",
+      "KXCS2TOTALMAPS-26OCT211000LARGAPAIN",
+      "KXCS2SPREAD-26OCT211000LARGAPAIN"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021D7499D7E"
+    },
+    "start_date": "2026-10-21T14:00:00Z",
+    "title": "largadosypelados vs paiN",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
@@ -1255,41 +794,43 @@
     "start_date": "2026-10-21T14:00:00Z",
     "title": "Spirit Academy vs Lavked",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "135af41c-2dc2-4ab8-b50c-70c52d89cdc2",
+      "away_competitor_id": "791cf1a2-d1e2-4744-8a35-f06df3ba28be",
       "game": "CS2",
-      "home_competitor_id": "4fb64ebf-34ae-4763-8a7a-5de561949c84",
+      "home_competitor_id": "3fae11b4-7c8b-483c-87b0-e0c660585bc9",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT211000UNKBTF",
-      "season_type": "NODWIN Clutch Series",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211300SSINSWAL",
+      "season_type": "CCT Europe",
       "season_week": "group stage",
-      "season_year": "2026",
+      "season_year": "Series #12 2026",
       "status": "unplayed",
-      "tournament_name": "NODWIN Clutch Series 2026"
+      "tournament_name": "CCT Europe Series #12 2026"
     },
-    "id": "23c209e7-1f41-4465-b9ca-490ad2e1a83e",
+    "id": "44df3550-425e-4322-b8c8-a739e95088ca",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT211000UNKBTF"
+      "KXCS2GAME-26OCT211300SSINSWAL",
+      "KXCS2SPREAD-26OCT211300SSINSWAL"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT211000UNKBTF",
-      "KXCS2MAP-26OCT211000UNKBTF-1",
-      "KXCS2MAP-26OCT211000UNKBTF-2",
-      "KXCS2TOTALMAPS-26OCT211000UNKBTF"
+      "KXCS2GAME-26OCT211300SSINSWAL",
+      "KXCS2SPREAD-26OCT211300SSINSWAL",
+      "KXCS2MAP-26OCT211300SSINSWAL-1",
+      "KXCS2MAP-26OCT211300SSINSWAL-2",
+      "KXCS2TOTALMAPS-26OCT211300SSINSWAL"
     ],
     "source_ids": {
-      "source_2_id": "20261021CE6CB0B8"
+      "source_2_id": "2026102107DF362E"
     },
-    "start_date": "2026-10-21T14:00:00Z",
-    "title": "33 vs Butterfly",
+    "start_date": "2026-10-21T17:00:00Z",
+    "title": "Saint Sinners vs Walczaki",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
@@ -1323,75 +864,143 @@
     "start_date": "2026-10-21T08:00:00Z",
     "title": "ex-6666 vs Brute",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "8b1d1c3b-257d-495f-bfcc-e7c625afff09",
+      "away_competitor_id": "fc872c8a-005a-4592-ae2a-e8421c5435ec",
       "game": "CS2",
-      "home_competitor_id": "cef5f2a6-308a-4493-9230-21422125eb9d",
+      "home_competitor_id": "cb20625d-db0b-435c-8ce5-e38d8a5eed3f",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT211000TTGXI",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210700PGFAL",
+      "season_type": "CCT Europe",
+      "season_week": "playoffs",
+      "season_year": "Challengers Series 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT Europe Challengers Series 2026"
+    },
+    "id": "956e063f-25d4-46e9-9d0d-ee1bff8c2d63",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210700PGFAL"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210700PGFAL",
+      "KXCS2MAP-26OCT210700PGFAL-1",
+      "KXCS2MAP-26OCT210700PGFAL-2",
+      "KXCS2TOTALMAPS-26OCT210700PGFAL"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102160C7F4B7"
+    },
+    "start_date": "2026-10-21T13:45:00Z",
+    "title": "Privateer Gaming vs Falcons Force",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "e2d4d429-77a7-4e67-b85a-7bcca3b73107",
+      "game": "CS2",
+      "home_competitor_id": "8291c717-d46c-4cea-b7e0-7a7274673fbd",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211400DUCKSBIGA",
+      "season_type": "DACH CS Masters",
+      "season_week": "regular season",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "DACH CS Masters 2026"
+    },
+    "id": "a14951d3-029f-4ef0-961b-0bd48c604c70",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211400DUCKSBIGA"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211400DUCKSBIGA",
+      "KXCS2TOTALMAPS-26OCT211400DUCKSBIGA",
+      "KXCS2MAP-26OCT211400DUCKSBIGA-1",
+      "KXCS2MAP-26OCT211400DUCKSBIGA-2"
+    ],
+    "source_ids": {
+      "source_2_id": "202610216B98C489"
+    },
+    "start_date": "2026-10-21T18:00:00Z",
+    "title": "Playing Ducks vs BIG Academy",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "7fe9440b-3317-48fc-8066-575bca539efa",
+      "game": "CS2",
+      "home_competitor_id": "e0202eb9-725b-4048-ade3-352a6fe2e6b7",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT231300REVRGG",
       "season_type": "Exort Fiesta",
-      "season_week": "group c",
+      "season_week": "group b",
       "season_year": "Closed Qualifier: Series #3 2026",
       "status": "unplayed",
       "tournament_name": "Exort Fiesta Closed Qualifier: Series #3 2026"
     },
-    "id": "677a7a66-a05b-4b55-82db-90c5e48a0077",
+    "id": "3d9c03dd-404e-45c4-a835-fe2e84882fc4",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT211000TTGXI"
+      "KXCS2GAME-26OCT231300REVRGG"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT211000TTGXI",
-      "KXCS2MAP-26OCT211000TTGXI-1",
-      "KXCS2MAP-26OCT211000TTGXI-2",
-      "KXCS2TOTALMAPS-26OCT211000TTGXI"
+      "KXCS2GAME-26OCT231300REVRGG",
+      "KXCS2MAP-26OCT231300REVRGG-1",
+      "KXCS2MAP-26OCT231300REVRGG-2",
+      "KXCS2TOTALMAPS-26OCT231300REVRGG"
     ],
     "source_ids": {
-      "source_2_id": "20261021F41911F9"
+      "source_2_id": "202610237B9A0FFD"
     },
-    "start_date": "2026-10-21T14:00:00Z",
-    "title": "TTG Esports vs XI Esport",
+    "start_date": "2026-10-23T17:00:00Z",
+    "title": "Revise vs RoundsGG",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "2467e597-c6a5-4e23-8a12-992974f98127",
+      "away_competitor_id": "10714089-51fb-46d6-84c4-eeef4d09f1cd",
       "game": "CS2",
-      "home_competitor_id": "10890ef2-f663-4392-a636-acb64d3988a5",
+      "home_competitor_id": "eda59ed7-796e-4bcc-9f6b-35109ddee233",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT221000TDPIMP",
-      "season_type": "Circuit X",
-      "season_week": "group b",
-      "season_year": "Curitiba 2026",
+      "main_game_event_ticker": "KXCS2GAME-26OCT191400BLUENT",
+      "season_type": "DACH CS Masters",
+      "season_week": "regular season",
+      "season_year": "2026",
       "status": "unplayed",
-      "tournament_name": "Circuit X Curitiba 2026"
+      "tournament_name": "DACH CS Masters 2026"
     },
-    "id": "a3c09301-65d4-403e-98e3-6518f01f9a10",
+    "id": "14eaa55e-ce0d-4ffb-b967-dcc77e3a6114",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT221000TDPIMP"
+      "KXCS2GAME-26OCT191400BLUENT"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT221000TDPIMP",
-      "KXCS2MAP-26OCT221000TDPIMP-1",
-      "KXCS2MAP-26OCT221000TDPIMP-2",
-      "KXCS2TOTALMAPS-26OCT221000TDPIMP"
+      "KXCS2GAME-26OCT191400BLUENT",
+      "KXCS2TOTALMAPS-26OCT191400BLUENT",
+      "KXCS2MAP-26OCT191400BLUENT-1",
+      "KXCS2MAP-26OCT191400BLUENT-2"
     ],
     "source_ids": {
-      "source_2_id": "20261022AEFC24B8"
+      "source_2_id": "20261019C546E01C"
     },
-    "start_date": "2026-10-22T14:00:00Z",
-    "title": "Turma do Pagode vs Imperial",
+    "start_date": "2026-10-21T16:00:00Z",
+    "title": "BLUEJAYS.de vs Entropy",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
@@ -1427,347 +1036,183 @@
     "start_date": "2026-10-21T08:00:00Z",
     "title": "Sokerorg vs BakS eSports",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "895176c1-a2cb-4c4c-b831-4b5d14759fdd",
+      "away_competitor_id": "2467e597-c6a5-4e23-8a12-992974f98127",
       "game": "CS2",
-      "home_competitor_id": "84c3e40a-29b3-4300-9e5f-0c9bf420ee02",
+      "home_competitor_id": "10890ef2-f663-4392-a636-acb64d3988a5",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210300LVGRA",
-      "season_type": "VOID Autumn Cup",
+      "main_game_event_ticker": "KXCS2GAME-26OCT221000TDPIMP",
+      "season_type": "Circuit X",
+      "season_week": "group b",
+      "season_year": "Curitiba 2026",
+      "status": "unplayed",
+      "tournament_name": "Circuit X Curitiba 2026"
+    },
+    "id": "a3c09301-65d4-403e-98e3-6518f01f9a10",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT221000TDPIMP"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT221000TDPIMP",
+      "KXCS2MAP-26OCT221000TDPIMP-1",
+      "KXCS2MAP-26OCT221000TDPIMP-2",
+      "KXCS2TOTALMAPS-26OCT221000TDPIMP"
+    ],
+    "source_ids": {
+      "source_2_id": "20261022AEFC24B8"
+    },
+    "start_date": "2026-10-22T14:00:00Z",
+    "title": "Turma do Pagode vs Imperial",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "76508106-0504-44bd-84a0-fd2170f88493",
+      "game": "CS2",
+      "home_competitor_id": "ab42bd06-71a6-4775-bf06-96ff586cf834",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211000ILLG2A",
+      "season_type": "CCT Europe",
+      "season_week": "group stage",
+      "season_year": "Series #11 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT Europe Series #11 2026"
+    },
+    "id": "543a0e3b-61bc-450c-bdb7-bb46a6c0423a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211000ILLG2A",
+      "KXCS2SPREAD-26OCT211000ILLG2A"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211000ILLG2A",
+      "KXCS2MAP-26OCT211000ILLG2A-1",
+      "KXCS2MAP-26OCT211000ILLG2A-2",
+      "KXCS2SPREAD-26OCT211000ILLG2A",
+      "KXCS2TOTALMAPS-26OCT211000ILLG2A"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102127003BA5"
+    },
+    "start_date": "2026-10-21T14:00:00Z",
+    "title": "ILLYRIANS vs G2 Ares",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "806c42bc-8033-4c87-a6e3-22e622021ea9",
+      "game": "CS2",
+      "home_competitor_id": "ff9567a1-9363-4029-82af-7c7c200a2a90",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT2109004MMEL",
+      "season_type": "ESL Challenger League",
+      "season_week": "group b",
+      "season_year": "Europe Cup #9 2026",
+      "status": "unplayed",
+      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
+    },
+    "id": "336f1073-bf8c-468b-ab50-045def7efa4c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT2109004MMEL",
+      "KXCS2SPREAD-26OCT2109004MMEL"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT2109004MMEL",
+      "KXCS2MAP-26OCT2109004MMEL-1",
+      "KXCS2MAP-26OCT2109004MMEL-2",
+      "KXCS2TOTALMAPS-26OCT2109004MMEL",
+      "KXCS2SPREAD-26OCT2109004MMEL"
+    ],
+    "source_ids": {
+      "source_2_id": "202610215621B74A"
+    },
+    "start_date": "2026-10-21T13:00:00Z",
+    "title": "Four Magic vs mellren",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "135af41c-2dc2-4ab8-b50c-70c52d89cdc2",
+      "game": "CS2",
+      "home_competitor_id": "4fb64ebf-34ae-4763-8a7a-5de561949c84",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211000UNKBTF",
+      "season_type": "NODWIN Clutch Series",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "NODWIN Clutch Series 2026"
+    },
+    "id": "23c209e7-1f41-4465-b9ca-490ad2e1a83e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211000UNKBTF"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211000UNKBTF",
+      "KXCS2MAP-26OCT211000UNKBTF-1",
+      "KXCS2MAP-26OCT211000UNKBTF-2",
+      "KXCS2TOTALMAPS-26OCT211000UNKBTF"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021CE6CB0B8"
+    },
+    "start_date": "2026-10-21T14:00:00Z",
+    "title": "33 vs Butterfly",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "6b9c41fb-e31e-4314-a291-d43a1be9c653",
+      "game": "CS2",
+      "home_competitor_id": "7ab5f483-c42a-45c1-bbf6-edee545ce6eb",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211100PRVBIG",
+      "season_type": "1win Private Club",
       "season_week": "playoffs",
       "season_year": "2026",
       "status": "unplayed",
-      "tournament_name": "VOID Autumn Cup 2026"
+      "tournament_name": "1win Private Club 2026"
     },
-    "id": "014372be-a07a-48cc-a575-80e545cdeab2",
+    "id": "d40015e5-8b17-470a-ba4c-f71d4dd71573",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT210300LVGRA"
+      "KXCS2GAME-26OCT211100PRVBIG",
+      "KXCS2SPREAD-26OCT211100PRVBIG"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT210300LVGRA",
-      "KXCS2MAP-26OCT210300LVGRA-1",
-      "KXCS2MAP-26OCT210300LVGRA-2",
-      "KXCS2TOTALMAPS-26OCT210300LVGRA"
+      "KXCS2GAME-26OCT211100PRVBIG",
+      "KXCS2SPREAD-26OCT211100PRVBIG",
+      "KXCS2MAP-26OCT211100PRVBIG-1",
+      "KXCS2MAP-26OCT211100PRVBIG-2",
+      "KXCS2TOTALMAPS-26OCT211100PRVBIG"
     ],
     "source_ids": {
-      "source_2_id": "202610211EF731D8"
-    },
-    "start_date": "2026-10-21T07:00:00Z",
-    "title": "Lynn Vision vs Rare Atom",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "e49d7c26-c41c-4d20-8303-260781a06729",
-      "game": "CS2",
-      "home_competitor_id": "de6b6a03-8f7e-4510-a444-1c30a849beb5",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT211100TFUPG",
-      "season_type": "CIS LAN Championship",
-      "season_week": "group c",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "CIS LAN Championship 2026"
-    },
-    "id": "0def4acc-65d9-4068-889f-a32e54685e8f",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT211100TFUPG"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT211100TFUPG",
-      "KXCS2TOTALMAPS-26OCT211100TFUPG",
-      "KXCS2MAP-26OCT211100TFUPG-1",
-      "KXCS2MAP-26OCT211100TFUPG-2"
-    ],
-    "source_ids": {
-      "source_2_id": "202610216E21332D"
+      "source_2_id": "20261021472EC57E"
     },
     "start_date": "2026-10-21T15:00:00Z",
-    "title": "Team flacons vs UPGRADE",
+    "title": "PARIVISION vs BIG",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "cb9cb62d-4be7-4373-84ed-94cd8085d463",
-      "game": "CS2",
-      "home_competitor_id": "a53d5069-824c-4f7e-881a-6cf7fd79aa85",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT211300AGRDNK",
-      "season_type": "Exort Fiesta",
-      "season_week": "group d",
-      "season_year": "Closed Qualifier: Series #3 2026",
-      "status": "unplayed",
-      "tournament_name": "Exort Fiesta Closed Qualifier: Series #3 2026"
-    },
-    "id": "dd45923a-330f-4fd0-a6a2-73641766cd68",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT211300AGRDNK"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT211300AGRDNK",
-      "KXCS2MAP-26OCT211300AGRDNK-1",
-      "KXCS2MAP-26OCT211300AGRDNK-2",
-      "KXCS2TOTALMAPS-26OCT211300AGRDNK"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021ED721B89"
-    },
-    "start_date": "2026-10-21T17:00:00Z",
-    "title": "A Great Chaos vs DNK",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "2f94e4c7-68b2-4aa2-a045-99f0a76d4946",
-      "game": "CS2",
-      "home_competitor_id": "6a3b7128-6d53-4ad1-980b-9dafde3c2247",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT220630EKREV",
-      "season_type": "United21",
-      "season_week": "group d",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "United21 2026"
-    },
-    "id": "b1660cec-e341-489a-8110-901a646075c5",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT220630EKREV"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT220630EKREV",
-      "KXCS2MAP-26OCT220630EKREV-1",
-      "KXCS2MAP-26OCT220630EKREV-2",
-      "KXCS2TOTALMAPS-26OCT220630EKREV"
-    ],
-    "source_ids": {
-      "source_2_id": "20261022F2B0DD0D"
-    },
-    "start_date": "2026-10-22T10:30:00Z",
-    "title": "Elite Klan vs Revenge",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "d6613332-e6e2-44ff-a781-838d64d66f1c",
-      "game": "CS2",
-      "home_competitor_id": "07effdab-875e-4e5c-8040-ed6d20699b88",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT220945QUIRYV",
-      "season_type": "CCT Europe",
-      "season_week": "playoffs",
-      "season_year": "Challengers Series 2026",
-      "status": "unplayed",
-      "tournament_name": "CCT Europe Challengers Series 2026"
-    },
-    "id": "2d771912-1fb0-439c-ae5c-d4fba5c1482b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT220945QUIRYV"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT220945QUIRYV",
-      "KXCS2MAP-26OCT220945QUIRYV-1",
-      "KXCS2MAP-26OCT220945QUIRYV-2",
-      "KXCS2TOTALMAPS-26OCT220945QUIRYV"
-    ],
-    "source_ids": {
-      "source_2_id": "20261022F3AED756"
-    },
-    "start_date": "2026-10-22T13:45:00Z",
-    "title": "Quintessence vs Ryvex",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "82c08088-99d1-45f5-bab8-81884c04a463",
-      "game": "CS2",
-      "home_competitor_id": "bd63ca9c-02d2-41d1-afcb-8608f0ae4cb7",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT201300DMDUC",
-      "season_type": "Exort Fiesta",
-      "season_week": "group a",
-      "season_year": "Closed Qualifier: Series #3 2026",
-      "status": "delayed",
-      "tournament_name": "Exort Fiesta Closed Qualifier: Series #3 2026"
-    },
-    "id": "24773b96-0e07-485b-936c-1451f47a9347",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT201300DMDUC"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT201300DMDUC",
-      "KXCS2MAP-26OCT201300DMDUC-1",
-      "KXCS2MAP-26OCT201300DMDUC-2",
-      "KXCS2TOTALMAPS-26OCT201300DMDUC"
-    ],
-    "source_ids": {
-      "source_2_id": "202610200112ECD2"
-    },
-    "start_date": "2026-10-20T17:00:00Z",
-    "title": "Dark Moon vs Ducks",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "cc2f5a8d-88e2-4844-8fbc-20b0e9984d6d",
-      "game": "CS2",
-      "home_competitor_id": "3206f78a-e462-479e-8027-9855d742e8e6",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT202300MORAE",
-      "season_type": "VOID Autumn Cup",
-      "season_week": "playoffs",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "VOID Autumn Cup 2026"
-    },
-    "id": "91ae2ea5-835d-4bc9-b8c3-b16840c13c08",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT202300MORAE"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT202300MORAE",
-      "KXCS2MAP-26OCT202300MORAE-1",
-      "KXCS2MAP-26OCT202300MORAE-2",
-      "KXCS2TOTALMAPS-26OCT202300MORAE"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021972C0C52"
-    },
-    "start_date": "2026-10-21T03:00:00Z",
-    "title": "Morningstar vs Alter Ego",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "2b2fa58b-e5ca-4e86-8f21-5609ba600633",
-      "game": "CS2",
-      "home_competitor_id": "725049f9-7a02-49db-a1fb-bf2e88a86381",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210500NEXCW",
-      "season_type": "VOID Autumn Cup",
-      "season_week": "playoffs",
-      "season_year": "2026",
-      "status": "unplayed",
-      "tournament_name": "VOID Autumn Cup 2026"
-    },
-    "id": "e3a6a79a-c944-43dc-8bb1-6912cc4a09f9",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210500NEXCW"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210500NEXCW",
-      "KXCS2MAP-26OCT210500NEXCW-1",
-      "KXCS2MAP-26OCT210500NEXCW-2",
-      "KXCS2TOTALMAPS-26OCT210500NEXCW"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102171F1F3BC"
-    },
-    "start_date": "2026-10-21T09:00:00Z",
-    "title": "NEXVOID vs Chinggis Warriors",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "fc872c8a-005a-4592-ae2a-e8421c5435ec",
-      "game": "CS2",
-      "home_competitor_id": "cb20625d-db0b-435c-8ce5-e38d8a5eed3f",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210700PGFAL",
-      "season_type": "CCT Europe",
-      "season_week": "playoffs",
-      "season_year": "Challengers Series 2026",
-      "status": "unplayed",
-      "tournament_name": "CCT Europe Challengers Series 2026"
-    },
-    "id": "956e063f-25d4-46e9-9d0d-ee1bff8c2d63",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210700PGFAL"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210700PGFAL",
-      "KXCS2MAP-26OCT210700PGFAL-1",
-      "KXCS2MAP-26OCT210700PGFAL-2",
-      "KXCS2TOTALMAPS-26OCT210700PGFAL"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102160C7F4B7"
-    },
-    "start_date": "2026-10-21T13:45:00Z",
-    "title": "Privateer Gaming vs Falcons Force",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
-  },
-  {
-    "category": "Esports",
-    "details": {
-      "away_competitor_id": "3ab5ab59-2f87-45c8-a339-05359a1e436f",
-      "game": "CS2",
-      "home_competitor_id": "5bb9257a-c4ed-4332-9306-b42af7732898",
-      "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210700PHACBBP",
-      "season_type": "CCT Europe",
-      "season_week": "playoffs",
-      "season_year": "Challengers Series 2026",
-      "status": "unplayed",
-      "tournament_name": "CCT Europe Challengers Series 2026"
-    },
-    "id": "fc15ba06-35ce-4c46-9ccf-d0d1bf8c9769",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXCS2GAME-26OCT210700PHACBBP"
-    ],
-    "related_event_tickers": [
-      "KXCS2GAME-26OCT210700PHACBBP",
-      "KXCS2TOTALMAPS-26OCT210700PHACBBP",
-      "KXCS2MAP-26OCT210700PHACBBP-1",
-      "KXCS2MAP-26OCT210700PHACBBP-2"
-    ],
-    "source_ids": {
-      "source_2_id": "202610210DCB1234"
-    },
-    "start_date": "2026-10-21T13:45:00Z",
-    "title": "Phantom Academy vs Bebop",
-    "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
@@ -1803,40 +1248,910 @@
     "start_date": "2026-10-21T13:00:00Z",
     "title": "KUUSAMO.gg vs LPH Gaming",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   },
   {
     "category": "Esports",
     "details": {
-      "away_competitor_id": "997a4ade-980a-4a5a-b8b4-77669aa92108",
+      "away_competitor_id": "3065c094-5a99-4e5e-ac06-851d96a250d0",
       "game": "CS2",
-      "home_competitor_id": "1f4b1935-9e9f-4a35-b1fa-306d35d65687",
+      "home_competitor_id": "279b9c4e-c1aa-4330-913d-9ca8d9578791",
       "league": "CS2",
-      "main_game_event_ticker": "KXCS2GAME-26OCT210945EXMOR",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210800FNCPRIV",
+      "season_type": "1win Private Club",
+      "season_week": "playoffs",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "1win Private Club 2026"
+    },
+    "id": "35efb396-d878-4ab4-b1b0-7364df490a98",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210800FNCPRIV",
+      "KXCS2SPREAD-26OCT210800FNCPRIV"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210800FNCPRIV",
+      "KXCS2SPREAD-26OCT210800FNCPRIV",
+      "KXCS2MAP-26OCT210800FNCPRIV-1",
+      "KXCS2MAP-26OCT210800FNCPRIV-2",
+      "KXCS2TOTALMAPS-26OCT210800FNCPRIV"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021C58C5E82"
+    },
+    "start_date": "2026-10-21T12:00:00Z",
+    "title": "fnatic vs PRIVATE",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "1b600fcb-1d50-4293-9078-1bb514aa5c3c",
+      "game": "CS2",
+      "home_competitor_id": "07c78165-8e6d-4fdb-80dc-6346e968e5e2",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210900SPIWBTA",
+      "season_type": "ESL Challenger League",
+      "season_week": "group c",
+      "season_year": "Europe Cup #9 2026",
+      "status": "unplayed",
+      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
+    },
+    "id": "372fa5db-e8f0-4667-b6dc-67a9ebc78272",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210900SPIWBTA",
+      "KXCS2SPREAD-26OCT210900SPIWBTA"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210900SPIWBTA",
+      "KXCS2TOTALMAPS-26OCT210900SPIWBTA",
+      "KXCS2MAP-26OCT210900SPIWBTA-1",
+      "KXCS2MAP-26OCT210900SPIWBTA-2",
+      "KXCS2SPREAD-26OCT210900SPIWBTA"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021EBA7203D"
+    },
+    "start_date": "2026-10-21T13:00:00Z",
+    "title": "Spirit Academy Green vs WBT Academy",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "8b1d1c3b-257d-495f-bfcc-e7c625afff09",
+      "game": "CS2",
+      "home_competitor_id": "cef5f2a6-308a-4493-9230-21422125eb9d",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211000TTGXI",
+      "season_type": "Exort Fiesta",
+      "season_week": "group c",
+      "season_year": "Closed Qualifier: Series #3 2026",
+      "status": "unplayed",
+      "tournament_name": "Exort Fiesta Closed Qualifier: Series #3 2026"
+    },
+    "id": "677a7a66-a05b-4b55-82db-90c5e48a0077",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211000TTGXI"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211000TTGXI",
+      "KXCS2MAP-26OCT211000TTGXI-1",
+      "KXCS2MAP-26OCT211000TTGXI-2",
+      "KXCS2TOTALMAPS-26OCT211000TTGXI"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021F41911F9"
+    },
+    "start_date": "2026-10-21T14:00:00Z",
+    "title": "TTG Esports vs XI Esport",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "22d1c913-5cd9-4861-999a-8864542bcfdf",
+      "game": "CS2",
+      "home_competitor_id": "937690bb-0a88-4080-a102-e76cbc27e902",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211100BLICS",
+      "season_type": "CIS LAN Championship",
+      "season_week": "group c",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "CIS LAN Championship 2026"
+    },
+    "id": "f19aeff0-68fb-403e-94a8-db00ad896985",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211100BLICS"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211100BLICS",
+      "KXCS2TOTALMAPS-26OCT211100BLICS",
+      "KXCS2MAP-26OCT211100BLICS-1",
+      "KXCS2MAP-26OCT211100BLICS-2"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102122839B22"
+    },
+    "start_date": "2026-10-21T15:00:00Z",
+    "title": "BlinkDagger vs CYBERSHOKE Esports",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "deb112c4-5a51-4779-a704-ce79ad45a954",
+      "game": "CS2",
+      "home_competitor_id": "1a66c76d-0f36-4370-963f-e5a2b0a2e378",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211200MARJDT",
+      "season_type": "CCT South America",
+      "season_week": "group stage",
+      "season_year": "Series 7 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT South America Series 7 2026"
+    },
+    "id": "52e1e7b1-f344-4ca8-8843-e57b66df0165",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211200MARJDT"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211200MARJDT",
+      "KXCS2MAP-26OCT211200MARJDT-1",
+      "KXCS2MAP-26OCT211200MARJDT-2",
+      "KXCS2TOTALMAPS-26OCT211200MARJDT"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102113D9C5A3"
+    },
+    "start_date": "2026-10-21T16:00:00Z",
+    "title": "Martians vs Joga de terno",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "2f94e4c7-68b2-4aa2-a045-99f0a76d4946",
+      "game": "CS2",
+      "home_competitor_id": "6a3b7128-6d53-4ad1-980b-9dafde3c2247",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT220630EKREV",
+      "season_type": "United21",
+      "season_week": "group d",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "United21 2026"
+    },
+    "id": "b1660cec-e341-489a-8110-901a646075c5",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT220630EKREV"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT220630EKREV",
+      "KXCS2MAP-26OCT220630EKREV-1",
+      "KXCS2MAP-26OCT220630EKREV-2",
+      "KXCS2TOTALMAPS-26OCT220630EKREV"
+    ],
+    "source_ids": {
+      "source_2_id": "20261022F2B0DD0D"
+    },
+    "start_date": "2026-10-22T10:30:00Z",
+    "title": "Elite Klan vs Revenge",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "54aede08-0af3-4feb-944f-467430436ff7",
+      "game": "CS2",
+      "home_competitor_id": "abad0f86-ca0a-43f5-9568-312ae29a4cc9",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210700HAVUINN",
+      "season_type": "CCT Europe",
+      "season_week": "group stage",
+      "season_year": "Series #12 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT Europe Series #12 2026"
+    },
+    "id": "d02a17fd-2be9-4f49-aa4f-e781c8a9fdda",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210700HAVUINN",
+      "KXCS2SPREAD-26OCT210700HAVUINN"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210700HAVUINN",
+      "KXCS2MAP-26OCT210700HAVUINN-1",
+      "KXCS2MAP-26OCT210700HAVUINN-2",
+      "KXCS2TOTALMAPS-26OCT210700HAVUINN",
+      "KXCS2SPREAD-26OCT210700HAVUINN"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102183FE34CB"
+    },
+    "start_date": "2026-10-21T11:00:00Z",
+    "title": "HAVU vs Inner Circle Academy",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "df249575-0b67-4506-8963-d43c89a75a72",
+      "game": "CS2",
+      "home_competitor_id": "6624e300-41f0-44a3-b5e5-8681688f562b",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211500HACDAM",
+      "season_type": "CCT South America",
+      "season_week": "group stage",
+      "season_year": "Series 7 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT South America Series 7 2026"
+    },
+    "id": "061800c6-fbf3-4b4f-a128-72f821f8a49a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211500HACDAM"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211500HACDAM",
+      "KXCS2MAP-26OCT211500HACDAM-1",
+      "KXCS2MAP-26OCT211500HACDAM-2",
+      "KXCS2TOTALMAPS-26OCT211500HACDAM"
+    ],
+    "source_ids": {
+      "source_2_id": "202610213C605AAA"
+    },
+    "start_date": "2026-10-21T19:00:00Z",
+    "title": "Hacha Esports vs Damajuana",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "f37f81a3-754f-4c94-b802-f8540f0e47ee",
+      "game": "CS2",
+      "home_competitor_id": "ab17e384-ecd1-4372-942a-1c79f4b8d998",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211800LNALE",
+      "season_type": "CCT South America",
+      "season_week": "group stage",
+      "season_year": "Series 7 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT South America Series 7 2026"
+    },
+    "id": "2a75e2d7-9673-4809-836f-11a7827a05f1",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211800LNALE"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211800LNALE",
+      "KXCS2MAP-26OCT211800LNALE-1",
+      "KXCS2MAP-26OCT211800LNALE-2",
+      "KXCS2TOTALMAPS-26OCT211800LNALE"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021F9104D43"
+    },
+    "start_date": "2026-10-21T22:00:00Z",
+    "title": "Los Ninos vs Alianza Lima Esports",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "df4a6df0-1ef0-417e-add0-96116a674e9e",
+      "game": "CS2",
+      "home_competitor_id": "df3beb4a-3cf2-41ed-aa32-49979f9ea73e",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210700HEROSIN",
+      "season_type": "DraculaN",
+      "season_week": "playoffs",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "DraculaN 2026"
+    },
+    "id": "c79b460e-4694-413f-a9b3-ac855bfb3a3c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210700HEROSIN"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210700HEROSIN",
+      "KXCS2MAP-26OCT210700HEROSIN-1",
+      "KXCS2MAP-26OCT210700HEROSIN-2",
+      "KXCS2TOTALMAPS-26OCT210700HEROSIN"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102143B1B2EB"
+    },
+    "start_date": "2026-10-21T11:00:00Z",
+    "title": "Heroic vs Sinners",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "ccba786a-f498-41e2-97c3-a920cf5142da",
+      "game": "CS2",
+      "home_competitor_id": "bd63ca9c-02d2-41d1-afcb-8608f0ae4cb7",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210900DMG1",
+      "season_type": "ESL Challenger League",
+      "season_week": "group a",
+      "season_year": "Europe Cup #9 2026",
+      "status": "unplayed",
+      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
+    },
+    "id": "0602cdc8-3074-4eae-bb05-8d3d940ba960",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210900DMG1",
+      "KXCS2SPREAD-26OCT210900DMG1"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210900DMG1",
+      "KXCS2MAP-26OCT210900DMG1-1",
+      "KXCS2MAP-26OCT210900DMG1-2",
+      "KXCS2TOTALMAPS-26OCT210900DMG1",
+      "KXCS2SPREAD-26OCT210900DMG1"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102125ECFC61"
+    },
+    "start_date": "2026-10-21T13:00:00Z",
+    "title": "Dark Moon vs GenOne",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "cb9cb62d-4be7-4373-84ed-94cd8085d463",
+      "game": "CS2",
+      "home_competitor_id": "a53d5069-824c-4f7e-881a-6cf7fd79aa85",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211300AGRDNK",
+      "season_type": "Exort Fiesta",
+      "season_week": "group d",
+      "season_year": "Closed Qualifier: Series #3 2026",
+      "status": "unplayed",
+      "tournament_name": "Exort Fiesta Closed Qualifier: Series #3 2026"
+    },
+    "id": "dd45923a-330f-4fd0-a6a2-73641766cd68",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211300AGRDNK"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211300AGRDNK",
+      "KXCS2MAP-26OCT211300AGRDNK-1",
+      "KXCS2MAP-26OCT211300AGRDNK-2",
+      "KXCS2TOTALMAPS-26OCT211300AGRDNK"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021ED721B89"
+    },
+    "start_date": "2026-10-21T17:00:00Z",
+    "title": "A Great Chaos vs DNK",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "895176c1-a2cb-4c4c-b831-4b5d14759fdd",
+      "game": "CS2",
+      "home_competitor_id": "84c3e40a-29b3-4300-9e5f-0c9bf420ee02",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210300LVGRA",
+      "season_type": "VOID Autumn Cup",
+      "season_week": "playoffs",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "VOID Autumn Cup 2026"
+    },
+    "id": "014372be-a07a-48cc-a575-80e545cdeab2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210300LVGRA"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210300LVGRA",
+      "KXCS2MAP-26OCT210300LVGRA-1",
+      "KXCS2MAP-26OCT210300LVGRA-2",
+      "KXCS2TOTALMAPS-26OCT210300LVGRA"
+    ],
+    "source_ids": {
+      "source_2_id": "202610211EF731D8"
+    },
+    "start_date": "2026-10-21T07:00:00Z",
+    "title": "Lynn Vision vs Rare Atom",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "5cc1414e-0895-4c54-80c8-ce16597a0791",
+      "game": "CS2",
+      "home_competitor_id": "ef50b2d9-ead3-40a0-9eb3-b6983d508404",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210700NXSBCG",
+      "season_type": "DraculaN",
+      "season_week": "playoffs",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "DraculaN 2026"
+    },
+    "id": "129da2d2-9f98-4efd-ac94-7c771933f33a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210700NXSBCG",
+      "KXCS2SPREAD-26OCT210700NXSBCG"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210700NXSBCG",
+      "KXCS2TOTALMAPS-26OCT210700NXSBCG",
+      "KXCS2SPREAD-26OCT210700NXSBCG",
+      "KXCS2MAP-26OCT210700NXSBCG-1",
+      "KXCS2MAP-26OCT210700NXSBCG-2"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021C62BA3A4"
+    },
+    "start_date": "2026-10-21T11:00:00Z",
+    "title": "Nexus vs BC.Game Esports",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "921884a5-e261-41f5-a20b-5e787d38363c",
+      "game": "CS2",
+      "home_competitor_id": "f756ad6d-a10f-476e-be4d-f070be591faf",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210900KAMVEX",
+      "season_type": "ESL Challenger League",
+      "season_week": "group d",
+      "season_year": "Europe Cup #9 2026",
+      "status": "unplayed",
+      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
+    },
+    "id": "197956ad-19df-49e1-bc32-da5b51bce6a7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210900KAMVEX",
+      "KXCS2SPREAD-26OCT210900KAMVEX"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210900KAMVEX",
+      "KXCS2TOTALMAPS-26OCT210900KAMVEX",
+      "KXCS2MAP-26OCT210900KAMVEX-1",
+      "KXCS2MAP-26OCT210900KAMVEX-2",
+      "KXCS2SPREAD-26OCT210900KAMVEX"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102170B87624"
+    },
+    "start_date": "2026-10-21T13:00:00Z",
+    "title": "KAMUI vs Vexar",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "2b2fa58b-e5ca-4e86-8f21-5609ba600633",
+      "game": "CS2",
+      "home_competitor_id": "725049f9-7a02-49db-a1fb-bf2e88a86381",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210500NEXCW",
+      "season_type": "VOID Autumn Cup",
+      "season_week": "playoffs",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "VOID Autumn Cup 2026"
+    },
+    "id": "e3a6a79a-c944-43dc-8bb1-6912cc4a09f9",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210500NEXCW"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210500NEXCW",
+      "KXCS2MAP-26OCT210500NEXCW-1",
+      "KXCS2MAP-26OCT210500NEXCW-2",
+      "KXCS2TOTALMAPS-26OCT210500NEXCW"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102171F1F3BC"
+    },
+    "start_date": "2026-10-21T09:00:00Z",
+    "title": "NEXVOID vs Chinggis Warriors",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "385900cf-5da8-42c8-8eb3-7e04b10e08d4",
+      "game": "CS2",
+      "home_competitor_id": "6fee536a-4fa0-4b65-b175-587b556246d4",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210630CTR9INEA",
+      "season_type": "United21",
+      "season_week": "group c",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "United21 2026"
+    },
+    "id": "9be063c4-fa58-4bbb-9004-82ed2c67d00c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210630CTR9INEA"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210630CTR9INEA",
+      "KXCS2TOTALMAPS-26OCT210630CTR9INEA",
+      "KXCS2MAP-26OCT210630CTR9INEA-1",
+      "KXCS2MAP-26OCT210630CTR9INEA-2"
+    ],
+    "source_ids": {
+      "source_2_id": "202610214E42F90C"
+    },
+    "start_date": "2026-10-21T10:30:00Z",
+    "title": "CTRL Esports vs 9INE Academy",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "dddf32fa-c055-4a48-8851-4e581e282b2c",
+      "game": "CS2",
+      "home_competitor_id": "86e33ac8-3666-4c6a-826d-017c869a15a8",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210700FIREJUS",
+      "season_type": "NODWIN Clutch Series",
+      "season_week": "group stage",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "NODWIN Clutch Series 2026"
+    },
+    "id": "de52ee3a-0935-45a7-9219-e7c0db56315a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210700FIREJUS"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210700FIREJUS",
+      "KXCS2MAP-26OCT210700FIREJUS-1",
+      "KXCS2MAP-26OCT210700FIREJUS-2",
+      "KXCS2TOTALMAPS-26OCT210700FIREJUS"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021DFC335F3"
+    },
+    "start_date": "2026-10-21T11:00:00Z",
+    "title": "Fire Flux Esports vs Just_Players",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "3ab5ab59-2f87-45c8-a339-05359a1e436f",
+      "game": "CS2",
+      "home_competitor_id": "5bb9257a-c4ed-4332-9306-b42af7732898",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210700PHACBBP",
       "season_type": "CCT Europe",
       "season_week": "playoffs",
       "season_year": "Challengers Series 2026",
       "status": "unplayed",
       "tournament_name": "CCT Europe Challengers Series 2026"
     },
-    "id": "373d8ade-32a8-44db-b4c0-544a50ecd806",
+    "id": "fc15ba06-35ce-4c46-9ccf-d0d1bf8c9769",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXCS2GAME-26OCT210945EXMOR"
+      "KXCS2GAME-26OCT210700PHACBBP"
     ],
     "related_event_tickers": [
-      "KXCS2GAME-26OCT210945EXMOR",
-      "KXCS2TOTALMAPS-26OCT210945EXMOR",
-      "KXCS2MAP-26OCT210945EXMOR-1",
-      "KXCS2MAP-26OCT210945EXMOR-2"
+      "KXCS2GAME-26OCT210700PHACBBP",
+      "KXCS2TOTALMAPS-26OCT210700PHACBBP",
+      "KXCS2MAP-26OCT210700PHACBBP-1",
+      "KXCS2MAP-26OCT210700PHACBBP-2"
     ],
     "source_ids": {
-      "source_2_id": "20261021839C6C36"
+      "source_2_id": "202610210DCB1234"
+    },
+    "start_date": "2026-10-21T13:45:00Z",
+    "title": "Phantom Academy vs Bebop",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "997a4ade-980a-4a5a-b8b4-77669aa92108",
+      "game": "CS2",
+      "home_competitor_id": "3fae11b4-7c8b-483c-87b0-e0c660585bc9",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210900SSINSMOR",
+      "season_type": "ESL Challenger League",
+      "season_week": "group a",
+      "season_year": "Europe Cup #9 2026",
+      "status": "unplayed",
+      "tournament_name": "ESL Challenger League Europe Cup #9 2026"
+    },
+    "id": "8ad547cb-8219-4fa2-a4a7-3391828e22fd",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210900SSINSMOR",
+      "KXCS2SPREAD-26OCT210900SSINSMOR"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210900SSINSMOR",
+      "KXCS2MAP-26OCT210900SSINSMOR-1",
+      "KXCS2MAP-26OCT210900SSINSMOR-2",
+      "KXCS2TOTALMAPS-26OCT210900SSINSMOR",
+      "KXCS2SPREAD-26OCT210900SSINSMOR"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102152C9AF56"
+    },
+    "start_date": "2026-10-21T13:00:00Z",
+    "title": "Saint Sinners vs MORROW",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "4eddfb1a-f665-4e78-93ab-31199ae3dedb",
+      "game": "CS2",
+      "home_competitor_id": "92c8d579-10fc-4a7c-b40f-99d2c7624d1e",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210945TITNOI",
+      "season_type": "CCT Europe",
+      "season_week": "playoffs",
+      "season_year": "Challengers Series 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT Europe Challengers Series 2026"
+    },
+    "id": "99ee038a-d257-4fa8-96c7-1cceb1cc07fb",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210945TITNOI"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210945TITNOI",
+      "KXCS2TOTALMAPS-26OCT210945TITNOI",
+      "KXCS2MAP-26OCT210945TITNOI-1",
+      "KXCS2MAP-26OCT210945TITNOI-2"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021C2F820F1"
     },
     "start_date": "2026-10-21T11:00:00Z",
-    "title": "ex-6666 vs MORROW",
+    "title": "TitanFlow vs Noir Verse",
     "type": "esports_match",
-    "_collected_at_utc": "2026-10-20T21:57:16.114+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "03613b24-b607-44fd-8185-197ff09edd40",
+      "game": "CS2",
+      "home_competitor_id": "cfcbb8e0-3080-4a9f-83e6-506066f94774",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211100FOKUNITY",
+      "season_type": "Stake Ranked",
+      "season_week": "playoffs",
+      "season_year": "Episode 6: Closed Qualifier 2026",
+      "status": "unplayed",
+      "tournament_name": "Stake Ranked Episode 6: Closed Qualifier 2026"
+    },
+    "id": "0605045f-1052-4f16-9397-e138c1eeb6ee",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211100FOKUNITY",
+      "KXCS2SPREAD-26OCT211100FOKUNITY"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211100FOKUNITY",
+      "KXCS2MAP-26OCT211100FOKUNITY-1",
+      "KXCS2MAP-26OCT211100FOKUNITY-2",
+      "KXCS2SPREAD-26OCT211100FOKUNITY",
+      "KXCS2TOTALMAPS-26OCT211100FOKUNITY"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102170F10B99"
+    },
+    "start_date": "2026-10-21T09:00:00Z",
+    "title": "FOKUS vs UNiTY esports",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "9e258f00-e21a-4a20-8bb7-4dc9463e0dc8",
+      "game": "CS2",
+      "home_competitor_id": "7ede8667-d77e-4bf9-b277-01a58fef3538",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT211300ACESTLR",
+      "season_type": "CCT Europe",
+      "season_week": "group stage",
+      "season_year": "Series #11 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT Europe Series #11 2026"
+    },
+    "id": "8ce932b0-7feb-4c42-a295-0f39c12eda8e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT211300ACESTLR",
+      "KXCS2SPREAD-26OCT211300ACESTLR"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT211300ACESTLR",
+      "KXCS2MAP-26OCT211300ACESTLR-1",
+      "KXCS2MAP-26OCT211300ACESTLR-2",
+      "KXCS2SPREAD-26OCT211300ACESTLR",
+      "KXCS2TOTALMAPS-26OCT211300ACESTLR"
+    ],
+    "source_ids": {
+      "source_2_id": "202610214F4BA5AB"
+    },
+    "start_date": "2026-10-21T17:00:00Z",
+    "title": "Team ACES vs The Last Resort",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "0beb18d7-c396-446e-933f-a62d17cdb5f1",
+      "game": "CS2",
+      "home_competitor_id": "afb63fe5-491b-497a-be6c-3ba9778e7f89",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT210500SNGBRUTE",
+      "season_type": "Stake Ranked",
+      "season_week": "playoffs",
+      "season_year": "Episode 6: Closed Qualifier 2026",
+      "status": "unplayed",
+      "tournament_name": "Stake Ranked Episode 6: Closed Qualifier 2026"
+    },
+    "id": "20bc1b5d-0a54-4c25-9b9c-432c09a44bfd",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT210500SNGBRUTE",
+      "KXCS2SPREAD-26OCT210500SNGBRUTE"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT210500SNGBRUTE",
+      "KXCS2SPREAD-26OCT210500SNGBRUTE",
+      "KXCS2MAP-26OCT210500SNGBRUTE-1",
+      "KXCS2MAP-26OCT210500SNGBRUTE-2",
+      "KXCS2TOTALMAPS-26OCT210500SNGBRUTE"
+    ],
+    "source_ids": {
+      "source_2_id": "20261021C3598851"
+    },
+    "start_date": "2026-10-21T15:00:00Z",
+    "title": "Sangal vs Brute",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "8c684fac-6f5c-4ad3-8e45-1fe1ec13d51b",
+      "game": "CS2",
+      "home_competitor_id": "2ffdfd0a-52fd-4ddc-a1e5-fd3248144b86",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT220945LKDON",
+      "season_type": "CCT Europe",
+      "season_week": "playoffs",
+      "season_year": "Challengers Series 2026",
+      "status": "unplayed",
+      "tournament_name": "CCT Europe Challengers Series 2026"
+    },
+    "id": "ec95be98-8fa2-4d5e-b530-57cb2eb7a83d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT220945LKDON"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT220945LKDON",
+      "KXCS2TOTALMAPS-26OCT220945LKDON",
+      "KXCS2MAP-26OCT220945LKDON-1",
+      "KXCS2MAP-26OCT220945LKDON-2"
+    ],
+    "source_ids": {
+      "source_2_id": "20261022690D56EB"
+    },
+    "start_date": "2026-10-22T13:45:00Z",
+    "title": "los kogutos vs Donstu Esports",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
+  },
+  {
+    "category": "Esports",
+    "details": {
+      "away_competitor_id": "b1487a5e-d746-4676-805d-13e5cfe371e1",
+      "game": "CS2",
+      "home_competitor_id": "b80acbfd-a74e-43fe-8be4-4ad635f45945",
+      "league": "CS2",
+      "main_game_event_ticker": "KXCS2GAME-26OCT230400TCFCW",
+      "season_type": "United21",
+      "season_week": "gorup a",
+      "season_year": "2026",
+      "status": "unplayed",
+      "tournament_name": "United21 2026"
+    },
+    "id": "5080c816-5d55-49d4-b06d-a97628bbee8e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXCS2GAME-26OCT230400TCFCW"
+    ],
+    "related_event_tickers": [
+      "KXCS2GAME-26OCT230400TCFCW",
+      "KXCS2MAP-26OCT230400TCFCW-1",
+      "KXCS2MAP-26OCT230400TCFCW-2",
+      "KXCS2TOTALMAPS-26OCT230400TCFCW"
+    ],
+    "source_ids": {
+      "source_2_id": "20261023E2B02D0F"
+    },
+    "start_date": "2026-10-23T08:00:00Z",
+    "title": "The Chosen Few vs Copenhagen Wolves",
+    "type": "esports_match",
+    "_collected_at_utc": "2026-10-21T06:42:02.871+00:00"
   }
 ]

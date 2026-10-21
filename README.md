@@ -1,6 +1,50 @@
-# Prediction Market Terminal
+# EventLens
 
-A comparison terminal and quote infrastructure for **Kalshi and Polymarket International**. Sports and Esports have separate category tabs. Sports includes cricket, 17 soccer competitions, NBA/WNBA/college basketball, NFL/college football, NHL, MLB, ATP/WTA tennis and UFC. Esports starts with Counter-Strike 2 and League of Legends full-match winners. Finance and Tech are visible future categories with discovery disabled. Polymarket US is excluded from the active scanner. Continuous collection currently uses public REST APIs; venue sockets and order execution are not connected.
+A local prediction-market data terminal and research dataset for Kalshi and Polymarket International. Open **Data & research** in the terminal, or visit `http://127.0.0.1:8765/research`, to query recorded prices, inspect selected live books, chart historical observations and export data. This iteration adds data tools; it includes no strategies, backtesting or trading.
+
+The Research workspace has a searchable market explorer, category/exchange filters, quote statistics, interactive price charts (hover, scroll to zoom, reset), local-time date ranges and quick ranges. **Export selection** downloads the current market/time/exchange/sampling selection; **More data tools → Export whole dataset** retains the dataset-wide export. Order books, historical price samples, observations and metadata have separate panels. The compact Markets terminal is unchanged.
+
+Research discovery is independent of matching: **More data tools → Refresh market catalog** discovers native Kalshi and Polymarket event catalogs, retaining unmatched outcomes without a liquidity threshold. The **Discovery coverage** table counts distinct native contracts by category and exchange, separately from outcome records and monitored comparisons. Each scan is bounded to six pages per exchange and resumes saved continuation cursors; nothing starts a catalog scan on page load. Provider categories/tags supply category labels; unknown categories remain Other. Open events may contain closed child contracts, so status and discovery time remain visible. Discovery metadata does not create quote history or start intensive monitoring. See [coverage scope and verification](docs/COVERAGE.md).
+
+For Python access to the cached catalog (no venue requests):
+
+```python
+from market_catalog import MarketCatalog
+from research_store import ResearchStore
+
+catalog = MarketCatalog(ResearchStore("data/eventlens.sqlite3"))
+print(catalog.summary())
+markets = catalog.markets()
+# Explicit bounded discovery: catalog.refresh(max_pages=1)
+# catalog.lookup(markets[0]["id"]) returns metadata plus exact native asset IDs.
+```
+
+The service records up to 25 liquid, validated outcome pairs per normal refresh in `data/eventlens.sqlite3`. This database survives report regeneration and application restarts and is excluded from Git. Selected markets can also be recorded every five seconds from the research page while it is open. Missing depth, exchange clocks and stale observations remain explicit.
+
+To use selected Polymarket books and hourly price samples through the verified local PMXT SDK, start with `.venv-pmxt/bin/python server.py`. The optional environment is installed on this workstation; setup and the SDK's limitations are in [docs/PMXT.md](docs/PMXT.md). The ordinary `python3 server.py` command keeps native collection and historical research working without that dependency or a subscription. Kalshi books use its native public endpoint because the current PMXT implementation demands authentication.
+
+Import the last 20 local snapshots without venue requests:
+
+```bash
+python3 research_store.py --import-history
+```
+
+Python research access uses actual observations, with optional time, exchange, market and sampling filters:
+
+```python
+from research_store import ResearchStore
+
+store = ResearchStore("data/eventlens.sqlite3")
+print(store.datasets())
+quotes = store.history("recorded", exchange="kalshi", every_seconds=60, limit=1000)
+# Add market_id=..., pair=..., start="2026-10-21T00:00:00Z", end=... as needed.
+# Sampling returns the last actual observation per bucket; it never fills gaps.
+row_with_rules_and_depth = store.snapshot("recorded", quotes[-1]["pair_key"])
+```
+
+Regular Polymarket recording retains up to ten returned price levels per side; Kalshi bulk collection supplies BBO depth. Explicit live-book reads retain every level returned by PMXT or the selected native endpoint. Imported snapshots only contain the data actually saved at that time. Public hourly candles are sampled-price buckets, stored separately from quotes, with no historical spread/depth or execution claim. Volume and market status carry their metadata observation times; absent values and unresolved settlements remain unknown. Full trade-print history, a resolution collector and verified WebSocket recording are future work. Hosted PMXT matching/order-book archive access requires separate credentials and was not invoked.
+
+A comparison terminal and quote infrastructure for **Kalshi and Polymarket International**. Sports and Esports have separate category tabs. Sports includes cricket, 17 soccer competitions, NBA/WNBA/college basketball, NFL/college football, NHL, MLB, ATP/WTA tennis and UFC. Esports starts with Counter-Strike 2 and League of Legends full-match winners. Finance and Tech comparison tabs remain future categories in Markets; independent Research discovery includes these and other non-sports categories. Polymarket US is excluded from the active scanner. Continuous collection currently uses public REST APIs; venue sockets and order execution are not connected.
 
 ## Run
 

@@ -239,6 +239,7 @@ def _live_books(assets: set[str], us_slugs: set[str]
 def _book_quote(market: C.Market, book: dict, observed: str,
                 asset: str, warnings: list[str]) -> None:
     prices = {}
+    normalized_book = {}
     invalid = False
     for side in ("bids", "asks"):
         levels = book.get(side)
@@ -259,6 +260,8 @@ def _book_quote(market: C.Market, book: dict, observed: str,
                 values.append(price)
                 quantities[price] = quantities.get(price, Decimal(0)) + size
         prices[side] = (max(values) if side == "bids" else min(values)) if values else None
+        normalized_book[side] = [{"price": _text(price), "size": _text(quantities[price])}
+                                 for price in sorted(quantities, reverse=side == "bids")[:10]]
         market.extra["quote_bid_size" if side == "bids" else "quote_ask_size"] = _text(
             quantities.get(prices[side]))
     if invalid:
@@ -269,6 +272,8 @@ def _book_quote(market: C.Market, book: dict, observed: str,
         # separately as a notional constraint and must not replace this field.
         market.extra["minimum_order_size"] = _text(minimum)
     market.extra["quote_exchange_time"] = _iso_time(book.get("timestamp"))
+    market.extra["quote_order_book"] = normalized_book
+    market.extra["quote_order_book_limit"] = 10
     _set_quote(market, prices["bids"], prices["asks"], observed,
                f"{CLOB}/books token_id={asset}", empty=not invalid)
 
@@ -292,6 +297,35 @@ def _live_kalshi(tickers: set[str]) -> tuple[dict[str, dict], list[str]]:
             if isinstance(record, dict) and record.get("ticker") in batch:
                 refreshed[record["ticker"]] = {**record, "_collected_at_utc": observed}
     return refreshed, warnings
+
+
+def fetch_public_kalshi_book(ticker: str) -> dict:
+    """Selected full public binary book; ask YES is the same contract's NO complement."""
+    status, body, observed = _request_json("GET", KALSHI + "/markets/" + urllib.parse.quote(ticker, safe="") + "/orderbook")
+    if status != 200 or not isinstance(body, dict):
+        raise ValueError("Kalshi public order book unavailable")
+    raw = body.get("orderbook_fp") or body.get("orderbook")
+    if not isinstance(raw, dict):
+        raise ValueError("Kalshi response lacks a public order book")
+    sides = {}
+    for name in ("yes", "no"):
+        dollars = name + "_dollars" in raw
+        levels = raw.get(name + "_dollars" if dollars else name) or []
+        aggregated = {}
+        for level in levels:
+            if not isinstance(level, list) or len(level) != 2:
+                continue
+            price, size = _number(level[0]), _number(level[1])
+            if price is None or size is None or size <= 0:
+                continue
+            price = price if dollars else price / 100
+            if 0 <= price <= 1:
+                target = price if name == "yes" else 1 - price
+                aggregated[target] = aggregated.get(target, Decimal(0)) + size
+        sides["bids" if name == "yes" else "asks"] = [{"price": _text(price), "size": _text(aggregated[price])}
+            for price in sorted(aggregated, reverse=name == "yes")]
+    return {**sides, "venue": "kalshi", "instrument_id": ticker, "source": "native_kalshi_public",
+            "observed_at": observed, "exchange_time": "", "provider_time": ""}
 
 
 def stream_instruments(markets: list[C.Market], raw: dict[str, list[dict]]) -> list[dict]:
@@ -401,8 +435,9 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
     assets, us_slugs = {}, set()
     for market in markets:
         _set_quote(market, None, None, "", "")
-        for field in ("quote_bid_size", "quote_ask_size", "quote_exchange_time",
-                      "minimum_order_size", "minimum_order_notional_usd"):
+        for field in ("quote_bid_size", "quote_ask_size", "quote_exchange_time", "quote_order_book",
+                      "minimum_order_size", "minimum_order_notional_usd", "quote_market_status", "quote_volume",
+                      "quote_metadata_time", "quote_settlement_result"):
             market.extra.pop(field, None)
         market.extra.pop("taker_fee", None)
         record = records.get((market.venue, str(market.market_id)), {})
@@ -455,6 +490,18 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
             market.extra["taker_fee"] = dict(saved[key]["taker_fee"])
         if live and market.venue == "kalshi":
             record = fresh_kalshi.get(market.market_id, record)
+        metadata_record = fee_record if market.venue == "polymarket_intl" else record
+        if metadata_record:
+            market.extra["quote_metadata_time"] = fee_stamp if market.venue == "polymarket_intl" else _raw_quote_time(metadata_record, collected_at)
+            volume = metadata_record.get("volume_fp", metadata_record.get("volumeNum", metadata_record.get("volume")))
+            if volume is not None:
+                market.extra["quote_volume"] = volume
+            status = metadata_record.get("status") if market.venue == "kalshi" else (
+                "closed" if metadata_record.get("closed") is True else "active" if metadata_record.get("active") is True else None)
+            if status:
+                market.extra["quote_market_status"] = status
+            if metadata_record.get("result") in ("yes", "no"):
+                market.extra["quote_settlement_result"] = metadata_record["result"]
         stamp = _raw_quote_time(record, collected_at)
         if not live and key in saved and key not in duplicate_saved:
             entry = saved[key]
@@ -474,6 +521,8 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                 minimum = _number(entry.get(field))
                 if minimum is not None and minimum >= 0:
                     market.extra[field] = _text(minimum)
+            if isinstance(entry.get("order_book"), dict):
+                market.extra["quote_order_book"] = entry["order_book"]
             _set_quote(market, _price(market.bid), _price(market.ask), market.quote_time,
                        market.quote_source, empty=market.quote_status == "empty")
         elif not live and key in duplicate_saved:
@@ -544,6 +593,7 @@ def enrich_quotes(markets: list[C.Market], raw: dict[str, list[dict]], *, live: 
                         "quote_time": market.quote_time, "quote_status": market.quote_status,
                         "quote_source": market.quote_source,
                         "exchange_time": market.extra.get("quote_exchange_time", ""),
+                        "order_book": market.extra.get("quote_order_book"),
                         "bid_size": market.extra.get("quote_bid_size"),
                         "ask_size": market.extra.get("quote_ask_size"),
                         "minimum_order_size": market.extra.get("minimum_order_size"),

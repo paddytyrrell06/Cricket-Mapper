@@ -4,3 +4,5 @@ __pycache__/
 .cricket_matching_previous_output/
 .cricket_matching_history/
 .market_terminal.lock
+.venv-pmxt/
+data/

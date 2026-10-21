@@ -4,137 +4,6 @@
     "details": {
       "event": "333",
       "fight_length": 3,
-      "first_fighter_id": "d995535b-bafe-4659-9872-1782044082e8",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24VAGMAL",
-      "promotion": "ufc",
-      "second_fighter_id": "1fbed041-8ece-42a2-90aa-119adbc82322",
-      "status": "not_started",
-      "weight_class": "Middleweight"
-    },
-    "id": "7f5fb204-9fd1-418e-a6b6-d69634d8c5e2",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24VAGMAL"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24VAGMAL"
-    ],
-    "source_id": "sr:sport_event:75642070",
-    "source_ids": {
-      "source_1_id": "3036306",
-      "source_2_id": "20261024CE3799D9",
-      "source_3_id": "sr:sport_event:75642070"
-    },
-    "start_date": "2026-10-24T15:00:00Z",
-    "title": "Abubakar Vagaev vs Jacob Malkoun",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 3,
-      "first_fighter_id": "8e020085-9322-46ff-9b25-74345d88e5c7",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24MAGROW",
-      "promotion": "ufc",
-      "second_fighter_id": "b2ecd4b7-84af-4d0b-abbb-0ecbbd11e6b0",
-      "status": "not_started",
-      "weight_class": "Middleweight"
-    },
-    "id": "12fe2942-6509-4163-aa7f-a8f0c4b9be34",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24MAGROW"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24MAGROW"
-    ],
-    "source_id": "sr:sport_event:73873134",
-    "source_ids": {
-      "source_2_id": "202610241831626A",
-      "source_3_id": "sr:sport_event:73873134"
-    },
-    "start_date": "2026-10-24T16:20:00Z",
-    "title": "Abusupiyan Magomedov vs Cameron Rowston",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 3,
-      "first_fighter_id": "3fba8bad-b5f1-47e0-ae80-a470f505c811",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24KRYYAK",
-      "promotion": "ufc",
-      "second_fighter_id": "4483d0ba-8b66-4c56-b1f3-934c8fef72bf",
-      "status": "not_started",
-      "weight_class": "Light_Heavyweight"
-    },
-    "id": "3633dc6f-10bd-4c54-9055-2b958659264f",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24KRYYAK"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24KRYYAK"
-    ],
-    "source_id": "sr:sport_event:73873122",
-    "source_ids": {
-      "source_1_id": "3028247",
-      "source_2_id": "20261024F6FAA17D",
-      "source_3_id": "sr:sport_event:73873122"
-    },
-    "start_date": "2026-10-24T16:40:00Z",
-    "title": "Nikita Krylov vs Abdul-Rakhman Yakhyaev",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 3,
-      "first_fighter_id": "03070d7d-dd3a-42cf-912f-fb89f5b9a073",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24MURREY",
-      "promotion": "ufc",
-      "second_fighter_id": "58d6fb85-a891-49ea-abb6-6aae0be32d69",
-      "status": "not_started",
-      "weight_class": "Light_Heavyweight"
-    },
-    "id": "aece198e-1f60-463a-aa89-f840690f4f94",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24MURREY"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24MURREY"
-    ],
-    "source_id": "sr:sport_event:73807456",
-    "source_ids": {
-      "source_1_id": "3021685",
-      "source_2_id": "2026102463ED34E2",
-      "source_3_id": "sr:sport_event:73807456"
-    },
-    "start_date": "2026-10-24T17:00:00Z",
-    "title": "Azamat Murzakanov vs Dominick Reyes",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 3,
       "first_fighter_id": "26edb6d6-6fae-466c-919f-e4c9792fde64",
       "league": "UFC",
       "main_game_event_ticker": "KXUFCFIGHT-26OCT24KAVTEM",
@@ -159,201 +28,7 @@
     "start_date": "2026-10-24T18:40:00Z",
     "title": "Loneer Kavanagh vs Ramazonbek Temirov",
     "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 5,
-      "first_fighter_id": "7ad2dd6a-aea9-4603-a2c2-212d7f2578ef",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24YANDVA",
-      "promotion": "ufc",
-      "second_fighter_id": "38003e6c-6be6-4f83-a634-28b3620d460e",
-      "status": "not_started",
-      "weight_class": "Bantamweight"
-    },
-    "id": "86bd0357-a6b4-4653-897a-7b9f10ac12e9",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24YANDVA"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24YANDVA"
-    ],
-    "source_id": "sr:sport_event:73807460",
-    "source_ids": {
-      "source_1_id": "3021679",
-      "source_2_id": "20261024EF7BE807",
-      "source_3_id": "sr:sport_event:73807460"
-    },
-    "start_date": "2026-10-24T19:00:00Z",
-    "title": "Petr Yan vs Merab Dvalishvili",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 3,
-      "first_fighter_id": "9f77a9c0-fe00-4b12-a8df-054276a49620",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24LUCCAL",
-      "promotion": "ufc",
-      "second_fighter_id": "a5120c8a-0438-4098-820a-51768c03d28d",
-      "status": "not_started",
-      "weight_class": "Strawweight"
-    },
-    "id": "9d9491c6-0e80-4a8e-8587-8abe3c9303db",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24LUCCAL"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24LUCCAL"
-    ],
-    "source_id": "sr:sport_event:75801664",
-    "source_ids": {
-      "source_3_id": "sr:sport_event:75801664"
-    },
-    "start_date": "2026-10-24T14:00:00Z",
-    "title": "Jasmin Lucindo vs Nicolle Caliari",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 3,
-      "first_fighter_id": "da36edd5-31c6-4e56-a8b2-4f6b5cdfd7d8",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24OKISAN",
-      "promotion": "ufc",
-      "second_fighter_id": "4cb0374e-e571-41fd-a38a-0f4df40401ef",
-      "status": "not_started",
-      "weight_class": "Featherweight"
-    },
-    "id": "aef02eb0-ba20-45d2-b59d-f7bbe4254e3e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24OKISAN"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24OKISAN"
-    ],
-    "source_id": "sr:sport_event:75801668",
-    "source_ids": {
-      "source_3_id": "sr:sport_event:75801668"
-    },
-    "start_date": "2026-10-24T14:40:00Z",
-    "title": "Bolaji Oki vs Daniel Gustavo Santos",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 3,
-      "first_fighter_id": "2c579840-adab-41e5-9ab8-74fdd861afd5",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24PICKEI",
-      "promotion": "ufc",
-      "second_fighter_id": "ccd89ac9-3ca7-4d22-9938-61b5cf3b576a",
-      "status": "not_started",
-      "weight_class": "Featherweight"
-    },
-    "id": "ffedd9fb-58f4-4c20-8fe6-7ac589fb608d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24PICKEI"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24PICKEI"
-    ],
-    "source_id": "sr:sport_event:75380636",
-    "source_ids": {
-      "source_1_id": "3028246",
-      "source_2_id": "202610242AA94149",
-      "source_3_id": "sr:sport_event:75380636"
-    },
-    "start_date": "2026-10-24T18:00:00Z",
-    "title": "Aaron Pico vs Losene Keita",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 3,
-      "first_fighter_id": "011fe8b5-2037-4708-afaf-a0a5ade1994d",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24DAWALI",
-      "promotion": "ufc",
-      "second_fighter_id": "f0d99aaf-c59f-41b0-82d4-301125e02461",
-      "status": "not_started",
-      "weight_class": "Lightweight"
-    },
-    "id": "f350bfb6-ce66-4c73-9d3e-8309db6ad0a3",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24DAWALI"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24DAWALI"
-    ],
-    "source_id": "sr:sport_event:73807448",
-    "source_ids": {
-      "source_1_id": "3021686",
-      "source_2_id": "2026102438296151",
-      "source_3_id": "sr:sport_event:73807448"
-    },
-    "start_date": "2026-10-24T16:00:00Z",
-    "title": "Grant Dawson vs Nurullo Aliev",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "event": "333",
-      "fight_length": 3,
-      "first_fighter_id": "1851ca5c-ea99-4f61-bd6b-053e7b342e39",
-      "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24VOLKUN",
-      "promotion": "ufc",
-      "second_fighter_id": "f974a620-d6ab-436c-80ed-79a2aa545e05",
-      "status": "not_started",
-      "weight_class": "Heavyweight"
-    },
-    "id": "5e8cd14b-ed7e-4a94-ab56-e4a0f9fae9d0",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "Who will emerge victorious?",
-    "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24VOLKUN"
-    ],
-    "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24VOLKUN"
-    ],
-    "source_id": "sr:sport_event:73873126",
-    "source_ids": {
-      "source_1_id": "3028248",
-      "source_2_id": "2026102492B447F6",
-      "source_3_id": "sr:sport_event:73873126"
-    },
-    "start_date": "2026-10-24T18:20:00Z",
-    "title": "Alexander Volkov vs Rizvan Kuniev",
-    "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
   },
   {
     "category": "Sports",
@@ -386,7 +61,265 @@
     "start_date": "2026-10-24T19:20:00Z",
     "title": "Alex Volkanovski vs Movsar Evloev",
     "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 3,
+      "first_fighter_id": "9f77a9c0-fe00-4b12-a8df-054276a49620",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24LUCCAL",
+      "promotion": "ufc",
+      "second_fighter_id": "a5120c8a-0438-4098-820a-51768c03d28d",
+      "status": "not_started",
+      "weight_class": "Strawweight"
+    },
+    "id": "9d9491c6-0e80-4a8e-8587-8abe3c9303db",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24LUCCAL"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24LUCCAL"
+    ],
+    "source_id": "sr:sport_event:75801664",
+    "source_ids": {
+      "source_3_id": "sr:sport_event:75801664"
+    },
+    "start_date": "2026-10-24T14:00:00Z",
+    "title": "Jasmin Lucindo vs Nicolle Caliari",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 3,
+      "first_fighter_id": "ece85c32-d571-4c38-a9df-3b3a795de950",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24STEGUG",
+      "promotion": "ufc",
+      "second_fighter_id": "e7d524e3-b64b-40a2-98bc-8f33335eeea7",
+      "status": "not_started",
+      "weight_class": "Lightweight"
+    },
+    "id": "d76393cb-4a24-4192-a173-b654f7bd3af7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24STEGUG"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24STEGUG"
+    ],
+    "source_id": "sr:sport_event:75801666",
+    "source_ids": {
+      "source_2_id": "2026102411F0C8B7",
+      "source_3_id": "sr:sport_event:75801666"
+    },
+    "start_date": "2026-10-24T14:20:00Z",
+    "title": "Kody Steele vs Noah Gugnon",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 3,
+      "first_fighter_id": "d995535b-bafe-4659-9872-1782044082e8",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24VAGMAL",
+      "promotion": "ufc",
+      "second_fighter_id": "1fbed041-8ece-42a2-90aa-119adbc82322",
+      "status": "not_started",
+      "weight_class": "Middleweight"
+    },
+    "id": "7f5fb204-9fd1-418e-a6b6-d69634d8c5e2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24VAGMAL"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24VAGMAL"
+    ],
+    "source_id": "sr:sport_event:75642070",
+    "source_ids": {
+      "source_1_id": "3036306",
+      "source_2_id": "20261024CE3799D9",
+      "source_3_id": "sr:sport_event:75642070"
+    },
+    "start_date": "2026-10-24T15:00:00Z",
+    "title": "Abubakar Vagaev vs Jacob Malkoun",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 3,
+      "first_fighter_id": "da36edd5-31c6-4e56-a8b2-4f6b5cdfd7d8",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24OKISAN",
+      "promotion": "ufc",
+      "second_fighter_id": "4cb0374e-e571-41fd-a38a-0f4df40401ef",
+      "status": "not_started",
+      "weight_class": "Featherweight"
+    },
+    "id": "aef02eb0-ba20-45d2-b59d-f7bbe4254e3e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24OKISAN"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24OKISAN"
+    ],
+    "source_id": "sr:sport_event:75801668",
+    "source_ids": {
+      "source_3_id": "sr:sport_event:75801668"
+    },
+    "start_date": "2026-10-24T14:40:00Z",
+    "title": "Bolaji Oki vs Daniel Gustavo Santos",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 3,
+      "first_fighter_id": "8e020085-9322-46ff-9b25-74345d88e5c7",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24MAGROW",
+      "promotion": "ufc",
+      "second_fighter_id": "b2ecd4b7-84af-4d0b-abbb-0ecbbd11e6b0",
+      "status": "not_started",
+      "weight_class": "Middleweight"
+    },
+    "id": "12fe2942-6509-4163-aa7f-a8f0c4b9be34",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24MAGROW"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24MAGROW"
+    ],
+    "source_id": "sr:sport_event:73873134",
+    "source_ids": {
+      "source_2_id": "202610241831626A",
+      "source_3_id": "sr:sport_event:73873134"
+    },
+    "start_date": "2026-10-24T16:20:00Z",
+    "title": "Abusupiyan Magomedov vs Cameron Rowston",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 3,
+      "first_fighter_id": "3fba8bad-b5f1-47e0-ae80-a470f505c811",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24KRYYAK",
+      "promotion": "ufc",
+      "second_fighter_id": "4483d0ba-8b66-4c56-b1f3-934c8fef72bf",
+      "status": "not_started",
+      "weight_class": "Light_Heavyweight"
+    },
+    "id": "3633dc6f-10bd-4c54-9055-2b958659264f",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24KRYYAK"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24KRYYAK"
+    ],
+    "source_id": "sr:sport_event:73873122",
+    "source_ids": {
+      "source_1_id": "3028247",
+      "source_2_id": "20261024F6FAA17D",
+      "source_3_id": "sr:sport_event:73873122"
+    },
+    "start_date": "2026-10-24T16:40:00Z",
+    "title": "Nikita Krylov vs Abdul-Rakhman Yakhyaev",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 3,
+      "first_fighter_id": "1851ca5c-ea99-4f61-bd6b-053e7b342e39",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24VOLKUN",
+      "promotion": "ufc",
+      "second_fighter_id": "f974a620-d6ab-436c-80ed-79a2aa545e05",
+      "status": "not_started",
+      "weight_class": "Heavyweight"
+    },
+    "id": "5e8cd14b-ed7e-4a94-ab56-e4a0f9fae9d0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24VOLKUN"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24VOLKUN"
+    ],
+    "source_id": "sr:sport_event:73873126",
+    "source_ids": {
+      "source_1_id": "3028248",
+      "source_2_id": "2026102492B447F6",
+      "source_3_id": "sr:sport_event:73873126"
+    },
+    "start_date": "2026-10-24T18:20:00Z",
+    "title": "Alexander Volkov vs Rizvan Kuniev",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 5,
+      "first_fighter_id": "7ad2dd6a-aea9-4603-a2c2-212d7f2578ef",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24YANDVA",
+      "promotion": "ufc",
+      "second_fighter_id": "38003e6c-6be6-4f83-a634-28b3620d460e",
+      "status": "not_started",
+      "weight_class": "Bantamweight"
+    },
+    "id": "86bd0357-a6b4-4653-897a-7b9f10ac12e9",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24YANDVA"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24YANDVA"
+    ],
+    "source_id": "sr:sport_event:73807460",
+    "source_ids": {
+      "source_1_id": "3021679",
+      "source_2_id": "20261024EF7BE807",
+      "source_3_id": "sr:sport_event:73807460"
+    },
+    "start_date": "2026-10-24T19:00:00Z",
+    "title": "Petr Yan vs Merab Dvalishvili",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
   },
   {
     "category": "Sports",
@@ -419,38 +352,105 @@
     "start_date": "2026-10-24T15:20:00Z",
     "title": "Colby Thicknesse vs Asaf Chopurov",
     "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
   },
   {
     "category": "Sports",
     "details": {
       "event": "333",
       "fight_length": 3,
-      "first_fighter_id": "ece85c32-d571-4c38-a9df-3b3a795de950",
+      "first_fighter_id": "2c579840-adab-41e5-9ab8-74fdd861afd5",
       "league": "UFC",
-      "main_game_event_ticker": "KXUFCFIGHT-26OCT24STEGUG",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24PICKEI",
       "promotion": "ufc",
-      "second_fighter_id": "e7d524e3-b64b-40a2-98bc-8f33335eeea7",
+      "second_fighter_id": "ccd89ac9-3ca7-4d22-9938-61b5cf3b576a",
       "status": "not_started",
-      "weight_class": "Lightweight"
+      "weight_class": "Featherweight"
     },
-    "id": "d76393cb-4a24-4192-a173-b654f7bd3af7",
+    "id": "ffedd9fb-58f4-4c20-8fe6-7ac589fb608d",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "Who will emerge victorious?",
     "primary_event_tickers": [
-      "KXUFCFIGHT-26OCT24STEGUG"
+      "KXUFCFIGHT-26OCT24PICKEI"
     ],
     "related_event_tickers": [
-      "KXUFCFIGHT-26OCT24STEGUG"
+      "KXUFCFIGHT-26OCT24PICKEI"
     ],
-    "source_id": "sr:sport_event:75801666",
+    "source_id": "sr:sport_event:75380636",
     "source_ids": {
-      "source_2_id": "2026102411F0C8B7",
-      "source_3_id": "sr:sport_event:75801666"
+      "source_1_id": "3028246",
+      "source_2_id": "202610242AA94149",
+      "source_3_id": "sr:sport_event:75380636"
     },
-    "start_date": "2026-10-24T14:20:00Z",
-    "title": "Kody Steele vs Noah Gugnon",
+    "start_date": "2026-10-24T18:00:00Z",
+    "title": "Aaron Pico vs Losene Keita",
     "type": "mma_match",
-    "_collected_at_utc": "2026-10-20T21:57:14.321+00:00"
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 3,
+      "first_fighter_id": "011fe8b5-2037-4708-afaf-a0a5ade1994d",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24DAWALI",
+      "promotion": "ufc",
+      "second_fighter_id": "f0d99aaf-c59f-41b0-82d4-301125e02461",
+      "status": "not_started",
+      "weight_class": "Lightweight"
+    },
+    "id": "f350bfb6-ce66-4c73-9d3e-8309db6ad0a3",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24DAWALI"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24DAWALI"
+    ],
+    "source_id": "sr:sport_event:73807448",
+    "source_ids": {
+      "source_1_id": "3021686",
+      "source_2_id": "2026102438296151",
+      "source_3_id": "sr:sport_event:73807448"
+    },
+    "start_date": "2026-10-24T16:00:00Z",
+    "title": "Grant Dawson vs Nurullo Aliev",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "event": "333",
+      "fight_length": 3,
+      "first_fighter_id": "03070d7d-dd3a-42cf-912f-fb89f5b9a073",
+      "league": "UFC",
+      "main_game_event_ticker": "KXUFCFIGHT-26OCT24MURREY",
+      "promotion": "ufc",
+      "second_fighter_id": "58d6fb85-a891-49ea-abb6-6aae0be32d69",
+      "status": "not_started",
+      "weight_class": "Light_Heavyweight"
+    },
+    "id": "aece198e-1f60-463a-aa89-f840690f4f94",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "Who will emerge victorious?",
+    "primary_event_tickers": [
+      "KXUFCFIGHT-26OCT24MURREY"
+    ],
+    "related_event_tickers": [
+      "KXUFCFIGHT-26OCT24MURREY"
+    ],
+    "source_id": "sr:sport_event:73807456",
+    "source_ids": {
+      "source_1_id": "3021685",
+      "source_2_id": "2026102463ED34E2",
+      "source_3_id": "sr:sport_event:73807456"
+    },
+    "start_date": "2026-10-24T17:00:00Z",
+    "title": "Azamat Murzakanov vs Dominick Reyes",
+    "type": "mma_match",
+    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
   }
 ]

@@ -313,7 +313,7 @@ class ServiceRefreshTests(unittest.TestCase):
         harness = r'''
 const assert=require('node:assert/strict'),vm=require('node:vm');
 const settle=()=>new Promise(resolve=>setImmediate(resolve));
-function browser({protocol='http:',navigation='reload',storage=new Map(),blocked=false}={}){
+function browser({protocol='http:',navigation='reload',storage=new Map(),blocked=false,online=true}={}){
     const requests=[],timers=[],events={},button={hidden:true,disabled:false,addEventListener(name,fn){events[name]=fn;}},label={hidden:true};
     let views=0,checks=0;
     const context=vm.createContext({location:{protocol,pathname:'/report.html'},window:{},
@@ -324,11 +324,11 @@ function browser({protocol='http:',navigation='reload',storage=new Map(),blocked
             removeItem(key){if(blocked)throw Error('Blocked');storage.delete(key);}},
         saveView(){views++;},checkForNewReport(){checks++;},
         setInterval(fn,ms){timers.push({fn,ms});},
-        async fetch(url,options={}){requests.push({url,options});return {ok:true,async json(){return {
+        async fetch(url,options={}){requests.push({url,options});if(!online)throw Error('Service unavailable');return {ok:true,async json(){return {
             state:url==='/api/refresh'?'running':'idle',running:url==='/api/refresh',revision:0,error:null};}};},
     });
     vm.runInContext(SERVICE,context);
-    return {context,requests,timers,events,button,label,storage,views:()=>views,checks:()=>checks,
+    return {context,requests,timers,events,button,label,storage,setOnline(value){online=value;},views:()=>views,checks:()=>checks,
         posts:()=>requests.filter(request=>request.url==='/api/refresh')};
 }
 (async()=>{
@@ -341,7 +341,8 @@ function browser({protocol='http:',navigation='reload',storage=new Map(),blocked
     const manual=browser({storage:b.storage});await settle();assert.equal(manual.posts().length,1);
     const initial=browser({navigation:'navigate'});await settle();assert.equal(initial.posts().length,0);
     initial.events.click();await settle();assert.equal(initial.posts().length,1);
-    const file=browser({protocol:'file:'});await settle();assert.equal(file.requests.length,0);assert.equal(file.button.hidden,true);
+    const file=browser({protocol:'file:'});await settle();assert.equal(file.requests.length,0);assert.equal(file.button.hidden,false);assert.equal(file.button.textContent,'Open live terminal');file.events.click();assert.equal(file.context.location.href,'http://127.0.0.1:8765/CricketMatchingReport.html');assert.equal(file.requests.length,0);
+    const offline=browser({online:false,navigation:'navigate'});await settle();assert.equal(offline.button.hidden,false);assert.equal(offline.button.disabled,true);assert.ok(offline.label.textContent.includes('Service offline'));offline.setOnline(true);offline.timers[0].fn();await settle();assert.equal(offline.button.disabled,false);offline.events.click();await settle();assert.equal(offline.posts().length,1);
     const blocked=browser({blocked:true});await settle();assert.equal(blocked.posts().length,0);
     blocked.events.click();await settle();assert.equal(blocked.posts().length,1);
 })().catch(error=>{console.error(error);process.exitCode=1;});

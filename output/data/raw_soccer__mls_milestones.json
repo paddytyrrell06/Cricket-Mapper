@@ -2,458 +2,35 @@
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "974e0cbb-3dd1-43fe-ab90-065438c293d6",
+      "away_team_id": "a0d8250b-a13f-4849-9844-4106ae45671f",
       "coverage": {},
-      "home_team_id": "670bb865-5dea-407a-8735-e47df87367ae",
+      "home_team_id": "6c3994b0-7002-442c-b86e-9e95b3d48826",
       "is_ko": false,
       "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28NSHPHI",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24PORCLT",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "7d17902d-5efb-59b6-a98b-5cebc97b5a14",
+    "id": "9b02a52d-9314-50b4-8cb1-0d997ab08ce3",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXMLSGAME-26OCT28NSHPHI"
+      "KXMLSGAME-26OCT24PORCLT",
+      "KXMLSSPREAD-26OCT24PORCLT",
+      "KXMLSTOTAL-26OCT24PORCLT",
+      "KXMLSBTTS-26OCT24PORCLT"
     ],
     "related_event_tickers": [
-      "KXMLSGAME-26OCT28NSHPHI"
+      "KXMLSGAME-26OCT24PORCLT",
+      "KXMLSSPREAD-26OCT24PORCLT",
+      "KXMLSTOTAL-26OCT24PORCLT",
+      "KXMLSBTTS-26OCT24PORCLT"
     ],
     "source_ids": {},
-    "start_date": "2026-10-29T00:30:00Z",
-    "title": "Nashville vs Philadelphia",
+    "start_date": "2026-10-25T02:30:00Z",
+    "title": "Portland vs Charlotte",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "2b8aba82-9e12-484d-bf31-e74951e7630c",
-      "coverage": {},
-      "home_team_id": "2f088540-9c53-49d5-b38b-c75321c3e738",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28SJCOL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "09930731-bdac-5f91-90ad-d4b6e22ebb70",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28SJCOL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28SJCOL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-29T02:30:00Z",
-    "title": "San Jose vs Colorado",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "f5d060a5-b503-4780-b6c6-af86b461de3a",
-      "coverage": {},
-      "home_team_id": "2f088540-9c53-49d5-b38b-c75321c3e738",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT31SJRSL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "477506ba-23f5-59c5-9613-c0bd1ca6d07c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT31SJRSL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT31SJRSL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T21:00:00Z",
-    "title": "San Jose vs Salt Lake",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7e243b87-074f-4c80-8e50-5981c78a79a9",
-      "coverage": {},
-      "home_team_id": "81c226ef-e71a-41bd-ab9f-28d0ba555f71",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24NYRBMIA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "78886c8d-0932-56e9-9a2c-d2aa0e272f5e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24NYRBMIA",
-      "KXMLSSPREAD-26OCT24NYRBMIA",
-      "KXMLSTOTAL-26OCT24NYRBMIA",
-      "KXMLSBTTS-26OCT24NYRBMIA"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24NYRBMIA",
-      "KXMLSSPREAD-26OCT24NYRBMIA",
-      "KXMLSTOTAL-26OCT24NYRBMIA",
-      "KXMLSBTTS-26OCT24NYRBMIA"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T21:30:00Z",
-    "title": "New York RB vs Miami",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a6f918b2-1142-4bd5-93b5-241aeb00c0d1",
-      "coverage": {},
-      "home_team_id": "067b4757-7229-4966-9878-7fb386b90b86",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24ATLCHI",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "64118fa9-e6c4-5feb-bade-aab5509ceebf",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24ATLCHI",
-      "KXMLSSPREAD-26OCT24ATLCHI",
-      "KXMLSTOTAL-26OCT24ATLCHI",
-      "KXMLSBTTS-26OCT24ATLCHI"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24ATLCHI",
-      "KXMLSSPREAD-26OCT24ATLCHI",
-      "KXMLSTOTAL-26OCT24ATLCHI",
-      "KXMLSBTTS-26OCT24ATLCHI"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T23:30:00Z",
-    "title": "Atlanta vs Chicago Fire",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a88c1376-454e-46d0-a974-1d9639dd6a18",
-      "coverage": {},
-      "home_team_id": "310d308b-19f3-4f87-8cf1-bf8a1d3cc1db",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28DALCLB",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f73db6f2-d805-5028-a4b9-46824a98dd2e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28DALCLB"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28DALCLB"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-29T00:30:00Z",
-    "title": "Dallas vs Columbus",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "0b2b1d69-571a-4130-95e6-683864e57c09",
-      "coverage": {},
-      "home_team_id": "96b9bb0a-dac0-44cd-98f7-6a1b093eb9e9",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28SEAHOU",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "72bbcc28-3eab-5dbb-b90c-cb4aaa2f25c0",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28SEAHOU"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28SEAHOU"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-29T02:30:00Z",
-    "title": "Seattle vs Houston",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "9c798f74-bee5-48d2-989b-5017f0b41d20",
-      "coverage": {},
-      "home_team_id": "9600f0ab-7854-4067-8692-77a3ee22128a",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26NOV01LAFCMIN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "8743e86f-48bd-5da2-ad79-0e81f3eededf",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26NOV01LAFCMIN"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26NOV01LAFCMIN"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-02T01:30:00Z",
-    "title": "Los Angeles F vs Minnesota",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "ff6a1eff-a3c2-4d61-afc1-a57a3ea1a050",
-      "coverage": {},
-      "home_team_id": "a88c1376-454e-46d0-a974-1d9639dd6a18",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24CLBTOR",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "36c42ddd-4fa0-5cd9-b681-ccc4333d04f4",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24CLBTOR",
-      "KXMLSSPREAD-26OCT24CLBTOR",
-      "KXMLSTOTAL-26OCT24CLBTOR",
-      "KXMLSBTTS-26OCT24CLBTOR"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24CLBTOR",
-      "KXMLSSPREAD-26OCT24CLBTOR",
-      "KXMLSTOTAL-26OCT24CLBTOR",
-      "KXMLSBTTS-26OCT24CLBTOR"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T19:30:00Z",
-    "title": "Columbus vs Toronto",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a6ffe9ab-8773-4003-b3e6-e5b2a85f3922",
-      "coverage": {},
-      "home_team_id": "9600f0ab-7854-4067-8692-77a3ee22128a",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT25LAFCLAG",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "3a353be9-4b9a-57f8-9dff-5e350e7f2a88",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT25LAFCLAG",
-      "KXMLSSPREAD-26OCT25LAFCLAG",
-      "KXMLSTOTAL-26OCT25LAFCLAG",
-      "KXMLSBTTS-26OCT25LAFCLAG"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT25LAFCLAG",
-      "KXMLSSPREAD-26OCT25LAFCLAG",
-      "KXMLSTOTAL-26OCT25LAFCLAG",
-      "KXMLSBTTS-26OCT25LAFCLAG"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-26T01:00:00Z",
-    "title": "Los Angeles F vs Los Angeles G",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "0d8decc6-c81f-407a-aeaf-3877020182ce",
-      "coverage": {},
-      "home_team_id": "7e243b87-074f-4c80-8e50-5981c78a79a9",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28MIACIN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "abad9b95-5e1e-595c-98ca-3536a24a7fcf",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28MIACIN"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28MIACIN"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-28T23:30:00Z",
-    "title": "Miami vs Cincinnati",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "6c3994b0-7002-442c-b86e-9e95b3d48826",
-      "coverage": {},
-      "home_team_id": "26c2c786-7e85-4e51-ae96-8ccfa3c3f0b7",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28STLPOR",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ca4e45dc-e7f0-5a38-adbf-4668aeadff35",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28STLPOR"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28STLPOR"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-29T00:30:00Z",
-    "title": "Saint Louis vs Portland",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "974e0cbb-3dd1-43fe-ab90-065438c293d6",
-      "coverage": {},
-      "home_team_id": "0d8decc6-c81f-407a-aeaf-3877020182ce",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT31CINPHI",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "4b03e35b-1e4b-5f40-8799-e00c70c3365b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT31CINPHI"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT31CINPHI"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T18:00:00Z",
-    "title": "Cincinnati vs Philadelphia",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "3289f95d-da76-4de5-a8e8-c2c9c6cc1ed2",
-      "coverage": {},
-      "home_team_id": "c436f255-8d48-46b0-bc14-9807270b57ee",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT31NYCMTL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "dcb36cca-b314-5b3b-ab06-628ea9145a20",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT31NYCMTL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT31NYCMTL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T18:00:00Z",
-    "title": "New York City vs Montreal",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a24c84e6-5d57-4cc9-a8ef-d7ea2f6a3750",
-      "coverage": {},
-      "home_team_id": "a6ffe9ab-8773-4003-b3e6-e5b2a85f3922",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT31LAGATX",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "9921eb05-ddc1-5750-b79f-fe9ccb959a34",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT31LAGATX"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT31LAGATX"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T21:00:00Z",
-    "title": "Los Angeles G vs Austin",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a6f918b2-1142-4bd5-93b5-241aeb00c0d1",
-      "coverage": {},
-      "home_team_id": "2b8aba82-9e12-484d-bf31-e74951e7630c",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT31COLCHI",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "440fd815-248c-5f45-bbcf-93ba412412b3",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT31COLCHI"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT31COLCHI"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T01:30:00Z",
-    "title": "Colorado vs Chicago Fire",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
@@ -480,7 +57,391 @@
     "start_date": "2026-10-28T23:30:00Z",
     "title": "New England vs New York RB",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "4fd53484-2aa9-4431-91b4-59ab6172fa1c",
+      "coverage": {},
+      "home_team_id": "a0d8250b-a13f-4849-9844-4106ae45671f",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT31CLTORL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "b716ddc7-843d-5bcd-a0c5-38881f371c61",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT31CLTORL"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT31CLTORL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T17:00:00Z",
+    "title": "Charlotte vs Orlando",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "3289f95d-da76-4de5-a8e8-c2c9c6cc1ed2",
+      "coverage": {},
+      "home_team_id": "c436f255-8d48-46b0-bc14-9807270b57ee",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT31NYCMTL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "dcb36cca-b314-5b3b-ab06-628ea9145a20",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT31NYCMTL"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT31NYCMTL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T18:00:00Z",
+    "title": "New York City vs Montreal",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "f5d060a5-b503-4780-b6c6-af86b461de3a",
+      "coverage": {},
+      "home_team_id": "2f088540-9c53-49d5-b38b-c75321c3e738",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT31SJRSL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "477506ba-23f5-59c5-9613-c0bd1ca6d07c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT31SJRSL"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT31SJRSL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T21:00:00Z",
+    "title": "San Jose vs Salt Lake",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "ff6a1eff-a3c2-4d61-afc1-a57a3ea1a050",
+      "coverage": {},
+      "home_team_id": "067b4757-7229-4966-9878-7fb386b90b86",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26NOV01ATLTOR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "23bd7892-90ee-547e-8b92-35409fe2e3aa",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26NOV01ATLTOR"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26NOV01ATLTOR"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T21:30:00Z",
+    "title": "Atlanta vs Toronto",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "96b9bb0a-dac0-44cd-98f7-6a1b093eb9e9",
+      "coverage": {},
+      "home_team_id": "b3fea460-61a1-48c7-a27e-9a01c39cd113",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26NOV01VANSEA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "2738029c-a0c0-59d6-8f22-5809529f5ce7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26NOV01VANSEA"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26NOV01VANSEA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T21:30:00Z",
+    "title": "Vancouver vs Seattle",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "889fe1d4-492d-42a2-8b3e-d9cbffc4d405",
+      "coverage": {},
+      "home_team_id": "ff6a1eff-a3c2-4d61-afc1-a57a3ea1a050",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28TORDCU",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "31db6305-d79a-53d5-8c8e-bc2f8c76f638",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28TORDCU"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28TORDCU"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-28T23:30:00Z",
+    "title": "Toronto vs DC United",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "974e0cbb-3dd1-43fe-ab90-065438c293d6",
+      "coverage": {},
+      "home_team_id": "670bb865-5dea-407a-8735-e47df87367ae",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28NSHPHI",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7d17902d-5efb-59b6-a98b-5cebc97b5a14",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28NSHPHI"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28NSHPHI"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-29T00:30:00Z",
+    "title": "Nashville vs Philadelphia",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a6f918b2-1142-4bd5-93b5-241aeb00c0d1",
+      "coverage": {},
+      "home_team_id": "2b8aba82-9e12-484d-bf31-e74951e7630c",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT31COLCHI",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "440fd815-248c-5f45-bbcf-93ba412412b3",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT31COLCHI"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT31COLCHI"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T01:30:00Z",
+    "title": "Colorado vs Chicago Fire",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "81c226ef-e71a-41bd-ab9f-28d0ba555f71",
+      "coverage": {},
+      "home_team_id": "670bb865-5dea-407a-8735-e47df87367ae",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26NOV01NSHNYRB",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "699d65a9-11d7-5b2e-8f4c-0f0833c90c10",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26NOV01NSHNYRB"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26NOV01NSHNYRB"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T21:30:00Z",
+    "title": "Nashville vs New York RB",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "0b2b1d69-571a-4130-95e6-683864e57c09",
+      "coverage": {},
+      "home_team_id": "96b9bb0a-dac0-44cd-98f7-6a1b093eb9e9",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28SEAHOU",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "72bbcc28-3eab-5dbb-b90c-cb4aaa2f25c0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28SEAHOU"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28SEAHOU"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-29T02:30:00Z",
+    "title": "Seattle vs Houston",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "2f088540-9c53-49d5-b38b-c75321c3e738",
+      "coverage": {},
+      "home_team_id": "310d308b-19f3-4f87-8cf1-bf8a1d3cc1db",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24DALSJ",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f3fca869-5396-5c4a-ba06-3a0b23e8bac3",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT24DALSJ",
+      "KXMLSSPREAD-26OCT24DALSJ",
+      "KXMLSTOTAL-26OCT24DALSJ",
+      "KXMLSBTTS-26OCT24DALSJ"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT24DALSJ",
+      "KXMLSSPREAD-26OCT24DALSJ",
+      "KXMLSTOTAL-26OCT24DALSJ",
+      "KXMLSBTTS-26OCT24DALSJ"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T00:30:00Z",
+    "title": "Dallas vs San Jose",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "699450d2-1880-4f9d-bf7e-0ee9e83560dd",
+      "coverage": {},
+      "home_team_id": "9c798f74-bee5-48d2-989b-5017f0b41d20",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28MINSKC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ad31e1fe-d8cc-523c-9d7a-e902965ad423",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28MINSKC"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28MINSKC"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-29T00:30:00Z",
+    "title": "Minnesota vs Kansas City",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7e243b87-074f-4c80-8e50-5981c78a79a9",
+      "coverage": {},
+      "home_team_id": "5e1c3590-b0c1-415c-b127-d6a30676836b",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26NOV01NEMIA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "2d2b4e1f-1e2b-5576-ba35-fd1be37f59c9",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26NOV01NEMIA"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26NOV01NEMIA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-02T00:00:00Z",
+    "title": "New England vs Miami",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "9c798f74-bee5-48d2-989b-5017f0b41d20",
+      "coverage": {},
+      "home_team_id": "9600f0ab-7854-4067-8692-77a3ee22128a",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26NOV01LAFCMIN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "8743e86f-48bd-5da2-ad79-0e81f3eededf",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26NOV01LAFCMIN"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26NOV01LAFCMIN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-02T01:30:00Z",
+    "title": "Los Angeles F vs Minnesota",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
@@ -513,436 +474,40 @@
     "start_date": "2026-10-24T23:30:00Z",
     "title": "Philadelphia vs New England",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "b3fea460-61a1-48c7-a27e-9a01c39cd113",
+      "away_team_id": "26c2c786-7e85-4e51-ae96-8ccfa3c3f0b7",
       "coverage": {},
-      "home_team_id": "2b8aba82-9e12-484d-bf31-e74951e7630c",
+      "home_team_id": "f5d060a5-b503-4780-b6c6-af86b461de3a",
       "is_ko": false,
       "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24COLVAN",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24RSLSTL",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "88c01aee-d88f-58c7-a1e4-45968f3e1eb5",
+    "id": "c2109e6f-45c2-5026-8bec-7674baea7cbe",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXMLSGAME-26OCT24COLVAN",
-      "KXMLSSPREAD-26OCT24COLVAN",
-      "KXMLSTOTAL-26OCT24COLVAN",
-      "KXMLSBTTS-26OCT24COLVAN"
+      "KXMLSGAME-26OCT24RSLSTL",
+      "KXMLSSPREAD-26OCT24RSLSTL",
+      "KXMLSTOTAL-26OCT24RSLSTL",
+      "KXMLSBTTS-26OCT24RSLSTL"
     ],
     "related_event_tickers": [
-      "KXMLSGAME-26OCT24COLVAN",
-      "KXMLSSPREAD-26OCT24COLVAN",
-      "KXMLSTOTAL-26OCT24COLVAN",
-      "KXMLSBTTS-26OCT24COLVAN"
+      "KXMLSGAME-26OCT24RSLSTL",
+      "KXMLSSPREAD-26OCT24RSLSTL",
+      "KXMLSTOTAL-26OCT24RSLSTL",
+      "KXMLSBTTS-26OCT24RSLSTL"
     ],
     "source_ids": {},
     "start_date": "2026-10-25T00:30:00Z",
-    "title": "Colorado vs Vancouver",
+    "title": "Salt Lake vs Saint Louis",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "3289f95d-da76-4de5-a8e8-c2c9c6cc1ed2",
-      "coverage": {},
-      "home_team_id": "a0d8250b-a13f-4849-9844-4106ae45671f",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28CLTMTL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "cdc06c30-8bd2-58c2-b964-96c67e0d7b62",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28CLTMTL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28CLTMTL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-28T23:30:00Z",
-    "title": "Charlotte vs Montreal",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "b1edeac7-1e58-4473-b9ec-19bb827c10bf",
-      "coverage": {},
-      "home_team_id": "26c2c786-7e85-4e51-ae96-8ccfa3c3f0b7",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT31STLSD",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f0d23da5-8503-53f2-a660-80a93223b7d4",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT31STLSD"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT31STLSD"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T19:00:00Z",
-    "title": "Saint Louis vs San Diego FC",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "96b9bb0a-dac0-44cd-98f7-6a1b093eb9e9",
-      "coverage": {},
-      "home_team_id": "b3fea460-61a1-48c7-a27e-9a01c39cd113",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26NOV01VANSEA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "2738029c-a0c0-59d6-8f22-5809529f5ce7",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26NOV01VANSEA"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26NOV01VANSEA"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T21:30:00Z",
-    "title": "Vancouver vs Seattle",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7e243b87-074f-4c80-8e50-5981c78a79a9",
-      "coverage": {},
-      "home_team_id": "5e1c3590-b0c1-415c-b127-d6a30676836b",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26NOV01NEMIA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "2d2b4e1f-1e2b-5576-ba35-fd1be37f59c9",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26NOV01NEMIA"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26NOV01NEMIA"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-02T00:00:00Z",
-    "title": "New England vs Miami",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "4fd53484-2aa9-4431-91b4-59ab6172fa1c",
-      "coverage": {},
-      "home_team_id": "a0d8250b-a13f-4849-9844-4106ae45671f",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT31CLTORL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "b716ddc7-843d-5bcd-a0c5-38881f371c61",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT31CLTORL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT31CLTORL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T17:00:00Z",
-    "title": "Charlotte vs Orlando",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "9c798f74-bee5-48d2-989b-5017f0b41d20",
-      "coverage": {},
-      "home_team_id": "0b2b1d69-571a-4130-95e6-683864e57c09",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24HOUMIN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ce9c04ba-6d41-5d4b-a63b-94750d826356",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24HOUMIN",
-      "KXMLSSPREAD-26OCT24HOUMIN",
-      "KXMLSTOTAL-26OCT24HOUMIN",
-      "KXMLSBTTS-26OCT24HOUMIN"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24HOUMIN",
-      "KXMLSSPREAD-26OCT24HOUMIN",
-      "KXMLSTOTAL-26OCT24HOUMIN",
-      "KXMLSBTTS-26OCT24HOUMIN"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T00:30:00Z",
-    "title": "Houston vs Minnesota",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "067b4757-7229-4966-9878-7fb386b90b86",
-      "coverage": {},
-      "home_team_id": "c436f255-8d48-46b0-bc14-9807270b57ee",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28NYCATL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "335e7ecb-9e94-507f-af6c-df0d0a24afa4",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28NYCATL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28NYCATL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-28T23:30:00Z",
-    "title": "New York City vs Atlanta",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "b1edeac7-1e58-4473-b9ec-19bb827c10bf",
-      "coverage": {},
-      "home_team_id": "b3fea460-61a1-48c7-a27e-9a01c39cd113",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28VANSD",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "57390f48-7d2e-562f-ad34-d9dcdfdcec40",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28VANSD"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28VANSD"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-29T02:30:00Z",
-    "title": "Vancouver vs San Diego FC",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "889fe1d4-492d-42a2-8b3e-d9cbffc4d405",
-      "coverage": {},
-      "home_team_id": "a88c1376-454e-46d0-a974-1d9639dd6a18",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT31CLBDCU",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c6522f35-f202-508c-86a8-b58086553f4d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT31CLBDCU"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT31CLBDCU"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T18:00:00Z",
-    "title": "Columbus vs DC United",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "310d308b-19f3-4f87-8cf1-bf8a1d3cc1db",
-      "coverage": {},
-      "home_team_id": "699450d2-1880-4f9d-bf7e-0ee9e83560dd",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT31SKCDAL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "a1919339-0f73-5d8a-b425-1e2e5660ca99",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT31SKCDAL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT31SKCDAL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T19:00:00Z",
-    "title": "Kansas City vs Dallas",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "c436f255-8d48-46b0-bc14-9807270b57ee",
-      "coverage": {},
-      "home_team_id": "4fd53484-2aa9-4431-91b4-59ab6172fa1c",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24ORLNYC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c5207e60-2f87-54e0-b673-07aa93ba46e8",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24ORLNYC",
-      "KXMLSSPREAD-26OCT24ORLNYC",
-      "KXMLSTOTAL-26OCT24ORLNYC",
-      "KXMLSBTTS-26OCT24ORLNYC"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24ORLNYC",
-      "KXMLSSPREAD-26OCT24ORLNYC",
-      "KXMLSTOTAL-26OCT24ORLNYC",
-      "KXMLSBTTS-26OCT24ORLNYC"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T23:30:00Z",
-    "title": "Orlando vs New York City",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "889fe1d4-492d-42a2-8b3e-d9cbffc4d405",
-      "coverage": {},
-      "home_team_id": "ff6a1eff-a3c2-4d61-afc1-a57a3ea1a050",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28TORDCU",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "31db6305-d79a-53d5-8c8e-bc2f8c76f638",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28TORDCU"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28TORDCU"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-28T23:30:00Z",
-    "title": "Toronto vs DC United",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "f5d060a5-b503-4780-b6c6-af86b461de3a",
-      "coverage": {},
-      "home_team_id": "a24c84e6-5d57-4cc9-a8ef-d7ea2f6a3750",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28ATXRSL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "6ffd18d1-4a38-50dd-b482-b691d5529ad6",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28ATXRSL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28ATXRSL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-29T00:30:00Z",
-    "title": "Austin vs Salt Lake",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a24c84e6-5d57-4cc9-a8ef-d7ea2f6a3750",
-      "coverage": {},
-      "home_team_id": "699450d2-1880-4f9d-bf7e-0ee9e83560dd",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24SKCATX",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "5c4385f4-5c60-5048-a0db-6f4c710f8ae2",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24SKCATX",
-      "KXMLSSPREAD-26OCT24SKCATX",
-      "KXMLSTOTAL-26OCT24SKCATX",
-      "KXMLSBTTS-26OCT24SKCATX"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24SKCATX",
-      "KXMLSSPREAD-26OCT24SKCATX",
-      "KXMLSTOTAL-26OCT24SKCATX",
-      "KXMLSBTTS-26OCT24SKCATX"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T00:30:00Z",
-    "title": "Kansas City vs Austin",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
@@ -975,7 +540,709 @@
     "start_date": "2026-10-25T02:30:00Z",
     "title": "San Diego FC vs Seattle",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "3289f95d-da76-4de5-a8e8-c2c9c6cc1ed2",
+      "coverage": {},
+      "home_team_id": "a0d8250b-a13f-4849-9844-4106ae45671f",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28CLTMTL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "cdc06c30-8bd2-58c2-b964-96c67e0d7b62",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28CLTMTL"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28CLTMTL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-28T23:30:00Z",
+    "title": "Charlotte vs Montreal",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "067b4757-7229-4966-9878-7fb386b90b86",
+      "coverage": {},
+      "home_team_id": "c436f255-8d48-46b0-bc14-9807270b57ee",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28NYCATL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "335e7ecb-9e94-507f-af6c-df0d0a24afa4",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28NYCATL"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28NYCATL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-28T23:30:00Z",
+    "title": "New York City vs Atlanta",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "4fd53484-2aa9-4431-91b4-59ab6172fa1c",
+      "coverage": {},
+      "home_team_id": "a6f918b2-1142-4bd5-93b5-241aeb00c0d1",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28CHIORL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "6677f545-ded9-5fef-8982-fe0e4844352c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28CHIORL"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28CHIORL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-29T00:30:00Z",
+    "title": "Chicago Fire vs Orlando",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "6c3994b0-7002-442c-b86e-9e95b3d48826",
+      "coverage": {},
+      "home_team_id": "26c2c786-7e85-4e51-ae96-8ccfa3c3f0b7",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28STLPOR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ca4e45dc-e7f0-5a38-adbf-4668aeadff35",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28STLPOR"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28STLPOR"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-29T00:30:00Z",
+    "title": "Saint Louis vs Portland",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "b1edeac7-1e58-4473-b9ec-19bb827c10bf",
+      "coverage": {},
+      "home_team_id": "26c2c786-7e85-4e51-ae96-8ccfa3c3f0b7",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT31STLSD",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f0d23da5-8503-53f2-a660-80a93223b7d4",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT31STLSD"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT31STLSD"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T19:00:00Z",
+    "title": "Saint Louis vs San Diego FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "670bb865-5dea-407a-8735-e47df87367ae",
+      "coverage": {},
+      "home_team_id": "3289f95d-da76-4de5-a8e8-c2c9c6cc1ed2",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24MTLNSH",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "370c48f5-3e80-51bc-9eec-99473767648c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT24MTLNSH",
+      "KXMLSSPREAD-26OCT24MTLNSH",
+      "KXMLSTOTAL-26OCT24MTLNSH",
+      "KXMLSBTTS-26OCT24MTLNSH"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT24MTLNSH",
+      "KXMLSSPREAD-26OCT24MTLNSH",
+      "KXMLSTOTAL-26OCT24MTLNSH",
+      "KXMLSBTTS-26OCT24MTLNSH"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T17:30:00Z",
+    "title": "Montreal vs Nashville",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "ff6a1eff-a3c2-4d61-afc1-a57a3ea1a050",
+      "coverage": {},
+      "home_team_id": "a88c1376-454e-46d0-a974-1d9639dd6a18",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24CLBTOR",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "36c42ddd-4fa0-5cd9-b681-ccc4333d04f4",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT24CLBTOR",
+      "KXMLSSPREAD-26OCT24CLBTOR",
+      "KXMLSTOTAL-26OCT24CLBTOR",
+      "KXMLSBTTS-26OCT24CLBTOR"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT24CLBTOR",
+      "KXMLSSPREAD-26OCT24CLBTOR",
+      "KXMLSTOTAL-26OCT24CLBTOR",
+      "KXMLSBTTS-26OCT24CLBTOR"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T19:30:00Z",
+    "title": "Columbus vs Toronto",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c436f255-8d48-46b0-bc14-9807270b57ee",
+      "coverage": {},
+      "home_team_id": "4fd53484-2aa9-4431-91b4-59ab6172fa1c",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24ORLNYC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c5207e60-2f87-54e0-b673-07aa93ba46e8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT24ORLNYC",
+      "KXMLSSPREAD-26OCT24ORLNYC",
+      "KXMLSTOTAL-26OCT24ORLNYC",
+      "KXMLSBTTS-26OCT24ORLNYC"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT24ORLNYC",
+      "KXMLSSPREAD-26OCT24ORLNYC",
+      "KXMLSTOTAL-26OCT24ORLNYC",
+      "KXMLSBTTS-26OCT24ORLNYC"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T23:30:00Z",
+    "title": "Orlando vs New York City",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "9c798f74-bee5-48d2-989b-5017f0b41d20",
+      "coverage": {},
+      "home_team_id": "0b2b1d69-571a-4130-95e6-683864e57c09",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24HOUMIN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ce9c04ba-6d41-5d4b-a63b-94750d826356",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT24HOUMIN",
+      "KXMLSSPREAD-26OCT24HOUMIN",
+      "KXMLSTOTAL-26OCT24HOUMIN",
+      "KXMLSBTTS-26OCT24HOUMIN"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT24HOUMIN",
+      "KXMLSSPREAD-26OCT24HOUMIN",
+      "KXMLSTOTAL-26OCT24HOUMIN",
+      "KXMLSBTTS-26OCT24HOUMIN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T00:30:00Z",
+    "title": "Houston vs Minnesota",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "310d308b-19f3-4f87-8cf1-bf8a1d3cc1db",
+      "coverage": {},
+      "home_team_id": "699450d2-1880-4f9d-bf7e-0ee9e83560dd",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT31SKCDAL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "a1919339-0f73-5d8a-b425-1e2e5660ca99",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT31SKCDAL"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT31SKCDAL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T19:00:00Z",
+    "title": "Kansas City vs Dallas",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "0b2b1d69-571a-4130-95e6-683864e57c09",
+      "coverage": {},
+      "home_team_id": "6c3994b0-7002-442c-b86e-9e95b3d48826",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26NOV01PORHOU",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "45a7dfb2-f792-5eba-8882-1c2d8b1e97fb",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26NOV01PORHOU"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26NOV01PORHOU"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-02T02:45:00Z",
+    "title": "Portland vs Houston",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7e243b87-074f-4c80-8e50-5981c78a79a9",
+      "coverage": {},
+      "home_team_id": "81c226ef-e71a-41bd-ab9f-28d0ba555f71",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24NYRBMIA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "78886c8d-0932-56e9-9a2c-d2aa0e272f5e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT24NYRBMIA",
+      "KXMLSSPREAD-26OCT24NYRBMIA",
+      "KXMLSTOTAL-26OCT24NYRBMIA",
+      "KXMLSBTTS-26OCT24NYRBMIA"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT24NYRBMIA",
+      "KXMLSSPREAD-26OCT24NYRBMIA",
+      "KXMLSTOTAL-26OCT24NYRBMIA",
+      "KXMLSBTTS-26OCT24NYRBMIA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T21:30:00Z",
+    "title": "New York RB vs Miami",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a6f918b2-1142-4bd5-93b5-241aeb00c0d1",
+      "coverage": {},
+      "home_team_id": "067b4757-7229-4966-9878-7fb386b90b86",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24ATLCHI",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "64118fa9-e6c4-5feb-bade-aab5509ceebf",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT24ATLCHI",
+      "KXMLSSPREAD-26OCT24ATLCHI",
+      "KXMLSTOTAL-26OCT24ATLCHI",
+      "KXMLSBTTS-26OCT24ATLCHI"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT24ATLCHI",
+      "KXMLSSPREAD-26OCT24ATLCHI",
+      "KXMLSTOTAL-26OCT24ATLCHI",
+      "KXMLSBTTS-26OCT24ATLCHI"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T23:30:00Z",
+    "title": "Atlanta vs Chicago Fire",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "b3fea460-61a1-48c7-a27e-9a01c39cd113",
+      "coverage": {},
+      "home_team_id": "2b8aba82-9e12-484d-bf31-e74951e7630c",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24COLVAN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "88c01aee-d88f-58c7-a1e4-45968f3e1eb5",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT24COLVAN",
+      "KXMLSSPREAD-26OCT24COLVAN",
+      "KXMLSTOTAL-26OCT24COLVAN",
+      "KXMLSBTTS-26OCT24COLVAN"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT24COLVAN",
+      "KXMLSSPREAD-26OCT24COLVAN",
+      "KXMLSTOTAL-26OCT24COLVAN",
+      "KXMLSBTTS-26OCT24COLVAN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T00:30:00Z",
+    "title": "Colorado vs Vancouver",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a24c84e6-5d57-4cc9-a8ef-d7ea2f6a3750",
+      "coverage": {},
+      "home_team_id": "699450d2-1880-4f9d-bf7e-0ee9e83560dd",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT24SKCATX",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "5c4385f4-5c60-5048-a0db-6f4c710f8ae2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT24SKCATX",
+      "KXMLSSPREAD-26OCT24SKCATX",
+      "KXMLSTOTAL-26OCT24SKCATX",
+      "KXMLSBTTS-26OCT24SKCATX"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT24SKCATX",
+      "KXMLSSPREAD-26OCT24SKCATX",
+      "KXMLSTOTAL-26OCT24SKCATX",
+      "KXMLSBTTS-26OCT24SKCATX"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T00:30:00Z",
+    "title": "Kansas City vs Austin",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a6ffe9ab-8773-4003-b3e6-e5b2a85f3922",
+      "coverage": {},
+      "home_team_id": "9600f0ab-7854-4067-8692-77a3ee22128a",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT25LAFCLAG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "3a353be9-4b9a-57f8-9dff-5e350e7f2a88",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT25LAFCLAG",
+      "KXMLSSPREAD-26OCT25LAFCLAG",
+      "KXMLSTOTAL-26OCT25LAFCLAG",
+      "KXMLSBTTS-26OCT25LAFCLAG"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT25LAFCLAG",
+      "KXMLSSPREAD-26OCT25LAFCLAG",
+      "KXMLSTOTAL-26OCT25LAFCLAG",
+      "KXMLSBTTS-26OCT25LAFCLAG"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-26T01:00:00Z",
+    "title": "Los Angeles F vs Los Angeles G",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a88c1376-454e-46d0-a974-1d9639dd6a18",
+      "coverage": {},
+      "home_team_id": "310d308b-19f3-4f87-8cf1-bf8a1d3cc1db",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28DALCLB",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f73db6f2-d805-5028-a4b9-46824a98dd2e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28DALCLB"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28DALCLB"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-29T00:30:00Z",
+    "title": "Dallas vs Columbus",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "b1edeac7-1e58-4473-b9ec-19bb827c10bf",
+      "coverage": {},
+      "home_team_id": "b3fea460-61a1-48c7-a27e-9a01c39cd113",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28VANSD",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "57390f48-7d2e-562f-ad34-d9dcdfdcec40",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28VANSD"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28VANSD"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-29T02:30:00Z",
+    "title": "Vancouver vs San Diego FC",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "974e0cbb-3dd1-43fe-ab90-065438c293d6",
+      "coverage": {},
+      "home_team_id": "0d8decc6-c81f-407a-aeaf-3877020182ce",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT31CINPHI",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "4b03e35b-1e4b-5f40-8799-e00c70c3365b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT31CINPHI"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT31CINPHI"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T18:00:00Z",
+    "title": "Cincinnati vs Philadelphia",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "0d8decc6-c81f-407a-aeaf-3877020182ce",
+      "coverage": {},
+      "home_team_id": "7e243b87-074f-4c80-8e50-5981c78a79a9",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28MIACIN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "abad9b95-5e1e-595c-98ca-3536a24a7fcf",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28MIACIN"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28MIACIN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-28T23:30:00Z",
+    "title": "Miami vs Cincinnati",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "f5d060a5-b503-4780-b6c6-af86b461de3a",
+      "coverage": {},
+      "home_team_id": "a24c84e6-5d57-4cc9-a8ef-d7ea2f6a3750",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28ATXRSL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "6ffd18d1-4a38-50dd-b482-b691d5529ad6",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28ATXRSL"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28ATXRSL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-29T00:30:00Z",
+    "title": "Austin vs Salt Lake",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "2b8aba82-9e12-484d-bf31-e74951e7630c",
+      "coverage": {},
+      "home_team_id": "2f088540-9c53-49d5-b38b-c75321c3e738",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT28SJCOL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "09930731-bdac-5f91-90ad-d4b6e22ebb70",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT28SJCOL"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT28SJCOL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-29T02:30:00Z",
+    "title": "San Jose vs Colorado",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "889fe1d4-492d-42a2-8b3e-d9cbffc4d405",
+      "coverage": {},
+      "home_team_id": "a88c1376-454e-46d0-a974-1d9639dd6a18",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT31CLBDCU",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c6522f35-f202-508c-86a8-b58086553f4d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT31CLBDCU"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT31CLBDCU"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T18:00:00Z",
+    "title": "Columbus vs DC United",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a24c84e6-5d57-4cc9-a8ef-d7ea2f6a3750",
+      "coverage": {},
+      "home_team_id": "a6ffe9ab-8773-4003-b3e6-e5b2a85f3922",
+      "is_ko": false,
+      "league": "MLS",
+      "main_game_event_ticker": "KXMLSGAME-26OCT31LAGATX",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "9921eb05-ddc1-5750-b79f-fe9ccb959a34",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXMLSGAME-26OCT31LAGATX"
+    ],
+    "related_event_tickers": [
+      "KXMLSGAME-26OCT31LAGATX"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T21:00:00Z",
+    "title": "Los Angeles G vs Austin",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
@@ -1028,273 +1295,6 @@
     "start_date": "2026-10-21T23:00:00Z",
     "title": "Cincinnati vs DC United",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "670bb865-5dea-407a-8735-e47df87367ae",
-      "coverage": {},
-      "home_team_id": "3289f95d-da76-4de5-a8e8-c2c9c6cc1ed2",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24MTLNSH",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "370c48f5-3e80-51bc-9eec-99473767648c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24MTLNSH",
-      "KXMLSSPREAD-26OCT24MTLNSH",
-      "KXMLSTOTAL-26OCT24MTLNSH",
-      "KXMLSBTTS-26OCT24MTLNSH"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24MTLNSH",
-      "KXMLSSPREAD-26OCT24MTLNSH",
-      "KXMLSTOTAL-26OCT24MTLNSH",
-      "KXMLSBTTS-26OCT24MTLNSH"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T17:30:00Z",
-    "title": "Montreal vs Nashville",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "2f088540-9c53-49d5-b38b-c75321c3e738",
-      "coverage": {},
-      "home_team_id": "310d308b-19f3-4f87-8cf1-bf8a1d3cc1db",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24DALSJ",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f3fca869-5396-5c4a-ba06-3a0b23e8bac3",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24DALSJ",
-      "KXMLSSPREAD-26OCT24DALSJ",
-      "KXMLSTOTAL-26OCT24DALSJ",
-      "KXMLSBTTS-26OCT24DALSJ"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24DALSJ",
-      "KXMLSSPREAD-26OCT24DALSJ",
-      "KXMLSTOTAL-26OCT24DALSJ",
-      "KXMLSBTTS-26OCT24DALSJ"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T00:30:00Z",
-    "title": "Dallas vs San Jose",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "ff6a1eff-a3c2-4d61-afc1-a57a3ea1a050",
-      "coverage": {},
-      "home_team_id": "067b4757-7229-4966-9878-7fb386b90b86",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26NOV01ATLTOR",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "23bd7892-90ee-547e-8b92-35409fe2e3aa",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26NOV01ATLTOR"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26NOV01ATLTOR"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T21:30:00Z",
-    "title": "Atlanta vs Toronto",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "81c226ef-e71a-41bd-ab9f-28d0ba555f71",
-      "coverage": {},
-      "home_team_id": "670bb865-5dea-407a-8735-e47df87367ae",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26NOV01NSHNYRB",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "699d65a9-11d7-5b2e-8f4c-0f0833c90c10",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26NOV01NSHNYRB"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26NOV01NSHNYRB"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T21:30:00Z",
-    "title": "Nashville vs New York RB",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "0b2b1d69-571a-4130-95e6-683864e57c09",
-      "coverage": {},
-      "home_team_id": "6c3994b0-7002-442c-b86e-9e95b3d48826",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26NOV01PORHOU",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "45a7dfb2-f792-5eba-8882-1c2d8b1e97fb",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26NOV01PORHOU"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26NOV01PORHOU"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-02T02:45:00Z",
-    "title": "Portland vs Houston",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "26c2c786-7e85-4e51-ae96-8ccfa3c3f0b7",
-      "coverage": {},
-      "home_team_id": "f5d060a5-b503-4780-b6c6-af86b461de3a",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24RSLSTL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c2109e6f-45c2-5026-8bec-7674baea7cbe",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24RSLSTL",
-      "KXMLSSPREAD-26OCT24RSLSTL",
-      "KXMLSTOTAL-26OCT24RSLSTL",
-      "KXMLSBTTS-26OCT24RSLSTL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24RSLSTL",
-      "KXMLSSPREAD-26OCT24RSLSTL",
-      "KXMLSTOTAL-26OCT24RSLSTL",
-      "KXMLSBTTS-26OCT24RSLSTL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T00:30:00Z",
-    "title": "Salt Lake vs Saint Louis",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a0d8250b-a13f-4849-9844-4106ae45671f",
-      "coverage": {},
-      "home_team_id": "6c3994b0-7002-442c-b86e-9e95b3d48826",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT24PORCLT",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "9b02a52d-9314-50b4-8cb1-0d997ab08ce3",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT24PORCLT",
-      "KXMLSSPREAD-26OCT24PORCLT",
-      "KXMLSTOTAL-26OCT24PORCLT",
-      "KXMLSBTTS-26OCT24PORCLT"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT24PORCLT",
-      "KXMLSSPREAD-26OCT24PORCLT",
-      "KXMLSTOTAL-26OCT24PORCLT",
-      "KXMLSBTTS-26OCT24PORCLT"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T02:30:00Z",
-    "title": "Portland vs Charlotte",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "4fd53484-2aa9-4431-91b4-59ab6172fa1c",
-      "coverage": {},
-      "home_team_id": "a6f918b2-1142-4bd5-93b5-241aeb00c0d1",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28CHIORL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "6677f545-ded9-5fef-8982-fe0e4844352c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28CHIORL"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28CHIORL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-29T00:30:00Z",
-    "title": "Chicago Fire vs Orlando",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "699450d2-1880-4f9d-bf7e-0ee9e83560dd",
-      "coverage": {},
-      "home_team_id": "9c798f74-bee5-48d2-989b-5017f0b41d20",
-      "is_ko": false,
-      "league": "MLS",
-      "main_game_event_ticker": "KXMLSGAME-26OCT28MINSKC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ad31e1fe-d8cc-523c-9d7a-e902965ad423",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXMLSGAME-26OCT28MINSKC"
-    ],
-    "related_event_tickers": [
-      "KXMLSGAME-26OCT28MINSKC"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-29T00:30:00Z",
-    "title": "Minnesota vs Kansas City",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   }
 ]

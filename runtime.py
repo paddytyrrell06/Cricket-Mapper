@@ -29,9 +29,10 @@ class MarketRuntime:
     max_skew_seconds = 5
     thin_probe_seconds = 60
 
-    def __init__(self, root: Path, *, collector=None):
+    def __init__(self, root: Path, *, collector=None, recorder=None):
         self.root = Path(root).resolve()
         self.collector = collector or Q.enrich_quotes
+        self.recorder = recorder
         self._lock = threading.RLock()
         self._refresh_lock = threading.Lock()
         self._rows = []
@@ -116,6 +117,7 @@ class MarketRuntime:
         with self._lock:
             self._publish(datetime.now(timezone.utc), markets=markets, template_rows=rows)
             self._raw, self._raw_index, self._fee_context = raw, raw_index, context
+            self._assets = assets
             self._fingerprint = fingerprint
             self._probe_times.clear()
             self._watchlist.intersection_update(record["key"] for record in self._records)
@@ -211,6 +213,34 @@ class MarketRuntime:
                                "warnings": warnings[:20],
                                "checked_at": datetime.now(timezone.utc).isoformat(),
                                "refresh_ms": round((time.perf_counter() - started) * 1000, 3)}
+                recording_rows, assets = self.research_rows()
+            if self.recorder is not None:
+                try:
+                    frame_id = self.recorder.record(recording_rows, assets=assets)
+                    with self._lock:
+                        self._stats["recorded_frame_id"] = frame_id
+                except Exception:
+                    # A full disk/locked research database must not stop quotes.
+                    with self._lock:
+                        self._stats["recording_error"] = "Research recording failed; quote display remains available"
+
+    def research_rows(self):
+        with self._lock:
+            rows = [dict(row) for row in self._rows]
+            for row in rows:
+                for venue in VENUES:
+                    raw = self._raw_index.get((venue, row.get(venue + "_market_id")), {})
+                    details = json.loads(row.get(venue + "_quote_details") or "{}")
+                    row[venue + "_volume"] = details.get("quote_volume", raw.get("volume_fp", raw.get("volumeNum", raw.get("volume"))))
+                    row[venue + "_volume_time"] = details.get("quote_metadata_time", raw.get("_collected_at_utc"))
+                    row[venue + "_market_status"] = details.get("quote_market_status") or (raw.get("status") if venue == "kalshi" else (
+                        "closed" if raw.get("closed") is True else "active" if raw.get("active") is True else None)
+                    )
+                    row[venue + "_metadata_time"] = details.get("quote_metadata_time", raw.get("_collected_at_utc"))
+                    result = details.get("quote_settlement_result", raw.get("result"))
+                    if result in ("yes", "no"):
+                        row[venue + "_settlement_result"] = result
+            return rows, dict(self._assets)
 
     def settings(self):
         with self._lock:

@@ -2,60 +2,6 @@
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "468b41a6-6487-43ce-b6ca-4ee5953b3b06",
-      "coverage": {},
-      "home_team_id": "bbafe881-978e-4eaa-b6d3-21fb6537d0af",
-      "is_ko": false,
-      "league": "Liga Portugal",
-      "main_game_event_ticker": "KXLIGAPORTUGALGAME-26OCT25SPOACV",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "6a9b1944-975f-538d-a245-468c07341ad1",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAPORTUGALGAME-26OCT25SPOACV"
-    ],
-    "related_event_tickers": [
-      "KXLIGAPORTUGALGAME-26OCT25SPOACV"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T20:30:00Z",
-    "title": "Sporting CP vs Viseu",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "dca44d67-d382-4a24-b504-2839f6e59cb6",
-      "coverage": {},
-      "home_team_id": "0d439835-fa4d-4722-ba44-e321fc36b5f7",
-      "is_ko": false,
-      "league": "Liga Portugal",
-      "main_game_event_ticker": "KXLIGAPORTUGALGAME-26OCT26SCLBEN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f09dc24e-e25d-5cbf-87ca-0ab42ae85577",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAPORTUGALGAME-26OCT26SCLBEN"
-    ],
-    "related_event_tickers": [
-      "KXLIGAPORTUGALGAME-26OCT26SCLBEN"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-26T18:45:00Z",
-    "title": "Santa Clara Azores vs SL Benfica",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
       "away_team_id": "f7ef567e-a7c4-4ae3-9709-9e2e2628be40",
       "coverage": {},
       "home_team_id": "c03fe83a-b659-411e-a820-0a0f70901f13",
@@ -84,61 +30,7 @@
     "start_date": "2026-10-23T19:45:00Z",
     "title": "Guimaraes vs Madeira",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "aae4ed5f-78d2-4205-a12a-408a8d368782",
-      "coverage": {},
-      "home_team_id": "34188565-7463-436a-a6fc-c98b053d5a40",
-      "is_ko": false,
-      "league": "Liga Portugal",
-      "main_game_event_ticker": "KXLIGAPORTUGALGAME-26OCT24GILFCP",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "4d2f144c-2a8a-5fa8-aa39-01e75ab695f0",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAPORTUGALGAME-26OCT24GILFCP"
-    ],
-    "related_event_tickers": [
-      "KXLIGAPORTUGALGAME-26OCT24GILFCP"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T19:30:00Z",
-    "title": "Vicente Barcelos vs Porto",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "9b5e7d84-3417-42dd-809e-5c73cff563bf",
-      "coverage": {},
-      "home_team_id": "cc07030e-0a8f-40a5-9beb-9a93a0de67f3",
-      "is_ko": false,
-      "league": "Liga Portugal",
-      "main_game_event_ticker": "KXLIGAPORTUGALGAME-26OCT25RAVFAM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "edfbb6c7-09e5-5bd4-8338-5bc2ee4bcb56",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAPORTUGALGAME-26OCT25RAVFAM"
-    ],
-    "related_event_tickers": [
-      "KXLIGAPORTUGALGAME-26OCT25RAVFAM"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T18:00:00Z",
-    "title": "Rio Ave vs Famalicao",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
@@ -165,7 +57,88 @@
     "start_date": "2026-10-24T14:30:00Z",
     "title": "Estrela Amadora vs Casa Pia",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "aae4ed5f-78d2-4205-a12a-408a8d368782",
+      "coverage": {},
+      "home_team_id": "34188565-7463-436a-a6fc-c98b053d5a40",
+      "is_ko": false,
+      "league": "Liga Portugal",
+      "main_game_event_ticker": "KXLIGAPORTUGALGAME-26OCT24GILFCP",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "4d2f144c-2a8a-5fa8-aa39-01e75ab695f0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAPORTUGALGAME-26OCT24GILFCP"
+    ],
+    "related_event_tickers": [
+      "KXLIGAPORTUGALGAME-26OCT24GILFCP"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T19:30:00Z",
+    "title": "Vicente Barcelos vs Porto",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "9b5e7d84-3417-42dd-809e-5c73cff563bf",
+      "coverage": {},
+      "home_team_id": "cc07030e-0a8f-40a5-9beb-9a93a0de67f3",
+      "is_ko": false,
+      "league": "Liga Portugal",
+      "main_game_event_ticker": "KXLIGAPORTUGALGAME-26OCT25RAVFAM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "edfbb6c7-09e5-5bd4-8338-5bc2ee4bcb56",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAPORTUGALGAME-26OCT25RAVFAM"
+    ],
+    "related_event_tickers": [
+      "KXLIGAPORTUGALGAME-26OCT25RAVFAM"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T18:00:00Z",
+    "title": "Rio Ave vs Famalicao",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "468b41a6-6487-43ce-b6ca-4ee5953b3b06",
+      "coverage": {},
+      "home_team_id": "bbafe881-978e-4eaa-b6d3-21fb6537d0af",
+      "is_ko": false,
+      "league": "Liga Portugal",
+      "main_game_event_ticker": "KXLIGAPORTUGALGAME-26OCT25SPOACV",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "6a9b1944-975f-538d-a245-468c07341ad1",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAPORTUGALGAME-26OCT25SPOACV"
+    ],
+    "related_event_tickers": [
+      "KXLIGAPORTUGALGAME-26OCT25SPOACV"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T20:30:00Z",
+    "title": "Sporting CP vs Viseu",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
@@ -192,7 +165,7 @@
     "start_date": "2026-10-24T17:00:00Z",
     "title": "Alverca vs Arouca",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
@@ -219,7 +192,7 @@
     "start_date": "2026-10-25T15:30:00Z",
     "title": "Estoril vs Moreirense",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
@@ -246,6 +219,33 @@
     "start_date": "2026-10-25T18:00:00Z",
     "title": "Nacional vs Braga",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "dca44d67-d382-4a24-b504-2839f6e59cb6",
+      "coverage": {},
+      "home_team_id": "0d439835-fa4d-4722-ba44-e321fc36b5f7",
+      "is_ko": false,
+      "league": "Liga Portugal",
+      "main_game_event_ticker": "KXLIGAPORTUGALGAME-26OCT26SCLBEN",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f09dc24e-e25d-5cbf-87ca-0ab42ae85577",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAPORTUGALGAME-26OCT26SCLBEN"
+    ],
+    "related_event_tickers": [
+      "KXLIGAPORTUGALGAME-26OCT26SCLBEN"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-26T18:45:00Z",
+    "title": "Santa Clara Azores vs SL Benfica",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   }
 ]

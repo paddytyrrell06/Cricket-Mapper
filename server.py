@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sqlite3
 import subprocess
 import sys
 import threading
@@ -134,7 +135,7 @@ class TerminalServer(ThreadingHTTPServer):
     daemon_threads = True
     allow_reuse_address = True
 
-    def __init__(self, port: int = 8765, *, root: Path = ROOT, refresh=None, runtime=None):
+    def __init__(self, port: int = 8765, *, root: Path = ROOT, refresh=None, runtime=None, research=None):
         self.root = Path(root).resolve()
         self.runtime = runtime
         if refresh is None and runtime is None:
@@ -144,6 +145,19 @@ class TerminalServer(ThreadingHTTPServer):
             except (OSError, ValueError, KeyError):
                 self.runtime = None
         self.refresh = refresh or QuoteRefresh(self.root, runtime=self.runtime)
+        self.research = research
+        if research is None and refresh is None:
+            try:
+                from research_store import ResearchStore
+                from research import ResearchService
+                store = ResearchStore(self.root / "data/eventlens.sqlite3")
+                if (self.root / "output/data/market_map.csv").exists():
+                    store.import_snapshot(self.root / "output/data")
+                self.research = ResearchService(self.root, store, self.runtime)
+                if self.runtime is not None:
+                    self.runtime.recorder = store
+            except (OSError, ValueError, sqlite3.Error) as exc:
+                print("Research storage unavailable: " + type(exc).__name__, file=sys.stderr)
         self._assets: dict[str, bytes] = {}
         self._asset_lock = threading.Lock()
         # Bind only to IPv4 loopback; exposing this control endpoint is unsupported.
@@ -201,6 +215,27 @@ class TerminalHandler(BaseHTTPRequestHandler):
             return
         parsed_url = urlsplit(self.path)
         path = parsed_url.path
+        if path == "/research":
+            try:
+                body = (ROOT / "research.html").read_bytes()
+            except FileNotFoundError:
+                self._json(503, {"error": "Research page unavailable"}, head=head)
+                return
+            self._send(200, body, "text/html; charset=utf-8", head=head)
+            return
+        if path.startswith("/api/research/") and self.server.research is not None:
+            try:
+                query = parse_qs(parsed_url.query)
+                if path == "/api/research/export":
+                    self._send(200, self.server.research.export(query.get("dataset", [""])[0]), "text/csv; charset=utf-8", head=head)
+                    return
+                result = self.server.research.get(path, query)
+                if result is not None:
+                    self._json(200, result, head=head)
+                    return
+            except (ValueError, TypeError, KeyError):
+                self._json(400, {"error": "Invalid research query"}, head=head)
+                return
         if path == "/api/status":
             self._json(HTTPStatus.OK, self.server.refresh.status(), head=head)
             return
@@ -238,7 +273,8 @@ class TerminalHandler(BaseHTTPRequestHandler):
         if not self._host_valid():
             self._json(HTTPStatus.FORBIDDEN, {"error": "Invalid local host"})
             return
-        if self.path not in {"/api/refresh", "/api/settings"}:
+        research_paths = {"/api/research/discover", "/api/research/import", "/api/research/book", "/api/research/candles"}
+        if self.path not in {"/api/refresh", "/api/settings"} | research_paths:
             self._json(HTTPStatus.NOT_FOUND, {"error": "Not found"})
             return
         expected_origin = "http://" + self.headers["Host"]
@@ -266,6 +302,22 @@ class TerminalHandler(BaseHTTPRequestHandler):
                 raise ValueError
         except (ValueError, OSError):
             self._json(HTTPStatus.BAD_REQUEST, {"error": "Refresh body must be {}"})
+            return
+        if self.path in research_paths:
+            if self.server.research is None:
+                self._json(503, {"error": "Research storage unavailable"})
+                return
+            try:
+                self._json(200, self.server.research.post(self.path, body))
+            except (ValueError, TypeError, KeyError) as exc:
+                self._json(400, {"error": str(exc)[:250]})
+            except Exception as exc:
+                # Optional SDK errors may carry URLs/credentials. Never echo them.
+                name = type(exc).__name__
+                message = ("This outcome has no current provider book (closed or not yet quoted). Saved history remains available."
+                    if name in {"NotFoundError", "MarketNotFound", "EventNotFound"} else
+                    "Data provider unavailable (" + name + "). For PMXT use .venv-pmxt/bin/python server.py; see docs/PMXT.md.")
+                self._json(503, {"error": message})
             return
         if self.path == "/api/settings":
             if self.server.runtime is None:

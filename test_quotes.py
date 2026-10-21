@@ -30,6 +30,17 @@ def intl_record(**updates):
 
 
 class RawAndReplayQuotesTests(unittest.TestCase):
+    def test_resolution_volume_and_status_preserve_their_metadata_clock(self):
+        m = market("kalshi")
+        raw = {"kalshi": [{"ticker": "123", "status": "settled", "result": "yes", "volume_fp": "12.5",
+                            "_collected_at_utc": COLLECTED}]}
+        Q.enrich_quotes([m], raw, live=False)
+        self.assertEqual(m.extra["quote_market_status"], "settled")
+        self.assertEqual(m.extra["quote_settlement_result"], "yes")
+        self.assertEqual(m.extra["quote_volume"], "12.5")
+        self.assertEqual(m.extra["quote_metadata_time"], COLLECTED)
+        self.assertIsNone(m.bid)
+
     def test_kalshi_zero_is_valid_and_original_collection_time_is_preserved(self):
         m = market("kalshi")
         raw = {"kalshi": [{"ticker": "123", "yes_bid_dollars": "0.0000",
@@ -115,6 +126,29 @@ class RawAndReplayQuotesTests(unittest.TestCase):
 
 
 class LiveQuotesTests(unittest.TestCase):
+    def test_selected_public_kalshi_book_uses_same_contract_no_complement_and_keeps_depth(self):
+        response = {"orderbook_fp": {"yes_dollars": [["0.40", "10"], ["0.42", "5"]],
+                                     "no_dollars": [["0.54", "8"], ["0.52", "12"], ["0.90", "0"]]}}
+        with patch.object(Q, "_request_json", return_value=(200, response, COLLECTED)):
+            book = Q.fetch_public_kalshi_book("KXTEST-YES")
+        self.assertEqual(book["bids"][0], {"price": "0.42", "size": "5"})
+        self.assertEqual(book["asks"][0], {"price": "0.46", "size": "8"})
+        self.assertEqual(book["source"], "native_kalshi_public")
+        self.assertEqual(book["observed_at"], COLLECTED)
+        self.assertEqual(book["exchange_time"], "")
+
+    def test_recorded_books_preserve_ten_aggregated_actual_levels_and_replay(self):
+        m = market("polymarket_intl")
+        levels = [{"price": str(i / 100), "size": "10"} for i in range(1, 15)]
+        book = {"asset_id": "101", "bids": levels + [{"price": ".14", "size": "5"}], "asks": []}
+        with patch.object(Q, "_request_json", return_value=(200, [book], COLLECTED)):
+            entries, _ = Q.enrich_quotes([m], {"polymarket_intl": [intl_record()]}, live=True)
+        self.assertEqual(len(entries[0]["order_book"]["bids"]), 10)
+        self.assertEqual(entries[0]["order_book"]["bids"][0], {"price": "0.14", "size": "15"})
+        restored = market("polymarket_intl")
+        Q.enrich_quotes([restored], {}, live=False, saved_quotes=entries)
+        self.assertEqual(restored.extra["quote_order_book"], entries[0]["order_book"])
+
     def test_live_fee_metadata_is_batched_and_identity_checked(self):
         def response(method, url, payload):
             self.assertEqual(method, "GET")

@@ -2,60 +2,6 @@
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "b8643c76-d2ec-44a7-9413-7a22fd8a45e3",
-      "coverage": {},
-      "home_team_id": "0c62a750-c46a-492b-ad12-21146ef0672a",
-      "is_ko": false,
-      "league": "Bundesliga 2",
-      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT23D98STP",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "1e7ce968-4d04-5d8a-9df8-5c8ceeb89a4d",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGA2GAME-26OCT23D98STP"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGA2GAME-26OCT23D98STP"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-23T16:30:00Z",
-    "title": "Darmstadt vs St. Pauli",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "56f8e006-8e78-4fe8-84c6-8886c2a87b46",
-      "coverage": {},
-      "home_team_id": "f7cad683-d1b4-456d-9cda-dae200fb7ff8",
-      "is_ko": false,
-      "league": "Bundesliga 2",
-      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT24BSCARM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "dadac378-584d-59d2-8f44-204544de7ce9",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXBUNDESLIGA2GAME-26OCT24BSCARM"
-    ],
-    "related_event_tickers": [
-      "KXBUNDESLIGA2GAME-26OCT24BSCARM"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T11:00:00Z",
-    "title": "Hertha vs Bielefeld",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
       "away_team_id": "c69e69dd-1c74-448a-81fd-dd311508221f",
       "coverage": {},
       "home_team_id": "dcfc923f-af3d-4f2e-99a7-5d7f74ded2b7",
@@ -78,61 +24,61 @@
     "start_date": "2026-10-24T11:00:00Z",
     "title": "Heidenheim vs Cottbus",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "eee6a326-c5d0-4c6f-a0d0-cf4cc206ea59",
+      "away_team_id": "3c56ad50-e847-47ef-8c99-9361ad5d3dfc",
       "coverage": {},
-      "home_team_id": "9d6db13a-083f-4078-92c5-6827a35917bc",
+      "home_team_id": "6bda751a-49d4-456a-9d69-e31fb1c5be27",
       "is_ko": false,
       "league": "Bundesliga 2",
-      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT24FCMKSC",
+      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT25EBSH96",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "84e9861c-a0a9-5283-b287-eab964ec6d93",
+    "id": "905093fc-715d-553b-9ef9-e1e62726c409",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXBUNDESLIGA2GAME-26OCT24FCMKSC"
+      "KXBUNDESLIGA2GAME-26OCT25EBSH96"
     ],
     "related_event_tickers": [
-      "KXBUNDESLIGA2GAME-26OCT24FCMKSC"
+      "KXBUNDESLIGA2GAME-26OCT25EBSH96"
     ],
     "source_ids": {},
-    "start_date": "2026-10-24T11:00:00Z",
-    "title": "Magdeburg vs Karlsruhe",
+    "start_date": "2026-10-25T12:30:00Z",
+    "title": "Braunschweig vs Hannover",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "89cd2955-2a6c-4704-99a9-84d2a47aed06",
+      "away_team_id": "8d0f360d-5eba-4b9b-8403-0152a8d8486d",
       "coverage": {},
-      "home_team_id": "2370a918-a869-446c-b08c-845d1f101dcc",
+      "home_team_id": "2c64cac7-7c63-465b-882a-ca178dcf7fda",
       "is_ko": false,
       "league": "Bundesliga 2",
-      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT24FCNFCK",
+      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT25OSNSGF",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "5ceddd2f-b23d-57da-91a3-014b69b99f6c",
+    "id": "e091de06-11b1-525a-8c73-d55b271029d2",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXBUNDESLIGA2GAME-26OCT24FCNFCK"
+      "KXBUNDESLIGA2GAME-26OCT25OSNSGF"
     ],
     "related_event_tickers": [
-      "KXBUNDESLIGA2GAME-26OCT24FCNFCK"
+      "KXBUNDESLIGA2GAME-26OCT25OSNSGF"
     ],
     "source_ids": {},
-    "start_date": "2026-10-24T18:30:00Z",
-    "title": "Nuremberg vs Kaiserslautern",
+    "start_date": "2026-10-25T12:30:00Z",
+    "title": "Osnabruck vs Greuther Furth",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   },
   {
     "category": "Sports",
@@ -159,6 +105,141 @@
     "start_date": "2026-10-23T16:30:00Z",
     "title": "Bochum vs Wolfsburg",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-20T21:57:13.069+00:00"
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "56f8e006-8e78-4fe8-84c6-8886c2a87b46",
+      "coverage": {},
+      "home_team_id": "f7cad683-d1b4-456d-9cda-dae200fb7ff8",
+      "is_ko": false,
+      "league": "Bundesliga 2",
+      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT24BSCARM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "dadac378-584d-59d2-8f44-204544de7ce9",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT24BSCARM"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT24BSCARM"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T11:00:00Z",
+    "title": "Hertha vs Bielefeld",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "eee6a326-c5d0-4c6f-a0d0-cf4cc206ea59",
+      "coverage": {},
+      "home_team_id": "9d6db13a-083f-4078-92c5-6827a35917bc",
+      "is_ko": false,
+      "league": "Bundesliga 2",
+      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT24FCMKSC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "84e9861c-a0a9-5283-b287-eab964ec6d93",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT24FCMKSC"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT24FCMKSC"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T11:00:00Z",
+    "title": "Magdeburg vs Karlsruhe",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "89cd2955-2a6c-4704-99a9-84d2a47aed06",
+      "coverage": {},
+      "home_team_id": "2370a918-a869-446c-b08c-845d1f101dcc",
+      "is_ko": false,
+      "league": "Bundesliga 2",
+      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT24FCNFCK",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "5ceddd2f-b23d-57da-91a3-014b69b99f6c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT24FCNFCK"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT24FCNFCK"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T18:30:00Z",
+    "title": "Nuremberg vs Kaiserslautern",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "16a53a73-cf12-4eb2-8657-fe57f2e09237",
+      "coverage": {},
+      "home_team_id": "2c3b8f57-b97f-4e22-bd7e-1d30c114782a",
+      "is_ko": false,
+      "league": "Bundesliga 2",
+      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT25HOKSGD",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "27ca866b-be33-5a2e-8d6b-89a88adaec66",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT25HOKSGD"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT25HOKSGD"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T12:30:00Z",
+    "title": "Kiel vs Dresden",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "b8643c76-d2ec-44a7-9413-7a22fd8a45e3",
+      "coverage": {},
+      "home_team_id": "0c62a750-c46a-492b-ad12-21146ef0672a",
+      "is_ko": false,
+      "league": "Bundesliga 2",
+      "main_game_event_ticker": "KXBUNDESLIGA2GAME-26OCT23D98STP",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "1e7ce968-4d04-5d8a-9df8-5c8ceeb89a4d",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT23D98STP"
+    ],
+    "related_event_tickers": [
+      "KXBUNDESLIGA2GAME-26OCT23D98STP"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-23T16:30:00Z",
+    "title": "Darmstadt vs St. Pauli",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
   }
 ]

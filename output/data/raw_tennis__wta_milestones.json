@@ -3,305 +3,39 @@
     "category": "Sports",
     "details": {
       "best_of": "3",
-      "first_competitor_id": "27756b89-8a5c-4ff8-8b15-c2adfa74ea8c",
+      "first_competitor_id": "8b86810e-0f21-4130-ae44-54647d36d148",
       "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT20BOUGOL",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21BOUZAK",
       "round": "Round Of 16",
-      "second_competitor_id": "229e5ee5-f553-4d59-96c1-813f2471a9fe",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Osaka"
-    },
-    "id": "e8f96085-f68b-43bd-8c02-9f8ae2de67c0",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT20BOUGOL",
-      "KXWTASETWINNER-26OCT20BOUGOL-1",
-      "KXWTASETWINNER-26OCT20BOUGOL-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT20BOUGOL",
-      "KXWTASETWINNER-26OCT20BOUGOL-1",
-      "KXWTASETWINNER-26OCT20BOUGOL-2",
-      "KXWTAGTOTAL-26OCT20BOUGOL"
-    ],
-    "source_id": "sr:sport_event:75658364",
-    "source_ids": {
-      "source_1_id": "5438155",
-      "source_2_id": "20261021A232EE27",
-      "source_3_id": "sr:sport_event:75658364"
-    },
-    "start_date": "2026-10-21T05:10:00Z",
-    "title": "Boulter vs Golubic",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "a8eba668-ab82-4c3d-8a87-d41866dd3308",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT20GIBKRA",
-      "round": "Round Of 16",
-      "second_competitor_id": "8708ae07-888f-4970-bd25-7db71252ef7f",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Osaka"
-    },
-    "id": "4cc72405-f0fc-4eb6-aae7-6e37db56aa2b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT20GIBKRA",
-      "KXWTASETWINNER-26OCT20GIBKRA-1",
-      "KXWTASETWINNER-26OCT20GIBKRA-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT20GIBKRA",
-      "KXWTASETWINNER-26OCT20GIBKRA-1",
-      "KXWTASETWINNER-26OCT20GIBKRA-2",
-      "KXWTAGTOTAL-26OCT20GIBKRA"
-    ],
-    "source_id": "sr:sport_event:75658374",
-    "source_ids": {
-      "source_1_id": "5438153",
-      "source_2_id": "2026102161781060",
-      "source_3_id": "sr:sport_event:75658374"
-    },
-    "start_date": "2026-10-21T02:30:00Z",
-    "title": "Gibson vs Kraus",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "1b1e7c9a-91d1-4ea8-8792-fd688c046f3d",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT20VALTAG",
-      "round": "Round Of 16",
-      "second_competitor_id": "d9348385-8ccc-4026-881f-2eead1addc64",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Osaka"
-    },
-    "id": "03f40354-a934-4ef9-aebf-4f212f50c10c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT20VALTAG",
-      "KXWTASETWINNER-26OCT20VALTAG-1",
-      "KXWTASETWINNER-26OCT20VALTAG-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT20VALTAG",
-      "KXWTASETWINNER-26OCT20VALTAG-1",
-      "KXWTASETWINNER-26OCT20VALTAG-2",
-      "KXWTAGTOTAL-26OCT20VALTAG"
-    ],
-    "source_id": "sr:sport_event:75658372",
-    "source_ids": {
-      "source_1_id": "5438152",
-      "source_2_id": "2026102145C0D378",
-      "source_3_id": "sr:sport_event:75658372"
-    },
-    "start_date": "2026-10-21T04:00:00Z",
-    "title": "Valentova vs Tagger",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "3e231cb6-70d3-4cfc-958a-e160cd45b0a7",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT20ANNSON",
-      "round": "Round Of 16",
-      "second_competitor_id": "29bae52e-bb82-41b1-b9ef-40d6e6cd1aef",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Osaka"
-    },
-    "id": "d6ec8056-aaa6-450c-8812-0a8a4007da99",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT20ANNSON",
-      "KXWTASETWINNER-26OCT20ANNSON-1",
-      "KXWTASETWINNER-26OCT20ANNSON-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT20ANNSON",
-      "KXWTASETWINNER-26OCT20ANNSON-1",
-      "KXWTASETWINNER-26OCT20ANNSON-2",
-      "KXWTAGTOTAL-26OCT20ANNSON"
-    ],
-    "source_id": "sr:sport_event:75658370",
-    "source_ids": {
-      "source_1_id": "5438151",
-      "source_2_id": "2026102140D7AAF8",
-      "source_3_id": "sr:sport_event:75658370"
-    },
-    "start_date": "2026-10-22T02:30:00Z",
-    "title": "Li vs Sonmez",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "2bc78183-e2ba-427d-a4ea-96c3a4910693",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT20STOUCH",
-      "round": "Round Of 16",
-      "second_competitor_id": "751f0cb1-5192-444a-8f4f-dc29ab92f9bb",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Osaka"
-    },
-    "id": "e29322eb-716e-48cf-bced-e64d82094c81",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT20STOUCH",
-      "KXWTASETWINNER-26OCT20STOUCH-1",
-      "KXWTASETWINNER-26OCT20STOUCH-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT20STOUCH",
-      "KXWTASETWINNER-26OCT20STOUCH-1",
-      "KXWTASETWINNER-26OCT20STOUCH-2",
-      "KXWTAGTOTAL-26OCT20STOUCH"
-    ],
-    "source_id": "sr:sport_event:75658368",
-    "source_ids": {
-      "source_1_id": "5438157",
-      "source_2_id": "20261021B03C72AC",
-      "source_3_id": "sr:sport_event:75658368"
-    },
-    "start_date": "2026-10-22T02:30:00Z",
-    "title": "Stoiana vs Uchijima",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "1205675f-6d20-46e3-bbb9-b9a2a577f4cc",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT20TARKRU",
-      "round": "Round Of 16",
-      "second_competitor_id": "713fb237-296b-48ea-ac94-a584c9bb169e",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Osaka"
-    },
-    "id": "241bb716-38ac-40de-a9d4-530cc94b0e9b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT20TARKRU",
-      "KXWTASETWINNER-26OCT20TARKRU-1",
-      "KXWTASETWINNER-26OCT20TARKRU-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT20TARKRU",
-      "KXWTASETWINNER-26OCT20TARKRU-1",
-      "KXWTASETWINNER-26OCT20TARKRU-2",
-      "KXWTAGTOTAL-26OCT20TARKRU"
-    ],
-    "source_id": "sr:sport_event:75658362",
-    "source_ids": {
-      "source_1_id": "5438154",
-      "source_2_id": "2026102176CD9C52",
-      "source_3_id": "sr:sport_event:75658362"
-    },
-    "start_date": "2026-10-21T02:30:00Z",
-    "title": "Tararudee vs Krueger",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "500f9182-df27-4f29-bb5c-ae02f3f172fd",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT21FERSAS",
-      "round": "Round Of 16",
-      "second_competitor_id": "15b8e52a-df2e-45a3-9611-a3f481f3d08f",
+      "second_competitor_id": "8205fc30-c34f-4359-a99e-4597c1eb3f49",
       "status": "not_started",
       "tour": "WTA",
       "tournament_name": "WTA Ningbo"
     },
-    "id": "80ead674-fe9f-4eeb-a73f-8be637884216",
+    "id": "ad8b99f9-9409-4c03-a406-b95aff914f50",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXWTAMATCH-26OCT21FERSAS",
-      "KXWTASETWINNER-26OCT21FERSAS-1",
-      "KXWTASETWINNER-26OCT21FERSAS-2"
+      "KXWTAMATCH-26OCT21BOUZAK",
+      "KXWTASETWINNER-26OCT21BOUZAK-1",
+      "KXWTASETWINNER-26OCT21BOUZAK-2"
     ],
     "related_event_tickers": [
-      "KXWTAMATCH-26OCT21FERSAS",
-      "KXWTASETWINNER-26OCT21FERSAS-1",
-      "KXWTASETWINNER-26OCT21FERSAS-2",
-      "KXWTAGTOTAL-26OCT21FERSAS"
+      "KXWTAMATCH-26OCT21BOUZAK",
+      "KXWTASETWINNER-26OCT21BOUZAK-1",
+      "KXWTASETWINNER-26OCT21BOUZAK-2",
+      "KXWTAGTOTAL-26OCT21BOUZAK"
     ],
-    "source_id": "sr:sport_event:75656910",
+    "source_id": "sr:sport_event:75810414",
     "source_ids": {
-      "source_1_id": "5438109",
-      "source_2_id": "20261021B9262AC9",
-      "source_3_id": "sr:sport_event:75656910"
+      "source_1_id": "5438112",
+      "source_2_id": "20261021C56CF64C",
+      "source_3_id": "sr:sport_event:75810414"
     },
-    "start_date": "2026-10-21T06:10:00Z",
-    "title": "Fernandez vs Sasnovich",
+    "start_date": "2026-10-21T05:00:00Z",
+    "title": "Bouzkova vs Zakharova",
     "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "6b48f577-d421-4d95-ab71-27521ca2ecdc",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT21ALEKOS",
-      "round": "Round Of 16",
-      "second_competitor_id": "d3887497-38f2-46e1-8ba4-93fdccaf164e",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Ningbo"
-    },
-    "id": "e4b809cb-29c8-4d4b-894b-c2562ffebe03",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT21ALEKOS",
-      "KXWTASETWINNER-26OCT21ALEKOS-1",
-      "KXWTASETWINNER-26OCT21ALEKOS-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT21ALEKOS",
-      "KXWTASETWINNER-26OCT21ALEKOS-1",
-      "KXWTASETWINNER-26OCT21ALEKOS-2",
-      "KXWTAGTOTAL-26OCT21ALEKOS"
-    ],
-    "source_id": "sr:sport_event:75656892",
-    "source_ids": {
-      "source_1_id": "5438110",
-      "source_2_id": "202610215429B032",
-      "source_3_id": "sr:sport_event:75656892"
-    },
-    "start_date": "2026-10-21T11:00:00Z",
-    "title": "Alexandrova vs Kostyuk",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
   },
   {
     "category": "Sports",
@@ -336,200 +70,48 @@
       "source_2_id": "20261021A111338F",
       "source_3_id": "sr:sport_event:75656894"
     },
-    "start_date": "2026-10-21T07:20:00Z",
+    "start_date": "2026-10-21T08:00:00Z",
     "title": "Cirstea vs Bejlek",
     "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
   },
   {
     "category": "Sports",
     "details": {
       "best_of": "3",
-      "first_competitor_id": "b6d7e0eb-1cd2-4b04-8c23-f1faaccbe631",
+      "first_competitor_id": "500f9182-df27-4f29-bb5c-ae02f3f172fd",
       "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT21EALSHN",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21FERSAS",
       "round": "Round Of 16",
-      "second_competitor_id": "af6bf52a-0c5a-48c9-9deb-61699321b95a",
+      "second_competitor_id": "15b8e52a-df2e-45a3-9611-a3f481f3d08f",
       "status": "not_started",
       "tour": "WTA",
       "tournament_name": "WTA Ningbo"
     },
-    "id": "9cfa2dd0-7f89-4d03-a32a-69b139cdeab8",
+    "id": "80ead674-fe9f-4eeb-a73f-8be637884216",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The match is about to begin.",
     "primary_event_tickers": [
-      "KXWTAMATCH-26OCT21EALSHN",
-      "KXWTASETWINNER-26OCT21EALSHN-1",
-      "KXWTASETWINNER-26OCT21EALSHN-2"
+      "KXWTAMATCH-26OCT21FERSAS",
+      "KXWTASETWINNER-26OCT21FERSAS-1",
+      "KXWTASETWINNER-26OCT21FERSAS-2"
     ],
     "related_event_tickers": [
-      "KXWTAMATCH-26OCT21EALSHN",
-      "KXWTASETWINNER-26OCT21EALSHN-1",
-      "KXWTASETWINNER-26OCT21EALSHN-2",
-      "KXWTAGTOTAL-26OCT21EALSHN"
+      "KXWTAMATCH-26OCT21FERSAS",
+      "KXWTASETWINNER-26OCT21FERSAS-1",
+      "KXWTASETWINNER-26OCT21FERSAS-2",
+      "KXWTAGTOTAL-26OCT21FERSAS"
     ],
-    "source_id": "sr:sport_event:75656908",
+    "source_id": "sr:sport_event:75656910",
     "source_ids": {
-      "source_1_id": "5438108",
-      "source_2_id": "2026102110439228",
-      "source_3_id": "sr:sport_event:75656908"
+      "source_1_id": "5438109",
+      "source_2_id": "20261021B9262AC9",
+      "source_3_id": "sr:sport_event:75656910"
     },
-    "start_date": "2026-10-22T05:00:00Z",
-    "title": "Eala vs Shnaider",
+    "start_date": "2026-10-21T06:50:00Z",
+    "title": "Fernandez vs Sasnovich",
     "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "c23e74e1-3ffe-4959-a733-90bbf2af6e0b",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT21JOVPAO",
-      "round": "Round Of 16",
-      "second_competitor_id": "5b6bcc13-d96b-4fc4-b32d-b1098a9531c0",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Ningbo"
-    },
-    "id": "146a49d4-051f-4753-af22-88cbb3dfe59a",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT21JOVPAO",
-      "KXWTASETWINNER-26OCT21JOVPAO-1",
-      "KXWTASETWINNER-26OCT21JOVPAO-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT21JOVPAO",
-      "KXWTASETWINNER-26OCT21JOVPAO-1",
-      "KXWTASETWINNER-26OCT21JOVPAO-2",
-      "KXWTAGTOTAL-26OCT21JOVPAO"
-    ],
-    "source_id": "sr:sport_event:75656906",
-    "source_ids": {
-      "source_1_id": "5438107",
-      "source_2_id": "20261022A7EE4F30",
-      "source_3_id": "sr:sport_event:75656906"
-    },
-    "start_date": "2026-10-22T05:00:00Z",
-    "title": "Jovic vs Paolini",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "ed554385-5026-4dac-be5b-72f0b2e3cb36",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT20LINSIN",
-      "round": "Round Of 16",
-      "second_competitor_id": "cbf7c940-732f-4888-8576-61fb70c3937f",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Osaka"
-    },
-    "id": "9d3beece-079d-4620-9c62-c4b91f46bd40",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT20LINSIN",
-      "KXWTASETWINNER-26OCT20LINSIN-1",
-      "KXWTASETWINNER-26OCT20LINSIN-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT20LINSIN",
-      "KXWTASETWINNER-26OCT20LINSIN-1",
-      "KXWTASETWINNER-26OCT20LINSIN-2",
-      "KXWTAGTOTAL-26OCT20LINSIN"
-    ],
-    "source_id": "sr:sport_event:75658354",
-    "source_ids": {
-      "source_1_id": "5438158",
-      "source_2_id": "20261021BA189DF4",
-      "source_3_id": "sr:sport_event:75658354"
-    },
-    "start_date": "2026-10-22T02:30:00Z",
-    "title": "Linette vs Siniakova",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "14fa3fa3-ad56-4e1e-9535-f9696bb3b9ec",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT20RUZDAY",
-      "round": "Round Of 16",
-      "second_competitor_id": "0b4a7bb8-7275-4b2a-9492-b60d17a1cf05",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Osaka"
-    },
-    "id": "4c53e087-1a1a-4f7a-89c7-6afc744071c1",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT20RUZDAY",
-      "KXWTASETWINNER-26OCT20RUZDAY-1",
-      "KXWTASETWINNER-26OCT20RUZDAY-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT20RUZDAY",
-      "KXWTASETWINNER-26OCT20RUZDAY-1",
-      "KXWTASETWINNER-26OCT20RUZDAY-2",
-      "KXWTAGTOTAL-26OCT20RUZDAY"
-    ],
-    "source_id": "sr:sport_event:75658366",
-    "source_ids": {
-      "source_1_id": "5438156",
-      "source_2_id": "202610215DB8EB86",
-      "source_3_id": "sr:sport_event:75658366"
-    },
-    "start_date": "2026-10-22T02:30:00Z",
-    "title": "Ruzic vs Day",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "best_of": "3",
-      "first_competitor_id": "8b86810e-0f21-4130-ae44-54647d36d148",
-      "gender": "women",
-      "main_game_event_ticker": "KXWTAMATCH-26OCT21BOUZAK",
-      "round": "Round Of 16",
-      "second_competitor_id": "8205fc30-c34f-4359-a99e-4597c1eb3f49",
-      "status": "not_started",
-      "tour": "WTA",
-      "tournament_name": "WTA Ningbo"
-    },
-    "id": "ad8b99f9-9409-4c03-a406-b95aff914f50",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The match is about to begin.",
-    "primary_event_tickers": [
-      "KXWTAMATCH-26OCT21BOUZAK",
-      "KXWTASETWINNER-26OCT21BOUZAK-1",
-      "KXWTASETWINNER-26OCT21BOUZAK-2"
-    ],
-    "related_event_tickers": [
-      "KXWTAMATCH-26OCT21BOUZAK",
-      "KXWTASETWINNER-26OCT21BOUZAK-1",
-      "KXWTASETWINNER-26OCT21BOUZAK-2",
-      "KXWTAGTOTAL-26OCT21BOUZAK"
-    ],
-    "source_id": "sr:sport_event:75810414",
-    "source_ids": {
-      "source_1_id": "5438112",
-      "source_2_id": "20261021C56CF64C",
-      "source_3_id": "sr:sport_event:75810414"
-    },
-    "start_date": "2026-10-21T05:00:00Z",
-    "title": "Bouzkova vs Zakharova",
-    "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
   },
   {
     "category": "Sports",
@@ -567,6 +149,482 @@
     "start_date": "2026-10-22T05:00:00Z",
     "title": "Rybakina vs Kudermetova",
     "type": "tennis_tournament_singles",
-    "_collected_at_utc": "2026-10-20T21:57:11.591+00:00"
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "first_competitor_id": "381c4352-5617-41a2-88fb-0e2070af40e9",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21SAGALD",
+      "round": "Round",
+      "second_competitor_id": "53daf1db-00c6-4e4d-9994-4c1cb600ee3a",
+      "status": "P",
+      "tour": "ITF",
+      "tournament_name": "Billie Jean King Cup Qualifiers"
+    },
+    "id": "86706665-faf9-4065-bfe8-1ceb7322d4b8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT21SAGALD"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT21SAGALD"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-21T06:20:38Z",
+    "title": "sagheb tehrani vs Aldabbous",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "3e231cb6-70d3-4cfc-958a-e160cd45b0a7",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT20ANNSON",
+      "round": "Round Of 16",
+      "second_competitor_id": "29bae52e-bb82-41b1-b9ef-40d6e6cd1aef",
+      "status": "not_started",
+      "tour": "WTA",
+      "tournament_name": "WTA Osaka"
+    },
+    "id": "d6ec8056-aaa6-450c-8812-0a8a4007da99",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT20ANNSON",
+      "KXWTASETWINNER-26OCT20ANNSON-1",
+      "KXWTASETWINNER-26OCT20ANNSON-2"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT20ANNSON",
+      "KXWTASETWINNER-26OCT20ANNSON-1",
+      "KXWTASETWINNER-26OCT20ANNSON-2",
+      "KXWTAGTOTAL-26OCT20ANNSON"
+    ],
+    "source_id": "sr:sport_event:75658370",
+    "source_ids": {
+      "source_1_id": "5438151",
+      "source_2_id": "2026102140D7AAF8",
+      "source_3_id": "sr:sport_event:75658370"
+    },
+    "start_date": "2026-10-22T02:30:00Z",
+    "title": "Li vs Sonmez",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "27756b89-8a5c-4ff8-8b15-c2adfa74ea8c",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT20BOUGOL",
+      "round": "Round Of 16",
+      "second_competitor_id": "229e5ee5-f553-4d59-96c1-813f2471a9fe",
+      "status": "not_started",
+      "tour": "WTA",
+      "tournament_name": "WTA Osaka"
+    },
+    "id": "e8f96085-f68b-43bd-8c02-9f8ae2de67c0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT20BOUGOL",
+      "KXWTASETWINNER-26OCT20BOUGOL-1",
+      "KXWTASETWINNER-26OCT20BOUGOL-2"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT20BOUGOL",
+      "KXWTASETWINNER-26OCT20BOUGOL-1",
+      "KXWTASETWINNER-26OCT20BOUGOL-2",
+      "KXWTAGTOTAL-26OCT20BOUGOL"
+    ],
+    "source_id": "sr:sport_event:75658364",
+    "source_ids": {
+      "source_1_id": "5438155",
+      "source_2_id": "20261021A232EE27",
+      "source_3_id": "sr:sport_event:75658364"
+    },
+    "start_date": "2026-10-21T06:05:00Z",
+    "title": "Boulter vs Golubic",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "2bc78183-e2ba-427d-a4ea-96c3a4910693",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT20STOUCH",
+      "round": "Round Of 16",
+      "second_competitor_id": "751f0cb1-5192-444a-8f4f-dc29ab92f9bb",
+      "status": "not_started",
+      "tour": "WTA",
+      "tournament_name": "WTA Osaka"
+    },
+    "id": "e29322eb-716e-48cf-bced-e64d82094c81",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT20STOUCH",
+      "KXWTASETWINNER-26OCT20STOUCH-1",
+      "KXWTASETWINNER-26OCT20STOUCH-2"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT20STOUCH",
+      "KXWTASETWINNER-26OCT20STOUCH-1",
+      "KXWTASETWINNER-26OCT20STOUCH-2",
+      "KXWTAGTOTAL-26OCT20STOUCH"
+    ],
+    "source_id": "sr:sport_event:75658368",
+    "source_ids": {
+      "source_1_id": "5438157",
+      "source_2_id": "20261021B03C72AC",
+      "source_3_id": "sr:sport_event:75658368"
+    },
+    "start_date": "2026-10-22T02:30:00Z",
+    "title": "Stoiana vs Uchijima",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "first_competitor_id": "4a9337a6-bb60-41a4-9498-d362720a374f",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21KHAABU",
+      "round": "Round",
+      "second_competitor_id": "80fb9a5a-127b-43ec-b7e9-adb14bafd409",
+      "status": "P",
+      "tour": "ITF",
+      "tournament_name": "Billie Jean King Cup Qualifiers"
+    },
+    "id": "f3176726-ac3a-442c-8afc-5f3bf0c11619",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT21KHAABU"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT21KHAABU"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-21T05:09:25Z",
+    "title": "Khalifa vs Abualhaj",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "first_competitor_id": "16d850b8-63ff-4a7d-8ac5-18ad8fbc8baf",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21ALNSAY",
+      "round": "Round",
+      "second_competitor_id": "10202105-9d6a-4434-a94d-6c280e0ed354",
+      "status": "SCH",
+      "tour": "ITF",
+      "tournament_name": "Billie Jean King Cup Qualifiers"
+    },
+    "id": "3db63157-bc65-4ce4-a774-51886b08a992",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT21ALNSAY"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT21ALNSAY"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-21T06:42:45Z",
+    "title": "Al-Naimi vs Sayej",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "first_competitor_id": "2b7491e8-ae5b-49a5-a3b6-555df15e4066",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21QURALK",
+      "round": "Round",
+      "second_competitor_id": "1cace66f-f477-4b27-b5c6-a94606b01f82",
+      "status": "P",
+      "tour": "ITF",
+      "tournament_name": "Billie Jean King Cup Qualifiers"
+    },
+    "id": "c155d9a5-e571-4b37-b566-b74a19069881",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT21QURALK"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT21QURALK"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-21T06:10:32Z",
+    "title": "Qureshi vs Alkhayat",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "6f6e9ccd-6523-4e5a-a1a2-84b44165aadf",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT22KAWBEN",
+      "round": "Round Of 16",
+      "second_competitor_id": "694b63b8-6c41-4148-a4f8-1c7caeee2bc6",
+      "status": "not_started",
+      "tour": "WTA",
+      "tournament_name": "WTA Ningbo"
+    },
+    "id": "4265a196-f90a-4be6-8685-e0d82625bb27",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT22KAWBEN",
+      "KXWTASETWINNER-26OCT22KAWBEN-1",
+      "KXWTASETWINNER-26OCT22KAWBEN-2"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT22KAWBEN",
+      "KXWTASETWINNER-26OCT22KAWBEN-1",
+      "KXWTASETWINNER-26OCT22KAWBEN-2",
+      "KXWTAGTOTAL-26OCT22KAWBEN"
+    ],
+    "source_id": "sr:sport_event:75656904",
+    "source_ids": {
+      "source_2_id": "202610224BFCF595",
+      "source_3_id": "sr:sport_event:75656904"
+    },
+    "start_date": "2026-10-22T05:00:00Z",
+    "title": "Kawa vs Bencic",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "ed554385-5026-4dac-be5b-72f0b2e3cb36",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT20LINSIN",
+      "round": "Round Of 16",
+      "second_competitor_id": "cbf7c940-732f-4888-8576-61fb70c3937f",
+      "status": "not_started",
+      "tour": "WTA",
+      "tournament_name": "WTA Osaka"
+    },
+    "id": "9d3beece-079d-4620-9c62-c4b91f46bd40",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT20LINSIN",
+      "KXWTASETWINNER-26OCT20LINSIN-1",
+      "KXWTASETWINNER-26OCT20LINSIN-2"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT20LINSIN",
+      "KXWTASETWINNER-26OCT20LINSIN-1",
+      "KXWTASETWINNER-26OCT20LINSIN-2",
+      "KXWTAGTOTAL-26OCT20LINSIN"
+    ],
+    "source_id": "sr:sport_event:75658354",
+    "source_ids": {
+      "source_1_id": "5438158",
+      "source_2_id": "20261021BA189DF4",
+      "source_3_id": "sr:sport_event:75658354"
+    },
+    "start_date": "2026-10-22T02:30:00Z",
+    "title": "Linette vs Siniakova",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "14fa3fa3-ad56-4e1e-9535-f9696bb3b9ec",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT20RUZDAY",
+      "round": "Round Of 16",
+      "second_competitor_id": "0b4a7bb8-7275-4b2a-9492-b60d17a1cf05",
+      "status": "not_started",
+      "tour": "WTA",
+      "tournament_name": "WTA Osaka"
+    },
+    "id": "4c53e087-1a1a-4f7a-89c7-6afc744071c1",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT20RUZDAY",
+      "KXWTASETWINNER-26OCT20RUZDAY-1",
+      "KXWTASETWINNER-26OCT20RUZDAY-2"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT20RUZDAY",
+      "KXWTASETWINNER-26OCT20RUZDAY-1",
+      "KXWTASETWINNER-26OCT20RUZDAY-2",
+      "KXWTAGTOTAL-26OCT20RUZDAY"
+    ],
+    "source_id": "sr:sport_event:75658366",
+    "source_ids": {
+      "source_1_id": "5438156",
+      "source_2_id": "202610215DB8EB86",
+      "source_3_id": "sr:sport_event:75658366"
+    },
+    "start_date": "2026-10-22T02:30:00Z",
+    "title": "Ruzic vs Day",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "6b48f577-d421-4d95-ab71-27521ca2ecdc",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21ALEKOS",
+      "round": "Round Of 16",
+      "second_competitor_id": "d3887497-38f2-46e1-8ba4-93fdccaf164e",
+      "status": "not_started",
+      "tour": "WTA",
+      "tournament_name": "WTA Ningbo"
+    },
+    "id": "e4b809cb-29c8-4d4b-894b-c2562ffebe03",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT21ALEKOS",
+      "KXWTASETWINNER-26OCT21ALEKOS-1",
+      "KXWTASETWINNER-26OCT21ALEKOS-2"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT21ALEKOS",
+      "KXWTASETWINNER-26OCT21ALEKOS-1",
+      "KXWTASETWINNER-26OCT21ALEKOS-2",
+      "KXWTAGTOTAL-26OCT21ALEKOS"
+    ],
+    "source_id": "sr:sport_event:75656892",
+    "source_ids": {
+      "source_1_id": "5438110",
+      "source_2_id": "202610215429B032",
+      "source_3_id": "sr:sport_event:75656892"
+    },
+    "start_date": "2026-10-21T11:00:00Z",
+    "title": "Alexandrova vs Kostyuk",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "b6d7e0eb-1cd2-4b04-8c23-f1faaccbe631",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21EALSHN",
+      "round": "Round Of 16",
+      "second_competitor_id": "af6bf52a-0c5a-48c9-9deb-61699321b95a",
+      "status": "not_started",
+      "tour": "WTA",
+      "tournament_name": "WTA Ningbo"
+    },
+    "id": "9cfa2dd0-7f89-4d03-a32a-69b139cdeab8",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT21EALSHN",
+      "KXWTASETWINNER-26OCT21EALSHN-1",
+      "KXWTASETWINNER-26OCT21EALSHN-2"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT21EALSHN",
+      "KXWTASETWINNER-26OCT21EALSHN-1",
+      "KXWTASETWINNER-26OCT21EALSHN-2",
+      "KXWTAGTOTAL-26OCT21EALSHN"
+    ],
+    "source_id": "sr:sport_event:75656908",
+    "source_ids": {
+      "source_1_id": "5438108",
+      "source_2_id": "2026102110439228",
+      "source_3_id": "sr:sport_event:75656908"
+    },
+    "start_date": "2026-10-22T05:00:00Z",
+    "title": "Eala vs Shnaider",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "best_of": "3",
+      "first_competitor_id": "c23e74e1-3ffe-4959-a733-90bbf2af6e0b",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21JOVPAO",
+      "round": "Round Of 16",
+      "second_competitor_id": "5b6bcc13-d96b-4fc4-b32d-b1098a9531c0",
+      "status": "not_started",
+      "tour": "WTA",
+      "tournament_name": "WTA Ningbo"
+    },
+    "id": "146a49d4-051f-4753-af22-88cbb3dfe59a",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT21JOVPAO",
+      "KXWTASETWINNER-26OCT21JOVPAO-1",
+      "KXWTASETWINNER-26OCT21JOVPAO-2"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT21JOVPAO",
+      "KXWTASETWINNER-26OCT21JOVPAO-1",
+      "KXWTASETWINNER-26OCT21JOVPAO-2",
+      "KXWTAGTOTAL-26OCT21JOVPAO"
+    ],
+    "source_id": "sr:sport_event:75656906",
+    "source_ids": {
+      "source_1_id": "5438107",
+      "source_2_id": "20261022A7EE4F30",
+      "source_3_id": "sr:sport_event:75656906"
+    },
+    "start_date": "2026-10-22T05:00:00Z",
+    "title": "Jovic vs Paolini",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "first_competitor_id": "4239272a-7ff3-4520-836c-14c51878937d",
+      "gender": "women",
+      "main_game_event_ticker": "KXWTAMATCH-26OCT21SAILHA",
+      "round": "Round",
+      "second_competitor_id": "5fb1f92c-3ca9-4bbb-b362-867fd09fac27",
+      "status": "P",
+      "tour": "ITF",
+      "tournament_name": "Billie Jean King Cup Qualifiers"
+    },
+    "id": "e8c37550-afb2-4192-8ecb-6fe5658109c3",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The match is about to begin.",
+    "primary_event_tickers": [
+      "KXWTAMATCH-26OCT21SAILHA"
+    ],
+    "related_event_tickers": [
+      "KXWTAMATCH-26OCT21SAILHA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-21T06:29:47Z",
+    "title": "Saizan vs Lhaden",
+    "type": "tennis_tournament_singles",
+    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
   }
 ]

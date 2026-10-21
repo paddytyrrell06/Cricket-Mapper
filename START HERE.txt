@@ -1,4 +1,4 @@
-PREDICTION MARKET TERMINAL
+EVENTLENS DATA TERMINAL
 
 1. Open this folder in VS Code or Terminal.
 2. Start the browser terminal: python3 server.py
@@ -6,6 +6,14 @@ PREDICTION MARKET TERMINAL
 4. Quotes refresh automatically every 15 seconds. Reload or click Refresh prices
    to request another refresh. The table updates without reopening the page.
    First-time setup needs one full scan: python3 run.py
+
+Data & research: http://127.0.0.1:8765/research
+The service saves up to 25 liquid validated outcome pairs per refresh into
+data/eventlens.sqlite3. This persists across runs and report regeneration.
+Use the research page for datasets, time ranges, charts, selected books and CSV.
+Optional PMXT books and price samples: .venv-pmxt/bin/python server.py
+Import saved history offline: python3 research_store.py --import-history
+This iteration is data collection/research only; no strategies or backtests.
 
 Use --interval=30 for a slower cycle or --interval=0 for manual refresh.
 
