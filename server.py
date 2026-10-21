@@ -60,6 +60,7 @@ class QuoteRefresh:
         self.root = Path(root).resolve()
         self._runner = runner or subprocess.run
         self.runtime = runtime
+        self.catalog_monitor = None
         self._lock = threading.Lock()
         self._worker: threading.Thread | None = None
         self._state = {
@@ -96,8 +97,11 @@ class QuoteRefresh:
     def _refresh(self) -> None:
         error = None
         try:
-            if self.runtime is not None:
-                self.runtime.refresh()
+            if self.runtime is not None or self.catalog_monitor is not None:
+                if self.runtime is not None:
+                    self.runtime.refresh()
+                if self.catalog_monitor is not None:
+                    self.catalog_monitor.refresh()
                 self._finish(None)
                 return
             if not (self.root / "output" / "data").is_dir():
@@ -154,6 +158,10 @@ class TerminalServer(ThreadingHTTPServer):
                 if (self.root / "output/data/market_map.csv").exists():
                     store.import_snapshot(self.root / "output/data")
                 self.research = ResearchService(self.root, store, self.runtime)
+                from catalog_monitor import CatalogQuoteMonitor
+                self.catalog_monitor = CatalogQuoteMonitor(self.research.catalog, store, runtime=self.runtime)
+                self.refresh.catalog_monitor = self.catalog_monitor
+                self.research.terminal.monitor = self.catalog_monitor
                 if self.runtime is not None:
                     self.runtime.recorder = store
             except (OSError, ValueError, sqlite3.Error) as exc:
@@ -366,7 +374,7 @@ def main(argv=None) -> int:
     def scan_loop():
         while not stopped.wait(args.interval):
             server.refresh.request()
-    if server.runtime is not None:
+    if server.runtime is not None or getattr(server.refresh, "catalog_monitor", None) is not None:
         server.refresh.request()
         if args.interval:
             threading.Thread(target=scan_loop, name="terminal-rest-scheduler", daemon=True).start()

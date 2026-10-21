@@ -39,6 +39,7 @@ class ResearchStore:
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
         with self.connect() as db:
+            new_latest = db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='latest_quotes'").fetchone() is None
             db.executescript("""
                 CREATE TABLE IF NOT EXISTS datasets(id TEXT PRIMARY KEY, name TEXT NOT NULL, kind TEXT NOT NULL);
                 CREATE TABLE IF NOT EXISTS frames(id INTEGER PRIMARY KEY, dataset_id TEXT NOT NULL REFERENCES datasets(id),
@@ -53,6 +54,9 @@ class ResearchStore:
                   PRIMARY KEY(frame_id,pair_key,exchange));
                 CREATE INDEX IF NOT EXISTS observation_market ON observations(exchange,market_id,outcome,frame_id);
                 CREATE INDEX IF NOT EXISTS observation_pair ON observations(pair_key,frame_id);
+                CREATE TABLE IF NOT EXISTS latest_quotes(exchange TEXT NOT NULL, instrument_id TEXT NOT NULL,
+                  observed_at TEXT, frame_id INTEGER NOT NULL, payload TEXT NOT NULL,
+                  PRIMARY KEY(exchange,instrument_id));
                 CREATE TABLE IF NOT EXISTS candles(exchange TEXT NOT NULL, instrument_id TEXT NOT NULL,
                   resolution TEXT NOT NULL, time TEXT NOT NULL, observed_at TEXT NOT NULL, source TEXT NOT NULL,
                   open TEXT, high TEXT, low TEXT, close TEXT, volume TEXT,
@@ -62,6 +66,16 @@ class ResearchStore:
             for column in ("provider_time", "volume_time", "metadata_time"):
                 if column not in columns:
                     db.execute("ALTER TABLE observations ADD COLUMN " + column + " TEXT")
+            if new_latest:
+                entries = db.execute("""SELECT * FROM (SELECT o.*, ROW_NUMBER() OVER (
+                    PARTITION BY exchange,instrument_id ORDER BY julianday(observed_at) DESC,frame_id DESC) latest_rank
+                    FROM observations o WHERE instrument_id IS NOT NULL AND instrument_id!='') WHERE latest_rank=1""").fetchall()
+                for entry in entries:
+                    value = dict(entry)
+                    value.pop("latest_rank")
+                    db.execute("INSERT INTO latest_quotes VALUES(?,?,?,?,?)", (value["exchange"], value["instrument_id"],
+                        value["observed_at"], value["frame_id"], json.dumps(value)))
+
 
     @contextmanager
     def connect(self):
@@ -77,6 +91,34 @@ class ResearchStore:
             raise
         finally:
             db.close()
+
+    def _update_latest(self, db, frame_id):
+        for entry in db.execute("SELECT * FROM observations WHERE frame_id=? AND instrument_id IS NOT NULL AND instrument_id!=''", (frame_id,)).fetchall():
+            value = dict(entry)
+            current = db.execute("SELECT observed_at,frame_id FROM latest_quotes WHERE exchange=? AND instrument_id=?",
+                                 (value["exchange"], value["instrument_id"])).fetchone()
+            stamp = P._timestamp(value["observed_at"])
+            prior = P._timestamp(current["observed_at"]) if current else None
+            if current and ((prior is not None and (stamp is None or stamp < prior))
+                            or stamp == prior and value["frame_id"] < current["frame_id"]):
+                continue
+            db.execute("INSERT OR REPLACE INTO latest_quotes VALUES(?,?,?,?,?)", (value["exchange"], value["instrument_id"],
+                       value["observed_at"], frame_id, json.dumps(value, separators=(",", ":"))))
+
+    def latest_quotes(self, instruments=None):
+        """Current recorded state by exact native outcome; no history scan."""
+        with self.connect() as db:
+            if instruments is None:
+                entries = db.execute("SELECT exchange,instrument_id,payload FROM latest_quotes").fetchall()
+            else:
+                keys = list(set(instruments))
+                entries = []
+                for start in range(0, len(keys), 400):
+                    chunk = keys[start:start + 400]
+                    slots = ",".join("(?,?)" for _ in chunk)
+                    entries.extend(db.execute("SELECT exchange,instrument_id,payload FROM latest_quotes WHERE (exchange,instrument_id) IN (" + slots + ")",
+                        [part for key in chunk for part in key]).fetchall())
+        return {(row["exchange"], row["instrument_id"]): json.loads(row["payload"]) for row in entries}
 
     def record(self, rows, *, available_at=None, dataset_id="recorded", kind="recorded_quotes",
                name=None, assets=None, limit=25, select=True):
@@ -108,6 +150,7 @@ class ResearchStore:
                         if asset:
                             db.execute("UPDATE observations SET instrument_id=? WHERE frame_id=? AND pair_key=? AND exchange=? AND instrument_id IS NULL",
                                        (asset, existing[0], pair_key(row), venue))
+                self._update_latest(db, existing[0])
                 return existing[0]
             frame_id = db.execute("INSERT INTO frames(dataset_id,available_at,ingested_at,digest,rows_blob) VALUES(?,?,?,?,?)",
                 (dataset_id, available, ingested, digest, zlib.compress(payload.encode()))).lastrowid
@@ -126,6 +169,7 @@ class ResearchStore:
                         row.get(venue + "_ask_size"), row.get(venue + "_volume"), row.get(venue + "_market_status"), row.get(venue + "_quote_status"),
                         row.get(venue + "_quote_source"), "recorded_levels" if book else "recorded_bbo",
                         details.get("quote_provider_time"), row.get(venue + "_volume_time"), row.get(venue + "_metadata_time")))
+            self._update_latest(db, frame_id)
         return frame_id
 
     def datasets(self):

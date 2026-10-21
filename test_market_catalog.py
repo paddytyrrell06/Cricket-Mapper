@@ -61,6 +61,17 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(db.execute("SELECT COUNT(*) FROM frames").fetchone()[0], 0)
         self.assertTrue(all(item["complete"] for item in summary["exchanges"].values()))
 
+    def test_shared_kalshi_question_retains_the_specific_yes_proposition(self):
+        event = kalshi_event(title="Who will be elected?", yes_sub_title="Candidate A")
+        def request(url, params):
+            return 200, {"events": [event] if "kalshi" in url else [], "cursor": "", "next_cursor": ""}
+        catalog = MarketCatalog(self.store, request)
+        catalog.refresh(1)
+        choice = catalog.page()["markets"][0]
+        self.assertEqual(choice["title"], "Who will be elected? · Candidate A")
+        self.assertEqual(choice["outcome"], "Yes")
+        self.assertEqual(choice["instrument_id"], event["markets"][0]["ticker"])
+
     def test_request_caps_resume_cursors_then_restart_after_exhaustion(self):
         calls = []
         def request(url, params):

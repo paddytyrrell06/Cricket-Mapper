@@ -19,6 +19,8 @@ class ResearchService:
         self._provider = None
         from market_catalog import MarketCatalog
         self.catalog = MarketCatalog(store)
+        from terminal_markets import TerminalMarkets
+        self.terminal = TerminalMarkets(self.catalog, store, runtime)
 
     def get(self, path, query):
         if path == "/api/research/universe":
@@ -27,6 +29,17 @@ class ResearchService:
                 "sport": row.get("sport"), "comparison_status": row.get("comparison_status"), "fixture_date": row.get("fixture_date"),
                 "instruments": {venue: assets.get((venue, row.get(venue + "_market_id"), C.norm_team(row["canonical_outcome"]))) for venue in ("kalshi", "polymarket_intl")}}
                 for row in rows] + self.catalog.markets()}
+        if path == "/api/research/terminal":
+            args = {key: query[key][0] for key in ("search", "category", "exchange", "status", "view", "sort", "direction", "min_liquidity", "size") if key in query}
+            args.update({key: int(query[key][0]) for key in ("limit", "offset") if key in query})
+            for key in ("strict", "quoted"):
+                if key in query:
+                    if query[key][0] not in ("true", "false"):
+                        raise ValueError("Invalid boolean filter")
+                    args[key] = query[key][0] == "true"
+            if "watchlist" in query:
+                args["watchlist"] = json.loads(query["watchlist"][0])
+            return self.terminal.page(**args)
         if path == "/api/research/catalog":
             args = {key: query[key][0] for key in ("search", "category", "exchange", "status", "sort", "direction") if key in query}
             args.update({key: int(query[key][0]) for key in ("limit", "offset") if key in query})

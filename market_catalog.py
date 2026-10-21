@@ -104,6 +104,11 @@ class MarketCatalog:
         status = str(market.get("status") or ("closed" if market.get("closed") is True
                       else "active" if market.get("active") is True else "unknown")).lower()
         title = str(market.get("title" if venue == "kalshi" else "question") or event.get("title") or market_id)
+        # Categorical Kalshi strikes can share a question; retain the named
+        # YES proposition so candidates/thresholds remain distinguishable.
+        subtitle = str(market.get("yes_sub_title") or "").strip() if venue == "kalshi" else ""
+        if subtitle and subtitle.casefold() not in title.casefold():
+            title += " · " + subtitle
         expiry = market.get("close_time" if venue == "kalshi" else "endDate") or ""
         volume = market.get("volume_fp" if venue == "kalshi" else "volume")
         rules = "\n".join(str(market.get(key) or "") for key in ("rules_primary", "rules_secondary")) if venue == "kalshi" else str(market.get("description") or event.get("description") or "")
@@ -241,7 +246,7 @@ class MarketCatalog:
     def page(self, *, search="", category="", exchange="", status="", limit=100,
              offset=0, sort="name", direction="asc"):
         """A bounded local catalog page, with only genuinely recorded quotes."""
-        order_columns = {"name": "title", "category": "category", "exchange": "exchange",
+        order_columns = {"name": "title COLLATE NOCASE", "category": "category COLLATE NOCASE", "exchange": "exchange",
                          "status": "status", "volume": "CAST(volume AS REAL)", "expiry": "expiry"}
         if sort not in order_columns or direction not in ("asc", "desc"):
             raise ValueError("Unsupported catalog sort")
@@ -286,16 +291,7 @@ class MarketCatalog:
             total = db.execute("SELECT COUNT(*)" + filtered, values).fetchone()[0]
             entries = [dict(row) for row in db.execute("SELECT *" + filtered + " ORDER BY " + order_columns[sort]
                 + " " + direction.upper() + ",id ASC LIMIT ? OFFSET ?", [*values, limit, offset])]
-            instruments = list({(row["exchange"], row["instrument_id"]) for row in entries if row["instrument_id"]})
-            quotes = {}
-            if instruments:
-                slots = ",".join("(?,?)" for _ in instruments)
-                observations = db.execute("""SELECT * FROM (SELECT exchange,instrument_id,bid,ask,bid_size,ask_size,
-                    observed_at,quote_status,source,ROW_NUMBER() OVER (PARTITION BY exchange,instrument_id
-                    ORDER BY julianday(observed_at) DESC,frame_id DESC) rank FROM observations
-                    WHERE (exchange,instrument_id) IN (""" + slots + ")) WHERE rank=1",
-                    [value for key in instruments for value in key]).fetchall()
-                quotes = {(row["exchange"], row["instrument_id"]): dict(row) for row in observations}
+        quotes = self.store.latest_quotes((row["exchange"], row["instrument_id"]) for row in entries if row["instrument_id"])
         from datetime import datetime, timezone
         now = datetime.now(timezone.utc)
         for row in entries:
@@ -312,6 +308,17 @@ class MarketCatalog:
             except (AttributeError, ValueError, TypeError, OverflowError):
                 pass
         return {"markets": entries, "total": total, "coverage": self.summary()}
+
+    def terminal_entries(self):
+        """Lightweight local metadata for assembling one unified market index."""
+        with self.store.connect() as db:
+            entries = db.execute("""SELECT id,exchange,market_id,category,outcome,instrument_id,discovered_at,
+                json_extract(row_json,'$.research_title') title,
+                COALESCE(json_extract(row_json,'$.kalshi_market_status'),json_extract(row_json,'$.polymarket_intl_market_status'),'unknown') status,
+                COALESCE(json_extract(row_json,'$.kalshi_volume'),json_extract(row_json,'$.polymarket_intl_volume')) volume,
+                COALESCE(json_extract(row_json,'$.kalshi_expiry'),json_extract(row_json,'$.polymarket_intl_expiry')) expiry
+                FROM research_catalog ORDER BY id""").fetchall()
+        return [dict(row) for row in entries]
 
     def lookup(self, identifier):
         with self.store.connect() as db:

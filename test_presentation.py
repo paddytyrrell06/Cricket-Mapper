@@ -870,7 +870,7 @@ class TerminalWorkspaceTests(unittest.TestCase):
         details = P.terminal_record_details(row, VENUES, max_age_seconds=30, max_skew_seconds=5)
         self.assertIn("30 seconds old and 5 seconds apart", details)
 
-    def test_esports_category_and_unconnected_categories_are_truthful(self):
+    def test_unified_workspace_preserves_validated_market_details_and_controls(self):
         self.case.match.fixture.key.sport = "cs2"
         row = self.case.row()
         self.assertEqual(row["domain"], "esports")
@@ -882,10 +882,60 @@ class TerminalWorkspaceTests(unittest.TestCase):
             document = path.read_text()
         self.assertIn('data-category="esports"', document)
         self.assertIn('data-tab="cs2" data-domain="esports"', document)
-        self.assertRegex(document, r'<button class="category" disabled[^>]*>Finance <small>later</small>')
-        self.assertRegex(document, r'<button class="category" disabled[^>]*>Tech <small>later</small>')
+        self.assertIn('id="openCatalog"', document)
+        self.assertNotIn('id="openComparisons"', document)
+        self.assertIn('id="openAlerts"', document)
+        self.assertIn('window.marketTerminalOpenDetails=', document)
+        self.assertIn('id="catalogSize"', document)
+        self.assertIn('id="catalogCategory"', document)
+        self.assertIn('/api/research/terminal?', document)
+        self.assertIn("research_dataset", document)
         self.assertIn('data-sort="pnl">Est. PnL $', document)
         self.assertIn('id="minLiquidity" type="number" min="0" step="10" value="100"', document)
+
+    @unittest.skipUnless(shutil.which("node"), "Node.js is required to exercise the unified workspace")
+    def test_unified_workspace_keeps_unknown_prices_and_expired_alerts_honest(self):
+        script = P._catalog_workspace_script()
+        harness = r'''
+const assert=require('node:assert/strict'),vm=require('node:vm');
+class Node {
+ constructor(id){this.id=id;this.value='';this.checked=false;this.hidden=false;this.innerHTML='';this.textContent='';this.dataset={};this.events={};this.classList={add(){},remove(){},contains(){return true;}};this.parentElement={setAttribute(){}};}
+ addEventListener(type,fn){this.events[type]=fn;}
+ setAttribute(key,value){this[key]=value;}
+ replaceChildren(...children){this.children=children;this.innerHTML='';}
+ add(option){(this.children??=[]).push(option);}
+ append(...children){this.children=children;}
+ dispatchEvent(event){this.events[event.type]?.(event);}
+ focus(){} blur(){}
+}
+const nodes=new Map(),get=id=>{if(!nodes.has(id))nodes.set(id,new Node(id));return nodes.get(id);};
+get('catalogSize').value='100';get('catalogLiquidity').value='0';get('catalogSort').value='liquidity';
+let response={total:3,counts:{all:3,matched:1,single:1,review:1,quoted:2,alerts:1},coverage:{categories:[{category:'Finance',markets:3}]},markets:[
+ {id:'pair',title:'<Bundesbank & test>',outcome:'YES',category:'Finance',match_status:'matched',crossed:true,net_crossed:true,comparison_id:7,quote_expiry:Date.now()+60000,gross_cents:'3',fees_cents:'1.6',net_cents:'1.4',pnl:'1.4',quantity:'100',top_liquidity:'186',legs:[{exchange:'kalshi',bid:'0.65',ask:'0.67',bid_size:'300',ask_size:null,quote_age_seconds:2,research_pair:'exact-k',research_dataset:'recorded'},{exchange:'polymarket_intl',bid:'0.60',ask:'0.62',bid_size:'400',ask_size:'400',quote_age_seconds:2,research_pair:'exact-p',research_dataset:'recorded'}]},
+ {id:'single',title:'Unknown depth',outcome:'NO',category:'Finance',match_status:'single',legs:[{exchange:'kalshi',bid:null,ask:null,research_pair:'single-k',research_dataset:'catalog_quotes'}]},
+ {id:'expired',title:'Expired cross',category:'Finance',match_status:'matched',crossed:true,net_crossed:true,quote_expiry:Date.now()-1,gross_cents:'3',fees_cents:'1.6',net_cents:'999',pnl:'999',legs:[]}
+]};
+const requests=[],timers=[],windows={marketTerminalIsWatched:()=>false,marketTerminalOpenDetails:id=>{windows.detail=id;},addEventListener(){}};
+const context=vm.createContext({document:{getElementById:get,querySelectorAll:()=>[],addEventListener(){},body:{classList:{add(){},contains(){return true;}}},hidden:false,activeElement:{tagName:'BODY'}},window:windows,location:{protocol:'http:',search:''},sessionStorage:{getItem:()=>null,setItem(){}},URLSearchParams,Option:function(label,value){this.label=label;this.value=value;},Event:function(type){this.type=type;},Date,Set,Map,fetch:async url=>{requests.push(url);return {ok:true,json:async()=>response};},setInterval:fn=>{timers.push(fn);return timers.length;},clearInterval(){},setTimeout:fn=>fn(),clearTimeout(){}});
+vm.runInContext(SCRIPT,context);
+const settle=async()=>{for(let i=0;i<5;i++)await new Promise(resolve=>setImmediate(resolve));};
+(async()=>{await settle();
+ assert.match(requests[0],/^\/api\/research\/terminal\?/);assert.match(requests[0],/size=100/);
+ let html=get('catalogRows').innerHTML;
+ assert.ok(html.includes('&lt;Bundesbank &amp; test&gt;'));assert.ok(!html.includes('<Bundesbank'));
+ assert.ok(html.includes('pair=exact-k&dataset=recorded'));assert.ok(html.includes('pair=exact-p&dataset=recorded'));assert.ok(html.includes('pair=single-k&dataset=catalog_quotes'));
+ assert.ok(html.includes('Awaiting quote'));assert.ok(!html.includes('999'));assert.ok(!html.includes('NaN'));assert.ok(html.includes('>+1.4<'));
+ assert.ok(html.includes('market-side bid">65'));assert.ok(html.includes('× 300'));assert.ok(!html.includes('>100<small'));
+ get('catalogQuoted').checked=true;get('catalogQuoted').events.change();await settle();assert.match(requests.at(-1),/quoted=true/);
+ get('catalogSize').value='10';get('catalogSize').events.change();await settle();assert.match(requests.at(-1),/size=10/);assert.equal(get('orderSize').value,'10');
+ get('openAlerts').events.click();await settle();assert.match(requests.at(-1),/view=alerts/);assert.equal(get('marketLinks').hidden,true);assert.ok(!get('catalogRows').innerHTML.includes('Expired cross'));assert.equal(get('openAlerts')['aria-pressed'],'true');
+ get('catalogRows').events.click({target:{closest:selector=>selector==='[data-terminal-details]'?{dataset:{terminalDetails:'7'}}:null}});assert.equal(windows.detail,7);
+ response={...response,total:0,markets:[]};timers[0]();await settle();assert.equal(get('catalogEmpty').hidden,false);assert.match(get('catalogEmpty').textContent,/No eligible crossed markets/);
+})().catch(error=>{console.error(error);process.exitCode=1;});
+'''
+        result = subprocess.run([shutil.which("node"), "-e", "const SCRIPT=" + json.dumps(script) + ";\n" + harness],
+                                capture_output=True, text=True, timeout=10)
+        self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_large_depth_is_legible_with_the_exact_quantity_available(self):
         self.case.left.extra.update(quote_bid_size="47235.99", quote_ask_size="2182963.36")
