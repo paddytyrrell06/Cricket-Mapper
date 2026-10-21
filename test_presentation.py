@@ -888,10 +888,28 @@ class TerminalWorkspaceTests(unittest.TestCase):
         self.assertIn('window.marketTerminalOpenDetails=', document)
         self.assertIn('id="catalogSize"', document)
         self.assertIn('id="catalogCategory"', document)
+        self.assertIn('id="catalogSport"', document)
+        self.assertIn('id="catalogReset"', document)
         self.assertIn('/api/research/terminal?', document)
         self.assertIn("research_dataset", document)
         self.assertIn('data-sort="pnl">Est. PnL $', document)
         self.assertIn('id="minLiquidity" type="number" min="0" step="10" value="100"', document)
+
+    def test_research_and_markets_use_the_same_header_geometry(self):
+        research = Path(__file__).with_name("research.html").read_text()
+        shared_header = P._application_header_style()
+        self.assertIn(shared_header, research)
+        self.assertIn('class="app-header"', research)
+        self.assertIn('class="app-brand"', research)
+        self.assertIn('class="app-navigation"', research)
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "terminal.html"
+            P.write_html(path, [self.case.row()], VENUES, self.case.coverage, self.case.as_of)
+            document = path.read_text()
+        self.assertIn(shared_header, document)
+        self.assertIn('class="topbar app-header"', document)
+        self.assertIn('<a href="/CricketMatchingReport.html" aria-current="page">Markets</a>', document)
+        self.assertIn('<a href="/research" aria-current="page">Data &amp; research</a>', research)
 
     @unittest.skipUnless(shutil.which("node"), "Node.js is required to exercise the unified workspace")
     def test_unified_workspace_keeps_unknown_prices_and_expired_alerts_honest(self):
@@ -910,7 +928,7 @@ class Node {
 }
 const nodes=new Map(),get=id=>{if(!nodes.has(id))nodes.set(id,new Node(id));return nodes.get(id);};
 get('catalogSize').value='100';get('catalogLiquidity').value='0';get('catalogSort').value='liquidity';
-let response={total:3,counts:{all:3,matched:1,single:1,review:1,quoted:2,alerts:1},coverage:{categories:[{category:'Finance',markets:3}]},markets:[
+let response={total:3,sports:[{sport:'soccer',label:'Soccer',markets:2,category:'Sports'},{sport:'basketball',label:'Basketball',markets:1,category:'Sports'},{sport:'cs2',label:'Counter-Strike 2',markets:1,category:'Esports'}],counts:{all:3,matched:1,single:1,review:1,quoted:2,alerts:1},coverage:{categories:[{category:'Finance',markets:3}]},markets:[
  {id:'pair',title:'<Bundesbank & test>',outcome:'YES',category:'Finance',match_status:'matched',crossed:true,net_crossed:true,comparison_id:7,quote_expiry:Date.now()+60000,gross_cents:'3',fees_cents:'1.6',net_cents:'1.4',pnl:'1.4',quantity:'100',top_liquidity:'186',legs:[{exchange:'kalshi',bid:'0.65',ask:'0.67',bid_size:'300',ask_size:null,quote_age_seconds:2,research_pair:'exact-k',research_dataset:'recorded'},{exchange:'polymarket_intl',bid:'0.60',ask:'0.62',bid_size:'400',ask_size:'400',quote_age_seconds:2,research_pair:'exact-p',research_dataset:'recorded'}]},
  {id:'single',title:'Unknown depth',outcome:'NO',category:'Finance',match_status:'single',legs:[{exchange:'kalshi',bid:null,ask:null,research_pair:'single-k',research_dataset:'catalog_quotes'}]},
  {id:'expired',title:'Expired cross',category:'Finance',match_status:'matched',crossed:true,net_crossed:true,quote_expiry:Date.now()-1,gross_cents:'3',fees_cents:'1.6',net_cents:'999',pnl:'999',legs:[]}
@@ -926,6 +944,16 @@ const settle=async()=>{for(let i=0;i<5;i++)await new Promise(resolve=>setImmedia
  assert.ok(html.includes('pair=exact-k&dataset=recorded'));assert.ok(html.includes('pair=exact-p&dataset=recorded'));assert.ok(html.includes('pair=single-k&dataset=catalog_quotes'));
  assert.ok(html.includes('Awaiting quote'));assert.ok(!html.includes('999'));assert.ok(!html.includes('NaN'));assert.ok(html.includes('>+1.4<'));
  assert.ok(html.includes('market-side bid">65'));assert.ok(html.includes('× 300'));assert.ok(!html.includes('>100<small'));
+ assert.equal(get('catalogSportField').hidden,true);
+ get('catalogCategory').value='Sports';get('catalogCategory').events.change();await settle();
+ assert.equal(get('catalogSportField').hidden,false);assert.equal(get('catalogSportLabel').textContent,'Sport');
+ assert.ok(get('catalogSport').children.some(option=>option.value==='soccer'));assert.ok(!get('catalogSport').children.some(option=>option.value==='cs2'));
+ get('catalogSport').value='soccer';get('catalogSport').events.change();await settle();assert.match(requests.at(-1),/sport=soccer/);assert.match(requests.at(-1),/category=Sports/);assert.ok(get('catalogStatus').innerHTML.includes('Sports / Soccer'));
+ get('marketCategories').events.click({target:{closest:()=>({dataset:{marketCategory:'Esports'}})}});await settle();
+ assert.equal(get('catalogSport').value,'');assert.equal(get('catalogSportLabel').textContent,'Game');assert.ok(!requests.at(-1).includes('sport='));assert.ok(get('catalogSport').children.some(option=>option.value==='cs2'));
+ get('catalogSport').value='cs2';get('catalogSport').events.change();await settle();assert.match(requests.at(-1),/sport=cs2/);
+ get('catalogCategory').value='Finance';get('catalogCategory').events.change();await settle();assert.equal(get('catalogSportField').hidden,true);assert.ok(!requests.at(-1).includes('sport='));
+ get('catalogReset').events.click();await settle();assert.equal(get('catalogCategory').value,'');assert.equal(get('catalogSport').value,'');assert.equal(get('catalogReset').hidden,true);
  get('catalogQuoted').checked=true;get('catalogQuoted').events.change();await settle();assert.match(requests.at(-1),/quoted=true/);
  get('catalogSize').value='10';get('catalogSize').events.change();await settle();assert.match(requests.at(-1),/size=10/);assert.equal(get('orderSize').value,'10');
  get('openAlerts').events.click();await settle();assert.match(requests.at(-1),/view=alerts/);assert.equal(get('marketLinks').hidden,true);assert.ok(!get('catalogRows').innerHTML.includes('Expired cross'));assert.equal(get('openAlerts')['aria-pressed'],'true');

@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 import canonical as C
-from market_catalog import MarketCatalog
+from market_catalog import MarketCatalog, native_sport
 from research_store import ResearchStore, pair_key
 
 
@@ -167,6 +167,26 @@ class CatalogTests(unittest.TestCase):
         row, _ = catalog.lookup(choice["id"])
         self.assertEqual(row["kalshi_metadata_time"], "2026-10-20T12:00:00.000000+00:00")
         self.assertEqual(row["discovered_at"], row["kalshi_metadata_time"])
+
+    def test_sports_classification_uses_native_metadata_and_does_not_infer_from_titles(self):
+        self.assertEqual(native_sport({'tags': [{'slug': 'soccer'}, {'slug': 'sports'}]}, {}, 'Sports'), 'soccer')
+        self.assertEqual(native_sport({'series_ticker': 'KXNFLGAME'}, {}, 'Sports'), 'football')
+        self.assertEqual(native_sport({'series_ticker': 'KXCS2GAME'}, {}, 'Esports'), 'cs2')
+        self.assertEqual(native_sport({}, {'sport': {'slug': 'basketball'}}, 'Sports'), 'basketball')
+        self.assertEqual(native_sport({'tags': [{'slug': 'nfl'}, {'slug': 'nba'}]}, {}, 'Sports'), 'unknown')
+        self.assertEqual(native_sport({'title': 'Football match'}, {}, 'Sports'), 'unknown')
+        self.assertEqual(native_sport({'tags': [{'slug': 'nba'}]}, {}, 'Finance'), '')
+
+    def test_existing_catalog_gains_sport_metadata_without_rediscovery(self):
+        event = kalshi_event(category='Sports')
+        event['series_ticker'] = 'KXATPMATCH'
+        catalog = MarketCatalog(self.store, lambda url, params: (200, {'events': [event] if 'kalshi' in url else [], 'cursor': ''}))
+        catalog.refresh(1)
+        with self.store.connect() as db:
+            db.execute("UPDATE research_catalog SET row_json=json_remove(row_json,'$.sport_code','$.sport_label')")
+        catalog.requester = lambda *args: self.fail('Metadata display must not request the network')
+        item = catalog.terminal_entries()[0]
+        self.assertEqual((item['sport'], item['sport_label']), ('tennis', 'Tennis'))
 
 
 if __name__ == "__main__":

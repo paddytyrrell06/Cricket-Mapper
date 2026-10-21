@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 from collections import defaultdict
+from functools import lru_cache
 from threading import Lock
 
 import canonical as C
@@ -33,6 +34,63 @@ CATEGORY_LABELS = {
 }
 CATEGORY_PRIORITY = ("Esports", "Sports", "Weather", "Crypto", "Geopolitics",
                      "Economics", "Finance", "Technology", "Science", "Health", "Entertainment", "Politics")
+
+SPORT_LABELS = {
+    "soccer": "Football (soccer)", "football": "American football", "basketball": "Basketball",
+    "baseball": "Baseball", "hockey": "Ice hockey", "cricket": "Cricket", "tennis": "Tennis",
+    "mma": "MMA", "boxing": "Boxing", "golf": "Golf", "rugby": "Rugby", "motorsport": "Motorsport",
+    "cs2": "Counter-Strike 2", "lol": "League of Legends", "dota2": "Dota 2", "valorant": "Valorant",
+    "esports": "Esports (unspecified)", "unknown": "Unspecified sport",
+}
+SPORT_ALIASES = {
+    "soccer": "soccer", "association-football": "soccer", "american-football": "football",
+    "nfl": "football", "ncaaf": "football", "college-football": "football", "football": "football",
+    "basketball": "basketball", "nba": "basketball", "wnba": "basketball", "ncaab": "basketball",
+    "baseball": "baseball", "mlb": "baseball", "hockey": "hockey", "ice-hockey": "hockey", "nhl": "hockey",
+    "cricket": "cricket", "tennis": "tennis", "atp": "tennis", "wta": "tennis", "mma": "mma", "ufc": "mma",
+    "boxing": "boxing", "golf": "golf", "rugby": "rugby", "formula-1": "motorsport", "f1": "motorsport",
+    "motorsport": "motorsport", "cs2": "cs2", "counter-strike-2": "cs2", "counter-strike": "cs2",
+    "lol": "lol", "league-of-legends": "lol", "dota-2": "dota2", "dota2": "dota2", "valorant": "valorant",
+}
+
+
+def _sport_name(value):
+    return SPORT_ALIASES.get(str(value or "").strip().casefold().replace(" ", "-"), "")
+
+
+@lru_cache(maxsize=1)
+def _sport_series():
+    # Reuse the exact native series already supported by our collectors. This
+    # is metadata classification, never inference from a contract's title.
+    from sports import SPORT_CONFIGS, SOCCER_COMPETITIONS, NATIVE_COMPETITIONS
+    from niches import ESPORTS_COMPETITIONS
+    from universe import KNOWN_KALSHI_CRICKET_SERIES
+    result = {item["series"]: sport for sport, item in SPORT_CONFIGS.items()}
+    result.update({item["series"]: "soccer" for item in SOCCER_COMPETITIONS.values()})
+    result.update({item["series"]: item["sport"] for item in NATIVE_COMPETITIONS.values()})
+    result.update({item["series"]: sport for sport, item in ESPORTS_COMPETITIONS.items()})
+    result.update({series: "cricket" for series in KNOWN_KALSHI_CRICKET_SERIES})
+    return result
+
+
+def native_sport(event, market, category):
+    """Classify only explicit native sport, league, tags or a known series."""
+    if category not in {"Sports", "Esports"}:
+        return ""
+    for source in (market, event):
+        for key in ("sport", "sport_name", "league"):
+            value = source.get(key)
+            if isinstance(value, dict):
+                value = value.get("slug") or value.get("name")
+            if sport := _sport_name(value):
+                return sport
+    sports = {_sport_name(tag.get("slug") or tag.get("label")) for source in (event, market)
+              for tag in (source.get("tags") if isinstance(source.get("tags"), list) else []) if isinstance(tag, dict)} - {""}
+    if len(sports) == 1:
+        return sports.pop()
+    if not sports and (sport := _sport_series().get(str(event.get("series_ticker") or ""))):
+        return sport
+    return "unknown"
 
 
 def _category(event, venue):
@@ -101,6 +159,7 @@ class MarketCatalog:
         if not event_id or not market_id:
             return []
         category, category_source, tags = _category(event, venue)
+        sport = native_sport(event, market, category)
         status = str(market.get("status") or ("closed" if market.get("closed") is True
                       else "active" if market.get("active") is True else "unknown")).lower()
         title = str(market.get("title" if venue == "kalshi" else "question") or event.get("title") or market_id)
@@ -120,6 +179,7 @@ class MarketCatalog:
                 "canonical_market_type": market_id, "canonical_outcome": outcome,
                 "research_title": title, "category": category, "category_source": category_source,
                 "native_category": event.get("category"), "native_tags": tags,
+                "sport_code": sport, "sport_label": SPORT_LABELS.get(sport, ""),
                 "mapping_status": "unmatched", "comparison_status": "unmatched",
                 "fixture_date": str(expiry)[:10], "discovery_source": "native_public_catalog",
                 "discovered_at": observed_at, "research_exchange": venue,
@@ -316,9 +376,35 @@ class MarketCatalog:
                 json_extract(row_json,'$.research_title') title,
                 COALESCE(json_extract(row_json,'$.kalshi_market_status'),json_extract(row_json,'$.polymarket_intl_market_status'),'unknown') status,
                 COALESCE(json_extract(row_json,'$.kalshi_volume'),json_extract(row_json,'$.polymarket_intl_volume')) volume,
-                COALESCE(json_extract(row_json,'$.kalshi_expiry'),json_extract(row_json,'$.polymarket_intl_expiry')) expiry
+                COALESCE(json_extract(row_json,'$.kalshi_expiry'),json_extract(row_json,'$.polymarket_intl_expiry')) expiry,
+                json_extract(row_json,'$.sport_code') sport,
+                json_extract(row_json,'$.raw_metadata.event.tags') sport_tags,
+                COALESCE(json_extract(row_json,'$.raw_metadata.event.sport'),json_extract(row_json,'$.raw_metadata.event.sport_name')) event_sport,
+                COALESCE(json_extract(row_json,'$.raw_metadata.market.sport'),json_extract(row_json,'$.raw_metadata.market.sport_name')) market_sport,
+                json_extract(row_json,'$.raw_metadata.event.league') event_league,
+                json_extract(row_json,'$.raw_metadata.market.league') market_league,
+                json_extract(row_json,'$.raw_metadata.event.series_ticker') sport_series
                 FROM research_catalog ORDER BY id""").fetchall()
-        return [dict(row) for row in entries]
+        result = []
+        for row in entries:
+            item = dict(row)
+            # Old saved catalogs gain sport navigation without rediscovery or
+            # a database migration. Read only the required metadata fields.
+            metadata = {key: item.pop(key) for key in ("sport_tags", "event_sport", "market_sport", "event_league", "market_league", "sport_series")}
+            def unpack(value):
+                if isinstance(value, str) and value.startswith(("{", "[")):
+                    try:
+                        return json.loads(value)
+                    except ValueError:
+                        pass
+                return value
+            item["sport"] = item["sport"] or native_sport(
+                {"sport": unpack(metadata["event_sport"]), "league": unpack(metadata["event_league"]),
+                 "tags": unpack(metadata["sport_tags"]), "series_ticker": metadata["sport_series"]},
+                {"sport": unpack(metadata["market_sport"]), "league": unpack(metadata["market_league"])}, item["category"])
+            item["sport_label"] = SPORT_LABELS.get(item["sport"], "")
+            result.append(item)
+        return result
 
     def lookup(self, identifier):
         with self.store.connect() as db:

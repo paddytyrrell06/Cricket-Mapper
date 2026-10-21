@@ -83,6 +83,15 @@ class ResearchAPITests(unittest.TestCase):
         self.assertEqual(len(details["quote_order_book"]["bids"]), 12)
         self.assertEqual(row["polymarket_intl_quote_source"], "pmxt_local book 100")
 
+    def test_terminal_forwards_sport_filter_without_market_data_requests(self):
+        self.service.terminal = Mock()
+        self.service.terminal.page.return_value = {'markets': [], 'sports': [{'sport': 'soccer', 'label': 'Football (soccer)', 'markets': 5, 'category': 'Sports'}]}
+        result = self.service.get('/api/research/terminal', {'category': ['Sports'], 'sport': ['soccer'], 'limit': ['50']})
+        self.service.terminal.page.assert_called_once_with(category='Sports', sport='soccer', limit=50)
+        self.assertEqual(result['sports'][0]['sport'], 'soccer')
+        self.catalog.refresh.assert_not_called()
+        self.provider.fetch_book.assert_not_called()
+
     def test_candles_are_typed_separate_from_quote_frames(self):
         result = self.service.post("/api/research/candles", self.body)
         self.assertEqual(result["data_type"], "price_candles")

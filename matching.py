@@ -392,7 +392,8 @@ def match_markets(fixture_matches: list[FixtureMatch], markets: list[Market]
                 if not outcome:
                     problems.append("empty outcome")
                 if fixture_match.status != "accepted":
-                    problems.append("fixture is unresolved")
+                    detail = str(fixture_match.reason or "").strip()
+                    problems.append("fixture is unresolved" + (": " + detail if detail else ""))
                 settlement = S.compare_profiles(m1.extra.get("settlement"), m2.extra.get("settlement"))
                 mm.comparison_basis = settlement["comparison_basis"]
                 mm.contingency_status = settlement["contingency_status"]

@@ -13,6 +13,7 @@ import canonical as C
 import fees as F
 import presentation as P
 from research_store import pair_key
+from market_catalog import SPORT_LABELS, _sport_name
 
 VENUES = ("kalshi", "polymarket_intl")
 CLOSED = {"closed", "settled", "resolved", "finalized", "archived", "inactive", "cancelled", "canceled"}
@@ -32,7 +33,20 @@ def cents(value):
 
 
 def normal_question(value):
-    return re.sub(r"[^\w]+", " ", unicodedata.normalize("NFKC", value).casefold()).strip()
+    # Comparators, signs and punctuation can change a contract's meaning.
+    # Only normalize typography, case and whitespace for exact-text candidates.
+    return re.sub(r"\s+", " ", unicodedata.normalize("NFKC", value).casefold()).strip()
+
+
+def reviewable(row):
+    """Only confirmed, unambiguous fixtures with missing rule evidence need review.
+
+    A rejected fixture or a known settlement conflict is not a linked market.
+    Keep each venue visible on its own rather than presenting a false pairing.
+    """
+    reason = str(row.get("comparison_reason") or "").casefold()
+    return row.get("comparison_status") == "rules_unknown" and not any(fragment in reason for fragment in
+        ("fixture is unresolved", "format not established", "multiple market candidates", "ambiguous", "conflicts"))
 
 
 class TerminalMarkets:
@@ -77,7 +91,10 @@ class TerminalMarkets:
     def _base(identity, title, outcome, category, legs, status):
         depth = [number(leg.get("top_liquidity")) for leg in legs if number(leg.get("top_liquidity")) is not None]
         expiry = min((str(leg.get("expiry")) for leg in legs if leg.get("expiry")), default="")
+        sports = {leg.get("sport") for leg in legs if leg.get("sport") and leg.get("sport") != "unknown"}
+        sport = next(iter(sports)) if len(sports) == 1 else "unknown" if category in {"Sports", "Esports"} else ""
         return {"id": identity, "title": title, "outcome": outcome, "category": category,
+                "sport": sport, "sport_label": SPORT_LABELS.get(sport, ""),
                 "venues": [leg["exchange"] for leg in legs], "legs": legs, "match_status": status,
                 "comparison_id": None, "comparison_key": None, "comparison_status": "unmatched",
                 "conditional": False, "crossed": False, "net_crossed": False, "alert": False,
@@ -90,12 +107,29 @@ class TerminalMarkets:
         entries, coverage = self._catalog()
         quotes = self.store.latest_quotes()
         by_asset = {(entry["exchange"], entry["instrument_id"]): entry for entry in entries if entry.get("instrument_id")}
-        consumed, result = set(), []
+        consumed, result, singles = set(), [], []
         rows, assets = self.runtime.research_rows() if self.runtime else ([], {})
+        def identities(row):
+            return tuple((venue, assets.get((venue, row.get(venue + "_market_id"), C.norm_team(row["canonical_outcome"]))))
+                for venue in VENUES if row.get(venue + "_market_id") and row.get(venue + "_status") == "Available")
+        # A native outcome cannot confidently link to two different outcomes.
+        # Duplicate identical pairs are harmless; conflicting counterparts stay
+        # separate. Accepted links take precedence over provisional candidates.
+        accepted, candidates = defaultdict(set), defaultdict(set)
+        for template in rows:
+            ids = identities(template)
+            if len(ids) != 2 or not all(identity[1] for identity in ids):
+                continue
+            target = accepted if template.get("mapping_status") == "accepted" and template.get("comparison_status") == "compatible" else candidates if reviewable(template) else None
+            if target is not None:
+                target[ids[0]].add(ids[1]); target[ids[1]].add(ids[0])
+        ordered = sorted(enumerate(rows), key=lambda indexed: 0 if indexed[1].get("mapping_status") == "accepted" and indexed[1].get("comparison_status") == "compatible" else 1 if reviewable(indexed[1]) else 2)
         policy_min = self.runtime.settings().get("min_liquidity_usd", "100") if self.runtime else "100"
         alert_min = max(Decimal("100"), number(policy_min) or Decimal("100"))
-        for index, template in enumerate(rows):
+        for index, template in ordered:
             row, legs = dict(template), []
+            sport = _sport_name(row.get("format")) if row.get("sport") == "esports" else row.get("sport")
+            sport = sport if sport in SPORT_LABELS else "esports" if row.get("domain") == "esports" else "unknown"
             for venue in VENUES:
                 market_id = row.get(venue + "_market_id")
                 if not market_id or row.get(venue + "_status") != "Available":
@@ -104,6 +138,8 @@ class TerminalMarkets:
                 native = by_asset.get((venue, instrument), {}) if instrument else {}
                 entry = {**native, "id": pair_key(row), "exchange": venue, "market_id": market_id,
                          "instrument_id": instrument, "outcome": row["canonical_outcome"],
+                         "title": native.get("title") or row.get(venue + "_title") or row.get("team_a", "") + " vs " + row.get("team_b", ""),
+                         "sport": sport, "sport_label": SPORT_LABELS.get(sport, ""),
                          "research_pair": pair_key(row), "research_dataset": "recorded",
                          "status": row.get(venue + "_market_status") or native.get("status", "unknown"),
                          "volume": row.get(venue + "_volume"), "expiry": native.get("expiry") or row.get("fixture_date"),
@@ -116,18 +152,37 @@ class TerminalMarkets:
                 selected = {} if observed and (recorded_at is None or observed > recorded_at) else quotes
                 leg = self._leg(entry, selected, now)
                 legs.append(leg)
-                if instrument:
-                    consumed.add((venue, instrument))
                 for field, value in (("bid", leg["bid"]), ("ask", leg["ask"]), ("bid_size", leg["bid_size"]),
                                      ("ask_size", leg["ask_size"]), ("quote_time", leg["observed_at"])):
                     row[venue + "_" + field] = value
             if not legs:
                 continue
-            equivalent = (len(legs) == 2 and all(leg.get("instrument_id") for leg in legs)
-                          and row.get("mapping_status") == "accepted" and row.get("comparison_status") == "compatible")
-            kind = "matched" if equivalent else "review" if len(legs) > 1 else "single"
+            ids = tuple((leg["exchange"], leg.get("instrument_id")) for leg in legs)
+            equivalent = (len(legs) == 2 and all(identity[1] for identity in ids)
+                          and row.get("mapping_status") == "accepted" and row.get("comparison_status") == "compatible"
+                          and all(len(accepted[identity]) == 1 for identity in ids))
+            candidate = (len(legs) == 2 and all(identity[1] for identity in ids) and reviewable(row)
+                         and all(not accepted[identity] and len(candidates[identity]) == 1 for identity in ids))
             domain = row.get("domain") or ("esports" if row.get("sport") in {"esports", "cs2", "lol", "dota2", "valorant"} else "sports")
             category = "Esports" if domain == "esports" else "Sports"
+            if not equivalent and not candidate:
+                for leg, identity in zip(legs, ids):
+                    if identity[1] and identity in consumed:
+                        continue
+                    item = self._base("single:" + leg["exchange"] + ":" + str(identity[1] or leg["market_id"]) + ":" + C.norm_team(leg["outcome"]),
+                                      leg["title"], leg["outcome"], category, [leg], "single")
+                    reason = row.get("comparison_reason") or "A unique equivalent contract has not been established"
+                    if len(accepted[identity]) > 1 or len(candidates[identity]) > 1:
+                        reason = "Multiple counterpart outcomes share this native instrument; no unique link established"
+                    item.update(comparison_status=row.get("comparison_status"), link_reason=reason, unlinked_reason=reason,
+                                competition=row.get("competition"))
+                    singles.append(item)
+                    if identity[1]: consumed.add(identity)
+                continue
+            if any(identity in consumed for identity in ids):
+                continue
+            consumed.update(ids)
+            kind = "matched" if equivalent else "review"
             item = self._base(pair_key(row), row.get("team_a", "") + " vs " + row.get("team_b", ""),
                               row["canonical_outcome"], category, legs, kind)
             item.update(comparison_id=index, comparison_key=P._json([domain, row.get("sport"),
@@ -171,20 +226,21 @@ class TerminalMarkets:
                 if all(leg["fresh"] for leg in legs):
                     item["top_liquidity"] = item["top_liquidity"] or P._observed_depth(row, list(VENUES))["notional"]
             result.append(item)
-        singles = []
         for entry in entries:
             if entry.get("instrument_id") and (entry["exchange"], entry["instrument_id"]) in consumed:
                 continue
             leg = self._leg(entry, quotes, now)
             leg["research_dataset"] = "catalog_quotes"
             singles.append(self._base(entry["id"], entry["title"], entry["outcome"], entry["category"], [leg], "single"))
+            if entry.get("instrument_id"):
+                consumed.add((entry["exchange"], entry["instrument_id"]))
         # Exact stated question, native outcome and expiry are useful research
         # links, but cannot establish equivalent settlement rules on their own.
         candidates = defaultdict(list)
         for item in singles:
             leg = item["legs"][0]
-            if item["expiry"] and leg.get("instrument_id"):
-                candidates[(normal_question(item["title"]), C.norm_team(item["outcome"]), item["expiry"][:10])].append(item)
+            if item["expiry"] and leg.get("instrument_id") and not item.get("unlinked_reason"):
+                candidates[(item["category"], item["sport"], normal_question(item["title"]), normal_question(item["outcome"]), item["expiry"])].append(item)
         joined = set()
         for group in candidates.values():
             if len(group) != 2 or {g["legs"][0]["exchange"] for g in group} != set(VENUES):
@@ -198,7 +254,7 @@ class TerminalMarkets:
         result.extend(item for item in singles if item["id"] not in joined)
         return result, coverage
 
-    def page(self, *, search="", category="", exchange="", status="", view="all", limit=100, offset=0,
+    def page(self, *, search="", category="", sport="", exchange="", status="", view="all", limit=100, offset=0,
              sort="liquidity", direction="desc", min_liquidity=0, size="100", strict=False, quoted=False, watchlist=None):
         if sort not in {"name", "category", "liquidity", "edge", "expiry", "gross", "pnl"} or direction not in {"asc", "desc"}:
             raise ValueError("Unsupported terminal sort")
@@ -206,8 +262,10 @@ class TerminalMarkets:
             raise ValueError("Unsupported market view")
         if not isinstance(limit, int) or isinstance(limit, bool) or not 1 <= limit <= 100 or not isinstance(offset, int) or isinstance(offset, bool) or not 0 <= offset <= 1000000:
             raise ValueError("Invalid terminal page")
-        if any(not isinstance(x, str) or len(x) > 200 for x in (search, category, exchange, status)) or size not in {"1", "10", "100", "1000", "top"}:
+        if any(not isinstance(x, str) or len(x) > 200 for x in (search, category, sport, exchange, status)) or size not in {"1", "10", "100", "1000", "top"}:
             raise ValueError("Invalid terminal filter")
+        if sport and sport not in SPORT_LABELS:
+            raise ValueError("Unsupported sport filter")
         threshold = number(min_liquidity)
         if threshold is None or threshold < 0 or not isinstance(strict, bool) or not isinstance(quoted, bool):
             raise ValueError("Invalid liquidity or quote filter")
@@ -218,11 +276,13 @@ class TerminalMarkets:
         counts = Counter(item["match_status"] for item in rows)
         counts.update(all=len(rows), alerts=sum(item["alert"] for item in rows), net_alerts=sum(item["net_crossed"] for item in rows), quoted=sum(item["quoted"] for item in rows))
         categories = Counter(item["category"] for item in rows)
+        sports = Counter((item["category"], item["sport"]) for item in rows if item["category"] in {"Sports", "Esports"})
         wanted = set(watchlist or [])
         def keep(item):
             if search.strip() and search.casefold().strip() not in " ".join([item["title"], item["outcome"], item["category"],
                     *[str(leg.get("market_id") or "") for leg in item["legs"]]]).casefold(): return False
             if category and item["category"] != category or exchange and exchange not in item["venues"]: return False
+            if sport and item["sport"] != sport: return False
             if view in {"matched", "single", "review"} and item["match_status"] != view: return False
             if view == "alerts" and not item["alert"] or view == "watch" and item["comparison_key"] not in wanted: return False
             if strict and (item["match_status"] != "matched" or not item.get("strict_equivalent")) or quoted and not item["quoted"]: return False
@@ -244,4 +304,6 @@ class TerminalMarkets:
         monitoring = self.monitor.status() if self.monitor else {"monitored_count": 0, "state": "not_started"}
         return {"markets": selected[offset:offset + limit], "total": len(selected), "counts": dict(counts),
                 "categories": [{"category": name, "markets": count} for name, count in sorted(categories.items())],
+                "sports": [{"sport": code, "label": SPORT_LABELS[code], "markets": count, "category": category}
+                           for (category, code), count in sorted(sports.items(), key=lambda item: (item[0][0], SPORT_LABELS[item[0][1]]))],
                 "coverage": coverage, "monitoring": monitoring, "as_of": now.isoformat(), "size": size}

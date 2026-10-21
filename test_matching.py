@@ -168,6 +168,21 @@ class FixtureReviewRecallTests(unittest.TestCase):
         self.assertEqual(market_accepted, [])
         self.assertEqual(len(market_review), 1)
         self.assertIn("fixture is unresolved", market_review[0].reason)
+        self.assertIn(review[0].reason, market_review[0].reason)
+
+    def test_market_review_preserves_the_published_start_time_conflict(self):
+        left, right = fixture("kalshi", "k"), fixture("polymarket_intl", "p")
+        right.start_time = "11:15"
+        accepted, review, _ = M.match_fixtures([left, right])
+        markets = [C.Market(f.venue, f.venue_fixture_id, f.key,
+                            C.MATCH_WINNER, "Australia", market_id=f"{f.venue}:winner")
+                   for f in (left, right)]
+
+        market_accepted, market_review, _ = M.match_markets(accepted + review, markets)
+
+        self.assertEqual(market_accepted, [])
+        self.assertIn("fixture is unresolved: published start times differ by more than 30 minutes",
+                      market_review[0].reason)
 
 
 if __name__ == "__main__":

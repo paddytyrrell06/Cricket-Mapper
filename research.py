@@ -30,7 +30,7 @@ class ResearchService:
                 "instruments": {venue: assets.get((venue, row.get(venue + "_market_id"), C.norm_team(row["canonical_outcome"]))) for venue in ("kalshi", "polymarket_intl")}}
                 for row in rows] + self.catalog.markets()}
         if path == "/api/research/terminal":
-            args = {key: query[key][0] for key in ("search", "category", "exchange", "status", "view", "sort", "direction", "min_liquidity", "size") if key in query}
+            args = {key: query[key][0] for key in ("search", "category", "sport", "exchange", "status", "view", "sort", "direction", "min_liquidity", "size") if key in query}
             args.update({key: int(query[key][0]) for key in ("limit", "offset") if key in query})
             for key in ("strict", "quoted"):
                 if key in query:
