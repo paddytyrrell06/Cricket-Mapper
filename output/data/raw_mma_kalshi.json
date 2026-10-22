@@ -12,19 +12,19 @@
     "expected_expiration_time": "2026-10-24T19:00:00Z",
     "expiration_time": "2026-10-26T14:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.7700",
+    "last_price_dollars": "0.7600",
     "latest_expiration_time": "2026-10-26T14:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.2500",
-    "no_bid_dollars": "0.2300",
+    "no_bid_dollars": "0.2400",
     "no_sub_title": "Jasmin Lucindo",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:00:00Z",
-    "open_interest_fp": "451.96",
+    "open_interest_fp": "1145.03",
     "open_time": "2026-10-19T16:45:00Z",
     "previous_price_dollars": "0.7700",
     "previous_yes_ask_dollars": "0.7700",
-    "previous_yes_bid_dollars": "0.7400",
+    "previous_yes_bid_dollars": "0.7600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -43,12 +43,12 @@
     "ticker": "KXUFCFIGHT-26OCT24LUCCAL-LUC",
     "title": "Jasmin Lucindo wins",
     "updated_time": "2026-10-19T16:45:00.243902Z",
-    "volume_24h_fp": "233.36",
-    "volume_fp": "458.35",
-    "yes_ask_dollars": "0.7700",
-    "yes_ask_size_fp": "55.02",
+    "volume_24h_fp": "810.86",
+    "volume_fp": "1184.18",
+    "yes_ask_dollars": "0.7600",
+    "yes_ask_size_fp": "2223.26",
     "yes_bid_dollars": "0.7500",
-    "yes_bid_size_fp": "862.00",
+    "yes_bid_size_fp": "7542.33",
     "yes_sub_title": "Jasmin Lucindo",
     "_event_title": "333: Jasmin Lucindo vs Nicolle Caliari",
     "_event_ticker": "KXUFCFIGHT-26OCT24LUCCAL",
@@ -63,10 +63,20 @@
       "start_date": "2026-10-24T14:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24LUCCAL"
+        "KXUFCFIGHT-26OCT24LUCCAL",
+        "KXUFCMOV-26OCT24LUCCAL",
+        "KXUFCMOF-26OCT24LUCCAL",
+        "KXUFCROUNDS-26OCT24LUCCAL",
+        "KXUFCDISTANCE-26OCT24LUCCAL",
+        "KXUFCVICROUND-26OCT24LUCCAL"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24LUCCAL"
+        "KXUFCFIGHT-26OCT24LUCCAL",
+        "KXUFCMOV-26OCT24LUCCAL",
+        "KXUFCMOF-26OCT24LUCCAL",
+        "KXUFCROUNDS-26OCT24LUCCAL",
+        "KXUFCDISTANCE-26OCT24LUCCAL",
+        "KXUFCVICROUND-26OCT24LUCCAL"
       ],
       "details": {
         "league": "ufc",
@@ -99,7 +109,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -122,11 +132,11 @@
     "no_sub_title": "Nicolle Caliari",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:00:00Z",
-    "open_interest_fp": "1987.09",
+    "open_interest_fp": "8350.84",
     "open_time": "2026-10-19T16:45:00Z",
-    "previous_price_dollars": "0.2600",
-    "previous_yes_ask_dollars": "0.2500",
-    "previous_yes_bid_dollars": "0.2200",
+    "previous_price_dollars": "0.2400",
+    "previous_yes_ask_dollars": "0.2400",
+    "previous_yes_bid_dollars": "0.2300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -145,12 +155,12 @@
     "ticker": "KXUFCFIGHT-26OCT24LUCCAL-CAL",
     "title": "Nicolle Caliari wins",
     "updated_time": "2026-10-19T16:45:00.243902Z",
-    "volume_24h_fp": "1134.55",
-    "volume_fp": "1994.65",
+    "volume_24h_fp": "6592.15",
+    "volume_fp": "8358.40",
     "yes_ask_dollars": "0.2400",
-    "yes_ask_size_fp": "1821.41",
+    "yes_ask_size_fp": "18035.88",
     "yes_bid_dollars": "0.2300",
-    "yes_bid_size_fp": "138.62",
+    "yes_bid_size_fp": "575.62",
     "yes_sub_title": "Nicolle Caliari",
     "_event_title": "333: Jasmin Lucindo vs Nicolle Caliari",
     "_event_ticker": "KXUFCFIGHT-26OCT24LUCCAL",
@@ -165,10 +175,20 @@
       "start_date": "2026-10-24T14:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24LUCCAL"
+        "KXUFCFIGHT-26OCT24LUCCAL",
+        "KXUFCMOV-26OCT24LUCCAL",
+        "KXUFCMOF-26OCT24LUCCAL",
+        "KXUFCROUNDS-26OCT24LUCCAL",
+        "KXUFCDISTANCE-26OCT24LUCCAL",
+        "KXUFCVICROUND-26OCT24LUCCAL"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24LUCCAL"
+        "KXUFCFIGHT-26OCT24LUCCAL",
+        "KXUFCMOV-26OCT24LUCCAL",
+        "KXUFCMOF-26OCT24LUCCAL",
+        "KXUFCROUNDS-26OCT24LUCCAL",
+        "KXUFCDISTANCE-26OCT24LUCCAL",
+        "KXUFCVICROUND-26OCT24LUCCAL"
       ],
       "details": {
         "league": "ufc",
@@ -201,7 +221,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -216,19 +236,19 @@
     "expected_expiration_time": "2026-10-24T19:00:00Z",
     "expiration_time": "2026-10-26T14:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.1800",
+    "last_price_dollars": "0.1700",
     "latest_expiration_time": "2026-10-26T14:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.8300",
-    "no_bid_dollars": "0.8200",
+    "no_ask_dollars": "0.8400",
+    "no_bid_dollars": "0.8300",
     "no_sub_title": "Colby Thicknesse",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:00:00Z",
-    "open_interest_fp": "16001.70",
+    "open_interest_fp": "25147.51",
     "open_time": "2026-10-14T20:45:00Z",
-    "previous_price_dollars": "0.1600",
-    "previous_yes_ask_dollars": "0.1700",
-    "previous_yes_bid_dollars": "0.1600",
+    "previous_price_dollars": "0.1800",
+    "previous_yes_ask_dollars": "0.1800",
+    "previous_yes_bid_dollars": "0.1700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -247,12 +267,12 @@
     "ticker": "KXUFCFIGHT-26OCT24THICHO-THI",
     "title": "Colby Thicknesse wins",
     "updated_time": "2026-10-19T16:01:05.534367Z",
-    "volume_24h_fp": "8444.63",
-    "volume_fp": "21737.25",
-    "yes_ask_dollars": "0.1800",
-    "yes_ask_size_fp": "8184.32",
-    "yes_bid_dollars": "0.1700",
-    "yes_bid_size_fp": "520.63",
+    "volume_24h_fp": "11495.26",
+    "volume_fp": "31472.46",
+    "yes_ask_dollars": "0.1700",
+    "yes_ask_size_fp": "3584.00",
+    "yes_bid_dollars": "0.1600",
+    "yes_bid_size_fp": "1293.60",
     "yes_sub_title": "Colby Thicknesse",
     "_event_title": "333: Colby Thicknesse vs Asaf Chopurov",
     "_event_ticker": "KXUFCFIGHT-26OCT24THICHO",
@@ -267,10 +287,20 @@
       "start_date": "2026-10-24T15:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24THICHO"
+        "KXUFCFIGHT-26OCT24THICHO",
+        "KXUFCMOV-26OCT24THICHO",
+        "KXUFCMOF-26OCT24THICHO",
+        "KXUFCROUNDS-26OCT24THICHO",
+        "KXUFCDISTANCE-26OCT24THICHO",
+        "KXUFCVICROUND-26OCT24THICHO"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24THICHO"
+        "KXUFCFIGHT-26OCT24THICHO",
+        "KXUFCMOV-26OCT24THICHO",
+        "KXUFCMOF-26OCT24THICHO",
+        "KXUFCROUNDS-26OCT24THICHO",
+        "KXUFCDISTANCE-26OCT24THICHO",
+        "KXUFCVICROUND-26OCT24THICHO"
       ],
       "details": {
         "league": "ufc",
@@ -303,7 +333,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -321,16 +351,16 @@
     "last_price_dollars": "0.8300",
     "latest_expiration_time": "2026-10-26T14:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.1700",
-    "no_bid_dollars": "0.1600",
+    "no_ask_dollars": "0.1800",
+    "no_bid_dollars": "0.1700",
     "no_sub_title": "Asaf Chopurov",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:00:00Z",
-    "open_interest_fp": "9703.63",
+    "open_interest_fp": "15737.31",
     "open_time": "2026-10-14T20:45:00Z",
-    "previous_price_dollars": "0.8200",
-    "previous_yes_ask_dollars": "0.8200",
-    "previous_yes_bid_dollars": "0.8100",
+    "previous_price_dollars": "0.8300",
+    "previous_yes_ask_dollars": "0.8400",
+    "previous_yes_bid_dollars": "0.8300",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -349,12 +379,12 @@
     "ticker": "KXUFCFIGHT-26OCT24THICHO-CHO",
     "title": "Asaf Chopurov wins",
     "updated_time": "2026-10-19T16:01:05.534367Z",
-    "volume_24h_fp": "13342.00",
-    "volume_fp": "17942.58",
-    "yes_ask_dollars": "0.8400",
-    "yes_ask_size_fp": "19141.01",
-    "yes_bid_dollars": "0.8300",
-    "yes_bid_size_fp": "4.04",
+    "volume_24h_fp": "8084.59",
+    "volume_fp": "25079.52",
+    "yes_ask_dollars": "0.8300",
+    "yes_ask_size_fp": "15.98",
+    "yes_bid_dollars": "0.8200",
+    "yes_bid_size_fp": "572.00",
     "yes_sub_title": "Asaf Chopurov",
     "_event_title": "333: Colby Thicknesse vs Asaf Chopurov",
     "_event_ticker": "KXUFCFIGHT-26OCT24THICHO",
@@ -369,10 +399,20 @@
       "start_date": "2026-10-24T15:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24THICHO"
+        "KXUFCFIGHT-26OCT24THICHO",
+        "KXUFCMOV-26OCT24THICHO",
+        "KXUFCMOF-26OCT24THICHO",
+        "KXUFCROUNDS-26OCT24THICHO",
+        "KXUFCDISTANCE-26OCT24THICHO",
+        "KXUFCVICROUND-26OCT24THICHO"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24THICHO"
+        "KXUFCFIGHT-26OCT24THICHO",
+        "KXUFCMOV-26OCT24THICHO",
+        "KXUFCMOF-26OCT24THICHO",
+        "KXUFCROUNDS-26OCT24THICHO",
+        "KXUFCDISTANCE-26OCT24THICHO",
+        "KXUFCVICROUND-26OCT24THICHO"
       ],
       "details": {
         "league": "ufc",
@@ -405,7 +445,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -428,10 +468,10 @@
     "no_sub_title": "Kody Steele",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:20:00Z",
-    "open_interest_fp": "2211.61",
+    "open_interest_fp": "3875.41",
     "open_time": "2026-10-19T16:45:00Z",
-    "previous_price_dollars": "0.6000",
-    "previous_yes_ask_dollars": "0.6000",
+    "previous_price_dollars": "0.5900",
+    "previous_yes_ask_dollars": "0.5900",
     "previous_yes_bid_dollars": "0.5800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -451,12 +491,12 @@
     "ticker": "KXUFCFIGHT-26OCT24STEGUG-STE",
     "title": "Kody Steele wins",
     "updated_time": "2026-10-19T16:45:00.243902Z",
-    "volume_24h_fp": "1446.82",
-    "volume_fp": "2277.46",
+    "volume_24h_fp": "2228.24",
+    "volume_fp": "3941.26",
     "yes_ask_dollars": "0.5900",
-    "yes_ask_size_fp": "24140.96",
+    "yes_ask_size_fp": "23051.15",
     "yes_bid_dollars": "0.5800",
-    "yes_bid_size_fp": "2861.90",
+    "yes_bid_size_fp": "415.00",
     "yes_sub_title": "Kody Steele",
     "_event_title": "333: Kody Steele vs Noah Gugnon",
     "_event_ticker": "KXUFCFIGHT-26OCT24STEGUG",
@@ -471,10 +511,20 @@
       "start_date": "2026-10-24T14:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24STEGUG"
+        "KXUFCFIGHT-26OCT24STEGUG",
+        "KXUFCMOV-26OCT24STEGUG",
+        "KXUFCMOF-26OCT24STEGUG",
+        "KXUFCROUNDS-26OCT24STEGUG",
+        "KXUFCDISTANCE-26OCT24STEGUG",
+        "KXUFCVICROUND-26OCT24STEGUG"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24STEGUG"
+        "KXUFCFIGHT-26OCT24STEGUG",
+        "KXUFCMOV-26OCT24STEGUG",
+        "KXUFCMOF-26OCT24STEGUG",
+        "KXUFCROUNDS-26OCT24STEGUG",
+        "KXUFCDISTANCE-26OCT24STEGUG",
+        "KXUFCVICROUND-26OCT24STEGUG"
       ],
       "details": {
         "league": "ufc",
@@ -507,7 +557,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -530,9 +580,9 @@
     "no_sub_title": "Noah Gugnon",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:20:00Z",
-    "open_interest_fp": "1056.98",
+    "open_interest_fp": "1405.94",
     "open_time": "2026-10-19T16:45:00Z",
-    "previous_price_dollars": "0.4200",
+    "previous_price_dollars": "0.4100",
     "previous_yes_ask_dollars": "0.4200",
     "previous_yes_bid_dollars": "0.4000",
     "price_level_structure": "linear_cent",
@@ -553,12 +603,12 @@
     "ticker": "KXUFCFIGHT-26OCT24STEGUG-GUG",
     "title": "Noah Gugnon wins",
     "updated_time": "2026-10-19T16:45:00.243902Z",
-    "volume_24h_fp": "284.98",
-    "volume_fp": "1057.20",
+    "volume_24h_fp": "436.82",
+    "volume_fp": "1406.16",
     "yes_ask_dollars": "0.4200",
-    "yes_ask_size_fp": "7353.96",
+    "yes_ask_size_fp": "3384.16",
     "yes_bid_dollars": "0.4100",
-    "yes_bid_size_fp": "133.00",
+    "yes_bid_size_fp": "206.00",
     "yes_sub_title": "Noah Gugnon",
     "_event_title": "333: Kody Steele vs Noah Gugnon",
     "_event_ticker": "KXUFCFIGHT-26OCT24STEGUG",
@@ -573,10 +623,20 @@
       "start_date": "2026-10-24T14:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24STEGUG"
+        "KXUFCFIGHT-26OCT24STEGUG",
+        "KXUFCMOV-26OCT24STEGUG",
+        "KXUFCMOF-26OCT24STEGUG",
+        "KXUFCROUNDS-26OCT24STEGUG",
+        "KXUFCDISTANCE-26OCT24STEGUG",
+        "KXUFCVICROUND-26OCT24STEGUG"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24STEGUG"
+        "KXUFCFIGHT-26OCT24STEGUG",
+        "KXUFCMOV-26OCT24STEGUG",
+        "KXUFCMOF-26OCT24STEGUG",
+        "KXUFCROUNDS-26OCT24STEGUG",
+        "KXUFCDISTANCE-26OCT24STEGUG",
+        "KXUFCVICROUND-26OCT24STEGUG"
       ],
       "details": {
         "league": "ufc",
@@ -609,7 +669,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -632,7 +692,7 @@
     "no_sub_title": "Abubakar Vagaev",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:20:00Z",
-    "open_interest_fp": "10193.41",
+    "open_interest_fp": "14028.43",
     "open_time": "2026-10-15T04:45:00Z",
     "previous_price_dollars": "0.6000",
     "previous_yes_ask_dollars": "0.6000",
@@ -655,12 +715,12 @@
     "ticker": "KXUFCFIGHT-26OCT24VAGMAL-VAG",
     "title": "Abubakar Vagaev wins",
     "updated_time": "2026-10-19T16:01:06.26555Z",
-    "volume_24h_fp": "4267.60",
-    "volume_fp": "11560.48",
+    "volume_24h_fp": "6515.77",
+    "volume_fp": "15400.60",
     "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "6819.60",
+    "yes_ask_size_fp": "39924.73",
     "yes_bid_dollars": "0.5900",
-    "yes_bid_size_fp": "9329.52",
+    "yes_bid_size_fp": "2391.04",
     "yes_sub_title": "Abubakar Vagaev",
     "_event_title": "333: Abubakar Vagaev vs Jacob Malkoun",
     "_event_ticker": "KXUFCFIGHT-26OCT24VAGMAL",
@@ -675,10 +735,20 @@
       "start_date": "2026-10-24T15:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24VAGMAL"
+        "KXUFCFIGHT-26OCT24VAGMAL",
+        "KXUFCMOV-26OCT24VAGMAL",
+        "KXUFCMOF-26OCT24VAGMAL",
+        "KXUFCROUNDS-26OCT24VAGMAL",
+        "KXUFCDISTANCE-26OCT24VAGMAL",
+        "KXUFCVICROUND-26OCT24VAGMAL"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24VAGMAL"
+        "KXUFCFIGHT-26OCT24VAGMAL",
+        "KXUFCMOV-26OCT24VAGMAL",
+        "KXUFCMOF-26OCT24VAGMAL",
+        "KXUFCROUNDS-26OCT24VAGMAL",
+        "KXUFCDISTANCE-26OCT24VAGMAL",
+        "KXUFCVICROUND-26OCT24VAGMAL"
       ],
       "details": {
         "league": "ufc",
@@ -711,7 +781,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -734,9 +804,9 @@
     "no_sub_title": "Jacob Malkoun",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:20:00Z",
-    "open_interest_fp": "22569.83",
+    "open_interest_fp": "24501.34",
     "open_time": "2026-10-15T04:45:00Z",
-    "previous_price_dollars": "0.4100",
+    "previous_price_dollars": "0.4000",
     "previous_yes_ask_dollars": "0.4100",
     "previous_yes_bid_dollars": "0.4000",
     "price_level_structure": "linear_cent",
@@ -757,12 +827,12 @@
     "ticker": "KXUFCFIGHT-26OCT24VAGMAL-MAL",
     "title": "Jacob Malkoun wins",
     "updated_time": "2026-10-19T16:01:06.26555Z",
-    "volume_24h_fp": "1341.58",
-    "volume_fp": "25351.52",
+    "volume_24h_fp": "3368.11",
+    "volume_fp": "27783.03",
     "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "18187.67",
+    "yes_ask_size_fp": "7834.23",
     "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "3344.58",
+    "yes_bid_size_fp": "7503.03",
     "yes_sub_title": "Jacob Malkoun",
     "_event_title": "333: Abubakar Vagaev vs Jacob Malkoun",
     "_event_ticker": "KXUFCFIGHT-26OCT24VAGMAL",
@@ -777,10 +847,20 @@
       "start_date": "2026-10-24T15:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24VAGMAL"
+        "KXUFCFIGHT-26OCT24VAGMAL",
+        "KXUFCMOV-26OCT24VAGMAL",
+        "KXUFCMOF-26OCT24VAGMAL",
+        "KXUFCROUNDS-26OCT24VAGMAL",
+        "KXUFCDISTANCE-26OCT24VAGMAL",
+        "KXUFCVICROUND-26OCT24VAGMAL"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24VAGMAL"
+        "KXUFCFIGHT-26OCT24VAGMAL",
+        "KXUFCMOV-26OCT24VAGMAL",
+        "KXUFCMOF-26OCT24VAGMAL",
+        "KXUFCROUNDS-26OCT24VAGMAL",
+        "KXUFCDISTANCE-26OCT24VAGMAL",
+        "KXUFCVICROUND-26OCT24VAGMAL"
       ],
       "details": {
         "league": "ufc",
@@ -813,7 +893,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -828,19 +908,19 @@
     "expected_expiration_time": "2026-10-24T19:40:00Z",
     "expiration_time": "2026-10-26T14:40:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4700",
+    "last_price_dollars": "0.4800",
     "latest_expiration_time": "2026-10-26T14:40:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5400",
-    "no_bid_dollars": "0.5300",
+    "no_ask_dollars": "0.5300",
+    "no_bid_dollars": "0.5200",
     "no_sub_title": "Bolaji Oki",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:40:00Z",
-    "open_interest_fp": "4402.46",
+    "open_interest_fp": "5751.08",
     "open_time": "2026-10-19T16:45:00Z",
     "previous_price_dollars": "0.5000",
-    "previous_yes_ask_dollars": "0.5000",
-    "previous_yes_bid_dollars": "0.4800",
+    "previous_yes_ask_dollars": "0.4900",
+    "previous_yes_bid_dollars": "0.4700",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -859,12 +939,12 @@
     "ticker": "KXUFCFIGHT-26OCT24OKISAN-OKI",
     "title": "Bolaji Oki wins",
     "updated_time": "2026-10-19T16:45:00.243902Z",
-    "volume_24h_fp": "692.19",
-    "volume_fp": "4572.20",
-    "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "1246.85",
-    "yes_bid_dollars": "0.4600",
-    "yes_bid_size_fp": "200.00",
+    "volume_24h_fp": "1555.74",
+    "volume_fp": "5920.82",
+    "yes_ask_dollars": "0.4800",
+    "yes_ask_size_fp": "2403.01",
+    "yes_bid_dollars": "0.4700",
+    "yes_bid_size_fp": "448.00",
     "yes_sub_title": "Bolaji Oki",
     "_event_title": "333: Bolaji Oki vs Daniel Gustavo Santos",
     "_event_ticker": "KXUFCFIGHT-26OCT24OKISAN",
@@ -879,10 +959,20 @@
       "start_date": "2026-10-24T14:40:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24OKISAN"
+        "KXUFCFIGHT-26OCT24OKISAN",
+        "KXUFCMOV-26OCT24OKISAN",
+        "KXUFCMOF-26OCT24OKISAN",
+        "KXUFCROUNDS-26OCT24OKISAN",
+        "KXUFCDISTANCE-26OCT24OKISAN",
+        "KXUFCVICROUND-26OCT24OKISAN"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24OKISAN"
+        "KXUFCFIGHT-26OCT24OKISAN",
+        "KXUFCMOV-26OCT24OKISAN",
+        "KXUFCMOF-26OCT24OKISAN",
+        "KXUFCROUNDS-26OCT24OKISAN",
+        "KXUFCDISTANCE-26OCT24OKISAN",
+        "KXUFCVICROUND-26OCT24OKISAN"
       ],
       "details": {
         "league": "ufc",
@@ -915,7 +1005,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -930,18 +1020,18 @@
     "expected_expiration_time": "2026-10-24T19:40:00Z",
     "expiration_time": "2026-10-26T14:40:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5200",
+    "last_price_dollars": "0.5300",
     "latest_expiration_time": "2026-10-26T14:40:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4700",
-    "no_bid_dollars": "0.4600",
+    "no_ask_dollars": "0.4800",
+    "no_bid_dollars": "0.4700",
     "no_sub_title": "Daniel Gustavo Santos",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T19:40:00Z",
-    "open_interest_fp": "5613.89",
+    "open_interest_fp": "5921.37",
     "open_time": "2026-10-19T16:45:00Z",
-    "previous_price_dollars": "0.5400",
-    "previous_yes_ask_dollars": "0.5400",
+    "previous_price_dollars": "0.5300",
+    "previous_yes_ask_dollars": "0.5300",
     "previous_yes_bid_dollars": "0.5200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
@@ -961,12 +1051,12 @@
     "ticker": "KXUFCFIGHT-26OCT24OKISAN-SAN",
     "title": "Daniel Gustavo Santos wins",
     "updated_time": "2026-10-19T16:45:00.243902Z",
-    "volume_24h_fp": "4461.14",
-    "volume_fp": "5878.32",
-    "yes_ask_dollars": "0.5400",
-    "yes_ask_size_fp": "5247.78",
-    "yes_bid_dollars": "0.5300",
-    "yes_bid_size_fp": "22.30",
+    "volume_24h_fp": "4501.90",
+    "volume_fp": "6215.80",
+    "yes_ask_dollars": "0.5300",
+    "yes_ask_size_fp": "6606.00",
+    "yes_bid_dollars": "0.5200",
+    "yes_bid_size_fp": "92.00",
     "yes_sub_title": "Daniel Gustavo Santos",
     "_event_title": "333: Bolaji Oki vs Daniel Gustavo Santos",
     "_event_ticker": "KXUFCFIGHT-26OCT24OKISAN",
@@ -981,10 +1071,20 @@
       "start_date": "2026-10-24T14:40:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24OKISAN"
+        "KXUFCFIGHT-26OCT24OKISAN",
+        "KXUFCMOV-26OCT24OKISAN",
+        "KXUFCMOF-26OCT24OKISAN",
+        "KXUFCROUNDS-26OCT24OKISAN",
+        "KXUFCDISTANCE-26OCT24OKISAN",
+        "KXUFCVICROUND-26OCT24OKISAN"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24OKISAN"
+        "KXUFCFIGHT-26OCT24OKISAN",
+        "KXUFCMOV-26OCT24OKISAN",
+        "KXUFCMOF-26OCT24OKISAN",
+        "KXUFCROUNDS-26OCT24OKISAN",
+        "KXUFCDISTANCE-26OCT24OKISAN",
+        "KXUFCVICROUND-26OCT24OKISAN"
       ],
       "details": {
         "league": "ufc",
@@ -1017,7 +1117,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1040,11 +1140,11 @@
     "no_sub_title": "Aaron Pico",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T21:00:00Z",
-    "open_interest_fp": "20588.84",
+    "open_interest_fp": "23043.72",
     "open_time": "2026-10-13T00:45:00Z",
-    "previous_price_dollars": "0.5300",
-    "previous_yes_ask_dollars": "0.5300",
-    "previous_yes_bid_dollars": "0.5200",
+    "previous_price_dollars": "0.5400",
+    "previous_yes_ask_dollars": "0.5500",
+    "previous_yes_bid_dollars": "0.5400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1063,12 +1163,12 @@
     "ticker": "KXUFCFIGHT-26OCT24PICKEI-PIC",
     "title": "Aaron Pico wins",
     "updated_time": "2026-10-15T23:30:35.972021Z",
-    "volume_24h_fp": "18473.59",
-    "volume_fp": "37250.30",
+    "volume_24h_fp": "4621.37",
+    "volume_fp": "39757.18",
     "yes_ask_dollars": "0.5500",
-    "yes_ask_size_fp": "12095.70",
+    "yes_ask_size_fp": "3425.80",
     "yes_bid_dollars": "0.5400",
-    "yes_bid_size_fp": "610.93",
+    "yes_bid_size_fp": "1572.68",
     "yes_sub_title": "Aaron Pico",
     "_event_title": "333: Aaron Pico vs Losene Keita",
     "_event_ticker": "KXUFCFIGHT-26OCT24PICKEI",
@@ -1083,10 +1183,20 @@
       "start_date": "2026-10-24T18:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24PICKEI"
+        "KXUFCFIGHT-26OCT24PICKEI",
+        "KXUFCMOV-26OCT24PICKEI",
+        "KXUFCMOF-26OCT24PICKEI",
+        "KXUFCROUNDS-26OCT24PICKEI",
+        "KXUFCDISTANCE-26OCT24PICKEI",
+        "KXUFCVICROUND-26OCT24PICKEI"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24PICKEI"
+        "KXUFCFIGHT-26OCT24PICKEI",
+        "KXUFCMOV-26OCT24PICKEI",
+        "KXUFCMOF-26OCT24PICKEI",
+        "KXUFCROUNDS-26OCT24PICKEI",
+        "KXUFCDISTANCE-26OCT24PICKEI",
+        "KXUFCVICROUND-26OCT24PICKEI"
       ],
       "details": {
         "league": "ufc",
@@ -1119,7 +1229,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1142,11 +1252,11 @@
     "no_sub_title": "Losene Keita",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T21:00:00Z",
-    "open_interest_fp": "3914.96",
+    "open_interest_fp": "9581.95",
     "open_time": "2026-10-13T00:45:00Z",
-    "previous_price_dollars": "0.4800",
-    "previous_yes_ask_dollars": "0.4800",
-    "previous_yes_bid_dollars": "0.4700",
+    "previous_price_dollars": "0.4700",
+    "previous_yes_ask_dollars": "0.4700",
+    "previous_yes_bid_dollars": "0.4600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1165,12 +1275,12 @@
     "ticker": "KXUFCFIGHT-26OCT24PICKEI-KEI",
     "title": "Losene Keita wins",
     "updated_time": "2026-10-15T23:30:35.972021Z",
-    "volume_24h_fp": "1217.79",
-    "volume_fp": "4614.70",
+    "volume_24h_fp": "5883.09",
+    "volume_fp": "10281.69",
     "yes_ask_dollars": "0.4600",
-    "yes_ask_size_fp": "7255.23",
+    "yes_ask_size_fp": "47546.27",
     "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "1589.60",
+    "yes_bid_size_fp": "324.79",
     "yes_sub_title": "Losene Keita",
     "_event_title": "333: Aaron Pico vs Losene Keita",
     "_event_ticker": "KXUFCFIGHT-26OCT24PICKEI",
@@ -1185,10 +1295,20 @@
       "start_date": "2026-10-24T18:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24PICKEI"
+        "KXUFCFIGHT-26OCT24PICKEI",
+        "KXUFCMOV-26OCT24PICKEI",
+        "KXUFCMOF-26OCT24PICKEI",
+        "KXUFCROUNDS-26OCT24PICKEI",
+        "KXUFCDISTANCE-26OCT24PICKEI",
+        "KXUFCVICROUND-26OCT24PICKEI"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24PICKEI"
+        "KXUFCFIGHT-26OCT24PICKEI",
+        "KXUFCMOV-26OCT24PICKEI",
+        "KXUFCMOF-26OCT24PICKEI",
+        "KXUFCROUNDS-26OCT24PICKEI",
+        "KXUFCDISTANCE-26OCT24PICKEI",
+        "KXUFCVICROUND-26OCT24PICKEI"
       ],
       "details": {
         "league": "ufc",
@@ -1221,7 +1341,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1236,17 +1356,17 @@
     "expected_expiration_time": "2026-10-24T21:20:00Z",
     "expiration_time": "2026-10-26T16:20:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5400",
+    "last_price_dollars": "0.5000",
     "latest_expiration_time": "2026-10-26T16:20:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4700",
-    "no_bid_dollars": "0.4600",
+    "no_ask_dollars": "0.4900",
+    "no_bid_dollars": "0.4800",
     "no_sub_title": "Grant Dawson",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T21:20:00Z",
-    "open_interest_fp": "4591.44",
+    "open_interest_fp": "8011.22",
     "open_time": "2026-10-13T00:45:00Z",
-    "previous_price_dollars": "0.5400",
+    "previous_price_dollars": "0.5300",
     "previous_yes_ask_dollars": "0.5400",
     "previous_yes_bid_dollars": "0.5300",
     "price_level_structure": "linear_cent",
@@ -1267,12 +1387,12 @@
     "ticker": "KXUFCFIGHT-26OCT24DAWALI-DAW",
     "title": "Grant Dawson wins",
     "updated_time": "2026-10-15T23:30:37.445939Z",
-    "volume_24h_fp": "1067.12",
-    "volume_fp": "5073.24",
-    "yes_ask_dollars": "0.5400",
-    "yes_ask_size_fp": "38093.46",
-    "yes_bid_dollars": "0.5300",
-    "yes_bid_size_fp": "966.16",
+    "volume_24h_fp": "4786.22",
+    "volume_fp": "9579.51",
+    "yes_ask_dollars": "0.5200",
+    "yes_ask_size_fp": "1022.76",
+    "yes_bid_dollars": "0.5100",
+    "yes_bid_size_fp": "308.00",
     "yes_sub_title": "Grant Dawson",
     "_event_title": "333: Grant Dawson vs Nurullo Aliev",
     "_event_ticker": "KXUFCFIGHT-26OCT24DAWALI",
@@ -1287,10 +1407,20 @@
       "start_date": "2026-10-24T16:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24DAWALI"
+        "KXUFCFIGHT-26OCT24DAWALI",
+        "KXUFCMOV-26OCT24DAWALI",
+        "KXUFCMOF-26OCT24DAWALI",
+        "KXUFCROUNDS-26OCT24DAWALI",
+        "KXUFCDISTANCE-26OCT24DAWALI",
+        "KXUFCVICROUND-26OCT24DAWALI"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24DAWALI"
+        "KXUFCFIGHT-26OCT24DAWALI",
+        "KXUFCMOV-26OCT24DAWALI",
+        "KXUFCMOF-26OCT24DAWALI",
+        "KXUFCROUNDS-26OCT24DAWALI",
+        "KXUFCDISTANCE-26OCT24DAWALI",
+        "KXUFCVICROUND-26OCT24DAWALI"
       ],
       "details": {
         "league": "ufc",
@@ -1323,7 +1453,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1346,11 +1476,11 @@
     "no_sub_title": "Nurullo Aliev",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T21:20:00Z",
-    "open_interest_fp": "20951.69",
+    "open_interest_fp": "25416.48",
     "open_time": "2026-10-13T00:45:00Z",
-    "previous_price_dollars": "0.4700",
+    "previous_price_dollars": "0.4600",
     "previous_yes_ask_dollars": "0.4700",
-    "previous_yes_bid_dollars": "0.4500",
+    "previous_yes_bid_dollars": "0.4600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1369,12 +1499,12 @@
     "ticker": "KXUFCFIGHT-26OCT24DAWALI-ALI",
     "title": "Nurullo Aliev wins",
     "updated_time": "2026-10-15T23:30:37.445939Z",
-    "volume_24h_fp": "19081.94",
-    "volume_fp": "23699.66",
+    "volume_24h_fp": "5189.75",
+    "volume_fp": "28167.81",
     "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "5980.47",
+    "yes_ask_size_fp": "2143.25",
     "yes_bid_dollars": "0.4600",
-    "yes_bid_size_fp": "1918.76",
+    "yes_bid_size_fp": "3684.97",
     "yes_sub_title": "Nurullo Aliev",
     "_event_title": "333: Grant Dawson vs Nurullo Aliev",
     "_event_ticker": "KXUFCFIGHT-26OCT24DAWALI",
@@ -1389,10 +1519,20 @@
       "start_date": "2026-10-24T16:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24DAWALI"
+        "KXUFCFIGHT-26OCT24DAWALI",
+        "KXUFCMOV-26OCT24DAWALI",
+        "KXUFCMOF-26OCT24DAWALI",
+        "KXUFCROUNDS-26OCT24DAWALI",
+        "KXUFCDISTANCE-26OCT24DAWALI",
+        "KXUFCVICROUND-26OCT24DAWALI"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24DAWALI"
+        "KXUFCFIGHT-26OCT24DAWALI",
+        "KXUFCMOV-26OCT24DAWALI",
+        "KXUFCMOF-26OCT24DAWALI",
+        "KXUFCROUNDS-26OCT24DAWALI",
+        "KXUFCDISTANCE-26OCT24DAWALI",
+        "KXUFCVICROUND-26OCT24DAWALI"
       ],
       "details": {
         "league": "ufc",
@@ -1425,7 +1565,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1448,11 +1588,11 @@
     "no_sub_title": "Abusupiyan Magomedov",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T21:40:00Z",
-    "open_interest_fp": "13541.81",
+    "open_interest_fp": "18227.42",
     "open_time": "2026-10-13T00:45:00Z",
-    "previous_price_dollars": "0.5300",
-    "previous_yes_ask_dollars": "0.5300",
-    "previous_yes_bid_dollars": "0.5200",
+    "previous_price_dollars": "0.5500",
+    "previous_yes_ask_dollars": "0.5500",
+    "previous_yes_bid_dollars": "0.5400",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1471,12 +1611,12 @@
     "ticker": "KXUFCFIGHT-26OCT24MAGROW-MAG",
     "title": "Abusupiyan Magomedov wins",
     "updated_time": "2026-10-15T23:30:38.801377Z",
-    "volume_24h_fp": "9795.00",
-    "volume_fp": "13625.22",
+    "volume_24h_fp": "7542.27",
+    "volume_fp": "18331.27",
     "yes_ask_dollars": "0.5500",
-    "yes_ask_size_fp": "7489.54",
+    "yes_ask_size_fp": "29238.64",
     "yes_bid_dollars": "0.5400",
-    "yes_bid_size_fp": "1713.40",
+    "yes_bid_size_fp": "1089.38",
     "yes_sub_title": "Abusupiyan Magomedov",
     "_event_title": "333: Abusupiyan Magomedov vs Cameron Rowston",
     "_event_ticker": "KXUFCFIGHT-26OCT24MAGROW",
@@ -1491,10 +1631,20 @@
       "start_date": "2026-10-24T16:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24MAGROW"
+        "KXUFCFIGHT-26OCT24MAGROW",
+        "KXUFCMOV-26OCT24MAGROW",
+        "KXUFCMOF-26OCT24MAGROW",
+        "KXUFCROUNDS-26OCT24MAGROW",
+        "KXUFCDISTANCE-26OCT24MAGROW",
+        "KXUFCVICROUND-26OCT24MAGROW"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24MAGROW"
+        "KXUFCFIGHT-26OCT24MAGROW",
+        "KXUFCMOV-26OCT24MAGROW",
+        "KXUFCMOF-26OCT24MAGROW",
+        "KXUFCROUNDS-26OCT24MAGROW",
+        "KXUFCDISTANCE-26OCT24MAGROW",
+        "KXUFCVICROUND-26OCT24MAGROW"
       ],
       "details": {
         "league": "ufc",
@@ -1527,7 +1677,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1542,19 +1692,19 @@
     "expected_expiration_time": "2026-10-24T21:40:00Z",
     "expiration_time": "2026-10-26T16:40:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4600",
+    "last_price_dollars": "0.4700",
     "latest_expiration_time": "2026-10-26T16:40:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5500",
-    "no_bid_dollars": "0.5400",
+    "no_ask_dollars": "0.5400",
+    "no_bid_dollars": "0.5300",
     "no_sub_title": "Cameron Rowston",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T21:40:00Z",
-    "open_interest_fp": "3655.99",
+    "open_interest_fp": "4650.03",
     "open_time": "2026-10-13T00:45:00Z",
-    "previous_price_dollars": "0.4700",
-    "previous_yes_ask_dollars": "0.4800",
-    "previous_yes_bid_dollars": "0.4600",
+    "previous_price_dollars": "0.4600",
+    "previous_yes_ask_dollars": "0.4600",
+    "previous_yes_bid_dollars": "0.4500",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1573,12 +1723,12 @@
     "ticker": "KXUFCFIGHT-26OCT24MAGROW-ROW",
     "title": "Cameron Rowston wins",
     "updated_time": "2026-10-15T23:30:38.801377Z",
-    "volume_24h_fp": "1115.01",
-    "volume_fp": "3804.65",
-    "yes_ask_dollars": "0.4600",
-    "yes_ask_size_fp": "809.76",
-    "yes_bid_dollars": "0.4500",
-    "yes_bid_size_fp": "1556.80",
+    "volume_24h_fp": "1712.47",
+    "volume_fp": "5296.19",
+    "yes_ask_dollars": "0.4700",
+    "yes_ask_size_fp": "3.06",
+    "yes_bid_dollars": "0.4600",
+    "yes_bid_size_fp": "495.61",
     "yes_sub_title": "Cameron Rowston",
     "_event_title": "333: Abusupiyan Magomedov vs Cameron Rowston",
     "_event_ticker": "KXUFCFIGHT-26OCT24MAGROW",
@@ -1593,10 +1743,20 @@
       "start_date": "2026-10-24T16:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24MAGROW"
+        "KXUFCFIGHT-26OCT24MAGROW",
+        "KXUFCMOV-26OCT24MAGROW",
+        "KXUFCMOF-26OCT24MAGROW",
+        "KXUFCROUNDS-26OCT24MAGROW",
+        "KXUFCDISTANCE-26OCT24MAGROW",
+        "KXUFCVICROUND-26OCT24MAGROW"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24MAGROW"
+        "KXUFCFIGHT-26OCT24MAGROW",
+        "KXUFCMOV-26OCT24MAGROW",
+        "KXUFCMOF-26OCT24MAGROW",
+        "KXUFCROUNDS-26OCT24MAGROW",
+        "KXUFCDISTANCE-26OCT24MAGROW",
+        "KXUFCVICROUND-26OCT24MAGROW"
       ],
       "details": {
         "league": "ufc",
@@ -1629,7 +1789,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1652,11 +1812,11 @@
     "no_sub_title": "Nikita Krylov",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T22:00:00Z",
-    "open_interest_fp": "17761.31",
+    "open_interest_fp": "21076.82",
     "open_time": "2026-10-13T00:45:00Z",
-    "previous_price_dollars": "0.1800",
-    "previous_yes_ask_dollars": "0.1800",
-    "previous_yes_bid_dollars": "0.1700",
+    "previous_price_dollars": "0.1900",
+    "previous_yes_ask_dollars": "0.1900",
+    "previous_yes_bid_dollars": "0.1800",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1675,12 +1835,12 @@
     "ticker": "KXUFCFIGHT-26OCT24KRYYAK-KRY",
     "title": "Nikita Krylov wins",
     "updated_time": "2026-10-15T23:30:40.211999Z",
-    "volume_24h_fp": "9862.09",
-    "volume_fp": "19551.32",
+    "volume_24h_fp": "10130.87",
+    "volume_fp": "23327.72",
     "yes_ask_dollars": "0.1900",
-    "yes_ask_size_fp": "5659.30",
+    "yes_ask_size_fp": "2844.48",
     "yes_bid_dollars": "0.1800",
-    "yes_bid_size_fp": "664.02",
+    "yes_bid_size_fp": "234.42",
     "yes_sub_title": "Nikita Krylov",
     "_event_title": "333: Nikita Krylov vs Abdul-Rakhman Yakhyaev",
     "_event_ticker": "KXUFCFIGHT-26OCT24KRYYAK",
@@ -1695,10 +1855,20 @@
       "start_date": "2026-10-24T16:40:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24KRYYAK"
+        "KXUFCFIGHT-26OCT24KRYYAK",
+        "KXUFCMOV-26OCT24KRYYAK",
+        "KXUFCMOF-26OCT24KRYYAK",
+        "KXUFCROUNDS-26OCT24KRYYAK",
+        "KXUFCDISTANCE-26OCT24KRYYAK",
+        "KXUFCVICROUND-26OCT24KRYYAK"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24KRYYAK"
+        "KXUFCFIGHT-26OCT24KRYYAK",
+        "KXUFCMOV-26OCT24KRYYAK",
+        "KXUFCMOF-26OCT24KRYYAK",
+        "KXUFCROUNDS-26OCT24KRYYAK",
+        "KXUFCDISTANCE-26OCT24KRYYAK",
+        "KXUFCVICROUND-26OCT24KRYYAK"
       ],
       "details": {
         "league": "ufc",
@@ -1731,7 +1901,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1754,7 +1924,7 @@
     "no_sub_title": "Abdul-Rakhman Yakhyaev",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T22:00:00Z",
-    "open_interest_fp": "5389.00",
+    "open_interest_fp": "18902.08",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.8200",
     "previous_yes_ask_dollars": "0.8200",
@@ -1777,12 +1947,12 @@
     "ticker": "KXUFCFIGHT-26OCT24KRYYAK-YAK",
     "title": "Abdul-Rakhman Yakhyaev wins",
     "updated_time": "2026-10-15T23:30:40.211999Z",
-    "volume_24h_fp": "934.15",
-    "volume_fp": "5668.57",
+    "volume_24h_fp": "13898.27",
+    "volume_fp": "19530.35",
     "yes_ask_dollars": "0.8200",
-    "yes_ask_size_fp": "5276.41",
+    "yes_ask_size_fp": "581.01",
     "yes_bid_dollars": "0.8100",
-    "yes_bid_size_fp": "4749.00",
+    "yes_bid_size_fp": "713.10",
     "yes_sub_title": "Abdul-Rakhman Yakhyaev",
     "_event_title": "333: Nikita Krylov vs Abdul-Rakhman Yakhyaev",
     "_event_ticker": "KXUFCFIGHT-26OCT24KRYYAK",
@@ -1797,10 +1967,20 @@
       "start_date": "2026-10-24T16:40:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24KRYYAK"
+        "KXUFCFIGHT-26OCT24KRYYAK",
+        "KXUFCMOV-26OCT24KRYYAK",
+        "KXUFCMOF-26OCT24KRYYAK",
+        "KXUFCROUNDS-26OCT24KRYYAK",
+        "KXUFCDISTANCE-26OCT24KRYYAK",
+        "KXUFCVICROUND-26OCT24KRYYAK"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24KRYYAK"
+        "KXUFCFIGHT-26OCT24KRYYAK",
+        "KXUFCMOV-26OCT24KRYYAK",
+        "KXUFCMOF-26OCT24KRYYAK",
+        "KXUFCROUNDS-26OCT24KRYYAK",
+        "KXUFCDISTANCE-26OCT24KRYYAK",
+        "KXUFCVICROUND-26OCT24KRYYAK"
       ],
       "details": {
         "league": "ufc",
@@ -1833,7 +2013,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1848,17 +2028,17 @@
     "expected_expiration_time": "2026-10-24T22:20:00Z",
     "expiration_time": "2026-10-26T17:20:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6800",
+    "last_price_dollars": "0.6700",
     "latest_expiration_time": "2026-10-26T17:20:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.3300",
-    "no_bid_dollars": "0.3200",
+    "no_ask_dollars": "0.3400",
+    "no_bid_dollars": "0.3300",
     "no_sub_title": "Azamat Murzakanov",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T22:20:00Z",
-    "open_interest_fp": "2335.30",
+    "open_interest_fp": "2774.35",
     "open_time": "2026-10-13T00:45:00Z",
-    "previous_price_dollars": "0.6800",
+    "previous_price_dollars": "0.6600",
     "previous_yes_ask_dollars": "0.6700",
     "previous_yes_bid_dollars": "0.6600",
     "price_level_structure": "linear_cent",
@@ -1879,12 +2059,12 @@
     "ticker": "KXUFCFIGHT-26OCT24MURREY-MUR",
     "title": "Azamat Murzakanov wins",
     "updated_time": "2026-10-15T23:30:41.537406Z",
-    "volume_24h_fp": "492.32",
-    "volume_fp": "3291.74",
-    "yes_ask_dollars": "0.6800",
-    "yes_ask_size_fp": "2494.99",
-    "yes_bid_dollars": "0.6700",
-    "yes_bid_size_fp": "174.36",
+    "volume_24h_fp": "968.72",
+    "volume_fp": "4041.61",
+    "yes_ask_dollars": "0.6700",
+    "yes_ask_size_fp": "15266.14",
+    "yes_bid_dollars": "0.6600",
+    "yes_bid_size_fp": "8.06",
     "yes_sub_title": "Azamat Murzakanov",
     "_event_title": "333: Azamat Murzakanov vs Dominick Reyes",
     "_event_ticker": "KXUFCFIGHT-26OCT24MURREY",
@@ -1899,10 +2079,20 @@
       "start_date": "2026-10-24T17:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24MURREY"
+        "KXUFCFIGHT-26OCT24MURREY",
+        "KXUFCMOV-26OCT24MURREY",
+        "KXUFCMOF-26OCT24MURREY",
+        "KXUFCROUNDS-26OCT24MURREY",
+        "KXUFCDISTANCE-26OCT24MURREY",
+        "KXUFCVICROUND-26OCT24MURREY"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24MURREY"
+        "KXUFCFIGHT-26OCT24MURREY",
+        "KXUFCMOV-26OCT24MURREY",
+        "KXUFCMOF-26OCT24MURREY",
+        "KXUFCROUNDS-26OCT24MURREY",
+        "KXUFCDISTANCE-26OCT24MURREY",
+        "KXUFCVICROUND-26OCT24MURREY"
       ],
       "details": {
         "league": "ufc",
@@ -1935,7 +2125,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -1950,19 +2140,19 @@
     "expected_expiration_time": "2026-10-24T22:20:00Z",
     "expiration_time": "2026-10-26T17:20:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.3300",
+    "last_price_dollars": "0.3500",
     "latest_expiration_time": "2026-10-26T17:20:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6800",
-    "no_bid_dollars": "0.6700",
+    "no_ask_dollars": "0.6600",
+    "no_bid_dollars": "0.6500",
     "no_sub_title": "Dominick Reyes",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T22:20:00Z",
-    "open_interest_fp": "6747.83",
+    "open_interest_fp": "9259.92",
     "open_time": "2026-10-13T00:45:00Z",
-    "previous_price_dollars": "0.3500",
-    "previous_yes_ask_dollars": "0.3500",
-    "previous_yes_bid_dollars": "0.3400",
+    "previous_price_dollars": "0.3300",
+    "previous_yes_ask_dollars": "0.3300",
+    "previous_yes_bid_dollars": "0.3200",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -1981,12 +2171,12 @@
     "ticker": "KXUFCFIGHT-26OCT24MURREY-REY",
     "title": "Dominick Reyes wins",
     "updated_time": "2026-10-15T23:30:41.537406Z",
-    "volume_24h_fp": "1890.01",
-    "volume_fp": "7322.42",
-    "yes_ask_dollars": "0.3300",
-    "yes_ask_size_fp": "1469.00",
-    "yes_bid_dollars": "0.3200",
-    "yes_bid_size_fp": "5079.80",
+    "volume_24h_fp": "3296.76",
+    "volume_fp": "9837.88",
+    "yes_ask_dollars": "0.3500",
+    "yes_ask_size_fp": "8928.47",
+    "yes_bid_dollars": "0.3400",
+    "yes_bid_size_fp": "561.81",
     "yes_sub_title": "Dominick Reyes",
     "_event_title": "333: Azamat Murzakanov vs Dominick Reyes",
     "_event_ticker": "KXUFCFIGHT-26OCT24MURREY",
@@ -2001,10 +2191,20 @@
       "start_date": "2026-10-24T17:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24MURREY"
+        "KXUFCFIGHT-26OCT24MURREY",
+        "KXUFCMOV-26OCT24MURREY",
+        "KXUFCMOF-26OCT24MURREY",
+        "KXUFCROUNDS-26OCT24MURREY",
+        "KXUFCDISTANCE-26OCT24MURREY",
+        "KXUFCVICROUND-26OCT24MURREY"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24MURREY"
+        "KXUFCFIGHT-26OCT24MURREY",
+        "KXUFCMOV-26OCT24MURREY",
+        "KXUFCMOF-26OCT24MURREY",
+        "KXUFCROUNDS-26OCT24MURREY",
+        "KXUFCDISTANCE-26OCT24MURREY",
+        "KXUFCVICROUND-26OCT24MURREY"
       ],
       "details": {
         "league": "ufc",
@@ -2037,7 +2237,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -2060,7 +2260,7 @@
     "no_sub_title": "Alexander Volkov",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T23:00:00Z",
-    "open_interest_fp": "34984.81",
+    "open_interest_fp": "44283.78",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.5400",
     "previous_yes_ask_dollars": "0.5400",
@@ -2083,12 +2283,12 @@
     "ticker": "KXUFCFIGHT-26OCT24VOLKUN-VOL",
     "title": "Alexander Volkov wins",
     "updated_time": "2026-10-15T23:30:42.676779Z",
-    "volume_24h_fp": "11866.27",
-    "volume_fp": "36629.26",
+    "volume_24h_fp": "11761.62",
+    "volume_fp": "46620.09",
     "yes_ask_dollars": "0.5400",
-    "yes_ask_size_fp": "56614.15",
+    "yes_ask_size_fp": "75768.96",
     "yes_bid_dollars": "0.5300",
-    "yes_bid_size_fp": "4566.28",
+    "yes_bid_size_fp": "4371.41",
     "yes_sub_title": "Alexander Volkov",
     "_event_title": "333: Alexander Volkov vs Rizvan Kuniev",
     "_event_ticker": "KXUFCFIGHT-26OCT24VOLKUN",
@@ -2103,10 +2303,20 @@
       "start_date": "2026-10-24T18:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24VOLKUN"
+        "KXUFCFIGHT-26OCT24VOLKUN",
+        "KXUFCMOV-26OCT24VOLKUN",
+        "KXUFCMOF-26OCT24VOLKUN",
+        "KXUFCROUNDS-26OCT24VOLKUN",
+        "KXUFCDISTANCE-26OCT24VOLKUN",
+        "KXUFCVICROUND-26OCT24VOLKUN"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24VOLKUN"
+        "KXUFCFIGHT-26OCT24VOLKUN",
+        "KXUFCMOV-26OCT24VOLKUN",
+        "KXUFCMOF-26OCT24VOLKUN",
+        "KXUFCROUNDS-26OCT24VOLKUN",
+        "KXUFCDISTANCE-26OCT24VOLKUN",
+        "KXUFCVICROUND-26OCT24VOLKUN"
       ],
       "details": {
         "league": "ufc",
@@ -2139,7 +2349,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -2154,7 +2364,7 @@
     "expected_expiration_time": "2026-10-24T23:00:00Z",
     "expiration_time": "2026-10-26T18:00:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4600",
+    "last_price_dollars": "0.4700",
     "latest_expiration_time": "2026-10-26T18:00:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5400",
@@ -2162,11 +2372,11 @@
     "no_sub_title": "Rizvan Kuniev",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T23:00:00Z",
-    "open_interest_fp": "23444.20",
+    "open_interest_fp": "28114.30",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.4700",
-    "previous_yes_ask_dollars": "0.4800",
-    "previous_yes_bid_dollars": "0.4700",
+    "previous_yes_ask_dollars": "0.4700",
+    "previous_yes_bid_dollars": "0.4600",
     "price_level_structure": "linear_cent",
     "price_ranges": [
       {
@@ -2185,12 +2395,12 @@
     "ticker": "KXUFCFIGHT-26OCT24VOLKUN-KUN",
     "title": "Rizvan Kuniev wins",
     "updated_time": "2026-10-15T23:30:42.676779Z",
-    "volume_24h_fp": "10240.16",
-    "volume_fp": "24749.78",
+    "volume_24h_fp": "4887.36",
+    "volume_fp": "29419.88",
     "yes_ask_dollars": "0.4700",
-    "yes_ask_size_fp": "12939.79",
+    "yes_ask_size_fp": "10289.97",
     "yes_bid_dollars": "0.4600",
-    "yes_bid_size_fp": "718.26",
+    "yes_bid_size_fp": "2251.26",
     "yes_sub_title": "Rizvan Kuniev",
     "_event_title": "333: Alexander Volkov vs Rizvan Kuniev",
     "_event_ticker": "KXUFCFIGHT-26OCT24VOLKUN",
@@ -2205,10 +2415,20 @@
       "start_date": "2026-10-24T18:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24VOLKUN"
+        "KXUFCFIGHT-26OCT24VOLKUN",
+        "KXUFCMOV-26OCT24VOLKUN",
+        "KXUFCMOF-26OCT24VOLKUN",
+        "KXUFCROUNDS-26OCT24VOLKUN",
+        "KXUFCDISTANCE-26OCT24VOLKUN",
+        "KXUFCVICROUND-26OCT24VOLKUN"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24VOLKUN"
+        "KXUFCFIGHT-26OCT24VOLKUN",
+        "KXUFCMOV-26OCT24VOLKUN",
+        "KXUFCMOF-26OCT24VOLKUN",
+        "KXUFCROUNDS-26OCT24VOLKUN",
+        "KXUFCDISTANCE-26OCT24VOLKUN",
+        "KXUFCVICROUND-26OCT24VOLKUN"
       ],
       "details": {
         "league": "ufc",
@@ -2241,7 +2461,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -2256,15 +2476,15 @@
     "expected_expiration_time": "2026-10-24T23:20:00Z",
     "expiration_time": "2026-10-26T18:20:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5000",
+    "last_price_dollars": "0.5100",
     "latest_expiration_time": "2026-10-26T18:20:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.5100",
-    "no_bid_dollars": "0.5000",
+    "no_ask_dollars": "0.5000",
+    "no_bid_dollars": "0.4900",
     "no_sub_title": "Loneer Kavanagh",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T23:20:00Z",
-    "open_interest_fp": "8520.51",
+    "open_interest_fp": "18533.75",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.5000",
     "previous_yes_ask_dollars": "0.5000",
@@ -2287,12 +2507,12 @@
     "ticker": "KXUFCFIGHT-26OCT24KAVTEM-KAV",
     "title": "Loneer Kavanagh wins",
     "updated_time": "2026-10-15T23:30:43.952528Z",
-    "volume_24h_fp": "1347.17",
-    "volume_fp": "14483.08",
-    "yes_ask_dollars": "0.5000",
-    "yes_ask_size_fp": "13817.03",
-    "yes_bid_dollars": "0.4900",
-    "yes_bid_size_fp": "135.58",
+    "volume_24h_fp": "10874.80",
+    "volume_fp": "24846.87",
+    "yes_ask_dollars": "0.5100",
+    "yes_ask_size_fp": "1918.13",
+    "yes_bid_dollars": "0.5000",
+    "yes_bid_size_fp": "6.01",
     "yes_sub_title": "Loneer Kavanagh",
     "_event_title": "333: Loneer Kavanagh vs Ramazonbek Temirov",
     "_event_ticker": "KXUFCFIGHT-26OCT24KAVTEM",
@@ -2307,10 +2527,20 @@
       "start_date": "2026-10-24T18:40:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24KAVTEM"
+        "KXUFCFIGHT-26OCT24KAVTEM",
+        "KXUFCMOV-26OCT24KAVTEM",
+        "KXUFCMOF-26OCT24KAVTEM",
+        "KXUFCROUNDS-26OCT24KAVTEM",
+        "KXUFCDISTANCE-26OCT24KAVTEM",
+        "KXUFCVICROUND-26OCT24KAVTEM"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24KAVTEM"
+        "KXUFCFIGHT-26OCT24KAVTEM",
+        "KXUFCMOV-26OCT24KAVTEM",
+        "KXUFCMOF-26OCT24KAVTEM",
+        "KXUFCROUNDS-26OCT24KAVTEM",
+        "KXUFCDISTANCE-26OCT24KAVTEM",
+        "KXUFCVICROUND-26OCT24KAVTEM"
       ],
       "details": {
         "league": "ufc",
@@ -2343,7 +2573,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -2366,7 +2596,7 @@
     "no_sub_title": "Ramazonbek Temirov",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T23:20:00Z",
-    "open_interest_fp": "16029.81",
+    "open_interest_fp": "17243.52",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.5100",
     "previous_yes_ask_dollars": "0.5100",
@@ -2389,12 +2619,12 @@
     "ticker": "KXUFCFIGHT-26OCT24KAVTEM-TEM",
     "title": "Ramazonbek Temirov wins",
     "updated_time": "2026-10-15T23:30:43.952528Z",
-    "volume_24h_fp": "4108.06",
-    "volume_fp": "19890.61",
+    "volume_24h_fp": "3330.95",
+    "volume_fp": "21598.80",
     "yes_ask_dollars": "0.5100",
-    "yes_ask_size_fp": "3993.70",
+    "yes_ask_size_fp": "22594.08",
     "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "5290.10",
+    "yes_bid_size_fp": "2666.09",
     "yes_sub_title": "Ramazonbek Temirov",
     "_event_title": "333: Loneer Kavanagh vs Ramazonbek Temirov",
     "_event_ticker": "KXUFCFIGHT-26OCT24KAVTEM",
@@ -2409,10 +2639,20 @@
       "start_date": "2026-10-24T18:40:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24KAVTEM"
+        "KXUFCFIGHT-26OCT24KAVTEM",
+        "KXUFCMOV-26OCT24KAVTEM",
+        "KXUFCMOF-26OCT24KAVTEM",
+        "KXUFCROUNDS-26OCT24KAVTEM",
+        "KXUFCDISTANCE-26OCT24KAVTEM",
+        "KXUFCVICROUND-26OCT24KAVTEM"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24KAVTEM"
+        "KXUFCFIGHT-26OCT24KAVTEM",
+        "KXUFCMOV-26OCT24KAVTEM",
+        "KXUFCMOF-26OCT24KAVTEM",
+        "KXUFCROUNDS-26OCT24KAVTEM",
+        "KXUFCDISTANCE-26OCT24KAVTEM",
+        "KXUFCVICROUND-26OCT24KAVTEM"
       ],
       "details": {
         "league": "ufc",
@@ -2445,7 +2685,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -2460,15 +2700,15 @@
     "expected_expiration_time": "2026-10-24T23:40:00Z",
     "expiration_time": "2026-10-26T18:40:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.6000",
+    "last_price_dollars": "0.5800",
     "latest_expiration_time": "2026-10-26T18:40:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.4100",
-    "no_bid_dollars": "0.4000",
+    "no_ask_dollars": "0.4300",
+    "no_bid_dollars": "0.4200",
     "no_sub_title": "Petr Yan",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T23:40:00Z",
-    "open_interest_fp": "29029.99",
+    "open_interest_fp": "38261.76",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.6100",
     "previous_yes_ask_dollars": "0.6100",
@@ -2491,12 +2731,12 @@
     "ticker": "KXUFCFIGHT-26OCT24YANDVA-YAN",
     "title": "Petr Yan wins",
     "updated_time": "2026-10-15T23:30:45.309384Z",
-    "volume_24h_fp": "14635.44",
-    "volume_fp": "34672.29",
-    "yes_ask_dollars": "0.6000",
-    "yes_ask_size_fp": "951057.56",
-    "yes_bid_dollars": "0.5900",
-    "yes_bid_size_fp": "9484.99",
+    "volume_24h_fp": "28767.71",
+    "volume_fp": "54052.25",
+    "yes_ask_dollars": "0.5800",
+    "yes_ask_size_fp": "1206259.40",
+    "yes_bid_dollars": "0.5700",
+    "yes_bid_size_fp": "21424.48",
     "yes_sub_title": "Petr Yan",
     "_event_title": "333: Petr Yan vs Merab Dvalishvili",
     "_event_ticker": "KXUFCFIGHT-26OCT24YANDVA",
@@ -2511,10 +2751,20 @@
       "start_date": "2026-10-24T19:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24YANDVA"
+        "KXUFCFIGHT-26OCT24YANDVA",
+        "KXUFCMOV-26OCT24YANDVA",
+        "KXUFCMOF-26OCT24YANDVA",
+        "KXUFCROUNDS-26OCT24YANDVA",
+        "KXUFCDISTANCE-26OCT24YANDVA",
+        "KXUFCVICROUND-26OCT24YANDVA"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24YANDVA"
+        "KXUFCFIGHT-26OCT24YANDVA",
+        "KXUFCMOV-26OCT24YANDVA",
+        "KXUFCMOF-26OCT24YANDVA",
+        "KXUFCROUNDS-26OCT24YANDVA",
+        "KXUFCDISTANCE-26OCT24YANDVA",
+        "KXUFCVICROUND-26OCT24YANDVA"
       ],
       "details": {
         "league": "ufc",
@@ -2547,7 +2797,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -2562,15 +2812,15 @@
     "expected_expiration_time": "2026-10-24T23:40:00Z",
     "expiration_time": "2026-10-26T18:40:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.4100",
+    "last_price_dollars": "0.4300",
     "latest_expiration_time": "2026-10-26T18:40:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.6000",
-    "no_bid_dollars": "0.5900",
+    "no_ask_dollars": "0.5800",
+    "no_bid_dollars": "0.5700",
     "no_sub_title": "Merab Dvalishvili",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-24T23:40:00Z",
-    "open_interest_fp": "54246.61",
+    "open_interest_fp": "68748.05",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.4100",
     "previous_yes_ask_dollars": "0.4100",
@@ -2593,12 +2843,12 @@
     "ticker": "KXUFCFIGHT-26OCT24YANDVA-DVA",
     "title": "Merab Dvalishvili wins",
     "updated_time": "2026-10-15T23:30:45.309384Z",
-    "volume_24h_fp": "13556.34",
-    "volume_fp": "62237.63",
-    "yes_ask_dollars": "0.4100",
-    "yes_ask_size_fp": "515117.18",
-    "yes_bid_dollars": "0.4000",
-    "yes_bid_size_fp": "10437.76",
+    "volume_24h_fp": "25513.57",
+    "volume_fp": "82408.83",
+    "yes_ask_dollars": "0.4300",
+    "yes_ask_size_fp": "654541.35",
+    "yes_bid_dollars": "0.4200",
+    "yes_bid_size_fp": "19024.27",
     "yes_sub_title": "Merab Dvalishvili",
     "_event_title": "333: Petr Yan vs Merab Dvalishvili",
     "_event_ticker": "KXUFCFIGHT-26OCT24YANDVA",
@@ -2613,10 +2863,20 @@
       "start_date": "2026-10-24T19:00:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24YANDVA"
+        "KXUFCFIGHT-26OCT24YANDVA",
+        "KXUFCMOV-26OCT24YANDVA",
+        "KXUFCMOF-26OCT24YANDVA",
+        "KXUFCROUNDS-26OCT24YANDVA",
+        "KXUFCDISTANCE-26OCT24YANDVA",
+        "KXUFCVICROUND-26OCT24YANDVA"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24YANDVA"
+        "KXUFCFIGHT-26OCT24YANDVA",
+        "KXUFCMOV-26OCT24YANDVA",
+        "KXUFCMOF-26OCT24YANDVA",
+        "KXUFCROUNDS-26OCT24YANDVA",
+        "KXUFCDISTANCE-26OCT24YANDVA",
+        "KXUFCVICROUND-26OCT24YANDVA"
       ],
       "details": {
         "league": "ufc",
@@ -2649,7 +2909,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -2672,7 +2932,7 @@
     "no_sub_title": "Alex Volkanovski",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T00:10:00Z",
-    "open_interest_fp": "190252.32",
+    "open_interest_fp": "259866.40",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.5100",
     "previous_yes_ask_dollars": "0.5100",
@@ -2695,12 +2955,12 @@
     "ticker": "KXUFCFIGHT-26OCT24VOLEVL-VOL",
     "title": "Alex Volkanovski wins",
     "updated_time": "2026-10-15T23:30:46.368279Z",
-    "volume_24h_fp": "41135.42",
-    "volume_fp": "206122.98",
+    "volume_24h_fp": "81972.96",
+    "volume_fp": "277011.06",
     "yes_ask_dollars": "0.5100",
-    "yes_ask_size_fp": "792152.87",
+    "yes_ask_size_fp": "712239.14",
     "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "10432.19",
+    "yes_bid_size_fp": "23656.32",
     "yes_sub_title": "Alex Volkanovski",
     "_event_title": "333: Alex Volkanovski vs Movsar Evloev",
     "_event_ticker": "KXUFCFIGHT-26OCT24VOLEVL",
@@ -2715,10 +2975,20 @@
       "start_date": "2026-10-24T19:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24VOLEVL"
+        "KXUFCFIGHT-26OCT24VOLEVL",
+        "KXUFCMOV-26OCT24VOLEVL",
+        "KXUFCMOF-26OCT24VOLEVL",
+        "KXUFCROUNDS-26OCT24VOLEVL",
+        "KXUFCDISTANCE-26OCT24VOLEVL",
+        "KXUFCVICROUND-26OCT24VOLEVL"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24VOLEVL"
+        "KXUFCFIGHT-26OCT24VOLEVL",
+        "KXUFCMOV-26OCT24VOLEVL",
+        "KXUFCMOF-26OCT24VOLEVL",
+        "KXUFCROUNDS-26OCT24VOLEVL",
+        "KXUFCDISTANCE-26OCT24VOLEVL",
+        "KXUFCVICROUND-26OCT24VOLEVL"
       ],
       "details": {
         "league": "ufc",
@@ -2751,7 +3021,7 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   },
   {
     "can_close_early": true,
@@ -2766,7 +3036,7 @@
     "expected_expiration_time": "2026-10-25T00:10:00Z",
     "expiration_time": "2026-10-26T19:10:00Z",
     "expiration_value": "",
-    "last_price_dollars": "0.5100",
+    "last_price_dollars": "0.5000",
     "latest_expiration_time": "2026-10-26T19:10:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.5000",
@@ -2774,7 +3044,7 @@
     "no_sub_title": "Movsar Evloev",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-25T00:10:00Z",
-    "open_interest_fp": "120302.05",
+    "open_interest_fp": "128694.81",
     "open_time": "2026-10-13T00:45:00Z",
     "previous_price_dollars": "0.5100",
     "previous_yes_ask_dollars": "0.5100",
@@ -2797,12 +3067,12 @@
     "ticker": "KXUFCFIGHT-26OCT24VOLEVL-EVL",
     "title": "Movsar Evloev wins",
     "updated_time": "2026-10-15T23:30:46.368279Z",
-    "volume_24h_fp": "37034.16",
-    "volume_fp": "150978.62",
+    "volume_24h_fp": "31784.19",
+    "volume_fp": "171977.20",
     "yes_ask_dollars": "0.5100",
-    "yes_ask_size_fp": "799182.91",
+    "yes_ask_size_fp": "808773.68",
     "yes_bid_dollars": "0.5000",
-    "yes_bid_size_fp": "14656.12",
+    "yes_bid_size_fp": "10192.42",
     "yes_sub_title": "Movsar Evloev",
     "_event_title": "333: Alex Volkanovski vs Movsar Evloev",
     "_event_ticker": "KXUFCFIGHT-26OCT24VOLEVL",
@@ -2817,10 +3087,20 @@
       "start_date": "2026-10-24T19:20:00Z",
       "type": "mma_match",
       "primary_event_tickers": [
-        "KXUFCFIGHT-26OCT24VOLEVL"
+        "KXUFCFIGHT-26OCT24VOLEVL",
+        "KXUFCMOV-26OCT24VOLEVL",
+        "KXUFCMOF-26OCT24VOLEVL",
+        "KXUFCROUNDS-26OCT24VOLEVL",
+        "KXUFCDISTANCE-26OCT24VOLEVL",
+        "KXUFCVICROUND-26OCT24VOLEVL"
       ],
       "related_event_tickers": [
-        "KXUFCFIGHT-26OCT24VOLEVL"
+        "KXUFCFIGHT-26OCT24VOLEVL",
+        "KXUFCMOV-26OCT24VOLEVL",
+        "KXUFCMOF-26OCT24VOLEVL",
+        "KXUFCROUNDS-26OCT24VOLEVL",
+        "KXUFCDISTANCE-26OCT24VOLEVL",
+        "KXUFCVICROUND-26OCT24VOLEVL"
       ],
       "details": {
         "league": "ufc",
@@ -2853,6 +3133,6 @@
     ],
     "_contract_terms_url": "https://assets.kalshi.com/contract_terms/UFCFIGHTWINNER.pdf",
     "_native_competition": "ufc",
-    "_collected_at_utc": "2026-10-21T06:41:58.734+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:16.265+00:00"
   }
 ]

@@ -52,6 +52,7 @@ def reviewable(row):
 class TerminalMarkets:
     def __init__(self, catalog, store, runtime=None, monitor=None):
         self.catalog, self.store, self.runtime, self.monitor = catalog, store, runtime, monitor
+        self.betfair = None
         self._cache_lock = threading.Lock()
         self._catalog_signature = None
         self._entries, self._coverage = [], {}
@@ -252,13 +253,15 @@ class TerminalMarkets:
             result.append(item)
             joined.update(g["id"] for g in group)
         result.extend(item for item in singles if item["id"] not in joined)
+        if self.betfair is not None:
+            result = self.betfair.decorate(result)
         return result, coverage
 
     def page(self, *, search="", category="", sport="", exchange="", status="", view="all", limit=100, offset=0,
              sort="liquidity", direction="desc", min_liquidity=0, size="100", strict=False, quoted=False, watchlist=None):
         if sort not in {"name", "category", "liquidity", "edge", "expiry", "gross", "pnl"} or direction not in {"asc", "desc"}:
             raise ValueError("Unsupported terminal sort")
-        if view not in {"all", "matched", "single", "review", "alerts", "watch"} or exchange and exchange not in VENUES or status not in {"", "active", "closed", "unknown"}:
+        if view not in {"all", "matched", "single", "review", "alerts", "watch"} or exchange and exchange not in (*VENUES, "betfair") or status not in {"", "active", "closed", "unknown"}:
             raise ValueError("Unsupported market view")
         if not isinstance(limit, int) or isinstance(limit, bool) or not 1 <= limit <= 100 or not isinstance(offset, int) or isinstance(offset, bool) or not 0 <= offset <= 1000000:
             raise ValueError("Invalid terminal page")
@@ -303,6 +306,7 @@ class TerminalMarkets:
             selected.sort(key=lambda item: str(item[key] or "").casefold(), reverse=direction == "desc")
         monitoring = self.monitor.status() if self.monitor else {"monitored_count": 0, "state": "not_started"}
         return {"markets": selected[offset:offset + limit], "total": len(selected), "counts": dict(counts),
+                "betfair_status": self.betfair.status() if self.betfair is not None else {"state": "not_configured", "runner_count": 0},
                 "categories": [{"category": name, "markets": count} for name, count in sorted(categories.items())],
                 "sports": [{"sport": code, "label": SPORT_LABELS[code], "markets": count, "category": category}
                            for (category, code), count in sorted(sports.items(), key=lambda item: (item[0][0], SPORT_LABELS[item[0][1]]))],

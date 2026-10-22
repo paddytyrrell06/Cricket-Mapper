@@ -2,6 +2,33 @@
   {
     "category": "Sports",
     "details": {
+      "away_team_id": "b2806203-e12d-434b-b4b5-01561a0369f9",
+      "coverage": {},
+      "home_team_id": "167b048f-0412-4626-9766-ec08603e62cc",
+      "is_ko": false,
+      "league": "Eredivisie",
+      "main_game_event_ticker": "KXEREDIVISIEGAME-26OCT25AZATWE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "0ac7f3b0-40ca-534b-bbb9-6cac3b9007b2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEREDIVISIEGAME-26OCT25AZATWE"
+    ],
+    "related_event_tickers": [
+      "KXEREDIVISIEGAME-26OCT25AZATWE"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T19:00:00Z",
+    "title": "Alkmaar vs Enschede",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
       "away_team_id": "e2dd1b68-2aca-496e-bcd1-f1198240b7b0",
       "coverage": {},
       "home_team_id": "c16ca56a-fc42-4d93-b818-54f5861f7a99",
@@ -30,7 +57,40 @@
     "start_date": "2026-10-23T18:00:00Z",
     "title": "GA Eagles vs Telstar",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "def3014d-1cea-479c-8660-c33341d59721",
+      "coverage": {},
+      "home_team_id": "85389cb9-7f59-4465-9587-78358c24d0e7",
+      "is_ko": false,
+      "league": "Eredivisie",
+      "main_game_event_ticker": "KXEREDIVISIEGAME-26OCT24WILCAM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "53203c94-217d-5894-961a-c41b9f30b5b7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEREDIVISIEGAME-26OCT24WILCAM",
+      "KXEREDIVISIESPREAD-26OCT24WILCAM",
+      "KXEREDIVISIETOTAL-26OCT24WILCAM",
+      "KXEREDIVISIEBTTS-26OCT24WILCAM"
+    ],
+    "related_event_tickers": [
+      "KXEREDIVISIEGAME-26OCT24WILCAM",
+      "KXEREDIVISIESPREAD-26OCT24WILCAM",
+      "KXEREDIVISIETOTAL-26OCT24WILCAM",
+      "KXEREDIVISIEBTTS-26OCT24WILCAM"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-24T16:45:00Z",
+    "title": "Willem II vs Cambuur",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -57,61 +117,7 @@
     "start_date": "2026-10-25T13:30:00Z",
     "title": "Nijmegen vs Groningen",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "2c635bbd-1117-4792-83d4-a94326296c22",
-      "coverage": {},
-      "home_team_id": "08a3b906-dcd8-451b-8f6d-dacfd3a967db",
-      "is_ko": false,
-      "league": "Eredivisie",
-      "main_game_event_ticker": "KXEREDIVISIEGAME-26OCT25PSVFEY",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ddd4a4ce-9ae9-5a2f-8eec-b4d53f6c35e2",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT25PSVFEY"
-    ],
-    "related_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT25PSVFEY"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T13:30:00Z",
-    "title": "Eindhoven vs Feyenoord",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "b2806203-e12d-434b-b4b5-01561a0369f9",
-      "coverage": {},
-      "home_team_id": "167b048f-0412-4626-9766-ec08603e62cc",
-      "is_ko": false,
-      "league": "Eredivisie",
-      "main_game_event_ticker": "KXEREDIVISIEGAME-26OCT25AZATWE",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "0ac7f3b0-40ca-534b-bbb9-6cac3b9007b2",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT25AZATWE"
-    ],
-    "related_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT25AZATWE"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T19:00:00Z",
-    "title": "Alkmaar vs Enschede",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -129,43 +135,22 @@
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT24FCUZWO"
+      "KXEREDIVISIEGAME-26OCT24FCUZWO",
+      "KXEREDIVISIESPREAD-26OCT24FCUZWO",
+      "KXEREDIVISIETOTAL-26OCT24FCUZWO",
+      "KXEREDIVISIEBTTS-26OCT24FCUZWO"
     ],
     "related_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT24FCUZWO"
+      "KXEREDIVISIEGAME-26OCT24FCUZWO",
+      "KXEREDIVISIESPREAD-26OCT24FCUZWO",
+      "KXEREDIVISIETOTAL-26OCT24FCUZWO",
+      "KXEREDIVISIEBTTS-26OCT24FCUZWO"
     ],
     "source_ids": {},
     "start_date": "2026-10-24T14:30:00Z",
     "title": "Utrecht vs Zwolle",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "def3014d-1cea-479c-8660-c33341d59721",
-      "coverage": {},
-      "home_team_id": "85389cb9-7f59-4465-9587-78358c24d0e7",
-      "is_ko": false,
-      "league": "Eredivisie",
-      "main_game_event_ticker": "KXEREDIVISIEGAME-26OCT24WILCAM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "53203c94-217d-5894-961a-c41b9f30b5b7",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT24WILCAM"
-    ],
-    "related_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT24WILCAM"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-24T16:45:00Z",
-    "title": "Willem II vs Cambuur",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -183,16 +168,22 @@
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT24ADOHEE"
+      "KXEREDIVISIEGAME-26OCT24ADOHEE",
+      "KXEREDIVISIESPREAD-26OCT24ADOHEE",
+      "KXEREDIVISIETOTAL-26OCT24ADOHEE",
+      "KXEREDIVISIEBTTS-26OCT24ADOHEE"
     ],
     "related_event_tickers": [
-      "KXEREDIVISIEGAME-26OCT24ADOHEE"
+      "KXEREDIVISIEGAME-26OCT24ADOHEE",
+      "KXEREDIVISIESPREAD-26OCT24ADOHEE",
+      "KXEREDIVISIETOTAL-26OCT24ADOHEE",
+      "KXEREDIVISIEBTTS-26OCT24ADOHEE"
     ],
     "source_ids": {},
     "start_date": "2026-10-24T19:00:00Z",
     "title": "Den Haag vs Heerenveen",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -219,7 +210,34 @@
     "start_date": "2026-10-25T11:15:00Z",
     "title": "Sittard vs Excelsior",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "2c635bbd-1117-4792-83d4-a94326296c22",
+      "coverage": {},
+      "home_team_id": "08a3b906-dcd8-451b-8f6d-dacfd3a967db",
+      "is_ko": false,
+      "league": "Eredivisie",
+      "main_game_event_ticker": "KXEREDIVISIEGAME-26OCT25PSVFEY",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ddd4a4ce-9ae9-5a2f-8eec-b4d53f6c35e2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXEREDIVISIEGAME-26OCT25PSVFEY"
+    ],
+    "related_event_tickers": [
+      "KXEREDIVISIEGAME-26OCT25PSVFEY"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T13:30:00Z",
+    "title": "Eindhoven vs Feyenoord",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -246,6 +264,6 @@
     "start_date": "2026-10-25T15:45:00Z",
     "title": "Sparta vs Ajax",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   }
 ]

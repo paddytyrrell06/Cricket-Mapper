@@ -492,6 +492,42 @@ class ReplayRunTests(unittest.TestCase):
                             for call in R.say.call_args_list))
 
 
+class TerminalLaunchTests(unittest.TestCase):
+    def test_live_runs_open_full_terminal_after_releasing_publication_lock(self):
+        from build_lock import BuildLock
+        import server
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+
+            def launch(project):
+                self.assertEqual(project, root)
+                with BuildLock(root / ".market_terminal.lock"):
+                    pass
+                return 0
+
+            for snapshot, refresh in ((None, False), (root / "saved", True)):
+                with self.subTest(snapshot=snapshot), patch.object(R, "BUILD_DIR", root / "build"), \
+                     patch.object(R, "SNAPSHOT_DIR", snapshot), patch.object(R, "REFRESH_QUOTES", refresh), \
+                     patch.object(R, "NO_OPEN", False), patch.object(R, "_main", return_value=0), \
+                     patch.object(server, "launch_terminal", side_effect=launch) as launcher, \
+                     patch.object(R.webbrowser, "open") as browser:
+                    self.assertEqual(R.main(), 0)
+                    launcher.assert_called_once_with(root)
+                    browser.assert_not_called()
+
+    def test_no_open_and_failed_audits_never_start_or_open_a_terminal(self):
+        import server
+        with tempfile.TemporaryDirectory() as directory:
+            for code, no_open in ((0, True), (4, False)):
+                with self.subTest(code=code, no_open=no_open), \
+                     patch.object(R, "BUILD_DIR", Path(directory) / "build"), \
+                     patch.object(R, "NO_OPEN", no_open), patch.object(R, "_main", return_value=code), \
+                     patch.object(server, "launch_terminal") as launcher, patch.object(R.webbrowser, "open") as browser:
+                    self.assertEqual(R.main(), code)
+                    launcher.assert_not_called()
+                    browser.assert_not_called()
+
+
 class DiscoveryConcurrencyTests(unittest.TestCase):
     def test_independent_sports_overlap_and_keep_failure_scoped(self):
         ready = Barrier(3, timeout=2)

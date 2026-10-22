@@ -52,17 +52,22 @@ A comparison terminal and quote infrastructure for **Kalshi and Polymarket Inter
 
 ## Run
 
+Betfair's first read-only integration adds pre-match NBA BACK/LAY prices and
+conservative fixture mappings alongside the existing markets. It is disabled
+until configured and uses native odds/stake units. See [Betfair setup, scope and
+validation](docs/BETFAIR.md); it adds no Betfair profit or execution calculation.
+
 Start the local browser terminal:
 
 ```bash
 python3 server.py
 ```
 
-Keep this process running and use `http://127.0.0.1:8765/CricketMatchingReport.html`. It loads the audited market universe into memory and requests fresh quotes at startup and every **15 seconds**. Browser reload and **Refresh prices** also request a refresh. Quotes update the existing table through the local API; normal service refreshes do not rebuild HTML, rerun discovery or archive full snapshots. Repeated requests share one job. Stop the service with Ctrl+C. A first-time install needs one `python3 run.py` discovery scan before starting it.
+Keep this process running and use `http://127.0.0.1:8765/CricketMatchingReport.html`. It loads the audited market universe into memory and requests fresh quotes at startup and every **15 seconds**. Browser reload and **Refresh prices** also request a refresh. Quotes update the existing table through the local API; normal service refreshes do not rebuild HTML, rerun discovery or archive full snapshots. Repeated requests share one job. Stop the service with Ctrl+C. For first-time setup, `python3 run.py` performs discovery, then opens this same HTTP workspace and starts its server if needed.
 
 Use `python3 server.py --interval=30` for a slower REST cycle, `--interval=0` for manual refresh, `--port=8766` for another port, or `--no-open` to leave browser opening to you. The interval is a scheduling target, not a quote-delivery guarantee; a running refresh is never duplicated.
 
-Python 3.9+ and the standard library are sufficient. No API keys or package installation are required for the public REST scanner and local HTTP service. The original `python3 run.py` command still performs a full discovery scan and opens the report. `--no-open` skips that browser-opening step. To select one sport:
+Python 3.9+ and the standard library are sufficient. No API keys or package installation are required for the public REST scanner and local HTTP service. `python3 run.py` performs a full sports discovery scan and opens the full terminal, including the independent catalog's non-sports categories. An existing server for this publication is reused; otherwise the command keeps running as the local server until Ctrl+C. `--no-open` only publishes the audited export and does not open or start a server. To select one sport:
 
 ```bash
 python3 run.py --sports=cricket --no-open
@@ -102,7 +107,7 @@ Prices use exact decimals. A gross cross requires a bid strictly above a distinc
 
 Soccer includes EPL, LaLiga, Bundesliga, Serie A, Ligue 1, Champions League, MLS, Europa League, Conference League, EFL Championship, Eredivisie, Primeira Liga, Scottish Premiership, Liga MX, 2. Bundesliga, A-League Men and USL Championship. Use `--soccer-leagues` with codes from `sports.SOCCER_COMPETITIONS` to narrow live discovery. NBA/WNBA, men's/women's college basketball, NFL/college football, NHL, MLB, ATP/WTA and UFC use league-specific game series and exact registries or published participant metadata. Cricket retains the project's competition and team normalization. Props, futures, unresolved identities and conflicting start times stay outside accepted comparisons. A configured league can have no open games; availability depends on both venues.
 
-The first Esports adapters cover CS2 and LoL. They retain game-specific identity, exact outcome-token mappings and full-match settlement evidence; maps, rounds, props and outrights remain outside scope. See [docs/ESPORTS.md](docs/ESPORTS.md). Shared adapters, settlement profiles, matching, quote collection and audit provide the expansion points for future domains. Finance and Tech need their own identity and payout models before their tabs can become active.
+The first Esports adapters cover CS2 and LoL. They retain game-specific identity, exact outcome-token mappings and full-match settlement evidence; maps, rounds, props and outrights remain outside scope. See [docs/ESPORTS.md](docs/ESPORTS.md). Shared adapters, settlement profiles, matching, quote collection and audit provide the expansion points for future domains. Finance, Technology, Politics and other independently discovered categories are already accessible in the HTTP terminal; validated cross-exchange comparisons in those domains still need their own identity and payout models.
 
 Discovery overlaps independent scopes with bounded requests per origin. Both venues' quote refreshes then run concurrently. Kalshi contracts refresh in batches; Polymarket quotes come from exact outcome-token order books. Last trades and display probabilities are never substituted for bids or asks. Observation time, exchange book time and available best-level sizes are recorded separately. Missing or failed quotes stay unavailable without erasing a fixture comparison.
 
@@ -114,7 +119,7 @@ python3 run.py --snapshot-dir=output/data --refresh-quotes
 
 This still reparses and audits the saved universe, fetches current matched quotes, rebuilds the report and archives evidence. It retains the discovery timestamp and cannot discover games opened since that snapshot; run a full scan periodically. The persistent local service uses the same known identities for repeated quote refreshes without these report-build steps. Omit `--refresh-quotes` for a strictly offline replay.
 
-Directly opened `file://` reports remain snapshot exports. They check a tiny local version file every two seconds and reload when a successful CLI run publishes new data, preserving view settings. Their browser reload cannot launch Python; use the local HTTP terminal for browser-triggered collection. The header shows when quotes were checked, with discovery time retained separately.
+Directly opened `file://` reports remain sports snapshot exports, so they only contain Sports and Esports. The full catalog and Research database require the HTTP terminal. Normal live `run.py` invocations now open that terminal. Explicit offline replays (`--snapshot-dir` without `--refresh-quotes`) continue to open the snapshot file and make no live requests; add `--no-open` to suppress opening it. Snapshot files check a tiny local version marker every two seconds and reload after successful publications, preserving view settings. Their browser reload cannot launch Python. The header shows when quotes were checked, with discovery time retained separately.
 
 HTML/JavaScript remains appropriate for the browser interface. `runtime.MarketRuntime` now owns persistent REST market state and serves changed row records and small freshness updates through `/api/markets`; detailed evidence is fetched on demand through `/api/market/<id>`. `streaming.LiveQuoteEngine` provides the future socket ingestion boundary: it compiles audited matches, fee schedules and liquidity policy into an instrument index and recalculates only affected comparisons. It supports atomic BBO replacements, freshness expiry, sequence-gap invalidation, reconnect generations and snapshot recovery. Its default is five seconds of quote age and one second of skew. Discovery, settlement parsing, disk writes and HTML rendering stay outside that update path. `output/data/stream_manifest.json` maps exact feed IDs to outcomes; `live_state.json` records the seeded engine; `latency.json` records scanner phase times.
 

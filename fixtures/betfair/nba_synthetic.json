@@ -1,0 +1,38 @@
+{
+  "synthetic": true,
+  "description": "Handwritten test-only fixture. Not an observed exchange market or opportunity.",
+  "observed_at": "2026-10-22T00:00:00+00:00",
+  "currency": "AUD",
+  "catalogue": [
+    {
+      "marketId": "1.999000001",
+      "marketName": "Moneyline",
+      "marketStartTime": "2026-10-23T02:00:00Z",
+      "eventType": {"id": "7522", "name": "Basketball"},
+      "competition": {"id": "10547864", "name": "NBA"},
+      "event": {"id": "999000001", "name": "Boston Celtics @ New York Knicks", "openDate": "2026-10-23T02:00:00Z", "countryCode": "US", "timezone": "America/New_York"},
+      "description": {"marketType": "MATCH_ODDS", "marketTime": "2026-10-23T02:00:00Z", "bettingType": "ODDS", "persistenceEnabled": true, "marketBaseRate": 6.0, "discountAllowed": false, "rules": "SYNTHETIC TEST RULES. Full-game winner including overtime. Abandoned or cancelled game: all bets void. Postponed game: bets void unless played within 48 hours."},
+      "runners": [
+        {"selectionId": 99901, "runnerName": "Boston Celtics", "handicap": 0, "sortPriority": 1},
+        {"selectionId": 99902, "runnerName": "New York Knicks", "handicap": 0, "sortPriority": 2}
+      ]
+    }
+  ],
+  "books": [
+    {
+      "marketId": "1.999000001", "status": "OPEN", "inplay": false,
+      "betDelay": 0, "isMarketDataDelayed": true, "version": 123,
+      "totalMatched": 10000.0, "totalAvailable": 1500.0,
+      "runners": [
+        {"selectionId": 99901, "handicap": 0, "status": "ACTIVE", "ex": {
+          "availableToBack": [{"price": 2.2, "size": 100}, {"price": 2.18, "size": 50}, {"price": 2.16, "size": 40}],
+          "availableToLay": [{"price": 2.22, "size": 80}, {"price": 2.24, "size": 70}, {"price": 2.26, "size": 60}]
+        }},
+        {"selectionId": 99902, "handicap": 0, "status": "ACTIVE", "ex": {
+          "availableToBack": [{"price": 1.81, "size": 120}, {"price": 1.8, "size": 100}],
+          "availableToLay": [{"price": 1.83, "size": 90}, {"price": 1.84, "size": 60}]
+        }}
+      ]
+    }
+  ]
+}

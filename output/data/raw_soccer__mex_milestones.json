@@ -2,151 +2,6 @@
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "e7f5c871-11c6-46cb-b7fa-1a1fbfd3bbf6",
-      "coverage": {},
-      "home_team_id": "2a420c5b-2bf1-45c4-ae20-0178579e9884",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT24PUMTIG",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "9fabe58b-8f13-572c-be9a-6fb82e4346c4",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT24PUMTIG",
-      "KXLIGAMXSPREAD-26OCT24PUMTIG",
-      "KXLIGAMXTOTAL-26OCT24PUMTIG",
-      "KXLIGAMXBTTS-26OCT24PUMTIG"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT24PUMTIG",
-      "KXLIGAMXSPREAD-26OCT24PUMTIG",
-      "KXLIGAMXTOTAL-26OCT24PUMTIG",
-      "KXLIGAMXBTTS-26OCT24PUMTIG"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102536753894"
-    },
-    "start_date": "2026-10-25T03:10:00Z",
-    "title": "Pumas UNAM vs Tigres",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7eff3bc2-6c5d-48dc-a020-27671a9566c9",
-      "coverage": {},
-      "home_team_id": "b53e877f-6781-4417-b884-e08d340a8d14",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT28AMETIJ",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c547fb5a-ca96-529f-99d5-b281b052e9b3",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT28AMETIJ"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT28AMETIJ"
-    ],
-    "source_ids": {
-      "source_2_id": "20260906767088F9"
-    },
-    "start_date": "2026-10-29T03:00:00Z",
-    "title": "America vs Tijuana",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "4170acf9-905f-48d3-8c0e-c3fd909f1216",
-      "coverage": {},
-      "home_team_id": "db036857-8a77-473f-83c8-7805cb772d57",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT30JUAQUE",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "94f49175-9842-53ce-a682-c86b8b126ba0",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT30JUAQUE"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT30JUAQUE"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T01:00:00Z",
-    "title": "Juarez vs Queretaro",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7eff3bc2-6c5d-48dc-a020-27671a9566c9",
-      "coverage": {},
-      "home_team_id": "af0bb21e-4530-41a8-871b-484d5bb18a8e",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT31MONTIJ",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "11f12794-f04c-512b-a27f-74c908753585",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT31MONTIJ"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT31MONTIJ"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T01:00:00Z",
-    "title": "Monterrey vs Tijuana",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "c685350f-fc0d-474d-b88c-d208d3eba973",
-      "coverage": {},
-      "home_team_id": "024a51df-df92-443c-b264-8c9759179650",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26NOV01CRALEO",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "791301a7-c42a-59aa-b918-f456b598cec7",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26NOV01CRALEO"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26NOV01CRALEO"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-02T01:00:00Z",
-    "title": "Cruz Azul vs Leon",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
       "away_team_id": "024a51df-df92-443c-b264-8c9759179650",
       "coverage": {},
       "home_team_id": "649e847f-571e-48ab-96f2-d3c0b45dfe7a",
@@ -197,419 +52,7 @@
     "start_date": "2026-10-22T03:10:00Z",
     "title": "Pachuca vs Cruz Azul",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "db036857-8a77-473f-83c8-7805cb772d57",
-      "coverage": {},
-      "home_team_id": "8beb4fbf-a817-4807-9974-de8f08506044",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT23NCXJUA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "a90c3c14-32e0-5cf4-99cf-e6562d6fbcee",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT23NCXJUA",
-      "KXLIGAMXSPREAD-26OCT23NCXJUA",
-      "KXLIGAMXTOTAL-26OCT23NCXJUA",
-      "KXLIGAMXBTTS-26OCT23NCXJUA"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT23NCXJUA",
-      "KXLIGAMXSPREAD-26OCT23NCXJUA",
-      "KXLIGAMXTOTAL-26OCT23NCXJUA",
-      "KXLIGAMXBTTS-26OCT23NCXJUA"
-    ],
-    "source_ids": {
-      "source_2_id": "20261024BA4D507F"
-    },
-    "start_date": "2026-10-24T01:00:00Z",
-    "title": "Necaxa vs Juarez",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "2b4d89c8-d771-4157-af4d-e216d66f44aa",
-      "coverage": {},
-      "home_team_id": "c685350f-fc0d-474d-b88c-d208d3eba973",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT24LEOTOL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "bdefafa5-bd2c-5212-873a-62e3af634650",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT24LEOTOL",
-      "KXLIGAMXSPREAD-26OCT24LEOTOL",
-      "KXLIGAMXTOTAL-26OCT24LEOTOL",
-      "KXLIGAMXBTTS-26OCT24LEOTOL"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT24LEOTOL",
-      "KXLIGAMXSPREAD-26OCT24LEOTOL",
-      "KXLIGAMXTOTAL-26OCT24LEOTOL",
-      "KXLIGAMXBTTS-26OCT24LEOTOL"
-    ],
-    "source_ids": {
-      "source_2_id": "202610248B002EE9"
-    },
-    "start_date": "2026-10-24T23:00:00Z",
-    "title": "Leon vs Toluca",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "649e847f-571e-48ab-96f2-d3c0b45dfe7a",
-      "coverage": {},
-      "home_team_id": "b53e877f-6781-4417-b884-e08d340a8d14",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT25AMEPAC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "0887cc15-7403-5413-a94a-e479003b7df1",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT25AMEPAC",
-      "KXLIGAMXSPREAD-26OCT25AMEPAC",
-      "KXLIGAMXTOTAL-26OCT25AMEPAC",
-      "KXLIGAMXBTTS-26OCT25AMEPAC"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT25AMEPAC",
-      "KXLIGAMXSPREAD-26OCT25AMEPAC",
-      "KXLIGAMXTOTAL-26OCT25AMEPAC",
-      "KXLIGAMXBTTS-26OCT25AMEPAC"
-    ],
-    "source_ids": {
-      "source_2_id": "20261025297ACA70"
-    },
-    "start_date": "2026-10-26T01:05:00Z",
-    "title": "America vs Pachuca",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "d5b477fc-a61b-4633-bd61-ea6ed8fe5515",
-      "coverage": {},
-      "home_team_id": "bcd69de5-6d9d-494b-b85c-167286d4bc60",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT25ATLPUE",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "9078b567-d604-58da-9b26-fca1e32bed86",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT25ATLPUE",
-      "KXLIGAMXSPREAD-26OCT25ATLPUE",
-      "KXLIGAMXTOTAL-26OCT25ATLPUE",
-      "KXLIGAMXBTTS-26OCT25ATLPUE"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT25ATLPUE",
-      "KXLIGAMXSPREAD-26OCT25ATLPUE",
-      "KXLIGAMXTOTAL-26OCT25ATLPUE",
-      "KXLIGAMXBTTS-26OCT25ATLPUE"
-    ],
-    "source_ids": {
-      "source_2_id": "20261025160729D2"
-    },
-    "start_date": "2026-10-25T23:00:00Z",
-    "title": "Atlas vs Puebla",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "4cf1cf82-72e0-4963-a861-3b2d4a7b3505",
-      "coverage": {},
-      "home_team_id": "2664b66b-b998-47d2-b1e6-d19295e11802",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT31CDGALA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "61073726-c923-537b-9d87-81d3bf724163",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT31CDGALA"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT31CDGALA"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T01:07:00Z",
-    "title": "Guadalajara vs Atlante",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "8beb4fbf-a817-4807-9974-de8f08506044",
-      "coverage": {},
-      "home_team_id": "c7839560-75ac-4c16-8cce-c7446207d6bc",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26NOV01SLANCX",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "fa1574e8-1df0-57eb-91b9-5ed78b0bb51e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26NOV01SLANCX"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26NOV01SLANCX"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T23:00:00Z",
-    "title": "Santos Laguna vs Necaxa",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "bcd69de5-6d9d-494b-b85c-167286d4bc60",
-      "coverage": {},
-      "home_team_id": "c512a520-2cf9-4858-9a33-86aaed387807",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT30ASLATL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "7ad5c657-348c-5385-be65-430ea2ac47c0",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT30ASLATL"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT30ASLATL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T01:00:00Z",
-    "title": "San Luis vs Atlas",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "2a420c5b-2bf1-45c4-ae20-0178579e9884",
-      "coverage": {},
-      "home_team_id": "d5b477fc-a61b-4633-bd61-ea6ed8fe5515",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT30PUEPUM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c51e4641-8f03-5731-a5bb-926b4956bda9",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT30PUEPUM"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT30PUEPUM"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T03:00:00Z",
-    "title": "Puebla vs Pumas UNAM",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "e7f5c871-11c6-46cb-b7fa-1a1fbfd3bbf6",
-      "coverage": {},
-      "home_team_id": "649e847f-571e-48ab-96f2-d3c0b45dfe7a",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT31PACTIG",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c40c01c7-def2-58e9-a607-6d0226ba409c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT31PACTIG"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT31PACTIG"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-31T23:00:00Z",
-    "title": "Pachuca vs Tigres",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "2b4d89c8-d771-4157-af4d-e216d66f44aa",
-      "coverage": {},
-      "home_team_id": "b53e877f-6781-4417-b884-e08d340a8d14",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT31AMETOL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "86b3c354-b60b-5487-b841-11aea4f5d0a7",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT31AMETOL"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT31AMETOL"
-    ],
-    "source_ids": {},
-    "start_date": "2026-11-01T03:00:00Z",
-    "title": "America vs Toluca",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "b53e877f-6781-4417-b884-e08d340a8d14",
-      "coverage": {},
-      "home_team_id": "bcd69de5-6d9d-494b-b85c-167286d4bc60",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT21ATLAME",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "97fa7fde-fff9-5cf2-b929-5c9bf0dfa6aa",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT21ATLAME",
-      "KXLIGAMXSPREAD-26OCT21ATLAME",
-      "KXLIGAMXTOTAL-26OCT21ATLAME",
-      "KXLIGAMXBTTS-26OCT21ATLAME",
-      "KXLIGAMX1H-26OCT21ATLAME",
-      "KXLIGAMX1HSPREAD-26OCT21ATLAME",
-      "KXLIGAMX1HTOTAL-26OCT21ATLAME",
-      "KXLIGAMX1HBTTS-26OCT21ATLAME",
-      "KXLIGAMX2H-26OCT21ATLAME",
-      "KXLIGAMX2HSPREAD-26OCT21ATLAME",
-      "KXLIGAMX2HTOTAL-26OCT21ATLAME",
-      "KXLIGAMX2HBTTS-26OCT21ATLAME",
-      "KXLIGAMXTEAMTOTAL-26OCT21ATLAME"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT21ATLAME",
-      "KXLIGAMXSPREAD-26OCT21ATLAME",
-      "KXLIGAMXTOTAL-26OCT21ATLAME",
-      "KXLIGAMXBTTS-26OCT21ATLAME",
-      "KXLIGAMX1H-26OCT21ATLAME",
-      "KXLIGAMX1HSPREAD-26OCT21ATLAME",
-      "KXLIGAMX1HTOTAL-26OCT21ATLAME",
-      "KXLIGAMX1HBTTS-26OCT21ATLAME",
-      "KXLIGAMX2H-26OCT21ATLAME",
-      "KXLIGAMX2HSPREAD-26OCT21ATLAME",
-      "KXLIGAMX2HTOTAL-26OCT21ATLAME",
-      "KXLIGAMX2HBTTS-26OCT21ATLAME",
-      "KXLIGAMXTEAMTOTAL-26OCT21ATLAME",
-      "KXLIGAMXSCORE-26OCT21ATLAME",
-      "KXLIGAMX1HSCORE-26OCT21ATLAME"
-    ],
-    "source_ids": {
-      "source_2_id": "202610226DBC1184"
-    },
-    "start_date": "2026-10-22T01:00:00Z",
-    "title": "Atlas vs America",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "af0bb21e-4530-41a8-871b-484d5bb18a8e",
-      "coverage": {},
-      "home_team_id": "d5b477fc-a61b-4633-bd61-ea6ed8fe5515",
-      "is_ko": false,
-      "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT21PUEMON",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "1a31c332-1bbd-58d8-bfac-40a25e92f036",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT21PUEMON",
-      "KXLIGAMXSPREAD-26OCT21PUEMON",
-      "KXLIGAMXTOTAL-26OCT21PUEMON",
-      "KXLIGAMXBTTS-26OCT21PUEMON",
-      "KXLIGAMX1H-26OCT21PUEMON",
-      "KXLIGAMX1HSPREAD-26OCT21PUEMON",
-      "KXLIGAMX1HTOTAL-26OCT21PUEMON",
-      "KXLIGAMX1HBTTS-26OCT21PUEMON",
-      "KXLIGAMX2H-26OCT21PUEMON",
-      "KXLIGAMX2HSPREAD-26OCT21PUEMON",
-      "KXLIGAMX2HTOTAL-26OCT21PUEMON",
-      "KXLIGAMX2HBTTS-26OCT21PUEMON",
-      "KXLIGAMXTEAMTOTAL-26OCT21PUEMON"
-    ],
-    "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT21PUEMON",
-      "KXLIGAMXSPREAD-26OCT21PUEMON",
-      "KXLIGAMXTOTAL-26OCT21PUEMON",
-      "KXLIGAMXBTTS-26OCT21PUEMON",
-      "KXLIGAMX1H-26OCT21PUEMON",
-      "KXLIGAMX1HSPREAD-26OCT21PUEMON",
-      "KXLIGAMX1HTOTAL-26OCT21PUEMON",
-      "KXLIGAMX1HBTTS-26OCT21PUEMON",
-      "KXLIGAMX2H-26OCT21PUEMON",
-      "KXLIGAMX2HSPREAD-26OCT21PUEMON",
-      "KXLIGAMX2HTOTAL-26OCT21PUEMON",
-      "KXLIGAMX2HBTTS-26OCT21PUEMON",
-      "KXLIGAMXTEAMTOTAL-26OCT21PUEMON",
-      "KXLIGAMXSCORE-26OCT21PUEMON",
-      "KXLIGAMX1HSCORE-26OCT21PUEMON"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102205A41CE4"
-    },
-    "start_date": "2026-10-22T01:00:00Z",
-    "title": "Puebla vs Monterrey",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -664,42 +107,77 @@
     "start_date": "2026-10-22T03:10:00Z",
     "title": "Santos Laguna vs Pumas UNAM",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "024a51df-df92-443c-b264-8c9759179650",
+      "away_team_id": "2664b66b-b998-47d2-b1e6-d19295e11802",
       "coverage": {},
-      "home_team_id": "4170acf9-905f-48d3-8c0e-c3fd909f1216",
+      "home_team_id": "af0bb21e-4530-41a8-871b-484d5bb18a8e",
       "is_ko": false,
       "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT25QUECRA",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT24MONCDG",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "221dedd4-a239-5c59-b4ef-897747671f13",
+    "id": "f929d922-9af2-5e77-aad3-5253b926dd80",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT25QUECRA",
-      "KXLIGAMXSPREAD-26OCT25QUECRA",
-      "KXLIGAMXTOTAL-26OCT25QUECRA",
-      "KXLIGAMXBTTS-26OCT25QUECRA"
+      "KXLIGAMXGAME-26OCT24MONCDG",
+      "KXLIGAMXSPREAD-26OCT24MONCDG",
+      "KXLIGAMXTOTAL-26OCT24MONCDG",
+      "KXLIGAMXBTTS-26OCT24MONCDG"
     ],
     "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT25QUECRA",
-      "KXLIGAMXSPREAD-26OCT25QUECRA",
-      "KXLIGAMXTOTAL-26OCT25QUECRA",
-      "KXLIGAMXBTTS-26OCT25QUECRA"
+      "KXLIGAMXGAME-26OCT24MONCDG",
+      "KXLIGAMXSPREAD-26OCT24MONCDG",
+      "KXLIGAMXTOTAL-26OCT24MONCDG",
+      "KXLIGAMXBTTS-26OCT24MONCDG"
     ],
     "source_ids": {
-      "source_2_id": "2026102627C880FA"
+      "source_2_id": "2026102538FE4A51"
     },
-    "start_date": "2026-10-26T01:00:00Z",
-    "title": "Queretaro vs Cruz Azul",
+    "start_date": "2026-10-25T00:00:00Z",
+    "title": "Monterrey vs Guadalajara",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "649e847f-571e-48ab-96f2-d3c0b45dfe7a",
+      "coverage": {},
+      "home_team_id": "b53e877f-6781-4417-b884-e08d340a8d14",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT25AMEPAC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "0887cc15-7403-5413-a94a-e479003b7df1",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT25AMEPAC",
+      "KXLIGAMXSPREAD-26OCT25AMEPAC",
+      "KXLIGAMXTOTAL-26OCT25AMEPAC",
+      "KXLIGAMXBTTS-26OCT25AMEPAC"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT25AMEPAC",
+      "KXLIGAMXSPREAD-26OCT25AMEPAC",
+      "KXLIGAMXTOTAL-26OCT25AMEPAC",
+      "KXLIGAMXBTTS-26OCT25AMEPAC"
+    ],
+    "source_ids": {
+      "source_2_id": "20261025297ACA70"
+    },
+    "start_date": "2026-10-26T01:05:00Z",
+    "title": "America vs Pachuca",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -734,7 +212,407 @@
     "start_date": "2026-10-26T03:10:00Z",
     "title": "Tijuana vs Santos Laguna",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "2a420c5b-2bf1-45c4-ae20-0178579e9884",
+      "coverage": {},
+      "home_team_id": "d5b477fc-a61b-4633-bd61-ea6ed8fe5515",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT30PUEPUM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c51e4641-8f03-5731-a5bb-926b4956bda9",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT30PUEPUM"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT30PUEPUM"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T03:00:00Z",
+    "title": "Puebla vs Pumas UNAM",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7eff3bc2-6c5d-48dc-a020-27671a9566c9",
+      "coverage": {},
+      "home_team_id": "af0bb21e-4530-41a8-871b-484d5bb18a8e",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT31MONTIJ",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "11f12794-f04c-512b-a27f-74c908753585",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT31MONTIJ"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT31MONTIJ"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T01:00:00Z",
+    "title": "Monterrey vs Tijuana",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "4cf1cf82-72e0-4963-a861-3b2d4a7b3505",
+      "coverage": {},
+      "home_team_id": "2664b66b-b998-47d2-b1e6-d19295e11802",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT31CDGALA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "61073726-c923-537b-9d87-81d3bf724163",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT31CDGALA"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT31CDGALA"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T01:07:00Z",
+    "title": "Guadalajara vs Atlante",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "2b4d89c8-d771-4157-af4d-e216d66f44aa",
+      "coverage": {},
+      "home_team_id": "c685350f-fc0d-474d-b88c-d208d3eba973",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT24LEOTOL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "bdefafa5-bd2c-5212-873a-62e3af634650",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT24LEOTOL",
+      "KXLIGAMXSPREAD-26OCT24LEOTOL",
+      "KXLIGAMXTOTAL-26OCT24LEOTOL",
+      "KXLIGAMXBTTS-26OCT24LEOTOL"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT24LEOTOL",
+      "KXLIGAMXSPREAD-26OCT24LEOTOL",
+      "KXLIGAMXTOTAL-26OCT24LEOTOL",
+      "KXLIGAMXBTTS-26OCT24LEOTOL"
+    ],
+    "source_ids": {
+      "source_2_id": "202610248B002EE9"
+    },
+    "start_date": "2026-10-24T23:00:00Z",
+    "title": "Leon vs Toluca",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "024a51df-df92-443c-b264-8c9759179650",
+      "coverage": {},
+      "home_team_id": "4170acf9-905f-48d3-8c0e-c3fd909f1216",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT25QUECRA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "221dedd4-a239-5c59-b4ef-897747671f13",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT25QUECRA",
+      "KXLIGAMXSPREAD-26OCT25QUECRA",
+      "KXLIGAMXTOTAL-26OCT25QUECRA",
+      "KXLIGAMXBTTS-26OCT25QUECRA"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT25QUECRA",
+      "KXLIGAMXSPREAD-26OCT25QUECRA",
+      "KXLIGAMXTOTAL-26OCT25QUECRA",
+      "KXLIGAMXBTTS-26OCT25QUECRA"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102627C880FA"
+    },
+    "start_date": "2026-10-26T01:00:00Z",
+    "title": "Queretaro vs Cruz Azul",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "7eff3bc2-6c5d-48dc-a020-27671a9566c9",
+      "coverage": {},
+      "home_team_id": "b53e877f-6781-4417-b884-e08d340a8d14",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT28AMETIJ",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c547fb5a-ca96-529f-99d5-b281b052e9b3",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT28AMETIJ"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT28AMETIJ"
+    ],
+    "source_ids": {
+      "source_2_id": "20260906767088F9"
+    },
+    "start_date": "2026-10-29T03:00:00Z",
+    "title": "America vs Tijuana",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "e7f5c871-11c6-46cb-b7fa-1a1fbfd3bbf6",
+      "coverage": {},
+      "home_team_id": "649e847f-571e-48ab-96f2-d3c0b45dfe7a",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT31PACTIG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c40c01c7-def2-58e9-a607-6d0226ba409c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT31PACTIG"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT31PACTIG"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T23:00:00Z",
+    "title": "Pachuca vs Tigres",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "2b4d89c8-d771-4157-af4d-e216d66f44aa",
+      "coverage": {},
+      "home_team_id": "b53e877f-6781-4417-b884-e08d340a8d14",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT31AMETOL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "86b3c354-b60b-5487-b841-11aea4f5d0a7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT31AMETOL"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT31AMETOL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T03:00:00Z",
+    "title": "America vs Toluca",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8beb4fbf-a817-4807-9974-de8f08506044",
+      "coverage": {},
+      "home_team_id": "c7839560-75ac-4c16-8cce-c7446207d6bc",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26NOV01SLANCX",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "fa1574e8-1df0-57eb-91b9-5ed78b0bb51e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26NOV01SLANCX"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26NOV01SLANCX"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-01T23:00:00Z",
+    "title": "Santos Laguna vs Necaxa",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c685350f-fc0d-474d-b88c-d208d3eba973",
+      "coverage": {},
+      "home_team_id": "024a51df-df92-443c-b264-8c9759179650",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26NOV01CRALEO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "791301a7-c42a-59aa-b918-f456b598cec7",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26NOV01CRALEO"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26NOV01CRALEO"
+    ],
+    "source_ids": {},
+    "start_date": "2026-11-02T01:00:00Z",
+    "title": "Cruz Azul vs Leon",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "b53e877f-6781-4417-b884-e08d340a8d14",
+      "coverage": {},
+      "home_team_id": "bcd69de5-6d9d-494b-b85c-167286d4bc60",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT21ATLAME",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "97fa7fde-fff9-5cf2-b929-5c9bf0dfa6aa",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT21ATLAME",
+      "KXLIGAMXSPREAD-26OCT21ATLAME",
+      "KXLIGAMXTOTAL-26OCT21ATLAME",
+      "KXLIGAMXBTTS-26OCT21ATLAME",
+      "KXLIGAMX1H-26OCT21ATLAME",
+      "KXLIGAMX1HSPREAD-26OCT21ATLAME",
+      "KXLIGAMX1HTOTAL-26OCT21ATLAME",
+      "KXLIGAMX1HBTTS-26OCT21ATLAME",
+      "KXLIGAMX2H-26OCT21ATLAME",
+      "KXLIGAMX2HSPREAD-26OCT21ATLAME",
+      "KXLIGAMX2HTOTAL-26OCT21ATLAME",
+      "KXLIGAMX2HBTTS-26OCT21ATLAME",
+      "KXLIGAMXTEAMTOTAL-26OCT21ATLAME"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT21ATLAME",
+      "KXLIGAMXSPREAD-26OCT21ATLAME",
+      "KXLIGAMXTOTAL-26OCT21ATLAME",
+      "KXLIGAMXBTTS-26OCT21ATLAME",
+      "KXLIGAMX1H-26OCT21ATLAME",
+      "KXLIGAMX1HSPREAD-26OCT21ATLAME",
+      "KXLIGAMX1HTOTAL-26OCT21ATLAME",
+      "KXLIGAMX1HBTTS-26OCT21ATLAME",
+      "KXLIGAMX2H-26OCT21ATLAME",
+      "KXLIGAMX2HSPREAD-26OCT21ATLAME",
+      "KXLIGAMX2HTOTAL-26OCT21ATLAME",
+      "KXLIGAMX2HBTTS-26OCT21ATLAME",
+      "KXLIGAMXTEAMTOTAL-26OCT21ATLAME",
+      "KXLIGAMXSCORE-26OCT21ATLAME",
+      "KXLIGAMX1HSCORE-26OCT21ATLAME"
+    ],
+    "source_ids": {
+      "source_2_id": "202610226DBC1184"
+    },
+    "start_date": "2026-10-22T01:00:00Z",
+    "title": "Atlas vs America",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "af0bb21e-4530-41a8-871b-484d5bb18a8e",
+      "coverage": {},
+      "home_team_id": "d5b477fc-a61b-4633-bd61-ea6ed8fe5515",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT21PUEMON",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "1a31c332-1bbd-58d8-bfac-40a25e92f036",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT21PUEMON",
+      "KXLIGAMXSPREAD-26OCT21PUEMON",
+      "KXLIGAMXTOTAL-26OCT21PUEMON",
+      "KXLIGAMXBTTS-26OCT21PUEMON",
+      "KXLIGAMX1H-26OCT21PUEMON",
+      "KXLIGAMX1HSPREAD-26OCT21PUEMON",
+      "KXLIGAMX1HTOTAL-26OCT21PUEMON",
+      "KXLIGAMX1HBTTS-26OCT21PUEMON",
+      "KXLIGAMX2H-26OCT21PUEMON",
+      "KXLIGAMX2HSPREAD-26OCT21PUEMON",
+      "KXLIGAMX2HTOTAL-26OCT21PUEMON",
+      "KXLIGAMX2HBTTS-26OCT21PUEMON",
+      "KXLIGAMXTEAMTOTAL-26OCT21PUEMON"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT21PUEMON",
+      "KXLIGAMXSPREAD-26OCT21PUEMON",
+      "KXLIGAMXTOTAL-26OCT21PUEMON",
+      "KXLIGAMXBTTS-26OCT21PUEMON",
+      "KXLIGAMX1H-26OCT21PUEMON",
+      "KXLIGAMX1HSPREAD-26OCT21PUEMON",
+      "KXLIGAMX1HTOTAL-26OCT21PUEMON",
+      "KXLIGAMX1HBTTS-26OCT21PUEMON",
+      "KXLIGAMX2H-26OCT21PUEMON",
+      "KXLIGAMX2HSPREAD-26OCT21PUEMON",
+      "KXLIGAMX2HTOTAL-26OCT21PUEMON",
+      "KXLIGAMX2HBTTS-26OCT21PUEMON",
+      "KXLIGAMXTEAMTOTAL-26OCT21PUEMON",
+      "KXLIGAMXSCORE-26OCT21PUEMON",
+      "KXLIGAMX1HSCORE-26OCT21PUEMON",
+      "KXLIGAMXGOAL-26OCT21PUEMON",
+      "KXLIGAMXFIRSTGOAL-26OCT21PUEMON"
+    ],
+    "source_ids": {
+      "source_2_id": "2026102205A41CE4"
+    },
+    "start_date": "2026-10-22T01:00:00Z",
+    "title": "Puebla vs Monterrey",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -789,7 +667,104 @@
     "start_date": "2026-10-22T01:00:00Z",
     "title": "Toluca vs Tijuana",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "db036857-8a77-473f-83c8-7805cb772d57",
+      "coverage": {},
+      "home_team_id": "8beb4fbf-a817-4807-9974-de8f08506044",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT23NCXJUA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "a90c3c14-32e0-5cf4-99cf-e6562d6fbcee",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT23NCXJUA",
+      "KXLIGAMXSPREAD-26OCT23NCXJUA",
+      "KXLIGAMXTOTAL-26OCT23NCXJUA",
+      "KXLIGAMXBTTS-26OCT23NCXJUA"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT23NCXJUA",
+      "KXLIGAMXSPREAD-26OCT23NCXJUA",
+      "KXLIGAMXTOTAL-26OCT23NCXJUA",
+      "KXLIGAMXBTTS-26OCT23NCXJUA"
+    ],
+    "source_ids": {
+      "source_2_id": "20261024BA4D507F"
+    },
+    "start_date": "2026-10-24T01:00:00Z",
+    "title": "Necaxa vs Juarez",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "d5b477fc-a61b-4633-bd61-ea6ed8fe5515",
+      "coverage": {},
+      "home_team_id": "bcd69de5-6d9d-494b-b85c-167286d4bc60",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT25ATLPUE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "9078b567-d604-58da-9b26-fca1e32bed86",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT25ATLPUE",
+      "KXLIGAMXSPREAD-26OCT25ATLPUE",
+      "KXLIGAMXTOTAL-26OCT25ATLPUE",
+      "KXLIGAMXBTTS-26OCT25ATLPUE"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT25ATLPUE",
+      "KXLIGAMXSPREAD-26OCT25ATLPUE",
+      "KXLIGAMXTOTAL-26OCT25ATLPUE",
+      "KXLIGAMXBTTS-26OCT25ATLPUE"
+    ],
+    "source_ids": {
+      "source_2_id": "20261025160729D2"
+    },
+    "start_date": "2026-10-25T23:00:00Z",
+    "title": "Atlas vs Puebla",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "bcd69de5-6d9d-494b-b85c-167286d4bc60",
+      "coverage": {},
+      "home_team_id": "c512a520-2cf9-4858-9a33-86aaed387807",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT30ASLATL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "7ad5c657-348c-5385-be65-430ea2ac47c0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT30ASLATL"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT30ASLATL"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T01:00:00Z",
+    "title": "San Luis vs Atlas",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -824,41 +799,68 @@
     "start_date": "2026-10-24T03:00:00Z",
     "title": "Atlante vs San Luis",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "2664b66b-b998-47d2-b1e6-d19295e11802",
+      "away_team_id": "e7f5c871-11c6-46cb-b7fa-1a1fbfd3bbf6",
       "coverage": {},
-      "home_team_id": "af0bb21e-4530-41a8-871b-484d5bb18a8e",
+      "home_team_id": "2a420c5b-2bf1-45c4-ae20-0178579e9884",
       "is_ko": false,
       "league": "Liga MX",
-      "main_game_event_ticker": "KXLIGAMXGAME-26OCT24MONCDG",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT24PUMTIG",
       "status": "not_started",
       "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
     },
-    "id": "f929d922-9af2-5e77-aad3-5253b926dd80",
+    "id": "9fabe58b-8f13-572c-be9a-6fb82e4346c4",
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXLIGAMXGAME-26OCT24MONCDG",
-      "KXLIGAMXSPREAD-26OCT24MONCDG",
-      "KXLIGAMXTOTAL-26OCT24MONCDG",
-      "KXLIGAMXBTTS-26OCT24MONCDG"
+      "KXLIGAMXGAME-26OCT24PUMTIG",
+      "KXLIGAMXSPREAD-26OCT24PUMTIG",
+      "KXLIGAMXTOTAL-26OCT24PUMTIG",
+      "KXLIGAMXBTTS-26OCT24PUMTIG"
     ],
     "related_event_tickers": [
-      "KXLIGAMXGAME-26OCT24MONCDG",
-      "KXLIGAMXSPREAD-26OCT24MONCDG",
-      "KXLIGAMXTOTAL-26OCT24MONCDG",
-      "KXLIGAMXBTTS-26OCT24MONCDG"
+      "KXLIGAMXGAME-26OCT24PUMTIG",
+      "KXLIGAMXSPREAD-26OCT24PUMTIG",
+      "KXLIGAMXTOTAL-26OCT24PUMTIG",
+      "KXLIGAMXBTTS-26OCT24PUMTIG"
     ],
     "source_ids": {
-      "source_2_id": "2026102538FE4A51"
+      "source_2_id": "2026102536753894"
     },
-    "start_date": "2026-10-25T00:00:00Z",
-    "title": "Monterrey vs Guadalajara",
+    "start_date": "2026-10-25T03:10:00Z",
+    "title": "Pumas UNAM vs Tigres",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "4170acf9-905f-48d3-8c0e-c3fd909f1216",
+      "coverage": {},
+      "home_team_id": "db036857-8a77-473f-83c8-7805cb772d57",
+      "is_ko": false,
+      "league": "Liga MX",
+      "main_game_event_ticker": "KXLIGAMXGAME-26OCT30JUAQUE",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "94f49175-9842-53ce-a682-c86b8b126ba0",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXLIGAMXGAME-26OCT30JUAQUE"
+    ],
+    "related_event_tickers": [
+      "KXLIGAMXGAME-26OCT30JUAQUE"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-31T01:00:00Z",
+    "title": "Juarez vs Queretaro",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   }
 ]

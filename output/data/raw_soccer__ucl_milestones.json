@@ -2,523 +2,6 @@
   {
     "category": "Sports",
     "details": {
-      "away_team_id": "2c635bbd-1117-4792-83d4-a94326296c22",
-      "coverage": {},
-      "home_team_id": "cc146246-6569-4093-89e7-205fd21d7d17",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26OCT21RBBFEY",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "3fefcca2-279f-5adf-85d2-00705f9dba88",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26OCT21RBBFEY",
-      "KXUCLSPREAD-26OCT21RBBFEY",
-      "KXUCLTOTAL-26OCT21RBBFEY",
-      "KXUCLBTTS-26OCT21RBBFEY",
-      "KXUCL1H-26OCT21RBBFEY",
-      "KXUCL1HSPREAD-26OCT21RBBFEY",
-      "KXUCL1HTOTAL-26OCT21RBBFEY",
-      "KXUCL1HBTTS-26OCT21RBBFEY",
-      "KXUCL2H-26OCT21RBBFEY",
-      "KXUCL2HSPREAD-26OCT21RBBFEY",
-      "KXUCL2HTOTAL-26OCT21RBBFEY",
-      "KXUCL2HBTTS-26OCT21RBBFEY",
-      "KXUCLTEAMTOTAL-26OCT21RBBFEY"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26OCT21RBBFEY",
-      "KXUCLSPREAD-26OCT21RBBFEY",
-      "KXUCLTOTAL-26OCT21RBBFEY",
-      "KXUCLBTTS-26OCT21RBBFEY",
-      "KXUCL1H-26OCT21RBBFEY",
-      "KXUCL1HSPREAD-26OCT21RBBFEY",
-      "KXUCL1HTOTAL-26OCT21RBBFEY",
-      "KXUCL1HBTTS-26OCT21RBBFEY",
-      "KXUCL2H-26OCT21RBBFEY",
-      "KXUCL2HSPREAD-26OCT21RBBFEY",
-      "KXUCL2HTOTAL-26OCT21RBBFEY",
-      "KXUCL2HBTTS-26OCT21RBBFEY",
-      "KXUCLTEAMTOTAL-26OCT21RBBFEY",
-      "KXUCLSCORE-26OCT21RBBFEY",
-      "KXUCL1HSCORE-26OCT21RBBFEY",
-      "KXUCLTCORNERS-26OCT21RBBFEY",
-      "KXUCLCORNERS-26OCT21RBBFEY"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021A6310CCE"
-    },
-    "start_date": "2026-10-21T19:00:00Z",
-    "title": "Real Betis vs Feyenoord",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "03436e41-a5d8-4f9b-8db1-570ca9df4bd2",
-      "coverage": {},
-      "home_team_id": "bbafe881-978e-4eaa-b6d3-21fb6537d0af",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26OCT21SPOASK",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "60831e0c-57f9-50bd-afe2-9caca2827d0e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26OCT21SPOASK",
-      "KXUCLSPREAD-26OCT21SPOASK",
-      "KXUCLTOTAL-26OCT21SPOASK",
-      "KXUCLBTTS-26OCT21SPOASK",
-      "KXUCL1H-26OCT21SPOASK",
-      "KXUCL1HSPREAD-26OCT21SPOASK",
-      "KXUCL1HTOTAL-26OCT21SPOASK",
-      "KXUCL1HBTTS-26OCT21SPOASK",
-      "KXUCL2H-26OCT21SPOASK",
-      "KXUCL2HSPREAD-26OCT21SPOASK",
-      "KXUCL2HTOTAL-26OCT21SPOASK",
-      "KXUCL2HBTTS-26OCT21SPOASK",
-      "KXUCLTEAMTOTAL-26OCT21SPOASK"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26OCT21SPOASK",
-      "KXUCLSPREAD-26OCT21SPOASK",
-      "KXUCLTOTAL-26OCT21SPOASK",
-      "KXUCLBTTS-26OCT21SPOASK",
-      "KXUCL1H-26OCT21SPOASK",
-      "KXUCL1HSPREAD-26OCT21SPOASK",
-      "KXUCL1HTOTAL-26OCT21SPOASK",
-      "KXUCL1HBTTS-26OCT21SPOASK",
-      "KXUCL2H-26OCT21SPOASK",
-      "KXUCL2HSPREAD-26OCT21SPOASK",
-      "KXUCL2HTOTAL-26OCT21SPOASK",
-      "KXUCL2HBTTS-26OCT21SPOASK",
-      "KXUCLTEAMTOTAL-26OCT21SPOASK",
-      "KXUCLSCORE-26OCT21SPOASK",
-      "KXUCL1HSCORE-26OCT21SPOASK",
-      "KXUCLTCORNERS-26OCT21SPOASK",
-      "KXUCLCORNERS-26OCT21SPOASK"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021BF01AD61"
-    },
-    "start_date": "2026-10-21T19:00:00Z",
-    "title": "Sporting CP vs LASK",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "d443a482-af73-41ca-8d4b-f49502861dc4",
-      "coverage": {},
-      "home_team_id": "2f51845c-cdac-431c-9f0f-1ee7c8878331",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV03ATMBMU",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "ddc93c2f-2bab-5c3c-bfff-0b8b12241594",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV03ATMBMU"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV03ATMBMU"
-    ],
-    "source_ids": {
-      "source_2_id": "202611034DE259CC"
-    },
-    "start_date": "2026-11-03T20:00:00Z",
-    "title": "Atletico vs Bayern Munich",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a572e730-a7c1-40c3-b036-ad065635a8d0",
-      "coverage": {},
-      "home_team_id": "f70ffb24-7bb8-4111-8ba6-2c222fafc3c3",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV03BOGLIL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "15f5fd67-1f76-5d55-866e-6ab7f67dd873",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV03BOGLIL"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV03BOGLIL"
-    ],
-    "source_ids": {
-      "source_2_id": "20261103F1DC6FE3"
-    },
-    "start_date": "2026-11-03T20:00:00Z",
-    "title": "Bodoe/Glimt vs Lille",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "ccdc8659-ec81-4278-bc14-a0d10d78d6d1",
-      "coverage": {},
-      "home_team_id": "e16880b0-2ac2-476a-8b82-6ef29655175c",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV03VILPSG",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "83f0c714-f242-555e-87f1-ec1195e6bb78",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV03VILPSG"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV03VILPSG"
-    ],
-    "source_ids": {
-      "source_2_id": "20261103817674B6"
-    },
-    "start_date": "2026-11-03T20:00:00Z",
-    "title": "Villarreal vs PSG",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "cfd4b999-b080-4c2b-8a5b-640c992aff6e",
-      "coverage": {},
-      "home_team_id": "db571ce3-c7d5-4c92-8b30-45557ba8efb5",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV04FENLFC",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "692ef248-9dfa-5106-aaf2-3c025c1d638c",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV04FENLFC"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV04FENLFC"
-    ],
-    "source_ids": {
-      "source_2_id": "2026110484A27C6E"
-    },
-    "start_date": "2026-11-04T17:45:00Z",
-    "title": "Fenerbahce vs Liverpool",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "000d32b0-159a-4977-8505-80dcd3d7898b",
-      "coverage": {},
-      "home_team_id": "08a3b906-dcd8-451b-8f6d-dacfd3a967db",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV04PSVBRU",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "45f548b5-275a-50f4-9f99-99d2e21cb71b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV04PSVBRU"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV04PSVBRU"
-    ],
-    "source_ids": {
-      "source_2_id": "20261104C40B646F"
-    },
-    "start_date": "2026-11-04T20:00:00Z",
-    "title": "Eindhoven vs Club Brugge",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "7e273345-6669-4db7-8a38-7f3ccb608937",
-      "coverage": {},
-      "home_team_id": "5cdc7d5f-0a5e-4579-9488-f95b23250c46",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26OCT21COMMUN",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "5cd3b8ee-23a5-5e50-aaa2-f23e48fbb4c1",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26OCT21COMMUN",
-      "KXUCLSPREAD-26OCT21COMMUN",
-      "KXUCLTOTAL-26OCT21COMMUN",
-      "KXUCLBTTS-26OCT21COMMUN",
-      "KXUCL1H-26OCT21COMMUN",
-      "KXUCL1HSPREAD-26OCT21COMMUN",
-      "KXUCL1HTOTAL-26OCT21COMMUN",
-      "KXUCL1HBTTS-26OCT21COMMUN",
-      "KXUCL2H-26OCT21COMMUN",
-      "KXUCL2HSPREAD-26OCT21COMMUN",
-      "KXUCL2HTOTAL-26OCT21COMMUN",
-      "KXUCL2HBTTS-26OCT21COMMUN",
-      "KXUCLTEAMTOTAL-26OCT21COMMUN"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26OCT21COMMUN",
-      "KXUCLSPREAD-26OCT21COMMUN",
-      "KXUCLTOTAL-26OCT21COMMUN",
-      "KXUCLBTTS-26OCT21COMMUN",
-      "KXUCLSCORE-26OCT21COMMUN",
-      "KXUCL1HSCORE-26OCT21COMMUN",
-      "KXUCL1H-26OCT21COMMUN",
-      "KXUCL1HSPREAD-26OCT21COMMUN",
-      "KXUCL1HTOTAL-26OCT21COMMUN",
-      "KXUCL1HBTTS-26OCT21COMMUN",
-      "KXUCL2H-26OCT21COMMUN",
-      "KXUCL2HSPREAD-26OCT21COMMUN",
-      "KXUCL2HTOTAL-26OCT21COMMUN",
-      "KXUCL2HBTTS-26OCT21COMMUN",
-      "KXUCLTEAMTOTAL-26OCT21COMMUN",
-      "KXUCLTCORNERS-26OCT21COMMUN",
-      "KXUCLCORNERS-26OCT21COMMUN"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021971C4815"
-    },
-    "start_date": "2026-10-21T16:45:00Z",
-    "title": "Como vs Manchester United",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "037e6593-99d0-464b-a28c-ac1211d6a6f3",
-      "coverage": {},
-      "home_team_id": "000d32b0-159a-4977-8505-80dcd3d7898b",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26OCT21BRURCL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "3a2da4ed-7959-5c5f-86ab-2113932e59d5",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26OCT21BRURCL",
-      "KXUCLSPREAD-26OCT21BRURCL",
-      "KXUCLTOTAL-26OCT21BRURCL",
-      "KXUCLBTTS-26OCT21BRURCL",
-      "KXUCL1H-26OCT21BRURCL",
-      "KXUCL1HSPREAD-26OCT21BRURCL",
-      "KXUCL1HTOTAL-26OCT21BRURCL",
-      "KXUCL1HBTTS-26OCT21BRURCL",
-      "KXUCL2H-26OCT21BRURCL",
-      "KXUCL2HSPREAD-26OCT21BRURCL",
-      "KXUCL2HTOTAL-26OCT21BRURCL",
-      "KXUCL2HBTTS-26OCT21BRURCL",
-      "KXUCLTEAMTOTAL-26OCT21BRURCL"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26OCT21BRURCL",
-      "KXUCLSPREAD-26OCT21BRURCL",
-      "KXUCLTOTAL-26OCT21BRURCL",
-      "KXUCLBTTS-26OCT21BRURCL",
-      "KXUCL1HSCORE-26OCT21BRURCL",
-      "KXUCL1H-26OCT21BRURCL",
-      "KXUCL1HSPREAD-26OCT21BRURCL",
-      "KXUCL1HTOTAL-26OCT21BRURCL",
-      "KXUCL1HBTTS-26OCT21BRURCL",
-      "KXUCL2H-26OCT21BRURCL",
-      "KXUCL2HSPREAD-26OCT21BRURCL",
-      "KXUCL2HTOTAL-26OCT21BRURCL",
-      "KXUCL2HBTTS-26OCT21BRURCL",
-      "KXUCLTEAMTOTAL-26OCT21BRURCL",
-      "KXUCLSCORE-26OCT21BRURCL",
-      "KXUCLTCORNERS-26OCT21BRURCL",
-      "KXUCLCORNERS-26OCT21BRURCL"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021D7A5348E"
-    },
-    "start_date": "2026-10-21T19:00:00Z",
-    "title": "Club Brugge vs Lens",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "1aae6370-de06-45aa-990d-db2d1fee568c",
-      "coverage": {},
-      "home_team_id": "8c7d0d19-56bc-4fd2-86ac-df5eaca951b2",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26OCT21INTSHA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "84ee565e-e581-5838-a102-9ce10c14b776",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26OCT21INTSHA",
-      "KXUCLSPREAD-26OCT21INTSHA",
-      "KXUCLTOTAL-26OCT21INTSHA",
-      "KXUCLBTTS-26OCT21INTSHA",
-      "KXUCL1H-26OCT21INTSHA",
-      "KXUCL1HSPREAD-26OCT21INTSHA",
-      "KXUCL1HTOTAL-26OCT21INTSHA",
-      "KXUCL1HBTTS-26OCT21INTSHA",
-      "KXUCL2H-26OCT21INTSHA",
-      "KXUCL2HSPREAD-26OCT21INTSHA",
-      "KXUCL2HTOTAL-26OCT21INTSHA",
-      "KXUCL2HBTTS-26OCT21INTSHA",
-      "KXUCLTEAMTOTAL-26OCT21INTSHA"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26OCT21INTSHA",
-      "KXUCLSPREAD-26OCT21INTSHA",
-      "KXUCLTOTAL-26OCT21INTSHA",
-      "KXUCLBTTS-26OCT21INTSHA",
-      "KXUCL1H-26OCT21INTSHA",
-      "KXUCL1HSPREAD-26OCT21INTSHA",
-      "KXUCL1HTOTAL-26OCT21INTSHA",
-      "KXUCL1HBTTS-26OCT21INTSHA",
-      "KXUCL2H-26OCT21INTSHA",
-      "KXUCL2HSPREAD-26OCT21INTSHA",
-      "KXUCL2HTOTAL-26OCT21INTSHA",
-      "KXUCL2HBTTS-26OCT21INTSHA",
-      "KXUCLTEAMTOTAL-26OCT21INTSHA",
-      "KXUCLSCORE-26OCT21INTSHA",
-      "KXUCL1HSCORE-26OCT21INTSHA",
-      "KXUCLTCORNERS-26OCT21INTSHA",
-      "KXUCLCORNERS-26OCT21INTSHA"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021D9F279ED"
-    },
-    "start_date": "2026-10-21T19:00:00Z",
-    "title": "Inter vs Shakhtar",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "fa1055e7-cad7-4b85-81f0-a1285af3b387",
-      "coverage": {},
-      "home_team_id": "134cbd1a-3ac9-4887-b657-4059302fc47b",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV03GALVFB",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c5d169b6-8d2f-5c7a-870e-3985f8a976a2",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV03GALVFB"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV03GALVFB"
-    ],
-    "source_ids": {
-      "source_2_id": "20261103D004728D"
-    },
-    "start_date": "2026-11-03T17:45:00Z",
-    "title": "Galatasaray vs Stuttgart",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "bbafe881-978e-4eaa-b6d3-21fb6537d0af",
-      "coverage": {},
-      "home_team_id": "1aae6370-de06-45aa-990d-db2d1fee568c",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV03SHASPO",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "af224255-c8af-556e-83d1-c3e26ae67a6e",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV03SHASPO"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV03SHASPO"
-    ],
-    "source_ids": {
-      "source_2_id": "20261103C517F80F"
-    },
-    "start_date": "2026-11-03T17:45:00Z",
-    "title": "Shakhtar vs Sporting CP",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "cc146246-6569-4093-89e7-205fd21d7d17",
-      "coverage": {},
-      "home_team_id": "d08e9809-a307-4a53-921c-a29a78486f7c",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV04BVBRBB",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "b494ef44-55cc-524c-893c-14442805d5f3",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV04BVBRBB"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV04BVBRBB"
-    ],
-    "source_ids": {
-      "source_2_id": "20261104B500AD12"
-    },
-    "start_date": "2026-11-04T20:00:00Z",
-    "title": "Dortmund vs Real Betis",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
       "away_team_id": "721bf91f-9827-4be2-8429-86360529a258",
       "coverage": {},
       "home_team_id": "aae4ed5f-78d2-4205-a12a-408a8d368782",
@@ -543,437 +26,7 @@
     "start_date": "2026-11-04T20:00:00Z",
     "title": "Porto vs Napoli",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "246a91c5-f145-401f-bf0d-2a436e25a5f6",
-      "coverage": {},
-      "home_team_id": "4f1baa02-f097-401c-b45b-c819adba7b93",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV04SLAARS",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "4401bbc2-16cd-5021-9b54-2eb9cf942656",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV04SLAARS"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV04SLAARS"
-    ],
-    "source_ids": {
-      "source_2_id": "20261104A90308D5"
-    },
-    "start_date": "2026-11-04T20:00:00Z",
-    "title": "Slavia Prague vs Arsenal",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "bc9180c6-9094-4ad9-a4c9-d37ea2eb51ca",
-      "coverage": {},
-      "home_team_id": "1858f693-87a8-4102-86c0-aa65c04f56ad",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26OCT21RMARBL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "2d8b5b9c-01a7-5899-a900-5e082680f31b",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26OCT21RMARBL",
-      "KXUCLSPREAD-26OCT21RMARBL",
-      "KXUCLTOTAL-26OCT21RMARBL",
-      "KXUCLBTTS-26OCT21RMARBL",
-      "KXUCL1H-26OCT21RMARBL",
-      "KXUCL1HSPREAD-26OCT21RMARBL",
-      "KXUCL1HTOTAL-26OCT21RMARBL",
-      "KXUCL1HBTTS-26OCT21RMARBL",
-      "KXUCL2H-26OCT21RMARBL",
-      "KXUCL2HSPREAD-26OCT21RMARBL",
-      "KXUCL2HTOTAL-26OCT21RMARBL",
-      "KXUCL2HBTTS-26OCT21RMARBL",
-      "KXUCLTEAMTOTAL-26OCT21RMARBL"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26OCT21RMARBL",
-      "KXUCLSPREAD-26OCT21RMARBL",
-      "KXUCLTOTAL-26OCT21RMARBL",
-      "KXUCLBTTS-26OCT21RMARBL",
-      "KXUCL1H-26OCT21RMARBL",
-      "KXUCL1HSPREAD-26OCT21RMARBL",
-      "KXUCL1HTOTAL-26OCT21RMARBL",
-      "KXUCL1HBTTS-26OCT21RMARBL",
-      "KXUCL2H-26OCT21RMARBL",
-      "KXUCL2HSPREAD-26OCT21RMARBL",
-      "KXUCL2HTOTAL-26OCT21RMARBL",
-      "KXUCL2HBTTS-26OCT21RMARBL",
-      "KXUCLTEAMTOTAL-26OCT21RMARBL",
-      "KXUCLSCORE-26OCT21RMARBL",
-      "KXUCL1HSCORE-26OCT21RMARBL",
-      "KXUCLTCORNERS-26OCT21RMARBL",
-      "KXUCLCORNERS-26OCT21RMARBL"
-    ],
-    "source_ids": {
-      "source_2_id": "2026102118465FC0"
-    },
-    "start_date": "2026-10-21T19:00:00Z",
-    "title": "Real Madrid vs Leipzig",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "bfb98900-9759-436c-bc1f-8bf8c5ae249f",
-      "coverage": {},
-      "home_team_id": "b8ae51bb-71ca-4ed3-9e9f-8904ee444d17",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV03BARAVL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f703667e-3a56-5666-bb4d-dadaf6c67717",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV03BARAVL"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV03BARAVL"
-    ],
-    "source_ids": {
-      "source_2_id": "20261103F772C2CB"
-    },
-    "start_date": "2026-11-03T20:00:00Z",
-    "title": "Barcelona vs Aston Villa",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "8c7d0d19-56bc-4fd2-86ac-df5eaca951b2",
-      "coverage": {},
-      "home_team_id": "2c635bbd-1117-4792-83d4-a94326296c22",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV03FEYINT",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "5c107b82-9be9-5282-8c4c-842416de9580",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV03FEYINT"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV03FEYINT"
-    ],
-    "source_ids": {
-      "source_2_id": "2026110386C81503"
-    },
-    "start_date": "2026-11-03T20:00:00Z",
-    "title": "Feyenoord vs Inter",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "c9b2a47f-17a6-4db9-83a6-3c65b5d8cbb1",
-      "coverage": {},
-      "home_team_id": "7e273345-6669-4db7-8a38-7f3ccb608937",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV03MUNROM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "5f97d17d-a2d3-59da-b2a1-680bd27d9432",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV03MUNROM"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV03MUNROM"
-    ],
-    "source_ids": {
-      "source_2_id": "202611031FA5F6CC"
-    },
-    "start_date": "2026-11-03T20:00:00Z",
-    "title": "Manchester United vs Roma",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "1858f693-87a8-4102-86c0-aa65c04f56ad",
-      "coverage": {},
-      "home_team_id": "ca1d88c4-f201-4678-8542-5125e82fdfba",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV04AEKRMA",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "44a52be0-f252-59b4-85dd-da91c65274f2",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV04AEKRMA"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV04AEKRMA"
-    ],
-    "source_ids": {
-      "source_2_id": "2026110464A808CA"
-    },
-    "start_date": "2026-11-04T17:45:00Z",
-    "title": "AEK Athens vs Real Madrid",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "5cdc7d5f-0a5e-4579-9488-f95b23250c46",
-      "coverage": {},
-      "home_team_id": "037e6593-99d0-464b-a28c-ac1211d6a6f3",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV04RCLCOM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "8219fcd1-8fbf-5653-980d-1203a5829a38",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV04RCLCOM"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV04RCLCOM"
-    ],
-    "source_ids": {
-      "source_2_id": "20261104C976773E"
-    },
-    "start_date": "2026-11-04T20:00:00Z",
-    "title": "Lens vs Como",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "aca54061-2bd9-4ce1-88e5-6b58303bd061",
-      "coverage": {},
-      "home_team_id": "03436e41-a5d8-4f9b-8db1-570ca9df4bd2",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26NOV03ASKSLO",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "20f474b1-b0c6-5450-8009-8128c37116b2",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26NOV03ASKSLO"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26NOV03ASKSLO"
-    ],
-    "source_ids": {
-      "source_2_id": "20261103AD87CF66"
-    },
-    "start_date": "2026-11-03T20:00:00Z",
-    "title": "LASK vs Slovan Bratislava",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "134cbd1a-3ac9-4887-b657-4059302fc47b",
-      "coverage": {},
-      "home_team_id": "a572e730-a7c1-40c3-b036-ad065635a8d0",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26OCT21LILGAL",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "c205acb1-97b1-5d68-9292-8c964ea98726",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26OCT21LILGAL",
-      "KXUCLSPREAD-26OCT21LILGAL",
-      "KXUCLTOTAL-26OCT21LILGAL",
-      "KXUCLBTTS-26OCT21LILGAL",
-      "KXUCL1H-26OCT21LILGAL",
-      "KXUCL1HSPREAD-26OCT21LILGAL",
-      "KXUCL1HTOTAL-26OCT21LILGAL",
-      "KXUCL1HBTTS-26OCT21LILGAL",
-      "KXUCL2H-26OCT21LILGAL",
-      "KXUCL2HSPREAD-26OCT21LILGAL",
-      "KXUCL2HTOTAL-26OCT21LILGAL",
-      "KXUCL2HBTTS-26OCT21LILGAL",
-      "KXUCLTEAMTOTAL-26OCT21LILGAL"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26OCT21LILGAL",
-      "KXUCLSPREAD-26OCT21LILGAL",
-      "KXUCLTOTAL-26OCT21LILGAL",
-      "KXUCLBTTS-26OCT21LILGAL",
-      "KXUCLSCORE-26OCT21LILGAL",
-      "KXUCL1HSCORE-26OCT21LILGAL",
-      "KXUCL1H-26OCT21LILGAL",
-      "KXUCL1HSPREAD-26OCT21LILGAL",
-      "KXUCL1HTOTAL-26OCT21LILGAL",
-      "KXUCL1HBTTS-26OCT21LILGAL",
-      "KXUCL2H-26OCT21LILGAL",
-      "KXUCL2HSPREAD-26OCT21LILGAL",
-      "KXUCL2HTOTAL-26OCT21LILGAL",
-      "KXUCL2HBTTS-26OCT21LILGAL",
-      "KXUCLTEAMTOTAL-26OCT21LILGAL",
-      "KXUCLTCORNERS-26OCT21LILGAL",
-      "KXUCLCORNERS-26OCT21LILGAL"
-    ],
-    "source_ids": {
-      "source_2_id": "202610219CFDB494"
-    },
-    "start_date": "2026-10-21T16:45:00Z",
-    "title": "Lille vs Galatasaray",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "2187eb62-b5e7-47ab-a327-6f1c32080884",
-      "coverage": {},
-      "home_team_id": "bfb98900-9759-436c-bc1f-8bf8c5ae249f",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26OCT21AVLVIK",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "f90bf0a2-d565-59f5-a07e-c3fdb6c57927",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26OCT21AVLVIK",
-      "KXUCLSPREAD-26OCT21AVLVIK",
-      "KXUCLTOTAL-26OCT21AVLVIK",
-      "KXUCLBTTS-26OCT21AVLVIK",
-      "KXUCL1H-26OCT21AVLVIK",
-      "KXUCL1HSPREAD-26OCT21AVLVIK",
-      "KXUCL1HTOTAL-26OCT21AVLVIK",
-      "KXUCL1HBTTS-26OCT21AVLVIK",
-      "KXUCL2H-26OCT21AVLVIK",
-      "KXUCL2HSPREAD-26OCT21AVLVIK",
-      "KXUCL2HTOTAL-26OCT21AVLVIK",
-      "KXUCL2HBTTS-26OCT21AVLVIK",
-      "KXUCLTEAMTOTAL-26OCT21AVLVIK"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26OCT21AVLVIK",
-      "KXUCLSPREAD-26OCT21AVLVIK",
-      "KXUCLTOTAL-26OCT21AVLVIK",
-      "KXUCLBTTS-26OCT21AVLVIK",
-      "KXUCL1H-26OCT21AVLVIK",
-      "KXUCL1HSPREAD-26OCT21AVLVIK",
-      "KXUCL1HTOTAL-26OCT21AVLVIK",
-      "KXUCL1HBTTS-26OCT21AVLVIK",
-      "KXUCL2H-26OCT21AVLVIK",
-      "KXUCL2HSPREAD-26OCT21AVLVIK",
-      "KXUCL2HTOTAL-26OCT21AVLVIK",
-      "KXUCL2HBTTS-26OCT21AVLVIK",
-      "KXUCLTEAMTOTAL-26OCT21AVLVIK",
-      "KXUCLSCORE-26OCT21AVLVIK",
-      "KXUCLTCORNERS-26OCT21AVLVIK",
-      "KXUCLCORNERS-26OCT21AVLVIK"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021F6251AAA"
-    },
-    "start_date": "2026-10-21T19:00:00Z",
-    "title": "Aston Villa vs Viking",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "246a91c5-f145-401f-bf0d-2a436e25a5f6",
-      "coverage": {},
-      "home_team_id": "d443a482-af73-41ca-8d4b-f49502861dc4",
-      "is_ko": false,
-      "league": "Champions League",
-      "main_game_event_ticker": "KXUCLGAME-26OCT21BMUARS",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "a9c02172-2b90-5462-807a-0b8031b54884",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXUCLGAME-26OCT21BMUARS",
-      "KXUCLSPREAD-26OCT21BMUARS",
-      "KXUCLTOTAL-26OCT21BMUARS",
-      "KXUCLBTTS-26OCT21BMUARS",
-      "KXUCL1H-26OCT21BMUARS",
-      "KXUCL1HSPREAD-26OCT21BMUARS",
-      "KXUCL1HTOTAL-26OCT21BMUARS",
-      "KXUCL1HBTTS-26OCT21BMUARS",
-      "KXUCL2H-26OCT21BMUARS",
-      "KXUCL2HSPREAD-26OCT21BMUARS",
-      "KXUCL2HTOTAL-26OCT21BMUARS",
-      "KXUCL2HBTTS-26OCT21BMUARS",
-      "KXUCLTEAMTOTAL-26OCT21BMUARS"
-    ],
-    "related_event_tickers": [
-      "KXUCLGAME-26OCT21BMUARS",
-      "KXUCLSPREAD-26OCT21BMUARS",
-      "KXUCLTOTAL-26OCT21BMUARS",
-      "KXUCLBTTS-26OCT21BMUARS",
-      "KXUCL1HSCORE-26OCT21BMUARS",
-      "KXUCL1H-26OCT21BMUARS",
-      "KXUCL1HSPREAD-26OCT21BMUARS",
-      "KXUCL1HTOTAL-26OCT21BMUARS",
-      "KXUCL1HBTTS-26OCT21BMUARS",
-      "KXUCL2H-26OCT21BMUARS",
-      "KXUCL2HSPREAD-26OCT21BMUARS",
-      "KXUCL2HTOTAL-26OCT21BMUARS",
-      "KXUCL2HBTTS-26OCT21BMUARS",
-      "KXUCLTEAMTOTAL-26OCT21BMUARS",
-      "KXUCLSCORE-26OCT21BMUARS",
-      "KXUCLTCORNERS-26OCT21BMUARS",
-      "KXUCLCORNERS-26OCT21BMUARS"
-    ],
-    "source_ids": {
-      "source_2_id": "20261021124E241F"
-    },
-    "start_date": "2026-10-21T19:00:00Z",
-    "title": "Bayern Munich vs Arsenal",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -1002,7 +55,384 @@
     "start_date": "2026-11-04T20:00:00Z",
     "title": "Leipzig vs Manchester City",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "aca54061-2bd9-4ce1-88e5-6b58303bd061",
+      "coverage": {},
+      "home_team_id": "03436e41-a5d8-4f9b-8db1-570ca9df4bd2",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV03ASKSLO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "20f474b1-b0c6-5450-8009-8128c37116b2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV03ASKSLO"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV03ASKSLO"
+    ],
+    "source_ids": {
+      "source_2_id": "20261103AD87CF66"
+    },
+    "start_date": "2026-11-03T20:00:00Z",
+    "title": "LASK vs Slovan Bratislava",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a572e730-a7c1-40c3-b036-ad065635a8d0",
+      "coverage": {},
+      "home_team_id": "f70ffb24-7bb8-4111-8ba6-2c222fafc3c3",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV03BOGLIL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "15f5fd67-1f76-5d55-866e-6ab7f67dd873",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV03BOGLIL"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV03BOGLIL"
+    ],
+    "source_ids": {
+      "source_2_id": "20261103F1DC6FE3"
+    },
+    "start_date": "2026-11-03T20:00:00Z",
+    "title": "Bodoe/Glimt vs Lille",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "c9b2a47f-17a6-4db9-83a6-3c65b5d8cbb1",
+      "coverage": {},
+      "home_team_id": "7e273345-6669-4db7-8a38-7f3ccb608937",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV03MUNROM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "5f97d17d-a2d3-59da-b2a1-680bd27d9432",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV03MUNROM"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV03MUNROM"
+    ],
+    "source_ids": {
+      "source_2_id": "202611031FA5F6CC"
+    },
+    "start_date": "2026-11-03T20:00:00Z",
+    "title": "Manchester United vs Roma",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "cfd4b999-b080-4c2b-8a5b-640c992aff6e",
+      "coverage": {},
+      "home_team_id": "db571ce3-c7d5-4c92-8b30-45557ba8efb5",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV04FENLFC",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "692ef248-9dfa-5106-aaf2-3c025c1d638c",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV04FENLFC"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV04FENLFC"
+    ],
+    "source_ids": {
+      "source_2_id": "2026110484A27C6E"
+    },
+    "start_date": "2026-11-04T17:45:00Z",
+    "title": "Fenerbahce vs Liverpool",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "5cdc7d5f-0a5e-4579-9488-f95b23250c46",
+      "coverage": {},
+      "home_team_id": "037e6593-99d0-464b-a28c-ac1211d6a6f3",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV04RCLCOM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "8219fcd1-8fbf-5653-980d-1203a5829a38",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV04RCLCOM"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV04RCLCOM"
+    ],
+    "source_ids": {
+      "source_2_id": "20261104C976773E"
+    },
+    "start_date": "2026-11-04T20:00:00Z",
+    "title": "Lens vs Como",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "d443a482-af73-41ca-8d4b-f49502861dc4",
+      "coverage": {},
+      "home_team_id": "2f51845c-cdac-431c-9f0f-1ee7c8878331",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV03ATMBMU",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "ddc93c2f-2bab-5c3c-bfff-0b8b12241594",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV03ATMBMU"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV03ATMBMU"
+    ],
+    "source_ids": {
+      "source_2_id": "202611034DE259CC"
+    },
+    "start_date": "2026-11-03T20:00:00Z",
+    "title": "Atletico vs Bayern Munich",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "bfb98900-9759-436c-bc1f-8bf8c5ae249f",
+      "coverage": {},
+      "home_team_id": "b8ae51bb-71ca-4ed3-9e9f-8904ee444d17",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV03BARAVL",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "f703667e-3a56-5666-bb4d-dadaf6c67717",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV03BARAVL"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV03BARAVL"
+    ],
+    "source_ids": {
+      "source_2_id": "20261103F772C2CB"
+    },
+    "start_date": "2026-11-03T20:00:00Z",
+    "title": "Barcelona vs Aston Villa",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "1858f693-87a8-4102-86c0-aa65c04f56ad",
+      "coverage": {},
+      "home_team_id": "ca1d88c4-f201-4678-8542-5125e82fdfba",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV04AEKRMA",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "44a52be0-f252-59b4-85dd-da91c65274f2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV04AEKRMA"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV04AEKRMA"
+    ],
+    "source_ids": {
+      "source_2_id": "2026110464A808CA"
+    },
+    "start_date": "2026-11-04T17:45:00Z",
+    "title": "AEK Athens vs Real Madrid",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "cc146246-6569-4093-89e7-205fd21d7d17",
+      "coverage": {},
+      "home_team_id": "d08e9809-a307-4a53-921c-a29a78486f7c",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV04BVBRBB",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "b494ef44-55cc-524c-893c-14442805d5f3",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV04BVBRBB"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV04BVBRBB"
+    ],
+    "source_ids": {
+      "source_2_id": "20261104B500AD12"
+    },
+    "start_date": "2026-11-04T20:00:00Z",
+    "title": "Dortmund vs Real Betis",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "000d32b0-159a-4977-8505-80dcd3d7898b",
+      "coverage": {},
+      "home_team_id": "08a3b906-dcd8-451b-8f6d-dacfd3a967db",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV04PSVBRU",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "45f548b5-275a-50f4-9f99-99d2e21cb71b",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV04PSVBRU"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV04PSVBRU"
+    ],
+    "source_ids": {
+      "source_2_id": "20261104C40B646F"
+    },
+    "start_date": "2026-11-04T20:00:00Z",
+    "title": "Eindhoven vs Club Brugge",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "246a91c5-f145-401f-bf0d-2a436e25a5f6",
+      "coverage": {},
+      "home_team_id": "4f1baa02-f097-401c-b45b-c819adba7b93",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV04SLAARS",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "4401bbc2-16cd-5021-9b54-2eb9cf942656",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV04SLAARS"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV04SLAARS"
+    ],
+    "source_ids": {
+      "source_2_id": "20261104A90308D5"
+    },
+    "start_date": "2026-11-04T20:00:00Z",
+    "title": "Slavia Prague vs Arsenal",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "fa1055e7-cad7-4b85-81f0-a1285af3b387",
+      "coverage": {},
+      "home_team_id": "134cbd1a-3ac9-4887-b657-4059302fc47b",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV03GALVFB",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "c5d169b6-8d2f-5c7a-870e-3985f8a976a2",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV03GALVFB"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV03GALVFB"
+    ],
+    "source_ids": {
+      "source_2_id": "20261103D004728D"
+    },
+    "start_date": "2026-11-03T17:45:00Z",
+    "title": "Galatasaray vs Stuttgart",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "ccdc8659-ec81-4278-bc14-a0d10d78d6d1",
+      "coverage": {},
+      "home_team_id": "e16880b0-2ac2-476a-8b82-6ef29655175c",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV03VILPSG",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "83f0c714-f242-555e-87f1-ec1195e6bb78",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV03VILPSG"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV03VILPSG"
+    ],
+    "source_ids": {
+      "source_2_id": "20261103817674B6"
+    },
+    "start_date": "2026-11-03T20:00:00Z",
+    "title": "Villarreal vs PSG",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -1031,6 +461,64 @@
     "start_date": "2026-11-04T20:00:00Z",
     "title": "Viking vs Sabah Masazir",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "bbafe881-978e-4eaa-b6d3-21fb6537d0af",
+      "coverage": {},
+      "home_team_id": "1aae6370-de06-45aa-990d-db2d1fee568c",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV03SHASPO",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "af224255-c8af-556e-83d1-c3e26ae67a6e",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV03SHASPO"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV03SHASPO"
+    ],
+    "source_ids": {
+      "source_2_id": "20261103C517F80F"
+    },
+    "start_date": "2026-11-03T17:45:00Z",
+    "title": "Shakhtar vs Sporting CP",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "8c7d0d19-56bc-4fd2-86ac-df5eaca951b2",
+      "coverage": {},
+      "home_team_id": "2c635bbd-1117-4792-83d4-a94326296c22",
+      "is_ko": false,
+      "league": "Champions League",
+      "main_game_event_ticker": "KXUCLGAME-26NOV03FEYINT",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "5c107b82-9be9-5282-8c4c-842416de9580",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXUCLGAME-26NOV03FEYINT"
+    ],
+    "related_event_tickers": [
+      "KXUCLGAME-26NOV03FEYINT"
+    ],
+    "source_ids": {
+      "source_2_id": "2026110386C81503"
+    },
+    "start_date": "2026-11-03T20:00:00Z",
+    "title": "Feyenoord vs Inter",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   }
 ]

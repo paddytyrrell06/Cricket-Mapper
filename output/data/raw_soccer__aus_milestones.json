@@ -2,6 +2,60 @@
   {
     "category": "Sports",
     "details": {
+      "away_team_id": "4c0dafe1-db27-4342-bb0f-2f55e19fd456",
+      "coverage": {},
+      "home_team_id": "f6c6eadf-c30a-4af5-8a7a-1e033c867464",
+      "is_ko": false,
+      "league": "Australia A League",
+      "main_game_event_ticker": "KXALEAGUEGAME-26OCT24WPHCCM",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "82eede02-4a62-5b3c-951f-efe4cf6aecc9",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXALEAGUEGAME-26OCT24WPHCCM"
+    ],
+    "related_event_tickers": [
+      "KXALEAGUEGAME-26OCT24WPHCCM"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T02:00:00Z",
+    "title": "Wellington vs Central Coast",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
+      "away_team_id": "a47f4920-d1a3-47eb-ac13-6864bfbc5aef",
+      "coverage": {},
+      "home_team_id": "c9801203-6c47-4a78-b225-cd3526222b94",
+      "is_ko": false,
+      "league": "Australia A League",
+      "main_game_event_ticker": "KXALEAGUEGAME-26OCT25SYDADU",
+      "status": "not_started",
+      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
+    },
+    "id": "3871770d-7e2a-5cd1-8897-18bffdaebe45",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin.",
+    "primary_event_tickers": [
+      "KXALEAGUEGAME-26OCT25SYDADU"
+    ],
+    "related_event_tickers": [
+      "KXALEAGUEGAME-26OCT25SYDADU"
+    ],
+    "source_ids": {},
+    "start_date": "2026-10-25T04:00:00Z",
+    "title": "Sydney FC vs Adelaide",
+    "type": "soccer_tournament_multi_leg",
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
       "away_team_id": "2ebe7a38-1fff-41fa-be3b-ca2dc344cb42",
       "coverage": {},
       "home_team_id": "e35600ad-8efb-4f93-8928-7d2fefb4d268",
@@ -30,7 +84,7 @@
     "start_date": "2026-10-23T09:00:00Z",
     "title": "Brisbane vs Perth",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -63,7 +117,7 @@
     "start_date": "2026-10-24T04:00:00Z",
     "title": "Newcastle vs Macarthur",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -96,7 +150,7 @@
     "start_date": "2026-10-24T06:00:00Z",
     "title": "Western Sydney Wanderers vs Auckland",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   },
   {
     "category": "Sports",
@@ -114,69 +168,21 @@
     "last_updated_ts": "0001-01-01T00:00:00Z",
     "notification_message": "The game is about to begin.",
     "primary_event_tickers": [
-      "KXALEAGUEGAME-26OCT24VICMEL"
+      "KXALEAGUEGAME-26OCT24VICMEL",
+      "KXALEAGUESPREAD-26OCT24VICMEL",
+      "KXALEAGUETOTAL-26OCT24VICMEL",
+      "KXALEAGUEBTTS-26OCT24VICMEL"
     ],
     "related_event_tickers": [
-      "KXALEAGUEGAME-26OCT24VICMEL"
+      "KXALEAGUEGAME-26OCT24VICMEL",
+      "KXALEAGUESPREAD-26OCT24VICMEL",
+      "KXALEAGUETOTAL-26OCT24VICMEL",
+      "KXALEAGUEBTTS-26OCT24VICMEL"
     ],
     "source_ids": {},
     "start_date": "2026-10-24T08:40:00Z",
     "title": "Melbourne Victory vs Melbourne City",
     "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "4c0dafe1-db27-4342-bb0f-2f55e19fd456",
-      "coverage": {},
-      "home_team_id": "f6c6eadf-c30a-4af5-8a7a-1e033c867464",
-      "is_ko": false,
-      "league": "Australia A League",
-      "main_game_event_ticker": "KXALEAGUEGAME-26OCT24WPHCCM",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "82eede02-4a62-5b3c-951f-efe4cf6aecc9",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXALEAGUEGAME-26OCT24WPHCCM"
-    ],
-    "related_event_tickers": [
-      "KXALEAGUEGAME-26OCT24WPHCCM"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T02:00:00Z",
-    "title": "Wellington vs Central Coast",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "a47f4920-d1a3-47eb-ac13-6864bfbc5aef",
-      "coverage": {},
-      "home_team_id": "c9801203-6c47-4a78-b225-cd3526222b94",
-      "is_ko": false,
-      "league": "Australia A League",
-      "main_game_event_ticker": "KXALEAGUEGAME-26OCT25SYDADU",
-      "status": "not_started",
-      "tie_id": "111193d4-9b1f-4bd8-ab7c-9de252737f05"
-    },
-    "id": "3871770d-7e2a-5cd1-8897-18bffdaebe45",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin.",
-    "primary_event_tickers": [
-      "KXALEAGUEGAME-26OCT25SYDADU"
-    ],
-    "related_event_tickers": [
-      "KXALEAGUEGAME-26OCT25SYDADU"
-    ],
-    "source_ids": {},
-    "start_date": "2026-10-25T04:00:00Z",
-    "title": "Sydney FC vs Adelaide",
-    "type": "soccer_tournament_multi_leg",
-    "_collected_at_utc": "2026-10-21T06:42:00.504+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:43.615+00:00"
   }
 ]

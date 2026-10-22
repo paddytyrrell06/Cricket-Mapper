@@ -18,7 +18,7 @@
     "fee_multiplier": 1,
     "fee_type": "quadratic_with_maker_fees",
     "frequency": "custom",
-    "last_updated_ts": "2026-10-19T16:00:33.225492Z",
+    "last_updated_ts": "2026-10-21T19:14:28.03106Z",
     "product_metadata": {
       "important_info": {
         "id": "KXATPMATCH-2026-04-09",
@@ -39,6 +39,6 @@
     ],
     "ticker": "KXATPMATCH",
     "title": "ATP Tennis Match",
-    "_collected_at_utc": "2026-10-21T06:41:56.414+00:00"
+    "_collected_at_utc": "2026-10-22T00:31:13.376+00:00"
   }
 ]

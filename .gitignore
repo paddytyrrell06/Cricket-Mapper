@@ -6,3 +6,9 @@ __pycache__/
 .market_terminal.lock
 .venv-pmxt/
 data/
+.env
+.env.*
+!.env.*.example
+certs/
+*.key
+*.pem

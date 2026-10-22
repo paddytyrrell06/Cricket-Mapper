@@ -21,8 +21,15 @@ class ResearchService:
         self.catalog = MarketCatalog(store)
         from terminal_markets import TerminalMarkets
         self.terminal = TerminalMarkets(self.catalog, store, runtime)
+        from betfair_service import BetfairService
+        self.betfair = BetfairService(self.root, store, runtime)
+        self.terminal.betfair = self.betfair
 
     def get(self, path, query):
+        if path == "/api/research/betfair":
+            return self.betfair.snapshot()
+        if path == "/api/research/betfair/history":
+            return self.betfair.history(query.get("market_id", [""])[0], int(query.get("limit", ["250"])[0]))
         if path == "/api/research/universe":
             rows, assets = self.runtime.research_rows() if self.runtime else ([], {})
             return {"markets": [{"id": pair_key(row), "name": market_name(row),

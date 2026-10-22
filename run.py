@@ -1,4 +1,4 @@
-# Collect Kalshi and Polymarket match winners, audit contract compatibility, and publish the sports terminal.
+# Collect and audit match winners, then open the full local EventLens terminal.
 ##update: python3 run.py --snapshot-dir=output/data --refresh-quotes
 ##  Browser terminal with reload-to-refresh: python3 server.py
 from __future__ import annotations
@@ -809,17 +809,10 @@ def _main() -> int:
     say(f"  {len(wide_rows)} mapped outcome rows across {unique_fixtures} fixtures")
     if advisories:
         say(f"  {len(advisories)} advisory finding(s); see output/data/audit_report.txt")
-    say(f"  Open: {report_path.resolve()}")
+    say(f"  Snapshot export: {report_path.resolve()}")
     say(f"  Auditable snapshot: {snapshot_path.resolve()}")
     if NO_OPEN:
         say("  Browser opening skipped (--no-open). An open updated report follows new publications automatically.")
-    else:
-        try:
-            opened = webbrowser.open(report_path.resolve().as_uri())
-            say("  Opened in your default browser." if opened
-                else "  Open the HTML file in your browser.")
-        except Exception:
-            say("  Open the HTML file in your browser.")
     return 0
 
 
@@ -827,10 +820,26 @@ def main() -> int:
     from build_lock import BuildBusy, BuildLock
     try:
         with BuildLock(BUILD_DIR.parent / ".market_terminal.lock"):
-            return _main()
+            result = _main()
     except BuildBusy as exc:
         say(str(exc))
         return 2
+    if result or NO_OPEN:
+        return result
+    # An explicitly offline replay must remain offline. Live runs use the
+    # database-backed terminal; a file:// export only contains sports rows.
+    if SNAPSHOT_DIR is not None and not REFRESH_QUOTES:
+        say("  Offline replay: opening the sports snapshot export. Use python3 server.py for all categories.")
+        try:
+            opened = webbrowser.open((OUTPUT_DIR / REPORT_NAME).resolve().as_uri())
+        except webbrowser.Error:
+            opened = False
+        if not opened:
+            say("  Open the saved HTML file in your browser.")
+        return 0
+    # The server can run until Ctrl+C, so release the publication lock first.
+    from server import launch_terminal
+    return launch_terminal(BUILD_DIR.parent)
 
 
 if __name__ == "__main__":

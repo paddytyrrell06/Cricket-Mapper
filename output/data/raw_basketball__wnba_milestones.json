@@ -2,6 +2,41 @@
   {
     "category": "Sports",
     "details": {
+      "away_team_id": "b981c23e-ac45-4e4f-b2b3-cf434a4b1eb3",
+      "game_number": 5,
+      "home_team_id": "3da59c6b-c58b-4900-88cf-cf8382611868",
+      "league": "WNBA",
+      "main_game_event_ticker": "KXWNBAGAME-26OCT26ATLGS",
+      "playoff_round": 3,
+      "playoff_series_id": "statsperform:wnba:2026:4:44817-8406",
+      "season_type": "PST",
+      "season_year": 2026
+    },
+    "id": "74f22337-1c1a-5b30-a944-c0c53072c6ae",
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "notification_message": "The game is about to begin!",
+    "primary_event_tickers": [
+      "KXWNBAGAME-26OCT26ATLGS",
+      "KXWNBAOT-26OCT26ATLGS"
+    ],
+    "related_event_tickers": [
+      "KXWNBAGAME-26OCT26ATLGS",
+      "KXWNBAOT-26OCT26ATLGS",
+      "KXWNBA1HWINNER-26OCT26ATLGS",
+      "KXWNBA2HWINNER-26OCT26ATLGS"
+    ],
+    "source_ids": {
+      "source_1_id": "3029920",
+      "source_2_id": "202610275157D9EE"
+    },
+    "start_date": "2026-10-27T00:00:00Z",
+    "title": "Game 5: ATL Dream at GS Valkyries",
+    "type": "basketball_game",
+    "_collected_at_utc": "2026-10-22T00:29:56.310+00:00"
+  },
+  {
+    "category": "Sports",
+    "details": {
       "away_team_id": "3da59c6b-c58b-4900-88cf-cf8382611868",
       "game_number": 3,
       "home_team_id": "b981c23e-ac45-4e4f-b2b3-cf434a4b1eb3",
@@ -45,7 +80,11 @@
       "KXWNBA3QSPREAD-26OCT21GSATL",
       "KXWNBA4QWINNER-26OCT21GSATL",
       "KXWNBA4QTOTAL-26OCT21GSATL",
-      "KXWNBA4QSPREAD-26OCT21GSATL"
+      "KXWNBA4QSPREAD-26OCT21GSATL",
+      "KXWNBAPTS-26OCT21GSATL",
+      "KXWNBAREB-26OCT21GSATL",
+      "KXWNBAAST-26OCT21GSATL",
+      "KXWNBA3PT-26OCT21GSATL"
     ],
     "source_ids": {
       "source_1_id": "3029912",
@@ -54,7 +93,7 @@
     "start_date": "2026-10-22T00:00:00Z",
     "title": "Game 3: GS Valkyries at ATL Dream",
     "type": "basketball_game",
-    "_collected_at_utc": "2026-10-21T06:41:14.060+00:00"
+    "_collected_at_utc": "2026-10-22T00:29:56.310+00:00"
   },
   {
     "category": "Sports",
@@ -89,41 +128,6 @@
     "start_date": "2026-10-24T17:00:00Z",
     "title": "Game 4: GS Valkyries at ATL Dream",
     "type": "basketball_game",
-    "_collected_at_utc": "2026-10-21T06:41:14.060+00:00"
-  },
-  {
-    "category": "Sports",
-    "details": {
-      "away_team_id": "b981c23e-ac45-4e4f-b2b3-cf434a4b1eb3",
-      "game_number": 5,
-      "home_team_id": "3da59c6b-c58b-4900-88cf-cf8382611868",
-      "league": "WNBA",
-      "main_game_event_ticker": "KXWNBAGAME-26OCT26ATLGS",
-      "playoff_round": 3,
-      "playoff_series_id": "statsperform:wnba:2026:4:44817-8406",
-      "season_type": "PST",
-      "season_year": 2026
-    },
-    "id": "74f22337-1c1a-5b30-a944-c0c53072c6ae",
-    "last_updated_ts": "0001-01-01T00:00:00Z",
-    "notification_message": "The game is about to begin!",
-    "primary_event_tickers": [
-      "KXWNBAGAME-26OCT26ATLGS",
-      "KXWNBAOT-26OCT26ATLGS"
-    ],
-    "related_event_tickers": [
-      "KXWNBAGAME-26OCT26ATLGS",
-      "KXWNBAOT-26OCT26ATLGS",
-      "KXWNBA1HWINNER-26OCT26ATLGS",
-      "KXWNBA2HWINNER-26OCT26ATLGS"
-    ],
-    "source_ids": {
-      "source_1_id": "3029920",
-      "source_2_id": "202610275157D9EE"
-    },
-    "start_date": "2026-10-27T00:00:00Z",
-    "title": "Game 5: ATL Dream at GS Valkyries",
-    "type": "basketball_game",
-    "_collected_at_utc": "2026-10-21T06:41:14.060+00:00"
+    "_collected_at_utc": "2026-10-22T00:29:56.310+00:00"
   }
 ]

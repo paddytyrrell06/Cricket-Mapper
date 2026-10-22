@@ -5,7 +5,9 @@ EVENTLENS DATA TERMINAL
 3. Keep it running and use http://127.0.0.1:8765/CricketMatchingReport.html
 4. Quotes refresh automatically every 15 seconds. Reload or click Refresh prices
    to request another refresh. The table updates without reopening the page.
-   First-time setup needs one full scan: python3 run.py
+   First-time setup: python3 run.py performs a full scan, opens this HTTP
+   terminal and starts the server if needed. Keep it running until Ctrl+C.
+   If the same terminal is already running, run.py reuses it.
 
 Data & research: http://127.0.0.1:8765/research
 The service saves up to 25 liquid validated outcome pairs per refresh into
@@ -22,8 +24,13 @@ python3 run.py --snapshot-dir=output/data --refresh-quotes
 The direct output/CricketMatchingReport.html file is a snapshot export; use the
 HTTP terminal above for browser-triggered refreshes. Ctrl+C stops the service.
 
-The Sports and Esports category tabs separate the market universes. Esports
-starts with CS2 and League of Legends; Finance and Tech are future categories.
+The HTTP terminal includes Sports, Esports and the independently discovered
+Politics, Finance, Economics, Crypto, Technology and other categories.
+Select Sports to filter by sport; Esports includes CS2 and League of Legends.
+Refresh the independent catalog from Research -> More data tools when needed.
+The direct HTML export only includes Sports and Esports. Normal live run.py
+commands now open the full HTTP terminal; --no-open only publishes the export.
+Explicit offline replays continue to open the sports snapshot file.
 
 Gross cents - Fees cents = Net cents per paired contract. Est. PnL dollars is
 the total estimated profit at the actual displayed size. The default request

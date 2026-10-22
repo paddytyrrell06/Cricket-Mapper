@@ -890,6 +890,10 @@ class TerminalWorkspaceTests(unittest.TestCase):
         self.assertIn('id="catalogCategory"', document)
         self.assertIn('id="catalogSport"', document)
         self.assertIn('id="catalogReset"', document)
+        self.assertIn('id="betfairStatus"', document)
+        self.assertIn('id="betfairColumn" scope="col" class="catalog-betfair" hidden', document)
+        self.assertIn('value="betfair">Betfair</option>', document)
+        self.assertIn("BACK / LAY · odds × stake", document)
         self.assertIn('/api/research/terminal?', document)
         self.assertIn("research_dataset", document)
         self.assertIn('data-sort="pnl">Est. PnL $', document)
@@ -902,6 +906,9 @@ class TerminalWorkspaceTests(unittest.TestCase):
         self.assertIn('class="app-header"', research)
         self.assertIn('class="app-brand"', research)
         self.assertIn('class="app-navigation"', research)
+        self.assertIn('id="betfairData"', research)
+        self.assertIn("request('/api/research/betfair')", research)
+        self.assertIn("Settlement equivalence remains unverified", research)
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "terminal.html"
             P.write_html(path, [self.case.row()], VENUES, self.case.coverage, self.case.as_of)
@@ -917,14 +924,14 @@ class TerminalWorkspaceTests(unittest.TestCase):
         harness = r'''
 const assert=require('node:assert/strict'),vm=require('node:vm');
 class Node {
- constructor(id){this.id=id;this.value='';this.checked=false;this.hidden=false;this.innerHTML='';this.textContent='';this.dataset={};this.events={};this.classList={add(){},remove(){},contains(){return true;}};this.parentElement={setAttribute(){}};}
+ constructor(id){this.id=id;this.value='';this.checked=false;this.hidden=false;this.innerHTML='';this.textContent='';this.dataset={};this.events={};this.classList={add(){},remove(){},toggle(){},contains(){return true;}};this.parentElement={setAttribute(){}};}
  addEventListener(type,fn){this.events[type]=fn;}
  setAttribute(key,value){this[key]=value;}
  replaceChildren(...children){this.children=children;this.innerHTML='';}
  add(option){(this.children??=[]).push(option);}
  append(...children){this.children=children;}
  dispatchEvent(event){this.events[event.type]?.(event);}
- focus(){} blur(){}
+ focus(){} blur(){} showModal(){this.open=true;} close(){this.open=false;}
 }
 const nodes=new Map(),get=id=>{if(!nodes.has(id))nodes.set(id,new Node(id));return nodes.get(id);};
 get('catalogSize').value='100';get('catalogLiquidity').value='0';get('catalogSort').value='liquidity';
@@ -944,6 +951,20 @@ const settle=async()=>{for(let i=0;i<5;i++)await new Promise(resolve=>setImmedia
  assert.ok(html.includes('pair=exact-k&dataset=recorded'));assert.ok(html.includes('pair=exact-p&dataset=recorded'));assert.ok(html.includes('pair=single-k&dataset=catalog_quotes'));
  assert.ok(html.includes('Awaiting quote'));assert.ok(!html.includes('999'));assert.ok(!html.includes('NaN'));assert.ok(html.includes('>+1.4<'));
  assert.ok(html.includes('market-side bid">65'));assert.ok(html.includes('× 300'));assert.ok(!html.includes('>100<small'));
+ assert.equal(get('betfairColumn').hidden,true);assert.equal(get('betfairStatus').textContent,'Betfair · setup');
+ const original=response,book={mode:'synthetic',market_id:'1.123',selection_id:321,handicap:0,runner_name:'<Synthetic runner>',back:[{odds:2.14,size:25.5}],lay:[{odds:2.18,size:30}],currency:'GBP',market_status:'OPEN',inplay:false,bet_delay:0,is_market_data_delayed:true,observed_at:new Date(Date.now()-60000).toISOString(),source_publish_time:null,mapping:{status:'fixture_linked',settlement_status:'unverified',reasons:['<untrusted & evidence>']}};
+ response={...original,betfair_status:{state:'replay',mode:'synthetic',market_count:1,runner_count:2},total:4,markets:[{...original.markets[0],betfair:book},...original.markets.slice(1),{id:'bf-only',title:'Synthetic standalone Betfair',outcome:'<Synthetic runner>',category:'Sports',match_status:'single',comparison_id:null,gross_cents:999,fees_cents:999,net_cents:999,pnl:999,top_liquidity:999,quantity:999,crossed:true,net_crossed:true,legs:[{exchange:'betfair',bid:null,ask:null}],betfair:{...book,mode:'unknown',is_market_data_delayed:null,currency:null,back:[{odds:1.91,size:null}],mapping:{status:'unmatched'}}}]};
+ timers[0]();await settle();html=get('catalogRows').innerHTML;
+ assert.equal(get('betfairColumn').hidden,false);assert.equal(get('betfairStatus').textContent,'Betfair · replay');
+ assert.ok(html.includes('betfair-back">2.14'));assert.ok(html.includes('× 25.5 GBP'));assert.ok(html.includes('betfair-lay">2.18'));assert.ok(html.includes('DELAYED'));assert.ok(html.includes('SYNTHETIC'));assert.ok(html.includes('1m · saved'));assert.ok(html.includes('× ? currency unknown'));assert.ok(html.includes('DATA MODE UNKNOWN'));assert.ok(!html.includes('>214<'));assert.ok(!html.includes('>999'));assert.ok(!html.includes('pair=bf-only'));
+ assert.ok(html.includes('<button class="market-name" data-betfair-details="bf-only">'));assert.ok(html.includes('data-betfair-details="pair"'));
+ get('catalogRows').events.click({target:{closest:selector=>selector==='[data-betfair-details]'?{dataset:{betfairDetails:'pair'}}:null}});
+ assert.equal(get('betfairDialog').open,true);assert.ok(get('betfairContent').innerHTML.includes('&lt;untrusted &amp; evidence&gt;'));assert.ok(get('betfairContent').innerHTML.includes('settlement equivalence is unverified'));assert.ok(get('betfairContent').innerHTML.includes('Source clock</dt><dd>Unavailable'));assert.ok(!get('betfairContent').innerHTML.includes('<Synthetic runner>'));
+ get('closeBetfair').events.click();assert.equal(get('betfairDialog').open,false);
+ get('betfairStatus').events.click();assert.ok(get('betfairContent').innerHTML.includes('Betfair connection'));get('closeBetfair').events.click();
+ get('catalogExchange').value='betfair';get('catalogExchange').events.change();await settle();assert.match(requests.at(-1),/exchange=betfair/);
+ response={...response,markets:[{...response.markets[0],betfair:{...book,mode:'delayed',is_market_data_delayed:null}}]};timers[0]();await settle();assert.ok(get('catalogRows').innerHTML.includes('DELAYED'));
+ get('catalogExchange').value='';response={...original,betfair_status:{state:'not_configured'}};timers[0]();await settle();assert.equal(get('betfairColumn').hidden,true);
  assert.equal(get('catalogSportField').hidden,true);
  get('catalogCategory').value='Sports';get('catalogCategory').events.change();await settle();
  assert.equal(get('catalogSportField').hidden,false);assert.equal(get('catalogSportLabel').textContent,'Sport');

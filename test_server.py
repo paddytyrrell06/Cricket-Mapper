@@ -1,3 +1,4 @@
+import errno
 import http.client
 import json
 import subprocess
@@ -6,10 +7,105 @@ import tempfile
 import threading
 import unittest
 from pathlib import Path
+from unittest.mock import MagicMock, patch
+from urllib.error import HTTPError, URLError
 
 import server as S
 from runtime import MarketRuntime
 from test_runtime import write_runtime_snapshot
+
+
+class TerminalLauncherTests(unittest.TestCase):
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory()
+        self.addCleanup(self.directory.cleanup)
+        self.root = Path(self.directory.name).resolve()
+        (self.root / "output").mkdir()
+        self.marker = b"window.version('current-project-publication');"
+        (self.root / "output" / S.VERSION_NAME).write_bytes(self.marker)
+        (self.root / "output" / S.REPORT_NAME).write_text("<html>terminal</html>")
+        self.url = "http://127.0.0.1:8765/" + S.REPORT_NAME
+
+    def response(self, body=None, server="MarketTerminal/1 Python/3"):
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.headers = {"Server": server}
+        response.read.return_value = self.marker if body is None else body
+        return response
+
+    def test_matching_running_terminal_opens_http_without_starting_another_server(self):
+        response = self.response()
+        with patch.object(S, "urlopen", return_value=response) as request, patch.object(
+                S, "main") as start, patch.object(S.webbrowser, "open", return_value=True) as browser:
+            self.assertEqual(S.launch_terminal(self.root), 0)
+        request.assert_called_once_with("http://127.0.0.1:8765/" + S.VERSION_NAME, timeout=2)
+        response.read.assert_called_once_with(4097)
+        browser.assert_called_once_with(self.url)
+        start.assert_not_called()
+
+    def test_connection_refused_starts_foreground_server_in_the_same_project(self):
+        refused = URLError(ConnectionRefusedError(errno.ECONNREFUSED, "Connection refused"))
+        with patch.object(S, "urlopen", side_effect=refused), patch.object(
+                S, "main", return_value=0) as start, patch.object(S.webbrowser, "open") as browser:
+            self.assertEqual(S.launch_terminal(self.root / ".", port=8766), 0)
+        start.assert_called_once_with(["--port", "8766"], root=self.root)
+        browser.assert_not_called()
+
+    def test_wrong_service_or_publication_is_not_opened(self):
+        cases = [(self.marker, "UnrelatedApplication/1"),
+                 (b"window.version('another-project');", "MarketTerminal/1"),
+                 (b"", "MarketTerminal/1"),
+                 (b"x" * 4097, "MarketTerminal/1")]
+        for body, header in cases:
+            with self.subTest(body=body[:60], server=header), patch.object(
+                    S, "urlopen", return_value=self.response(body, header)), patch.object(
+                    S, "main") as start, patch.object(S.webbrowser, "open") as browser, patch("builtins.print"):
+                self.assertEqual(S.launch_terminal(self.root), 1)
+                browser.assert_not_called()
+                start.assert_not_called()
+
+    def test_http_errors_and_timeouts_do_not_start_a_second_service(self):
+        errors = [HTTPError(self.url, 404, "Not found", {}, None),
+                  TimeoutError("timed out"), URLError(TimeoutError("timed out"))]
+        for error in errors:
+            with self.subTest(error=type(error).__name__), patch.object(
+                    S, "urlopen", side_effect=error), patch.object(S, "main") as start, patch.object(
+                    S.webbrowser, "open") as browser, patch("builtins.print"):
+                self.assertEqual(S.launch_terminal(self.root), 1)
+                browser.assert_not_called()
+                start.assert_not_called()
+
+    def test_browser_failure_retains_http_address_and_success(self):
+        for error in (None, S.webbrowser.Error("No browser available")):
+            with self.subTest(error=error), patch.object(
+                    S, "urlopen", return_value=self.response()), patch.object(S, "main") as start, patch.object(
+                    S.webbrowser, "open", return_value=False, side_effect=error) as browser, patch("builtins.print") as output:
+                self.assertEqual(S.launch_terminal(self.root), 0)
+                browser.assert_called_once_with(self.url)
+                start.assert_not_called()
+                self.assertTrue(any(self.url in str(call) for call in output.call_args_list))
+
+    def test_empty_local_marker_cannot_validate_an_unrelated_service(self):
+        (self.root / "output" / S.VERSION_NAME).write_bytes(b"")
+        with patch.object(S, "urlopen", return_value=self.response(b"")), patch.object(
+                S, "main") as start, patch.object(S.webbrowser, "open") as browser, patch("builtins.print"):
+            self.assertEqual(S.launch_terminal(self.root), 1)
+        browser.assert_not_called()
+        start.assert_not_called()
+
+    def test_actual_loopback_terminal_marker_can_be_reused(self):
+        terminal = S.TerminalServer(0, root=self.root, refresh=S.QuoteRefresh(self.root))
+        worker = threading.Thread(target=terminal.serve_forever, kwargs={"poll_interval": 0.01}, daemon=True)
+        worker.start()
+        try:
+            with patch.object(S, "main") as start, patch.object(S.webbrowser, "open", return_value=True) as browser:
+                self.assertEqual(S.launch_terminal(self.root, port=terminal.server_port), 0)
+                browser.assert_called_once_with(f"http://127.0.0.1:{terminal.server_port}/{S.REPORT_NAME}")
+                start.assert_not_called()
+        finally:
+            terminal.shutdown()
+            terminal.server_close()
+            worker.join(2)
 
 
 class RefreshControllerTests(unittest.TestCase):

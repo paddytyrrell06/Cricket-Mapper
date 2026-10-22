@@ -7,6 +7,7 @@ accepts executable commands, file paths, or trading instructions from clients.
 from __future__ import annotations
 
 import argparse
+import errno
 import json
 import sqlite3
 import subprocess
@@ -18,6 +19,8 @@ from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit, parse_qs
+from urllib.error import URLError
+from urllib.request import urlopen
 
 
 ROOT = Path(__file__).resolve().parent
@@ -61,6 +64,7 @@ class QuoteRefresh:
         self._runner = runner or subprocess.run
         self.runtime = runtime
         self.catalog_monitor = None
+        self.betfair = None
         self._lock = threading.Lock()
         self._worker: threading.Thread | None = None
         self._state = {
@@ -97,11 +101,13 @@ class QuoteRefresh:
     def _refresh(self) -> None:
         error = None
         try:
-            if self.runtime is not None or self.catalog_monitor is not None:
+            if self.runtime is not None or self.catalog_monitor is not None or self.betfair is not None:
                 if self.runtime is not None:
                     self.runtime.refresh()
                 if self.catalog_monitor is not None:
                     self.catalog_monitor.refresh()
+                if self.betfair is not None:
+                    self.betfair.refresh()
                 self._finish(None)
                 return
             if not (self.root / "output" / "data").is_dir():
@@ -150,6 +156,7 @@ class TerminalServer(ThreadingHTTPServer):
                 self.runtime = None
         self.refresh = refresh or QuoteRefresh(self.root, runtime=self.runtime)
         self.research = research
+        self.betfair = None
         if research is None and refresh is None:
             try:
                 from research_store import ResearchStore
@@ -158,6 +165,8 @@ class TerminalServer(ThreadingHTTPServer):
                 if (self.root / "output/data/market_map.csv").exists():
                     store.import_snapshot(self.root / "output/data")
                 self.research = ResearchService(self.root, store, self.runtime)
+                self.betfair = self.research.betfair
+                self.refresh.betfair = self.betfair
                 from catalog_monitor import CatalogQuoteMonitor
                 self.catalog_monitor = CatalogQuoteMonitor(self.research.catalog, store, runtime=self.runtime)
                 self.refresh.catalog_monitor = self.catalog_monitor
@@ -170,6 +179,11 @@ class TerminalServer(ThreadingHTTPServer):
         self._asset_lock = threading.Lock()
         # Bind only to IPv4 loopback; exposing this control endpoint is unsupported.
         super().__init__(("127.0.0.1", port), TerminalHandler)
+
+    def server_close(self):
+        super().server_close()
+        if self.betfair is not None:
+            self.betfair.close()
 
     def read_asset(self, name: str) -> bytes | None:
         with self._asset_lock:
@@ -346,7 +360,45 @@ class TerminalHandler(BaseHTTPRequestHandler):
             super().log_message(format, *args)
 
 
-def main(argv=None) -> int:
+def launch_terminal(root: Path = ROOT, port: int = 8765) -> int:
+    """Reuse this publication's HTTP terminal, or run one in the foreground.
+
+    The per-publication marker identifies the checkout without assuming that
+    any process listening on the usual port belongs to this application.
+    """
+    root = Path(root).resolve()
+    address = f"http://127.0.0.1:{port}"
+    url = f"{address}/{REPORT_NAME}"
+    try:
+        expected = (root / "output" / VERSION_NAME).read_bytes()
+        if not expected or len(expected) > 4096:
+            raise ValueError("Invalid publication marker")
+        with urlopen(f"{address}/{VERSION_NAME}", timeout=2) as response:
+            same_publication = (response.headers.get("Server", "").startswith("MarketTerminal/")
+                                and response.read(4097) == expected)
+    except URLError as exc:
+        if isinstance(exc.reason, OSError) and exc.reason.errno == errno.ECONNREFUSED:
+            print("Starting the full EventLens terminal. Keep this process running; Ctrl+C stops it.", flush=True)
+            return main(["--port", str(port)], root=root)
+        same_publication = False
+    except (OSError, ValueError):
+        same_publication = False
+    if not same_publication:
+        print(f"The service at {address} could not be verified for this publication. "
+              f"Your audited report is saved. Start python3 server.py --port={port + 1} "
+              "to open the full terminal on another port.", file=sys.stderr, flush=True)
+        return 1
+    print(f"Full EventLens terminal: {url}", flush=True)
+    try:
+        opened = webbrowser.open(url)
+    except webbrowser.Error:
+        opened = False
+    if not opened:
+        print("Open the terminal URL above in your browser.", flush=True)
+    return 0
+
+
+def main(argv=None, *, root: Path = ROOT) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--no-open", action="store_true", help="Do not open a browser tab")
@@ -358,7 +410,7 @@ def main(argv=None) -> int:
     if args.interval != 0 and not 5 <= args.interval <= 3600:
         parser.error("interval must be 0 or between 5 and 3600 seconds")
     try:
-        server = TerminalServer(args.port)
+        server = TerminalServer(args.port, root=root)
     except OSError as exc:
         print(f"Cannot start local terminal on port {args.port}: {exc}", file=sys.stderr)
         return 1
